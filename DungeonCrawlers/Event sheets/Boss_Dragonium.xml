@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Boss_Dragonium</name>
+    <events>
+        <include>_Gamelibrary</include>
+        <comment>The main character load actions</comment>
+        <event-block sid="228695140478547">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="760121403214329" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="731331236340724" type="Function">
+                    <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dragonium&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="501404522894708">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="717851707842542" type="System">
+                            <param id="0" name="Object">PlayerCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="111950828820334" type="Function">
+                            <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="504835350608765">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="421667253116836" type="System">
+                            <param id="0" name="Object">EnemyCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="482414773140522" type="Function">
+                            <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
+                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="813787629010249" type="EnemyCoreBox">
+                            <param id="0" name="Object">Object_Sword</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="959534666560613" type="Function">
+                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Sword.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Dragon parts reordened</comment>
+        <event-block sid="891381321713229">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="858516876562512" type="System" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="149440844186075" type="Dragon_Wing" />
+                <action id="-24" name="Move to top" sid="274026401117816" type="body_dragon_mouth" />
+                <action id="-24" name="Move to top" sid="149440844186075" type="Dragon_Wing" />
+                <action id="-24" name="Move to top" sid="277502386105429" type="Boss_Dragon_Head" />
+            </actions>
+        </event-block>
+        <comment>This is the dragon load actions, i divided the start layout in 2 parts if you want to use the dragon in other levels</comment>
+        <event-block sid="565192606670087">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="624905806496582" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="530915052576321" type="body_dragon_mouth">
+                    <param id="0" name="Object">Boss_Dragon_Head</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="964408202724829" type="body_dragon_mouth">
+                    <param id="0" name="Pin to">Boss_Dragon_Head</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="375977646662789">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="834754070943463" type="System">
+                            <param id="0" name="Object">boss_dragon_claw</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="728609847550746" type="boss_dragon_claw">
+                            <param id="0" name="Instance variable">posx</param>
+                            <param id="1" name="Value">boss_dragon_claw.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="708085765741297" type="boss_dragon_claw">
+                            <param id="0" name="Instance variable">posy</param>
+                            <param id="1" name="Value">boss_dragon_claw.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="380618104568525">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="327746560578065" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="522097782689987" type="Boss_Dragon_Head">
+                            <param id="0" name="Instance variable">ready</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="190837235955445" type="Boss_Dragon_Head">
+                            <param id="0" name="Object">Character_Hitbox</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="330974536566302" type="Character_Hitbox">
+                            <param id="0" name="Pin to">Boss_Dragon_Head</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="387272971274759" type="Character_Hitbox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="580724626084038" type="Character_Hitbox">
+                            <param id="0" name="Width">Boss_Dragon_Head.Width</param>
+                            <param id="1" name="Height">Boss_Dragon_Head.Height</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Head rotation he is attacking</comment>
+        <event-block sid="347520752768735">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="106497232175910" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="435114613551274" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">openmouth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Rotate toward position" sid="711887200777169" type="Boss_Dragon_Head">
+                    <param id="0" name="Degrees">1</param>
+                    <param id="1" name="X">PlayerCoreBox.X</param>
+                    <param id="2" name="Y">PlayerCoreBox.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Fire attack, is the same fireball object</comment>
+        <event-block sid="439167853848197">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="387593444560429" type="System">
+                    <param id="0" name="Interval (seconds)">Boss_Dragon_Head.firerate</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="285233693847614" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">openmouth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="629168883135453" type="body_dragon_mouth">
+                    <param id="0" name="Object">Impact_Fireball</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="748446508836965" type="Impact_Fireball">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">&quot;Enemy&quot;</param>
+                </action>
+                <action id="-8" name="Set angle" sid="305869243394723" type="Impact_Fireball">
+                    <param id="0" name="Angle">Boss_Dragon_Head.Angle</param>
+                </action>
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="686597830481652" type="Impact_Fireball">
+                    <param id="0" name="Angle">Boss_Dragon_Head.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="451753660963794" type="Impact_Fireball">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Impact_Fireball.Damage * Boss_Dragon_Head.Damage)</param>
+                </action>
+                <action id="-7" name="Set size" sid="272461415043346" type="Impact_Fireball">
+                    <param id="0" name="Width">30</param>
+                    <param id="1" name="Height">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Head rotation when he is not attacking</comment>
+        <event-block sid="819618421054575">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="362465097359292" type="System" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="857203089475795" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">openmouth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Rotate toward angle" sid="917346035384280" type="Boss_Dragon_Head">
+                    <param id="0" name="Degrees">1</param>
+                    <param id="1" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Head rotation when he is not attacking</comment>
+        <event-block sid="383547029442848">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="953398764131643" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="274585328028052" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">ready</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="447477440413134" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">openmouth</param>
+                </action>
+                <action id="-14" name="Toggle boolean" sid="205761229201600" type="boss_dragon_claw">
+                    <param id="0" name="Instance variable">atack</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="358383254815173">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="156956431394944" type="Boss_Dragon_Head">
+                            <param id="0" name="Instance variable">openmouth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="328594308358288" type="body_dragon_mouth" />
+                        <action id="-4" name="Set position to another object" sid="887883664660093" type="body_dragon_mouth">
+                            <param id="0" name="Object">Boss_Dragon_Head</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="810486551599628" type="body_dragon_mouth">
+                            <param id="0" name="Pin to">Boss_Dragon_Head</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751613292362914">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="774528069974582" type="Boss_Dragon_Head">
+                            <param id="0" name="Instance variable">openmouth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="439076210297263" type="body_dragon_mouth" />
+                        <action id="-4" name="Set position to another object" sid="454532455461697" type="body_dragon_mouth">
+                            <param id="0" name="Object">Boss_Dragon_Head</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="100995146181002" type="body_dragon_mouth">
+                            <param id="0" name="Pin to">Boss_Dragon_Head</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Death Reaction trigger event when his HP &lt;= 0</comment>
+        <event-block sid="480990135553807">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="519071478007896" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="957390546351609" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="713728296096897" type="Function">
+                    <param id="0" name="Name">&quot;MuteBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="686783131398897" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dragonium_Roar&quot;</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="725236908051297" type="Boss_Dragon_Head">
+                    <param id="0" name="Duration">2</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;DeadDestroy&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="873016977185567" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="858743469553263" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Invencible</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Death Reaction trigger event when his HP &lt;= 0</comment>
+        <event-block sid="983719559090477">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="459395433666177" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="836643726744704" type="Boss_Dragon_Head">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="509614448699256" type="Boss_Dragon_Head">
+                    <param id="0" name="Degrees">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Event trigger for destroy dragon objects</comment>
+        <event-block sid="143620771209641">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="666974511638915" type="Boss_Dragon_Head">
+                    <param id="0" name="Tag">&quot;DeadDestroy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="355266142706194" type="Boss_Dragon_Head" />
+                <action id="-3" name="Set position" sid="671719449447529" type="Object_Key">
+                    <param id="0" name="X">250</param>
+                    <param id="1" name="Y">50</param>
+                </action>
+                <action id="-3" name="Set position" sid="154487960149174" type="DoorDungeon">
+                    <param id="0" name="X">220</param>
+                    <param id="1" name="Y">50</param>
+                </action>
+                <action id="-9" name="Destroy" sid="459924894494427" type="body_dragon_mouth" />
+                <action disabled="1" id="-13" name="Set boolean" sid="560109958827351" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Invencible</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="798690848068531" type="Dragon_Body" />
+            </actions>
+            <sub-events>
+                <event-block sid="710262425361614">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="450289894675221" type="System">
+                            <param id="0" name="Object">Dragon_Wing</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="136229359476965" type="Dragon_Wing" />
+                    </actions>
+                </event-block>
+                <event-block sid="150761121454240">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="766663033979062" type="System">
+                            <param id="0" name="Object">boss_dragon_claw</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="343520397747328" type="boss_dragon_claw" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

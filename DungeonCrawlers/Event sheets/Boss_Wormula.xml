@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Boss_Wormula</name>
+    <events>
+        <comment>Boss Wormula Sheet</comment>
+        <include>_Gamelibrary</include>
+        <event-block sid="717401360498624">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="332507602351489" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="293128341287177" type="Function">
+                    <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Wormula&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="244156878427950">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="316738705903896" type="System">
+                            <param id="0" name="Object">PlayerCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="819262630461841" type="Function">
+                            <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="490225577483555">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="781866045070911" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="Variable" sid="680663298015409" static="0" type="number">0</variable>
+                <event-block sid="967619865058957">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="728393583932060" type="System">
+                            <param id="0" name="Object">boss_worm_body</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="551755942703611">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="789340142318713" type="boss_worm_head">
+                                    <param id="0" name="Instance variable">IDChain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="921056331921523" type="boss_worm_body">
+                                    <param id="0" name="Object">boss_worm_head</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="639019481192279" type="boss_worm_body">
+                                    <param id="0" name="Pin to">boss_worm_head</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="349211179785791" type="boss_worm_head">
+                                    <param id="0" name="Instance variable">IDChain</param>
+                                    <param id="1" name="Value">boss_worm_body.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="419592180688739">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="636322164227079" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="605926142805887" type="Family_Boss_Worm">
+                                    <param id="0" name="Unique ID">Variable</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="509723707191587" type="boss_worm_body">
+                                    <param id="0" name="Object">Family_Boss_Worm</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="377345740533339" type="boss_worm_body">
+                                    <param id="0" name="Pin to">boss_worm_head</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="821004658618818">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="808561092794625" type="System">
+                                    <param id="0" name="Variable">Variable</param>
+                                    <param id="1" name="Value">boss_worm_body.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="252415610797955">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="417222455163113" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="944673254482088" type="boss_worm_head">
+                            <param id="0" name="Instance variable">ready</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="440588743085413" type="boss_worm_head">
+                            <param id="0" name="Object">Character_Hitbox</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="584332075404267" type="Character_Hitbox">
+                            <param id="0" name="Pin to">boss_worm_head</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="546228087274377" type="Character_Hitbox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="663540166354949" type="Character_Hitbox">
+                            <param id="0" name="Width">boss_worm_head.Width</param>
+                            <param id="1" name="Height">boss_worm_head.Height</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="635410559263998">
+            <conditions>
+                <condition id="2" inverted="1" name="Is pause" sid="336244265401691" type="Rex_Pause" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="552962402512821">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="868056212157259" type="boss_worm_head">
+                            <param id="0" name="Instance variable">Seeking</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="117044395103645" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="555909394250779" type="boss_worm_head">
+                            <param id="0" name="Degrees">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="526808169748104" type="boss_worm_head">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="128061999513840">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="313834833290085" type="boss_worm_head" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="378011033924645" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="454629703983882" type="boss_worm_head">
+                            <param id="0" name="X">Family_Character.X</param>
+                            <param id="1" name="Y">Family_Character.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="594916520350609">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="662928091541182" type="System">
+                            <param id="0" name="Interval (seconds)">random(2)+2</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="651537654861514" type="boss_worm_head">
+                            <param id="0" name="Instance variable">ready</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="627480750530395" type="boss_worm_head">
+                            <param id="0" name="Instance variable">Seeking</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="688564188351000">
+                            <conditions>
+                                <condition disabled="1" id="-1" name="Every tick" sid="311110816515667" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="246099073464969" type="boss_worm_head">
+                                    <param id="0" name="Instance variable">Seeking</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="338301410575362" type="boss_worm_head">
+                                    <param id="0" name="X">Family_Character.X</param>
+                                    <param id="1" name="Y">Family_Character.Y</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="214824193970930" type="boss_worm_head">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="313992459103588">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="167074707766962" type="boss_worm_head">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="838673686832719" type="boss_worm_head">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="300108947211974" type="Function">
+                    <param id="0" name="Name">&quot;MuteBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="470952365467693" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Wormula_Roar&quot;</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="738982725737151" type="boss_worm_head">
+                    <param id="0" name="Duration">2</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;DeadDestroy&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="265275745813082" type="boss_worm_head">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="802109893790884" type="boss_worm_head">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="933685736694315" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Invencible</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="496929108381320">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="649692834884913" type="System">
+                            <param id="0" name="Object">boss_worm_body</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="151472130091837" type="boss_worm_body" />
+                        <action id="-10" name="Set value" sid="640114068423055" type="boss_worm_body">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="640806079911302">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="366304035324826" type="boss_worm_head">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="129202819505178" type="boss_worm_head">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="276172801088723" type="boss_worm_head">
+                    <param id="0" name="Degrees">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="611573956829426">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="188578526530751" type="boss_worm_head">
+                    <param id="0" name="Tag">&quot;DeadDestroy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="268014497449573" type="boss_worm_head" />
+                <action id="-3" name="Set position" sid="393328319227182" type="Object_Key">
+                    <param id="0" name="X">250</param>
+                    <param id="1" name="Y">250</param>
+                </action>
+                <action disabled="1" id="-13" name="Set boolean" sid="872955714679981" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Invencible</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="993078242404494">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="151126445955879" type="System">
+                            <param id="0" name="Object">boss_worm_body</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="964237561637595" type="boss_worm_body" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

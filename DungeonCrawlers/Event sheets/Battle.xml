@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Battle</name>
+    <events>
+        <comment>Destroy impact if it hit with a wall</comment>
+        <event-block sid="908892128050265">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="793874272242173" type="Family_Impact">
+                    <param id="0" name="Object">Tilemap_Solid</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="307761040992869" type="Family_Impact">
+                    <param id="0" name="Instance variable">TypeObject</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Projectile&quot;</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="400733695170605" type="Family_Impact">
+                    <param id="0" name="Instance variable">PierceWalls</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="341764997936552" type="Family_Impact" />
+            </actions>
+        </event-block>
+        <comment>Destroy impact if it outside of the layout (only projectiles)</comment>
+        <event-block sid="507754005488981">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="310674556411250" type="Family_Impact" />
+                <condition id="-7" name="Compare instance variable" sid="354612107479466" type="Family_Impact">
+                    <param id="0" name="Instance variable">TypeObject</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Projectile&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="761197125525776" type="Family_Impact" />
+            </actions>
+        </event-block>
+        <comment>Destroy impact if it timer goes out</comment>
+        <event-block sid="342651800088982">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="892378038690095" type="Family_Impact">
+                    <param id="0" name="Tag">&quot;Destroy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="566215229444380" type="Family_Impact" />
+            </actions>
+        </event-block>
+        <comment>Destroy impact if hit with a character hitbox</comment>
+        <event-block sid="539329519885917">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="981059666578261" type="Family_Impact">
+                    <param id="0" name="Object">Character_Hitbox</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="865304719168970" type="Family_Character">
+                    <param id="0" name="Unique ID">Character_Hitbox.Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="551130764273399" type="Family_Impact">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">Family_Character.TypeRole</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="112285348709190" type="Family_Character">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="717122573870541" type="Family_Character">
+                    <param id="0" name="Instance variable">PushRecoil</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="375708219020547" type="Family_Character">
+                    <param id="0" name="Instance variable">Invencible</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="450270912689326" type="Family_Impact">
+                    <param id="0" name="Instance variable">MakeDamage</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="160314308258200" type="Function">
+                    <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.RecoilTime</param>
+                </action>
+                <action id="0" name="Call function" sid="260998578876838" type="Function">
+                    <param id="0" name="Name">&quot;PushCharacter&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="406441249316253">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="863591651411287" type="Family_Impact">
+                            <param id="0" name="Instance variable">TypeObject</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="536529583458341" type="Family_Impact">
+                            <param id="0" name="Instance variable">PierceCharacters</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="454313015543624" type="Family_Impact" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Push the character from an impact</comment>
+        <event-block sid="618366014873638">
+            <conditions>
+                <condition id="0" name="On function" sid="864806781082333" type="Function">
+                    <param id="0" name="Name">&quot;PushCharacter&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="919969423892829" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="965941337016994" type="Family_Impact">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="192084388431945" type="Family_Character">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="465467727712528" type="Family_Character">
+                    <param id="0" name="Instance variable">PushRecoil</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="476667014054515" type="Family_Character">
+                    <param id="0" name="Instance variable">Invencible</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="698638065186884" type="Family_Character">
+                    <param id="0" name="Instance variable">PushRecoil</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="170706894065174" type="Family_Character">
+                    <param id="0" name="Duration">Family_Impact.RecoilTime</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Recoil&quot;</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="417315061648505" type="Family_Character">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Value">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="193527849554877">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="948418780984583" type="Family_Character">
+                            <param id="0" name="Instance variable">Unstopable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="756538370496436" type="Family_Character">
+                            <param id="0" name="Speed">Family_Impact.PushImpact</param>
+                        </action>
+                        <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="602856106481795" type="Family_Character">
+                            <param id="0" name="Angle"> angle(Family_Impact.X,Family_Impact.Y,self.X,self.Y)</param>
+                        </action>
+                        <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="263385439983097" type="Family_Character">
+                            <param id="0" name="Angle">Family_Impact.Angle</param>
+                        </action>
+                        <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="203832232549511" type="Family_Character">
+                            <param id="0" name="Angle">Family_Impact.FI_Bullet.AngleOfMotion</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>this stop the push if it hits with a wall, this avoid it to pass to the other side of the wall</comment>
+        <event-block sid="101647528571160">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="296975085036275" type="Family_Character">
+                    <param id="0" name="Object">Tilemap_Solid</param>
+                </condition>
+                <condition behavior="FC_Bullet" id="0" name="Compare speed" sid="418990552126311" type="Family_Character">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FC_Bullet" id="0" name="Set speed" sid="196440691637224" type="Family_Character">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="325538702868373">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="293350645358959" type="Family_Character">
+                    <param id="0" name="Object">Tilemap_Solid</param>
+                </condition>
+                <condition behavior="FC_Bullet" id="0" name="Compare speed" sid="637192197205784" type="Family_Character">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FC_Bullet" id="0" name="Set speed" sid="203795629252198" type="Family_Character">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>When the character stop to push, it has N time of invincibility</comment>
+        <event-block sid="676507596591997">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="953768221970047" type="Family_Character">
+                    <param id="0" name="Tag">&quot;Recoil&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="687072568767184" type="Function">
+                    <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Character.InvencibleTime</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="317838152768189" type="Family_Character">
+                    <param id="0" name="Duration">Family_Character.InvencibleTime</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Invencible&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="312752493386350" type="Family_Character">
+                    <param id="0" name="Instance variable">Invencible</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="406835581839973" type="Family_Character">
+                    <param id="0" name="Instance variable">PushRecoil</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="942969982130454">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="660868688547138" type="Family_Character">
+                            <param id="0" name="Instance variable">Unstopable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="503352783793493" type="Family_Character">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>This cancel the invincibility</comment>
+        <event-block sid="999799898026819">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="358870693389360" type="Family_Character">
+                    <param id="0" name="Tag">&quot;Invencible&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="214406096643306" type="Family_Character">
+                    <param id="0" name="Instance variable">Invencible</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Pick &amp; Drop pbject</comment>
+        <event-block sid="140299108262705">
+            <conditions>
+                <condition id="0" name="On function" sid="516036946050898" type="Function">
+                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="672968642865808" type="Family_Objects">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="308610650426564" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="LeftObject" sid="939777729253534" static="0" type="number">0</variable>
+                <variable constant="0" name="RightObject" sid="461994602066432" static="0" type="number">0</variable>
+                <variable constant="0" name="NewObject" sid="218926582719296" static="0" type="number">0</variable>
+                <event-block sid="432307196325197">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="676899769162676" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="736098454351695" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmLeft</param>
+                            <param id="1" name="Value">Family_Objects.UID</param>
+                        </action>
+                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="762691346684513" type="Family_Objects">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="333707942008967">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="797384095046704" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="605154586618278" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmRight</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="163872413758711" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmRight</param>
+                            <param id="1" name="Value">Family_Objects.UID</param>
+                        </action>
+                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="108431474917453" type="Family_Objects">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="199000607056559">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="350371140034840" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="356921943687790" type="System">
+                            <param id="0" name="Variable">LeftObject</param>
+                            <param id="1" name="Value">Family_Character.ArmLeft</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="236705716601580" type="System">
+                            <param id="0" name="Variable">RightObject</param>
+                            <param id="1" name="Value">Family_Character.ArmRight</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="547104129321176" type="System">
+                            <param id="0" name="Variable">NewObject</param>
+                            <param id="1" name="Value">Family_Objects.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="960801116531332" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmLeft</param>
+                            <param id="1" name="Value">NewObject</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="735160480696756" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmRight</param>
+                            <param id="1" name="Value">LeftObject</param>
+                        </action>
+                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="142982133222888" type="Family_Objects">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="812246208572031" type="Function">
+                            <param id="0" name="Name">&quot;DropObject&quot;</param>
+                            <param id="1" name="Parameter {n}">RightObject</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="598583061870156">
+            <conditions>
+                <condition id="0" name="On function" sid="492924327643728" type="Function">
+                    <param id="0" name="Name">&quot;DropObject&quot;</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="904233992964027" type="System">
+                    <param id="0" name="Object">Family_Objects</param>
+                    <param id="1" name="Expression">Family_Objects.UID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FO_Pin2" id="1" name="Unpin" sid="662163658113570" type="Family_Objects" />
+            </actions>
+        </event-block>
+        <comment>Equip that object on left right arm</comment>
+        <event-block sid="400238477806966">
+            <conditions>
+                <condition id="0" name="On function" sid="447682629737049" type="Function">
+                    <param id="0" name="Name">&quot;EquipObjectLeft&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="885258767391289" type="Family_Objects">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="517933661309332" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="453341362376900" type="Family_Character">
+                    <param id="0" name="Instance variable">ArmLeft</param>
+                    <param id="1" name="Value">Family_Objects.UID</param>
+                </action>
+                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="171408781050661" type="Family_Objects">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="143315804187676">
+            <conditions>
+                <condition id="0" name="On function" sid="406788030179580" type="Function">
+                    <param id="0" name="Name">&quot;EquipObjectRight&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="677225156063631" type="Family_Objects">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="493454569251619" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="317695943937591" type="Family_Character">
+                    <param id="0" name="Instance variable">ArmRight</param>
+                    <param id="1" name="Value">Family_Objects.UID</param>
+                </action>
+                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="762994440086018" type="Family_Objects">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Press &amp; Unpress Command functions</comment>
+        <event-block sid="387483268612408">
+            <conditions>
+                <condition id="0" name="On function" sid="431047773237028" type="Function">
+                    <param id="0" name="Name">&quot;Press_Object&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="892647934869110" type="Family_Objects">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="726426655317386" type="Family_Arms">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="741667193622484" type="Scml_Player_Top">
+                    <param id="0" name="Unique ID">Function.Param(2)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="129207882975809" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Objects.FO_Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="790709095638164" type="Family_Character">
+                    <param id="0" name="Instance variable">PressButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="845588682257880" type="Family_Character">
+                    <param id="0" name="Instance variable">ActionCommand</param>
+                    <param id="1" name="Value">Family_Objects.Function_Param</param>
+                </action>
+                <action id="-10" name="Set value" sid="320968590402308" type="Family_Character">
+                    <param id="0" name="Instance variable">ActionStep</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="416122782311990" type="Family_Character">
+                    <param id="0" name="Instance variable">LastArmUsed</param>
+                    <param id="1" name="Value">Family_Arms.Type</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="367709334550551" type="Family_Character">
+                    <param id="0" name="Instance variable">PressButton</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="712568947927347" type="Family_Character">
+                    <param id="0" name="Instance variable">ActionObjectUsed</param>
+                    <param id="1" name="Value">Family_Objects.UID</param>
+                </action>
+                <action id="0" name="Call function" sid="320545483979331" type="Function">
+                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
+                    <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="282479012498368">
+            <conditions>
+                <condition id="0" name="On function" sid="792484662633232" type="Function">
+                    <param id="0" name="Name">&quot;UnPress_Object&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="371060792434565" type="Family_Objects">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="617024158850632" type="Family_Arms">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="682260596800607" type="Scml_Player_Top">
+                    <param id="0" name="Unique ID">Function.Param(2)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="656591480481483" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Objects.FO_Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="479220813795736" type="Family_Character">
+                    <param id="0" name="Instance variable">PressButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="506191288046807" type="Family_Character">
+                    <param id="0" name="Instance variable">PressButton</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Projectiles</comment>
+        <event-block sid="201236953394494">
+            <conditions>
+                <condition behavior="FO_Timer" id="0" name="On timer" sid="143574817579082" type="Family_Objects">
+                    <param id="0" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="454588944289390" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Objects.FO_Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="371606822436389" type="Family_Objects">
+                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="533561800777704" type="Family_Objects">
+                    <param id="0" name="Object">Impact_Fireball</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="497280204685036" type="Impact_Fireball">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">Family_Character.TypeRole</param>
+                </action>
+                <action id="-8" name="Set angle" sid="249592894126410" type="Impact_Fireball">
+                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                </action>
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="531290889089918" type="Impact_Fireball">
+                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="891277585747763" type="Impact_Fireball">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Impact_Fireball.Damage * Family_Character.BonusDamageMult)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="925098501021451" type="Impact_Fireball">
+                    <param id="0" name="Duration">Impact_Fireball.TimeDuration</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="269969452908759" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;wand&quot;</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="787603214395015" type="Family_Objects">
+                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="214544826878571">
+            <conditions>
+                <condition behavior="FO_Timer" id="0" name="On timer" sid="402161177343580" type="Family_Objects">
+                    <param id="0" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="603035163367225" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Objects.FO_Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="545615804786596" type="Family_Objects">
+                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="935704884149062" type="Family_Objects">
+                    <param id="0" name="Object">Impact_Arrow</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="684009762231061" type="Impact_Arrow">
+                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="409949103920933" type="Impact_Arrow">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">Family_Character.TypeRole</param>
+                </action>
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="549107930078149" type="Impact_Arrow">
+                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="988713940658716" type="Impact_Arrow">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Impact_Arrow.Damage * Family_Character.BonusDamageMult)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="690863951379656" type="Impact_Arrow">
+                    <param id="0" name="Duration">Impact_Arrow.TimeDuration</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="227399416903207" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;bow&quot;</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="598445616660461" type="Family_Objects">
+                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="665458755744001">
+            <conditions>
+                <condition behavior="FO_Timer" id="0" name="On timer" sid="121819020149410" type="Family_Objects">
+                    <param id="0" name="Tag">&quot;Shoot_Axe&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="590820008301073" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Objects.FO_Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="123592365748830" type="Family_Objects">
+                    <param id="0" name="Object">Impact_Axe</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="236618617611156" type="Impact_Axe">
+                    <param id="0" name="Pin to">Family_Objects</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="634629049327309" type="Impact_Axe">
+                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="840970637644875" type="Impact_Axe">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">Family_Character.TypeRole</param>
+                </action>
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="506521785135211" type="Impact_Axe">
+                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                </action>
+                <action behavior="FI_Bullet" id="0" name="Set speed" sid="804715127029011" type="Impact_Axe">
+                    <param id="0" name="Speed">200</param>
+                </action>
+                <action id="-10" name="Set value" sid="158927412158536" type="Impact_Axe">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Impact_Axe.Damage * Family_Character.BonusDamageMult)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="898193653521101" type="Impact_Axe">
+                    <param id="0" name="Duration">Impact_Axe.TimeDuration</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>HEARTH</comment>
+        <event-block sid="425304371161602">
+            <conditions>
+                <condition disabled="1" id="0" name="On key pressed" sid="940067818056485" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="914876900116603" type="PlayerCoreBox">
+                    <param id="0" name="Object">Potionheart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="877936792978580" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Value">PlayerCoreBox.HPMax</param>
+                </action>
+                <action id="0" name="Call function" sid="703027044307616" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Heart&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="184362761187232" type="Potionheart" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

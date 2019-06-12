@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Dungeon_Sheet</name>
+    <events>
+        <comment>The sheet contains the configuration parameters like Size and elements, this is useful for making another dungeons with another features</comment>
+        <include>_Gamelibrary</include>
+        <include>DungeonConstruction</include>
+        <event-block sid="779624485329733">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="894081313167200" type="System" />
+            </conditions>
+            <actions>
+                <action id="-35" name="Set layer transparent" sid="107899401382202" type="System">
+                    <param id="0" name="Layer">&quot;OverLayer&quot;</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="217231132637360" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="0" name="Call function" sid="727899799654338" type="Function">
+                    <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="244047507033312" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDKey&quot;</param>
+                    <param id="1" name="Parameter {n}">0{###}300{###}30</param>
+                </action>
+                <action id="-35" name="Set layer transparent" sid="736619890383913" type="System">
+                    <param id="0" name="Layer">&quot;OverLayer&quot;</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="799312526848086">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="566286266549104" type="System">
+                            <param id="0" name="First value">RandomDungeonMaker.AlreadyExists</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="840869352255686" type="Function">
+                            <param id="0" name="Name">&quot;ConfigurateLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">Array_Levels.At(Array_Levels.Actual,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355818657239352">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="707731508583581" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="12" name="Revive all dungeon elements" sid="244827654672990" type="RandomDungeonMaker" />
+                        <action id="0" name="Call function" sid="684912497334686" type="Function">
+                            <param id="0" name="Name">&quot;ConstructDungeon&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="999589694637459">
+            <conditions>
+                <condition id="0" name="Dungeon Maked" sid="730905296760452" type="RandomDungeonMaker" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="672588243118304" type="Function">
+                    <param id="0" name="Name">&quot;ConstructDungeon&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Level Configurations</comment>
+        <event-block sid="228515879095628">
+            <conditions>
+                <condition id="0" name="On function" sid="366702094940509" type="Function">
+                    <param id="0" name="Name">&quot;ConfigurateLevel&quot;</param>
+                </condition>
+                <condition id="1" name="Compare parameter" sid="740800025563095" type="Function">
+                    <param id="0" name="Index">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Reset dungeon elements" sid="821609357044801" type="RandomDungeonMaker" />
+                <action id="7" name="New dungeon element" sid="542241142087855" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Player&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="217586292171713" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Key&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="321209438974379" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Exit&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action disabled="1" id="7" name="New dungeon element" sid="982196367387961" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
+                    <param id="1" name="Total">4</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action disabled="1" id="7" name="New dungeon element" sid="373613854117622" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
+                    <param id="1" name="Total">2</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action disabled="1" id="7" name="New dungeon element" sid="791041479412621" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Hearth&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="1" name="Create Dungeon (Extra)" sid="958635477578448" type="RandomDungeonMaker">
+                    <param id="0" name="Width">6</param>
+                    <param id="1" name="Height">6</param>
+                    <param id="2" name="Blocks">30</param>
+                    <param id="3" name="MinRoom">2</param>
+                    <param id="4" name="MaxRoom">3</param>
+                    <param id="5" name="LabyrinthInn">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="674857603687942">
+            <conditions>
+                <condition id="0" name="On function" sid="745690051968831" type="Function">
+                    <param id="0" name="Name">&quot;ConfigurateLevel&quot;</param>
+                </condition>
+                <condition id="1" name="Compare parameter" sid="757921923155041" type="Function">
+                    <param id="0" name="Index">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Reset dungeon elements" sid="332533938241303" type="RandomDungeonMaker" />
+                <action id="7" name="New dungeon element" sid="990840779856830" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Player&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="741362443446647" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Key&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="461198847846518" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Exit&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="263688462852675" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
+                    <param id="1" name="Total">4</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="464863963126925" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
+                    <param id="1" name="Total">2</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="106781296670619" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Hearth&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="1" name="Create Dungeon (Extra)" sid="667075135254038" type="RandomDungeonMaker">
+                    <param id="0" name="Width">8</param>
+                    <param id="1" name="Height">8</param>
+                    <param id="2" name="Blocks">40</param>
+                    <param id="3" name="MinRoom">2</param>
+                    <param id="4" name="MaxRoom">3</param>
+                    <param id="5" name="LabyrinthInn">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="594122056616191">
+            <conditions>
+                <condition id="0" name="On function" sid="409696864223826" type="Function">
+                    <param id="0" name="Name">&quot;ConfigurateLevel&quot;</param>
+                </condition>
+                <condition id="1" name="Compare parameter" sid="939156407112366" type="Function">
+                    <param id="0" name="Index">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Reset dungeon elements" sid="224093589956876" type="RandomDungeonMaker" />
+                <action id="7" name="New dungeon element" sid="753918790707619" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Player&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="919505819638565" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Key&quot;</param>
+                    <param id="1" name="Total">2</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="538110679435029" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Exit&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="850527195513095" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
+                    <param id="1" name="Total">5</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="330872763790844" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
+                    <param id="1" name="Total">5</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="1" name="Create Dungeon (Extra)" sid="305157291214802" type="RandomDungeonMaker">
+                    <param id="0" name="Width">10</param>
+                    <param id="1" name="Height">10</param>
+                    <param id="2" name="Blocks">60</param>
+                    <param id="3" name="MinRoom">2</param>
+                    <param id="4" name="MaxRoom">3</param>
+                    <param id="5" name="LabyrinthInn">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="320514239725855">
+            <conditions>
+                <condition id="0" name="On function" sid="177151693405314" type="Function">
+                    <param id="0" name="Name">&quot;ConfigurateLevel&quot;</param>
+                </condition>
+                <condition id="1" name="Compare parameter" sid="587121362991213" type="Function">
+                    <param id="0" name="Index">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Reset dungeon elements" sid="427048465956423" type="RandomDungeonMaker" />
+                <action id="7" name="New dungeon element" sid="284357602760984" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Player&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="984051964014975" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Key&quot;</param>
+                    <param id="1" name="Total">3</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="928872217310778" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Exit&quot;</param>
+                    <param id="1" name="Total">1</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="499577982806818" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
+                    <param id="1" name="Total">5</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="718017215316782" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
+                    <param id="1" name="Total">5</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="1" name="Create Dungeon (Extra)" sid="147869518828930" type="RandomDungeonMaker">
+                    <param id="0" name="Width">12</param>
+                    <param id="1" name="Height">12</param>
+                    <param id="2" name="Blocks">150</param>
+                    <param id="3" name="MinRoom">2</param>
+                    <param id="4" name="MaxRoom">3</param>
+                    <param id="5" name="LabyrinthInn">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

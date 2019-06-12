@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu_Pause</name>
+    <events>
+        <comment>Sheet of the pause menu</comment>
+        <include>_Menu_General</include>
+        <event-block sid="943737828577510">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="805652345504123" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="767142824863199" type="System">
+                    <param id="0" name="Object to create">PauseContainer</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="X">200</param>
+                    <param id="3" name="Y">50</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="246069824068668" type="PauseContainer">
+                    <param id="0" name="Object">Pause</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;Pause&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="650936707105401" type="PauseContainer">
+                    <param id="0" name="Object">BGMIcon</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;BGMIcon&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="989229959305243" type="PauseContainer">
+                    <param id="0" name="Object">VEIcon</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;VEIcon&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="502775028776449" type="PauseContainer">
+                    <param id="0" name="Object">Menu_Text</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;Exit&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="414633876837708" type="Menu_Text">
+                    <param id="0" name="Width">112</param>
+                    <param id="1" name="Height">23</param>
+                </action>
+                <action id="-10" name="Set value" sid="619275883767766" type="Menu_Text">
+                    <param id="0" name="Instance variable">Function</param>
+                    <param id="1" name="Value">&quot;ExitGame&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="690732639477437" type="Menu_Text">
+                    <param id="0" name="Instance variable">Param</param>
+                    <param id="1" name="Value">&quot;1&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="304943982535445" type="Menu_Text">
+                    <param id="0" name="Instance variable">Inmediatly</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="443179741899537" type="Menu_Text">
+                    <param id="0" name="Instance variable">Text</param>
+                    <param id="1" name="Value">&quot;EXIT GAME&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="944123829580219" type="Menu_Text">
+                    <param id="0" name="Instance variable">Font</param>
+                    <param id="1" name="Value">&quot;Algerian&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="856659515494001" type="Menu_Text">
+                    <param id="0" name="Instance variable">Cursor</param>
+                    <param id="1" name="Value">&quot;Arrow&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="541827400964184" type="Menu_Text">
+                    <param id="0" name="Instance variable">Color</param>
+                    <param id="1" name="Value">&quot;255,216,0&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="288298999910607" type="Function">
+                    <param id="0" name="Name">&quot;MakeMenuText&quot;</param>
+                    <param id="1" name="Parameter {n}">Menu_Text.UID</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="296095774588432" type="PauseContainer">
+                    <param id="0" name="Object">Menu_Text</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;Resume&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="443193941956058" type="Menu_Text">
+                    <param id="0" name="Width">112</param>
+                    <param id="1" name="Height">23</param>
+                </action>
+                <action id="-10" name="Set value" sid="130835813638705" type="Menu_Text">
+                    <param id="0" name="Instance variable">Function</param>
+                    <param id="1" name="Value">&quot;ResumeGame&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="885589848921601" type="Menu_Text">
+                    <param id="0" name="Instance variable">Param</param>
+                    <param id="1" name="Value">&quot;1&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="653700582767813" type="Menu_Text">
+                    <param id="0" name="Instance variable">Inmediatly</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="614380811772896" type="Menu_Text">
+                    <param id="0" name="Instance variable">Text</param>
+                    <param id="1" name="Value">&quot;RESUME&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="907835449443811" type="Menu_Text">
+                    <param id="0" name="Instance variable">Font</param>
+                    <param id="1" name="Value">&quot;Algerian&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="964967137684176" type="Menu_Text">
+                    <param id="0" name="Instance variable">Cursor</param>
+                    <param id="1" name="Value">&quot;Arrow&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="757317766119031" type="Menu_Text">
+                    <param id="0" name="Instance variable">Color</param>
+                    <param id="1" name="Value">&quot;255,216,0&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="342546964543947" type="Function">
+                    <param id="0" name="Name">&quot;MakeMenuText&quot;</param>
+                    <param id="1" name="Parameter {n}">Menu_Text.UID</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="303035062593198" type="Menu_Text">
+                    <param id="0" name="Object">Menu_Cursor</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action disabled="1" id="-7" name="Set size" sid="748339998173008" type="Menu_Cursor">
+                    <param id="0" name="Width">10</param>
+                    <param id="1" name="Height">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="166678399397914">
+            <conditions>
+                <condition id="2" name="Is pause" sid="279810243889529" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="191133601896960" type="System">
+                    <param id="0" name="Layer">&quot;Pause&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="417098974428148" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="438336804451499">
+            <conditions>
+                <condition id="2" inverted="1" name="Is pause" sid="413083705029693" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="714131018676294" type="System">
+                    <param id="0" name="Layer">&quot;Pause&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="973822017391536" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="301403205726628">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="707952993745523" type="Keyboard">
+                    <param id="0" name="Key">27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Toggle pause" sid="209750553394998" type="Rex_Pause" />
+                <action id="4" name="Set animation" sid="760348021535043" type="BGMIcon">
+                    <param id="0" name="Animation">MuteBGM = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="751450470938181" type="VEIcon">
+                    <param id="0" name="Animation">MuteSE = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>FUNCTIONS</comment>
+        <event-block sid="368522234037435">
+            <conditions>
+                <condition id="0" name="On function" sid="696046594408594" type="Function">
+                    <param id="0" name="Name">&quot;BGMIcon&quot;</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="659746680110780" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="984405596331578" type="System">
+                    <param id="0" name="Variable">MuteBGM</param>
+                    <param id="1" name="Value">MuteBGM = 0? 1 : 0</param>
+                </action>
+                <action id="4" name="Set animation" sid="737363195622892" type="BGMIcon">
+                    <param id="0" name="Animation">MuteBGM = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="844927979143710">
+            <conditions>
+                <condition id="0" name="On function" sid="370063999659480" type="Function">
+                    <param id="0" name="Name">&quot;VEIcon&quot;</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="159426108598589" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="590904472759639" type="System">
+                    <param id="0" name="Variable">MuteSE</param>
+                    <param id="1" name="Value">MuteSE = 0? 1 : 0</param>
+                </action>
+                <action id="4" name="Set animation" sid="150598711019535" type="VEIcon">
+                    <param id="0" name="Animation">MuteSE = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625327245669698">
+            <conditions>
+                <condition id="0" name="On function" sid="483217088768977" type="Function">
+                    <param id="0" name="Name">&quot;ExitGame&quot;</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="995625495810061" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="0" name="Toggle pause" sid="162178042549545" type="Rex_Pause" />
+                <action id="3" name="Clear" sid="504046599529814" type="Player_Log" />
+                <action id="1" name="Set size" sid="800078215960682" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="403410532222564" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="538053593187066" type="Function">
+                    <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="782723661258735" type="System">
+                    <param id="0" name="Layout">Menu_Start</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="103384694437967">
+            <conditions>
+                <condition id="0" name="On function" sid="148400244732536" type="Function">
+                    <param id="0" name="Name">&quot;ResumeGame&quot;</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="642351951842931" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set pause state" sid="991885253481229" type="Rex_Pause">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

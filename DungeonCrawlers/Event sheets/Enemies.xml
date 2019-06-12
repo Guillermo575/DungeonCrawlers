@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemies</name>
+    <events>
+        <comment>the functions for create the enemy object and the AI logic</comment>
+        <event-block sid="910047283998185">
+            <conditions>
+                <condition id="0" name="On function" sid="684326127913027" type="Function">
+                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="842593570332875" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FC_LineOfSight" id="2" name="Add obstacle" sid="337144009783590" type="Family_Character">
+                    <param id="0" name="Obstacle">Tilemap_Solid</param>
+                </action>
+                <action behavior="FC_LineOfSight" id="2" name="Add obstacle" sid="317710803949705" type="Family_Character">
+                    <param id="0" name="Obstacle">Tilemap_Solid2</param>
+                </action>
+                <action id="-10" name="Set value" sid="993636154268692" type="Family_Character">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Value">&quot;Enemy&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="669416588813738" type="Family_Character">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Value">&quot;Player&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="299148689029658" type="Family_Character">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="830800689786491" type="Family_Character">
+                    <param id="0" name="Object">Character_Hitbox</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="252793341186593" type="Character_Hitbox">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="623382103612689" type="Character_Hitbox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="893665095404074" type="Family_Character">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="225869332959651" type="Family_Character">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="734976988686541" type="Scml_Player_Top">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="995738748435718" type="Scml_Player_Bottom">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action id="-10" name="Set value" sid="412464876476043" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">CharacterSkin</param>
+                    <param id="1" name="Value">&quot;Skeleton&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="850752225006783" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">CharacterSkin</param>
+                    <param id="1" name="Value">&quot;Skeleton&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>This adjust the enemy hp, damage in relation with the actual difficult</comment>
+                <event-block sid="592404886553515">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="816074737397711" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Easy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="604169660355991" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="287248074335673" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="183499712028281" type="Family_Character">
+                            <param id="0" name="Instance variable">BonusDamageMult</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="483387206293694">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="567795682371823" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Normal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="905300092063106" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="693014331504192" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="320748035396531" type="Family_Character">
+                            <param id="0" name="Instance variable">BonusDamageMult</param>
+                            <param id="1" name="Value">0.75</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="211969185512627">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="380386225705816" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Hard&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="690493156570615" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="466103599513576" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="566542237173771" type="Family_Character">
+                            <param id="0" name="Instance variable">BonusDamageMult</param>
+                            <param id="1" name="Value">0.75</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>This avoid to collision each other</comment>
+        <event-block sid="763106742025558">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="393305687100690" type="EnemyCoreBox">
+                    <param id="0" name="Object">EnemyCoreBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="103462821159000" type="EnemyCoreBox">
+                    <param id="0" name="Instance variable">Disperse</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="FC_Pathfinding" id="0" name="Find path" sid="567700820051489" type="EnemyCoreBox">
+                    <param id="0" name="X">Self.X + int(random(-48, 48))</param>
+                    <param id="1" name="Y">Self.Y + int(random(-48, 48))</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="310228107896814" type="EnemyCoreBox">
+                    <param id="0" name="Duration">0.25</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Disperse&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="836973276161409">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="340333933360421" type="EnemyCoreBox">
+                    <param id="0" name="Tag">&quot;Disperse&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="984622678814024">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="492626224574055" type="EnemyCoreBox">
+                            <param id="0" name="Object">EnemyCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="923774098365406" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">Disperse</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="982851703890392">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="938337707088193" type="EnemyCoreBox">
+                            <param id="0" name="Object">EnemyCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="0" name="Find path" sid="376158469550600" type="EnemyCoreBox">
+                            <param id="0" name="X">Self.X + int(random(-48, 48))</param>
+                            <param id="1" name="Y">Self.Y + int(random(-48, 48))</param>
+                        </action>
+                        <action behavior="FC_Timer" id="0" name="Start timer" sid="174760029966246" type="EnemyCoreBox">
+                            <param id="0" name="Duration">0.25</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Disperse&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>STALK AI, Searching player</comment>
+        <event-block sid="175049841397888">
+            <conditions>
+                <condition behavior="FC_Pathfinding" id="0" name="On path found" sid="389092603127922" type="EnemyCoreBox" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="853756069772227">
+                    <conditions>
+                        <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="210574407265612" type="EnemyCoreBox">
+                            <param id="0" name="Object">PlayerCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="2" name="Stop" sid="986728107593374" type="EnemyCoreBox" />
+                    </actions>
+                </event-block>
+                <event-block sid="820401120998229">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="354207099504390" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="1" name="Move along path" sid="453802341464515" type="EnemyCoreBox" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="971897554638099">
+                            <conditions>
+                                <condition behavior="FC_Bullet" id="0" name="Compare speed" sid="675410488970574" type="EnemyCoreBox">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="600399333869396" type="EnemyCoreBox">
+                                    <param id="0" name="X">PlayerCoreBox.X</param>
+                                    <param id="1" name="Y">PlayerCoreBox.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="285588852781628">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="110863842912959" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="2" name="Stop" sid="179837540227212" type="EnemyCoreBox" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="601664947014207">
+            <conditions>
+                <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="564603136241466" type="EnemyCoreBox">
+                    <param id="0" name="Object">PlayerCoreBox</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="521524907947068" type="System">
+                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerChase</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="566101600918009" type="EnemyCoreBox">
+                    <param id="0" name="Instance variable">Disperse</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="268341422387950" type="EnemyCoreBox">
+                    <param id="0" name="Instance variable">AIActive</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="916511820714148" type="EnemyCoreBox">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FC_Pathfinding" id="0" name="Find path" sid="250457615787366" type="EnemyCoreBox">
+                    <param id="0" name="X">PlayerCoreBox.X</param>
+                    <param id="1" name="Y">PlayerCoreBox.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="540918866351799">
+            <conditions>
+                <condition id="-11" name="For Each" sid="822332749530312" type="System">
+                    <param id="0" name="Object">EnemyCoreBox</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="323499427495383">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="770811268765545" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="966435749157095">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="570402848374453" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">AIActive</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Picking object Left &amp; Right</comment>
+                                <event-block sid="633030374407182">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="129613905027841" type="EnemyCoreBox">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                        </condition>
+                                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="105517630031225" type="Family_Objects" />
+                                        <condition id="-33" name="Pick by comparison" sid="258661310440474" type="System">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                            <param id="1" name="Expression">EnemyCoreBox.ArmLeft</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="753805949891267" type="Function">
+                                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Family_Objects.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="907210038599445">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="655938960891574" type="EnemyCoreBox">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                        </condition>
+                                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="712916163966046" type="Family_Objects" />
+                                        <condition id="-33" name="Pick by comparison" sid="190029554262300" type="System">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                            <param id="1" name="Expression">EnemyCoreBox.ArmRight</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="313669718893162" type="Function">
+                                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Family_Objects.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Using Left or Right object</comment>
+                                <event-block sid="251299544898020">
+                                    <conditions>
+                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="185929505357032" type="EnemyCoreBox">
+                                            <param id="0" name="Object">PlayerCoreBox</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="121311308265990" type="EnemyCoreBox">
+                                            <param id="0" name="Instance variable">ArmLeft</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="325357667710640" type="System">
+                                            <param id="0" name="Object">Scml_Player_Top</param>
+                                            <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">EnemyCoreBox.UID</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="646559082361187" type="Family_Objects">
+                                            <param id="0" name="Unique ID">EnemyCoreBox.ArmLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="364105061938510">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="410551833407294" type="System">
+                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">50</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="709682496755139" type="Family_Objects">
+                                                    <param id="0" name="Instance variable">Distance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Short&quot;</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="906215385238296" type="System">
+                                                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackShort</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="411643057174689" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="934229581416582">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="556998890234554" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="902671142756117" type="System">
+                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">200</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="661347831603711" type="Family_Objects">
+                                                    <param id="0" name="Instance variable">Distance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Long&quot;</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="294743845217672" type="System">
+                                                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackLong</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="984274743599201" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="534142647552506">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="690890310135781" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="741279094421294" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="791198539608359">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="289848406691618" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="837749464825475" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="339926033318609">
+                                    <conditions>
+                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="530790644549914" type="EnemyCoreBox">
+                                            <param id="0" name="Object">PlayerCoreBox</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="671392629067011" type="EnemyCoreBox">
+                                            <param id="0" name="Instance variable">ArmRight</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="682822360454490" type="System">
+                                            <param id="0" name="Object">Scml_Player_Top</param>
+                                            <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">EnemyCoreBox.UID</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="367937428310902" type="Family_Objects">
+                                            <param id="0" name="Unique ID">EnemyCoreBox.ArmRight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="937789008463172">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="952944092612461" type="System">
+                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">50</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="767692744351119" type="Family_Objects">
+                                                    <param id="0" name="Instance variable">Distance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Short&quot;</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="618601693900963" type="System">
+                                                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackShort</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="942436954906562" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="370710026210582">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="864755161046701" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="636402967872087" type="System">
+                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">200</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="486843209917928" type="Family_Objects">
+                                                    <param id="0" name="Instance variable">Distance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Long&quot;</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="996258957307456" type="System">
+                                                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackLong</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="303789768710428" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="754803172755096">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="546310453111035" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="820737137636283" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="624962324761837">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="259042755318772" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="869581199327140" type="Function">
+                                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="784747959434190">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="422790026001403" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Pathfinding" id="2" name="Stop" sid="371435971739204" type="EnemyCoreBox" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="926880332525062">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="624995685867747" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="103208848902859" type="System">
+                                    <param id="0" name="Object">Scml_Player_Top</param>
+                                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">EnemyCoreBox.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="592900273852086" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">IsAlive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="683126080113730" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                    <param id="1" name="Value">&quot;Death&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="574971069856035" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="737286233167749" type="Function">
+                                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
+                                    <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
+                                </action>
+                                <action id="9" name="Remove dungeon element" sid="111230306201985" type="RandomDungeonMaker">
+                                    <param id="0" name="ElementId">EnemyCoreBox.EID</param>
+                                </action>
+                                <action behavior="FC_Timer" id="0" name="Start timer" sid="684452258811829" type="EnemyCoreBox">
+                                    <param id="0" name="Duration">1.5</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;DeadDestroy&quot;</param>
+                                </action>
+                                <action behavior="FC_Solid" id="0" name="Set enabled" sid="361248269802482" type="EnemyCoreBox">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="220962084086242" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">AIActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="105623488342411">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="296583565899182" type="System">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                            <param id="1" name="Expression">EnemyCoreBox.ArmLeft</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Objects.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="283546878427127" type="Function">
+                                            <param id="0" name="Name">&quot;DropObject&quot;</param>
+                                            <param id="1" name="Parameter {n}">Family_Objects.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="164906167062966" type="EnemyCoreBox">
+                                            <param id="0" name="Instance variable">ArmLeft</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="167148184631106">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="748876971835141" type="Family_Impact">
+                                                    <param id="0" name="Unique ID">Family_Objects.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="896100605862045" type="Family_Impact">
+                                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="969302076836094">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="741380580578168" type="System">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                            <param id="1" name="Expression">EnemyCoreBox.ArmRight</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Objects.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="160623956732792" type="Function">
+                                            <param id="0" name="Name">&quot;DropObject&quot;</param>
+                                            <param id="1" name="Parameter {n}">Family_Objects.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="909476854157446" type="EnemyCoreBox">
+                                            <param id="0" name="Instance variable">ArmRight</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="462576717213465">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="820501278573786" type="Family_Impact">
+                                                    <param id="0" name="Unique ID">Family_Objects.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="739530258149340" type="Family_Impact">
+                                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="359380184950983">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="307635789003365" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="2" name="Stop" sid="311415918457957" type="EnemyCoreBox" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Death conditional</comment>
+        <event-block sid="431114039540361">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="753659814100003" type="EnemyCoreBox">
+                    <param id="0" name="Tag">&quot;DeadDestroy&quot;</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="795681233801491" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">EnemyCoreBox.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="908670718404876" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">EnemyCoreBox.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="417614087997266" type="EnemyCoreBox" />
+                <action id="-9" name="Destroy" sid="467938959465516" type="Scml_Player_Top" />
+                <action id="-9" name="Destroy" sid="872349393414717" type="Scml_Player_Bottom" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

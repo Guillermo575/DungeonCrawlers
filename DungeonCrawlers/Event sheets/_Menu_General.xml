@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_Menu_General</name>
+    <events>
+        <comment>Sheet with main menu option functions</comment>
+        <event-block sid="301719955441003">
+            <conditions>
+                <condition id="0" name="On function" sid="221294906041827" type="Function">
+                    <param id="0" name="Name">&quot;MakeMenuText&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="431648618227083" type="Menu_Text">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="901142534734336" type="Menu_Text">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="248054322639153" type="Menu_Text">
+                    <param id="0" name="Object">Text_Menu</param>
+                    <param id="1" name="Layer">Menu_Text.LayerName</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="354782460131076" type="Text_Menu">
+                    <param id="0" name="Width">Menu_Text.Width</param>
+                    <param id="1" name="Height">Menu_Text.Height</param>
+                </action>
+                <action id="4" name="Set font color" sid="986107419694523" type="Text_Menu">
+                    <param id="0" name="Color">rgb(int(tokenat(Menu_Text.Color, 0, &quot;,&quot;)), int(tokenat(Menu_Text.Color, 1, &quot;,&quot;)), int(tokenat(Menu_Text.Color, 2, &quot;,&quot;)))</param>
+                </action>
+                <action id="3" name="Set font size" sid="143260075129334" type="Text_Menu">
+                    <param id="0" name="Size (pt)">int(Menu_Text.Height/2)</param>
+                </action>
+                <action id="2" name="Set font face" sid="122359859462591" type="Text_Menu">
+                    <param id="0" name="Font face">Menu_Text.Font</param>
+                    <param id="1" name="Style">1</param>
+                </action>
+                <action id="0" name="Set text" sid="530784248883530" type="Text_Menu">
+                    <param id="0" name="Text">Menu_Text.Text</param>
+                </action>
+                <action id="0" name="Call function" sid="162396311284473" type="Function">
+                    <param id="0" name="Name">&quot;MakeTextShadow&quot;</param>
+                    <param id="1" name="Parameter {n}">Text_Menu.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="461869541634732">
+            <conditions>
+                <condition id="0" name="On function" sid="721818035256894" type="Function">
+                    <param id="0" name="Name">&quot;MakeTextShadow&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="950206408893378" type="Text_Menu">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="281689574697419" type="System">
+                    <param id="0" name="Object to create">Text_Menu_Shadow</param>
+                    <param id="1" name="Layer">Text_Menu.LayerName</param>
+                    <param id="2" name="X">Text_Menu.X + 2</param>
+                    <param id="3" name="Y">Text_Menu.Y - 2</param>
+                </action>
+                <action id="-29" name="Move to object" sid="517083292365135" type="Text_Menu_Shadow">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">Text_Menu</param>
+                </action>
+                <action id="0" name="Set text" sid="224674889578094" type="Text_Menu_Shadow">
+                    <param id="0" name="Text">Text_Menu.Text</param>
+                </action>
+                <action id="3" name="Set font size" sid="766262736855602" type="Text_Menu_Shadow">
+                    <param id="0" name="Size (pt)">Text_Menu.FaceSize</param>
+                </action>
+                <action id="4" name="Set font color" sid="456103736375579" type="Text_Menu_Shadow">
+                    <param id="0" name="Color">rgb(0,0,0)</param>
+                </action>
+                <action id="-5" name="Set width" sid="862619014114961" type="Text_Menu_Shadow">
+                    <param id="0" name="Width">Text_Menu.Width</param>
+                </action>
+                <action id="-6" name="Set height" sid="440025805889161" type="Text_Menu_Shadow">
+                    <param id="0" name="Height">Text_Menu.Height</param>
+                </action>
+                <action id="2" name="Set font face" sid="974543873806712" type="Text_Menu_Shadow">
+                    <param id="0" name="Font face">Text_Menu.FaceName</param>
+                    <param id="1" name="Style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>MOUSE/TOUCH CONTROLS</comment>
+        <event-block sid="407409030186621">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="129961749172454" type="Mouse">
+                    <param id="0" name="Object">Family_Menus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="213708169828775" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+                <action disabled="1" id="-4" name="Set position to another object" sid="809907018349624" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action disabled="1" id="4" name="Set animation" sid="587508195826943" type="Menu_Cursor">
+                    <param id="0" name="Animation">Family_Menus.Cursor</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="565098474235541">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="180102180133788" type="Mouse">
+                    <param id="0" name="Object">Family_Menus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="828181774126262" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="599066827021269">
+            <conditions>
+                <condition id="3" name="On touched object" sid="755504226943501" type="Touch">
+                    <param id="0" name="Object">Family_Menus</param>
+                </condition>
+                <condition disabled="1" id="6" name="On object clicked" sid="710323925274492" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Family_Menus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="589565165907513" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="692759149347710" type="Menu_Cursor">
+                    <param id="0" name="Animation">Family_Menus.Cursor</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="986583301519275">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="417281723950534" type="Family_Menus">
+                            <param id="0" name="Instance variable">Inmediatly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="123957358514748" type="Function">
+                            <param id="0" name="Name">Family_Menus.Function</param>
+                            <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="641034007112319">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="782541908490207" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="226094620974419" type="Menu_Cursor">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.8</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="798913016206344" type="System">
+                            <param id="0" name="Seconds">0.8</param>
+                        </action>
+                        <action id="0" name="Call function" sid="588787324808670" type="Function">
+                            <param id="0" name="Name">Family_Menus.Function</param>
+                            <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>KEYBOARD CONTROLS</comment>
+        <event-block sid="291308410977265">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="125371916821241" type="Keyboard">
+                    <param id="0" name="Keycode">13</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="816120556286355" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+                <condition id="-15" name="Pick nearest/furthest" sid="540249819869382" type="Family_Menus">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Menu_Cursor.X</param>
+                    <param id="2" name="Y">Menu_Cursor.Y</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="104289056388490">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="999035857153790" type="Family_Menus">
+                            <param id="0" name="Instance variable">Inmediatly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="205853774279550" type="Function">
+                            <param id="0" name="Name">Family_Menus.Function</param>
+                            <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="718684392856102">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="157011610814809" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="692803241743616" type="Menu_Cursor">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.8</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="407570576587095" type="System">
+                            <param id="0" name="Seconds">0.8</param>
+                        </action>
+                        <action id="0" name="Call function" sid="779021182587898" type="Function">
+                            <param id="0" name="Name">Family_Menus.Function</param>
+                            <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="496011050009524">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="110434463228031" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="671103654012617" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+                <condition id="-34" name="Pick by evaluate" sid="565222491939879" type="System">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Expression">Family_Menus.Y &gt; Menu_Cursor.Y</param>
+                </condition>
+                <condition id="-15" name="Pick nearest/furthest" sid="539365261000287" type="Family_Menus">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Menu_Cursor.X</param>
+                    <param id="2" name="Y">Menu_Cursor.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="442136151670216" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="868996497046410" type="Menu_Cursor">
+                    <param id="0" name="Animation">Family_Menus.Cursor</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="524639536755211">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="960646760930890" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="108376381900705" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+                <condition id="-34" name="Pick by evaluate" sid="919298315823792" type="System">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Expression">Family_Menus.Y &lt; Menu_Cursor.Y</param>
+                </condition>
+                <condition id="-15" name="Pick nearest/furthest" sid="174760852205188" type="Family_Menus">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Menu_Cursor.X</param>
+                    <param id="2" name="Y">Menu_Cursor.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="418187796201859" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="291533483221596" type="Menu_Cursor">
+                    <param id="0" name="Animation">Family_Menus.Cursor</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="810942340264812">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="219246689740759" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="516530749062790" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+                <condition id="-34" name="Pick by evaluate" sid="761799065758352" type="System">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Expression">Family_Menus.X &lt; Menu_Cursor.X</param>
+                </condition>
+                <condition id="-15" name="Pick nearest/furthest" sid="244914729978705" type="Family_Menus">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Menu_Cursor.X</param>
+                    <param id="2" name="Y">Menu_Cursor.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="592119235931662" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="142577516019519" type="Menu_Cursor">
+                    <param id="0" name="Animation">Family_Menus.Cursor</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="152916334878250">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="970092738653665" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="753858083124467" type="Menu_Cursor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+                <condition id="-34" name="Pick by evaluate" sid="650209678950732" type="System">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Expression">Family_Menus.X &gt; Menu_Cursor.X</param>
+                </condition>
+                <condition id="-15" name="Pick nearest/furthest" sid="296677470948584" type="Family_Menus">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Menu_Cursor.X</param>
+                    <param id="2" name="Y">Menu_Cursor.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="521248209251932" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="593544129550299" type="Menu_Cursor">
+                    <param id="0" name="Animation">Family_Menus.Cursor</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

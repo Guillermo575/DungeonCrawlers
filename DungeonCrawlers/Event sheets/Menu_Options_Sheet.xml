@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu_Options_Sheet</name>
+    <events>
+        <comment>Sheet that allow to choose the difficult, depending on the difficult you select is the levels that will load on the array</comment>
+        <include>_Menu_General</include>
+        <event-block sid="694819720726698">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="549866195538780" type="System" />
+                <condition id="-11" name="For Each" sid="617783572428353" type="System">
+                    <param id="0" name="Object">Menu_Text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="340069588511648" type="Function">
+                    <param id="0" name="Name">&quot;MakeMenuText&quot;</param>
+                    <param id="1" name="Parameter {n}">Menu_Text.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="316659252235194">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="210891548557208" type="System" />
+                <condition id="-15" name="Pick nearest/furthest" sid="123748515618810" type="Family_Menus">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Menu_Cursor.X</param>
+                    <param id="2" name="Y">Menu_Cursor.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="141925826833760" type="Menu_Cursor">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="783822033470248">
+            <conditions>
+                <condition id="0" name="On function" sid="268464963193745" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="387326288141872" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="3" name="Set at XY" sid="257226503027884" type="Array_Levels">
+                    <param id="0" name="X">Array_Levels.Width - 1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">Function.Param(1)</param>
+                </action>
+                <action id="3" name="Set at XY" sid="657958105461968" type="Array_Levels">
+                    <param id="0" name="X">Array_Levels.Width - 1</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">Function.Param(2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="118955932248177">
+            <conditions>
+                <condition id="0" name="On function" sid="219630463246312" type="Function">
+                    <param id="0" name="Name">&quot;StartGame_Easy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear" sid="531032527126397" type="Player_Log" />
+                <action id="-9" name="Destroy" sid="553133700469659" type="Player_Log" />
+                <action id="-3" name="Create object" sid="384544673408134" type="System">
+                    <param id="0" name="Object to create">Player_Log</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="966682374157988" type="System">
+                    <param id="0" name="Variable">ConfigDifficult</param>
+                    <param id="1" name="Value">&quot;Easy&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="197648691927384" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">3</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="468899992332783" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="820718594745424" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Start&quot;{###}0{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="383612181335640" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}1{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="621755432042877" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}1{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="853232530112108" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Boss_Wormula&quot;{###}0{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="350121713442479" type="System">
+                    <param id="0" name="Layout">Array_Levels.At(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841177674216619">
+            <conditions>
+                <condition id="0" name="On function" sid="394270673525879" type="Function">
+                    <param id="0" name="Name">&quot;StartGame_Medium&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear" sid="216531370943138" type="Player_Log" />
+                <action id="-9" name="Destroy" sid="283645385436870" type="Player_Log" />
+                <action id="-3" name="Create object" sid="120578568885520" type="System">
+                    <param id="0" name="Object to create">Player_Log</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="937158076900055" type="System">
+                    <param id="0" name="Variable">ConfigDifficult</param>
+                    <param id="1" name="Value">&quot;Normal&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="872354932280284" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">3</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="881826039182371" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="904694902087743" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Start&quot;{###}&quot;0&quot;{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="785146404954572" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}1{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="908661146884791" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}1{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="346516564738142" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}2{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="324357258662988" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Boss_Wormula&quot;{###}0{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="289501344491635" type="System">
+                    <param id="0" name="Layout">Array_Levels.At(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="379552995822548">
+            <conditions>
+                <condition id="0" name="On function" sid="388136716741290" type="Function">
+                    <param id="0" name="Name">&quot;StartGame_Hard&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear" sid="492999326577648" type="Player_Log" />
+                <action id="-9" name="Destroy" sid="976134256412735" type="Player_Log" />
+                <action id="-3" name="Create object" sid="517535318684304" type="System">
+                    <param id="0" name="Object to create">Player_Log</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="839796000024085" type="System">
+                    <param id="0" name="Variable">ConfigDifficult</param>
+                    <param id="1" name="Value">&quot;Hard&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="849439033738705" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">3</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="319253884085833" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="851246393879458" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Start&quot;{###}&quot;0&quot;{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="947318287461917" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}1{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="303111608780989" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}1{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="491204112582586" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}2{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="714827914988638" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Boss_Wormula&quot;{###}0{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="612465929039042" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}3{###}&quot;Volcan.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="955969009590707" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;{###}3{###}&quot;Volcan.png&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="629042390987733" type="Function">
+                    <param id="0" name="Name">&quot;AddLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Boss_Dragonium&quot;{###}0{###}&quot;Wood.png&quot;</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="272834999957446" type="System">
+                    <param id="0" name="Layout">Array_Levels.At(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495053888386853">
+            <conditions>
+                <condition id="0" name="On function" sid="595196724450344" type="Function">
+                    <param id="0" name="Name">&quot;GoLayout&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="222851026044524" type="System">
+                    <param id="0" name="Layout">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="512816907288726">
+            <conditions>
+                <condition id="0" name="On function" sid="329095100497200" type="Function">
+                    <param id="0" name="Name">&quot;GoLastLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="872732839195623" type="System">
+                    <param id="0" name="Layout">LastLevel</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="270008254604711">
+            <conditions>
+                <condition id="0" name="On function" sid="510665897343910" type="Function">
+                    <param id="0" name="Name">&quot;Go_TryAgain&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="889136519296919">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="615161062963646" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Easy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="899408715740489" type="System">
+                            <param id="0" name="Layout">LastLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635924188364330">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="120948880653952" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Normal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="756882750933745" type="System">
+                            <param id="0" name="Layout">LastLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="364460424625786">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="946500248758604" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Hard&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear" sid="309276534730157" type="Player_Log" />
+                        <action id="-10" name="Set value" sid="169870015103152" type="Array_Levels">
+                            <param id="0" name="Instance variable">Actual</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="202255245282177" type="System">
+                            <param id="0" name="Layout">Array_Levels.At(Array_Levels.Actual)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DungeonConstruction</name>
+    <events>
+        <comment>Is this the RDM Main Sheet, this allows to Build the Dungeon, this is similar to the other examples that you can found in the RDM</comment>
+        <include>MiniMap</include>
+        <variable comment="Size of each RDM Cell (Block)" constant="0" name="BlockSize" sid="715069902852783" static="0" type="number">128</variable>
+        <variable comment="Amount of tiles used in each block side (ex: 4x4= 16 tiles in total)" constant="0" name="TilesXBlock" sid="921447408011642" static="0" type="number">4</variable>
+        <variable comment="Amount of tiles used in a wall side" constant="0" name="TilesXWall" sid="623011610390559" static="0" type="number">4</variable>
+        <variable comment="Block where the player start" constant="0" name="BlockStart" sid="663532061147953" static="0" type="number">0</variable>
+        <variable comment="Block Where the door is located" constant="0" name="BlockEnd" sid="236413481299743" static="0" type="number">0</variable>
+        <variable constant="0" name="BlockActual" sid="756398274476332" static="0" type="number">0</variable>
+        <variable comment="Pattern used forWalls" constant="0" name="TilePattern_Walls" sid="957522488624896" static="0" type="text">0,1,2</variable>
+        <variable comment="Pattern used for Roofs" constant="0" name="TilePattern_Roof" sid="169145816989721" static="0" type="text">3,4,5</variable>
+        <variable comment="Pattern used for Floor(Grass)" constant="0" name="TilePattern_FloorGrass" sid="727202967853709" static="0" type="text">6,7,8</variable>
+        <variable comment="Pattern used for Roofs" constant="0" name="TilePattern_Sea" sid="671456066655967" static="0" type="text">18</variable>
+        <comment>This function is trigger at the end of the &quot;Create Dungeon&quot; action</comment>
+        <event-block sid="229687594349275">
+            <conditions>
+                <condition id="0" name="On function" sid="683279289375716" type="Function">
+                    <param id="0" name="Name">&quot;ConstructDungeon&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="197246456580139" type="System">
+                    <param id="0" name="Variable">BlockActual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="585463572371845" type="System">
+                    <param id="0" name="Variable">BlockEnd</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="979139507188207" type="System">
+                    <param id="0" name="Variable">BlockStart</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Reset next block" sid="152402389306945" type="RandomDungeonMaker" />
+                <action id="0" name="Call function" sid="185808427115505" type="Function">
+                    <param id="0" name="Name">&quot;Create_MiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="988078457544459">
+                    <conditions>
+                        <condition id="-10" name="For" sid="884738220834735" type="System">
+                            <param id="0" name="Name">&quot;LoopTest&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">RandomDungeonMaker.DungeonHeight*RandomDungeonMaker.DungeonWidth</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set next block" sid="694049905923563" type="RandomDungeonMaker" />
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="TotalNameTag" sid="452173092665053" static="0" type="text"></variable>
+                        <variable constant="0" name="TotalEID" sid="548789197829450" static="0" type="text"></variable>
+                        <event-block sid="796941195747640">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="954855528681756" type="System">
+                                    <param id="0" name="First value">RandomDungeonMaker.BlockCurrentID</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="983540282837082" type="System">
+                                    <param id="0" name="Object to create">BlockDungeon</param>
+                                    <param id="1" name="Layer">&quot;BackGround&quot;</param>
+                                    <param id="2" name="X">(RandomDungeonMaker.BlockCurrentX*BlockSize) + Tilemap.X</param>
+                                    <param id="3" name="Y">(RandomDungeonMaker.BlockCurrentY*BlockSize) + Tilemap.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="345755688444406" type="BlockDungeon">
+                                    <param id="0" name="Instance variable">Id</param>
+                                    <param id="1" name="Value">RandomDungeonMaker.BlockCurrentId</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="142507213788153" type="BlockDungeon">
+                                    <param id="0" name="Pin to">Tilemap</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="226643524551784" type="BlockDungeon">
+                                    <param id="0" name="Width">BlockSize</param>
+                                    <param id="1" name="Height">BlockSize</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="936712232153968" type="BlockDungeon">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="338365889533905" type="Function">
+                                    <param id="0" name="Name">&quot;FillMosaicRandom&quot;</param>
+                                    <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXBlock{###}RandomDungeonMaker.BlockCurrentY*TilesXBlock{###}TilePattern_FloorGrass</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="888839271273672" type="System">
+                                    <param id="0" name="Variable">TotalEID</param>
+                                    <param id="1" name="Value">RandomDungeonMaker.BlockElementsEID(RandomDungeonMaker.BlockCurrentID)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="931774432218925" type="System">
+                                    <param id="0" name="Variable">TotalNameTag</param>
+                                    <param id="1" name="Value">RandomDungeonMaker.BlockElementsNameTag(RandomDungeonMaker.BlockCurrentID)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="259800663287799" type="Function">
+                                    <param id="0" name="Name">&quot;FillMosaic_GapTopLeft&quot;</param>
+                                    <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall{###}RandomDungeonMaker.BlockCurrentID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="389167927820362" type="Function">
+                                    <param id="0" name="Name">&quot;FillMosaic_GapTopRight&quot;</param>
+                                    <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall{###}RandomDungeonMaker.BlockCurrentID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="606678667747715" type="Function">
+                                    <param id="0" name="Name">&quot;FillMosaic_GapBottomLeft&quot;</param>
+                                    <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall{###}RandomDungeonMaker.BlockCurrentID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="676392851346002" type="Function">
+                                    <param id="0" name="Name">&quot;FillMosaic_GapBottomRight&quot;</param>
+                                    <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall{###}RandomDungeonMaker.BlockCurrentID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="296049946919039">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="935068894147850" type="System">
+                                            <param id="0" name="First value">RandomDungeonMaker.WallTop(RandomDungeonMaker.BlockCurrentID)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="418235869415850" type="Function">
+                                            <param id="0" name="Name">&quot;FillMosaic_WallTop&quot;</param>
+                                            <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="361117846785730">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="130668565353594" type="System">
+                                            <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.BlockCurrentID)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="606331707519229" type="Function">
+                                            <param id="0" name="Name">&quot;FillMosaic_WallRight&quot;</param>
+                                            <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="641274683316050">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="414811180225245" type="System">
+                                            <param id="0" name="First value">RandomDungeonMaker.WallBottom(RandomDungeonMaker.BlockCurrentID)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="550568011595311" type="Function">
+                                            <param id="0" name="Name">&quot;FillMosaic_WallBottom&quot;</param>
+                                            <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="742187675054290">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="796486913321830" type="System">
+                                            <param id="0" name="First value">RandomDungeonMaker.WallLeft(RandomDungeonMaker.BlockCurrentID)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="202072645798030" type="Function">
+                                            <param id="0" name="Name">&quot;FillMosaic_WallLeft&quot;</param>
+                                            <param id="1" name="Parameter {n}">RandomDungeonMaker.BlockCurrentX*TilesXWall{###}RandomDungeonMaker.BlockCurrentY*TilesXWall</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="209146679507472">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="310521369600849" type="System">
+                                            <param id="0" name="First value">TotalNameTag</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                        <condition id="-10" name="For" sid="351200009952936" type="System">
+                                            <param id="0" name="Name">&quot;LoopSpawn&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">tokencount(TotalNameTag,&quot;,&quot;) - 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="691365190627102">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="701411113064274" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Player&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="311670965479074" type="System">
+                                                    <param id="0" name="Variable">BlockStart</param>
+                                                    <param id="1" name="Value">BlockDungeon.Id</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="901015704998487" type="System">
+                                                    <param id="0" name="Variable">BlockActual</param>
+                                                    <param id="1" name="Value">BlockDungeon.Id</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="191131867853056" type="BlockDungeon">
+                                                    <param id="0" name="Object">PlayerCoreBox</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="852594131358382" type="Function">
+                                                    <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
+                                                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="375410149525325">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="413604206711343" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Exit&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="866489447057616" type="System">
+                                                    <param id="0" name="Variable">BlockEnd</param>
+                                                    <param id="1" name="Value">BlockDungeon.Id</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="753065601396645" type="BlockDungeon">
+                                                    <param id="0" name="Object">DoorDungeon</param>
+                                                    <param id="1" name="Layer">&quot;Scene&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-7" name="Set size" sid="336715996349036" type="DoorDungeon">
+                                                    <param id="0" name="Width">BlockSize/3</param>
+                                                    <param id="1" name="Height">BlockSize/3</param>
+                                                </action>
+                                                <action id="-4" name="Set position to another object" sid="993827253670732" type="DoorDungeon">
+                                                    <param id="0" name="Object">BlockDungeon</param>
+                                                    <param id="1" name="Image point (optional)">1</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="123385825904840" type="DoorDungeon">
+                                                    <param id="0" name="Pin to">BlockDungeon</param>
+                                                    <param id="1" name="Mode">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="775059260523036">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="724688507072941" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Enemy_Sword&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="615276533098128" type="BlockDungeon">
+                                                    <param id="0" name="Object">EnemyCoreBox</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="278344811579819" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">EID</param>
+                                                    <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="681718657158248" type="Function">
+                                                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="303926938998055" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">Object_Sword</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="186931529067979" type="Function">
+                                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Sword.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="303967737985402">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="504448455522499" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Enemy_Wand&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="609714873865271" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">EID</param>
+                                                    <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="103698039978106" type="Function">
+                                                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="333481627216280" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">Object_Wand</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="718849276530959" type="Function">
+                                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Wand.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="948065207457882">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="619402651865070" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Sword&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="820140890843020" type="BlockDungeon">
+                                                    <param id="0" name="Object">Object_Sword</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="153758664582507">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="755818515762103" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Bow&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="374237846267102" type="BlockDungeon">
+                                                    <param id="0" name="Object">Object_Bow</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="900639872147138">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="624870411558001" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Axe&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="240073430892172" type="BlockDungeon">
+                                                    <param id="0" name="Object">Object_Axe</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="105085884247155">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="364420744485074" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Wand&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="301737901552647" type="BlockDungeon">
+                                                    <param id="0" name="Object">Object_Wand</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="319069069979954">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="769364017122178" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Key&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="202762173835095" type="BlockDungeon">
+                                                    <param id="0" name="Object">Object_Key</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="549799988470620">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="605201025019929" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Hearth&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="689746731697200" type="BlockDungeon">
+                                                    <param id="0" name="Object">Potionheart</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>This function is trigger at the end of the &quot;Create Dungeon&quot; action, this function is responsible for build the structure of the level</comment>
+        <event-block sid="753195479907602">
+            <conditions>
+                <condition id="0" name="On function" sid="772867301096724" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic&quot;</param>
+                </condition>
+                <condition id="-10" name="For" sid="576185093199518" type="System">
+                    <param id="0" name="Name">&quot;LoopFillTile&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">(TilesXBlock*TilesXBlock) - 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="465658573727264" type="Tilemap">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + int(loopindex % TilesXBlock)</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + int(loopindex / TilesXBlock)</param>
+                    <param id="2" name="Tile">int(tokenat(Function.Param(2),loopindex % tokencount(Function.Param(2),&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="698652461035898">
+            <conditions>
+                <condition id="0" name="On function" sid="122482621761858" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaicRandom&quot;</param>
+                </condition>
+                <condition id="-10" name="For" sid="172965239830682" type="System">
+                    <param id="0" name="Name">&quot;LoopFillTile&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">(TilesXBlock*TilesXBlock) - 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="376580696156845" type="Tilemap">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + int(loopindex % TilesXBlock)</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + int(loopindex / TilesXBlock)</param>
+                    <param id="2" name="Tile">int(tokenat(Function.Param(2),random(tokencount(Function.Param(2),&quot;,&quot;)), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>The next functions load the wall builds</comment>
+        <event-block sid="712139188746589">
+            <conditions>
+                <condition id="0" name="On function" sid="364537231438274" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_WallTop&quot;</param>
+                </condition>
+                <condition id="-10" name="For" sid="534255713348226" type="System">
+                    <param id="0" name="Name">&quot;LoopFillTile&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">TilesXWall - 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="452414340157602" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) +loopindex</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1))</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="735474562896825" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) +loopindex</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1))</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="244863453257543">
+            <conditions>
+                <condition id="0" name="On function" sid="412274472342862" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_WallRight&quot;</param>
+                </condition>
+                <condition id="-10" name="For" sid="535252195714928" type="System">
+                    <param id="0" name="Name">&quot;LoopFillTile&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">TilesXWall- 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="760757958656730" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) +TilesXWall-1</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + loopindex</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="948154465975060" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) +TilesXWall-1</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + loopindex</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="670202929169243">
+            <conditions>
+                <condition id="0" name="On function" sid="460524270114721" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_WallBottom&quot;</param>
+                </condition>
+                <condition id="-10" name="For" sid="220318983722045" type="System">
+                    <param id="0" name="Name">&quot;LoopFillTile&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">TilesXWall - 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="886510912187672" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + loopindex</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + TilesXWall-1</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="216878352176269" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + loopindex</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + TilesXWall-1</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="219606659520795">
+            <conditions>
+                <condition id="0" name="On function" sid="174852020561697" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_WallLeft&quot;</param>
+                </condition>
+                <condition id="-10" name="For" sid="602376636512196" type="System">
+                    <param id="0" name="Name">&quot;LoopFillTile&quot;</param>
+                    <param id="1" name="Start index">0</param>
+                    <param id="2" name="End index">TilesXWall - 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="466407823506018" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) </param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + loopindex</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="958769845015121" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) </param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + loopindex</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>The next functions load the wall corner builds</comment>
+        <event-block sid="282170804747598">
+            <conditions>
+                <condition id="0" name="On function" sid="296494177061493" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_GapTopLeft&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="646142369689448" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallTop(RandomDungeonMaker.AdjacentBlockLeft(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="119720681089760" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallLeft(RandomDungeonMaker.AdjacentBlockTop(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="166939860306079" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) </param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) </param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="263261371281046" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) </param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) </param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="306063676012511">
+            <conditions>
+                <condition id="0" name="On function" sid="111331793504249" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_GapTopRight&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="266765613502093" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallTop(RandomDungeonMaker.AdjacentBlockRight(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="700373435095234" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.AdjacentBlockTop(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="225244539461213" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + (TilesXWall - 1)</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) </param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="404841620216957" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + (TilesXWall - 1)</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) </param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="386242019524973">
+            <conditions>
+                <condition id="0" name="On function" sid="280758547401016" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_GapBottomLeft&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="682103631345635" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallBottom(RandomDungeonMaker.AdjacentBlockLeft(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="697438644119074" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallLeft(RandomDungeonMaker.AdjacentBlockBottom(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="988489012843788" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) </param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + (TilesXWall - 1)</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="164193717123588" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) </param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + (TilesXWall - 1)</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="221338804376823">
+            <conditions>
+                <condition id="0" name="On function" sid="442097941472515" type="Function">
+                    <param id="0" name="Name">&quot;FillMosaic_GapBottomRight&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="516768352163367" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallBottom(RandomDungeonMaker.AdjacentBlockRight(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="738546523680663" type="System">
+                    <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.AdjacentBlockBottom(Function.Param(2)))</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set tile" sid="951852104480873" type="Tilemap_Solid">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + (TilesXWall - 1)</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + (TilesXWall - 1)</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Walls, loopindex % tokencount(TilePattern_Walls,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="1" name="Set tile" sid="128163724242120" type="TileMapOver">
+                    <param id="0" name="Tile X">int(Function.Param(0)) + (TilesXWall - 1)</param>
+                    <param id="1" name="Tile Y">int(Function.Param(1)) + (TilesXWall - 1)</param>
+                    <param id="2" name="Tile">int(tokenat(TilePattern_Roof, loopindex % tokencount(TilePattern_Roof,&quot;,&quot;), &quot;,&quot;))</param>
+                    <param id="3" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Audio</name>
+    <events>
+        <comment>Functions of Sound</comment>
+        <variable comment="Current BGM Music" constant="0" name="BGMusic" sid="790570015435731" static="0" type="text"></variable>
+        <variable comment="Sound Effect: 0 = unmute, 1 = mute" constant="0" name="MuteSE" sid="367371299863859" static="0" type="number">1</variable>
+        <variable comment="BackGroundMusic: 0 = unmute, 1 = mute" constant="0" name="MuteBGM" sid="688207851536965" static="0" type="number">1</variable>
+        <variable comment="Current Sound Effect Volume" constant="0" name="SEVolume" sid="160244569368668" static="0" type="number">-10</variable>
+        <variable comment="Current Background Music Volume" constant="0" name="BGVolume" sid="228269715833577" static="0" type="number">-10</variable>
+        <variable comment="Min Range Volume" constant="0" name="VolumeMin" sid="388498726274512" static="0" type="number">-30</variable>
+        <variable comment="Max Range Volume" constant="0" name="VolumeMax" sid="520244594983041" static="0" type="number">10</variable>
+        <comment>Play Background Music</comment>
+        <event-block sid="416519437010579">
+            <conditions>
+                <condition id="0" name="On function" sid="979368895479471" type="Function">
+                    <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
+                </condition>
+                <condition id="5" inverted="1" name="Is tag playing" sid="583779035177068" type="Audio">
+                    <param id="0" name="Tag">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="853762995892762">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="286283049875364" type="System">
+                            <param id="0" name="Variable">BGMusic</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="793106425770618" type="System">
+                            <param id="0" name="Variable">BGMusic</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="6" name="Stop" sid="667338094091739" type="Audio">
+                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="242296519297178" type="Audio">
+                            <param id="0" name="Folder">1</param>
+                            <param id="1" name="Audio file name">BGMusic</param>
+                            <param id="3" name="Loop">1</param>
+                            <param id="4" name="Volume">BGVolume</param>
+                            <param id="2" name="Tag (optional)">&quot;BGMusic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="778547766803132">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="197183101156060" type="System">
+                            <param id="0" name="Variable">MuteBGM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="741583955801284" type="Audio">
+                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="693028279461009">
+            <conditions>
+                <condition id="0" name="On function" sid="612831113853613" type="Function">
+                    <param id="0" name="Name">&quot;MuteBackGroundAudio&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="810199219164029" type="Audio">
+                    <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Play Sound Effect</comment>
+        <event-block sid="489422586063541">
+            <conditions>
+                <condition id="0" name="On function" sid="717437800623085" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="257101365847584" type="System">
+                    <param id="0" name="Variable">SEVolume</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">VolumeMin</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="704600316244687" type="System">
+                    <param id="0" name="Variable">MuteSE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Play (by name)" sid="577820942648596" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">Function.Param(0)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">SEVolume</param>
+                    <param id="2" name="Tag (optional)">&quot;VE_&quot;&amp;Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Change BGM Volume</comment>
+        <event-block sid="460832447171018">
+            <conditions>
+                <condition id="0" name="On function" sid="268001645128153" type="Function">
+                    <param id="0" name="Name">&quot;VolumeBGAudio&quot;</param>
+                </condition>
+                <condition id="1" name="Compare parameter" sid="363131100901947" type="Function">
+                    <param id="0" name="Index">0</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">VolumeMin</param>
+                </condition>
+                <condition id="1" name="Compare parameter" sid="491563547066591" type="Function">
+                    <param id="0" name="Index">0</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">VolumeMax</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="101699726484879" type="System">
+                    <param id="0" name="Variable">BGVolume</param>
+                    <param id="1" name="Value">int(Function.Param(0))</param>
+                </action>
+                <action id="3" name="Set volume" sid="771932926436672" type="Audio">
+                    <param id="0" name="Tag">BGMusic</param>
+                    <param id="1" name="dB">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Disable BGM</comment>
+        <event-block any="1" sid="534249719209574">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="943239574744044" type="System">
+                    <param id="0" name="Variable">BGVolume</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">VolumeMin</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="690370990945479" type="System">
+                    <param id="0" name="Variable">MuteBGM</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="22" name="Set paused" sid="361796206183776" type="Audio">
+                    <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Enable BGM</comment>
+        <event-block sid="133172829568082">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="340621323862991" type="System">
+                    <param id="0" name="Variable">BGVolume</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">VolumeMin</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="904812157838369" type="System">
+                    <param id="0" name="Variable">MuteBGM</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="22" name="Set paused" sid="162511069722069" type="Audio">
+                    <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Spriter_Animation</name>
+    <events>
+        <event-block sid="840827938506413">
+            <conditions>
+                <condition id="666" name="On initialised" sid="188337441320001" type="Scml_Player_Top" />
+            </conditions>
+            <actions>
+                <action id="666" name="Associate object type" sid="874811116702904" type="Scml_Player_Top">
+                    <param id="0" name="Object">PlayerHead</param>
+                    <param id="1" name="Name">&quot;Player_Head&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="387465397608175" type="Scml_Player_Top">
+                    <param id="0" name="Object">PlayerTorso</param>
+                    <param id="1" name="Name">&quot;Player_Torso&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="193970777866908" type="Scml_Player_Top">
+                    <param id="0" name="Object">PlayerTop</param>
+                    <param id="1" name="Name">&quot;Player_Top&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="564526774410364" type="Scml_Player_Top">
+                    <param id="0" name="Object">PlayerArmLeft</param>
+                    <param id="1" name="Name">&quot;Player_ArmLeft&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="383826765575994" type="Scml_Player_Top">
+                    <param id="0" name="Object">PlayerArmRight</param>
+                    <param id="1" name="Name">&quot;Player_ArmRight&quot;</param>
+                </action>
+                <action id="8" name="Set entity" sid="874560938662499" type="Scml_Player_Top">
+                    <param id="0" name="Entity">&quot;Player&quot;</param>
+                    <param id="1" name="Animation">&quot;Front_Idle&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="349995095754793" type="PlayerHead">
+                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="507100220526502" type="PlayerTorso">
+                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="764941072725567" type="PlayerTop">
+                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="909579528355113" type="PlayerArmLeft">
+                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="456995639261425" type="PlayerArmRight">
+                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="526795160399518">
+            <conditions>
+                <condition id="666" name="On initialised" sid="751340430254279" type="Scml_Player_Bottom" />
+            </conditions>
+            <actions>
+                <action id="666" name="Associate object type" sid="738659284375252" type="Scml_Player_Bottom">
+                    <param id="0" name="Object">PlayerLeg1</param>
+                    <param id="1" name="Name">&quot;Player_LegRight&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="125865829501199" type="Scml_Player_Bottom">
+                    <param id="0" name="Object">PlayerLeg2</param>
+                    <param id="1" name="Name">&quot;Player_LegLeft&quot;</param>
+                </action>
+                <action id="8" name="Set entity" sid="775595853861162" type="Scml_Player_Bottom">
+                    <param id="0" name="Entity">&quot;Player&quot;</param>
+                    <param id="1" name="Animation">&quot;Front_Idle&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="631456727782143" type="PlayerLeg1">
+                    <param id="0" name="Animation">Scml_Player_Bottom.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="582922135811503" type="PlayerLeg2">
+                    <param id="0" name="Animation">Scml_Player_Bottom.CharacterSkin</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>ANIMATION WALK BOTTOM</comment>
+        <event-block sid="813188471380138">
+            <conditions>
+                <condition id="-11" name="For Each" sid="705335398644576" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="202760880077848" type="Family_Character">
+                    <param id="0" name="Unique ID">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="885122275009085">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="187637065109948" type="Family_Character">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="671260324196011" type="PlayerShadow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="FP_Sine" disabled="1" id="1" name="Set period" sid="473820478304890" type="PlayerShadow">
+                            <param id="0" name="Period">0.4</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="529560474517133" type="PlayerShadow">
+                            <param id="0" name="X">Scml_Player_Bottom.X</param>
+                            <param id="1" name="Y">Scml_Player_Bottom.Y</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="848372417640333" type="PlayerShadow" />
+                        <action id="-7" name="Set size" sid="121286836626197" type="PlayerShadow">
+                            <param id="0" name="Width">12 + PlayerShadow.FP_Sine.Value/80</param>
+                            <param id="1" name="Height">10+ PlayerShadow.FP_Sine.Value/80</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="167319199069521">
+                            <conditions>
+                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="224929122482954" type="Family_Character" />
+                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="410656108849748" type="Family_Character" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="MoveAngle" sid="279907836298989" static="0" type="number">0</variable>
+                                <event-block sid="535066627143321">
+                                    <conditions>
+                                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="193524767036945" type="Family_Character" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="141425768815700" type="System">
+                                            <param id="0" name="Variable">MoveAngle</param>
+                                            <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="250523126194201">
+                                    <conditions>
+                                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="342340386019732" type="Family_Character" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="392216956555027" type="System">
+                                            <param id="0" name="Variable">MoveAngle</param>
+                                            <param id="1" name="Value">Family_Character.FC_Pathfinding.MovingAngle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="485344753257087">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="362760676494198" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">-135</param>
+                                            <param id="2" name="Upper bound">-45</param>
+                                        </condition>
+                                        <condition id="-21" name="Is between values" sid="906511717563246" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">225</param>
+                                            <param id="2" name="Upper bound">315</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="105679325864276" type="Family_Character">
+                                            <param id="0" name="Instance variable">LastDirection</param>
+                                            <param id="1" name="Value">&quot;Back&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="305876212225323">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="284910862999119" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">135</param>
+                                            <param id="2" name="Upper bound">180</param>
+                                        </condition>
+                                        <condition id="-21" name="Is between values" sid="300290283129310" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">-180</param>
+                                            <param id="2" name="Upper bound">-135</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="473891184480139" type="Family_Character">
+                                            <param id="0" name="Instance variable">LastDirection</param>
+                                            <param id="1" name="Value">&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="401723768780057">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="715311650247201" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">45</param>
+                                            <param id="2" name="Upper bound">135</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="491064138240352" type="Family_Character">
+                                            <param id="0" name="Instance variable">LastDirection</param>
+                                            <param id="1" name="Value">&quot;Front&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="897505608018935">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="569710766207137" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">0</param>
+                                            <param id="2" name="Upper bound">45</param>
+                                        </condition>
+                                        <condition id="-21" name="Is between values" sid="526231438213078" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">-45</param>
+                                            <param id="2" name="Upper bound">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="177451776508338" type="Family_Character">
+                                            <param id="0" name="Instance variable">LastDirection</param>
+                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="462401367586216">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="885418304133436" type="Scml_Player_Bottom">
+                                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">1</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="828720974036065">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="821170671302929" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set playback speed ratio" sid="615575816834166" type="Scml_Player_Bottom">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="288605401390807" type="Scml_Player_Bottom">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">1</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="685270245560974">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="493216336495578" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="141466447983025" type="PlayerShadow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="1" name="Set playback speed ratio" sid="482963970032269" type="Scml_Player_Bottom">
+                            <param id="0" name="Speed Ratio">1</param>
+                        </action>
+                        <action id="0" name="Set animation" sid="110513101730484" type="Scml_Player_Bottom">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="Where to start playing this animation">1</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>ANIMATION WALK TOP</comment>
+        <event-block sid="303261200802900">
+            <conditions>
+                <condition id="-11" name="For Each" sid="226246049446120" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="964630272778358" type="Family_Character">
+                    <param id="0" name="Unique ID">Scml_Player_Top.Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="531376242935249" type="Family_Character">
+                    <param id="0" name="Instance variable">ActionCommand</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="380075290441014">
+                    <conditions>
+                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="465882433270135" type="Family_Character" />
+                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="228525071947355" type="Family_Character" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="MoveAngle" sid="860392942880998" static="0" type="number">0</variable>
+                        <event-block sid="321976385503320">
+                            <conditions>
+                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="489141307237754" type="Family_Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="876196850987482" type="System">
+                                    <param id="0" name="Variable">MoveAngle</param>
+                                    <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="621616222748487">
+                            <conditions>
+                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="718873918551605" type="Family_Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="548092674393566" type="System">
+                                    <param id="0" name="Variable">MoveAngle</param>
+                                    <param id="1" name="Value">Family_Character.FC_Pathfinding.MovingAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="480198110961141">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="246131273378840" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-135</param>
+                                    <param id="2" name="Upper bound">-45</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="481226367071370" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">225</param>
+                                    <param id="2" name="Upper bound">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="693659263361663" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Back&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="722601223102543">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="140475576447195" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">135</param>
+                                    <param id="2" name="Upper bound">180</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="990095496042932" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-180</param>
+                                    <param id="2" name="Upper bound">-135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="715456139468883" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="766634946751649">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="749675710721039" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">45</param>
+                                    <param id="2" name="Upper bound">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="406869333989988" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Front&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="376054966486278">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="866007075080462" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">0</param>
+                                    <param id="2" name="Upper bound">45</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="175816642523000" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-45</param>
+                                    <param id="2" name="Upper bound">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="244343198965188" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="990461948937743">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set animation" sid="232197190534105" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">1</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="758229148574988">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="223670063982820" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="577470495503115" type="Scml_Player_Top">
+                            <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
+                            <param id="1" name="Where to start playing this animation">1</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="1" name="Set playback speed ratio" sid="842546941642710" type="Scml_Player_Top">
+                            <param id="0" name="Speed Ratio">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>DAMAGE BLINK ANIMATION</comment>
+        <event-block sid="458330154910545">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="844598537539448" type="System" />
+                <condition id="-11" name="For Each" sid="944775008553159" type="System">
+                    <param id="0" name="Object">Family_Spriter</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="825888301880067" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Spriter.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="772854867483468" type="Family_Spriter">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="446156574993420" type="Family_Spriter">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">Family_Character</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="202446221001091">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="570826759018074" type="Family_Character">
+                            <param id="0" name="Instance variable">Invencible</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="301135472795867" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="219792943870240" type="Family_Spriter">
+                            <param id="0" name="Opacity">Family_Spriter.Opacity = 100 ? 30 : 100</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="167482797712427" type="Family_Spriter">
+                            <param id="0" name="Instance variable">SpecialStill</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
+                            <param id="0" name="Animation">Family_Spriter.AnimationSpecial</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614039328781023">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="285185007226555" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="837734427818497" type="Family_Spriter">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174391383103169">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="657073402775926" type="System">
+                            <param id="0" name="First value">Family_Spriter.ScaleRatio</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0.6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set object scale ratio" sid="208148315024980" type="Family_Spriter">
+                            <param id="0" name="Scale Ratio">0.6</param>
+                            <param id="1" name="Flip X Axis">0</param>
+                            <param id="2" name="Flip Y Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>ARM OBJECTS</comment>
+        <event-block sid="260843585622213">
+            <conditions>
+                <condition id="-11" name="For Each" sid="165609645207494" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="733788705807127" type="Family_Character">
+                    <param id="0" name="Unique ID">Scml_Player_Top.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="661554256191333">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="170746716082434" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="299492139190690" type="Family_Objects">
+                            <param id="0" name="Object">PlayerArmLeft</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="948598323639518" type="Family_Objects">
+                            <param id="0" name="Angle">PlayerArmLeft.Angle</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="766461847839219" type="Family_Objects" />
+                    </actions>
+                </event-block>
+                <event-block sid="868393205307302">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="609898658023608" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ArmRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="407982569633197" type="Family_Objects">
+                            <param id="0" name="Object">PlayerArmRight</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="583358654348533" type="Family_Objects">
+                            <param id="0" name="Angle">PlayerArmRight.Angle</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Objects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>OBJECT COMMANDS</comment>
+        <event-block sid="570969856783406">
+            <conditions>
+                <condition id="0" name="On function" sid="648463304371569" type="Function">
+                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="449382357445261" type="Scml_Player_Top">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="573843767178582" type="Family_Character">
+                    <param id="0" name="Unique ID">Scml_Player_Top.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="ActionSelected" sid="563758500739543" static="0" type="number">0</variable>
+                <event-block sid="373573574280645">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="498388768939176" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;SweepSword&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="264382488850579" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="529601212462763" type="Family_Impact">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="611755491015146" type="Family_Impact">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="755133520381392">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="222964363845400" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="862051773038040" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="336652398217468" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">-1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="286663558636099" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_SweepFull_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="946538654738516" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="286909821275395">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="590265435023414" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="159393168920023" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="746543256132554">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="424520160201415" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="226371750384448" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="962525665403523">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="867017920030857" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HoldSpear&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="912261679628496" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="713209562227791" type="Family_Impact">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="617054011996418" type="Family_Impact">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="117049772352571">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="388752329468720" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="926719652988964" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="129931975126772" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">2</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="198002067216749" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Stab_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="620515296742281" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="829719321013051">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="183367700993077" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="559480507992771" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="641714617213812" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">2</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="793160489591890" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="536504740197327" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="966228479224099">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="886472496574278" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="625540290355154" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="279192334296296">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="352337196603848" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="118427407881050" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="756630744781711">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="917639616252944" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HoldAxe&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="390005142914919" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="971798814603520" type="Family_Impact">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="326549092502508">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="858978507551908" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="137320069176492" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="817294370082134" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">-1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="563537508564556" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_SweepFull_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="950975822046243" type="Family_Objects">
+                                    <param id="0" name="Duration">0.2</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Axe&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="708208741638880" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="603472228036093">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="548775981417303" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="187321920330134" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="110840767272107">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="258305362084120" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="745422187154343" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="666638478027506">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="568469717854452" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HoldWand&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="532812736284391" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="372303593462928">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="315510830066471" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="627143053503949" type="Family_Character">
+                                    <param id="0" name="Instance variable">PressButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="233476600278579" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="563588921023887" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="865430266534956">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="789128671449174" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="694345113549308" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="264098781902311" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="147291123415554" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Hold_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="159404507845696" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="496666615431066">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="368234972005283" type="System">
+                                            <param id="0" name="Variable">ActionSelected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="331948113203463" type="System">
+                                            <param id="0" name="First value">Family_Objects.FO_Timer.CurrentTime(&quot;Shoot_Fireball&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FO_Timer" id="0" name="Start timer" sid="889298862423295" type="Family_Objects">
+                                            <param id="0" name="Duration">0.3</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="233775312032920">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="164079848556590" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="769799683212789" type="Family_Character">
+                                    <param id="0" name="Instance variable">PressButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="816851978524619" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="807334904204291" type="Family_Objects">
+                                    <param id="0" name="Duration">0.01</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="163343928067338" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="552327841383396">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="330708369041801" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="185308547667959" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="157573638495587" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="353069131664086" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Hold_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="710511600917794" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="768067932971723">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="854194148606869" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="695465980062309" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="949378408453834" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">2</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="418657257484666" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="927979095449956" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="894833038617281">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="483565477896607" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FO_Timer" id="1" name="Stop timer" sid="363030283637445" type="Family_Objects">
+                                    <param id="0" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="830317121910412">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="922244586115670" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HoldBow&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="481570151103810" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="672934233730348">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="237365738237663" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="766026430221248" type="Family_Character">
+                                    <param id="0" name="Instance variable">PressButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="121442797671187" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="762034574706964">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="674104977902511" type="System">
+                                            <param id="0" name="Variable">ActionSelected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="481500734838314" type="System">
+                                            <param id="0" name="First value">Family_Objects.FO_Timer.CurrentTime(&quot;Shoot_Arrow&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FO_Timer" id="0" name="Start timer" sid="849312229374933" type="Family_Objects">
+                                            <param id="0" name="Duration">0.6</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="809728910090376">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="348595811873500" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="394561498406364" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="305002221247196" type="Family_Objects">
+                                    <param id="0" name="Duration">0.01</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="734091320091537" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="413678351063432">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="328702179406923" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="410560777935637" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="185453320229416" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="873084729591036" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Hold_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="751646087688590" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="904204684787334">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="699973963749695" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="240738730314656" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="835257866581097" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">2</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="495987499310836" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="481340070098630" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="755477240831565">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="277930328517609" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FO_Timer" id="1" name="Stop timer" sid="599655262632238" type="Family_Objects">
+                                    <param id="0" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="900039540751498">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="302264424568806" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="804075824804104">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="714182623038891" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="484703306205064" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsAlive</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="126827163652932" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="788468542737889">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="485274551421133" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="664735390194958" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="434104682569222" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="757221401409986" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="219027320979220" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="587437357390695">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="259501066469323" type="System">
+                            <param id="0" name="Variable">ActionSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="200952542475216" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="177503108929058" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionStep</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>RECALL COMMAND AFTER ANIMATION END</comment>
+        <event-block sid="562658712333457">
+            <conditions>
+                <condition id="1" name="On any finished" sid="967952337864868" type="Scml_Player_Top" />
+                <condition id="-14" name="Pick by unique ID" sid="177624337160138" type="Family_Character">
+                    <param id="0" name="Unique ID">Scml_Player_Top.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="278566648136664" type="Function">
+                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
+                    <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
