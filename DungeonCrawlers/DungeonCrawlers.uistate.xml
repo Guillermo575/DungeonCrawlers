@@ -22,8 +22,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
-        <family expanded="1" name="Family_Parts" />
+    <families-expanded root="0">
+        <family expanded="0" name="Family_Parts" />
         <family expanded="0" name="Family_Character" />
         <family expanded="0" name="Family_Objects" />
         <family expanded="0" name="Family_Pressed" />
