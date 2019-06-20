@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>DungeonCrawlers</name>
+    <name>SuperDungeonCrawlers</name>
     <description>Simple example</description>
     <version>1.0.0.0</version>
     <author>Medina_Team</author>
@@ -1593,7 +1593,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Start" pingpong="0" repeatcount="1" repeatto="0" sid="924362034969817" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\DungeonCrawlers_Logo.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\menu_start.png">
                             <collision-poly>
                                 <point x="0.222" y="0.555" />
                                 <point x="0.5" y="0.165" />
