@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_Gamelibrary</name>
+    <events>
+        <variable comment="Difficult configured in the game (Easy, Normal, Hard)" constant="0" name="ConfigDifficult" sid="376289247331375" static="0" type="text">Easy</variable>
+        <variable comment="Last Level Loaded" constant="0" name="LastLevel" sid="401210357883922" static="0" type="text"></variable>
+        <variable comment="Last level Info Data in a JSON" constant="0" name="LastLevelJSON" sid="622867184603336" static="0" type="text"></variable>
+        <comment>This sheet works as a general library of all the sheets used for the gameplay</comment>
+        <include>Menu_Pause</include>
+        <include>Audio</include>
+        <include>Enemies</include>
+        <include>Player</include>
+        <include>CharacterAnimation</include>
+        <include>Battle</include>
+        <include>HUD</include>
+        <comment>This function loads the last level in this variable, useful for &quot;try again?&quot; Option</comment>
+        <event-block sid="997569491700789">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="742313244731414" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="512536200845487" type="System">
+                    <param id="0" name="Variable">LastLevel</param>
+                    <param id="1" name="Value">LayoutName</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="584398248476612" type="DoorDungeon" />
+            </actions>
+        </event-block>
+        <comment>This function check the next array position that correspond each level, if you complete all the positions you complete the game!</comment>
+        <event-block sid="663186515570838">
+            <conditions>
+                <condition id="0" name="On function" sid="529675522561937" type="Function">
+                    <param id="0" name="Name">&quot;NextLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="541284307099078" type="Function">
+                    <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="11" name="Clear Dungeon" sid="482801274799804" type="RandomDungeonMaker" />
+                <action id="-11" name="Add to" sid="920295836291568" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="777239461022679" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="656898926951013">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="658625596986542" type="Array_Levels">
+                            <param id="0" name="Instance variable">Actual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Array_Levels.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="350511838523507" type="System">
+                            <param id="0" name="Layout">Array_Levels.At(Array_Levels.Actual)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172681257085302">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="503190069238419" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="165082355468128" type="System">
+                            <param id="0" name="Layout">Menu_Congratulations</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Cheat key code... sshhhh, dont tell the secret ;)</comment>
+        <event-block disabled="1" sid="405597103211687">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="556746290916186" type="Keyboard">
+                    <param id="0" name="Key">49</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="475062251342520" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Value">PlayerCoreBox.HPMax</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

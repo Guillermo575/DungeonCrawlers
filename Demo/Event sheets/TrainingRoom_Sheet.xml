@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TrainingRoom_Sheet</name>
+    <events>
+        <comment>This layout and sheet was maded if you try to test something new like a weapon or enemy</comment>
+        <include>_Gamelibrary</include>
+        <event-block sid="552286478595234">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="203697736120419" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="930769540989559" type="Function">
+                    <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dungeon&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="481519702323099">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="645444093695247" type="System">
+                            <param id="0" name="Object">PlayerCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="679129551459457" type="Function">
+                            <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771064062789006">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="456976759646919" type="System">
+                            <param id="0" name="Object">EnemyCoreBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="154595388292986" type="Function">
+                            <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
+                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="134056023871543" type="EnemyCoreBox">
+                            <param id="0" name="Object">Object_Sword</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="364683973399537" type="Function">
+                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Sword.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="709621503320603" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="803077468215709" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

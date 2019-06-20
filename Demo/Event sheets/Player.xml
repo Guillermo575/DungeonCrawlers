@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player</name>
+    <events>
+        <comment>Functions for create the player character and his controls</comment>
+        <event-block sid="551735475951979">
+            <conditions>
+                <condition id="0" name="On function" sid="436666841578680" type="Function">
+                    <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="610838079325059" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="741036946738895" type="Family_Character">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Value">&quot;Player&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="732065527196472" type="Family_Character">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="640776501265654" type="Family_Character">
+                    <param id="0" name="Object">PlayerTorso</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="271707981306110" type="Family_Character">
+                    <param id="0" name="Object">PlayerArmRight</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="981318929272269" type="Family_Character">
+                    <param id="0" name="Object">PlayerArmLeft</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="474941905103861" type="Family_Character">
+                    <param id="0" name="Object">PlayerCloak1</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="356572879415097" type="Family_Character">
+                    <param id="0" name="Object">PlayerCloak2</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="123609413843913" type="Family_Character">
+                    <param id="0" name="Object">PlayerCloak3</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="542390241259909" type="Family_Character">
+                    <param id="0" name="Object">PlayerTop</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="954534714702567" type="Family_Character">
+                    <param id="0" name="Object">PlayerLeg1</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="503266265654372" type="Family_Character">
+                    <param id="0" name="Object">PlayerLeg2</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="623601158822540" type="Family_Character">
+                    <param id="0" name="Object">PlayerShadow</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="502333075513027" type="Family_Character">
+                    <param id="0" name="Object">PlayerHead</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="941045916661273" type="PlayerTorso">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="222675408717801" type="PlayerTorso">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="642348746402076" type="PlayerArmLeft">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="301863176379977" type="PlayerArmRight">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="341379302927338" type="PlayerCloak1">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="103279172174876" type="PlayerCloak2">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="294911501177900" type="PlayerCloak3">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="193386220014265" type="PlayerTop">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="184791465778272" type="PlayerLeg1">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="679119983534369" type="PlayerLeg2">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="211388667618181" type="PlayerShadow">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="599297920177066" type="PlayerHead">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">5</param>
+                </action>
+                <action id="-8" name="Set angle" sid="612967599169975" type="PlayerArmLeft">
+                    <param id="0" name="Angle">PlayerTorso.Angle-10</param>
+                </action>
+                <action id="-8" name="Set angle" sid="611706087593097" type="PlayerArmRight">
+                    <param id="0" name="Angle">PlayerTorso.Angle+10</param>
+                </action>
+                <action id="-8" name="Set angle" sid="755264543228564" type="PlayerCloak1">
+                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="931983505983188" type="PlayerCloak2">
+                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="670772898676145" type="PlayerCloak3">
+                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="798295960716220" type="PlayerTop">
+                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="583265731295184" type="PlayerHead">
+                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="539079951546803" type="PlayerShadow" />
+                <action id="-29" name="Move to object" sid="165031061998055" type="PlayerLeg1">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerShadow</param>
+                </action>
+                <action id="-29" name="Move to object" sid="143246428421945" type="PlayerLeg2">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerLeg1</param>
+                </action>
+                <action id="-29" name="Move to object" sid="543884151127009" type="PlayerTorso">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerCloak2</param>
+                </action>
+                <action id="-29" name="Move to object" sid="293127581604917" type="PlayerArmRight">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerTorso</param>
+                </action>
+                <action id="-29" name="Move to object" sid="990351723962301" type="PlayerArmLeft">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerTorso</param>
+                </action>
+                <action id="-29" name="Move to object" sid="905794502205457" type="PlayerCloak3">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerTorso</param>
+                </action>
+                <action id="-29" name="Move to object" sid="340439437201354" type="PlayerCloak1">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerCloak3</param>
+                </action>
+                <action id="-29" name="Move to object" sid="400217170638329" type="PlayerCloak2">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">PlayerCloak3</param>
+                </action>
+                <action id="-24" name="Move to top" sid="899549402193897" type="PlayerTop" />
+                <action id="-29" name="Move to object" sid="239330829175620" type="PlayerTop">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">PlayerTop</param>
+                </action>
+                <action id="-3" name="Create object" sid="938768880844667" type="System">
+                    <param id="0" name="Object to create">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Layer">&quot;OverLayer&quot;</param>
+                    <param id="2" name="X">Family_Character.ImagePointX(0)</param>
+                    <param id="3" name="Y">Family_Character.ImagePointY(0)</param>
+                </action>
+                <action id="-3" name="Create object" sid="372022500544405" type="System">
+                    <param id="0" name="Object to create">Text_Button</param>
+                    <param id="1" name="Layer">&quot;OverLayer&quot;</param>
+                    <param id="2" name="X">Map_Keyboard_Indicator.ImagePointX(1)</param>
+                    <param id="3" name="Y">Map_Keyboard_Indicator.ImagePointY(1)</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="978107103943307" type="Text_Button">
+                    <param id="0" name="Pin to">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Set text" sid="292587284463497" type="Text_Button">
+                    <param id="0" name="Text">&quot;space&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="524519607728888" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="590563274603919" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="883502419959759" type="Text_Button">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Call function" sid="834364955267388" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDHealth&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}450{###}20</param>
+                </action>
+                <action id="0" name="Call function" sid="728487248333353" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDObject_Right&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}410{###}30</param>
+                </action>
+                <action id="0" name="Call function" sid="414489669988518" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDObject_Left&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}360{###}30</param>
+                </action>
+                <action id="0" name="Call function" sid="355790055099494" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="854857223385708" type="Family_Character">
+                    <param id="0" name="Object">Character_Hitbox</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="229185920715264" type="Character_Hitbox">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="797194159434487" type="Character_Hitbox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="Enter door and tooltip on object" sid="474327971242726" title="Door &amp; ToolTip">
+            <sub-events>
+                <event-block sid="893752914635563">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="635773818138201" type="PlayerCoreBox">
+                            <param id="0" name="Object">Family_Pressed</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="827398839400906" type="System">
+                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="940652793686286" type="System">
+                            <param id="0" name="Object">Text_Button</param>
+                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="311080289959303" type="Text_Button">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="938259668849419" type="Map_Keyboard_Indicator">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="457387940743850" type="Text_Button">
+                            <param id="0" name="Text">Family_Pressed.Message</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="686354038349201">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="472940061286875" type="PlayerCoreBox">
+                            <param id="0" name="Object">Family_Objects</param>
+                        </condition>
+                        <condition behavior="Pin2" id="0" inverted="1" name="Is pinned" sid="422001211082966" type="Family_Objects" />
+                        <condition id="-33" name="Pick by comparison" sid="510808992698627" type="System">
+                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="359703554903932" type="System">
+                            <param id="0" name="Object">Text_Button</param>
+                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="614921279779864" type="Text_Button">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="586307636633957" type="Map_Keyboard_Indicator">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="704377156458423">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="683877401195788" type="System" />
+                        <condition id="-33" name="Pick by comparison" sid="100132928263526" type="System">
+                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="122845015000080" type="System">
+                            <param id="0" name="Object">Text_Button</param>
+                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="442091666227479" type="Text_Button">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="346530514268653" type="Map_Keyboard_Indicator">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="743946386634608">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="736675085917938" type="PlayerCoreBox">
+                            <param id="0" name="Object">DoorDungeon</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="767290009406808" type="DoorDungeon">
+                            <param id="0" name="Instance variable">Locked</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="984149226977393" type="System">
+                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="579044564338539" type="System">
+                            <param id="0" name="Object">Text_Button</param>
+                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="218808029341999" type="Text_Button">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="173853268613950" type="Map_Keyboard_Indicator">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="534669932273198" type="Text_Button">
+                            <param id="0" name="Text">DoorDungeon.Message</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="857437328238559">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="580271703702190" type="Object_Key">
+                            <param id="0" name="Object">DoorDungeon</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="806384486648735" type="System">
+                            <param id="0" name="First value">Object_Key.Pin2.PinnedUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">PlayerCoreBox.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="837725998899650" type="DoorDungeon">
+                            <param id="0" name="Instance variable">KeyLock</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="946504384204302">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="916518188690602" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">ArmLeft</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Object_Key.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="418060881036140" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">ArmLeft</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="395061263253564" type="Object_Key" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="964262380461742">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="574413282753187" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">ArmRight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Object_Key.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="256134507725008" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">ArmRight</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="117027021364332" type="Object_Key" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="607615942090133">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="568365674804903" type="DoorDungeon">
+                            <param id="0" name="Instance variable">KeyLock</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="761798937040516" type="System">
+                            <param id="0" name="First value">Object_Key.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="677289552195298" type="DoorDungeon">
+                            <param id="0" name="Instance variable">Locked</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="215706740235515" type="DoorDungeon">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="568363357971878">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="650252661758241" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="772017224864547" type="PlayerCoreBox">
+                            <param id="0" name="Object">DoorDungeon</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="104902911305957" type="DoorDungeon">
+                            <param id="0" name="Instance variable">Locked</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-2" name="Go to layout" sid="605002451075038" type="System">
+                            <param id="0" name="Layout">Dungeon</param>
+                        </action>
+                        <action id="0" name="Call function" sid="952228399342096" type="Function">
+                            <param id="0" name="Name">&quot;NextLevel&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Current player control" sid="655086329113245" title="Controls">
+            <sub-events>
+                <event-block sid="365559380967541">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="961737494908029" type="System">
+                            <param id="0" name="Object">Family_Character</param>
+                            <param id="1" name="Expression">Family_Character.UID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="423251148987937">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="975375593773043" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsAlive</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="110903798087226" type="Family_Character">
+                                    <param id="0" name="Instance variable">PushRecoil</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="599213784617488" type="Family_Character">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="152475957593593">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="323415979276095" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="292087605356730" type="Family_Character">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="526104130144782">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="686540296437078" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="106997742346767">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="233028412356421" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="215268347040969" type="PlayerCoreBox">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                </condition>
+                                <condition behavior="Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Family_Objects" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="785205971480943" type="Function">
+                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Family_Objects.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720454736426176">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="145675513413617" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="128897976769239" type="System">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="188447934024857" type="System">
+                                    <param id="0" name="Object">PlayerArmLeft</param>
+                                    <param id="1" name="Expression">PlayerArmLeft.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="556256227736943" type="System">
+                                    <param id="0" name="Object">PlayerTorso</param>
+                                    <param id="1" name="Expression">PlayerTorso.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="730196207191278" type="Function">
+                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmLeft.UID{###}PlayerTorso.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="982545261859655">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="760811322427205" type="System" />
+                                <condition id="-33" name="Pick by comparison" sid="943988295773566" type="System">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="169185710954337" type="System">
+                                    <param id="0" name="Object">PlayerArmLeft</param>
+                                    <param id="1" name="Expression">PlayerArmLeft.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="763647591972571" type="System">
+                                    <param id="0" name="Object">PlayerTorso</param>
+                                    <param id="1" name="Expression">PlayerTorso.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="136150753744646" type="Function">
+                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmLeft.UID{###}PlayerTorso.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="370209375603467">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="653623544393306" type="Keyboard">
+                                    <param id="0" name="Key">88</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="778166072255552" type="System">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="230703559967729" type="System">
+                                    <param id="0" name="Object">PlayerArmRight</param>
+                                    <param id="1" name="Expression">PlayerArmRight.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="658348375750831" type="System">
+                                    <param id="0" name="Object">PlayerTorso</param>
+                                    <param id="1" name="Expression">PlayerTorso.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="711055083936491" type="Function">
+                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmRight.UID{###}PlayerTorso.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="239762245158726">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="375422040681210" type="System" />
+                                <condition id="-33" name="Pick by comparison" sid="646224727903511" type="System">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="192784739464901" type="System">
+                                    <param id="0" name="Object">PlayerArmRight</param>
+                                    <param id="1" name="Expression">PlayerArmRight.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="898796376247778" type="System">
+                                    <param id="0" name="Object">PlayerTorso</param>
+                                    <param id="1" name="Expression">PlayerTorso.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="139838787754247" type="Function">
+                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmRight.UID{###}PlayerTorso.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Data prevailed between levels" sid="374782428638263" title="Log">
+            <sub-events>
+                <event-block sid="230421512083061">
+                    <conditions>
+                        <condition id="0" name="On function" sid="666407168773231" type="Function">
+                            <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="285560710200780" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="527812399762365">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="714234075440865" type="System">
+                                    <param id="0" name="Variable">ConfigDifficult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Easy&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="375043696876542" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerHP_&quot; &amp; Function.Param(1)</param>
+                                    <param id="1" name="Value">14</param>
+                                </action>
+                                <action id="0" name="Add key" sid="669140419690895" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerHPMax_&quot;&amp;Function.Param(1)</param>
+                                    <param id="1" name="Value">14</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267193031722965" type="Family_Character">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="149043184470535" type="Family_Character">
+                                    <param id="0" name="Instance variable">HPMax</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="497291722817932">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="630176508266451" type="System">
+                                    <param id="0" name="Variable">ConfigDifficult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Normal&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="926710850330147" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerHP_&quot; &amp; Function.Param(1)</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="0" name="Add key" sid="163866185023942" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerHPMax_&quot;&amp;Function.Param(1)</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="429910467425510" type="Family_Character">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="659979801969572" type="Family_Character">
+                                    <param id="0" name="Instance variable">HPMax</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="388349265566788">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="250446559739230" type="System">
+                                    <param id="0" name="Variable">ConfigDifficult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Hard&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="737816520061179" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerHP_&quot; &amp; Function.Param(1)</param>
+                                    <param id="1" name="Value">8</param>
+                                </action>
+                                <action id="0" name="Add key" sid="366594972983498" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerHPMax_&quot;&amp;Function.Param(1)</param>
+                                    <param id="1" name="Value">8</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="947897896412211" type="Family_Character">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="887344483852546" type="Family_Character">
+                                    <param id="0" name="Instance variable">HPMax</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="864030343014010">
+                    <conditions>
+                        <condition id="0" name="On function" sid="551939079271701" type="Function">
+                            <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="916566038433083" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="493651954756261" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHP_&quot; &amp; Function.Param(1)</param>
+                            <param id="1" name="Value">Family_Character.Hp</param>
+                        </action>
+                        <action id="0" name="Add key" sid="610525208865064" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHPMax_&quot;&amp;Function.Param(1)</param>
+                            <param id="1" name="Value">Family_Character.HPMax</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="467465804205034">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="958781608499963" type="System">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="1" name="Expression">Family_Character.ArmLeft</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="150548018670714" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerObjectLeft_&quot; &amp; Function.Param(1)</param>
+                                    <param id="1" name="Value">Family_Objects.AnimationName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="251449040499886">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="140503923693246" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Delete key" sid="331505236168180" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerObjectLeft_&quot; &amp; Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="229660110865557">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="194161238521897" type="System">
+                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="1" name="Expression">Family_Character.ArmRight</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="502461494563458" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerObjectRight_&quot; &amp; Function.Param(1)</param>
+                                    <param id="1" name="Value">Family_Objects.AnimationName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="141921260023743">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="387380811790916" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Delete key" sid="729480378966885" type="Player_Log">
+                                    <param id="0" name="Key">&quot;PlayerObjectRight_&quot; &amp; Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="788167352377006">
+                    <conditions>
+                        <condition id="0" name="On function" sid="683560497507738" type="Function">
+                            <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="843788948244435" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="181044773661113">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is empty" sid="918969514259699" type="Player_Log" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="576685273073028" type="Family_Character">
+                                    <param id="0" name="Instance variable">Hp</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="593150610456865" type="Family_Character">
+                                    <param id="0" name="Instance variable">HPMax</param>
+                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax_&quot; &amp; Function.Param(1)))</param>
+                                </action>
+                                <action id="0" name="Call function" sid="593702289976016" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectLeft_&quot; &amp; Function.Param(1)){###}&quot;Left&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="477078972040317" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectRight_&quot; &amp; Function.Param(1)){###}&quot;Right&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="671408592276712">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="287283223953801" type="System">
+                                            <param id="0" name="Variable">ConfigDifficult</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Easy&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="519557994524535" type="Family_Character">
+                                            <param id="0" name="Instance variable">Hp</param>
+                                            <param id="1" name="Value">Family_Character.HPMax</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="730437614039909">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="852539077770043" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="845490456309864" type="Function">
+                                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="879748435235538" type="Function">
+                                    <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="443063046221910">
+                    <conditions>
+                        <condition id="0" name="On function" sid="627629902800616" type="Function">
+                            <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="571011569214076" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="102258532955229" type="System">
+                            <param id="0" name="First value">Function.Param(1)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="875847306996054">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="224095002725687" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Object_Sword&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="979982071970997" type="Family_Character">
+                                    <param id="0" name="Object">Object_Sword</param>
+                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="261594468143256" type="Function">
+                                    <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Sword.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="414974983767284">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="436977084784514" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Object_Axe&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="302467607474191" type="Family_Character">
+                                    <param id="0" name="Object">Object_Axe</param>
+                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="416774478662839" type="Function">
+                                    <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Axe.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="664648160925143">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="765808057836794" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Object_Wand&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="447041636292448" type="Family_Character">
+                                    <param id="0" name="Object">Object_Wand</param>
+                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="189600174503712" type="Function">
+                                    <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Wand.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="886563725399059">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="139364546254859" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Object_Bow&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="136726049610218" type="Family_Character">
+                                    <param id="0" name="Object">Object_Bow</param>
+                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="966552732326611" type="Function">
+                                    <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Bow.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Death/Game Over functions" sid="805457914117954" title="GameOver">
+            <sub-events>
+                <event-block sid="403282518978764">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="822139732668612" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="993530938199622" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="925255831691789" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="714103470782627" type="Function">
+                            <param id="0" name="Name">&quot;MuteBackGroundAudio&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="836363397203138" type="Function">
+                            <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;PlayerDeath&quot;</param>
+                        </action>
+                        <action behavior="FC_Timer" id="0" name="Start timer" sid="710826748729399" type="PlayerCoreBox">
+                            <param id="0" name="Duration">1</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;DeadAgonizing&quot;</param>
+                        </action>
+                        <action behavior="FC_Timer" id="0" name="Start timer" sid="859617312432957" type="PlayerCoreBox">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;ToGameOver&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="350267605004518">
+                    <conditions>
+                        <condition behavior="FC_Timer" id="0" name="On timer" sid="747643688629982" type="PlayerCoreBox">
+                            <param id="0" name="Tag">&quot;ToGameOver&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="926364485280740" type="Function">
+                            <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="372079103884902" type="System">
+                            <param id="0" name="Layout">Menu_GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

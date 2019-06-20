@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_Menu_General</name>
+    <events>
+        <comment>Sheet with main menu option functions</comment>
+        <event-block sid="407409030186621">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="129961749172454" type="Mouse">
+                    <param id="0" name="Object">Family_Menus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="213708169828775" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="565098474235541">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="180102180133788" type="Mouse">
+                    <param id="0" name="Object">Family_Menus</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="828181774126262" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="599066827021269">
+            <conditions>
+                <condition id="3" name="On touched object" sid="755504226943501" type="Touch">
+                    <param id="0" name="Object">Family_Menus</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="710323925274492" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Family_Menus</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="986583301519275">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="417281723950534" type="Family_Menus">
+                            <param id="0" name="Instance variable">Inmediatly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="123957358514748" type="Function">
+                            <param id="0" name="Name">Family_Menus.Function</param>
+                            <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="641034007112319">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="782541908490207" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FM_Flash" id="0" name="Flash" sid="226094620974419" type="Family_Menus">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.8</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="798913016206344" type="System">
+                            <param id="0" name="Seconds">0.8</param>
+                        </action>
+                        <action id="0" name="Call function" sid="588787324808670" type="Function">
+                            <param id="0" name="Name">Family_Menus.Function</param>
+                            <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="291308410977265">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="125371916821241" type="Keyboard" />
+                <condition id="-33" name="Pick by comparison" sid="404391088055410" type="System">
+                    <param id="0" name="Object">Family_Menus</param>
+                    <param id="1" name="Expression">Family_Menus.KeyCode</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Keyboard.LastKeyCode</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FM_Flash" id="0" name="Flash" sid="115837027577714" type="Family_Menus">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.8</param>
+                </action>
+                <action id="-16" name="Wait" sid="100753417935110" type="System">
+                    <param id="0" name="Seconds">0.8</param>
+                </action>
+                <action id="0" name="Call function" sid="331044444320514" type="Function">
+                    <param id="0" name="Name">Family_Menus.Function</param>
+                    <param id="1" name="Parameter {n}">Family_Menus.Param</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1333 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Battle</name>
+    <events>
+        <comment>This contains all the Object/Damage/Battle functions like weapons, pick items, etc.</comment>
+        <event-group description="Object manipulation" sid="744067645244017" title="Item">
+            <sub-events>
+                <comment>Drop pbject</comment>
+                <event-block sid="737226839918447">
+                    <conditions>
+                        <condition id="0" name="On function" sid="482629670547687" type="Function">
+                            <param id="0" name="Name">&quot;DropObject&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="632051949096555" type="System">
+                            <param id="0" name="Object">Family_Objects</param>
+                            <param id="1" name="Expression">Family_Objects.UID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="930136458931428" type="Family_Objects" />
+                    </actions>
+                </event-block>
+                <comment>Pick Object</comment>
+                <event-block sid="701793287463208">
+                    <conditions>
+                        <condition id="0" name="On function" sid="398284355520278" type="Function">
+                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="559743235575815" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="915201858000544" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="LeftObject" sid="562611175225672" static="0" type="number">0</variable>
+                        <variable constant="0" name="RightObject" sid="829899466997755" static="0" type="number">0</variable>
+                        <variable constant="0" name="NewObject" sid="499682611744526" static="0" type="number">0</variable>
+                        <event-block sid="325012815167083">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="526066326661586" type="Family_Character">
+                                    <param id="0" name="Instance variable">ArmLeft</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="841333119727605" type="Family_Character">
+                                    <param id="0" name="Instance variable">ArmLeft</param>
+                                    <param id="1" name="Value">Family_Objects.UID</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="914811387611955" type="Family_Objects">
+                                    <param id="0" name="Pin to">Family_Character</param>
+                                    <param id="1" name="Mode">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="330083815164642">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="861456431300640" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="828725375062820" type="Family_Character">
+                                    <param id="0" name="Instance variable">ArmRight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="825794275303437" type="Family_Character">
+                                    <param id="0" name="Instance variable">ArmRight</param>
+                                    <param id="1" name="Value">Family_Objects.UID</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="405379852487355" type="Family_Objects">
+                                    <param id="0" name="Pin to">Family_Character</param>
+                                    <param id="1" name="Mode">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="566542438756033">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="815969889437994" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="985755439381320" type="System">
+                                    <param id="0" name="Variable">LeftObject</param>
+                                    <param id="1" name="Value">Family_Character.ArmLeft</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="471471547235165" type="System">
+                                    <param id="0" name="Variable">RightObject</param>
+                                    <param id="1" name="Value">Family_Character.ArmRight</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="785286067039991" type="System">
+                                    <param id="0" name="Variable">NewObject</param>
+                                    <param id="1" name="Value">Family_Objects.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="765895172971829" type="Family_Character">
+                                    <param id="0" name="Instance variable">ArmLeft</param>
+                                    <param id="1" name="Value">NewObject</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="832784070849475" type="Family_Character">
+                                    <param id="0" name="Instance variable">ArmRight</param>
+                                    <param id="1" name="Value">LeftObject</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="568355241718960" type="Family_Objects">
+                                    <param id="0" name="Pin to">Family_Character</param>
+                                    <param id="1" name="Mode">5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="546394964446698" type="Function">
+                                    <param id="0" name="Name">&quot;DropObject&quot;</param>
+                                    <param id="1" name="Parameter {n}">RightObject</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Equip that object on left arm</comment>
+                <event-block sid="302562934646723">
+                    <conditions>
+                        <condition id="0" name="On function" sid="561508403736996" type="Function">
+                            <param id="0" name="Name">&quot;EquipObjectLeft&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="583365408254921" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="256346494110162" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="498647908954516" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmLeft</param>
+                            <param id="1" name="Value">Family_Objects.UID</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="658566085297123" type="Family_Objects">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Equip that object in right arm</comment>
+                <event-block sid="938117644753095">
+                    <conditions>
+                        <condition id="0" name="On function" sid="892235891215301" type="Function">
+                            <param id="0" name="Name">&quot;EquipObjectRight&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="543264177196613" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="655534194151718" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="449440021254088" type="Family_Character">
+                            <param id="0" name="Instance variable">ArmRight</param>
+                            <param id="1" name="Value">Family_Objects.UID</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="256137464209292" type="Family_Objects">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Collision/Damage relate functions with impact objects" sid="946719764975347" title="Impact">
+            <sub-events>
+                <comment>Destroy impact if it hit with a wall</comment>
+                <event-block sid="286898131408716">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="314380185743394" type="Family_Impact">
+                            <param id="0" name="Object">Tilemap_Solid</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="595689933774207" type="Family_Impact">
+                            <param id="0" name="Instance variable">TypeObject</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="839063186206845" type="Family_Impact">
+                            <param id="0" name="Instance variable">PierceWalls</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="459860454760016" type="Family_Impact" />
+                    </actions>
+                </event-block>
+                <comment>Destroy impact if it outside of the layout (only projectiles)</comment>
+                <event-block sid="500371040507445">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="717561290597940" type="Family_Impact" />
+                        <condition id="-7" name="Compare instance variable" sid="657847436524921" type="Family_Impact">
+                            <param id="0" name="Instance variable">TypeObject</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="128585154115978" type="Family_Impact" />
+                    </actions>
+                </event-block>
+                <comment>Destroy impact if it timer goes out</comment>
+                <event-block sid="155006091088992">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="508205709052375" type="Family_Impact">
+                            <param id="0" name="Tag">&quot;Destroy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="561987602903672" type="Family_Impact" />
+                    </actions>
+                </event-block>
+                <comment>Destroy impact if hit with a character hitbox</comment>
+                <event-block sid="386831264019599">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="204034531352278" type="Family_Impact">
+                            <param id="0" name="Object">Character_Hitbox</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="513434363704702" type="Family_Character">
+                            <param id="0" name="Unique ID">Character_Hitbox.Pin2.PinnedUID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="642755585335394" type="Family_Impact">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Family_Character.TypeRole</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="109976575504510" type="Family_Character">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="343887539700748" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="809320829889525" type="Family_Character">
+                            <param id="0" name="Instance variable">Invencible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="200009499231871" type="Function">
+                            <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.RecoilTime</param>
+                        </action>
+                        <action id="0" name="Call function" sid="677500629850718" type="Function">
+                            <param id="0" name="Name">&quot;PushCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="568712260611769">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="568351581488513" type="Family_Impact">
+                                    <param id="0" name="Instance variable">TypeObject</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="421091354237685" type="Family_Impact">
+                                    <param id="0" name="Instance variable">PierceCharacters</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="957183752156949" type="Family_Impact" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Functions related to character damage" sid="688957601071502" title="Character">
+            <sub-events>
+                <comment>Push the character from an impact</comment>
+                <event-block sid="946451840238912">
+                    <conditions>
+                        <condition id="0" name="On function" sid="334558932446753" type="Function">
+                            <param id="0" name="Name">&quot;PushCharacter&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="511798900986827" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="428575960131452" type="Family_Impact">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="849552213537168" type="Family_Character">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="646621985487888" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="439362569656225" type="Family_Character">
+                            <param id="0" name="Instance variable">Invencible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="867928115400199" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="FC_Timer" id="0" name="Start timer" sid="398442994009047" type="Family_Character">
+                            <param id="0" name="Duration">Family_Impact.RecoilTime</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Recoil&quot;</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="583149614863469" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="354132910994542">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="785103956660770" type="Family_Character">
+                                    <param id="0" name="Instance variable">Unstopable</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Bullet" id="0" name="Set speed" sid="489471578940761" type="Family_Character">
+                                    <param id="0" name="Speed">Family_Impact.PushImpact</param>
+                                </action>
+                                <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="229364893479468" type="Family_Character">
+                                    <param id="0" name="Angle"> angle(Family_Impact.X,Family_Impact.Y,self.X,self.Y)</param>
+                                </action>
+                                <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="424722003867237" type="Family_Character">
+                                    <param id="0" name="Angle">Family_Impact.Angle</param>
+                                </action>
+                                <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="587930145691399" type="Family_Character">
+                                    <param id="0" name="Angle">Family_Impact.FI_Bullet.AngleOfMotion</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>this stop the push if it hits with a wall, this avoid it to pass to the other side of the wall</comment>
+                <event-block sid="453527561550559">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="404945641817728" type="Family_Character">
+                            <param id="0" name="Object">Tilemap_Solid</param>
+                        </condition>
+                        <condition behavior="FC_Bullet" id="0" name="Compare speed" sid="492289386626453" type="Family_Character">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="666558752282770" type="Family_Character">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>this stop the push if it hits with a wall, this avoid it to pass to the other side of the wall</comment>
+                <event-block sid="547270015749902">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="372268925931385" type="Family_Character">
+                            <param id="0" name="Object">Tilemap_Solid</param>
+                        </condition>
+                        <condition behavior="FC_Bullet" id="0" name="Compare speed" sid="168222617398241" type="Family_Character">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="827818453512295" type="Family_Character">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When the character stop to push, it has N time of invincibility</comment>
+                <event-block sid="218950728414861">
+                    <conditions>
+                        <condition behavior="FC_Timer" id="0" name="On timer" sid="628337054483171" type="Family_Character">
+                            <param id="0" name="Tag">&quot;Recoil&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="806262171484592" type="Function">
+                            <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Character.InvencibleTime</param>
+                        </action>
+                        <action behavior="FC_Timer" id="0" name="Start timer" sid="766742948219043" type="Family_Character">
+                            <param id="0" name="Duration">Family_Character.InvencibleTime</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Invencible&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="150939253597520" type="Family_Character">
+                            <param id="0" name="Instance variable">Invencible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="387610246981312" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="648840975540771">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="879995597357296" type="Family_Character">
+                                    <param id="0" name="Instance variable">Unstopable</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Bullet" id="0" name="Set speed" sid="369847175528640" type="Family_Character">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>This cancel the invincibility</comment>
+                <event-block sid="190311685144827">
+                    <conditions>
+                        <condition behavior="FC_Timer" id="0" name="On timer" sid="456964439265359" type="Family_Character">
+                            <param id="0" name="Tag">&quot;Invencible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="966682456491245" type="Family_Character">
+                            <param id="0" name="Instance variable">Invencible</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Sword battle animation" sid="727764119098865" title="Sword">
+            <sub-events>
+                <event-block sid="587398125229200">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="139308488328975" type="Impact_Slash" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="626952796448384" type="Impact_Slash" />
+                    </actions>
+                </event-block>
+                <event-block sid="366671120806859">
+                    <conditions>
+                        <condition id="0" name="On function" sid="385369824548431" type="Function">
+                            <param id="0" name="Name">&quot;Press_SwordSwing&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="898858972748829" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="116453125530876" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="297601544574121" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="332577445473807" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="287053896590933" type="Family_Arms">
+                            <param id="0" name="Instance variable">Cancel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="258322827428891" type="Family_Objects">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="423863565340897">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="791352555976910" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="850019155834630" type="Function">
+                                    <param id="0" name="Name">&quot;Sweep&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}Family_Arms.UID{###}PlayerTorso.UID{###}210{###}30</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="788810302376157" type="Family_Objects">
+                                    <param id="0" name="Object">Impact_Slash</param>
+                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="632877757194251" type="Impact_Slash">
+                                    <param id="0" name="Angle">Family_Objects.Angle</param>
+                                </action>
+                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="930684107230149" type="Impact_Slash">
+                                    <param id="0" name="Pin to">Family_Objects</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="747622526880618" type="Impact_Slash">
+                                    <param id="0" name="Instance variable">Group</param>
+                                    <param id="1" name="Value">Family_Character.TypeRole</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="936003951100654" type="Impact_Slash">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">int(Impact_Slash.Damage * Family_Character.BonusDamageMult)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="339717688297924">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="246618359558719" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="555662475016862" type="Family_Objects">
+                                    <param id="0" name="Instance variable">UnSweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="702395731689301" type="Function">
+                                    <param id="0" name="Name">&quot;UnSweep&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}Family_Arms.UID{###}PlayerTorso.UID{###}0{###}30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="822766002108481">
+                    <conditions>
+                        <condition id="0" name="On function" sid="462224559544778" type="Function">
+                            <param id="0" name="Name">&quot;UnPress_SwordSwing&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="582427694214246" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="743861505138113" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="437545329584899" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="368909698465985" type="Function">
+                            <param id="0" name="Name">&quot;UnSweep&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Objects.UID{###}Family_Arms.UID{###}PlayerTorso.UID{###}PlayerTorso.MoveAngle{###}30</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="949296479073682" type="Family_Objects">
+                            <param id="0" name="Instance variable">SweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="392876577366264" type="Family_Objects">
+                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="840786556225805">
+                    <conditions>
+                        <condition id="0" name="On function" sid="778144969642166" type="Function">
+                            <param id="0" name="Name">&quot;Sweep&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="780775460754566" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="173261068444630" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="399746378226885" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="387233673074360">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="273443304184284" type="System">
+                                    <param id="0" name="First value">Family_Arms.AditionalDegres</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">int(Function.Param(3))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="854348125906049" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="398104728549256" type="Function">
+                                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Sword&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="295867018585040">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="892972636073329" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="418472680091849" type="Family_Arms">
+                                    <param id="0" name="Instance variable">AditionalDegres</param>
+                                    <param id="1" name="Value">int(Function.Param(4))</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="419068046267777" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? (Family_Arms.AditionalDegres - 90): - (Family_Arms.AditionalDegres - 90)) + (PlayerTorso.MoveAngle)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="820330289466165" type="Family_Objects">
+                                    <param id="0" name="Angle">Family_Arms.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="673231215274775" type="Family_Objects">
+                                    <param id="0" name="Object">Family_Arms</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="982354270575634">
+                    <conditions>
+                        <condition id="0" name="On function" sid="617660920857378" type="Function">
+                            <param id="0" name="Name">&quot;UnSweep&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="238643217578605">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="460717046975946" type="Family_Objects">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="338118203734760" type="Family_Arms">
+                                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="498783926990393" type="PlayerTorso">
+                                    <param id="0" name="Unique ID">Function.Param(2)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="679877461386350" type="Family_Objects">
+                                    <param id="0" name="Instance variable">Start</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="708974083498575">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="398280268141159" type="System">
+                                            <param id="0" name="First value">Family_Arms.AditionalDegres</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="636185767386471" type="Family_Objects">
+                                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="354419228350953" type="Family_Objects">
+                                            <param id="0" name="Instance variable">Start</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="398553343540816" type="Family_Arms">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="947087630536878" type="Family_Arms">
+                                            <param id="0" name="Instance variable">AditionalDegres</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="791688630797297" type="Family_Objects">
+                                            <param id="0" name="Instance variable">SweepComplete</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="730274803698719" type="Family_Objects">
+                                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="342809252257046">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="564538478432708" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="724976797704362" type="Family_Arms">
+                                            <param id="0" name="Instance variable">AditionalDegres</param>
+                                            <param id="1" name="Value">int(Function.Param(4))</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="752862963955139" type="Family_Arms">
+                                            <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="618342343632714" type="Family_Objects">
+                                            <param id="0" name="Angle">Family_Arms.Angle</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="247326218493588" type="Family_Objects">
+                                            <param id="0" name="Object">Family_Arms</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Axe battle animation" sid="230452222941994" title="Axe">
+            <sub-events>
+                <event-block sid="200589717009579">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="838899217555725" type="Family_Objects">
+                            <param id="0" name="Tag">&quot;Shoot_Axe&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="413021439227071" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="203654648122266" type="System">
+                            <param id="0" name="Object">PlayerHead</param>
+                            <param id="1" name="Expression">PlayerTorso.Pin2.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Character.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="581034011229475" type="Family_Objects">
+                            <param id="0" name="Object">Impact_Axe</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="938725326117169" type="Impact_Axe">
+                            <param id="0" name="Pin to">Family_Objects</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="604089424665810" type="Impact_Axe">
+                            <param id="0" name="Angle">PlayerHead.Angle</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="759706192384469" type="Impact_Axe">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="994631357609116" type="Impact_Axe">
+                            <param id="0" name="Angle">PlayerHead.Angle</param>
+                        </action>
+                        <action behavior="FI_Bullet" id="0" name="Set speed" sid="782159327749802" type="Impact_Axe">
+                            <param id="0" name="Speed">200</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="313558996668655" type="Impact_Axe">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">int(Impact_Axe.Damage * Family_Character.BonusDamageMult)</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="994390073318780" type="Impact_Axe">
+                            <param id="0" name="Duration">Impact_Axe.TimeDuration</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742065298612041">
+                    <conditions>
+                        <condition id="0" name="On function" sid="126969350715568" type="Function">
+                            <param id="0" name="Name">&quot;Press_AxeSwing&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="815895613050493" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="426311520633891" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="782882128246570" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="643498420528313" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="968575838846345" type="Family_Arms">
+                            <param id="0" name="Instance variable">Cancel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="993487694307475" type="Family_Objects">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="863096987947226">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="735588761833911" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="654454165744996" type="Function">
+                                    <param id="0" name="Name">&quot;Sweep&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}Family_Arms.UID{###}PlayerTorso.UID{###}210{###}30</param>
+                                </action>
+                                <action id="0" name="Call function" sid="340538345567354" type="Function">
+                                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Axe&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="844218020786339">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="374335947970689" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="684023250083944" type="Family_Objects">
+                                    <param id="0" name="Instance variable">UnSweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="650492333294800" type="Function">
+                                    <param id="0" name="Name">&quot;UnSweep&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}Family_Arms.UID{###}PlayerTorso.UID{###}0{###}30</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="763803573675772">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="459590583109300" type="System">
+                                            <param id="0" name="First value">Family_Objects.Timer.CurrentTime(&quot;Shoot_Axe&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="116760511985734" type="Family_Objects">
+                                            <param id="0" name="Duration">0.2</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Axe&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="815157096445347">
+                    <conditions>
+                        <condition id="0" name="On function" sid="250405806775321" type="Function">
+                            <param id="0" name="Name">&quot;UnPress_AxeSwing&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="835791826754749" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="252613485227641" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="201353886655565" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="248373417607522" type="Function">
+                            <param id="0" name="Name">&quot;UnSweep&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Objects.UID{###}Family_Arms.UID{###}PlayerTorso.UID{###}PlayerTorso.MoveAngle{###}30</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="205306676917055" type="Family_Objects">
+                            <param id="0" name="Instance variable">SweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="506999964142780" type="Family_Objects">
+                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Bow battle animation" sid="716104667094633" title="Bow">
+            <sub-events>
+                <event-block sid="163709565904843">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="824750379008523" type="Family_Objects">
+                            <param id="0" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="140738205094030" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="496484714259005" type="Family_Objects">
+                            <param id="0" name="Instance variable">Start</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="973318553515576" type="Family_Objects">
+                            <param id="0" name="Object">Impact_Arrow</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="411476661645624" type="Impact_Arrow">
+                            <param id="0" name="Angle">Family_Objects.Angle</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="679245561122501" type="Impact_Arrow">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="636130217388403" type="Impact_Arrow">
+                            <param id="0" name="Angle">Family_Objects.Angle</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="547678882316024" type="Impact_Arrow">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">int(Impact_Arrow.Damage * Family_Character.BonusDamageMult)</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="720220677001870" type="Impact_Arrow">
+                            <param id="0" name="Duration">Impact_Arrow.TimeDuration</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="447767589806005" type="Function">
+                            <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;bow&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889878582431555">
+                    <conditions>
+                        <condition id="0" name="On function" sid="270787604892217" type="Function">
+                            <param id="0" name="Name">&quot;Press_Bow&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="479547198847505" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="633184565109613" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="445488227581415" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="254701274693860" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="662749232126928" type="Family_Arms">
+                            <param id="0" name="Instance variable">Cancel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="914163129042613" type="Family_Objects">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="607363940999430" type="Family_Objects">
+                            <param id="0" name="Object">Family_Arms</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="230241102413491">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="531017337197267" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="965954886107697" type="Family_Arms">
+                                    <param id="0" name="Instance variable">AditionalDegres</param>
+                                    <param id="1" name="Value">45</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="817622175714545" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="633759160451950">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="450476335546870" type="System">
+                                    <param id="0" name="First value">Family_Arms.AditionalDegres</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="868443347275066" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="577581311162627">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="718496385217790" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="687169035793671" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="254723327139835" type="Family_Objects">
+                                    <param id="0" name="Angle">Family_Arms.Angle -(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) </param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="140033137171840">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="243443711286985" type="System">
+                                            <param id="0" name="First value">Family_Objects.Timer.CurrentTime(&quot;Shoot_Arrow&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="838632980053915" type="Family_Objects">
+                                            <param id="0" name="Duration">0.6</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="477617347617379">
+                    <conditions>
+                        <condition id="0" name="On function" sid="784659190659628" type="Function">
+                            <param id="0" name="Name">&quot;UnPress_Bow&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="152812334513328" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="362353509804769" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="202658165172236" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="429505343133929" type="Family_Objects">
+                            <param id="0" name="Instance variable">SweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="299906845525895" type="Family_Objects">
+                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="424786729472213">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="811279201796665" type="Family_Objects">
+                                    <param id="0" name="Instance variable">Start</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="515705898126867" type="Family_Arms">
+                                    <param id="0" name="Instance variable">AditionalDegres</param>
+                                    <param id="1" name="Value">45</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="463828152939357" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="673737944099034" type="Family_Objects">
+                                    <param id="0" name="Angle">Family_Arms.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="961302648825443" type="Family_Objects">
+                                    <param id="0" name="Object">Family_Arms</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="885946981542717">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="953635019905189" type="System">
+                                            <param id="0" name="First value">Family_Arms.AditionalDegres</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="293051045823512" type="Family_Objects">
+                                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="283976742631060" type="Family_Objects">
+                                            <param id="0" name="Instance variable">Start</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="751881518680558" type="Family_Arms">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="879896921530983" type="Family_Arms">
+                                            <param id="0" name="Instance variable">AditionalDegres</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Wand battle animation" sid="766743661719770" title="Wand">
+            <sub-events>
+                <event-block sid="266000112285345">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="600062040272129" type="Family_Objects">
+                            <param id="0" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="906070850817546" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="991344184141276" type="Family_Objects">
+                            <param id="0" name="Instance variable">Start</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="261918257684221" type="Family_Objects">
+                            <param id="0" name="Object">Impact_Fireball</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="734144604683768" type="Impact_Fireball">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="512417655622763" type="Impact_Fireball">
+                            <param id="0" name="Angle">Family_Objects.Angle</param>
+                        </action>
+                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="650745841849881" type="Impact_Fireball">
+                            <param id="0" name="Angle">Family_Objects.Angle</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="458400767141968" type="Impact_Fireball">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">int(Impact_Fireball.Damage * Family_Character.BonusDamageMult)</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="329637783330794" type="Impact_Fireball">
+                            <param id="0" name="Duration">Impact_Fireball.TimeDuration</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="956740699319548" type="Function">
+                            <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;wand&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="214410777342839">
+                    <conditions>
+                        <condition id="0" name="On function" sid="484141346622605" type="Function">
+                            <param id="0" name="Name">&quot;Press_Wand&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="131255726909713" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="446576696928225" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="123096229748144" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="889883881948951" type="Family_Character">
+                            <param id="0" name="Unique ID">Family_Objects.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="270956794233980" type="Family_Arms">
+                            <param id="0" name="Instance variable">Cancel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="436127574083804" type="Family_Objects">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="179565563612537" type="Family_Objects">
+                            <param id="0" name="Object">Family_Arms</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="621515221658308">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="847073894475491" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="361853518798175" type="Family_Arms">
+                                    <param id="0" name="Instance variable">AditionalDegres</param>
+                                    <param id="1" name="Value">45</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="838700195501630" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="874384386804391">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="288254510051367" type="System">
+                                    <param id="0" name="First value">Family_Arms.AditionalDegres</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="218495909173035" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="748828114601614">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="106232611957985" type="Family_Objects">
+                                    <param id="0" name="Instance variable">SweepComplete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="178321579328658" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="491932540818023" type="Family_Objects">
+                                    <param id="0" name="Angle">Family_Arms.Angle -(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) </param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="301415426580749">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="278897749074738" type="System">
+                                            <param id="0" name="First value">Family_Objects.Timer.CurrentTime(&quot;Shoot_Fireball&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="574383471481935" type="Family_Objects">
+                                            <param id="0" name="Duration">0.4</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="178734185450499">
+                    <conditions>
+                        <condition id="0" name="On function" sid="181963429226387" type="Function">
+                            <param id="0" name="Name">&quot;UnPress_Wand&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="840400049336811" type="Family_Objects">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="416741556639537" type="Family_Arms">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="455363345455406" type="PlayerTorso">
+                            <param id="0" name="Unique ID">Function.Param(2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="405354093514640" type="Family_Objects">
+                            <param id="0" name="Instance variable">SweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="819631130319094" type="Family_Objects">
+                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="221962766367853">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="836640590043377" type="Family_Objects">
+                                    <param id="0" name="Instance variable">Start</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="163082096780368" type="Family_Arms">
+                                    <param id="0" name="Instance variable">AditionalDegres</param>
+                                    <param id="1" name="Value">45</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="994509346153240" type="Family_Arms">
+                                    <param id="0" name="Angle">(Family_Arms.Type= &quot;left&quot; ? Family_Arms.AditionalDegres: - Family_Arms.AditionalDegres) + PlayerTorso.MoveAngle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="510023695091002" type="Family_Objects">
+                                    <param id="0" name="Angle">Family_Arms.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="680297979107760" type="Family_Objects">
+                                    <param id="0" name="Object">Family_Arms</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="569464035890593">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="799777800201181" type="System">
+                                            <param id="0" name="First value">Family_Arms.AditionalDegres</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="992016256609742" type="Family_Objects">
+                                            <param id="0" name="Instance variable">UnSweepComplete</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="292493362877885" type="Family_Objects">
+                                            <param id="0" name="Instance variable">Start</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="742640769645281" type="Family_Arms">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="824760609684792" type="Family_Arms">
+                                            <param id="0" name="Instance variable">AditionalDegres</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Potion-like Item" sid="657634568318266" title="Heart">
+            <sub-events>
+                <event-block sid="828622307239027">
+                    <conditions>
+                        <condition disabled="1" id="0" name="On key pressed" sid="561495180767490" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="833392754828936" type="PlayerCoreBox">
+                            <param id="0" name="Object">Potionheart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="142048198806835" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">PlayerCoreBox.HPMax</param>
+                        </action>
+                        <action id="0" name="Call function" sid="518682257001524" type="Function">
+                            <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Heart&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="602399370125711" type="Potionheart" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu_Options_Sheet</name>
+    <events>
+        <comment>Sheet that allow to choose the difficult, depending on the difficult you select is the levels that will load on the array</comment>
+        <include>_Menu_General</include>
+        <event-block sid="118955932248177">
+            <conditions>
+                <condition id="0" name="On function" sid="219630463246312" type="Function">
+                    <param id="0" name="Name">&quot;StartGame_Easy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear" sid="531032527126397" type="Player_Log" />
+                <action id="-9" name="Set value" sid="966682374157988" type="System">
+                    <param id="0" name="Variable">ConfigDifficult</param>
+                    <param id="1" name="Value">&quot;Easy&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="197648691927384" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="468899992332783" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Push" sid="525715912225093" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Start&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="181070227748585" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="590280496449407" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="781038836142105" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Boss_Wormula&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="350121713442479" type="System">
+                    <param id="0" name="Layout">Array_Levels.At(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841177674216619">
+            <conditions>
+                <condition id="0" name="On function" sid="394270673525879" type="Function">
+                    <param id="0" name="Name">&quot;StartGame_Medium&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear" sid="216531370943138" type="Player_Log" />
+                <action id="-9" name="Set value" sid="937158076900055" type="System">
+                    <param id="0" name="Variable">ConfigDifficult</param>
+                    <param id="1" name="Value">&quot;Normal&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="872354932280284" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="881826039182371" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Push" sid="106624764655404" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Start&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="678107108709701" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="938990659188208" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="119356956793984" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="104357785105217" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Boss_Wormula&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="289501344491635" type="System">
+                    <param id="0" name="Layout">Array_Levels.At(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="379552995822548">
+            <conditions>
+                <condition id="0" name="On function" sid="388136716741290" type="Function">
+                    <param id="0" name="Name">&quot;StartGame_Hard&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear" sid="492999326577648" type="Player_Log" />
+                <action id="-9" name="Set value" sid="839796000024085" type="System">
+                    <param id="0" name="Variable">ConfigDifficult</param>
+                    <param id="1" name="Value">&quot;Hard&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="849439033738705" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="319253884085833" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Push" sid="412208318564518" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Start&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="390488721304982" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="171803727416176" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="219237676190204" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="797713289889498" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Boss_Wormula&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="404811003411059" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="776408819128893" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Dungeon&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="331720210485125" type="Array_Levels">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">&quot;Boss_Dragonium&quot;</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="272834999957446" type="System">
+                    <param id="0" name="Layout">Array_Levels.At(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495053888386853">
+            <conditions>
+                <condition id="0" name="On function" sid="595196724450344" type="Function">
+                    <param id="0" name="Name">&quot;GoLayout&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="222851026044524" type="System">
+                    <param id="0" name="Layout">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="512816907288726">
+            <conditions>
+                <condition id="0" name="On function" sid="329095100497200" type="Function">
+                    <param id="0" name="Name">&quot;GoLastLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="872732839195623" type="System">
+                    <param id="0" name="Layout">LastLevel</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="270008254604711">
+            <conditions>
+                <condition id="0" name="On function" sid="510665897343910" type="Function">
+                    <param id="0" name="Name">&quot;Go_TryAgain&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="889136519296919">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="615161062963646" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Easy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="899408715740489" type="System">
+                            <param id="0" name="Layout">LastLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635924188364330">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="120948880653952" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Normal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="756882750933745" type="System">
+                            <param id="0" name="Layout">LastLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="364460424625786">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="946500248758604" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Hard&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear" sid="309276534730157" type="Player_Log" />
+                        <action id="-10" name="Set value" sid="169870015103152" type="Array_Levels">
+                            <param id="0" name="Instance variable">Actual</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="202255245282177" type="System">
+                            <param id="0" name="Layout">Array_Levels.At(Array_Levels.Actual)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

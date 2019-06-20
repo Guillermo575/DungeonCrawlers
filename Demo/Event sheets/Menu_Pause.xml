@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu_Pause</name>
+    <events>
+        <comment>Sheet of the pause menu</comment>
+        <include>_Menu_General</include>
+        <event-block any="1" sid="301403205726628">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="707952993745523" type="Keyboard">
+                    <param id="0" name="Key">27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Toggle pause" sid="209750553394998" type="Rex_Pause" />
+                <action id="4" name="Set animation" sid="760348021535043" type="BGMIcon">
+                    <param id="0" name="Animation">MuteBGM = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="751450470938181" type="VEIcon">
+                    <param id="0" name="Animation">MuteSE = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="166678399397914">
+            <conditions>
+                <condition id="2" name="Is pause" sid="279810243889529" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="191133601896960" type="System">
+                    <param id="0" name="Layer">&quot;Pause&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="438336804451499">
+            <conditions>
+                <condition id="2" inverted="1" name="Is pause" sid="413083705029693" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="714131018676294" type="System">
+                    <param id="0" name="Layer">&quot;Pause&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="368522234037435">
+            <conditions>
+                <condition id="3" name="On touched object" sid="192030004355466" type="Touch">
+                    <param id="0" name="Object">BGMIcon</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="659746680110780" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="984405596331578" type="System">
+                    <param id="0" name="Variable">MuteBGM</param>
+                    <param id="1" name="Value">MuteBGM = 0? 1 : 0</param>
+                </action>
+                <action id="4" name="Set animation" sid="737363195622892" type="BGMIcon">
+                    <param id="0" name="Animation">MuteBGM = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="844927979143710">
+            <conditions>
+                <condition id="3" name="On touched object" sid="563811453948340" type="Touch">
+                    <param id="0" name="Object">VEIcon</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="159426108598589" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="590904472759639" type="System">
+                    <param id="0" name="Variable">MuteSE</param>
+                    <param id="1" name="Value">MuteSE = 0? 1 : 0</param>
+                </action>
+                <action id="4" name="Set animation" sid="150598711019535" type="VEIcon">
+                    <param id="0" name="Animation">MuteSE = 0? &quot;Enabled&quot; : &quot;Disabled&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625327245669698">
+            <conditions>
+                <condition id="0" name="On function" sid="483217088768977" type="Function">
+                    <param id="0" name="Name">&quot;ExitGame&quot;</param>
+                </condition>
+                <condition id="2" name="Is pause" sid="995625495810061" type="Rex_Pause" />
+            </conditions>
+            <actions>
+                <action id="0" name="Toggle pause" sid="162178042549545" type="Rex_Pause" />
+                <action id="3" name="Clear" sid="504046599529814" type="Player_Log" />
+                <action id="1" name="Set size" sid="800078215960682" type="Array_Levels">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="403410532222564" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="538053593187066" type="Function">
+                    <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="782723661258735" type="System">
+                    <param id="0" name="Layout">Menu_Start</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

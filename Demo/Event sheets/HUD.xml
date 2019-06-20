@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HUD</name>
+    <events>
+        <comment>Elements of the Player Window (HP, current objects)</comment>
+        <event-group description="HP Hearth Meter" sid="549535958110449" title="Health">
+            <sub-events>
+                <event-block sid="955696046759573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="798213591971271" type="Function">
+                            <param id="0" name="Name">&quot;CreateHUDHealth&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="352307552069159" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="935729854556001" type="System">
+                            <param id="0" name="Object to create">HUD_Heart_Container</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">int(Function.Param(1))</param>
+                            <param id="3" name="Y">int(Function.Param(2))</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="629880584644592" type="HUD_Heart_Container">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="927652001476337" type="HUD_Heart_Container">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="710768386841401">
+                            <conditions>
+                                <condition id="-10" name="For" sid="661101209889582" type="System">
+                                    <param id="0" name="Name">&quot;HUDHeart_Loop&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="549414005882977" type="HUD_Heart_Container">
+                                    <param id="0" name="Object">HUD_Heart</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">loopindex</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="875790845261294" type="HUD_Heart">
+                                    <param id="0" name="Pin to">HUD_Heart_Container</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="471527684949897" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MinValue</param>
+                                    <param id="1" name="Value">(loopindex*2) + 1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="647729434135986" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MaxValue</param>
+                                    <param id="1" name="Value">HUD_Heart.MinValue + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="152557961418599">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="133347403683261" type="System">
+                            <param id="0" name="Object">HUD_Heart</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="848546819732519" type="HUD_Heart_Container">
+                            <param id="0" name="Unique ID">HUD_Heart.Pin2.PinnedUID</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="605616260132995" type="Family_Character">
+                            <param id="0" name="Unique ID">HUD_Heart_Container.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="912429332838363">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="860460153715030" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MaxValue</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Family_Character.HPMax</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="826784590863045" type="HUD_Heart">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="478132056696469">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="648213554668705" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MaxValue</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">Family_Character.HPMax</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="290972975182959" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MinValue</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">Family_Character.HPMax</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="369933060999647" type="HUD_Heart">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="198653178944604">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="654459174529823" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MaxValue</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">Family_Character.HP</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="814811756732135" type="HUD_Heart">
+                                    <param id="0" name="Animation">&quot;Full&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="779270587789465">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="395285290621903" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MaxValue</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Family_Character.HP</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="289943256427193" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MinValue</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">Family_Character.HP</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="964002442596985" type="HUD_Heart">
+                                    <param id="0" name="Animation">&quot;Half&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="650718974684228">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="813784312726375" type="HUD_Heart">
+                                    <param id="0" name="Instance variable">MinValue</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Family_Character.HP</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="127250885637581" type="HUD_Heart">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Left Arm current object icon" sid="956356383244906" title="ObjectLeftArm">
+            <sub-events>
+                <event-block sid="447823131102463">
+                    <conditions>
+                        <condition id="0" name="On function" sid="717899336437331" type="Function">
+                            <param id="0" name="Name">&quot;CreateHUDObject_Left&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="395014494477865" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="144599858941579" type="System">
+                            <param id="0" name="Object to create">HUD_Object_Container</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">int(Function.Param(1))</param>
+                            <param id="3" name="Y">int(Function.Param(2))</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="862769198117345" type="System">
+                            <param id="0" name="Object to create">HUD_Object_Left</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">int(Function.Param(1))</param>
+                            <param id="3" name="Y">int(Function.Param(2))</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="336599491943457" type="HUD_Object_Left">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="736695081726784">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="157070146644326" type="System">
+                            <param id="0" name="Object">HUD_Object_Left</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="773602892034766" type="Family_Character">
+                            <param id="0" name="Unique ID">HUD_Object_Left.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="508166922995707">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="586378004004671" type="Family_Objects">
+                                    <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="655085987455607" type="HUD_Object_Left">
+                                    <param id="0" name="Animation">Family_Objects.AnimationName</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="412699370071167">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="998950316108629" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="659259724204421" type="HUD_Object_Left">
+                                    <param id="0" name="Animation">&quot;None&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Right Arm current object icon" sid="301029930290434" title="ObjectRightArm">
+            <sub-events>
+                <event-block sid="523736750149153">
+                    <conditions>
+                        <condition id="0" name="On function" sid="951953054500441" type="Function">
+                            <param id="0" name="Name">&quot;CreateHUDObject_Right&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="144048487656034" type="Family_Character">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="499048964363763" type="System">
+                            <param id="0" name="Object to create">HUD_Object_Container</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">int(Function.Param(1))</param>
+                            <param id="3" name="Y">int(Function.Param(2))</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="762809682492968" type="System">
+                            <param id="0" name="Object to create">HUD_Object_Right</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">int(Function.Param(1))</param>
+                            <param id="3" name="Y">int(Function.Param(2))</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="582014276421698" type="HUD_Object_Right">
+                            <param id="0" name="Pin to">Family_Character</param>
+                            <param id="1" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="798180147029631">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="839327379306556" type="System">
+                            <param id="0" name="Object">HUD_Object_Right</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="482002042693560" type="Family_Character">
+                            <param id="0" name="Unique ID">HUD_Object_Right.Pin2.PinnedUID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="721066450908834">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="936786300885824" type="Family_Objects">
+                                    <param id="0" name="Unique ID">Family_Character.ArmRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="371247109555932" type="HUD_Object_Right">
+                                    <param id="0" name="Animation">Family_Objects.AnimationName</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="445439218517939">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="571399506321851" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="785866871684533" type="HUD_Object_Right">
+                                    <param id="0" name="Animation">&quot;None&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

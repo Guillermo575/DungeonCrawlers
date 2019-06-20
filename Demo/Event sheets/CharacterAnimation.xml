@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CharacterAnimation</name>
+    <events>
+        <comment>The main functions of procedural animation</comment>
+        <event-block sid="380641688598754">
+            <conditions>
+                <condition id="2" inverted="1" name="Is pause" sid="467145435643300" type="Rex_Pause" />
+                <condition id="-11" name="For Each" sid="537588390053993" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="312169884757956" type="Family_Character">
+                    <param id="0" name="Instance variable">Type_Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Humanoid&quot;</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="994709337629576" type="System">
+                    <param id="0" name="Object">PlayerTop</param>
+                    <param id="1" name="Expression">PlayerTop.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="499659871878197" type="System">
+                    <param id="0" name="Object">PlayerTorso</param>
+                    <param id="1" name="Expression">PlayerTorso.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="649286339638250" type="System">
+                    <param id="0" name="Object">PlayerArmRight</param>
+                    <param id="1" name="Expression">PlayerArmRight.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="411155015629167" type="System">
+                    <param id="0" name="Object">PlayerArmLeft</param>
+                    <param id="1" name="Expression">PlayerArmLeft.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="351305814217445" type="System">
+                    <param id="0" name="Object">PlayerLeg1</param>
+                    <param id="1" name="Expression">PlayerLeg1.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="648745776638482" type="System">
+                    <param id="0" name="Object">PlayerLeg2</param>
+                    <param id="1" name="Expression">PlayerLeg2.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="175806808852260" type="System">
+                    <param id="0" name="Object">PlayerShadow</param>
+                    <param id="1" name="Expression">PlayerShadow.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="329740519823230" type="System">
+                    <param id="0" name="Object">PlayerHead</param>
+                    <param id="1" name="Expression">PlayerHead.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="265765718927494" type="PlayerTorso">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="280267670932155" type="PlayerHead">
+                    <param id="0" name="X">PlayerTorso.X </param>
+                    <param id="1" name="Y">PlayerTorso.Y</param>
+                </action>
+                <action id="-24" name="Move to top" sid="169786544410699" type="PlayerHead" />
+                <action id="-3" name="Set position" sid="247389458802064" type="PlayerTop">
+                    <param id="0" name="X">PlayerTorso.X </param>
+                    <param id="1" name="Y">PlayerTorso.Y</param>
+                </action>
+                <action id="-24" name="Move to top" sid="992520656494872" type="PlayerTop" />
+                <action id="-3" name="Set position" sid="932701304235058" type="PlayerArmLeft">
+                    <param id="0" name="X">PlayerTorso.X</param>
+                    <param id="1" name="Y">PlayerTorso.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="773248599728242" type="PlayerArmRight">
+                    <param id="0" name="X">PlayerTorso.X</param>
+                    <param id="1" name="Y">PlayerTorso.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="749745072737062" type="PlayerLeg1">
+                    <param id="0" name="X">PlayerTorso.ImagePointX(1)</param>
+                    <param id="1" name="Y">PlayerTorso.ImagePointY(1)+1</param>
+                </action>
+                <action id="-3" name="Set position" sid="703120413649487" type="PlayerLeg2">
+                    <param id="0" name="X">PlayerTorso.ImagePointX(2)</param>
+                    <param id="1" name="Y">PlayerTorso.ImagePointY(2)+1</param>
+                </action>
+                <action id="-3" name="Set position" sid="570664413317694" type="PlayerShadow">
+                    <param id="0" name="X">PlayerTorso.X</param>
+                    <param id="1" name="Y">PlayerTorso.Y+8</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="785456730343722">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="793644570631325" type="System">
+                            <param id="0" name="Object">PlayerCloak1</param>
+                            <param id="1" name="Expression">PlayerCloak1.Pin2.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Character.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="445714960842248" type="System">
+                            <param id="0" name="Object">PlayerCloak2</param>
+                            <param id="1" name="Expression">PlayerCloak2.Pin2.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Character.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="891678548263512" type="System">
+                            <param id="0" name="Object">PlayerCloak3</param>
+                            <param id="1" name="Expression">PlayerCloak3.Pin2.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Character.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Set position" sid="486699761700458" type="PlayerCloak1">
+                            <param id="0" name="X">PlayerTorso.X</param>
+                            <param id="1" name="Y">PlayerTorso.Y-3</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="342612904895898" type="PlayerCloak1">
+                            <param id="0" name="X">PlayerTorso.X</param>
+                            <param id="1" name="Y">PlayerTorso.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="815760613890892" type="PlayerCloak2">
+                            <param id="0" name="X">PlayerTorso.X</param>
+                            <param id="1" name="Y">PlayerTorso.Y-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="479673607230967" type="PlayerCloak3">
+                            <param id="0" name="X">PlayerTorso.X</param>
+                            <param id="1" name="Y">PlayerTorso.Y+2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="329936007825320">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="741289198503213" type="System">
+                            <param id="0" name="Object">Family_Objects</param>
+                            <param id="1" name="Expression">Family_Character.ArmLeft</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Objects.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="558255600002571" type="Family_Objects">
+                            <param id="0" name="Object">PlayerArmLeft</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="857696116104483">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="248431662275047" type="PlayerArmLeft">
+                                    <param id="0" name="Instance variable">Cancel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="415287569221885" type="Family_Objects">
+                                    <param id="0" name="Angle">PlayerArmLeft.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="535666890567151">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="539353258781024" type="System">
+                            <param id="0" name="Object">Family_Objects</param>
+                            <param id="1" name="Expression">Family_Character.ArmRight</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Objects.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="612371171110205" type="Family_Objects">
+                            <param id="0" name="Object">PlayerArmRight</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="413821120349271">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="765962197854070" type="PlayerArmRight">
+                                    <param id="0" name="Instance variable">Cancel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="776756192586904" type="Family_Objects">
+                                    <param id="0" name="Angle">PlayerArmRight.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="499662439953388">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="678873808167278" type="Family_Character">
+                            <param id="0" name="Instance variable">IsAlive</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="346274303729191" type="PlayerHead">
+                            <param id="0" name="Animation">Family_Character.Name</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Idle animation</comment>
+                        <event-block sid="640324027550649">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="213131281340678" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="633681961100710" type="PlayerHead">
+                                    <param id="0" name="X">PlayerTorso.X + (cos(PlayerHead.Angle)*PlayerTorso.FP_Sine.Value)/50</param>
+                                    <param id="1" name="Y">PlayerTorso.Y + (sin(PlayerHead.Angle)*PlayerTorso.FP_Sine.Value)/50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="743258348842449" type="PlayerTop">
+                                    <param id="0" name="X">PlayerTorso.X + (cos(PlayerTop.Angle)*PlayerTorso.FP_Sine.Value)/40</param>
+                                    <param id="1" name="Y">PlayerTorso.Y + (sin(PlayerTop.Angle)*PlayerTorso.FP_Sine.Value)/40</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="249637753052823" type="PlayerArmLeft">
+                                    <param id="0" name="X">PlayerTorso.X + (cos(PlayerArmLeft.Angle)*PlayerTorso.FP_Sine.Value)/24</param>
+                                    <param id="1" name="Y">PlayerTorso.Y + (sin(PlayerArmLeft.Angle)*PlayerTorso.FP_Sine.Value)/24</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="309330705060335" type="PlayerArmRight">
+                                    <param id="0" name="X">PlayerTorso.X + (cos(PlayerArmRight.Angle)*PlayerTorso.FP_Sine.Value)/24</param>
+                                    <param id="1" name="Y">PlayerTorso.Y + (sin(PlayerArmRight.Angle)*PlayerTorso.FP_Sine.Value)/24</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="321087759413581" type="PlayerShadow">
+                                    <param id="0" name="Width">12 + PlayerTorso.FP_Sine.Value/40</param>
+                                    <param id="1" name="Height">10+ PlayerTorso.FP_Sine.Value/30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="814369524383972">
+                            <conditions>
+                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="712506848397278" type="Family_Character" />
+                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="316974670500283" type="Family_Character" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FP_Sine" id="1" name="Set period" sid="292698382023433" type="PlayerTorso">
+                                    <param id="0" name="Period">0.4</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="MoveAngle" sid="728278061988643" static="0" type="number">0</variable>
+                                <comment>Animation for player movement</comment>
+                                <event-block sid="826795272322269">
+                                    <conditions>
+                                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="689880665555242" type="Family_Character" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="622009309331114" type="System">
+                                            <param id="0" name="Variable">MoveAngle</param>
+                                            <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Animation for enemy characters</comment>
+                                <event-block sid="358681456653585">
+                                    <conditions>
+                                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="914763622823987" type="Family_Character" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="299643756224156" type="System">
+                                            <param id="0" name="Variable">MoveAngle</param>
+                                            <param id="1" name="Value">Family_Character.FC_Pathfinding.MovingAngle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="449574179437872">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="156728868931895" type="PlayerArmLeft">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="865472076345167" type="PlayerArmLeft">
+                                            <param id="0" name="Angle">PlayerTorso.Angle-PlayerTorso.FP_Sine.Value-10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="898091301858431">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="198889537696452" type="PlayerArmRight">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="974510270169509" type="PlayerArmRight">
+                                            <param id="0" name="Angle">PlayerTorso.Angle-PlayerTorso.FP_Sine.Value+10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="303922139233039">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="916658005453498" type="PlayerTorso">
+                                            <param id="0" name="Angle">MoveAngle+PlayerTorso.FP_Sine.Value</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="459489869642904" type="PlayerLeg1">
+                                            <param id="0" name="Height">8+(PlayerTorso.FP_Sine.Value/7)</param>
+                                        </action>
+                                        <action id="-6" name="Set height" sid="799454551822259" type="PlayerLeg2">
+                                            <param id="0" name="Height">8-(PlayerTorso.FP_Sine.Value/7)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="558255797554759" type="PlayerTorso">
+                                            <param id="0" name="Instance variable">MoveAngle</param>
+                                            <param id="1" name="Value">MoveAngle</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="701263672229002" type="Family_Character">
+                                            <param id="0" name="Instance variable">MoveAngle</param>
+                                            <param id="1" name="Value">MoveAngle</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="237901366557582" type="PlayerTop">
+                                            <param id="0" name="Angle">anglelerp(PlayerTop.Angle,MoveAngle, 1)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="527026352068668" type="PlayerHead">
+                                            <param id="0" name="Angle">anglelerp(PlayerHead.Angle,MoveAngle, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="557938065494178">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="618037978511211" type="System">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                            <param id="1" name="Expression">Family_Character.ArmLeft</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Objects.UID</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="756450206216248" type="PlayerArmLeft">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="386453242340167" type="Family_Objects">
+                                            <param id="0" name="Angle">PlayerTorso.Angle-PlayerTorso.FP_Sine.Value+10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="295341257685420">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="513820383931645" type="System">
+                                            <param id="0" name="Object">Family_Objects</param>
+                                            <param id="1" name="Expression">Family_Character.ArmRight</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Objects.UID</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="280372590900721" type="PlayerArmRight">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="157342309223685" type="Family_Objects">
+                                            <param id="0" name="Angle">PlayerTorso.Angle-PlayerTorso.FP_Sine.Value-10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="777661185384009">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="515808526340659" type="System">
+                                            <param id="0" name="Object">PlayerCloak1</param>
+                                            <param id="1" name="Expression">PlayerCloak1.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Character.UID</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="923683906544003" type="System">
+                                            <param id="0" name="Object">PlayerCloak2</param>
+                                            <param id="1" name="Expression">PlayerCloak2.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Character.UID</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="499269639789602" type="System">
+                                            <param id="0" name="Object">PlayerCloak3</param>
+                                            <param id="1" name="Expression">PlayerCloak3.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Character.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="481722194355953" type="PlayerCloak1">
+                                            <param id="0" name="Angle">anglelerp(PlayerCloak1.Angle,MoveAngle, 0.1)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="531614348243490" type="PlayerCloak2">
+                                            <param id="0" name="Angle">anglelerp(PlayerCloak2.Angle,MoveAngle, 0.1)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="219070329955505" type="PlayerCloak3">
+                                            <param id="0" name="Angle">anglelerp(PlayerCloak3.Angle,MoveAngle-(PlayerTorso.FP_Sine.Value/4), 0.1)</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="307355446285510" type="PlayerCloak1">
+                                            <param id="0" name="Width">lerp(PlayerCloak1.Width, 16, 0.1)+PlayerCloak1.FP_Sine.Value</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="797493046074174" type="PlayerCloak3">
+                                            <param id="0" name="Width">lerp(PlayerCloak3.Width, 20, 0.1)+PlayerCloak1.FP_Sine.Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="873219370242691">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="562581728434884" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FP_Sine" id="1" name="Set period" sid="486622091902975" type="PlayerTorso">
+                                    <param id="0" name="Period">2</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="883652902254072" type="PlayerLeg1">
+                                    <param id="0" name="Height">12</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="312812253420467" type="PlayerLeg2">
+                                    <param id="0" name="Height">12</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="574732815991732" type="PlayerLeg1">
+                                    <param id="0" name="Angle">anglelerp(PlayerLeg1.Angle, 0, 0.1)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="851383957070401" type="PlayerLeg2">
+                                    <param id="0" name="Angle">anglelerp(PlayerLeg2.Angle, 0, 0.1)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="878189189925779" type="PlayerTop">
+                                    <param id="0" name="Angle">anglelerp(PlayerTop.Angle, PlayerTorso.MoveAngle, 0.1)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="810747874409649" type="PlayerHead">
+                                    <param id="0" name="Angle">anglelerp(PlayerHead.Angle, PlayerTorso.MoveAngle, 0.1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="160365023429367">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="204518757817152" type="PlayerArmLeft">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="727297704979471" type="PlayerArmLeft">
+                                            <param id="0" name="Angle">anglelerp(PlayerArmLeft.Angle, Family_Character.MoveAngle + 30, 0.1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="264340578922677">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="320428513054570" type="PlayerArmRight">
+                                            <param id="0" name="Instance variable">Cancel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="300722888949054" type="PlayerArmRight">
+                                            <param id="0" name="Angle">anglelerp(PlayerArmRight.Angle, Family_Character.MoveAngle - 30, 0.1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="655139018040186">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="936034689733939" type="System">
+                                            <param id="0" name="Object">PlayerCloak1</param>
+                                            <param id="1" name="Expression">PlayerCloak1.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Character.UID</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="831490151084963" type="System">
+                                            <param id="0" name="Object">PlayerCloak2</param>
+                                            <param id="1" name="Expression">PlayerCloak2.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Character.UID</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="875745172165351" type="System">
+                                            <param id="0" name="Object">PlayerCloak3</param>
+                                            <param id="1" name="Expression">PlayerCloak3.Pin2.PinnedUID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">Family_Character.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="827853003932823" type="PlayerCloak1">
+                                            <param id="0" name="Angle">anglelerp(PlayerCloak1.Angle,PlayerTorso.MoveAngle, 0.05)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="571297831415359" type="PlayerCloak2">
+                                            <param id="0" name="Angle">anglelerp(PlayerCloak2.Angle,PlayerTorso.MoveAngle, 0.05)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="269381776626587" type="PlayerCloak3">
+                                            <param id="0" name="Angle">anglelerp(PlayerCloak3.Angle,PlayerTorso.MoveAngle, 0.05)</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="617550698921264" type="PlayerCloak1">
+                                            <param id="0" name="Width">lerp(PlayerCloak1.Width, 13, 0.1)+PlayerCloak1.FP_Sine.Value</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="844239003072943" type="PlayerCloak3">
+                                            <param id="0" name="Width">lerp(PlayerCloak3.Width, 13, 0.1)+PlayerCloak1.FP_Sine.Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="600689889816844">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="478798914309227" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="2" name="Stop" sid="423927362010154" type="Family_Character" />
+                        <action id="-4" name="Set position to another object" sid="387995983110647" type="PlayerTorso">
+                            <param id="0" name="Object">Family_Character</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="925635302450272">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="802318543822632" type="System">
+                                    <param id="0" name="Object">PlayerCloak1</param>
+                                    <param id="1" name="Expression">PlayerCloak1.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Character.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="814987663980263" type="System">
+                                    <param id="0" name="Object">PlayerCloak2</param>
+                                    <param id="1" name="Expression">PlayerCloak2.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Character.UID</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="620567564508561" type="System">
+                                    <param id="0" name="Object">PlayerCloak3</param>
+                                    <param id="1" name="Expression">PlayerCloak3.Pin2.PinnedUID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Family_Character.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="197637577054310" type="PlayerCloak1">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="863199974531624" type="PlayerCloak2">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="854750291193700" type="PlayerCloak3">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="457590050889119">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="351374351032233" type="System">
+                                    <param id="0" name="First value">Family_Character.FC_Timer.CurrentTime(&quot;DeadAgonizing&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Rotate clockwise" sid="626364948651922" type="PlayerTorso">
+                                    <param id="0" name="Degrees">30</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="425799085055287" type="PlayerArmLeft">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="483016902205506" type="PlayerArmRight">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="870978455161348" type="PlayerHead">
+                                    <param id="0" name="Angle">PlayerTorso.Angle + 30</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="212972489053845" type="PlayerTop">
+                                    <param id="0" name="Angle">PlayerTorso.Angle + 30</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="173791912080576" type="PlayerLeg1">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="496384025662436" type="PlayerLeg2">
+                                    <param id="0" name="Angle">PlayerTorso.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="151867855761255">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="975972994355556" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="574244586100978" type="PlayerHead">
+                                    <param id="0" name="Animation">Family_Character.Name &amp; &quot;_Dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="317460598423863" type="PlayerTorso">
+                                    <param id="0" name="Angle">60</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="837329476681921" type="PlayerShadow">
+                                    <param id="0" name="X">PlayerTorso.X</param>
+                                    <param id="1" name="Y">PlayerTorso.Y</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="231988865625190" type="PlayerLeg1">
+                                    <param id="0" name="Height">20</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="183499724080714" type="PlayerLeg2">
+                                    <param id="0" name="Height">20</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="333683685754379" type="PlayerShadow">
+                                    <param id="0" name="Width">20</param>
+                                    <param id="1" name="Height">25</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="342101374846148" type="PlayerArmLeft">
+                                    <param id="0" name="Angle">60</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="448984907590325" type="PlayerArmRight">
+                                    <param id="0" name="Angle">60</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="386692555647905" type="PlayerHead">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="274476705384107" type="PlayerTop">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="989549755618655" type="PlayerLeg1">
+                                    <param id="0" name="Angle">330</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="786547398465526" type="PlayerLeg2">
+                                    <param id="0" name="Angle">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Because each part of the characters is animated we need to activate the flash individually</comment>
+        <event-block sid="753506594221769">
+            <conditions>
+                <condition id="0" name="On function" sid="302865518917507" type="Function">
+                    <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="271158825402095" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="983169297363073" type="System">
+                    <param id="0" name="Object">Family_Parts</param>
+                    <param id="1" name="Expression">Family_Parts.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">int(Function.Param(0))</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="331775088572603">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="408597328330762" type="Family_Parts">
+                            <param id="0" name="Instance variable">CallFlash</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="677083627688678" type="Family_Parts">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="645226166264014">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="637344542102610" type="Family_Character" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Flash" id="0" name="Flash" sid="279224116807295" type="Family_Character">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
