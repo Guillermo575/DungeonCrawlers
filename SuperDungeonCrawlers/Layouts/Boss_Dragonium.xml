@@ -474,6 +474,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <Dialog>intro</Dialog>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -579,6 +580,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <Dialog>intro</Dialog>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -684,6 +686,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <Dialog>intro</Dialog>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -789,6 +792,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <Dialog>intro</Dialog>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>

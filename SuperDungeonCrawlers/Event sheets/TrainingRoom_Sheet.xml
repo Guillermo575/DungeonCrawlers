@@ -5,6 +5,7 @@
     <events>
         <comment>This layout and sheet was maded if you try to test something new like a weapon or enemy</comment>
         <include>_Gamelibrary</include>
+        <include>DialogueEvents</include>
         <event-block sid="552286478595234">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="203697736120419" type="System" />

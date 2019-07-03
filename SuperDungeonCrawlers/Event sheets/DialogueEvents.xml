@@ -1,0 +1,1748 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DialogueEvents</name>
+    <events>
+        <event-group description="" sid="112506667375353" title="Main Functions">
+            <sub-events>
+                <event-block sid="984673966365192">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="645496522636969" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="791840663226534" type="AJAX">
+                            <param id="0" name="Tag">&quot;dialogues&quot;</param>
+                            <param id="1" name="URL">&quot;dialogues.xml&quot;</param>
+                        </action>
+                        <action id="4" name="Load" sid="228082805333016" type="ProjectVariables">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2dictionary&quot;&quot;:true,&quot;&quot;data&quot;&quot;:{&quot;&quot;line_count&quot;&quot;:0,&quot;&quot;word&quot;&quot;:&quot;&quot; &quot;&quot;,&quot;&quot;skip_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;end_dialogue_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_loaded&quot;&quot;:0,&quot;&quot;end_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;begin_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_running&quot;&quot;:0,&quot;&quot;name&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_next&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_faster&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_up&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_down&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_skip&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;line_type&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;next_line_id&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;box_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;text&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;avatar_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;letter_count&quot;&quot;:0,&quot;&quot;written_letters&quot;&quot;:0,&quot;&quot;displaying&quot;&quot;:0,&quot;&quot;choice_number&quot;&quot;:0,&quot;&quot;cursor_position&quot;&quot;:0,&quot;&quot;typing_sound&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;wait&quot;&quot;:0,&quot;&quot;text_displayed&quot;&quot;:0,&quot;&quot;auto&quot;&quot;:0,&quot;&quot;choice_height&quot;&quot;:0}}&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="271189346466695">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="739344412496697" type="AJAX">
+                            <param id="0" name="Tag">&quot;dialogues&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="958418055162344" type="Dialogues">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="1" name="Set key" sid="193646640106537" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;dialogue_loaded&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="103222553563270" type="System">
+                            <param id="0" name="Object to create">DialogueBox</param>
+                            <param id="1" name="Layer">&quot;Dialog&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">(OriginalWindowHeight/3)*2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="324936072169533" type="DialogueBox">
+                            <param id="0" name="Width">OriginalWindowWidth</param>
+                            <param id="1" name="Height">OriginalWindowHeight/3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="515697930984778" type="System">
+                            <param id="0" name="Object to create">DialogueAvatar</param>
+                            <param id="1" name="Layer">DialogueBox.LayerName</param>
+                            <param id="2" name="X">DialogueBox.ImagePointX(&quot;avatar&quot;)</param>
+                            <param id="3" name="Y">DialogueBox.ImagePointY(&quot;avatar&quot;)</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="534764560455610" type="DialogueAvatar">
+                            <param id="0" name="Width">OriginalWindowWidth/5</param>
+                            <param id="1" name="Height">OriginalWindowHeight/3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="637805853152488" type="System">
+                            <param id="0" name="Object to create">DialogueSpriteFont</param>
+                            <param id="1" name="Layer">DialogueBox.LayerName</param>
+                            <param id="2" name="X">DialogueBox.ImagePointX(&quot;text&quot;)</param>
+                            <param id="3" name="Y">DialogueBox.ImagePointY(&quot;text&quot;)</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="109271363730403" type="DialogueSpriteFont">
+                            <param id="0" name="Width">(OriginalWindowWidth/5)*3.5</param>
+                            <param id="1" name="Height">OriginalWindowHeight/3.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="726649692737286" type="System">
+                            <param id="0" name="Object to create">DialogueCursorMore</param>
+                            <param id="1" name="Layer">DialogueBox.LayerName</param>
+                            <param id="2" name="X">DialogueBox.ImagePointX(&quot;CursorMore&quot;)</param>
+                            <param id="3" name="Y">DialogueBox.ImagePointY(&quot;CursorMore&quot;)</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="771664496985139" type="System">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993925411624220">
+                    <conditions>
+                        <condition id="0" name="On function" sid="780062235167274" type="Function">
+                            <param id="0" name="Name">&quot;change_avatar_animation&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="613207679829131" type="DialogueAvatar">
+                            <param id="0" name="Animation">Function.Param(0)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Initiate a dialogue, use the dialogue id as a parameter</comment>
+                <event-block sid="451516923042030">
+                    <conditions>
+                        <condition id="0" name="On function" sid="175631688854809" type="Function">
+                            <param id="0" name="Name">&quot;dialogue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="922832331071359" type="Function">
+                            <param id="0" name="Name">&quot;SubPause&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="dialogue_box_project_prefix" sid="598659722751601" static="0" type="text"></variable>
+                        <event-block sid="952576284647642">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="602937624072324" type="System">
+                                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="562258309429325" type="DialogueCursorMore">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="1" name="Set key" sid="802348398958855" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set key" sid="468009838889450" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;name&quot;</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="143452522273999" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_prefix</param>
+                                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;name&quot;) &amp;&quot;&apos;]/@&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="975159539140367" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;key_next&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;key_next&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="585092741240679" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;key_faster&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;key_faster&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="294412405204596" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;key_up&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;key_up&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="826558507165734" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;key_down&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;key_down&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="220618242813601" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;key_skip&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;key_skip&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="505702091686239" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;first_line_id&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="189218533284444" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;typing_sound&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;typing_sound&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="873929892584048" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;mouse_enabled&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="297623138330207" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;checking_function&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;checking_function&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="762000857260515" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;skip_function&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(  dialogue_box_project_prefix &amp;&quot;skip_function&quot;)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="308458619306331" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="746994798200607">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="271200740492227" type="System">
+                                            <param id="0" name="First value">ProjectVariables.Get(&quot;checking_function&quot;)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="591687348669628" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                            <param id="1" name="Value">Function.Call(ProjectVariables.Get(&quot;checking_function&quot;))</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="499420613576907" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="928003080110596">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="294748698206122" type="Function">
+                                            <param id="0" name="Name">&quot;process_line&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>go to the next dialogue line or end the dialogue</comment>
+                <event-block sid="911475186964394">
+                    <conditions>
+                        <condition id="0" name="On function" sid="770868822230670" type="Function">
+                            <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="774044333385462" type="DialogueCursorMore">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="480179520801612">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="792058280220157" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;end&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="140869593830781" type="Function">
+                                    <param id="0" name="Name"> ProjectVariables.Get(&quot;end_dialogue_function&quot;)</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="671030534344852" type="Function">
+                                    <param id="0" name="Name">&quot;end_dialogue&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="937795164293197">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="840108510072720" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="821279749904618">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="266213390919688" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;line_type&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;choice&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="297266894688631" type="Dialoguecursor" />
+                                        <action id="-9" name="Destroy" sid="624361865923320" type="DialogueSpriteFontChoice" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="257521160686679">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="770444973071690" type="System">
+                                            <param id="0" name="First value">ProjectVariables.Get(&quot;checking_function&quot;)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="762061145062156" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                            <param id="1" name="Value">Function.Call(ProjectVariables.Get(&quot;checking_function&quot;))</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="858705461194536" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="949266755963912">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="266354587067492" type="Function">
+                                            <param id="0" name="Name">&quot;process_line&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="329303954862139">
+                    <conditions>
+                        <condition id="0" name="On function" sid="584993761557700" type="Function">
+                            <param id="0" name="Name">&quot;end_dialogue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="933870840330791" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="100697917390560" type="System">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="312250731716351" type="DialogueSpriteFontChoice" />
+                        <action id="-9" name="Destroy" sid="478661987282996" type="Dialoguecursor" />
+                        <action id="0" name="Call function" sid="513993692210828" type="Function">
+                            <param id="0" name="Name">&quot;SubPause&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="550567041687295">
+                    <conditions>
+                        <condition id="0" name="On function" sid="687702932725406" type="Function">
+                            <param id="0" name="Name">&quot;add_new_lines&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="dialogue_box_project_last_space_index" sid="755430431377160" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_current_index" sid="963765549593344" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_text_width" sid="677952920556628" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_line_width" sid="631289252239797" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_l" sid="418236159839658" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_c" sid="850443695377424" static="0" type="text"></variable>
+                        <event-block sid="539829895888035">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="760337444548676" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_text_width</param>
+                                    <param id="1" name="Value">DialogueSpriteFont.Width</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="526680552190094" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_l</param>
+                                    <param id="1" name="Value">len(ProjectVariables.Get(&quot;text&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="403687444242492">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="238702874657481" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="592912215606187" type="System">
+                                            <param id="0" name="Variable">dialogue_box_project_current_index</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">dialogue_box_project_l</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="821619824478489" type="System">
+                                            <param id="0" name="Variable">dialogue_box_project_c</param>
+                                            <param id="1" name="Value">mid(ProjectVariables.Get(&quot;text&quot;),dialogue_box_project_current_index,1)</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="127813455406673" type="System">
+                                            <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                            <param id="1" name="Value">DialogueSpriteFont.CharacterWidth(dialogue_box_project_c) * DialogueSpriteFont.CharacterScale</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="117873370310737">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="675911205944467" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_c</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot; &quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="929011905655122" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_last_space_index</param>
+                                                    <param id="1" name="Value">dialogue_box_project_current_index</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="341127768558179">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="536875929900949" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">dialogue_box_project_text_width</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="432762915335281" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="1" name="Set key" sid="432682106499374" type="ProjectVariables">
+                                                    <param id="0" name="Key">&quot;text&quot;</param>
+                                                    <param id="1" name="Value">left(ProjectVariables.Get(&quot;text&quot;), dialogue_box_project_last_space_index) &amp; newline &amp; right(ProjectVariables.Get(&quot;text&quot;),dialogue_box_project_l - dialogue_box_project_last_space_index - 1)</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="312124606480000" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_current_index</param>
+                                                    <param id="1" name="Value">dialogue_box_project_last_space_index</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="132720820496856">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="745674056925264" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_current_index</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="440705803964665">
+                    <conditions>
+                        <condition id="0" name="On function" sid="693461401569611" type="Function">
+                            <param id="0" name="Name">&quot;Count_lines&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="dialogue_box_last_space_index" sid="415243106248902" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_current_index" sid="699560366483998" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_text" sid="517516006930704" static="0" type="text"></variable>
+                        <variable constant="0" name="dialogue_box_project_text_width" sid="184682446106392" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_line_width" sid="459545788098453" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_l" sid="827598389045306" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_c" sid="477695060495896" static="0" type="text"></variable>
+                        <event-block sid="463874866156786">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="155182770013163" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_text_width</param>
+                                    <param id="1" name="Value">DialogueSpriteFont.Width</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="114916119382000" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_text</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="912727674088807" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_l</param>
+                                    <param id="1" name="Value">len(dialogue_box_project_text)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="891791884288839" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_count&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="511227405007060">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="528769971806758" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="632481510431547" type="System">
+                                            <param id="0" name="Variable">dialogue_box_current_index</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">dialogue_box_project_l</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="989392966002960" type="System">
+                                            <param id="0" name="Variable">dialogue_box_project_c</param>
+                                            <param id="1" name="Value">mid(dialogue_box_project_text,dialogue_box_current_index,1)</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="791589340358645" type="System">
+                                            <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                            <param id="1" name="Value">DialogueSpriteFont.CharacterWidth(dialogue_box_project_c) * DialogueSpriteFont.CharacterScale</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="828299365370676">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="121904722049017" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_c</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot; &quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="140244579835159" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_last_space_index</param>
+                                                    <param id="1" name="Value">dialogue_box_current_index</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="703902968412077">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="267688939629309" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_c</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">newline</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="337180334022317" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="1" name="Set key" sid="718480123419696" type="ProjectVariables">
+                                                    <param id="0" name="Key">&quot;line_count&quot;</param>
+                                                    <param id="1" name="Value">ProjectVariables.Get(&quot;line_count&quot;) + 1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="406890201222134">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="397476471930470" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">dialogue_box_project_text_width</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="253415666669287" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_project_line_width</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="1" name="Set key" sid="455910147124918" type="ProjectVariables">
+                                                    <param id="0" name="Key">&quot;line_count&quot;</param>
+                                                    <param id="1" name="Value">ProjectVariables.Get(&quot;line_count&quot;) + 1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="964269505229429" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_current_index</param>
+                                                    <param id="1" name="Value">dialogue_box_last_space_index</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="335398280117575">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="920541469385281" type="System">
+                                                    <param id="0" name="Variable">dialogue_box_current_index</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="302200877418643">
+                    <conditions>
+                        <condition id="0" name="On function" sid="874542922349493" type="Function">
+                            <param id="0" name="Name">&quot;process_special_commands&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>replace the variables name by their value in the dictionnary</comment>
+                        <variable constant="0" name="dialogue_box_project_variable_name" sid="472235585527977" static="0" type="text"></variable>
+                        <event-block sid="910731217754336">
+                            <conditions>
+                                <condition id="-23" name="While" sid="333771725336236" type="System" />
+                                <condition id="-8" name="Compare two values" sid="978200497923075" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\{\D\w*\}&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="911620727946053" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_variable_name</param>
+                                    <param id="1" name="Value">RegexMatchAt(ProjectVariables.Get(&quot;text&quot;),&quot;\{\D\w*\}&quot;,&quot;&quot;,0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="630887837058458" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_variable_name</param>
+                                    <param id="1" name="Value">mid(dialogue_box_project_variable_name,1,len(dialogue_box_project_variable_name)-2)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="211608607265613" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;text&quot;</param>
+                                    <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\{&quot; &amp; dialogue_box_project_variable_name &amp; &quot;\}&quot;,&quot;&quot;,YourVariables.Get(dialogue_box_project_variable_name))</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="712457439418376" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="dialogue_box_project_command_count" sid="438343028910651" static="0" type="number">0</variable>
+                        <variable constant="0" name="dialogue_box_project_command_name" sid="657759812732493" static="0" type="text"></variable>
+                        <event-block sid="735263066657889">
+                            <conditions>
+                                <condition id="-23" name="While" sid="390802334253982" type="System" />
+                                <condition id="-8" name="Compare two values" sid="478016418535844" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="493688245653038" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_command_name</param>
+                                    <param id="1" name="Value">RegexMatchAt(ProjectVariables.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;,0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="438544074036077" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_command_name</param>
+                                    <param id="1" name="Value">mid(dialogue_box_project_command_name,1,len(dialogue_box_project_command_name)-2)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="747836653434949" type="SpecialCommands">
+                                    <param id="0" name="X">dialogue_box_project_command_count</param>
+                                    <param id="1" name="Value">dialogue_box_project_command_name</param>
+                                </action>
+                                <action id="1" name="Set key" sid="934551387693701" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;text&quot;</param>
+                                    <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;,&quot;+&quot;)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="335978969784380" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_command_count</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="553068405775396" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="828056968789763">
+                    <conditions>
+                        <condition id="0" name="On function" sid="625613711010024" type="Function">
+                            <param id="0" name="Name">&quot;process_line&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="dialogue_box_project_prefix2" sid="627873059370594" static="0" type="text"></variable>
+                        <event-block sid="321394489656051">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="135659415422724" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_prefix2</param>
+                                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="496328550054747" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;box_animation&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@box_animation&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="265728044975584" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;avatar_animation&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@avatar_animation&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="431665510994359" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@type&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="249033556326738" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;begin_function&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@begin_function&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="213104678219023" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;end_function&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@end_function&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="676258634783522" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;end_dialogue_function&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@end_dialogue_function&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="526587942532760" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;checking_function&quot;</param>
+                                    <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@checking_function&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="938507148026387" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;auto&quot;</param>
+                                    <param id="1" name="Value">int(Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@auto&quot;))</param>
+                                </action>
+                                <action id="1" name="Set key" sid="530182280616097" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;text&quot;</param>
+                                    <param id="1" name="Value">trim(Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;text()&quot;))</param>
+                                </action>
+                                <action id="1" name="Set key" sid="729976662809378" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;choice_number&quot;</param>
+                                    <param id="1" name="Value">int(Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@choice_number&quot;))</param>
+                                </action>
+                                <action id="1" name="Set key" sid="880272780232232" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;command_index&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="1" name="Set key" sid="499982258394729" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_paused&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="398626443999612" type="Function">
+                                    <param id="0" name="Name">&quot;process_special_commands&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action disabled="1" id="4" name="Set animation" sid="420004827115583" type="DialogueAvatar">
+                                    <param id="0" name="Animation">ProjectVariables.Get(&quot;avatar_animation&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="458454449571486" type="Function">
+                                    <param id="0" name="Name">&quot;change_avatar_animation&quot;</param>
+                                    <param id="1" name="Parameter {n}">ProjectVariables.Get(&quot;avatar_animation&quot;)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="486622542604957" type="DialogueBox">
+                                    <param id="0" name="Animation">ProjectVariables.Get(&quot;box_animation&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="917505455328425" type="DialogueSpriteFont">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="2" name="Set scale" sid="948254893178155" type="DialogueSpriteFont">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="439081093764103" type="Function">
+                                    <param id="0" name="Name">ProjectVariables.Get(&quot;begin_function&quot;)</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="471465218221460" type="Function">
+                                    <param id="0" name="Name">&quot;Count_lines&quot;</param>
+                                    <param id="1" name="Parameter {n}">ProjectVariables.Get(&quot;text&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="242292082608599">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="757284053873480" type="System">
+                                            <param id="0" name="First value">(DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">DialogueSpriteFont.Height</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="625328636850851" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="2" name="Set scale" sid="952292949868222" type="DialogueSpriteFont">
+                                            <param id="0" name="Scale">DialogueSpriteFont.Height / (DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="819380470537236">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="376230018344206" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="159101770445681" type="Function">
+                                            <param id="0" name="Name">&quot;add_new_lines&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="309975086098497">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="944929035511802" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;line_type&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;wait&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="617042736666588" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;wait&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="dialogue_box_project_choice_height" sid="233724177378808" static="0" type="number">0</variable>
+                        <event-block sid="489604315846809">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="729632733650953" type="System">
+                                    <param id="0" name="First value">(DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">DialogueSpriteFont.Height</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="857075021265650" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set scale" sid="595784950481229" type="DialogueSpriteFont">
+                                    <param id="0" name="Scale">DialogueSpriteFont.Height / (DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="116350817749139">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="594453449431230" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="478560098832505" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;cursor_position&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="803856337619576" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_choice_height</param>
+                                    <param id="1" name="Value">DialogueSpriteFont.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="493604706069540" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;choice_height&quot;</param>
+                                    <param id="1" name="Value">DialogueSpriteFont.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="204312381857543">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="107010620931323" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="720931342313048" type="System">
+                                            <param id="0" name="Object to create">Dialoguecursor</param>
+                                            <param id="1" name="Layer">DialogueBox.LayerName</param>
+                                            <param id="2" name="X">DialogueSpriteFont.X - 20</param>
+                                            <param id="3" name="Y">DialogueSpriteFont.Y + 10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="713074346188359">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="775750002001363" type="System">
+                                            <param id="0" name="Name">&quot;&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="341441742032562" type="System">
+                                            <param id="0" name="Variable">dialogue_box_project_prefix2</param>
+                                            <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="256110322036147" type="Function">
+                                            <param id="0" name="Name">&quot;Count_lines&quot;</param>
+                                            <param id="1" name="Parameter {n}">trim(Dialogues.StringValue( dialogue_box_project_prefix2 &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="888104246546643" type="System">
+                                            <param id="0" name="Object to create">DialogueSpriteFontChoice</param>
+                                            <param id="1" name="Layer">DialogueBox.LayerName</param>
+                                            <param id="2" name="X">DialogueSpriteFont.X</param>
+                                            <param id="3" name="Y">DialogueSpriteFont.Y + (loopindex-1) * ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                        </action>
+                                        <action id="-27" name="Set effect enabled" sid="477610809239382" type="DialogueSpriteFontChoice">
+                                            <param id="0" name="Mode">0</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="739944106195169" type="DialogueSpriteFontChoice">
+                                            <param id="0" name="Text">trim(Dialogues.StringValue( dialogue_box_project_prefix2 &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="109178402263938" type="DialogueSpriteFontChoice">
+                                            <param id="0" name="Width">DialogueSpriteFont.Width</param>
+                                            <param id="1" name="Height">ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                        </action>
+                                        <action id="10" name="Insert" sid="454179290653670" type="Choice_next">
+                                            <param id="0" name="Value"> Dialogues.StringValue( dialogue_box_project_prefix2 &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/@id_next&quot;) </param>
+                                            <param id="1" name="Index">loopindex - 1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="492471036248497" type="DialogueSpriteFontChoice">
+                                            <param id="0" name="Instance variable">number</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="256966289044283">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="825600030833809" type="System">
+                                                    <param id="0" name="First value">(DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="2" name="Set scale" sid="938774832418838" type="DialogueSpriteFontChoice">
+                                                    <param id="0" name="Scale">DialogueSpriteFontChoice.Height / (DialogueSpriteFontChoice.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="385903160542432">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set key" sid="663661832942179" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                            <param id="1" name="Value">Choice_next.At(0)</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="417643933133442" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="167114254518111">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="890101954551819" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="587640264006274" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Value"> Dialogues.StringValue( &quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/@id_next&quot;)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="970859404248666" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="1" name="Set key" sid="132658736446600" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;displaying&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set key" sid="608285955110712" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;letter_count&quot;</param>
+                                    <param id="1" name="Value">len(ProjectVariables.Get(&quot;text&quot;))</param>
+                                </action>
+                                <action id="1" name="Set key" sid="866135305522596" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;written_letters&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="7" name="Play (by name)" sid="957895539535413" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">ProjectVariables.Get(&quot;typing_sound&quot;)</param>
+                                    <param id="3" name="Loop">1</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;typing&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="930394373962578" title="Midline Functions">
+            <sub-events>
+                <event-block sid="719605292403872">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="689981968811883" type="DialogueSpriteFont">
+                            <param id="0" name="Tag">&quot;command_wait&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="731735862927998" type="Function">
+                            <param id="0" name="Name">&quot;resume_line&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="929108809508524">
+                    <conditions>
+                        <condition id="0" name="On function" sid="576765021658568" type="Function">
+                            <param id="0" name="Name">&quot;resume_line&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="368656458640300" type="Audio">
+                            <param id="0" name="Audio file">typing</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;typing&quot;</param>
+                        </action>
+                        <action id="1" name="Set key" sid="178551677830260" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="143264284185129" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;line_paused&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307453970943292">
+                    <conditions>
+                        <condition id="0" name="On function" sid="983631211945202" type="Function">
+                            <param id="0" name="Name">&quot;command_wait&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="1" name="Set looping" sid="807369361599753" type="Audio">
+                            <param id="0" name="Tag">&quot;typing&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="742489842884240" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="351376883705639" type="DialogueSpriteFont">
+                            <param id="0" name="Duration">0.3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;command_wait&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="166545406299954">
+                    <conditions>
+                        <condition id="0" name="On function" sid="889593745361584" type="Function">
+                            <param id="0" name="Name">&quot;command_pause&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="1" name="Set looping" sid="231612116671815" type="Audio">
+                            <param id="0" name="Tag">&quot;typing&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="189330837538215" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;line_paused&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="427239258483195" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="326229789478680" title="Key handling">
+            <sub-events>
+                <event-group description="" sid="834822239560847" title="Keyboard Events">
+                    <sub-events>
+                        <comment>Display the text immediatly </comment>
+                        <event-block sid="975833178127867">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="891663947905524" type="Keyboard">
+                                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_faster&quot;))</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="432996078584839" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="400228186223739" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;displaying&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="872013063251659">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="208763366971446" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="575170978626827" type="System">
+                                            <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="649124729815530" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;text&quot;</param>
+                                            <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;,&quot;&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="349414788030739">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set key" sid="626008899169531" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;written_letters&quot;</param>
+                                            <param id="1" name="Value">ProjectVariables.Get(&quot;letter_count&quot;)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="820275730335377" type="DialogueSpriteFont">
+                                            <param id="0" name="Text">DialogueSpriteFont.Text &amp; ProjectVariables.Get(&quot;text&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>On a choice line, move the cursor down</comment>
+                        <event-block sid="614461149902037">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="598917005688166" type="Keyboard">
+                                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_down&quot;))</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="128063624156871" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="737303208569372" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="908972224593073" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;cursor_position&quot;</param>
+                                    <param id="1" name="Value">min(ProjectVariables.Get(&quot;choice_number&quot;),ProjectVariables.Get(&quot;cursor_position&quot;) + 1)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="243616618139658" type="Dialoguecursor">
+                                    <param id="0" name="Y">DialogueSpriteFont.Y + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="898464314316902" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Value">Choice_next.At(ProjectVariables.Get(&quot;cursor_position&quot; )-1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Skip all the dialogue, only use if nothing happens during the dialogue</comment>
+                        <event-block sid="155816758529461">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="654655249240989" type="Keyboard">
+                                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_skip&quot;))</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="606554938754811" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="780109546761932" type="Function">
+                                    <param id="0" name="Name">&quot;end_dialogue&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set key" sid="294444762127237" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;displaying&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="6" name="Stop" sid="131457488815064" type="Audio">
+                                    <param id="0" name="Tag">&quot;typing&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="333963980837296" type="Function">
+                                    <param id="0" name="Name">ProjectVariables.Get(&quot;skip_function&quot;)</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>On a choice line, move the cursor up</comment>
+                        <event-block sid="508161532681749">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="452834105812516" type="Keyboard">
+                                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_up&quot;))</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="484353150284514" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="990611247207106" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="932003860074792" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;cursor_position&quot;</param>
+                                    <param id="1" name="Value">max(1,ProjectVariables.Get(&quot;cursor_position&quot;) - 1)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="510117737182093" type="Dialoguecursor">
+                                    <param id="0" name="Y">DialogueSpriteFont.Y + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                                </action>
+                                <action id="1" name="Set key" sid="996817645349798" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Value">Choice_next.At(ProjectVariables.Get(&quot;cursor_position&quot;)-1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Go to the next text line</comment>
+                        <event-block sid="576834073361673">
+                            <conditions>
+                                <condition id="4" name="On key code pressed" sid="185416447291591" type="Keyboard">
+                                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_next&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="664587550359496">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="811814412816459" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;line_paused&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="274397928651640" type="Function">
+                                            <param id="0" name="Name">&quot;resume_line&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="889571492994867">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="216212362320467" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="897181098511880" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;wait&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="445235731019551" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="185717517576179" type="Function">
+                                            <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="209490988206957">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="686707114678940" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="874232056860550" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="459246045175803" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;wait&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="710613796278320" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;auto&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="146145849699832" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="416258698396821" type="Function">
+                                    <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="685836770685589" title="Mouse Events">
+                    <sub-events>
+                        <event-block sid="361693156830872">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="866417175626520" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                                <condition id="-20" inverted="1" name="Is on mobile device" sid="204857120797232" type="System" />
+                                <condition id="0" name="Compare value" sid="657985725742554" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="931834924501073" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="564641380587524">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="323523701609559" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;line_paused&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="128049931022318" type="Function">
+                                            <param id="0" name="Name">&quot;resume_line&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="250407058192203">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="829782142618853" type="System" />
+                                        <condition id="0" name="Compare value" sid="323524661808608" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="380706937027906" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;wait&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="350621935209350" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="362179721347946" type="Function">
+                                            <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="589795986287951">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="577716255284374" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">DialogueSpriteFontChoice</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="620124624894026" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="902128232858858" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Value">Choice_next.At(DialogueSpriteFontChoice.number-1)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="458760806187654" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="755737400450223" type="Function">
+                                    <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="974258632212165">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="427223969336398" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="119287375604036">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="433266609355339" type="System">
+                                            <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="912145984710246">
+                                            <conditions>
+                                                <condition id="7" name="Cursor is over object" sid="773697923360038" type="Mouse">
+                                                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="146528926727070" type="DialogueSpriteFontChoice">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="194150465566052">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="259549403286327" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="653933043287370" type="DialogueSpriteFontChoice">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="325500451471630" title="Touch Events">
+                    <sub-events>
+                        <event-block sid="218813633508387">
+                            <conditions>
+                                <condition id="14" name="On tap" sid="404283587666118" type="Touch" />
+                                <condition id="-20" name="Is on mobile device" sid="592346554370566" type="System" />
+                                <condition id="0" name="Compare value" sid="184887839935982" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="406444455225782">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="448878750291568" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;line_paused&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="239385545543397" type="Function">
+                                            <param id="0" name="Name">&quot;resume_line&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="447255964955944">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="352393862633429" type="System" />
+                                        <condition id="0" name="Compare value" sid="230350786151809" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="439210072819355" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;wait&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="775395234766784" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="480365398970463" type="Function">
+                                            <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="454039866046704">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="642841080537043" type="System" />
+                                        <condition id="0" name="Compare value" sid="238362036291281" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="399788524932339" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;dialogue_running&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="551765439067264">
+                                            <conditions>
+                                                <condition id="-23" name="While" sid="145382348053645" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="404780815733365" type="System">
+                                                    <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set key" sid="170125096406954" type="ProjectVariables">
+                                                    <param id="0" name="Key">&quot;text&quot;</param>
+                                                    <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;,&quot;&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="803508983784097">
+                                            <conditions />
+                                            <actions>
+                                                <action id="1" name="Set key" sid="900776839945937" type="ProjectVariables">
+                                                    <param id="0" name="Key">&quot;written_letters&quot;</param>
+                                                    <param id="1" name="Value">ProjectVariables.Get(&quot;letter_count&quot;)</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="768294917612830" type="DialogueSpriteFont">
+                                                    <param id="0" name="Text">DialogueSpriteFont.Text &amp; ProjectVariables.Get(&quot;text&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="402860890651123">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="667182067720417" type="Touch">
+                                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                                </condition>
+                                <condition id="-20" name="Is on mobile device" sid="688021900850668" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="118186819605069">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="542615117039829" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;cursor_position&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">DialogueSpriteFontChoice.number</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="693518206875234" type="Function">
+                                            <param id="0" name="Name">&quot;go_to_next&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="643765313937240">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="925775184878013" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="538433974518219" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;cursor_position&quot;</param>
+                                            <param id="1" name="Value">DialogueSpriteFontChoice.number</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="225053314988091" type="Dialoguecursor">
+                                            <param id="0" name="Y">DialogueSpriteFont.Y + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="665375084314555" type="ProjectVariables">
+                                            <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                            <param id="1" name="Value">Choice_next.At(ProjectVariables.Get(&quot;cursor_position&quot; )-1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="740838680068579" title="Typewriting Functions">
+            <sub-events>
+                <comment>v2 - remove Browser object so &apos;On created&apos; can be copied with no other dependencies.</comment>
+                <comment>When the font is created, set up it&apos;s width characteristics.</comment>
+                <comment>It is recommended that the space character not be included in the spritefont sheet, (it can also skew the results), so set it&apos;s width manually.</comment>
+                <event-block sid="370696140078153">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="680151847941332" type="DialogueSpriteFont" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="487441059838236" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16],[19]],[[&quot;&quot;Iil.,;:!&apos;|&quot;&quot;],[&quot;&quot;`&quot;&quot;],[&quot;&quot;j()[]&quot;&quot;],[&quot;&quot;rt1\&quot;&quot;\\/°&quot;&quot;],[&quot;&quot;f-&quot;&quot;],[&quot;&quot;*&quot;&quot;],[&quot;&quot;Jhknu&quot;&quot;],[&quot;&quot;Lbcdgpqsvxyz7+=&lt;&gt;&quot;&quot;],[&quot;&quot;Faeo02345689?~#$£&quot;&quot;],[&quot;&quot;BEHNPSTUZ€&quot;&quot;],[&quot;&quot;CDK_&amp;&quot;&quot;],[&quot;&quot;AGORVXY&quot;&quot;],[&quot;&quot;MQmw&quot;&quot;],[&quot;&quot;%&quot;&quot;],[&quot;&quot;W@&quot;&quot;]]]}&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="413905934461675" type="DialogueSpriteFont">
+                            <param id="0" name="Character">&quot; &quot;</param>
+                            <param id="1" name="Width">9</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Loop through the array and set the widths.</comment>
+                        <event-block sid="832680204711184">
+                            <conditions>
+                                <condition id="-10" name="For" sid="407189516555692" type="System">
+                                    <param id="0" name="Name">&quot;y&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">SpriteFontImporter.Height-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set character width" sid="742714487843079" type="DialogueSpriteFont">
+                                    <param id="0" name="Character">SpriteFontImporter.At(1, loopindex(&quot;y&quot;))</param>
+                                    <param id="1" name="Width">SpriteFontImporter.At(0, loopindex(&quot;y&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="930019389496784">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="952372533851808" type="DialogueSpriteFontChoice" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="210187863554753" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16],[19]],[[&quot;&quot;Iil.,;:!&apos;|&quot;&quot;],[&quot;&quot;`&quot;&quot;],[&quot;&quot;j()[]&quot;&quot;],[&quot;&quot;rt1\&quot;&quot;\\/°&quot;&quot;],[&quot;&quot;f-&quot;&quot;],[&quot;&quot;*&quot;&quot;],[&quot;&quot;Jhknu&quot;&quot;],[&quot;&quot;Lbcdgpqsvxyz7+=&lt;&gt;&quot;&quot;],[&quot;&quot;Faeo02345689?~#$£&quot;&quot;],[&quot;&quot;BEHNPSTUZ€&quot;&quot;],[&quot;&quot;CDK_&amp;&quot;&quot;],[&quot;&quot;AGORVXY&quot;&quot;],[&quot;&quot;MQmw&quot;&quot;],[&quot;&quot;%&quot;&quot;],[&quot;&quot;W@&quot;&quot;]]]}&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="294459375682195" type="DialogueSpriteFontChoice">
+                            <param id="0" name="Character">&quot; &quot;</param>
+                            <param id="1" name="Width">9</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Loop through the array and set the widths.</comment>
+                        <event-block sid="804587776231532">
+                            <conditions>
+                                <condition id="-10" name="For" sid="586080876430628" type="System">
+                                    <param id="0" name="Name">&quot;y&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">SpriteFontImporter.Height-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set character width" sid="489001851136589" type="DialogueSpriteFontChoice">
+                                    <param id="0" name="Character">SpriteFontImporter.At(1, loopindex(&quot;y&quot;))</param>
+                                    <param id="1" name="Width">SpriteFontImporter.At(0, loopindex(&quot;y&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="301860580783211">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="243567953279959" type="System">
+                            <param id="0" name="First value">ProjectVariables.Get(&quot;written_letters&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">ProjectVariables.Get(&quot;letter_count&quot;)</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="678597523071358" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="253247120133577" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="317275694297212" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="776873607706777" type="Function">
+                            <param id="0" name="Name">ProjectVariables.Get(&quot;end_function&quot;)</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="1" name="Set looping" sid="767638072131630" type="Audio">
+                            <param id="0" name="Tag">&quot;typing&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="401036629404383" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;text_displayed&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="207189171125006">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare value" sid="954127592110809" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;next_line_id&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;end&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="480920131412160" type="DialogueCursorMore">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="0" name="dialogue_box_project_c" sid="540366278271935" static="0" type="text"></variable>
+                <event-block sid="260411933722287">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="788217926312949" type="System">
+                            <param id="0" name="Interval (seconds)">0.03</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="690631279711750" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;displaying&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="528414840740221" type="System">
+                            <param id="0" name="Variable">dialogue_box_project_c</param>
+                            <param id="1" name="Value">left(ProjectVariables.Get(&quot;text&quot;),1)</param>
+                        </action>
+                        <action id="1" name="Set key" sid="858545464654907" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;text&quot;</param>
+                            <param id="1" name="Value">right(ProjectVariables.Get(&quot;text&quot;),len(ProjectVariables.Get(&quot;text&quot;)) - 1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="170204492347113">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="657018287560009" type="System">
+                                    <param id="0" name="Variable">dialogue_box_project_c</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;+&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="589130086226230" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;written_letters&quot;</param>
+                                    <param id="1" name="Value">ProjectVariables.Get(&quot;written_letters&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="134491107055857" type="Function">
+                                    <param id="0" name="Name">&quot;command_&quot; &amp; SpecialCommands.At(ProjectVariables.Get(&quot;command_index&quot;))</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set key" sid="696048793864398" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;command_index&quot;</param>
+                                    <param id="1" name="Value">ProjectVariables.Get(&quot;command_index&quot;) + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="848975722156454">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="379286051803397" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="109178041509996" type="DialogueSpriteFont">
+                                    <param id="0" name="Text">DialogueSpriteFont.Text &amp; dialogue_box_project_c</param>
+                                </action>
+                                <action id="1" name="Set key" sid="831659792714702" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;written_letters&quot;</param>
+                                    <param id="1" name="Value">ProjectVariables.Get(&quot;written_letters&quot;) + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="778392705686044" title="NPC">
+            <sub-events>
+                <event-block sid="379661079758233">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="488378133640979" type="PlayerCoreBox">
+                            <param id="0" name="Object">Family_NPC</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="489953445290255" type="Function">
+                            <param id="0" name="Name">&quot;dialogue&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_NPC.Dialog</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="349311652309462">
+            <conditions>
+                <condition id="0" name="On function" sid="349225662412500" type="Function">
+                    <param id="0" name="Name">&quot;SubPause&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Set object time scale" sid="826344650898492" type="System">
+                    <param id="0" name="Object">Family_Impact</param>
+                    <param id="1" name="Time scale">int(Function.Param(0))</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="569323104934800" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Time scale">int(Function.Param(0))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
