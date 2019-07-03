@@ -14,6 +14,7 @@
         <include>Battle</include>
         <include>Spriter_Animation</include>
         <include>HUD</include>
+        <include>DialogueEvents</include>
         <comment>This function loads the last level in this variable, useful for &quot;try again?&quot; Option</comment>
         <event-block sid="997569491700789">
             <conditions>
