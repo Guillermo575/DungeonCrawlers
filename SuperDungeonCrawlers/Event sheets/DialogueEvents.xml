@@ -95,12 +95,7 @@
                             <param id="0" name="Name">&quot;dialogue&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="922832331071359" type="Function">
-                            <param id="0" name="Name">&quot;SubPause&quot;</param>
-                            <param id="1" name="Parameter {n}">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <variable constant="0" name="dialogue_box_project_prefix" sid="598659722751601" static="0" type="text"></variable>
                         <event-block sid="952576284647642">
@@ -307,10 +302,6 @@
                         </action>
                         <action id="-9" name="Destroy" sid="312250731716351" type="DialogueSpriteFontChoice" />
                         <action id="-9" name="Destroy" sid="478661987282996" type="Dialoguecursor" />
-                        <action id="0" name="Call function" sid="513993692210828" type="Function">
-                            <param id="0" name="Name">&quot;SubPause&quot;</param>
-                            <param id="1" name="Parameter {n}">1</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="550567041687295">
@@ -1717,20 +1708,45 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="349311652309462">
+        <event-block sid="107143500929517">
             <conditions>
-                <condition id="0" name="On function" sid="349225662412500" type="Function">
-                    <param id="0" name="Name">&quot;SubPause&quot;</param>
+                <condition id="-9" name="Layer is visible" sid="616707783488253" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-14" name="Set object time scale" sid="826344650898492" type="System">
+                <action id="-14" name="Set object time scale" sid="175269999661628" type="System">
                     <param id="0" name="Object">Family_Impact</param>
-                    <param id="1" name="Time scale">int(Function.Param(0))</param>
+                    <param id="1" name="Time scale">0</param>
                 </action>
-                <action id="-14" name="Set object time scale" sid="569323104934800" type="System">
+                <action id="-14" name="Set object time scale" sid="506595213602392" type="System">
                     <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Time scale">int(Function.Param(0))</param>
+                    <param id="1" name="Time scale">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="655706601099055" type="System">
+                    <param id="0" name="Object">Family_Objects</param>
+                    <param id="1" name="Time scale">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="793570932712113">
+            <conditions>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="736223861565621" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Set object time scale" sid="479917579610320" type="System">
+                    <param id="0" name="Object">Family_Impact</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="666573619319465" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="418229857158949" type="System">
+                    <param id="0" name="Object">Family_Objects</param>
+                    <param id="1" name="Time scale">1</param>
                 </action>
             </actions>
         </event-block>

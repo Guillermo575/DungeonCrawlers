@@ -371,7 +371,7 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" sid="457387940743850" type="Text_Button">
-                            <param id="0" name="Text">Family_Pressed.Message</param>
+                            <param id="0" name="Text">&quot;Take&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -457,7 +457,46 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" sid="534669932273198" type="Text_Button">
-                            <param id="0" name="Text">DoorDungeon.Message</param>
+                            <param id="0" name="Text">&quot;Open&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="667559924197464">
+                    <conditions>
+                        <condition id="-34" name="Pick by evaluate" sid="199615690737046" type="System">
+                            <param id="0" name="Object">Family_NPC</param>
+                            <param id="1" name="Expression">distance(PlayerCoreBox.X,PlayerCoreBox.Y,Family_NPC.X, Family_NPC.Y) &lt;= 30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="721633920631373" type="Family_NPC">
+                            <param id="0" name="Instance variable">Dialog</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="382196236741955" type="System">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="198419058319573" type="System">
+                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="440279949555789" type="System">
+                            <param id="0" name="Object">Text_Button</param>
+                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="743523365011850" type="Text_Button">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="800934439382532" type="Map_Keyboard_Indicator">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="723167416798335" type="Text_Button">
+                            <param id="0" name="Text">&quot;Talk&quot;</param>
                         </action>
                     </actions>
                 </event-block>
