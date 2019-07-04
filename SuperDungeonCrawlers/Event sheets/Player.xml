@@ -113,6 +113,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="686540296437078" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">IsAlive</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="841132481857244" type="System">
+                            <param id="0" name="First value">PlayerCoreBox.dt</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -551,6 +556,31 @@
                         <action id="0" name="Call function" sid="952228399342096" type="Function">
                             <param id="0" name="Name">&quot;NextLevel&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="517287654638723">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="798871945934859" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-34" name="Pick by evaluate" sid="282523532197153" type="System">
+                            <param id="0" name="Object">Family_NPC</param>
+                            <param id="1" name="Expression">distance(PlayerCoreBox.X,PlayerCoreBox.Y,Family_NPC.X, Family_NPC.Y) &lt;= 30</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="402062059056923" type="Family_NPC">
+                            <param id="0" name="Instance variable">Dialog</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="786020029491077" type="System">
+                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="726952971359344" type="Function">
+                            <param id="0" name="Name">&quot;dialogue&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_NPC.Dialog</param>
                         </action>
                     </actions>
                 </event-block>

@@ -10,6 +10,7 @@
     <unique-id>1nkqko0mwmx1r</unique-id>
     <saved-with-version>26900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
@@ -19,10 +20,12 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Medina_Team" id="random_dungeon_maker" version="1.200000048">Random Dungeon Maker</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
@@ -43,6 +46,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="dodge">Dodge</effect>
+        <effect author="Scirra" id="setcolor">Set color</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -253,6 +257,9 @@
             </object-type>
             <object-type name="Touch" sid="320383388716192">
                 <plugin id="Touch" />
+            </object-type>
+            <object-type name="AJAX" sid="332020079325300">
+                <plugin id="AJAX" />
             </object-type>
         </object-folder>
         <object-folder name="MiniMap">
@@ -2242,6 +2249,129 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="DialogueBox">
+            <object-type name="DialogueAvatar" sid="372924118418178">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239286935434197" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DialogueBox" sid="186384071495353">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="642691424205849" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="avatar" x="0.0914286" y="0.491667" />
+                            <image-point name="text" x="0.202857" y="0.125" />
+                            <image-point name="cursor1" x="0.2" y="0.175" />
+                            <image-point name="cursor2" x="0.2" y="0.541667" />
+                            <image-point name="cursor3" x="0.2" y="0.833333" />
+                            <image-point name="CursorMore" x="0.938571" y="0.733333" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Dialoguecursor" sid="945871818414324">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246397164953981" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.16" y="0.06" />
+                                <point x="0.84" y="0.06" />
+                                <point x="0.84" y="0.94" />
+                                <point x="0.16" y="0.94" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DialogueCursorMore" sid="977038300810103">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="183746728543975" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.94" y="0.16" />
+                                <point x="0.94" y="0.84" />
+                                <point x="0.06" y="0.84" />
+                                <point x="0.06" y="0.16" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DialogueSpriteFont" sid="812402647707878">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="251836347571207">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
+            </object-type>
+            <object-type global="1" name="ProjectVariables" sid="440413926196261">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="Dialogues" sid="309332141315499">
+                <plugin id="XML" />
+            </object-type>
+            <object-type global="1" name="YourVariables" sid="887477502728289">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="Choice_next" sid="986644072296470">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="SpriteFontImporter" sid="769687031887712">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="DialogueSpriteFontChoice" sid="140583800650426">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="next_id" sid="460367419495462" type="string" />
+                    <instance-variable name="Y_pos" sid="666137688015197" type="number" />
+                    <instance-variable name="number" sid="802440474852018" type="number" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+            <object-type global="1" name="SpecialCommands" sid="884627065058665">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
         <object-type name="ShadowLight" sid="117205968572142">
             <plugin id="shadowlight" />
             <behaviors>
@@ -2525,11 +2655,20 @@
                 <instance-variable name="TimePerAttackLong" sid="873234226162515" type="number" />
             </instance-variables>
         </family>
+        <family name="Family_NPC" plugin-id="Sprite" sid="756758774751275">
+            <members>
+                <member>EnemyCoreBox</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Dialog" sid="571882647356965" type="string" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="Levels">
             <layout>Dungeon.xml</layout>
             <layout>TrainingRoom.xml</layout>
+            <layout>TrainingRoom2.xml</layout>
             <layout>Boss_Wormula.xml</layout>
             <layout>Boss_Dragonium.xml</layout>
             <layout>Start.xml</layout>
@@ -2551,6 +2690,7 @@
             <event-sheet>Audio.xml</event-sheet>
             <event-sheet>Battle.xml</event-sheet>
             <event-sheet>Spriter_Animation.xml</event-sheet>
+            <event-sheet>DialogueEvents.xml</event-sheet>
         </event-folder>
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>
@@ -2598,6 +2738,7 @@
             </properties>
         </global-instance>
         <global-instance type="Mouse" uid="92" />
+        <global-instance type="AJAX" uid="173" />
     </global-instances>
     <sounds-folder>
         <file name="bow.ogg" />
@@ -2608,6 +2749,8 @@
         <file name="Heart.ogg" />
         <file name="Wormula_Roar.ogg" />
         <file name="Dragonium_Roar.ogg" />
+        <file name="typing.m4a" />
+        <file name="typing.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Dragonium.ogg" />
@@ -2632,5 +2775,6 @@
             <file name="NewProject.scml" />
             <file name="NewProject.scon" />
         </file-folder>
+        <file name="dialogues.xml" />
     </files-folder>
 </c2project>

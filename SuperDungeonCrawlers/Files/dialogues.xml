@@ -1,0 +1,9 @@
+<?xml version='1.0' ?>
+<Dialogues>
+	<Dialogue id='intro' key_next='32' key_faster='88' key_up='38' key_down='40' key_skip='13' first_line_id='0' typing_sound ='typing'>
+		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation=''> Hello Everyone! </TextLine>
+		<TextLine id='1' id_next='2' box_animation='Default' avatar_animation=''> How are you? </TextLine>
+		<TextLine id='2' id_next='end' box_animation='Default' avatar_animation=''> Good Bye! </TextLine>
+	</Dialogue>
+
+</Dialogues>

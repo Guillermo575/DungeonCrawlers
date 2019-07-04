@@ -10,11 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">TrainingRoom</layout>
-        <layout active="1" order="4">Menu_Start</layout>
-        <event-sheet order="1">Battle</event-sheet>
-        <event-sheet order="2">Enemies</event-sheet>
-        <event-sheet order="3">Spriter_Animation</event-sheet>
+        <layout order="0">Menu_Start</layout>
+        <layout active="1" order="1">TrainingRoom2</layout>
+        <event-sheet order="2">DialogueEvents</event-sheet>
+        <event-sheet order="3">Player</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,6 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Family_Tilemaps" />
         <family expanded="0" name="Family_Spriter" />
         <family expanded="0" name="Family_AI" />
+        <family expanded="0" name="Family_NPC" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
@@ -45,13 +45,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Array/" />
         <folder expanded="0" path="object-folder/DungeonMisc/" />
         <folder expanded="0" path="object-folder/Characters/" />
-        <folder expanded="1" path="object-folder/Characters/PlayerParts/" />
+        <folder expanded="0" path="object-folder/Characters/PlayerParts/" />
         <folder expanded="0" path="object-folder/Characters/PlayerParts/Dragonium/" />
         <folder expanded="0" path="object-folder/Characters/PlayerParts/Wormula/" />
-        <folder expanded="1" path="object-folder/Characters/PlayerParts/Humanoid/" />
+        <folder expanded="0" path="object-folder/Characters/PlayerParts/Humanoid/" />
         <folder expanded="0" path="object-folder/Impacts/" />
         <folder expanded="0" path="object-folder/Menu/" />
         <folder expanded="0" path="object-folder/HUDPlayer/" />
+        <folder expanded="0" path="object-folder/DialogueBox/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="layout-folder/Levels/" />
         <folder expanded="0" path="layout-folder/Menu/" />
@@ -65,7 +66,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="file-folder/Tiles/" />
+        <folder expanded="0" path="file-folder/Tiles/" />
         <folder expanded="0" path="file-folder/Spriter/" />
         <folder expanded="1" path="animation-folder/Object_Sword/" />
         <folder expanded="1" path="animation-folder/Object_Axe/" />
@@ -124,6 +125,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HUD_Object_Right/" />
         <folder expanded="1" path="animation-folder/HUD_Object_Container/" />
         <folder expanded="1" path="animation-folder/HUD_Key_Container/" />
+        <folder expanded="1" path="animation-folder/DialogueAvatar/" />
+        <folder expanded="1" path="animation-folder/DialogueBox/" />
+        <folder expanded="1" path="animation-folder/Dialoguecursor/" />
+        <folder expanded="1" path="animation-folder/DialogueCursorMore/" />
         <folder expanded="1" path="animation-folder/PauseContainer/" />
     </folders-expanded>
 </c2uistate>

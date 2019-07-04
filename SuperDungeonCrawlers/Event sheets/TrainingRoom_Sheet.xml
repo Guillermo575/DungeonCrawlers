@@ -40,7 +40,7 @@
                             <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
                             <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="134056023871543" type="EnemyCoreBox">
+                        <action disabled="1" id="0" name="Spawn another object" sid="134056023871543" type="EnemyCoreBox">
                             <param id="0" name="Object">Object_Sword</param>
                             <param id="1" name="Layer">&quot;Characters&quot;</param>
                             <param id="2" name="Image point">1</param>
