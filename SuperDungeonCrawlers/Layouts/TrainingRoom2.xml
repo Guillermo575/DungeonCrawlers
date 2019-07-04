@@ -275,8 +275,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>452.02822876</x>
-                        <y>167.944122314</y>
+                        <x>396.472564697</x>
+                        <y>142.944747925</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -381,8 +381,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>452.013427734</x>
-                        <y>221.570770264</y>
+                        <x>469.374755859</x>
+                        <y>142.405212402</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -421,14 +421,120 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>392.637176514</x>
-                        <y>172.371841431</y>
+                        <x>350.971221924</x>
+                        <y>334.870361328</y>
                         <z>0</z>
                         <width>27</width>
                         <height>13</height>
                         <depth>0</depth>
                         <hotspotX>0.518518507</hotspotX>
                         <hotspotY>0.384615391</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyCoreBox" uid="184">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ActionCommand></ActionCommand>
+                        <ActionObjectUsed>0</ActionObjectUsed>
+                        <ActionStep>0</ActionStep>
+                        <ArmLeft>0</ArmLeft>
+                        <ArmRight>0</ArmRight>
+                        <BonusDamageMult>1</BonusDamageMult>
+                        <HPMax>2</HPMax>
+                        <Hp>2</Hp>
+                        <InvencibleTime>0.5</InvencibleTime>
+                        <Invencible>false</Invencible>
+                        <IsAlive>true</IsAlive>
+                        <LastArmUsed></LastArmUsed>
+                        <LastDirection>Front</LastDirection>
+                        <Name></Name>
+                        <PressButton>false</PressButton>
+                        <PushRecoil>false</PushRecoil>
+                        <TypeRole>Enemy</TypeRole>
+                        <Unstopable>false</Unstopable>
+                        <AIActive>true</AIActive>
+                        <Disperse>false</Disperse>
+                        <TimePerChase>0.25</TimePerChase>
+                        <TimePerAttackShort>2</TimePerAttackShort>
+                        <TimePerAttackLong>1</TimePerAttackLong>
+                        <Dialog></Dialog>
+                        <EID>0</EID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="FC_8Direction">
+                            <properties>
+                                <max-speed>120</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FC_Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>80</max-speed>
+                                <acceleration>800</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>300</rotate-speed>
+                                <rotate-object>No</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FC_Timer" />
+                        <behavior-instance type="FC_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FC_LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FC_Flash" />
+                        <behavior-instance type="FC_Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>341.942657471</x>
+                        <y>334.870361328</y>
+                        <z>0</z>
+                        <width>15</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.533333361</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

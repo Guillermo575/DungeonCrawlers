@@ -375,35 +375,47 @@
                                     <sub-events>
                                         <event-block sid="364105061938510">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="410551833407294" type="System">
-                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
-                                                    <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Second value">50</param>
-                                                </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="709682496755139" type="Family_Objects">
                                                     <param id="0" name="Instance variable">Distance</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Short&quot;</param>
                                                 </condition>
-                                                <condition id="-6" name="Every X seconds" sid="906215385238296" type="System">
-                                                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackShort</param>
-                                                </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="411643057174689" type="Function">
-                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="787272254221373">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="410551833407294" type="System">
+                                                            <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">50</param>
+                                                        </condition>
+                                                        <condition id="-6" name="Every X seconds" sid="906215385238296" type="System">
+                                                            <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackShort</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="411643057174689" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="304941425167388">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="966531472846203" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="788061062125671" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="934229581416582">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="556998890234554" type="System" />
-                                                <condition id="-8" name="Compare two values" sid="902671142756117" type="System">
-                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
-                                                    <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Second value">200</param>
-                                                </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="661347831603711" type="Family_Objects">
                                                     <param id="0" name="Instance variable">Distance</param>
                                                     <param id="1" name="Comparison">0</param>
@@ -413,23 +425,35 @@
                                                     <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackLong</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="984274743599201" type="Function">
-                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="534142647552506">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="690890310135781" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="741279094421294" type="Function">
-                                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="157467046069725">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="902671142756117" type="System">
+                                                            <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">100</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="984274743599201" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="132401797039523">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="235043186095460" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="423564843963692" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="791198539608359">
                                             <conditions>
@@ -470,37 +494,49 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="937789008463172">
+                                        <event-block sid="538607993987593">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="952944092612461" type="System">
-                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
-                                                    <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Second value">50</param>
-                                                </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="767692744351119" type="Family_Objects">
                                                     <param id="0" name="Instance variable">Distance</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Short&quot;</param>
                                                 </condition>
-                                                <condition id="-6" name="Every X seconds" sid="618601693900963" type="System">
-                                                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackShort</param>
-                                                </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="942436954906562" type="Function">
-                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="297118263238504">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="952944092612461" type="System">
+                                                            <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">50</param>
+                                                        </condition>
+                                                        <condition id="-6" name="Every X seconds" sid="618601693900963" type="System">
+                                                            <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackShort</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="942436954906562" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="106418426836261">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="685660461432668" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="958580319331232" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block sid="370710026210582">
+                                        <event-block sid="937789008463172">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="864755161046701" type="System" />
-                                                <condition id="-8" name="Compare two values" sid="636402967872087" type="System">
-                                                    <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
-                                                    <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Second value">200</param>
-                                                </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="486843209917928" type="Family_Objects">
                                                     <param id="0" name="Instance variable">Distance</param>
                                                     <param id="1" name="Comparison">0</param>
@@ -510,23 +546,35 @@
                                                     <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackLong</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="303789768710428" type="Function">
-                                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="754803172755096">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="546310453111035" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="820737137636283" type="Function">
-                                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="191156148828491">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="636402967872087" type="System">
+                                                            <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">100</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="303789768710428" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_Press</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="754803172755096">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="546310453111035" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="820737137636283" type="Function">
+                                                            <param id="0" name="Name">Family_Objects.Function_UnPress</param>
+                                                            <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="624962324761837">
                                             <conditions>
@@ -537,9 +585,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="869581199327140" type="Function">
+                                                <action id="0" name="Call function" sid="290773673723682" type="Function">
                                                     <param id="0" name="Name">Family_Objects.Function_UnPress</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
