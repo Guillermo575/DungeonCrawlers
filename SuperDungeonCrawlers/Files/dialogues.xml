@@ -1,9 +1,17 @@
 <?xml version='1.0' ?>
 <Dialogues>
-	<Dialogue id='intro' key_next='32' key_faster='88' key_up='38' key_down='40' key_skip='13' first_line_id='0' typing_sound ='typing'>
+	<Dialogue id='test_intro' key_next='32' key_faster='88' key_up='38' key_down='40' key_skip='13' first_line_id='0' typing_sound ='typing'>
 		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation=''> Hello Everyone! </TextLine>
-		<TextLine id='1' id_next='2' box_animation='Default' avatar_animation=''> How are you? </TextLine>
-		<TextLine id='2' id_next='end' box_animation='Default' avatar_animation=''> Good Bye! </TextLine>
+		<TextLine id='1' id_next='2' box_animation='' avatar_animation=''> How are you? </TextLine>
+		<TextLine id='2' id_next='end' box_animation='' avatar_animation=''> Good Bye! </TextLine>
 	</Dialogue>
-
+	<Dialogue id='test_choice' key_next='32' key_faster='88' key_up='38' key_down='40' first_line_id='0' typing_sound ='typing'>
+		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation=''> Do you want a fight?! </TextLine>
+		<TextLine id='1' id_next='1' avatar_animation='None' type='choice' choice_number='2'>
+			<Choice id_next='2'> Yes.</Choice>
+			<Choice id_next='3'> No.</Choice>
+		</TextLine>
+		<TextLine id='2' id_next='end' avatar_animation='' begin_function='Activate_AI' > Prepare to DIE!!! </TextLine>
+		<TextLine id='3' id_next='end' box_animation='' avatar_animation=''> Get Lost... </TextLine>
+	</Dialogue>		
 </Dialogues>
