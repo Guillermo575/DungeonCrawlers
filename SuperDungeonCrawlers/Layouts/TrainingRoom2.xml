@@ -393,46 +393,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Object_Wand" uid="179">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Function_Press>Press_Object</Function_Press>
-                        <Function_UnPress>UnPress_Object</Function_UnPress>
-                        <Function_Param>HoldWand</Function_Param>
-                        <Distance>Long</Distance>
-                        <HasAmmo>true</HasAmmo>
-                        <Ammo>30</Ammo>
-                        <Ocuppied>false</Ocuppied>
-                        <Message>Spacebar</Message>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="FO_Pin2">
-                            <properties>
-                                <destroy-when-if-unpined>No</destroy-when-if-unpined>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="FO_Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>350.971221924</x>
-                        <y>334.870361328</y>
-                        <z>0</z>
-                        <width>27</width>
-                        <height>13</height>
-                        <depth>0</depth>
-                        <hotspotX>0.518518507</hotspotX>
-                        <hotspotY>0.384615391</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="EnemyCoreBox" uid="184">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -641,6 +601,66 @@
                         <depth>0</depth>
                         <hotspotX>0.533333361</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Object_Sword" uid="187">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Function_Press>Press_Object</Function_Press>
+                        <Function_UnPress>UnPress_Object</Function_UnPress>
+                        <Function_Param>SweepSword</Function_Param>
+                        <Distance>Short</Distance>
+                        <HasAmmo>false</HasAmmo>
+                        <Ammo>0</Ammo>
+                        <Ocuppied>false</Ocuppied>
+                        <Message>Spacebar</Message>
+                        <Group>Enemy</Group>
+                        <TypeObject>Melee</TypeObject>
+                        <PushImpact>100</PushImpact>
+                        <RecoilTime>0.4</RecoilTime>
+                        <Damage>4</Damage>
+                        <PierceCharacters>false</PierceCharacters>
+                        <PierceWalls>false</PierceWalls>
+                        <TimeDuration>1</TimeDuration>
+                        <MakeDamage>false</MakeDamage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="FO_Pin2">
+                            <properties>
+                                <destroy-when-if-unpined>No</destroy-when-if-unpined>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FO_Timer" />
+                        <behavior-instance type="FI_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>359.302947998</x>
+                        <y>150.149353027</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>11</height>
+                        <depth>0</depth>
+                        <hotspotX>0.178571433</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

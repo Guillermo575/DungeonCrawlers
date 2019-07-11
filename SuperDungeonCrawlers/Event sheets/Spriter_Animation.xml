@@ -595,7 +595,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="1" name="Set playback speed ratio" sid="336652398217468" type="Scml_Player_Top">
-                                    <param id="0" name="Speed Ratio">-1</param>
+                                    <param id="0" name="Speed Ratio">2</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="286663558636099" type="Scml_Player_Top">
                                     <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_SweepFull_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
@@ -769,7 +769,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="1" name="Set playback speed ratio" sid="817294370082134" type="Scml_Player_Top">
-                                    <param id="0" name="Speed Ratio">-1</param>
+                                    <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="563537508564556" type="Scml_Player_Top">
                                     <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_SweepFull_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>

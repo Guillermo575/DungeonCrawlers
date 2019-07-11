@@ -138,6 +138,19 @@
                     <param id="0" name="Instance variable">Hp</param>
                     <param id="1" name="Value">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="992430191717126" type="Family_Character">
+                    <param id="0" name="Object">SpriteFontDamage</param>
+                    <param id="1" name="Layer">Family_Character.LayerName</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Set text" sid="861783031906815" type="SpriteFontDamage">
+                    <param id="0" name="Text">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="580520486248927" type="SpriteFontDamage">
+                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">100</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="193527849554877">

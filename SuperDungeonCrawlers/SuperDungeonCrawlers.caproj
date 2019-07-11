@@ -32,6 +32,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -70,7 +71,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">Firefox</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -917,7 +918,7 @@
                             <type>Scml_Player_Top</type>
                         </container>
                         <animation-folder>
-                            <animation framecount="4" loop="0" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="577844821343410" speed="5">
+                            <animation framecount="4" loop="0" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="577844821343410" speed="0">
                                 <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\OriginalZ\Head\Head2.png">
                                     <collision-poly>
                                         <point x="1" y="0" />
@@ -951,7 +952,7 @@
                                     </collision-poly>
                                 </frame>
                             </animation>
-                            <animation framecount="4" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="993860099626226" speed="5">
+                            <animation framecount="4" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="993860099626226" speed="0">
                                 <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\Head.png">
                                     <collision-poly>
                                         <point x="1" y="0" />
@@ -1593,6 +1594,23 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="SpriteFontDamage" sid="287951374443979">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="626155145063043">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="140617495134627">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
             </object-type>
         </object-folder>
         <object-folder name="Menu">

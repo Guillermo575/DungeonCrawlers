@@ -1016,9 +1016,7 @@
                     <param id="0" name="Object">Family_Objects</param>
                     <param id="1" name="Time scale">0</param>
                 </action>
-                <action id="1" name="Set playback speed ratio" sid="840006976825213" type="Family_Spriter">
-                    <param id="0" name="Speed Ratio">0</param>
-                </action>
+                <action id="5" name="Pause animation" sid="840006976825213" type="Family_Spriter" />
             </actions>
         </event-block>
         <event-block sid="793570932712113">
@@ -1040,9 +1038,7 @@
                     <param id="0" name="Object">Family_Objects</param>
                     <param id="1" name="Time scale">1</param>
                 </action>
-                <action id="1" name="Set playback speed ratio" sid="545691864814099" type="Family_Spriter">
-                    <param id="0" name="Speed Ratio">1</param>
-                </action>
+                <action id="6" name="Resume animation" sid="545691864814099" type="Family_Spriter" />
             </actions>
         </event-block>
         <event-group description="" sid="326229789478680" title="Key handling">
