@@ -2271,10 +2271,10 @@
             <object-type name="DialogueAvatar" sid="372924118418178">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239286935434197" speed="5">
+                    <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="452290645842267" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="452290645842267" speed="5">
+                    <animation framecount="1" loop="0" name="Unknown" pingpong="0" repeatcount="1" repeatto="0" sid="370789804212060" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -2283,13 +2283,22 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="642691424205849" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0">
-                            <image-point name="avatar" x="0.0914286" y="0.491667" />
-                            <image-point name="text" x="0.202857" y="0.125" />
-                            <image-point name="cursor1" x="0.2" y="0.175" />
-                            <image-point name="cursor2" x="0.2" y="0.541667" />
-                            <image-point name="cursor3" x="0.2" y="0.833333" />
-                            <image-point name="CursorMore" x="0.938571" y="0.733333" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\aa.png">
+                            <image-point name="name" x="0.0171429" y="0.06875" />
+                            <image-point name="avatar" x="0.0914286" y="0.625" />
+                            <image-point name="text" x="0.202857" y="0.40625" />
+                            <image-point name="CursorMore" x="0.938571" y="0.8125" />
+                            <image-point name="cursor1" x="0.2" y="0.46875" />
+                            <image-point name="cursor2" x="0.2" y="0.65625" />
+                            <image-point name="cursor3" x="0.2" y="0.84375" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.25" />
+                                <point x="0.942857" y="0.25" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2391,6 +2400,15 @@
             </object-type>
             <object-type global="1" name="SpecialCommands" sid="884627065058665">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="DialogueSpriteFontAvatar" sid="156323620807817">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="839932838166839">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
             </object-type>
         </object-folder>
         <object-type name="ShadowLight" sid="117205968572142">

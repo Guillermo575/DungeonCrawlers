@@ -13,7 +13,7 @@
                     <param id="1" name="URL">&quot;dialogues.xml&quot;</param>
                 </action>
                 <action id="4" name="Load" sid="228082805333016" type="ProjectVariables">
-                    <param id="0" name="JSON">&quot;{&quot;&quot;c2dictionary&quot;&quot;:true,&quot;&quot;data&quot;&quot;:{&quot;&quot;line_count&quot;&quot;:0,&quot;&quot;word&quot;&quot;:&quot;&quot; &quot;&quot;,&quot;&quot;skip_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;end_dialogue_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_loaded&quot;&quot;:0,&quot;&quot;end_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;begin_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_running&quot;&quot;:0,&quot;&quot;name&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_next&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_faster&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_up&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_down&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_skip&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;line_type&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;next_line_id&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;box_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;text&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;avatar_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;letter_count&quot;&quot;:0,&quot;&quot;written_letters&quot;&quot;:0,&quot;&quot;displaying&quot;&quot;:0,&quot;&quot;choice_number&quot;&quot;:0,&quot;&quot;cursor_position&quot;&quot;:0,&quot;&quot;typing_sound&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;wait&quot;&quot;:0,&quot;&quot;text_displayed&quot;&quot;:0,&quot;&quot;auto&quot;&quot;:0,&quot;&quot;choice_height&quot;&quot;:0}}&quot;</param>
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2dictionary&quot;&quot;:true,&quot;&quot;data&quot;&quot;:{&quot;&quot;line_count&quot;&quot;:0,&quot;&quot;word&quot;&quot;:&quot;&quot; &quot;&quot;,&quot;&quot;skip_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;end_dialogue_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_loaded&quot;&quot;:0,&quot;&quot;end_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;begin_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_running&quot;&quot;:0,&quot;&quot;name&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_next&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_faster&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_up&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_down&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_skip&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;line_type&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;next_line_id&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;box_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;text&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;avatar_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;avatar_name&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;letter_count&quot;&quot;:0,&quot;&quot;written_letters&quot;&quot;:0,&quot;&quot;displaying&quot;&quot;:0,&quot;&quot;choice_number&quot;&quot;:0,&quot;&quot;cursor_position&quot;&quot;:0,&quot;&quot;typing_sound&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;wait&quot;&quot;:0,&quot;&quot;text_displayed&quot;&quot;:0,&quot;&quot;auto&quot;&quot;:0,&quot;&quot;choice_height&quot;&quot;:0}}&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -35,11 +35,11 @@
                     <param id="0" name="Object to create">DialogueBox</param>
                     <param id="1" name="Layer">&quot;Dialog&quot;</param>
                     <param id="2" name="X">0</param>
-                    <param id="3" name="Y">(OriginalWindowHeight/3)*2</param>
+                    <param id="3" name="Y">(OriginalWindowHeight/2)</param>
                 </action>
                 <action id="-7" name="Set size" sid="324936072169533" type="DialogueBox">
                     <param id="0" name="Width">OriginalWindowWidth</param>
-                    <param id="1" name="Height">OriginalWindowHeight/3</param>
+                    <param id="1" name="Height">OriginalWindowHeight/2</param>
                 </action>
                 <action id="-3" name="Create object" sid="515697930984778" type="System">
                     <param id="0" name="Object to create">DialogueAvatar</param>
@@ -56,6 +56,12 @@
                     <param id="1" name="Layer">DialogueBox.LayerName</param>
                     <param id="2" name="X">DialogueBox.ImagePointX(&quot;text&quot;)</param>
                     <param id="3" name="Y">DialogueBox.ImagePointY(&quot;text&quot;)</param>
+                </action>
+                <action id="-3" name="Create object" sid="696127458662075" type="System">
+                    <param id="0" name="Object to create">DialogueSpriteFontAvatar</param>
+                    <param id="1" name="Layer">DialogueBox.LayerName</param>
+                    <param id="2" name="X">DialogueBox.ImagePointX(&quot;name&quot;)</param>
+                    <param id="3" name="Y">DialogueBox.ImagePointY(&quot;name&quot;)</param>
                 </action>
                 <action id="-7" name="Set size" sid="109271363730403" type="DialogueSpriteFont">
                     <param id="0" name="Width">(OriginalWindowWidth/5)*3.5</param>
@@ -628,6 +634,10 @@
                             <param id="0" name="Key">&quot;avatar_animation&quot;</param>
                             <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@avatar_animation&quot;)</param>
                         </action>
+                        <action id="1" name="Set key" sid="690205059046845" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;avatar_name&quot;</param>
+                            <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@avatar_name&quot;)</param>
+                        </action>
                         <action id="1" name="Set key" sid="431665510994359" type="ProjectVariables">
                             <param id="0" name="Key">&quot;line_type&quot;</param>
                             <param id="1" name="Value">Dialogues.StringValue(dialogue_box_project_prefix2 &amp; &quot;@type&quot;)</param>
@@ -683,6 +693,9 @@
                         <action id="4" name="Set animation" sid="486622542604957" type="DialogueBox">
                             <param id="0" name="Animation">ProjectVariables.Get(&quot;box_animation&quot;)</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="848047936521023" type="DialogueSpriteFontAvatar">
+                            <param id="0" name="Text">ProjectVariables.Get(&quot;avatar_name&quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="917505455328425" type="DialogueSpriteFont">
                             <param id="0" name="Text">&quot;&quot;</param>
@@ -995,50 +1008,6 @@
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="107143500929517">
-            <conditions>
-                <condition id="-9" name="Layer is visible" sid="616707783488253" type="System">
-                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-14" name="Set object time scale" sid="175269999661628" type="System">
-                    <param id="0" name="Object">Family_Impact</param>
-                    <param id="1" name="Time scale">0</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="506595213602392" type="System">
-                    <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Time scale">0</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="655706601099055" type="System">
-                    <param id="0" name="Object">Family_Objects</param>
-                    <param id="1" name="Time scale">0</param>
-                </action>
-                <action id="5" name="Pause animation" sid="840006976825213" type="Family_Spriter" />
-            </actions>
-        </event-block>
-        <event-block sid="793570932712113">
-            <conditions>
-                <condition id="-9" inverted="1" name="Layer is visible" sid="736223861565621" type="System">
-                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-14" name="Set object time scale" sid="479917579610320" type="System">
-                    <param id="0" name="Object">Family_Impact</param>
-                    <param id="1" name="Time scale">1</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="666573619319465" type="System">
-                    <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Time scale">1</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="418229857158949" type="System">
-                    <param id="0" name="Object">Family_Objects</param>
-                    <param id="1" name="Time scale">1</param>
-                </action>
-                <action id="6" name="Resume animation" sid="545691864814099" type="Family_Spriter" />
             </actions>
         </event-block>
         <event-group description="" sid="326229789478680" title="Key handling">
@@ -1619,6 +1588,38 @@
                             </conditions>
                             <actions>
                                 <action id="5" name="Set character width" sid="489001851136589" type="DialogueSpriteFontChoice">
+                                    <param id="0" name="Character">SpriteFontImporter.At(1, loopindex(&quot;y&quot;))</param>
+                                    <param id="1" name="Width">SpriteFontImporter.At(0, loopindex(&quot;y&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="720088182868446">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="302658289792927" type="DialogueSpriteFontAvatar" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="534079983221239" type="SpriteFontImporter">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16],[19]],[[&quot;&quot;Iil.,;:!&apos;|&quot;&quot;],[&quot;&quot;`&quot;&quot;],[&quot;&quot;j()[]&quot;&quot;],[&quot;&quot;rt1\&quot;&quot;\\/°&quot;&quot;],[&quot;&quot;f-&quot;&quot;],[&quot;&quot;*&quot;&quot;],[&quot;&quot;Jhknu&quot;&quot;],[&quot;&quot;Lbcdgpqsvxyz7+=&lt;&gt;&quot;&quot;],[&quot;&quot;Faeo02345689?~#$£&quot;&quot;],[&quot;&quot;BEHNPSTUZ€&quot;&quot;],[&quot;&quot;CDK_&amp;&quot;&quot;],[&quot;&quot;AGORVXY&quot;&quot;],[&quot;&quot;MQmw&quot;&quot;],[&quot;&quot;%&quot;&quot;],[&quot;&quot;W@&quot;&quot;]]]}&quot;</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="915999217076493" type="DialogueSpriteFontAvatar">
+                            <param id="0" name="Character">&quot; &quot;</param>
+                            <param id="1" name="Width">9</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Loop through the array and set the widths.</comment>
+                        <event-block sid="816869948238366">
+                            <conditions>
+                                <condition id="-10" name="For" sid="703645441727708" type="System">
+                                    <param id="0" name="Name">&quot;y&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">SpriteFontImporter.Height-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set character width" sid="484651733143698" type="DialogueSpriteFontAvatar">
                                     <param id="0" name="Character">SpriteFontImporter.At(1, loopindex(&quot;y&quot;))</param>
                                     <param id="1" name="Width">SpriteFontImporter.At(0, loopindex(&quot;y&quot;))</param>
                                 </action>

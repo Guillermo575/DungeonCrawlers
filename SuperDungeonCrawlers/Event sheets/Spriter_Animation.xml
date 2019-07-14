@@ -401,6 +401,9 @@
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
+                                <action id="1" name="Set playback speed ratio" sid="724782269413518" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -442,6 +445,11 @@
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Object">Family_Character</param>
                 </action>
+                <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
+                    <param id="0" name="Animation">&quot;&quot;</param>
+                    <param id="1" name="Where to start playing this animation">0</param>
+                    <param id="2" name="Blend Duration">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="202446221001091">
@@ -460,11 +468,6 @@
                         <action id="-13" name="Set boolean" sid="167482797712427" type="Family_Spriter">
                             <param id="0" name="Instance variable">SpecialStill</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
-                            <param id="0" name="Animation">Family_Spriter.AnimationSpecial</param>
-                            <param id="1" name="Where to start playing this animation">0</param>
-                            <param id="2" name="Blend Duration">0</param>
                         </action>
                     </actions>
                 </event-block>

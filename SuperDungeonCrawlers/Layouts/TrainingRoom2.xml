@@ -275,8 +275,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>396.472564697</x>
-                        <y>142.944747925</y>
+                        <x>392.99987793</x>
+                        <y>147.111129761</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -419,7 +419,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <AIActive>true</AIActive>
+                        <AIActive>false</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>

@@ -11,11 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Menu_Start</layout>
-        <layout active="1" order="1">TrainingRoom2</layout>
-        <event-sheet order="2">DialogueEvents</event-sheet>
-        <event-sheet order="3">Battle</event-sheet>
-        <event-sheet order="4">Spriter_Animation</event-sheet>
-        <event-sheet order="5">_Gamelibrary</event-sheet>
+        <layout order="1">TrainingRoom2</layout>
+        <event-sheet active="1" order="2">DialogueEvents</event-sheet>
+        <event-sheet order="3">_Gamelibrary</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
