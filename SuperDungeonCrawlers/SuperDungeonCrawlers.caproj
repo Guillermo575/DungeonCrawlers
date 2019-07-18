@@ -200,9 +200,6 @@
                     <behavior-type name="Solid" sid="205528958783176">
                         <behavior id="solid" />
                     </behavior-type>
-                    <behavior-type name="ShadowCaster" sid="465402711254985">
-                        <behavior id="shadowcaster" />
-                    </behavior-type>
                 </behaviors>
                 <texture original-source="C:\Users\MasterRace\Desktop\TileMap - copia - copia.png" />
                 <tiles />
@@ -551,6 +548,55 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="DungeonLight" sid="184015334732872">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin2" sid="341983110515379">
+                        <behavior id="Pin2" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="708580146124023">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="425959710678018" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Work\Sea_Survival\Sprites\Game_Graphics\Light.png">
+                            <collision-poly>
+                                <point x="0.302" y="0.302" />
+                                <point x="0.5" y="0.216" />
+                                <point x="0.71" y="0.29" />
+                                <point x="0.806" y="0.5" />
+                                <point x="0.72" y="0.72" />
+                                <point x="0.5" y="0.804" />
+                                <point x="0.292" y="0.708" />
+                                <point x="0.218" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Torch" pingpong="0" repeatcount="1" repeatto="0" sid="978191187014387" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.302" y="0.302" />
+                                <point x="0.5" y="0.216" />
+                                <point x="0.71" y="0.29" />
+                                <point x="0.806" y="0.5" />
+                                <point x="0.72" y="0.72" />
+                                <point x="0.5" y="0.804" />
+                                <point x="0.292" y="0.708" />
+                                <point x="0.218" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ShadowLight" sid="117205968572142">
+                <plugin id="shadowlight" />
+                <behaviors>
+                    <behavior-type name="Pin2" sid="511896296837294">
+                        <behavior id="Pin2" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-folder name="Characters">
@@ -1267,6 +1313,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326715485088835" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="D:\Descargas\player.png">
+                            <image-point name="LightPoint" x="0.533333" y="0" />
                             <collision-poly>
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
@@ -1692,7 +1739,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Torch" sid="465717354132305">
+            <object-type name="Menu_Torch" sid="465717354132305">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="938567306618693" speed="5">
@@ -1833,6 +1880,30 @@
                     </animation>
                     <animation framecount="1" loop="0" name="Square" pingpong="0" repeatcount="1" repeatto="0" sid="816892399366762" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PauseContainer" sid="862197930417180">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836449021339362" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\AAAAA.png">
+                            <image-point name="Pause" x="0.493671" y="0.102326" />
+                            <image-point name="Resume" x="0.21519" y="0.293023" />
+                            <image-point name="BGMIcon" x="0.316456" y="0.604651" />
+                            <image-point name="VEIcon" x="0.696203" y="0.604651" />
+                            <image-point name="Exit" x="0.21519" y="0.837209" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Dungeon_Torch" sid="939497286383801">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="326298487806330" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2411,28 +2482,6 @@
                 <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
             </object-type>
         </object-folder>
-        <object-type name="ShadowLight" sid="117205968572142">
-            <plugin id="shadowlight" />
-            <behaviors>
-                <behavior-type name="Pin2" sid="511896296837294">
-                    <behavior id="Pin2" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="PauseContainer" sid="862197930417180">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836449021339362" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\AAAAA.png">
-                        <image-point name="Pause" x="0.493671" y="0.102326" />
-                        <image-point name="Resume" x="0.21519" y="0.293023" />
-                        <image-point name="BGMIcon" x="0.316456" y="0.604651" />
-                        <image-point name="VEIcon" x="0.696203" y="0.604651" />
-                        <image-point name="Exit" x="0.21519" y="0.837209" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -2493,6 +2542,7 @@
                 <instance-variable comment="Last Arm Used" name="LastArmUsed" sid="568820131423589" type="string" />
                 <instance-variable comment="character´s last direction" name="LastDirection" sid="241710995863577" type="string" />
                 <instance-variable comment="Name of the character Model, this value is used for the family_head expression" name="Name" sid="157579360596339" type="string" />
+                <instance-variable comment="This character has unlimitied ammo" name="NoSpendMunition" sid="132432431954822" type="boolean" />
                 <instance-variable name="PressButton" sid="311042383733418" type="boolean" />
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
@@ -2662,6 +2712,9 @@
             <behaviors>
                 <behavior-type name="Timer" sid="762509480308671">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="ShadowCaster" sid="712902048894801">
+                    <behavior id="shadowcaster" />
                 </behavior-type>
             </behaviors>
         </family>

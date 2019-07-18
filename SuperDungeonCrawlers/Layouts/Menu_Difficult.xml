@@ -104,7 +104,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Torch" uid="85">
+                <instance type="Menu_Torch" uid="85">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -126,7 +126,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Torch" uid="91">
+                <instance type="Menu_Torch" uid="91">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -148,7 +148,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Torch" uid="93">
+                <instance type="Menu_Torch" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

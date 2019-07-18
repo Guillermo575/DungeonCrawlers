@@ -67,6 +67,13 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -128,16 +135,16 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="ShadowCaster">
                             <properties>
                                 <initial-state>Disabled</initial-state>
-                                <height>300</height>
+                                <height>100</height>
                                 <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -203,6 +210,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
+                        <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
@@ -309,6 +317,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
@@ -415,6 +424,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
@@ -487,8 +497,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>341.942657471</x>
-                        <y>334.870361328</y>
+                        <x>461.38571167</x>
+                        <y>329.314483643</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -521,6 +531,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
@@ -593,8 +604,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>139.166625977</x>
-                        <y>147.371429443</y>
+                        <x>155.833221436</x>
+                        <y>314.731079102</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -653,14 +664,80 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>359.302947998</x>
-                        <y>150.149353027</y>
+                        <x>355.136566162</x>
+                        <y>152.927307129</y>
                         <z>0</z>
                         <width>28</width>
                         <height>11</height>
                         <depth>0</depth>
                         <hotspotX>0.178571433</hotspotX>
                         <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Dungeon_Torch" uid="190">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>141.944549561</x>
+                        <y>335.564056396</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.592592597</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Dungeon_Torch" uid="191">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>482.913421631</x>
+                        <y>345.286346436</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.592592597</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Dungeon_Torch" uid="192">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>211.388885498</x>
+                        <y>157.788452148</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.592592597</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -704,6 +781,13 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -727,6 +811,24 @@
                     </tilemap-data>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Darkness" sid="848391186825148">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>1</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
         <layer name="Filter" sid="684576394043020">

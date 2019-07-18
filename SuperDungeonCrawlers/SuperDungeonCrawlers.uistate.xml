@@ -11,9 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Menu_Start</layout>
-        <layout order="1">TrainingRoom2</layout>
-        <event-sheet active="1" order="2">DialogueEvents</event-sheet>
-        <event-sheet order="3">_Gamelibrary</event-sheet>
+        <layout active="1" order="2">TrainingRoom2</layout>
+        <event-sheet order="1">_Gamelibrary</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -83,6 +82,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BlockWall/" />
         <folder expanded="1" path="animation-folder/Map_Keyboard_Indicator/" />
         <folder expanded="1" path="animation-folder/Filter/" />
+        <folder expanded="1" path="animation-folder/DungeonLight/" />
         <folder expanded="1" path="animation-folder/body_dragon_mouth/" />
         <folder expanded="1" path="animation-folder/boss_dragon_claw/" />
         <folder expanded="1" path="animation-folder/Boss_Dragon_Head/" />
@@ -113,12 +113,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DungeonCrawlers_Logo/" />
         <folder expanded="1" path="animation-folder/Cover_Wall/" />
         <folder expanded="1" path="animation-folder/Menu_Start/" />
-        <folder expanded="1" path="animation-folder/Torch/" />
+        <folder expanded="1" path="animation-folder/Menu_Torch/" />
         <folder expanded="1" path="animation-folder/Menu_Text/" />
         <folder expanded="1" path="animation-folder/Pause/" />
         <folder expanded="1" path="animation-folder/BGMIcon/" />
         <folder expanded="1" path="animation-folder/VEIcon/" />
         <folder expanded="1" path="animation-folder/Menu_Cursor/" />
+        <folder expanded="1" path="animation-folder/PauseContainer/" />
+        <folder expanded="1" path="animation-folder/Dungeon_Torch/" />
         <folder expanded="1" path="animation-folder/HUD_Heart/" />
         <folder expanded="1" path="animation-folder/HUD_Heart_Container/" />
         <folder expanded="1" path="animation-folder/HUD_Object_Left/" />
@@ -129,6 +131,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DialogueBox/" />
         <folder expanded="1" path="animation-folder/Dialoguecursor/" />
         <folder expanded="1" path="animation-folder/DialogueCursorMore/" />
-        <folder expanded="1" path="animation-folder/PauseContainer/" />
     </folders-expanded>
 </c2uistate>
