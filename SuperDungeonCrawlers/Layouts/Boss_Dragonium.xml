@@ -498,7 +498,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
-                        <NoSpendMunition>false</NoSpendMunition>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
@@ -605,7 +605,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
-                        <NoSpendMunition>false</NoSpendMunition>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
@@ -712,7 +712,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
-                        <NoSpendMunition>false</NoSpendMunition>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
@@ -819,7 +819,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <Name></Name>
-                        <NoSpendMunition>false</NoSpendMunition>
+                        <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>

@@ -544,7 +544,7 @@
                 </action>
                 <action id="-12" name="Subtract from" sid="787603214395015" type="Family_Objects">
                     <param id="0" name="Instance variable">Ammo</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
         </event-block>
@@ -593,7 +593,7 @@
                 </action>
                 <action id="-12" name="Subtract from" sid="598445616660461" type="Family_Objects">
                     <param id="0" name="Instance variable">Ammo</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
         </event-block>
