@@ -328,6 +328,7 @@
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
                         <Dialog>test_intro</Dialog>
+                        <CanTalk>true</CanTalk>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -435,6 +436,7 @@
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
                         <Dialog></Dialog>
+                        <CanTalk>false</CanTalk>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -497,8 +499,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>461.38571167</x>
-                        <y>329.314483643</y>
+                        <x>453.051879883</x>
+                        <y>321.675415039</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -542,6 +544,7 @@
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
                         <Dialog>test_choice</Dialog>
+                        <CanTalk>true</CanTalk>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -738,6 +741,46 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.592592597</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Object_Wand" uid="193">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Function_Press>Press_Object</Function_Press>
+                        <Function_UnPress>UnPress_Object</Function_UnPress>
+                        <Function_Param>HoldWand</Function_Param>
+                        <Distance>Long</Distance>
+                        <HasAmmo>true</HasAmmo>
+                        <Ammo>30</Ammo>
+                        <Ocuppied>false</Ocuppied>
+                        <Message>Spacebar</Message>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="FO_Pin2">
+                            <properties>
+                                <destroy-when-if-unpined>No</destroy-when-if-unpined>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FO_Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>359.998748779</x>
+                        <y>173.065536499</y>
+                        <z>0</z>
+                        <width>27</width>
+                        <height>13</height>
+                        <depth>0</depth>
+                        <hotspotX>0.518518507</hotspotX>
+                        <hotspotY>0.384615391</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -472,6 +472,9 @@
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="534394913454821" type="Family_NPC">
+                            <param id="0" name="Instance variable">CanTalk</param>
+                        </condition>
                         <condition id="-9" inverted="1" name="Layer is visible" sid="382196236741955" type="System">
                             <param id="0" name="Layer">&quot;Dialog&quot;</param>
                         </condition>
@@ -611,6 +614,9 @@
                             <param id="0" name="Instance variable">Dialog</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="787054797892231" type="Family_NPC">
+                            <param id="0" name="Instance variable">CanTalk</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Layer is visible" sid="786020029491077" type="System">
                             <param id="0" name="Layer">&quot;Dialog&quot;</param>

@@ -2753,6 +2753,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="Dialog" sid="571882647356965" type="string" />
+                <instance-variable name="CanTalk" sid="512996118828547" type="boolean" />
             </instance-variables>
         </family>
     </families>

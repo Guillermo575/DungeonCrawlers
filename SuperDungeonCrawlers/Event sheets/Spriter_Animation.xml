@@ -81,6 +81,105 @@
                 </action>
             </actions>
         </event-block>
+        <comment>GENERAL</comment>
+        <event-block sid="458330154910545">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="844598537539448" type="System" />
+                <condition id="-11" name="For Each" sid="944775008553159" type="System">
+                    <param id="0" name="Object">Family_Spriter</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="825888301880067" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Spriter.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="772854867483468" type="Family_Spriter">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="446156574993420" type="Family_Spriter">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">Family_Character</param>
+                </action>
+                <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
+                    <param id="0" name="Animation">&quot;&quot;</param>
+                    <param id="1" name="Where to start playing this animation">0</param>
+                    <param id="2" name="Blend Duration">0</param>
+                </action>
+                <action id="2" name="Set object scale ratio" sid="208148315024980" type="Family_Spriter">
+                    <param id="0" name="Scale Ratio">0.6</param>
+                    <param id="1" name="Flip X Axis">0</param>
+                    <param id="2" name="Flip Y Axis">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>ARM OBJECTS</comment>
+                <event-block sid="661554256191333">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="170746716082434" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="299492139190690" type="Family_Objects">
+                            <param id="0" name="Object">PlayerArmLeft</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="948598323639518" type="Family_Objects">
+                            <param id="0" name="Angle">PlayerArmLeft.Angle</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="766461847839219" type="Family_Objects" />
+                    </actions>
+                </event-block>
+                <event-block sid="868393205307302">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="609898658023608" type="Family_Objects">
+                            <param id="0" name="Unique ID">Family_Character.ArmRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="407982569633197" type="Family_Objects">
+                            <param id="0" name="Object">PlayerArmRight</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="583358654348533" type="Family_Objects">
+                            <param id="0" name="Angle">PlayerArmRight.Angle</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Objects" />
+                    </actions>
+                </event-block>
+                <comment>DAMAGE BLINK ANIMATION</comment>
+                <event-block any="1" sid="202446221001091">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="570826759018074" type="Family_Character">
+                            <param id="0" name="Instance variable">Invencible</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="301135472795867" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="219792943870240" type="Family_Spriter">
+                            <param id="0" name="Opacity">Family_Spriter.Opacity = 100 ? 30 : 100</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="167482797712427" type="Family_Spriter">
+                            <param id="0" name="Instance variable">SpecialStill</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614039328781023">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="285185007226555" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="837734427818497" type="Family_Spriter">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment>ANIMATION WALK BOTTOM</comment>
         <event-block sid="813188471380138">
             <conditions>
@@ -421,128 +520,6 @@
                         <action id="1" name="Set playback speed ratio" sid="842546941642710" type="Scml_Player_Top">
                             <param id="0" name="Speed Ratio">1</param>
                         </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>DAMAGE BLINK ANIMATION</comment>
-        <event-block sid="458330154910545">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="844598537539448" type="System" />
-                <condition id="-11" name="For Each" sid="944775008553159" type="System">
-                    <param id="0" name="Object">Family_Spriter</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="825888301880067" type="Family_Character">
-                    <param id="0" name="Unique ID">Family_Spriter.Pin2.PinnedUID</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="772854867483468" type="Family_Spriter">
-                    <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-29" name="Move to object" sid="446156574993420" type="Family_Spriter">
-                    <param id="0" name="Where">0</param>
-                    <param id="1" name="Object">Family_Character</param>
-                </action>
-                <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
-                    <param id="0" name="Animation">&quot;&quot;</param>
-                    <param id="1" name="Where to start playing this animation">0</param>
-                    <param id="2" name="Blend Duration">0</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block any="1" sid="202446221001091">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="570826759018074" type="Family_Character">
-                            <param id="0" name="Instance variable">Invencible</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="301135472795867" type="Family_Character">
-                            <param id="0" name="Instance variable">PushRecoil</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="219792943870240" type="Family_Spriter">
-                            <param id="0" name="Opacity">Family_Spriter.Opacity = 100 ? 30 : 100</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="167482797712427" type="Family_Spriter">
-                            <param id="0" name="Instance variable">SpecialStill</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="614039328781023">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="285185007226555" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="837734427818497" type="Family_Spriter">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="174391383103169">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="657073402775926" type="System">
-                            <param id="0" name="First value">Family_Spriter.ScaleRatio</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">0.6</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Set object scale ratio" sid="208148315024980" type="Family_Spriter">
-                            <param id="0" name="Scale Ratio">0.6</param>
-                            <param id="1" name="Flip X Axis">0</param>
-                            <param id="2" name="Flip Y Axis">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>ARM OBJECTS</comment>
-        <event-block sid="260843585622213">
-            <conditions>
-                <condition id="-11" name="For Each" sid="165609645207494" type="System">
-                    <param id="0" name="Object">Scml_Player_Top</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="733788705807127" type="Family_Character">
-                    <param id="0" name="Unique ID">Scml_Player_Top.Pin2.PinnedUID</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="661554256191333">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="170746716082434" type="Family_Objects">
-                            <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="299492139190690" type="Family_Objects">
-                            <param id="0" name="Object">PlayerArmLeft</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="948598323639518" type="Family_Objects">
-                            <param id="0" name="Angle">PlayerArmLeft.Angle</param>
-                        </action>
-                        <action id="-25" name="Move to bottom" sid="766461847839219" type="Family_Objects" />
-                    </actions>
-                </event-block>
-                <event-block sid="868393205307302">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="609898658023608" type="Family_Objects">
-                            <param id="0" name="Unique ID">Family_Character.ArmRight</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="407982569633197" type="Family_Objects">
-                            <param id="0" name="Object">PlayerArmRight</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="583358654348533" type="Family_Objects">
-                            <param id="0" name="Angle">PlayerArmRight.Angle</param>
-                        </action>
-                        <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Objects" />
                     </actions>
                 </event-block>
             </sub-events>

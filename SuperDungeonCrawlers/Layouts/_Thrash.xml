@@ -597,6 +597,7 @@
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
                         <Dialog>intro</Dialog>
+                        <CanTalk>false</CanTalk>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
