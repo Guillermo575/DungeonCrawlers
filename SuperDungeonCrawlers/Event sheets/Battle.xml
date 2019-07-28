@@ -143,6 +143,9 @@
                     <param id="1" name="Layer">Family_Character.LayerName</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action id="-8" name="Set angle" sid="259534934350089" type="SpriteFontDamage">
+                    <param id="0" name="Angle">0</param>
+                </action>
                 <action id="0" name="Set text" sid="861783031906815" type="SpriteFontDamage">
                     <param id="0" name="Text">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
                 </action>

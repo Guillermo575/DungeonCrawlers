@@ -430,7 +430,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <AIActive>false</AIActive>
+                        <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>

@@ -14,6 +14,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout active="1" order="2">TrainingRoom2</layout>
         <layout order="3">TrainingRoom</layout>
         <event-sheet order="1">_Gamelibrary</event-sheet>
+        <event-sheet order="4">Enemies</event-sheet>
+        <event-sheet order="5">Spriter_Animation</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

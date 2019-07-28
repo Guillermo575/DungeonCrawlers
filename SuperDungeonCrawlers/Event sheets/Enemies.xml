@@ -260,31 +260,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="601664947014207">
-            <conditions>
-                <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="564603136241466" type="EnemyCoreBox">
-                    <param id="0" name="Object">PlayerCoreBox</param>
-                </condition>
-                <condition id="-6" name="Every X seconds" sid="521524907947068" type="System">
-                    <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerChase</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="566101600918009" type="EnemyCoreBox">
-                    <param id="0" name="Instance variable">Disperse</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="268341422387950" type="EnemyCoreBox">
-                    <param id="0" name="Instance variable">AIActive</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="916511820714148" type="EnemyCoreBox">
-                    <param id="0" name="Instance variable">IsAlive</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="FC_Pathfinding" id="0" name="Find path" sid="250457615787366" type="EnemyCoreBox">
-                    <param id="0" name="X">PlayerCoreBox.X</param>
-                    <param id="1" name="Y">PlayerCoreBox.Y</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="540918866351799">
             <conditions>
                 <condition id="-11" name="For Each" sid="822332749530312" type="System">
@@ -309,6 +284,25 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-block sid="601664947014207">
+                                    <conditions>
+                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="564603136241466" type="EnemyCoreBox">
+                                            <param id="0" name="Object">PlayerCoreBox</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="521524907947068" type="System">
+                                            <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerChase</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="566101600918009" type="EnemyCoreBox">
+                                            <param id="0" name="Instance variable">Disperse</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FC_Pathfinding" id="0" name="Find path" sid="250457615787366" type="EnemyCoreBox">
+                                            <param id="0" name="X">PlayerCoreBox.X</param>
+                                            <param id="1" name="Y">PlayerCoreBox.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <comment>Picking object Left &amp; Right</comment>
                                 <event-block sid="633030374407182">
                                     <conditions>
