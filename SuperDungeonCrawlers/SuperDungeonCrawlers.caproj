@@ -2629,6 +2629,7 @@
                 <member>Boss_Dragon_Head</member>
                 <member>boss_worm_body</member>
                 <member>boss_worm_head</member>
+                <member>EnemyCoreBox</member>
                 <member>Impact_Arrow</member>
                 <member>Impact_Axe</member>
                 <member>Impact_Fireball</member>

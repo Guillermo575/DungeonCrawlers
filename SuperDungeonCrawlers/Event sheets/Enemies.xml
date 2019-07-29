@@ -282,7 +282,12 @@
                                     <param id="0" name="Instance variable">AIActive</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="163117468452665" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="601664947014207">
                                     <conditions>

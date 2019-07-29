@@ -826,6 +826,15 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <Group>Enemy</Group>
+                        <TypeObject>Melee</TypeObject>
+                        <PushImpact>100</PushImpact>
+                        <RecoilTime>0.4</RecoilTime>
+                        <Damage>1</Damage>
+                        <PierceCharacters>false</PierceCharacters>
+                        <PierceWalls>false</PierceWalls>
+                        <TimeDuration>1</TimeDuration>
+                        <MakeDamage>false</MakeDamage>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -886,6 +895,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="FI_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
                         <behavior-instance type="BoundToLayout">
                             <properties>
                                 <bound-by>Edge</bound-by>
