@@ -215,6 +215,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <Rotate>0</Rotate>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -322,6 +323,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <Rotate>0</Rotate>
                         <Group>Enemy</Group>
                         <TypeObject>Melee</TypeObject>
                         <PushImpact>100</PushImpact>
@@ -450,6 +452,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <Rotate>0</Rotate>
                         <Group>Enemy</Group>
                         <TypeObject>Melee</TypeObject>
                         <PushImpact>100</PushImpact>
@@ -459,7 +462,7 @@
                         <PierceWalls>false</PierceWalls>
                         <TimeDuration>1</TimeDuration>
                         <MakeDamage>false</MakeDamage>
-                        <AIActive>true</AIActive>
+                        <AIActive>false</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
@@ -578,6 +581,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <Rotate>0</Rotate>
                         <Group>Enemy</Group>
                         <TypeObject>Melee</TypeObject>
                         <PushImpact>100</PushImpact>

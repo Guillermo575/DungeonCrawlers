@@ -11,10 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Menu_Start</layout>
-        <layout active="1" order="2">TrainingRoom2</layout>
+        <layout order="2">TrainingRoom2</layout>
         <layout order="3">TrainingRoom</layout>
         <event-sheet order="1">_Gamelibrary</event-sheet>
         <event-sheet order="4">Enemies</event-sheet>
+        <event-sheet active="1" order="5">Spriter_Animation</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -33,7 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Family_Boss_Worm" />
         <family expanded="0" name="Family_MiniMap_Icon" />
         <family expanded="0" name="Family_Tilemaps" />
-        <family expanded="0" name="Family_Spriter" />
+        <family expanded="1" name="Family_Spriter" />
         <family expanded="0" name="Family_AI" />
         <family expanded="0" name="Family_NPC" />
     </families-expanded>
