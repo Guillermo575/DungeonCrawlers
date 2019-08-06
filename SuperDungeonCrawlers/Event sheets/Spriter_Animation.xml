@@ -247,7 +247,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="164876717759786" type="Family_Character">
                                             <param id="0" name="Instance variable">Rotate</param>
-                                            <param id="1" name="Value">MoveAngle &gt;= 90 ? (90 - MoveAngle)/2 : 360+(90 - MoveAngle)/2</param>
+                                            <param id="1" name="Value">MoveAngle &gt;= 90 ? (MoveAngle - 90)/2 : 360 - (90 - MoveAngle)/2</param>
                                         </action>
                                     </actions>
                                 </event-block>
