@@ -236,7 +236,12 @@
                                     <conditions>
                                         <condition id="-21" name="Is between values" sid="749675710721039" type="System">
                                             <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">45</param>
+                                            <param id="1" name="Lower bound">90</param>
+                                            <param id="2" name="Upper bound">90</param>
+                                        </condition>
+                                        <condition disabled="1" id="-21" name="Is between values" sid="405568639197504" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">46</param>
                                             <param id="2" name="Upper bound">135</param>
                                         </condition>
                                     </conditions>
@@ -255,8 +260,13 @@
                                     <conditions>
                                         <condition id="-21" name="Is between values" sid="246131273378840" type="System">
                                             <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">-90</param>
+                                            <param id="2" name="Upper bound">-90</param>
+                                        </condition>
+                                        <condition disabled="1" id="-21" name="Is between values" sid="359918163046009" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
                                             <param id="1" name="Lower bound">-135</param>
-                                            <param id="2" name="Upper bound">-45</param>
+                                            <param id="2" name="Upper bound">-46</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -274,13 +284,23 @@
                                     <conditions>
                                         <condition id="-21" name="Is between values" sid="140475576447195" type="System">
                                             <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">135</param>
+                                            <param id="1" name="Lower bound">91</param>
                                             <param id="2" name="Upper bound">180</param>
                                         </condition>
                                         <condition id="-21" name="Is between values" sid="602964027892505" type="System">
                                             <param id="0" name="Value">MoveAngle</param>
                                             <param id="1" name="Lower bound">-180</param>
-                                            <param id="2" name="Upper bound">-135</param>
+                                            <param id="2" name="Upper bound">-91</param>
+                                        </condition>
+                                        <condition disabled="1" id="-21" name="Is between values" sid="746810671418212" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">136</param>
+                                            <param id="2" name="Upper bound">180</param>
+                                        </condition>
+                                        <condition disabled="1" id="-21" name="Is between values" sid="430176234076355" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">-180</param>
+                                            <param id="2" name="Upper bound">-136</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -299,9 +319,19 @@
                                         <condition id="-21" name="Is between values" sid="866007075080462" type="System">
                                             <param id="0" name="Value">MoveAngle</param>
                                             <param id="1" name="Lower bound">0</param>
-                                            <param id="2" name="Upper bound">45</param>
+                                            <param id="2" name="Upper bound">89</param>
                                         </condition>
                                         <condition id="-21" name="Is between values" sid="911749698686088" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">-89</param>
+                                            <param id="2" name="Upper bound">0</param>
+                                        </condition>
+                                        <condition disabled="1" id="-21" name="Is between values" sid="330482700383247" type="System">
+                                            <param id="0" name="Value">MoveAngle</param>
+                                            <param id="1" name="Lower bound">0</param>
+                                            <param id="2" name="Upper bound">45</param>
+                                        </condition>
+                                        <condition disabled="1" id="-21" name="Is between values" sid="887427824984240" type="System">
                                             <param id="0" name="Value">MoveAngle</param>
                                             <param id="1" name="Lower bound">-45</param>
                                             <param id="2" name="Upper bound">0</param>
@@ -321,7 +351,7 @@
                                 <event-block sid="990461948937743">
                                     <conditions />
                                     <actions>
-                                        <action disabled="1" id="-8" name="Set angle" sid="766574518225439" type="Scml_Player_Top">
+                                        <action id="-8" name="Set angle" sid="766574518225439" type="Scml_Player_Top">
                                             <param id="0" name="Angle">Family_Character.Rotate</param>
                                         </action>
                                         <action id="0" name="Set animation" sid="232197190534105" type="Scml_Player_Top">
@@ -341,7 +371,7 @@
                                 <condition id="-22" name="Else" sid="223670063982820" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-8" name="Set angle" sid="172474690255011" type="Scml_Player_Top">
+                                <action id="-8" name="Set angle" sid="172474690255011" type="Scml_Player_Top">
                                     <param id="0" name="Angle">0</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="577470495503115" type="Scml_Player_Top">
