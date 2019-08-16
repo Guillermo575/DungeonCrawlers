@@ -101,11 +101,6 @@
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Object">Family_Character</param>
                 </action>
-                <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
-                    <param id="0" name="Animation">&quot;&quot;</param>
-                    <param id="1" name="Where to start playing this animation">0</param>
-                    <param id="2" name="Blend Duration">0</param>
-                </action>
                 <action id="2" name="Set object scale ratio" sid="208148315024980" type="Family_Spriter">
                     <param id="0" name="Scale Ratio">0.6</param>
                     <param id="1" name="Flip X Axis">0</param>
@@ -113,6 +108,22 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="727461706891949">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="869286524614684" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
+                            <param id="0" name="Animation">&quot;&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>DAMAGE BLINK ANIMATION</comment>
                 <event-block any="1" sid="202446221001091">
                     <conditions>
@@ -192,6 +203,162 @@
                         <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Objects" />
                     </actions>
                 </event-block>
+                <event-block any="1" sid="380075290441014">
+                    <conditions>
+                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="465882433270135" type="Family_Character" />
+                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="228525071947355" type="Family_Character" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="MoveAngle" sid="860392942880998" static="0" type="number">0</variable>
+                        <event-block sid="321976385503320">
+                            <conditions>
+                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="489141307237754" type="Family_Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="876196850987482" type="System">
+                                    <param id="0" name="Variable">MoveAngle</param>
+                                    <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="621616222748487">
+                            <conditions>
+                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="718873918551605" type="Family_Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="548092674393566" type="System">
+                                    <param id="0" name="Variable">MoveAngle</param>
+                                    <param id="1" name="Value">Family_Character.FC_Pathfinding.MovingAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="766634946751649">
+                            <conditions>
+                                <condition disabled="1" id="-21" name="Is between values" sid="749675710721039" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">90</param>
+                                    <param id="2" name="Upper bound">90</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="405568639197504" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">46</param>
+                                    <param id="2" name="Upper bound">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="406869333989988" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Front&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="164876717759786" type="Family_Character">
+                                    <param id="0" name="Instance variable">Rotate</param>
+                                    <param id="1" name="Value">MoveAngle &gt;= 90 ? (MoveAngle - 90) : 360 - (90 - MoveAngle)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="480198110961141">
+                            <conditions>
+                                <condition disabled="1" id="-21" name="Is between values" sid="246131273378840" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-90</param>
+                                    <param id="2" name="Upper bound">-90</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="359918163046009" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-135</param>
+                                    <param id="2" name="Upper bound">-46</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="693659263361663" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Back&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="404192273793228" type="Family_Character">
+                                    <param id="0" name="Instance variable">Rotate</param>
+                                    <param id="1" name="Value">MoveAngle &gt;= -90 ? (90 + MoveAngle) : 360+(90 + MoveAngle)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="722601223102543">
+                            <conditions>
+                                <condition disabled="1" id="-21" name="Is between values" sid="140475576447195" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">91</param>
+                                    <param id="2" name="Upper bound">180</param>
+                                </condition>
+                                <condition disabled="1" id="-21" name="Is between values" sid="602964027892505" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-180</param>
+                                    <param id="2" name="Upper bound">-91</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="746810671418212" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">136</param>
+                                    <param id="2" name="Upper bound">180</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="430176234076355" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-180</param>
+                                    <param id="2" name="Upper bound">-136</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="715456139468883" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="641213510895434" type="Family_Character">
+                                    <param id="0" name="Instance variable">Rotate</param>
+                                    <param id="1" name="Value">MoveAngle &gt; 0 ? 360-(180 -MoveAngle) : (180 +MoveAngle) </param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="376054966486278">
+                            <conditions>
+                                <condition disabled="1" id="-21" name="Is between values" sid="866007075080462" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">0</param>
+                                    <param id="2" name="Upper bound">89</param>
+                                </condition>
+                                <condition disabled="1" id="-21" name="Is between values" sid="911749698686088" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-89</param>
+                                    <param id="2" name="Upper bound">0</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="330482700383247" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">0</param>
+                                    <param id="2" name="Upper bound">45</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="887427824984240" type="System">
+                                    <param id="0" name="Value">MoveAngle</param>
+                                    <param id="1" name="Lower bound">-45</param>
+                                    <param id="2" name="Upper bound">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="244343198965188" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirection</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="458130340548308" type="Family_Character">
+                                    <param id="0" name="Instance variable">Rotate</param>
+                                    <param id="1" name="Value">MoveAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="712296432638197">
+                            <conditions />
+                            <actions>
+                                <action id="-8" name="Set angle" sid="170635972655712" type="Scml_Player_Top">
+                                    <param id="0" name="Angle">Family_Character.Rotate</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="482425733896470">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="531376242935249" type="Family_Character">
@@ -202,177 +369,32 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="380075290441014">
+                        <event-block any="1" sid="990461948937743">
                             <conditions>
-                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="465882433270135" type="Family_Character" />
-                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="228525071947355" type="Family_Character" />
+                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="987179257339519" type="Family_Character" />
+                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="891629853167742" type="Family_Character" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <variable constant="0" name="MoveAngle" sid="860392942880998" static="0" type="number">0</variable>
-                                <event-block sid="321976385503320">
-                                    <conditions>
-                                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="489141307237754" type="Family_Character" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="876196850987482" type="System">
-                                            <param id="0" name="Variable">MoveAngle</param>
-                                            <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="621616222748487">
-                                    <conditions>
-                                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="718873918551605" type="Family_Character" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="548092674393566" type="System">
-                                            <param id="0" name="Variable">MoveAngle</param>
-                                            <param id="1" name="Value">Family_Character.FC_Pathfinding.MovingAngle</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="766634946751649">
-                                    <conditions>
-                                        <condition id="-21" name="Is between values" sid="749675710721039" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">90</param>
-                                            <param id="2" name="Upper bound">90</param>
-                                        </condition>
-                                        <condition disabled="1" id="-21" name="Is between values" sid="405568639197504" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">46</param>
-                                            <param id="2" name="Upper bound">135</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="406869333989988" type="Family_Character">
-                                            <param id="0" name="Instance variable">LastDirection</param>
-                                            <param id="1" name="Value">&quot;Front&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="164876717759786" type="Family_Character">
-                                            <param id="0" name="Instance variable">Rotate</param>
-                                            <param id="1" name="Value">MoveAngle &gt;= 90 ? (MoveAngle - 90)/2 : 360 - (90 - MoveAngle)/2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="480198110961141">
-                                    <conditions>
-                                        <condition id="-21" name="Is between values" sid="246131273378840" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">-90</param>
-                                            <param id="2" name="Upper bound">-90</param>
-                                        </condition>
-                                        <condition disabled="1" id="-21" name="Is between values" sid="359918163046009" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">-135</param>
-                                            <param id="2" name="Upper bound">-46</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="693659263361663" type="Family_Character">
-                                            <param id="0" name="Instance variable">LastDirection</param>
-                                            <param id="1" name="Value">&quot;Back&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="404192273793228" type="Family_Character">
-                                            <param id="0" name="Instance variable">Rotate</param>
-                                            <param id="1" name="Value">MoveAngle &gt;= -90 ? (90 + MoveAngle)/2 : 360+(90 + MoveAngle)/2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="722601223102543">
-                                    <conditions>
-                                        <condition id="-21" name="Is between values" sid="140475576447195" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">91</param>
-                                            <param id="2" name="Upper bound">180</param>
-                                        </condition>
-                                        <condition id="-21" name="Is between values" sid="602964027892505" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">-180</param>
-                                            <param id="2" name="Upper bound">-91</param>
-                                        </condition>
-                                        <condition disabled="1" id="-21" name="Is between values" sid="746810671418212" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">136</param>
-                                            <param id="2" name="Upper bound">180</param>
-                                        </condition>
-                                        <condition disabled="1" id="-21" name="Is between values" sid="430176234076355" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">-180</param>
-                                            <param id="2" name="Upper bound">-136</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="715456139468883" type="Family_Character">
-                                            <param id="0" name="Instance variable">LastDirection</param>
-                                            <param id="1" name="Value">&quot;Left&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="641213510895434" type="Family_Character">
-                                            <param id="0" name="Instance variable">Rotate</param>
-                                            <param id="1" name="Value">MoveAngle &gt; 0 ? 360-(180 -MoveAngle)/2 : (180 +MoveAngle) /2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="376054966486278">
-                                    <conditions>
-                                        <condition id="-21" name="Is between values" sid="866007075080462" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">0</param>
-                                            <param id="2" name="Upper bound">89</param>
-                                        </condition>
-                                        <condition id="-21" name="Is between values" sid="911749698686088" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">-89</param>
-                                            <param id="2" name="Upper bound">0</param>
-                                        </condition>
-                                        <condition disabled="1" id="-21" name="Is between values" sid="330482700383247" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">0</param>
-                                            <param id="2" name="Upper bound">45</param>
-                                        </condition>
-                                        <condition disabled="1" id="-21" name="Is between values" sid="887427824984240" type="System">
-                                            <param id="0" name="Value">MoveAngle</param>
-                                            <param id="1" name="Lower bound">-45</param>
-                                            <param id="2" name="Upper bound">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="244343198965188" type="Family_Character">
-                                            <param id="0" name="Instance variable">LastDirection</param>
-                                            <param id="1" name="Value">&quot;Right&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="458130340548308" type="Family_Character">
-                                            <param id="0" name="Instance variable">Rotate</param>
-                                            <param id="1" name="Value">MoveAngle/2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="990461948937743">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-8" name="Set angle" sid="766574518225439" type="Scml_Player_Top">
-                                            <param id="0" name="Angle">Family_Character.Rotate</param>
-                                        </action>
-                                        <action id="0" name="Set animation" sid="232197190534105" type="Scml_Player_Top">
-                                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
-                                            <param id="1" name="Where to start playing this animation">1</param>
-                                            <param id="2" name="Blend Duration">0</param>
-                                        </action>
-                                        <action id="1" name="Set playback speed ratio" sid="724782269413518" type="Scml_Player_Top">
-                                            <param id="0" name="Speed Ratio">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="766574518225439" type="Scml_Player_Top">
+                                    <param id="0" name="Angle">Family_Character.Rotate</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="232197190534105" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                    <param id="1" name="Where to start playing this animation">1</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="724782269413518" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="758229148574988">
                             <conditions>
                                 <condition id="-22" name="Else" sid="223670063982820" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-8" name="Set angle" sid="172474690255011" type="Scml_Player_Top">
-                                    <param id="0" name="Angle">0</param>
+                                <action id="-8" name="Set angle" sid="549058963341718" type="Scml_Player_Top">
+                                    <param id="0" name="Angle">Family_Character.Rotate</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="577470495503115" type="Scml_Player_Top">
                                     <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
@@ -767,28 +789,6 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="372303593462928">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="315510830066471" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="627143053503949" type="Family_Character">
-                                    <param id="0" name="Instance variable">PressButton</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="233476600278579" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="563588921023887" type="System">
-                                    <param id="0" name="Variable">ActionSelected</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="865430266534956">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="789128671449174" type="Family_Character">
@@ -796,12 +796,11 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="627143053503949" type="Family_Character">
+                                    <param id="0" name="Instance variable">PressButton</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="694345113549308" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="1" name="Set playback speed ratio" sid="264098781902311" type="Scml_Player_Top">
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
