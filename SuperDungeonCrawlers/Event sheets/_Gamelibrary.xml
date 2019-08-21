@@ -34,7 +34,7 @@
                     <param id="0" name="Name">&quot;LightOn&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="0" name="Call function" sid="771115418693452" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="771115418693452" type="Function">
                     <param id="0" name="Name">&quot;LightOff&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>

@@ -837,7 +837,7 @@
                         <PierceWalls>false</PierceWalls>
                         <TimeDuration>1</TimeDuration>
                         <MakeDamage>false</MakeDamage>
-                        <AIActive>true</AIActive>
+                        <AIActive>false</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
