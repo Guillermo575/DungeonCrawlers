@@ -1967,9 +1967,6 @@
                         <nickname-in-c2></nickname-in-c2>
                     </properties>
                     <instance-variables>
-                        <Animation></Animation>
-                        <AnimationSpecial></AnimationSpecial>
-                        <SpecialStill>false</SpecialStill>
                         <CharacterSkin></CharacterSkin>
                     </instance-variables>
                     <behavior-instances>
@@ -2004,9 +2001,6 @@
                         <nickname-in-c2></nickname-in-c2>
                     </properties>
                     <instance-variables>
-                        <Animation></Animation>
-                        <AnimationSpecial></AnimationSpecial>
-                        <SpecialStill>false</SpecialStill>
                         <CharacterSkin></CharacterSkin>
                     </instance-variables>
                     <behavior-instances>

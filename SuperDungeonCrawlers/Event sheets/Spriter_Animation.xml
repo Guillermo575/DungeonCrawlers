@@ -138,10 +138,6 @@
                         <action id="-16" name="Set opacity" sid="219792943870240" type="Family_Spriter">
                             <param id="0" name="Opacity">Family_Spriter.Opacity = 100 ? 30 : 100</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="167482797712427" type="Family_Spriter">
-                            <param id="0" name="Instance variable">SpecialStill</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="614039328781023">
