@@ -1959,7 +1959,7 @@
                 </instance>
                 <instance type="Scml_Player_Top" uid="172">
                     <properties>
-                        <scml-file>NewProject.scml</scml-file>
+                        <scml-file>Spriter_Animation.scml</scml-file>
                         <starting-entity></starting-entity>
                         <starting-animation></starting-animation>
                         <starting-opacity>100</starting-opacity>
@@ -1993,7 +1993,7 @@
                 </instance>
                 <instance type="Scml_Player_Bottom" uid="125">
                     <properties>
-                        <scml-file>NewProject.scml</scml-file>
+                        <scml-file>Spriter_Animation.scml</scml-file>
                         <starting-entity></starting-entity>
                         <starting-animation></starting-animation>
                         <starting-opacity>100</starting-opacity>
