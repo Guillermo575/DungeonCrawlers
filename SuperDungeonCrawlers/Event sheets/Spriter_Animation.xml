@@ -411,10 +411,17 @@
                 <event-block sid="205226831100650">
                     <conditions>
                         <condition id="-22" name="Else" sid="693530958163831" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="621699983549543" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-8" name="Set angle" sid="678171101642061" type="Scml_Player_Top">
-                            <param id="0" name="Angle">Family_Character.Rotate</param>
+                        <action id="0" name="Set animation" sid="690678915598177" type="Scml_Player_Top">
+                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Jump&quot;</param>
+                            <param id="1" name="Where to start playing this animation">1</param>
+                            <param id="2" name="Blend Duration">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -462,28 +469,61 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block any="1" sid="167319199069521">
+                        <event-block sid="309629198658538">
                             <conditions>
-                                <condition behavior="FC_8Direction" id="0" name="Is moving" sid="224929122482954" type="Family_Character" />
-                                <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="410656108849748" type="Family_Character" />
+                                <condition id="-7" name="Compare instance variable" sid="452665539256818" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="167319199069521">
+                                    <conditions>
+                                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="224929122482954" type="Family_Character" />
+                                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="410656108849748" type="Family_Character" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="885418304133436" type="Scml_Player_Bottom">
+                                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">1</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="828720974036065">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="821170671302929" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set animation" sid="288605401390807" type="Scml_Player_Bottom">
+                                            <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
+                                            <param id="1" name="Where to start playing this animation">1</param>
+                                            <param id="2" name="Blend Duration">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="717777661603569">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="380130741564251" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="275637618224114" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set animation" sid="885418304133436" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                <action id="0" name="Set animation" sid="181360011404707" type="Scml_Player_Bottom">
+                                    <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Jump&quot;</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="828720974036065">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="821170671302929" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set animation" sid="288605401390807" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
-                                    <param id="1" name="Where to start playing this animation">1</param>
-                                    <param id="2" name="Blend Duration">0</param>
+                                <action id="-7" name="Set size" sid="482029530778759" type="PlayerShadow">
+                                    <param id="0" name="Width"> PlayerShadow.Width*0.8</param>
+                                    <param id="1" name="Height"> PlayerShadow.Height*0.8</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -520,6 +560,12 @@
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="573843767178582" type="Family_Character">
                     <param id="0" name="Unique ID">Scml_Player_Top.Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="588699466129796" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
                 </condition>
             </conditions>
             <actions />
@@ -1086,6 +1132,46 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="559872856635270">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="152064601695389" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="105334917454707" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionStep</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="172201538305409" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionStep</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="390006641132909" type="System">
+                            <param id="0" name="Variable">ActionSelected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set playback speed ratio" sid="628484789149475" type="Scml_Player_Top">
+                            <param id="0" name="Speed Ratio">1</param>
+                        </action>
+                        <action id="1" name="Set playback speed ratio" sid="330071831804350" type="Scml_Player_Bottom">
+                            <param id="0" name="Speed Ratio">1</param>
+                        </action>
+                        <action id="0" name="Set animation" sid="738981908367218" type="Scml_Player_Top">
+                            <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Jump&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="0" name="Set animation" sid="236359980274577" type="Scml_Player_Bottom">
+                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Jump&quot;</param>
+                            <param id="1" name="Where to start playing this animation">0</param>
+                            <param id="2" name="Blend Duration">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="900039540751498">
                     <conditions>
