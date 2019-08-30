@@ -2644,7 +2644,6 @@
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
-                <instance-variable name="Rotate" sid="889290005898326" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FC_8Direction" sid="182952999122772">

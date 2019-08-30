@@ -373,9 +373,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-8" name="Set angle" sid="766574518225439" type="Scml_Player_Top">
-                            <param id="0" name="Angle">Family_Character.Rotate</param>
-                        </action>
                         <action id="1" name="Set playback speed ratio" sid="724782269413518" type="Scml_Player_Top">
                             <param id="0" name="Speed Ratio">1</param>
                         </action>
@@ -460,9 +457,6 @@
                         <action id="-7" name="Set size" sid="121286836626197" type="PlayerShadow">
                             <param id="0" name="Width">12 + PlayerShadow.FP_Sine.Value/80</param>
                             <param id="1" name="Height">10+ PlayerShadow.FP_Sine.Value/80</param>
-                        </action>
-                        <action disabled="1" id="-8" name="Set angle" sid="630500281489982" type="Scml_Player_Bottom">
-                            <param id="0" name="Angle">Family_Character.Rotate</param>
                         </action>
                         <action id="1" name="Set playback speed ratio" sid="179099051034513" type="Scml_Player_Bottom">
                             <param id="0" name="Speed Ratio">1</param>

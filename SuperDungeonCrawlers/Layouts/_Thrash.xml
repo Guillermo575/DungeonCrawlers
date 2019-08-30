@@ -591,7 +591,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <Rotate>0</Rotate>
                         <Group>Enemy</Group>
                         <TypeObject>Melee</TypeObject>
                         <PushImpact>100</PushImpact>
@@ -823,7 +822,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <Rotate>0</Rotate>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
