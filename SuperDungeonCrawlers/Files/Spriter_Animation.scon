@@ -1472,7 +1472,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -1509,7 +1509,7 @@
 									"bone": {
 										"angle": 150,
 										"x": -5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 200
@@ -1545,7 +1545,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -1581,7 +1581,7 @@
 									"bone": {
 										"angle": 0,
 										"x": 5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -1617,7 +1617,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 5,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -1654,7 +1654,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 200
@@ -1770,17 +1770,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -1796,17 +1793,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -1824,18 +1818,15 @@
 										"folder": 3,
 										"x": -1,
 										"y": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3,
 										"x": -1
 									},
-									"spin": 0,
 									"time": 200
 								},
 								{
@@ -1862,17 +1853,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -6881,7 +6869,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -6918,7 +6906,7 @@
 									"bone": {
 										"angle": 150,
 										"x": -5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 200
@@ -6954,7 +6942,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -6990,7 +6978,7 @@
 									"bone": {
 										"angle": 0,
 										"x": 5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -7026,7 +7014,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 5,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -7063,7 +7051,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 200
@@ -7154,17 +7142,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -7180,17 +7165,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -7206,17 +7188,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -7232,17 +7211,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -12232,7 +12208,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -12269,7 +12245,7 @@
 									"bone": {
 										"angle": 150,
 										"x": -5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 200
@@ -12305,7 +12281,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -12341,7 +12317,7 @@
 									"bone": {
 										"angle": 0,
 										"x": 5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -12377,7 +12353,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 5,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -12414,7 +12390,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 200
@@ -12505,17 +12481,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -12531,17 +12504,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -12557,17 +12527,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -12583,17 +12550,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -17582,7 +17546,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -17619,7 +17583,7 @@
 									"bone": {
 										"angle": 150,
 										"x": -4,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 200
@@ -17655,7 +17619,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -17691,7 +17655,7 @@
 									"bone": {
 										"angle": 0,
 										"x": 5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -17727,7 +17691,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 5,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -17764,7 +17728,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 200
@@ -17855,17 +17819,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -17881,17 +17842,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -17907,17 +17865,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -17933,17 +17888,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -22940,7 +22892,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -22977,7 +22929,7 @@
 									"bone": {
 										"angle": 180,
 										"x": -5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 200
@@ -23013,7 +22965,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -23049,7 +23001,7 @@
 									"bone": {
 										"angle": 0,
 										"x": 5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -23085,7 +23037,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 5,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -23122,7 +23074,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 200
@@ -23213,17 +23165,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -23239,17 +23188,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -23265,17 +23211,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -23291,17 +23234,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 200
 								}
 							],
@@ -28276,7 +28216,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -28312,7 +28252,7 @@
 									"bone": {
 										"angle": 0,
 										"x": 5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -28349,7 +28289,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -28386,7 +28326,7 @@
 									"bone": {
 										"angle": 180,
 										"x": -5,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 250
@@ -28422,7 +28362,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 250
@@ -28457,7 +28397,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 5,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -28549,17 +28489,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -28575,17 +28512,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -28601,17 +28535,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -28627,17 +28558,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -33083,7 +33011,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -33120,7 +33048,7 @@
 									"bone": {
 										"angle": 175,
 										"x": -3,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"time": 250
@@ -33156,7 +33084,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -33192,7 +33120,7 @@
 									"bone": {
 										"angle": 15,
 										"x": 3,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"spin": -1,
@@ -33227,7 +33155,7 @@
 									"bone": {
 										"angle": 340,
 										"x": 4,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"spin": -1,
@@ -33264,7 +33192,7 @@
 									"bone": {
 										"angle": 200,
 										"x": -3,
-										"y": 14
+										"y": 20
 									},
 									"id": 1,
 									"time": 250
@@ -33355,17 +33283,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -33381,17 +33306,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -33407,17 +33329,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -33433,17 +33352,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -39149,7 +39065,7 @@
 									"bone": {
 										"angle": 270,
 										"scale_x": 0.70204,
-										"y": 20
+										"y": 26
 									},
 									"id": 1,
 									"spin": 0,
@@ -39186,7 +39102,7 @@
 									"bone": {
 										"angle": 170,
 										"x": -1,
-										"y": 21
+										"y": 27
 									},
 									"id": 1,
 									"time": 250
@@ -39221,7 +39137,7 @@
 									"bone": {
 										"angle": 90,
 										"scale_x": 1.36288,
-										"y": 22
+										"y": 28
 									},
 									"id": 1,
 									"spin": 0,
@@ -39257,7 +39173,7 @@
 									"bone": {
 										"angle": 10,
 										"x": 4,
-										"y": 23
+										"y": 29
 									},
 									"id": 1,
 									"spin": -1,
@@ -39292,7 +39208,7 @@
 									"bone": {
 										"angle": 5,
 										"x": 4,
-										"y": 14
+										"y": 20
 									},
 									"id": 1,
 									"spin": -1,
@@ -39329,7 +39245,7 @@
 									"bone": {
 										"angle": 195,
 										"x": -3,
-										"y": 12
+										"y": 18
 									},
 									"id": 1,
 									"time": 250
@@ -39420,17 +39336,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -39446,17 +39359,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 1
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -39472,17 +39382,14 @@
 										"angle": 0,
 										"file": 0,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
@@ -39498,17 +39405,14 @@
 										"angle": 0,
 										"file": 1,
 										"folder": 3
-									},
-									"spin": 0
+									}
 								},
 								{
 									"id": 1,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
-									"spin": 0,
 									"time": 250
 								}
 							],
