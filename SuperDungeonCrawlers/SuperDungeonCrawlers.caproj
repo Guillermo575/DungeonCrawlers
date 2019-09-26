@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.Simple</app-id>
     <unique-id>1nkqko0mwmx1r</unique-id>
-    <saved-with-version>26900</saved-with-version>
+    <saved-with-version>27200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -2242,6 +2242,90 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="Object_Generic" sid="971425478618534">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Id used for the inventory.xml" name="XMLID" sid="168003086020901" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="915364440319450" speed="0">
+                            <frame duration="1" hotspotX="0.178571" hotspotY="0.545455">
+                                <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Sword" pingpong="0" repeatcount="1" repeatto="0" sid="709749642672883" speed="0">
+                            <frame duration="1" hotspotX="0.178571" hotspotY="0.545455">
+                                <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Axe" pingpong="0" repeatcount="1" repeatto="0" sid="765353060614193" speed="5">
+                            <frame duration="1" hotspotX="0.388889" hotspotY="0.466667" original-source="C:\Users\MasterRace\Desktop\zz.png">
+                                <collision-poly>
+                                    <point x="0.333333" y="0.4" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.888889" y="0.133333" />
+                                    <point x="0.888889" y="0.466667" />
+                                    <point x="0.444444" y="0.466667" />
+                                    <point x="0.833333" y="0.466667" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Bow" pingpong="0" repeatcount="1" repeatto="0" sid="592196287931002" speed="5">
+                            <frame duration="1" hotspotX="0.1875" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Object_Bow.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.222222" />
+                                    <point x="0.5" y="0.111111" />
+                                    <point x="0.8125" y="0.166667" />
+                                    <point x="0.9375" y="0.5" />
+                                    <point x="0.8125" y="0.833333" />
+                                    <point x="0.5" y="0.888889" />
+                                    <point x="0.375" y="0.666667" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Spear" pingpong="0" repeatcount="1" repeatto="0" sid="424707695975634" speed="5">
+                            <frame duration="1" hotspotX="0.107143" hotspotY="0.545455" original-source="C:\Users\MasterRace\Desktop\Object_Spear.png">
+                                <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.454545" />
+                                    <point x="0.892857" y="0.272727" />
+                                    <point x="0.964286" y="0.454545" />
+                                    <point x="0.892857" y="0.727273" />
+                                    <point x="0.5" y="0.545455" />
+                                    <point x="0.178571" y="0.545455" />
+                                    <point x="0.0357143" y="0.454545" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Wand" pingpong="0" repeatcount="1" repeatto="0" sid="571877873533666" speed="5">
+                            <frame duration="1" hotspotX="0.333333" hotspotY="0.384615" original-source="C:\Users\MasterRace\Desktop\Object_Wand.png">
+                                <collision-poly>
+                                    <point x="0.185185" y="0.384615" />
+                                    <point x="0.481481" y="0.230769" />
+                                    <point x="0.925926" y="0.153846" />
+                                    <point x="0.888889" y="0.461538" />
+                                    <point x="0.777778" y="0.538462" />
+                                    <point x="0.481481" y="0.384615" />
+                                    <point x="0.259259" y="0.461538" />
+                                    <point x="0.740741" y="0.461538" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Impacts">
                 <object-type name="Impact_Slash" sid="701086861842356">
@@ -2673,6 +2757,7 @@
             <members>
                 <member>Object_Axe</member>
                 <member>Object_Bow</member>
+                <member>Object_Generic</member>
                 <member>Object_Key</member>
                 <member>Object_Spear</member>
                 <member>Object_Sword</member>
@@ -2700,6 +2785,7 @@
                 <member>DoorDungeon</member>
                 <member>Object_Axe</member>
                 <member>Object_Bow</member>
+                <member>Object_Generic</member>
                 <member>Object_Key</member>
                 <member>Object_Spear</member>
                 <member>Object_Sword</member>
@@ -2732,6 +2818,7 @@
                 <member>Impact_Fireball</member>
                 <member>Impact_Slash</member>
                 <member>Object_Axe</member>
+                <member>Object_Generic</member>
                 <member>Object_Key</member>
                 <member>Object_Spear</member>
                 <member>Object_Sword</member>
