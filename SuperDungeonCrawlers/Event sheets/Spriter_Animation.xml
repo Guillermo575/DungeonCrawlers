@@ -167,36 +167,36 @@
                 <comment>ARM OBJECTS</comment>
                 <event-block sid="661554256191333">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="170746716082434" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="170746716082434" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="299492139190690" type="Family_Objects">
+                        <action id="-4" name="Set position to another object" sid="299492139190690" type="Family_Item">
                             <param id="0" name="Object">PlayerArmLeft</param>
                             <param id="1" name="Image point (optional)">1</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="948598323639518" type="Family_Objects">
+                        <action id="-8" name="Set angle" sid="948598323639518" type="Family_Item">
                             <param id="0" name="Angle">PlayerArmLeft.Angle</param>
                         </action>
-                        <action id="-25" name="Move to bottom" sid="766461847839219" type="Family_Objects" />
+                        <action id="-25" name="Move to bottom" sid="766461847839219" type="Family_Item" />
                     </actions>
                 </event-block>
                 <event-block sid="868393205307302">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="609898658023608" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="609898658023608" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ArmRight</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="407982569633197" type="Family_Objects">
+                        <action id="-4" name="Set position to another object" sid="407982569633197" type="Family_Item">
                             <param id="0" name="Object">PlayerArmRight</param>
                             <param id="1" name="Image point (optional)">1</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="583358654348533" type="Family_Objects">
+                        <action id="-8" name="Set angle" sid="583358654348533" type="Family_Item">
                             <param id="0" name="Angle">PlayerArmRight.Angle</param>
                         </action>
-                        <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Objects" />
+                        <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Item" />
                     </actions>
                 </event-block>
                 <event-block any="1" sid="380075290441014">
@@ -572,7 +572,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;SweepSword&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="264382488850579" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="264382488850579" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="529601212462763" type="Family_Impact">
@@ -648,7 +648,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;HoldSpear&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="912261679628496" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="912261679628496" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="713209562227791" type="Family_Impact">
@@ -751,7 +751,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;HoldAxe&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="390005142914919" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="390005142914919" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="971798814603520" type="Family_Impact">
@@ -781,7 +781,7 @@
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
-                                <action behavior="FO_Timer" id="0" name="Start timer" sid="950975822046243" type="Family_Objects">
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="950975822046243" type="Family_Item">
                                     <param id="0" name="Duration">0.2</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Shoot_Axe&quot;</param>
@@ -827,7 +827,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;HoldWand&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="532812736284391" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="532812736284391" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                     </conditions>
@@ -867,13 +867,13 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="331948113203463" type="System">
-                                            <param id="0" name="First value">Family_Objects.FO_Timer.CurrentTime(&quot;Shoot_Fireball&quot;)</param>
+                                            <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;Shoot_Fireball&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="FO_Timer" id="0" name="Start timer" sid="889298862423295" type="Family_Objects">
+                                        <action behavior="FO_Timer" id="0" name="Start timer" sid="889298862423295" type="Family_Item">
                                             <param id="0" name="Duration">0.3</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
@@ -898,7 +898,7 @@
                                     <param id="0" name="Instance variable">ActionStep</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="FO_Timer" id="0" name="Start timer" sid="807334904204291" type="Family_Objects">
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="807334904204291" type="Family_Item">
                                     <param id="0" name="Duration">0.01</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
@@ -972,7 +972,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="FO_Timer" id="1" name="Stop timer" sid="363030283637445" type="Family_Objects">
+                                <action behavior="FO_Timer" id="1" name="Stop timer" sid="363030283637445" type="Family_Item">
                                     <param id="0" name="Tag">&quot;Shoot_Fireball&quot;</param>
                                 </action>
                             </actions>
@@ -986,7 +986,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;HoldBow&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="481570151103810" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="481570151103810" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                     </conditions>
@@ -1018,13 +1018,13 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="481500734838314" type="System">
-                                            <param id="0" name="First value">Family_Objects.FO_Timer.CurrentTime(&quot;Shoot_Arrow&quot;)</param>
+                                            <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;Shoot_Arrow&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="FO_Timer" id="0" name="Start timer" sid="849312229374933" type="Family_Objects">
+                                        <action behavior="FO_Timer" id="0" name="Start timer" sid="849312229374933" type="Family_Item">
                                             <param id="0" name="Duration">0.6</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
@@ -1046,7 +1046,7 @@
                                     <param id="0" name="Instance variable">ActionStep</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="FO_Timer" id="0" name="Start timer" sid="305002221247196" type="Family_Objects">
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="305002221247196" type="Family_Item">
                                     <param id="0" name="Duration">0.01</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
@@ -1120,7 +1120,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="FO_Timer" id="1" name="Stop timer" sid="599655262632238" type="Family_Objects">
+                                <action behavior="FO_Timer" id="1" name="Stop timer" sid="599655262632238" type="Family_Item">
                                     <param id="0" name="Tag">&quot;Shoot_Arrow&quot;</param>
                                 </action>
                             </actions>

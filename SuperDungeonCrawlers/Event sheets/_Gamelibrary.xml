@@ -375,7 +375,7 @@
                     <param id="1" name="Time scale">0</param>
                 </action>
                 <action id="-14" name="Set object time scale" sid="183530124018458" type="System">
-                    <param id="0" name="Object">Family_Objects</param>
+                    <param id="0" name="Object">Family_Item</param>
                     <param id="1" name="Time scale">0</param>
                 </action>
                 <action id="5" name="Pause animation" sid="818063470796713" type="Family_Spriter" />
@@ -401,7 +401,7 @@
                     <param id="1" name="Time scale">1</param>
                 </action>
                 <action id="-14" name="Set object time scale" sid="386075963492982" type="System">
-                    <param id="0" name="Object">Family_Objects</param>
+                    <param id="0" name="Object">Family_Item</param>
                     <param id="1" name="Time scale">1</param>
                 </action>
                 <action id="6" name="Resume animation" sid="563643683984845" type="Family_Spriter" />

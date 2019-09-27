@@ -274,13 +274,13 @@
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                                                 </action>
                                                 <action id="0" name="Spawn another object" sid="303926938998055" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">Object_Sword</param>
+                                                    <param id="0" name="Object">Item_Sword</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="186931529067979" type="Function">
                                                     <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Sword.UID</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Sword.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -302,13 +302,13 @@
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                                                 </action>
                                                 <action id="0" name="Spawn another object" sid="333481627216280" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">Object_Wand</param>
+                                                    <param id="0" name="Object">Item_Wand</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="718849276530959" type="Function">
                                                     <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Wand.UID</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Wand.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -322,7 +322,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="820140890843020" type="BlockDungeon">
-                                                    <param id="0" name="Object">Object_Sword</param>
+                                                    <param id="0" name="Object">Item_Sword</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
@@ -338,7 +338,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="374237846267102" type="BlockDungeon">
-                                                    <param id="0" name="Object">Object_Bow</param>
+                                                    <param id="0" name="Object">Item_Bow</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
@@ -354,7 +354,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="240073430892172" type="BlockDungeon">
-                                                    <param id="0" name="Object">Object_Axe</param>
+                                                    <param id="0" name="Object">Item_Axe</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
@@ -370,7 +370,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="301737901552647" type="BlockDungeon">
-                                                    <param id="0" name="Object">Object_Wand</param>
+                                                    <param id="0" name="Object">Item_Wand</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
@@ -386,7 +386,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="202762173835095" type="BlockDungeon">
-                                                    <param id="0" name="Object">Object_Key</param>
+                                                    <param id="0" name="Object">Item_Key</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
@@ -402,7 +402,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="689746731697200" type="BlockDungeon">
-                                                    <param id="0" name="Object">Potionheart</param>
+                                                    <param id="0" name="Object">Item_Potion</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>

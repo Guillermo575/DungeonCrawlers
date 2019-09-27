@@ -41,13 +41,13 @@
                             <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="813787629010249" type="EnemyCoreBox">
-                            <param id="0" name="Object">Object_Sword</param>
+                            <param id="0" name="Object">Item_Sword</param>
                             <param id="1" name="Layer">&quot;Characters&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
                         <action id="0" name="Call function" sid="959534666560613" type="Function">
                             <param id="0" name="Name">&quot;PickObject&quot;</param>
-                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Object_Sword.UID</param>
+                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Sword.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -315,7 +315,7 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="355266142706194" type="Boss_Dragon_Head" />
-                <action id="-3" name="Set position" sid="671719449447529" type="Object_Key">
+                <action id="-3" name="Set position" sid="671719449447529" type="Item_Key">
                     <param id="0" name="X">250</param>
                     <param id="1" name="Y">50</param>
                 </action>

@@ -2131,8 +2131,8 @@
             </object-type>
         </object-folder>
         <object-folder name="GamePlay">
-            <object-folder name="Objects">
-                <object-type name="Object_Sword" sid="995720059400956">
+            <object-folder name="Items">
+                <object-type name="Item_Sword" sid="995720059400956">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Object_Sword" pingpong="0" repeatcount="1" repeatto="0" sid="480861227525951" speed="0">
@@ -2148,7 +2148,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Object_Wand" sid="570642942497581">
+                <object-type name="Item_Wand" sid="570642942497581">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Object_Wand" pingpong="0" repeatcount="1" repeatto="0" sid="605359823466774" speed="0">
@@ -2163,7 +2163,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Potionheart" sid="774482982143141">
+                <object-type name="Item_Potion" sid="774482982143141">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="434211519474696" speed="5">
@@ -2181,7 +2181,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Object_Spear" sid="510621187954028">
+                <object-type name="Item_Spear" sid="510621187954028">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Object_Sword" pingpong="0" repeatcount="1" repeatto="0" sid="924115357646486" speed="0">
@@ -2197,7 +2197,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Object_Key" sid="704374649094210">
+                <object-type name="Item_Key" sid="704374649094210">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Object_Key" pingpong="0" repeatcount="1" repeatto="0" sid="644128353361280" speed="0">
@@ -2212,7 +2212,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Object_Bow" sid="793965329642684">
+                <object-type name="Item_Bow" sid="793965329642684">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Object_Bow" pingpong="0" repeatcount="1" repeatto="0" sid="290334102596260" speed="0">
@@ -2227,7 +2227,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Object_Axe" sid="120960824708860">
+                <object-type name="Item_Axe" sid="120960824708860">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Object_Axe" pingpong="0" repeatcount="1" repeatto="0" sid="796454017087924" speed="0">
@@ -2242,7 +2242,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Object_Generic" sid="971425478618534">
+                <object-type name="Item_Generic" sid="971425478618534">
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable comment="Id used for the inventory.xml" name="XMLID" sid="168003086020901" type="string" />
@@ -2753,21 +2753,21 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Family_Objects" plugin-id="Sprite" sid="388695614152843">
+        <family name="Family_Item" plugin-id="Sprite" sid="388695614152843">
             <members>
-                <member>Object_Axe</member>
-                <member>Object_Bow</member>
-                <member>Object_Generic</member>
-                <member>Object_Key</member>
-                <member>Object_Spear</member>
-                <member>Object_Sword</member>
-                <member>Object_Wand</member>
+                <member>Item_Axe</member>
+                <member>Item_Bow</member>
+                <member>Item_Generic</member>
+                <member>Item_Key</member>
+                <member>Item_Spear</member>
+                <member>Item_Sword</member>
+                <member>Item_Wand</member>
             </members>
             <instance-variables>
                 <instance-variable name="Function_Press" sid="371367740854561" type="string" />
                 <instance-variable name="Function_UnPress" sid="756473271570479" type="string" />
                 <instance-variable name="Function_Param" sid="627093042429088" type="string" />
-                <instance-variable name="Distance" sid="738846373543169" type="string" />
+                <instance-variable comment="short item info" name="Information" sid="738846373543169" type="string" />
                 <instance-variable comment="This object has limit uses" name="HasAmmo" sid="945768496343859" type="boolean" />
                 <instance-variable comment="Limit uses if applies" name="Ammo" sid="826294847455027" type="number" />
             </instance-variables>
@@ -2783,13 +2783,13 @@
         <family name="Family_Pressed" plugin-id="Sprite" sid="233578296681315">
             <members>
                 <member>DoorDungeon</member>
-                <member>Object_Axe</member>
-                <member>Object_Bow</member>
-                <member>Object_Generic</member>
-                <member>Object_Key</member>
-                <member>Object_Spear</member>
-                <member>Object_Sword</member>
-                <member>Object_Wand</member>
+                <member>Item_Axe</member>
+                <member>Item_Bow</member>
+                <member>Item_Generic</member>
+                <member>Item_Key</member>
+                <member>Item_Spear</member>
+                <member>Item_Sword</member>
+                <member>Item_Wand</member>
             </members>
             <instance-variables>
                 <instance-variable comment="If the value is true, the message is displayed" name="Ocuppied" sid="563647826040951" type="boolean" />
@@ -2817,11 +2817,11 @@
                 <member>Impact_Axe</member>
                 <member>Impact_Fireball</member>
                 <member>Impact_Slash</member>
-                <member>Object_Axe</member>
-                <member>Object_Generic</member>
-                <member>Object_Key</member>
-                <member>Object_Spear</member>
-                <member>Object_Sword</member>
+                <member>Item_Axe</member>
+                <member>Item_Generic</member>
+                <member>Item_Key</member>
+                <member>Item_Spear</member>
+                <member>Item_Sword</member>
             </members>
             <instance-variables>
                 <instance-variable comment="if the character type if different that this value, that receive damage" name="Group" sid="615762410693189" type="string" />
@@ -2871,7 +2871,7 @@
         <family name="Family_MiniMap_Icon" plugin-id="Sprite" sid="214154942612153">
             <members>
                 <member>DoorDungeon</member>
-                <member>Object_Key</member>
+                <member>Item_Key</member>
                 <member>PlayerCoreBox</member>
             </members>
             <instance-variables>

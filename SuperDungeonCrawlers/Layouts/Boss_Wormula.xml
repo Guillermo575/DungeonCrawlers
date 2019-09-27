@@ -240,7 +240,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Object_Key" uid="119">
+                <instance type="Item_Key" uid="119">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -251,7 +251,7 @@
                         <Function_Press>Press_Object</Function_Press>
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param>SweepSword</Function_Param>
-                        <Distance>Solo</Distance>
+                        <Information>Solo</Information>
                         <HasAmmo>false</HasAmmo>
                         <Ammo>0</Ammo>
                         <Ocuppied>false</Ocuppied>
@@ -335,7 +335,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Object_Wand" uid="142">
+                <instance type="Item_Wand" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -346,7 +346,7 @@
                         <Function_Press>Press_Object</Function_Press>
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param>HoldWand</Function_Param>
-                        <Distance>Long</Distance>
+                        <Information>Long</Information>
                         <HasAmmo>true</HasAmmo>
                         <Ammo>30</Ammo>
                         <Ocuppied>false</Ocuppied>

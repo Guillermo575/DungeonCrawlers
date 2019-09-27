@@ -270,26 +270,26 @@
             <sub-events>
                 <event-block sid="508166922995707">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="586378004004671" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="586378004004671" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="655085987455607" type="HUD_Object_Left">
-                            <param id="0" name="Animation">Family_Objects.AnimationName</param>
+                            <param id="0" name="Animation">Family_Item.AnimationName</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="747229275301870">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="485925201807792" type="Family_Objects">
+                                <condition id="-8" name="Is boolean instance variable set" sid="485925201807792" type="Family_Item">
                                     <param id="0" name="Instance variable">HasAmmo</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="686934956903321" type="HUD_Object_Left_Text">
-                                    <param id="0" name="Text">Family_Objects.Ammo</param>
+                                    <param id="0" name="Text">Family_Item.Ammo</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -364,26 +364,26 @@
             <sub-events>
                 <event-block sid="721066450908834">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="936786300885824" type="Family_Objects">
+                        <condition id="-14" name="Pick by unique ID" sid="936786300885824" type="Family_Item">
                             <param id="0" name="Unique ID">Family_Character.ArmRight</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="371247109555932" type="HUD_Object_Right">
-                            <param id="0" name="Animation">Family_Objects.AnimationName</param>
+                            <param id="0" name="Animation">Family_Item.AnimationName</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="890567466618363">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="898828892007982" type="Family_Objects">
+                                <condition id="-8" name="Is boolean instance variable set" sid="898828892007982" type="Family_Item">
                                     <param id="0" name="Instance variable">HasAmmo</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="223573230447423" type="HUD_Object_Right_Text">
-                                    <param id="0" name="Text">Family_Objects.Ammo</param>
+                                    <param id="0" name="Text">Family_Item.Ammo</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -442,7 +442,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="480607800479919" type="HUD_Key_Text">
-                    <param id="0" name="Text">Object_Key.Count</param>
+                    <param id="0" name="Text">Item_Key.Count</param>
                 </action>
             </actions>
         </event-block>

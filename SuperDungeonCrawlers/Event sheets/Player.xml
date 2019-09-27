@@ -127,14 +127,14 @@
                                     <param id="0" name="Key">32</param>
                                 </condition>
                                 <condition id="1" name="Is overlapping another object" sid="215268347040969" type="PlayerCoreBox">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                 </condition>
-                                <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Family_Objects" />
+                                <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Family_Item" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="785205971480943" type="Function">
                                     <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Family_Objects.UID</param>
+                                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Family_Item.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -171,10 +171,10 @@
                                     <param id="0" name="Key">90</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="128897976769239" type="System">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                     <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                    <param id="3" name="Value">Family_Item.UID</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="188447934024857" type="System">
                                     <param id="0" name="Object">Scml_Player_Top</param>
@@ -185,8 +185,8 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="730196207191278" type="Function">
-                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
-                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                    <param id="0" name="Name">Family_Item.Function_Press</param>
+                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -196,10 +196,10 @@
                                     <param id="0" name="Key">90</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="943988295773566" type="System">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                     <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                    <param id="3" name="Value">Family_Item.UID</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="949142986316467" type="System">
                                     <param id="0" name="Object">Scml_Player_Top</param>
@@ -210,8 +210,8 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="136150753744646" type="Function">
-                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
-                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
+                                    <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -221,10 +221,10 @@
                                     <param id="0" name="Key">88</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="778166072255552" type="System">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                     <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                    <param id="3" name="Value">Family_Item.UID</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="289020171486983" type="System">
                                     <param id="0" name="Object">Scml_Player_Top</param>
@@ -235,8 +235,8 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="711055083936491" type="Function">
-                                    <param id="0" name="Name">Family_Objects.Function_Press</param>
-                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                    <param id="0" name="Name">Family_Item.Function_Press</param>
+                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -246,10 +246,10 @@
                                     <param id="0" name="Key">88</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="646224727903511" type="System">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                     <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                    <param id="3" name="Value">Family_Item.UID</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="642866240290904" type="System">
                                     <param id="0" name="Object">Scml_Player_Top</param>
@@ -260,8 +260,8 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="139838787754247" type="Function">
-                                    <param id="0" name="Name">Family_Objects.Function_UnPress</param>
-                                    <param id="1" name="Parameter {n}">Family_Objects.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
+                                    <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -405,9 +405,9 @@
                 <event-block sid="686354038349201">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="472940061286875" type="PlayerCoreBox">
-                            <param id="0" name="Object">Family_Objects</param>
+                            <param id="0" name="Object">Family_Item</param>
                         </condition>
-                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="422001211082966" type="Family_Objects" />
+                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="422001211082966" type="Family_Item" />
                         <condition id="-33" name="Pick by comparison" sid="510808992698627" type="System">
                             <param id="0" name="Object">Map_Keyboard_Indicator</param>
                             <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
@@ -532,11 +532,11 @@
                 </event-block>
                 <event-block sid="857437328238559">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="580271703702190" type="Object_Key">
+                        <condition id="1" name="Is overlapping another object" sid="580271703702190" type="Item_Key">
                             <param id="0" name="Object">DoorDungeon</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="806384486648735" type="System">
-                            <param id="0" name="First value">Object_Key.FO_Pin2.PinnedUID</param>
+                            <param id="0" name="First value">Item_Key.FO_Pin2.PinnedUID</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">PlayerCoreBox.UID</param>
                         </condition>
@@ -553,7 +553,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="916518188690602" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">ArmLeft</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Object_Key.UID</param>
+                                    <param id="2" name="Value">Item_Key.UID</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -561,7 +561,7 @@
                                     <param id="0" name="Instance variable">ArmLeft</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="395061263253564" type="Object_Key" />
+                                <action id="-9" name="Destroy" sid="395061263253564" type="Item_Key" />
                             </actions>
                         </event-block>
                         <event-block sid="964262380461742">
@@ -569,7 +569,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="574413282753187" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">ArmRight</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Object_Key.UID</param>
+                                    <param id="2" name="Value">Item_Key.UID</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -577,7 +577,7 @@
                                     <param id="0" name="Instance variable">ArmRight</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="117027021364332" type="Object_Key" />
+                                <action id="-9" name="Destroy" sid="117027021364332" type="Item_Key" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -590,7 +590,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="761798937040516" type="System">
-                            <param id="0" name="First value">Object_Key.Count</param>
+                            <param id="0" name="First value">Item_Key.Count</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
@@ -789,20 +789,20 @@
                         <event-block sid="467465804205034">
                             <conditions>
                                 <condition id="-33" name="Pick by comparison" sid="958781608499963" type="System">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                     <param id="1" name="Expression">Family_Character.ArmLeft</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                    <param id="3" name="Value">Family_Item.UID</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Add key" sid="150548018670714" type="Player_Log">
                                     <param id="0" name="Key">&quot;PlayerObjectLeft&quot; </param>
-                                    <param id="1" name="Value">Family_Objects.AnimationName</param>
+                                    <param id="1" name="Value">Family_Item.AnimationName</param>
                                 </action>
                                 <action id="0" name="Add key" sid="333288556364671" type="Player_Log">
                                     <param id="0" name="Key">&quot;PlayerObjectLeft_Ammo&quot; </param>
-                                    <param id="1" name="Value">Family_Objects.Ammo</param>
+                                    <param id="1" name="Value">Family_Item.Ammo</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -822,20 +822,20 @@
                         <event-block sid="229660110865557">
                             <conditions>
                                 <condition id="-33" name="Pick by comparison" sid="194161238521897" type="System">
-                                    <param id="0" name="Object">Family_Objects</param>
+                                    <param id="0" name="Object">Family_Item</param>
                                     <param id="1" name="Expression">Family_Character.ArmRight</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Objects.UID</param>
+                                    <param id="3" name="Value">Family_Item.UID</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Add key" sid="502461494563458" type="Player_Log">
                                     <param id="0" name="Key">&quot;PlayerObjectRight&quot; </param>
-                                    <param id="1" name="Value">Family_Objects.AnimationName</param>
+                                    <param id="1" name="Value">Family_Item.AnimationName</param>
                                 </action>
                                 <action id="0" name="Add key" sid="512280672271546" type="Player_Log">
                                     <param id="0" name="Key">&quot;PlayerObjectRight_Ammo&quot; </param>
-                                    <param id="1" name="Value">Family_Objects.Ammo</param>
+                                    <param id="1" name="Value">Family_Item.Ammo</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -960,13 +960,13 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="979982071970997" type="Family_Character">
-                                    <param id="0" name="Object">Object_Sword</param>
+                                    <param id="0" name="Object">Item_Sword</param>
                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="261594468143256" type="Function">
                                     <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Sword.UID</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Sword.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -980,13 +980,13 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="302467607474191" type="Family_Character">
-                                    <param id="0" name="Object">Object_Axe</param>
+                                    <param id="0" name="Object">Item_Axe</param>
                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="416774478662839" type="Function">
                                     <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Axe.UID</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Axe.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1000,15 +1000,15 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="447041636292448" type="Family_Character">
-                                    <param id="0" name="Object">Object_Wand</param>
+                                    <param id="0" name="Object">Item_Wand</param>
                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="189600174503712" type="Function">
                                     <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Wand.UID</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Wand.UID</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="595320031351253" type="Object_Wand">
+                                <action id="-10" name="Set value" sid="595320031351253" type="Item_Wand">
                                     <param id="0" name="Instance variable">Ammo</param>
                                     <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerObject&quot;&amp;Function.Param(2)&amp;&quot;_Ammo&quot;))</param>
                                 </action>
@@ -1024,15 +1024,15 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="136726049610218" type="Family_Character">
-                                    <param id="0" name="Object">Object_Bow</param>
+                                    <param id="0" name="Object">Item_Bow</param>
                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="966552732326611" type="Function">
                                     <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Object_Bow.UID</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Bow.UID</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="285518786203809" type="Object_Bow">
+                                <action id="-10" name="Set value" sid="285518786203809" type="Item_Bow">
                                     <param id="0" name="Instance variable">Ammo</param>
                                     <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerObject&quot;&amp;Function.Param(2)&amp;&quot;_Ammo&quot;))</param>
                                 </action>

@@ -280,7 +280,7 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="268014497449573" type="boss_worm_head" />
-                <action id="-3" name="Set position" sid="393328319227182" type="Object_Key">
+                <action id="-3" name="Set position" sid="393328319227182" type="Item_Key">
                     <param id="0" name="X">250</param>
                     <param id="1" name="Y">250</param>
                 </action>
