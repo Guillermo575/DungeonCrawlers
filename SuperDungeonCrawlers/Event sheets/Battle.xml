@@ -532,6 +532,10 @@
                 <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="531290889089918" type="Impact_Fireball">
                     <param id="0" name="Angle">Family_Item.Angle</param>
                 </action>
+                <action id="-10" name="Set value" sid="236247822812027" type="Impact_Fireball">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
                 <action id="-10" name="Set value" sid="891277585747763" type="Impact_Fireball">
                     <param id="0" name="Instance variable">Damage</param>
                     <param id="1" name="Value">int(Impact_Fireball.Damage * Family_Character.BonusDamageMult)</param>
@@ -580,6 +584,10 @@
                 </action>
                 <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="549107930078149" type="Impact_Arrow">
                     <param id="0" name="Angle">Family_Item.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="874263741533974" type="Impact_Arrow">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
                 </action>
                 <action id="-10" name="Set value" sid="988713940658716" type="Impact_Arrow">
                     <param id="0" name="Instance variable">Damage</param>
@@ -632,6 +640,10 @@
                 <action behavior="FI_Bullet" id="0" name="Set speed" sid="804715127029011" type="Impact_Axe">
                     <param id="0" name="Speed">200</param>
                 </action>
+                <action id="-10" name="Set value" sid="234890304340460" type="Impact_Axe">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
                 <action id="-10" name="Set value" sid="158927412158536" type="Impact_Axe">
                     <param id="0" name="Instance variable">Damage</param>
                     <param id="1" name="Value">int(Impact_Axe.Damage * Family_Character.BonusDamageMult)</param>
@@ -664,6 +676,107 @@
                 </action>
                 <action id="-9" name="Destroy" sid="184362761187232" type="Item_Potion" />
             </actions>
+        </event-block>
+        <event-block sid="665059631073096">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="965654841827453" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="211914337409517" type="AJAX">
+                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                    <param id="1" name="URL">&quot;ItemList.xml&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904165081748068">
+            <conditions>
+                <condition id="0" name="On completed" sid="109726787049481" type="AJAX">
+                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="739626777381164" type="XML_Inventory">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="980366089511247">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="710848069954981" type="System">
+                            <param id="0" name="Object">Item_Generic</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="816583520732849" type="Item_Generic">
+                            <param id="0" name="Animation">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Animation/text()&quot;) </param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="287188579973040" type="Item_Generic">
+                            <param id="0" name="Instance variable">Function_Param</param>
+                            <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Function_Command/text()&quot;) </param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="419646821822763">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="771462351044884" type="System">
+                                    <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/text()&quot;) </param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="405139810776417" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Name</param>
+                                    <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Name/text()&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="288094225848350" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Damage</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Damage/text()&quot;) )</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="858173090422619">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="425332361128302" type="System">
+                                    <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Ammo/text()&quot;) </param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="297054811159512" type="Item_Generic">
+                                    <param id="0" name="Instance variable">HasAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="260622005777078" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Ammo</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Ammo/Size/text()&quot;) )</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="598712629742013">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="410644016831630" type="System">
+                                    <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/text()&quot;) </param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="840478133818356" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/Damage/text()&quot;) )</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="571874254729313" type="Item_Generic">
+                                    <param id="0" name="Instance variable">PushImpact</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/PushImpact/text()&quot;) )</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

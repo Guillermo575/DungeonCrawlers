@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ObjectList>
+	<object name='Wand'>
+		<Animation>Object_Wand</Animation>
+		<Function_Command>HoldWand</Function_Command>
+		<Information>Shot Object</Information>
+		<Projectile>
+			<Name>Fireball</Name>
+			<Damage>2</Damage>
+			<PierceWalls>1</PierceWalls>
+			<PierceCharacters>1</PierceCharacters>
+			<PushImpact>30</PushImpact>
+		</Projectile>
+		<Ammo>
+			<Size>20</Size>
+			<Reload>5</Reload>
+		</Ammo>
+	</object>
+	<object name='Sword'>
+		<Animation>Object_Sword</Animation>
+		<Function_Command>SweepSword</Function_Command>
+		<Information>Melee Object</Information>
+		<Melee>
+			<Damage>2</Damage>
+			<PushImpact>30</PushImpact>
+		</Melee>
+	</object>
+</ObjectList>

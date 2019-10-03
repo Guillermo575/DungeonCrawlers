@@ -309,6 +309,8 @@
                         <Information>Short</Information>
                         <HasAmmo>false</HasAmmo>
                         <Ammo>0</Ammo>
+                        <Projectile_Name></Projectile_Name>
+                        <Projectile_Damage>0</Projectile_Damage>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
@@ -369,6 +371,8 @@
                         <Information>Solo</Information>
                         <HasAmmo>false</HasAmmo>
                         <Ammo>0</Ammo>
+                        <Projectile_Name></Projectile_Name>
+                        <Projectile_Damage>0</Projectile_Damage>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
@@ -464,6 +468,8 @@
                         <Information>Short</Information>
                         <HasAmmo>false</HasAmmo>
                         <Ammo>0</Ammo>
+                        <Projectile_Name>Shoot_Axe</Projectile_Name>
+                        <Projectile_Damage>3</Projectile_Damage>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
@@ -524,6 +530,8 @@
                         <Information>Long</Information>
                         <HasAmmo>true</HasAmmo>
                         <Ammo>30</Ammo>
+                        <Projectile_Name>Shoot_Arrow</Projectile_Name>
+                        <Projectile_Damage>2</Projectile_Damage>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                     </instance-variables>
@@ -564,6 +572,8 @@
                         <Information>Long</Information>
                         <HasAmmo>true</HasAmmo>
                         <Ammo>30</Ammo>
+                        <Projectile_Name>Shoot_Fireball</Projectile_Name>
+                        <Projectile_Damage>1</Projectile_Damage>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                     </instance-variables>

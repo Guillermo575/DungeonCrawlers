@@ -2662,6 +2662,9 @@
                 </effects>
                 <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
             </object-type>
+            <object-type global="1" name="XML_Inventory" sid="991783698506225">
+                <plugin id="XML" />
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -2770,6 +2773,8 @@
                 <instance-variable comment="short item info" name="Information" sid="738846373543169" type="string" />
                 <instance-variable comment="This object has limit uses" name="HasAmmo" sid="945768496343859" type="boolean" />
                 <instance-variable comment="Limit uses if applies" name="Ammo" sid="826294847455027" type="number" />
+                <instance-variable name="Projectile_Name" sid="166885192698462" type="string" />
+                <instance-variable name="Projectile_Damage" sid="718197623799836" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FO_Pin2" sid="876962418157441">
@@ -2941,11 +2946,16 @@
     </families>
     <layout-folder>
         <layout-folder name="Levels">
+            <layout-folder name="TrainingRooms">
+                <layout>TrainingRoom.xml</layout>
+                <layout>TrainingRoom2.xml</layout>
+                <layout>TrainingRoom3.xml</layout>
+            </layout-folder>
+            <layout-folder name="BoosRooms">
+                <layout>Boss_Wormula.xml</layout>
+                <layout>Boss_Dragonium.xml</layout>
+            </layout-folder>
             <layout>Dungeon.xml</layout>
-            <layout>TrainingRoom.xml</layout>
-            <layout>TrainingRoom2.xml</layout>
-            <layout>Boss_Wormula.xml</layout>
-            <layout>Boss_Dragonium.xml</layout>
             <layout>Start.xml</layout>
         </layout-folder>
         <layout-folder name="Menu">
@@ -3051,5 +3061,6 @@
             <file name="Spriter_Animation.scon" />
         </file-folder>
         <file name="dialogues.xml" />
+        <file name="ItemList.xml" />
     </files-folder>
 </c2project>
