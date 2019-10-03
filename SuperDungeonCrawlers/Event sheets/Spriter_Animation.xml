@@ -467,8 +467,8 @@
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="452665539256818" type="Family_Character">
                                     <param id="0" name="Instance variable">ActionCommand</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;Jump&quot;</param>
                                 </condition>
                             </conditions>
                             <actions />
