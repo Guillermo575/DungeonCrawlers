@@ -5,7 +5,7 @@
 		<Function_Command>HoldWand</Function_Command>
 		<Information>Shot Object</Information>
 		<Projectile>
-			<Name>Fireball</Name>
+			<Name>Shoot_Fireball</Name>
 			<Damage>2</Damage>
 			<PierceWalls>1</PierceWalls>
 			<PierceCharacters>1</PierceCharacters>

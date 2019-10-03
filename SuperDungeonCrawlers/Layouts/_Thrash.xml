@@ -2706,12 +2706,12 @@
                         <behavior-instance type="FO_Timer" />
                         <behavior-instance type="FI_Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
