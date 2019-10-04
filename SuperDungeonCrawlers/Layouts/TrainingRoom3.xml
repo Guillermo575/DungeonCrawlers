@@ -377,6 +377,10 @@
                         <Ammo>0</Ammo>
                         <Projectile_Name></Projectile_Name>
                         <Projectile_Damage>0</Projectile_Damage>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
+                        <Projectile_PushImpact>0</Projectile_PushImpact>
+                        <Projectile_Duration>0</Projectile_Duration>
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
@@ -386,7 +390,7 @@
                         <Damage>0</Damage>
                         <PierceCharacters>false</PierceCharacters>
                         <PierceWalls>false</PierceWalls>
-                        <TimeDuration>0</TimeDuration>
+                        <TimeDuration>3</TimeDuration>
                         <MakeDamage>false</MakeDamage>
                         <XMLID>Wand</XMLID>
                     </instance-variables>
@@ -440,6 +444,10 @@
                         <Ammo>0</Ammo>
                         <Projectile_Name></Projectile_Name>
                         <Projectile_Damage>0</Projectile_Damage>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
+                        <Projectile_PushImpact>0</Projectile_PushImpact>
+                        <Projectile_Duration>0</Projectile_Duration>
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
@@ -449,7 +457,7 @@
                         <Damage>0</Damage>
                         <PierceCharacters>false</PierceCharacters>
                         <PierceWalls>false</PierceWalls>
-                        <TimeDuration>0</TimeDuration>
+                        <TimeDuration>3</TimeDuration>
                         <MakeDamage>false</MakeDamage>
                         <XMLID>Sword</XMLID>
                     </instance-variables>

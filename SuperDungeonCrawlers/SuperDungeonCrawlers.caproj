@@ -2644,6 +2644,153 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="Impact_Generic" sid="408321716151153">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="322731217162622">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="779166997797258" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Fireball" pingpong="0" repeatcount="1" repeatto="0" sid="386559649079370" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Arrow" pingpong="0" repeatcount="1" repeatto="0" sid="241465551067896" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Arrow\Default\000.png">
+                                <collision-poly>
+                                    <point x="0.05" y="0.1" />
+                                    <point x="0.5" y="0.4" />
+                                    <point x="0.85" y="0.3" />
+                                    <point x="0.95" y="0.5" />
+                                    <point x="0.85" y="0.7" />
+                                    <point x="0.5" y="0.6" />
+                                    <point x="0.05" y="0.9" />
+                                    <point x="0.15" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="8" loop="0" name="Axe" pingpong="0" repeatcount="1" repeatto="0" sid="371104945334341" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\000.png">
+                                <collision-poly>
+                                    <point x="0.333333" y="0.4" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.888889" y="0.133333" />
+                                    <point x="0.888889" y="0.466667" />
+                                    <point x="0.444444" y="0.466667" />
+                                    <point x="0.833333" y="0.466667" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\001.png">
+                                <collision-poly>
+                                    <point x="0.133333" y="0.111111" />
+                                    <point x="0.466667" y="0.111111" />
+                                    <point x="0.466667" y="0.555556" />
+                                    <point x="0.466667" y="0.166667" />
+                                    <point x="0.4" y="0.666667" />
+                                    <point x="0.4" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\002.png">
+                                <collision-poly>
+                                    <point x="0.444444" y="0.533333" />
+                                    <point x="0.555556" y="0.533333" />
+                                    <point x="0.166667" y="0.466667" />
+                                    <point x="0.666667" y="0.6" />
+                                    <point x="0.5" y="0.6" />
+                                    <point x="0.111111" y="0.866667" />
+                                    <point x="0.111111" y="0.466667" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\003.png">
+                                <collision-poly>
+                                    <point x="0.533333" y="0.444444" />
+                                    <point x="0.466667" y="0.833333" />
+                                    <point x="0.6" y="0.333333" />
+                                    <point x="0.933333" y="0.5" />
+                                    <point x="0.866667" y="0.888889" />
+                                    <point x="0.466667" y="0.888889" />
+                                    <point x="0.533333" y="0.555556" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\004.png">
+                                <collision-poly>
+                                    <point x="0.333333" y="0.4" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.888889" y="0.133333" />
+                                    <point x="0.888889" y="0.466667" />
+                                    <point x="0.444444" y="0.466667" />
+                                    <point x="0.833333" y="0.466667" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\005.png">
+                                <collision-poly>
+                                    <point x="0.133333" y="0.111111" />
+                                    <point x="0.466667" y="0.111111" />
+                                    <point x="0.466667" y="0.555556" />
+                                    <point x="0.466667" y="0.166667" />
+                                    <point x="0.4" y="0.666667" />
+                                    <point x="0.4" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\006.png">
+                                <collision-poly>
+                                    <point x="0.444444" y="0.533333" />
+                                    <point x="0.555556" y="0.533333" />
+                                    <point x="0.166667" y="0.466667" />
+                                    <point x="0.666667" y="0.6" />
+                                    <point x="0.5" y="0.6" />
+                                    <point x="0.111111" y="0.866667" />
+                                    <point x="0.111111" y="0.466667" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Animations\Impact_Axe\Axe\007.png">
+                                <collision-poly>
+                                    <point x="0.533333" y="0.444444" />
+                                    <point x="0.466667" y="0.833333" />
+                                    <point x="0.6" y="0.333333" />
+                                    <point x="0.933333" y="0.5" />
+                                    <point x="0.866667" y="0.888889" />
+                                    <point x="0.466667" y="0.888889" />
+                                    <point x="0.533333" y="0.555556" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="SpriteFontDamage" sid="287951374443979">
                 <plugin id="Spritefont2" />
@@ -2775,6 +2922,10 @@
                 <instance-variable comment="Limit uses if applies" name="Ammo" sid="826294847455027" type="number" />
                 <instance-variable name="Projectile_Name" sid="166885192698462" type="string" />
                 <instance-variable name="Projectile_Damage" sid="718197623799836" type="number" />
+                <instance-variable name="Projectile_PierceCharacters" sid="442353920737194" type="boolean" />
+                <instance-variable name="Projectile_PierceWalls" sid="670354869887442" type="boolean" />
+                <instance-variable name="Projectile_PushImpact" sid="229842200755401" type="number" />
+                <instance-variable name="Projectile_Duration" sid="581792144434210" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FO_Pin2" sid="876962418157441">
@@ -2821,6 +2972,7 @@
                 <member>Impact_Arrow</member>
                 <member>Impact_Axe</member>
                 <member>Impact_Fireball</member>
+                <member>Impact_Generic</member>
                 <member>Impact_Slash</member>
                 <member>Item_Axe</member>
                 <member>Item_Generic</member>

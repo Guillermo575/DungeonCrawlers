@@ -655,6 +655,85 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="833461755880054">
+            <conditions>
+                <condition behavior="FO_Timer" id="0" name="On timer" sid="925514805472925" type="Family_Item">
+                    <param id="0" name="Tag">&quot;Shoot_Projectile&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="619620966020777" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="739135910237827" type="Family_Item">
+                    <param id="0" name="Object">Impact_Generic</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="930353163821459" type="Impact_Generic">
+                    <param id="0" name="Animation">Family_Item.Projectile_Name</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="508227509305923" type="Impact_Generic">
+                    <param id="0" name="Angle">Family_Item.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="807281521553950" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">Family_Character.TypeRole</param>
+                </action>
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="874337554331397" type="Impact_Generic">
+                    <param id="0" name="Angle">Family_Item.Angle</param>
+                </action>
+                <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
+                    <param id="0" name="Speed">200</param>
+                </action>
+                <action id="-10" name="Set value" sid="141224123841149" type="Impact_Generic">
+                    <param id="0" name="Instance variable">PushImpact</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_PushImpact)</param>
+                </action>
+                <action id="-10" name="Set value" sid="316771976281180" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
+                <action id="-10" name="Set value" sid="614635516253122" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">int(Impact_Generic.Damage * Family_Character.BonusDamageMult)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="737434007205443" type="Impact_Generic">
+                    <param id="0" name="Duration">Impact_Generic.TimeDuration</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="525554166392414">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="436757329199127" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="923034714575186" type="Impact_Generic">
+                            <param id="0" name="Instance variable">PierceCharacters</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668332949719876">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="138631018873601" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_PierceWalls</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="770349298382437" type="Impact_Generic">
+                            <param id="0" name="Instance variable">PierceWalls</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment>HEARTH</comment>
         <event-block sid="425304371161602">
             <conditions>
@@ -734,7 +813,47 @@
                                     <param id="0" name="Instance variable">Projectile_Damage</param>
                                     <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Damage/text()&quot;) )</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="276115900842696" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_PushImpact</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/PushImpact/text()&quot;) )</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="837740595993997" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Duration</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Duration/text()&quot;) )</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="849887102062768">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="929178435813145" type="System">
+                                            <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/PierceWalls/text()&quot;) </param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="173859207787237" type="Item_Generic">
+                                            <param id="0" name="Instance variable">PierceWalls</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="371216913925416">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="219909525635373" type="System">
+                                            <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/PierceCharacters/text()&quot;) </param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="562893469729803" type="Item_Generic">
+                                            <param id="0" name="Instance variable">PierceCharacters</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="858173090422619">
                             <conditions>

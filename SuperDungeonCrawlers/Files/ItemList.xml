@@ -5,11 +5,12 @@
 		<Function_Command>HoldWand</Function_Command>
 		<Information>Shot Object</Information>
 		<Projectile>
-			<Name>Shoot_Fireball</Name>
+			<Name>Fireball</Name>
 			<Damage>2</Damage>
 			<PierceWalls>1</PierceWalls>
 			<PierceCharacters>1</PierceCharacters>
 			<PushImpact>30</PushImpact>
+			<Duration>3</Duration>
 		</Projectile>
 		<Ammo>
 			<Size>20</Size>
