@@ -2920,12 +2920,13 @@
                 <instance-variable comment="short item info" name="Information" sid="738846373543169" type="string" />
                 <instance-variable comment="This object has limit uses" name="HasAmmo" sid="945768496343859" type="boolean" />
                 <instance-variable comment="Limit uses if applies" name="Ammo" sid="826294847455027" type="number" />
-                <instance-variable name="Projectile_Name" sid="166885192698462" type="string" />
-                <instance-variable name="Projectile_Damage" sid="718197623799836" type="number" />
-                <instance-variable name="Projectile_PierceCharacters" sid="442353920737194" type="boolean" />
-                <instance-variable name="Projectile_PierceWalls" sid="670354869887442" type="boolean" />
-                <instance-variable name="Projectile_PushImpact" sid="229842200755401" type="number" />
-                <instance-variable name="Projectile_Duration" sid="581792144434210" type="number" />
+                <instance-variable comment="Projectile Spawn: Name Animation" name="Projectile_Name" sid="166885192698462" type="string" />
+                <instance-variable comment="Projectile Spawn: Damage impact" name="Projectile_Damage" sid="718197623799836" type="number" />
+                <instance-variable comment="Projectile Spawn: Can pierce Characters?" name="Projectile_PierceCharacters" sid="442353920737194" type="boolean" />
+                <instance-variable comment="Projectile Spawn: Can Pierce Walls?" name="Projectile_PierceWalls" sid="670354869887442" type="boolean" />
+                <instance-variable comment="Projectile Spawn: Push distance" name="Projectile_PushImpact" sid="229842200755401" type="number" />
+                <instance-variable comment="Projectile Spawn: Time Duration" name="Projectile_Duration" sid="581792144434210" type="number" />
+                <instance-variable comment="Projectile Spawn: Speed" name="Projectile_Speed" sid="617548073874021" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FO_Pin2" sid="876962418157441">

@@ -260,6 +260,7 @@
                         <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Projectile_PushImpact>0</Projectile_PushImpact>
                         <Projectile_Duration>0</Projectile_Duration>
+                        <Projectile_Speed>400</Projectile_Speed>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
@@ -361,6 +362,7 @@
                         <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Projectile_PushImpact>0</Projectile_PushImpact>
                         <Projectile_Duration>0</Projectile_Duration>
+                        <Projectile_Speed>400</Projectile_Speed>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                     </instance-variables>

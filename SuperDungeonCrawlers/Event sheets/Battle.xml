@@ -685,7 +685,7 @@
                     <param id="0" name="Angle">Family_Item.Angle</param>
                 </action>
                 <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
-                    <param id="0" name="Speed">200</param>
+                    <param id="0" name="Speed">Family_Item.Projectile_Speed</param>
                 </action>
                 <action id="-10" name="Set value" sid="141224123841149" type="Impact_Generic">
                     <param id="0" name="Instance variable">PushImpact</param>
@@ -703,6 +703,10 @@
                     <param id="0" name="Duration">Impact_Generic.TimeDuration</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="367531849749154" type="Family_Item">
+                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
             <sub-events>
@@ -820,6 +824,10 @@
                                 <action id="-10" name="Set value" sid="837740595993997" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_Duration</param>
                                     <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Duration/text()&quot;) )</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267400541618711" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Speed</param>
+                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Speed/text()&quot;) )</param>
                                 </action>
                             </actions>
                             <sub-events>

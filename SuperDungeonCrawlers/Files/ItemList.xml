@@ -7,10 +7,29 @@
 		<Projectile>
 			<Name>Fireball</Name>
 			<Damage>2</Damage>
+			<Speed>300</Speed>
 			<PierceWalls>1</PierceWalls>
 			<PierceCharacters>1</PierceCharacters>
 			<PushImpact>30</PushImpact>
 			<Duration>3</Duration>
+		</Projectile>
+		<Ammo>
+			<Size>20</Size>
+			<Reload>5</Reload>
+		</Ammo>
+	</object>
+	<object name='Bow'>
+		<Animation>Object_Bow</Animation>
+		<Function_Command>HoldBow</Function_Command>
+		<Information>Shot Object</Information>
+		<Projectile>
+			<Name>Arrow</Name>
+			<Damage>3</Damage>
+			<Speed>250</Speed>
+			<PierceWalls>1</PierceWalls>
+			<PierceCharacters>0</PierceCharacters>
+			<PushImpact>20</PushImpact>
+			<Duration>4</Duration>
 		</Projectile>
 		<Ammo>
 			<Size>20</Size>
