@@ -5,13 +5,14 @@
 		<Function_Command>HoldWand</Function_Command>
 		<Information>Shot Object</Information>
 		<Projectile>
-			<Name>Fireball</Name>
+			<Animation>Fireball</Animation>
 			<Damage>2</Damage>
-			<Speed>300</Speed>
-			<PierceWalls>1</PierceWalls>
-			<PierceCharacters>1</PierceCharacters>
 			<PushImpact>30</PushImpact>
 			<Duration>3</Duration>
+			<Speed>300</Speed>
+			<RecoilTime>0.3</RecoilTime>	
+			<PierceCharacters>1</PierceCharacters>			
+			<PierceWalls>1</PierceWalls>
 		</Projectile>
 		<Ammo>
 			<Size>20</Size>
@@ -23,13 +24,14 @@
 		<Function_Command>HoldBow</Function_Command>
 		<Information>Shot Object</Information>
 		<Projectile>
-			<Name>Arrow</Name>
-			<Damage>3</Damage>
-			<Speed>250</Speed>
+			<Animation>Arrow</Animation>
+			<Damage>1</Damage>
+			<PushImpact>30</PushImpact>
+			<Duration>3</Duration>
+			<Speed>300</Speed>
+			<RecoilTime>0.3</RecoilTime>
+			<PierceCharacters>0</PierceCharacters>			
 			<PierceWalls>1</PierceWalls>
-			<PierceCharacters>0</PierceCharacters>
-			<PushImpact>20</PushImpact>
-			<Duration>4</Duration>
 		</Projectile>
 		<Ammo>
 			<Size>20</Size>
@@ -43,6 +45,7 @@
 		<Melee>
 			<Damage>2</Damage>
 			<PushImpact>30</PushImpact>
+			<RecoilTime>0.5</RecoilTime>
 		</Melee>
 	</object>
 </ObjectList>

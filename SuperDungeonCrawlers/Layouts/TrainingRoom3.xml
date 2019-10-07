@@ -375,24 +375,25 @@
                         <Information></Information>
                         <HasAmmo>false</HasAmmo>
                         <Ammo>0</Ammo>
-                        <Projectile_Name></Projectile_Name>
+                        <Projectile_Animation></Projectile_Animation>
                         <Projectile_Damage>0</Projectile_Damage>
-                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
-                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Projectile_PushImpact>0</Projectile_PushImpact>
                         <Projectile_Duration>0</Projectile_Duration>
-                        <Projectile_Speed>400</Projectile_Speed>
+                        <Projectile_Speed>0</Projectile_Speed>
+                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
-                        <TypeObject></TypeObject>
-                        <PushImpact>0</PushImpact>
-                        <RecoilTime>0</RecoilTime>
-                        <Damage>0</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>3</TimeDuration>
                         <MakeDamage>false</MakeDamage>
+                        <TypeObject></TypeObject>
+                        <Impact_Damage>0</Impact_Damage>
+                        <Impact_PushImpact>0</Impact_PushImpact>
+                        <Impact_RecoilTime>0</Impact_RecoilTime>
+                        <Impact_Duration>3</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID>Wand</XMLID>
                     </instance-variables>
                     <behavior-instances>
@@ -443,24 +444,25 @@
                         <Information></Information>
                         <HasAmmo>false</HasAmmo>
                         <Ammo>0</Ammo>
-                        <Projectile_Name></Projectile_Name>
+                        <Projectile_Animation></Projectile_Animation>
                         <Projectile_Damage>0</Projectile_Damage>
-                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
-                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Projectile_PushImpact>0</Projectile_PushImpact>
                         <Projectile_Duration>0</Projectile_Duration>
-                        <Projectile_Speed>400</Projectile_Speed>
+                        <Projectile_Speed>0</Projectile_Speed>
+                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
-                        <TypeObject></TypeObject>
-                        <PushImpact>0</PushImpact>
-                        <RecoilTime>0</RecoilTime>
-                        <Damage>0</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>3</TimeDuration>
                         <MakeDamage>false</MakeDamage>
+                        <TypeObject></TypeObject>
+                        <Impact_Damage>0</Impact_Damage>
+                        <Impact_PushImpact>0</Impact_PushImpact>
+                        <Impact_RecoilTime>0</Impact_RecoilTime>
+                        <Impact_Duration>3</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID>Sword</XMLID>
                     </instance-variables>
                     <behavior-instances>

@@ -2920,13 +2920,14 @@
                 <instance-variable comment="short item info" name="Information" sid="738846373543169" type="string" />
                 <instance-variable comment="This object has limit uses" name="HasAmmo" sid="945768496343859" type="boolean" />
                 <instance-variable comment="Limit uses if applies" name="Ammo" sid="826294847455027" type="number" />
-                <instance-variable comment="Projectile Spawn: Name Animation" name="Projectile_Name" sid="166885192698462" type="string" />
+                <instance-variable comment="Projectile Spawn: Name Animation" name="Projectile_Animation" sid="166885192698462" type="string" />
                 <instance-variable comment="Projectile Spawn: Damage impact" name="Projectile_Damage" sid="718197623799836" type="number" />
-                <instance-variable comment="Projectile Spawn: Can pierce Characters?" name="Projectile_PierceCharacters" sid="442353920737194" type="boolean" />
-                <instance-variable comment="Projectile Spawn: Can Pierce Walls?" name="Projectile_PierceWalls" sid="670354869887442" type="boolean" />
                 <instance-variable comment="Projectile Spawn: Push distance" name="Projectile_PushImpact" sid="229842200755401" type="number" />
                 <instance-variable comment="Projectile Spawn: Time Duration" name="Projectile_Duration" sid="581792144434210" type="number" />
                 <instance-variable comment="Projectile Spawn: Speed" name="Projectile_Speed" sid="617548073874021" type="number" />
+                <instance-variable comment="Projectile Spawn: Recoil Time impact" name="Projectile_RecoilTime" sid="817463555779213" type="number" />
+                <instance-variable comment="Projectile Spawn: Can pierce Characters?" name="Projectile_PierceCharacters" sid="442353920737194" type="boolean" />
+                <instance-variable comment="Projectile Spawn: Can Pierce Walls?" name="Projectile_PierceWalls" sid="670354869887442" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FO_Pin2" sid="876962418157441">
@@ -2983,14 +2984,14 @@
             </members>
             <instance-variables>
                 <instance-variable comment="if the character type if different that this value, that receive damage" name="Group" sid="615762410693189" type="string" />
+                <instance-variable comment="Check if the object is making damage (like melee weapons)" name="MakeDamage" sid="769576092351906" type="boolean" />
                 <instance-variable comment="Melee, Projectile" name="TypeObject" sid="664473937435629" type="string" />
-                <instance-variable comment="Distance that the character is pushed" name="PushImpact" sid="849674525052418" type="number" />
-                <instance-variable comment="Time that the character is pushed" name="RecoilTime" sid="317749810560442" type="number" />
-                <instance-variable comment="The amount that inflicts in the objective" name="Damage" sid="619337040495569" type="number" />
-                <instance-variable comment="Can not destroyed impacting with the characters" name="PierceCharacters" sid="287713655249526" type="boolean" />
-                <instance-variable comment="Can not be destroyed by impacting in walls" name="PierceWalls" sid="467621174291483" type="boolean" />
-                <instance-variable comment="Seconds for the Destroy Timer" name="TimeDuration" sid="739248253419743" type="number" />
-                <instance-variable name="MakeDamage" sid="769576092351906" type="boolean" />
+                <instance-variable comment="The amount that inflicts in the objective" name="Impact_Damage" sid="619337040495569" type="number" />
+                <instance-variable comment="Distance that the character is pushed" name="Impact_PushImpact" sid="849674525052418" type="number" />
+                <instance-variable comment="Time that the character is pushed" name="Impact_RecoilTime" sid="317749810560442" type="number" />
+                <instance-variable comment="Seconds for the Destroy Timer" name="Impact_Duration" sid="739248253419743" type="number" />
+                <instance-variable comment="Can not destroyed impacting with the characters" name="Impact_PierceCharacters" sid="287713655249526" type="boolean" />
+                <instance-variable comment="Can not be destroyed by impacting in walls" name="Impact_PierceWalls" sid="467621174291483" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FI_Bullet" sid="966471420225723">

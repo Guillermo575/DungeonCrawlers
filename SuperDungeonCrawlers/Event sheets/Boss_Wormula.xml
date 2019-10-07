@@ -230,7 +230,7 @@
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-10" name="Set value" sid="802109893790884" type="boss_worm_head">
-                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="0" name="Instance variable">Impact_Damage</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="933685736694315" type="PlayerCoreBox">
@@ -248,7 +248,7 @@
                     <actions>
                         <action behavior="Pin2" id="1" name="Unpin" sid="151472130091837" type="boss_worm_body" />
                         <action id="-10" name="Set value" sid="640114068423055" type="boss_worm_body">
-                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="0" name="Instance variable">Impact_Damage</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>

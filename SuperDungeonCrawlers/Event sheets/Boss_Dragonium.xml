@@ -171,8 +171,8 @@
                     <param id="0" name="Angle">Boss_Dragon_Head.Angle</param>
                 </action>
                 <action id="-10" name="Set value" sid="451753660963794" type="Impact_Fireball">
-                    <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">int(Impact_Fireball.Damage * Boss_Dragon_Head.Damage)</param>
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Impact_Fireball.Impact_Damage * Boss_Dragon_Head.Impact_Damage)</param>
                 </action>
                 <action id="-7" name="Set size" sid="272461415043346" type="Impact_Fireball">
                     <param id="0" name="Width">30</param>
