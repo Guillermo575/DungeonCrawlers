@@ -511,7 +511,7 @@
                     <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="371606822436389" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -550,7 +550,7 @@
                     <param id="1" name="Parameter {n}">&quot;wand&quot;</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="787603214395015" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
@@ -564,7 +564,7 @@
                     <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="545615804786596" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -603,7 +603,7 @@
                     <param id="1" name="Parameter {n}">&quot;bow&quot;</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="598445616660461" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
@@ -663,6 +663,11 @@
                 <condition id="-14" name="Pick by unique ID" sid="619620966020777" type="Family_Character">
                     <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="651167090445688" type="Family_Item">
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="739135910237827" type="Family_Item">
@@ -709,8 +714,8 @@
                     <param id="2" name="Tag">&quot;Destroy&quot;</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="367531849749154" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
-                    <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                    <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : Family_Item.Projectile_AmmoSpend</param>
                 </action>
             </actions>
             <sub-events>
@@ -796,16 +801,16 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="816583520732849" type="Item_Generic">
-                            <param id="0" name="Animation">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Animation/text()&quot;) </param>
+                            <param id="0" name="Animation">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Animation&quot;)</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="287188579973040" type="Item_Generic">
                             <param id="0" name="Instance variable">Function_Param</param>
-                            <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Function_Command/text()&quot;) </param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Function_Command&quot;)</param>
                         </action>
                         <action id="-10" name="Set value" sid="498579524083901" type="Item_Generic">
                             <param id="0" name="Instance variable">Information</param>
-                            <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Information/text()&quot;) </param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Information&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -813,7 +818,7 @@
                         <event-block sid="419646821822763">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="771462351044884" type="System">
-                                    <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/text()&quot;) </param>
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile&quot;)</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Second value">&quot;&quot;</param>
                                 </condition>
@@ -821,7 +826,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="405139810776417" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_Animation</param>
-                                    <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Animation/text()&quot;)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Animation&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="288094225848350" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_Damage</param>
@@ -845,6 +850,30 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <comment>Has Ammo</comment>
+                                <event-block sid="858173090422619">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="425332361128302" type="System">
+                                            <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/HasAmmo/text()&quot;) </param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="297054811159512" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_HasAmmo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="260622005777078" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                                            <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/AmmoSize/text()&quot;))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="560030269787951" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_AmmoSpend</param>
+                                            <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/AmmoSpend/text()&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="371216913925416">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="219909525635373" type="System">
@@ -877,26 +906,6 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Has Ammo Node</comment>
-                        <event-block sid="858173090422619">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="425332361128302" type="System">
-                                    <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Ammo/text()&quot;) </param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Second value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="297054811159512" type="Item_Generic">
-                                    <param id="0" name="Instance variable">HasAmmo</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="260622005777078" type="Item_Generic">
-                                    <param id="0" name="Instance variable">Ammo</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Ammo/Size/text()&quot;) )</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <comment>Has Melee Node</comment>
                         <event-block sid="598712629742013">
                             <conditions>
@@ -924,6 +933,21 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="863938101551701">
+            <conditions>
+                <condition id="0" name="On function" sid="805396186962154" type="Function">
+                    <param id="0" name="Name">&quot;GetXMLInventoryNode&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="411889320537113" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="512153238130670" type="Function">
+                    <param id="0" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/&quot;&amp;Function.Param(1)&amp;&quot;/text()&quot;) </param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

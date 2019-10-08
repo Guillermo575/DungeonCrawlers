@@ -284,12 +284,12 @@
                         <event-block sid="747229275301870">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="485925201807792" type="Family_Item">
-                                    <param id="0" name="Instance variable">HasAmmo</param>
+                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="686934956903321" type="HUD_Object_Left_Text">
-                                    <param id="0" name="Text">Family_Item.Ammo</param>
+                                    <param id="0" name="Text">Family_Item.Projectile_AmmoSize</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -378,12 +378,12 @@
                         <event-block sid="890567466618363">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="898828892007982" type="Family_Item">
-                                    <param id="0" name="Instance variable">HasAmmo</param>
+                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="223573230447423" type="HUD_Object_Right_Text">
-                                    <param id="0" name="Text">Family_Item.Ammo</param>
+                                    <param id="0" name="Text">Family_Item.Projectile_AmmoSize</param>
                                 </action>
                             </actions>
                         </event-block>

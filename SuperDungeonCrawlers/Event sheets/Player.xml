@@ -802,7 +802,7 @@
                                 </action>
                                 <action id="0" name="Add key" sid="333288556364671" type="Player_Log">
                                     <param id="0" name="Key">&quot;PlayerObjectLeft_Ammo&quot; </param>
-                                    <param id="1" name="Value">Family_Item.Ammo</param>
+                                    <param id="1" name="Value">Family_Item.Projectile_AmmoSize</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -835,7 +835,7 @@
                                 </action>
                                 <action id="0" name="Add key" sid="512280672271546" type="Player_Log">
                                     <param id="0" name="Key">&quot;PlayerObjectRight_Ammo&quot; </param>
-                                    <param id="1" name="Value">Family_Item.Ammo</param>
+                                    <param id="1" name="Value">Family_Item.Projectile_AmmoSize</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1009,7 +1009,7 @@
                                     <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Wand.UID</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="595320031351253" type="Item_Wand">
-                                    <param id="0" name="Instance variable">Ammo</param>
+                                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                                     <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerObject&quot;&amp;Function.Param(2)&amp;&quot;_Ammo&quot;))</param>
                                 </action>
                             </actions>
@@ -1033,7 +1033,7 @@
                                     <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Bow.UID</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="285518786203809" type="Item_Bow">
-                                    <param id="0" name="Instance variable">Ammo</param>
+                                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                                     <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerObject&quot;&amp;Function.Param(2)&amp;&quot;_Ammo&quot;))</param>
                                 </action>
                             </actions>

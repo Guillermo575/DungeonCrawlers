@@ -373,14 +373,15 @@
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param></Function_Param>
                         <Information></Information>
-                        <HasAmmo>false</HasAmmo>
-                        <Ammo>0</Ammo>
                         <Projectile_Animation></Projectile_Animation>
                         <Projectile_Damage>0</Projectile_Damage>
                         <Projectile_PushImpact>0</Projectile_PushImpact>
                         <Projectile_Duration>0</Projectile_Duration>
                         <Projectile_Speed>0</Projectile_Speed>
                         <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_HasAmmo>false</Projectile_HasAmmo>
+                        <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
                         <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
                         <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
@@ -442,14 +443,15 @@
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param></Function_Param>
                         <Information></Information>
-                        <HasAmmo>false</HasAmmo>
-                        <Ammo>0</Ammo>
                         <Projectile_Animation></Projectile_Animation>
                         <Projectile_Damage>0</Projectile_Damage>
                         <Projectile_PushImpact>0</Projectile_PushImpact>
                         <Projectile_Duration>0</Projectile_Duration>
                         <Projectile_Speed>0</Projectile_Speed>
                         <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_HasAmmo>false</Projectile_HasAmmo>
+                        <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
                         <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
                         <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>

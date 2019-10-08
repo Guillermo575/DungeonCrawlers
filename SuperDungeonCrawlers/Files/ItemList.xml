@@ -10,14 +10,13 @@
 			<PushImpact>30</PushImpact>
 			<Duration>3</Duration>
 			<Speed>300</Speed>
-			<RecoilTime>0.3</RecoilTime>	
-			<PierceCharacters>1</PierceCharacters>			
+			<RecoilTime>0.3</RecoilTime>
+			<HasAmmo>1</HasAmmo>
+			<AmmoSize>20</AmmoSize>
+			<AmmoSpend>1</AmmoSpend>
+			<PierceCharacters>1</PierceCharacters>
 			<PierceWalls>1</PierceWalls>
 		</Projectile>
-		<Ammo>
-			<Size>20</Size>
-			<Reload>5</Reload>
-		</Ammo>
 	</object>
 	<object name='Bow'>
 		<Animation>Object_Bow</Animation>
@@ -30,13 +29,12 @@
 			<Duration>3</Duration>
 			<Speed>300</Speed>
 			<RecoilTime>0.3</RecoilTime>
-			<PierceCharacters>0</PierceCharacters>			
+			<HasAmmo>1</HasAmmo>
+			<AmmoSize>10</AmmoSize>
+			<AmmoSpend>1</AmmoSpend>
+			<PierceCharacters>0</PierceCharacters>
 			<PierceWalls>1</PierceWalls>
 		</Projectile>
-		<Ammo>
-			<Size>20</Size>
-			<Reload>5</Reload>
-		</Ammo>
 	</object>
 	<object name='Sword'>
 		<Animation>Object_Sword</Animation>
