@@ -830,23 +830,23 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="288094225848350" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_Damage</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Damage/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Damage&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="276115900842696" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_PushImpact</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/PushImpact/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PushImpact&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="837740595993997" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_Duration</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Duration/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Duration&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="267400541618711" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_Speed</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/Speed/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Speed&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="187489248627172" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_RecoilTime</param>
-                                    <param id="1" name="Value">float(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/RecoilTime/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/RecoilTime&quot;)</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -854,7 +854,7 @@
                                 <event-block sid="858173090422619">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="425332361128302" type="System">
-                                            <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/HasAmmo/text()&quot;) </param>
+                                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/HasAmmo&quot;)</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Second value">&quot;&quot;</param>
                                         </condition>
@@ -866,18 +866,18 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="260622005777078" type="Item_Generic">
                                             <param id="0" name="Instance variable">Projectile_AmmoSize</param>
-                                            <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/AmmoSize/text()&quot;))</param>
+                                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSize&quot;)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="560030269787951" type="Item_Generic">
                                             <param id="0" name="Instance variable">Projectile_AmmoSpend</param>
-                                            <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/AmmoSpend/text()&quot;))</param>
+                                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSpend&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="371216913925416">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="219909525635373" type="System">
-                                            <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/PierceCharacters/text()&quot;)</param>
+                                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PierceCharacters&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;1&quot;</param>
                                         </condition>
@@ -892,7 +892,7 @@
                                 <event-block sid="849887102062768">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="929178435813145" type="System">
-                                            <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Projectile/PierceWalls/text()&quot;)</param>
+                                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PierceWalls&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;1&quot;</param>
                                         </condition>
@@ -910,7 +910,7 @@
                         <event-block sid="598712629742013">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="410644016831630" type="System">
-                                    <param id="0" name="First value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/text()&quot;) </param>
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee&quot;)</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Second value">&quot;&quot;</param>
                                 </condition>
@@ -918,15 +918,15 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="840478133818356" type="Item_Generic">
                                     <param id="0" name="Instance variable">Impact_Damage</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/Damage/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/Damage&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="571874254729313" type="Item_Generic">
                                     <param id="0" name="Instance variable">Impact_PushImpact</param>
-                                    <param id="1" name="Value">int(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/PushImpact/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/PushImpact&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="850261776212823" type="Item_Generic">
                                     <param id="0" name="Instance variable">Impact_RecoilTime</param>
-                                    <param id="1" name="Value">float(XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/Melee/RecoilTime/text()&quot;) )</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/RecoilTime&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
