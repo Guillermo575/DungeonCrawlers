@@ -252,19 +252,28 @@
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param>SweepSword</Function_Param>
                         <Information>Solo</Information>
-                        <HasAmmo>false</HasAmmo>
-                        <Ammo>0</Ammo>
+                        <Projectile_Animation></Projectile_Animation>
+                        <Projectile_Damage>0</Projectile_Damage>
+                        <Projectile_PushImpact>0</Projectile_PushImpact>
+                        <Projectile_Duration>0</Projectile_Duration>
+                        <Projectile_Speed>0</Projectile_Speed>
+                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_HasAmmo>false</Projectile_HasAmmo>
+                        <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>false</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <NameIcon>Key</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -347,8 +356,17 @@
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param>HoldWand</Function_Param>
                         <Information>Long</Information>
-                        <HasAmmo>true</HasAmmo>
-                        <Ammo>30</Ammo>
+                        <Projectile_Animation>Shoot_Fireball</Projectile_Animation>
+                        <Projectile_Damage>1</Projectile_Damage>
+                        <Projectile_PushImpact>0</Projectile_PushImpact>
+                        <Projectile_Duration>0</Projectile_Duration>
+                        <Projectile_Speed>0</Projectile_Speed>
+                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_HasAmmo>true</Projectile_HasAmmo>
+                        <Projectile_AmmoSize>30</Projectile_AmmoSize>
+                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                     </instance-variables>
@@ -404,14 +422,14 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <ID>0</ID>
                     </instance-variables>
                     <behavior-instances>
@@ -471,14 +489,14 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <ID>0</ID>
                     </instance-variables>
                     <behavior-instances>
@@ -538,14 +556,14 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <ID>0</ID>
                     </instance-variables>
                     <behavior-instances>
@@ -624,14 +642,14 @@
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>true</Unstopable>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <IDChain>0</IDChain>
                         <Seeking>false</Seeking>
                         <ready>false</ready>
@@ -743,14 +761,14 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <ID>0</ID>
                     </instance-variables>
                     <behavior-instances>
@@ -810,14 +828,14 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <ID>0</ID>
                     </instance-variables>
                     <behavior-instances>
@@ -877,14 +895,14 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
-                        <TypeObject>Melee</TypeObject>
-                        <PushImpact>100</PushImpact>
-                        <RecoilTime>0.4</RecoilTime>
-                        <Damage>1</Damage>
-                        <PierceCharacters>false</PierceCharacters>
-                        <PierceWalls>false</PierceWalls>
-                        <TimeDuration>1</TimeDuration>
                         <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>100</Impact_PushImpact>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Duration>1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
                         <ID>0</ID>
                     </instance-variables>
                     <behavior-instances>

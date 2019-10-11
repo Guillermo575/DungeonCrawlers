@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ObjectList>
+	<object name='Wand'>
+		<Animation>Object_Wand</Animation>
+		<Function_Command>HoldWand</Function_Command>
+		<Information>Shot Object</Information>
+		<Projectile>
+			<Animation>Fireball</Animation>
+			<Damage>2</Damage>
+			<PushImpact>30</PushImpact>
+			<Duration>3</Duration>
+			<Speed>300</Speed>
+			<RecoilTime>0.3</RecoilTime>
+			<HasAmmo>1</HasAmmo>
+			<AmmoSize>20</AmmoSize>
+			<AmmoSpend>1</AmmoSpend>
+			<PierceCharacters>1</PierceCharacters>
+			<PierceWalls>1</PierceWalls>
+		</Projectile>
+	</object>
+	<object name='Bow'>
+		<Animation>Object_Bow</Animation>
+		<Function_Command>HoldBow</Function_Command>
+		<Information>Shot Object</Information>
+		<Projectile>
+			<Animation>Arrow</Animation>
+			<Damage>1</Damage>
+			<PushImpact>30</PushImpact>
+			<Duration>3</Duration>
+			<Speed>300</Speed>
+			<RecoilTime>0.3</RecoilTime>
+			<HasAmmo>1</HasAmmo>
+			<AmmoSize>10</AmmoSize>
+			<AmmoSpend>1</AmmoSpend>
+			<PierceCharacters>0</PierceCharacters>
+			<PierceWalls>1</PierceWalls>
+		</Projectile>
+	</object>
+	<object name='Sword'>
+		<Animation>Object_Sword</Animation>
+		<Function_Command>SweepSword</Function_Command>
+		<Information>Melee Object</Information>
+		<Melee>
+			<Damage>2</Damage>
+			<PushImpact>30</PushImpact>
+			<RecoilTime>0.5</RecoilTime>
+		</Melee>
+	</object>
+</ObjectList>

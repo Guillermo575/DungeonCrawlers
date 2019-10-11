@@ -784,7 +784,7 @@
                                 <action behavior="FO_Timer" id="0" name="Start timer" sid="950975822046243" type="Family_Item">
                                     <param id="0" name="Duration">0.2</param>
                                     <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Shoot_Axe&quot;</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="708208741638880" type="System">
                                     <param id="0" name="Variable">ActionSelected</param>
@@ -867,7 +867,7 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="331948113203463" type="System">
-                                            <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;Shoot_Fireball&quot;)</param>
+                                            <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;Shoot_Projectile&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
@@ -876,7 +876,7 @@
                                         <action behavior="FO_Timer" id="0" name="Start timer" sid="889298862423295" type="Family_Item">
                                             <param id="0" name="Duration">0.3</param>
                                             <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -901,7 +901,7 @@
                                 <action behavior="FO_Timer" id="0" name="Start timer" sid="807334904204291" type="Family_Item">
                                     <param id="0" name="Duration">0.01</param>
                                     <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="163343928067338" type="System">
                                     <param id="0" name="Variable">ActionSelected</param>
@@ -973,7 +973,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="FO_Timer" id="1" name="Stop timer" sid="363030283637445" type="Family_Item">
-                                    <param id="0" name="Tag">&quot;Shoot_Fireball&quot;</param>
+                                    <param id="0" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1018,7 +1018,7 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="481500734838314" type="System">
-                                            <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;Shoot_Arrow&quot;)</param>
+                                            <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;Shoot_Projectile&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
@@ -1027,7 +1027,7 @@
                                         <action behavior="FO_Timer" id="0" name="Start timer" sid="849312229374933" type="Family_Item">
                                             <param id="0" name="Duration">0.6</param>
                                             <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                            <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1049,7 +1049,7 @@
                                 <action behavior="FO_Timer" id="0" name="Start timer" sid="305002221247196" type="Family_Item">
                                     <param id="0" name="Duration">0.01</param>
                                     <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="734091320091537" type="System">
                                     <param id="0" name="Variable">ActionSelected</param>
@@ -1121,7 +1121,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="FO_Timer" id="1" name="Stop timer" sid="599655262632238" type="Family_Item">
-                                    <param id="0" name="Tag">&quot;Shoot_Arrow&quot;</param>
+                                    <param id="0" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

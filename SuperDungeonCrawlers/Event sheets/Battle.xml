@@ -15,7 +15,7 @@
                     <param id="2" name="Value">&quot;Projectile&quot;</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="400733695170605" type="Family_Impact">
-                    <param id="0" name="Instance variable">PierceWalls</param>
+                    <param id="0" name="Instance variable">Impact_PierceWalls</param>
                 </condition>
             </conditions>
             <actions>
@@ -77,7 +77,7 @@
             <actions>
                 <action id="0" name="Call function" sid="160314308258200" type="Function">
                     <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.RecoilTime</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.Impact_RecoilTime</param>
                 </action>
                 <action id="0" name="Call function" sid="260998578876838" type="Function">
                     <param id="0" name="Name">&quot;PushCharacter&quot;</param>
@@ -93,7 +93,7 @@
                             <param id="2" name="Value">&quot;Projectile&quot;</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="536529583458341" type="Family_Impact">
-                            <param id="0" name="Instance variable">PierceCharacters</param>
+                            <param id="0" name="Instance variable">Impact_PierceCharacters</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -130,13 +130,13 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action behavior="FC_Timer" id="0" name="Start timer" sid="170706894065174" type="Family_Character">
-                    <param id="0" name="Duration">Family_Impact.RecoilTime</param>
+                    <param id="0" name="Duration">Family_Impact.Impact_RecoilTime</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Recoil&quot;</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="417315061648505" type="Family_Character">
                     <param id="0" name="Instance variable">Hp</param>
-                    <param id="1" name="Value">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
+                    <param id="1" name="Value">Family_Impact.Impact_Damage &lt;= 0? 1 : Family_Impact.Impact_Damage</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="992430191717126" type="Family_Character">
                     <param id="0" name="Object">SpriteFontDamage</param>
@@ -147,7 +147,7 @@
                     <param id="0" name="Angle">0</param>
                 </action>
                 <action id="0" name="Set text" sid="861783031906815" type="SpriteFontDamage">
-                    <param id="0" name="Text">Family_Impact.Damage &lt;= 0? 1 : Family_Impact.Damage</param>
+                    <param id="0" name="Text">Family_Impact.Impact_Damage &lt;= 0? 1 : Family_Impact.Impact_Damage</param>
                 </action>
                 <action id="-28" name="Set effect parameter" sid="580520486248927" type="SpriteFontDamage">
                     <param id="0" name="Effect">&quot;SetColor&quot;</param>
@@ -164,7 +164,7 @@
                     </conditions>
                     <actions>
                         <action behavior="FC_Bullet" id="0" name="Set speed" sid="756538370496436" type="Family_Character">
-                            <param id="0" name="Speed">Family_Impact.PushImpact</param>
+                            <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
                         </action>
                         <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="602856106481795" type="Family_Character">
                             <param id="0" name="Angle"> angle(Family_Impact.X,Family_Impact.Y,self.X,self.Y)</param>
@@ -511,7 +511,7 @@
                     <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="371606822436389" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -532,12 +532,16 @@
                 <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="531290889089918" type="Impact_Fireball">
                     <param id="0" name="Angle">Family_Item.Angle</param>
                 </action>
+                <action id="-10" name="Set value" sid="236247822812027" type="Impact_Fireball">
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
                 <action id="-10" name="Set value" sid="891277585747763" type="Impact_Fireball">
-                    <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">int(Impact_Fireball.Damage * Family_Character.BonusDamageMult)</param>
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Impact_Fireball.Impact_Damage * Family_Character.BonusDamageMult)</param>
                 </action>
                 <action behavior="Timer" id="0" name="Start timer" sid="925098501021451" type="Impact_Fireball">
-                    <param id="0" name="Duration">Impact_Fireball.TimeDuration</param>
+                    <param id="0" name="Duration">Impact_Fireball.Impact_Duration</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Destroy&quot;</param>
                 </action>
@@ -546,7 +550,7 @@
                     <param id="1" name="Parameter {n}">&quot;wand&quot;</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="787603214395015" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
@@ -560,7 +564,7 @@
                     <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="545615804786596" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -581,12 +585,16 @@
                 <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="549107930078149" type="Impact_Arrow">
                     <param id="0" name="Angle">Family_Item.Angle</param>
                 </action>
+                <action id="-10" name="Set value" sid="874263741533974" type="Impact_Arrow">
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
                 <action id="-10" name="Set value" sid="988713940658716" type="Impact_Arrow">
-                    <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">int(Impact_Arrow.Damage * Family_Character.BonusDamageMult)</param>
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Impact_Arrow.Impact_Damage * Family_Character.BonusDamageMult)</param>
                 </action>
                 <action behavior="Timer" id="0" name="Start timer" sid="690863951379656" type="Impact_Arrow">
-                    <param id="0" name="Duration">Impact_Arrow.TimeDuration</param>
+                    <param id="0" name="Duration">Impact_Arrow.Impact_Duration</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Destroy&quot;</param>
                 </action>
@@ -595,7 +603,7 @@
                     <param id="1" name="Parameter {n}">&quot;bow&quot;</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="598445616660461" type="Family_Item">
-                    <param id="0" name="Instance variable">Ammo</param>
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : 1</param>
                 </action>
             </actions>
@@ -632,16 +640,112 @@
                 <action behavior="FI_Bullet" id="0" name="Set speed" sid="804715127029011" type="Impact_Axe">
                     <param id="0" name="Speed">200</param>
                 </action>
+                <action id="-10" name="Set value" sid="234890304340460" type="Impact_Axe">
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
                 <action id="-10" name="Set value" sid="158927412158536" type="Impact_Axe">
-                    <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">int(Impact_Axe.Damage * Family_Character.BonusDamageMult)</param>
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Impact_Axe.Impact_Damage * Family_Character.BonusDamageMult)</param>
                 </action>
                 <action behavior="Timer" id="0" name="Start timer" sid="898193653521101" type="Impact_Axe">
-                    <param id="0" name="Duration">Impact_Axe.TimeDuration</param>
+                    <param id="0" name="Duration">Impact_Axe.Impact_Duration</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Destroy&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="833461755880054">
+            <conditions>
+                <condition behavior="FO_Timer" id="0" name="On timer" sid="925514805472925" type="Family_Item">
+                    <param id="0" name="Tag">&quot;Shoot_Projectile&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="619620966020777" type="Family_Character">
+                    <param id="0" name="Unique ID">Family_Item.FO_Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="651167090445688" type="Family_Item">
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="739135910237827" type="Family_Item">
+                    <param id="0" name="Object">Impact_Generic</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="930353163821459" type="Impact_Generic">
+                    <param id="0" name="Animation">Family_Item.Projectile_Animation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="508227509305923" type="Impact_Generic">
+                    <param id="0" name="Angle">Family_Item.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="807281521553950" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">Family_Character.TypeRole</param>
+                </action>
+                <action id="-10" name="Set value" sid="878942395763345" type="Impact_Generic">
+                    <param id="0" name="Instance variable">TypeObject</param>
+                    <param id="1" name="Value">&quot;Projectile&quot;</param>
+                </action>
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="874337554331397" type="Impact_Generic">
+                    <param id="0" name="Angle">Family_Item.Angle</param>
+                </action>
+                <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
+                    <param id="0" name="Speed">Family_Item.Projectile_Speed</param>
+                </action>
+                <action id="-10" name="Set value" sid="141224123841149" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Impact_PushImpact</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_PushImpact)</param>
+                </action>
+                <action id="-10" name="Set value" sid="316771976281180" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                </action>
+                <action id="-10" name="Set value" sid="614635516253122" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Impact_Generic.Impact_Damage * Family_Character.BonusDamageMult)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="737434007205443" type="Impact_Generic">
+                    <param id="0" name="Duration">Impact_Generic.Impact_Duration</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="367531849749154" type="Family_Item">
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                    <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : Family_Item.Projectile_AmmoSpend</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="525554166392414">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="436757329199127" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="923034714575186" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668332949719876">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="138631018873601" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_PierceWalls</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="770349298382437" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Impact_PierceWalls</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>HEARTH</comment>
         <event-block sid="425304371161602">
@@ -663,6 +767,186 @@
                     <param id="1" name="Parameter {n}">&quot;Heart&quot;</param>
                 </action>
                 <action id="-9" name="Destroy" sid="184362761187232" type="Item_Potion" />
+            </actions>
+        </event-block>
+        <comment>Generic Item Function</comment>
+        <event-block sid="665059631073096">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="965654841827453" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="211914337409517" type="AJAX">
+                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                    <param id="1" name="URL">&quot;ItemList.xml&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904165081748068">
+            <conditions>
+                <condition id="0" name="On completed" sid="109726787049481" type="AJAX">
+                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="739626777381164" type="XML_Inventory">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="980366089511247">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="710848069954981" type="System">
+                            <param id="0" name="Object">Item_Generic</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="816583520732849" type="Item_Generic">
+                            <param id="0" name="Animation">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Animation&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="287188579973040" type="Item_Generic">
+                            <param id="0" name="Instance variable">Function_Param</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Function_Command&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="498579524083901" type="Item_Generic">
+                            <param id="0" name="Instance variable">Information</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Information&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Has Projectile Node</comment>
+                        <event-block sid="419646821822763">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="771462351044884" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="405139810776417" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Animation</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Animation&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="288094225848350" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Damage</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Damage&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="276115900842696" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_PushImpact</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PushImpact&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="837740595993997" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Duration</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Duration&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267400541618711" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_Speed</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Speed&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="187489248627172" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_RecoilTime</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/RecoilTime&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Has Ammo</comment>
+                                <event-block sid="858173090422619">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="425332361128302" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/HasAmmo&quot;)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="297054811159512" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_HasAmmo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="260622005777078" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSize&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="560030269787951" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_AmmoSpend</param>
+                                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSpend&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="371216913925416">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="219909525635373" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PierceCharacters&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="562893469729803" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="849887102062768">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="929178435813145" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PierceWalls&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="173859207787237" type="Item_Generic">
+                                            <param id="0" name="Instance variable">Projectile_PierceWalls</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Has Melee Node</comment>
+                        <event-block sid="598712629742013">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="410644016831630" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="840478133818356" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Impact_Damage</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/Damage&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="571874254729313" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Impact_PushImpact</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/PushImpact&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="850261776212823" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Impact_RecoilTime</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/RecoilTime&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="863938101551701">
+            <conditions>
+                <condition id="0" name="On function" sid="805396186962154" type="Function">
+                    <param id="0" name="Name">&quot;GetXMLInventoryNode&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="411889320537113" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="512153238130670" type="Function">
+                    <param id="0" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/&quot;&amp;Function.Param(1)&amp;&quot;/text()&quot;) </param>
+                </action>
             </actions>
         </event-block>
     </events>
