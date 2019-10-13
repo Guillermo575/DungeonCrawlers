@@ -98,6 +98,15 @@
             <object-type name="AJAX" sid="332020079325300">
                 <plugin id="AJAX" />
             </object-type>
+            <object-type name="Keyboard" sid="402094964988093">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="703930709321526">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Touch" sid="320383388716192">
+                <plugin id="Touch" />
+            </object-type>
         </object-folder>
         <object-folder name="Dungeon">
             <object-folder name="MiniMap">
@@ -417,6 +426,7 @@
                     <instance-variables>
                         <instance-variable comment="if this value is false, the door is open" name="Locked" sid="535211047362489" type="boolean" />
                         <instance-variable comment="Keys needed to open the door, if the value is 0 the door is opened" name="KeyLock" sid="727671895908526" type="number" />
+                        <instance-variable comment="Transport level name (optional)" name="LayoutName" sid="327606684810370" type="string" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin" sid="606186967609100">
@@ -2117,17 +2127,6 @@
             </object-folder>
             <object-type global="1" name="Dialogues" sid="309332141315499">
                 <plugin id="XML" />
-            </object-type>
-        </object-folder>
-        <object-folder name="_Controls">
-            <object-type name="Mouse" sid="703930709321526">
-                <plugin id="Mouse" />
-            </object-type>
-            <object-type name="Touch" sid="320383388716192">
-                <plugin id="Touch" />
-            </object-type>
-            <object-type name="Keyboard" sid="402094964988093">
-                <plugin id="Keyboard" />
             </object-type>
         </object-folder>
         <object-folder name="GamePlay">

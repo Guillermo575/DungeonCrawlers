@@ -501,6 +501,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="DoorDungeon" uid="207">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Ocuppied>false</Ocuppied>
+                        <Message>Spacebar</Message>
+                        <NameIcon>Door</NameIcon>
+                        <IconId>0</IconId>
+                        <Locked>false</Locked>
+                        <KeyLock>0</KeyLock>
+                        <LayoutName>TrainingRoom</LayoutName>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>458.955688477</x>
+                        <y>356.107086182</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.712499976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
