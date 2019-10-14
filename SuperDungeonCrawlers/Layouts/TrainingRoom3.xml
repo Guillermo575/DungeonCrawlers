@@ -515,7 +515,7 @@
                         <IconId>0</IconId>
                         <Locked>false</Locked>
                         <KeyLock>0</KeyLock>
-                        <LayoutName>TrainingRoom</LayoutName>
+                        <LayoutName>TrainingRoom4</LayoutName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -523,8 +523,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>458.955688477</x>
-                        <y>356.107086182</y>
+                        <x>444.372283936</x>
+                        <y>305.413085938</y>
                         <z>0</z>
                         <width>50</width>
                         <height>80</height>
