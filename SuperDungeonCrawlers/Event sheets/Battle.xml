@@ -656,6 +656,10 @@
                             <param id="0" name="Instance variable">Information</param>
                             <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Information&quot;)</param>
                         </action>
+                        <action id="-10" name="Set value" sid="921485719627728" type="Item_Generic">
+                            <param id="0" name="Instance variable">TypeObject</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;TypeObject&quot;)</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Has Projectile Node</comment>
