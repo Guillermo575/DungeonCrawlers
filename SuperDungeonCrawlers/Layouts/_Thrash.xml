@@ -2746,6 +2746,7 @@
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID></XMLID>
+                        <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FO_Pin2">

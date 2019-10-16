@@ -778,6 +778,15 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="324832980643412">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="732194488369943" type="Item_Generic">
+                                    <param id="0" name="Instance variable">XMLContent</param>
+                                    <param id="1" name="Value">Function.Call(&quot;CreateXMLItem&quot;,Item_Generic.UID)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>

@@ -396,6 +396,7 @@
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID>Wand</XMLID>
+                        <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FO_Pin2">
@@ -466,6 +467,7 @@
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID>Sword</XMLID>
+                        <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FO_Pin2">

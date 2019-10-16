@@ -2245,6 +2245,7 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable comment="Id used for the inventory.xml" name="XMLID" sid="168003086020901" type="string" />
+                        <instance-variable name="XMLContent" sid="313595648114904" type="string" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="915364440319450" speed="0">
@@ -3102,9 +3103,9 @@
         <layout-folder name="Levels">
             <layout-folder name="TrainingRooms">
                 <layout>TrainingRoom.xml</layout>
-                <layout>TrainingRoom4.xml</layout>
                 <layout>TrainingRoom2.xml</layout>
                 <layout>TrainingRoom3.xml</layout>
+                <layout>TrainingRoom4.xml</layout>
             </layout-folder>
             <layout-folder name="BoosRooms">
                 <layout>Boss_Wormula.xml</layout>
