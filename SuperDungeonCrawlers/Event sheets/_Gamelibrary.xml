@@ -13,6 +13,7 @@
         <include>Player</include>
         <include>Battle</include>
         <include>Spriter_Animation</include>
+        <include>GenericItem</include>
         <include>HUD</include>
         <include>DialogueEvents</include>
         <comment>This function loads the last level in this variable, useful for &quot;try again?&quot; Option</comment>

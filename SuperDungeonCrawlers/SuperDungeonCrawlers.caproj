@@ -3132,6 +3132,7 @@
             <event-sheet>Battle.xml</event-sheet>
             <event-sheet>Spriter_Animation.xml</event-sheet>
             <event-sheet>DialogueEvents.xml</event-sheet>
+            <event-sheet>GenericItem.xml</event-sheet>
         </event-folder>
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>
