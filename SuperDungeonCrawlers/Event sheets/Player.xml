@@ -948,7 +948,7 @@
                         <condition id="-8" name="Compare two values" sid="102258532955229" type="System">
                             <param id="0" name="First value">Function.Param(1)</param>
                             <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">&quot;&quot;</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                         <condition id="-33" name="Pick by comparison" sid="755724264426767" type="System">
                             <param id="0" name="Object">Player_Log</param>
@@ -958,21 +958,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="723809355548845" type="Item_Generic">
-                            <param id="0" name="Instance variable">XMLID</param>
-                            <param id="1" name="Value">Function.Param(2)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="321503783330319" type="Item_Generic">
-                            <param id="0" name="Instance variable">XMLContent</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
-                        </action>
-                        <action id="0" name="Load" sid="569300238775822" type="XML_Inventory">
-                            <param id="0" name="XML">Item_Generic.XMLContent</param>
-                        </action>
-                        <action id="0" name="Call function" sid="981596912167858" type="Function">
-                            <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
-                            <param id="1" name="Parameter {n}">Item_Generic.UID</param>
-                        </action>
                         <action id="0" name="Spawn another object" sid="979982071970997" type="Family_Character">
                             <param id="0" name="Object">Item_Generic</param>
                             <param id="1" name="Layer">&quot;Characters&quot;</param>
@@ -981,6 +966,21 @@
                         <action id="0" name="Call function" sid="261594468143256" type="Function">
                             <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
                             <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Generic.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="321503783330319" type="Item_Generic">
+                            <param id="0" name="Instance variable">XMLContent</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="0" name="Load" sid="569300238775822" type="XML_Inventory">
+                            <param id="0" name="XML">Item_Generic.XMLContent</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="723809355548845" type="Item_Generic">
+                            <param id="0" name="Instance variable">XMLID</param>
+                            <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[1]/@name&quot;)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="981596912167858" type="Function">
+                            <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                            <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                         </action>
                     </actions>
                 </event-block>

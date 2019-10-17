@@ -242,7 +242,7 @@
                         </action>
                         <action id="-10" name="Add to" sid="731375550925124" type="System">
                             <param id="0" name="Variable">XMLString</param>
-                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Animation&quot;,Item_Generic.AnimationName) </param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Function_Command&quot;,Item_Generic.Function_Param) </param>
                         </action>
                         <action id="-10" name="Add to" sid="169130084865590" type="System">
                             <param id="0" name="Variable">XMLString</param>
@@ -320,9 +320,6 @@
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">&quot;&lt;/Melee&gt;&quot;</param>
                         </action>
-                        <action id="1" name="Set return value" sid="908180551413804" type="Function">
-                            <param id="0" name="Value">XMLString</param>
-                        </action>
                         <action id="-10" name="Add to" sid="333168137037529" type="System">
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">&quot;&lt;/object&gt;&quot;</param>
@@ -330,6 +327,9 @@
                         <action id="-10" name="Add to" sid="408907696684788" type="System">
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">&quot;&lt;/ObjectList&gt;&quot;</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="908180551413804" type="Function">
+                            <param id="0" name="Value">XMLString</param>
                         </action>
                     </actions>
                 </event-block>
