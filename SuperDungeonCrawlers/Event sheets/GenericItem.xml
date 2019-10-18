@@ -75,9 +75,9 @@
                 <event-block sid="695157030686933">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="903372354005149" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile&quot;)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">&quot;&quot;</param>
+                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNodeCount&quot;,Item_Generic.UID,&quot;Projectile&quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -112,8 +112,8 @@
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="217748515975359" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/HasAmmo&quot;)</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -167,9 +167,9 @@
                 <event-block sid="668127177134986">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="953492730292968" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee&quot;)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">&quot;&quot;</param>
+                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNodeCount&quot;,Item_Generic.UID,&quot;Melee&quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -213,6 +213,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="528019139487211">
+            <conditions>
+                <condition id="0" name="On function" sid="595786718881620" type="Function">
+                    <param id="0" name="Name">&quot;GetXMLInventoryNodeCount&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="518846654870121" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="234030873545517" type="Function">
+                    <param id="0" name="Value">XML_Inventory.NodeCount(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/&quot;&amp;Function.Param(1)) </param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="772869844810031">
             <conditions>
                 <condition id="0" name="On function" sid="721602511378332" type="Function">
@@ -244,6 +259,10 @@
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Function_Command&quot;,Item_Generic.Function_Param) </param>
                         </action>
+                        <action id="-10" name="Add to" sid="921488459871747" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;TypeObject&quot;,Item_Generic.TypeObject) </param>
+                        </action>
                         <action id="-10" name="Add to" sid="169130084865590" type="System">
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Information&quot;,Item_Generic.Information) </param>
@@ -260,13 +279,13 @@
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Damage&quot;,Item_Generic.Projectile_Damage) </param>
                         </action>
-                        <action id="-10" name="Add to" sid="854261492790853" type="System">
-                            <param id="0" name="Variable">XMLString</param>
-                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PushImpact&quot;,Item_Generic.Projectile_PushImpact) </param>
-                        </action>
                         <action id="-10" name="Add to" sid="561884920891406" type="System">
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Duration&quot;,Item_Generic.Projectile_Duration) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="854261492790853" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PushImpact&quot;,Item_Generic.Projectile_PushImpact) </param>
                         </action>
                         <action id="-10" name="Add to" sid="746706506544733" type="System">
                             <param id="0" name="Variable">XMLString</param>
@@ -306,15 +325,15 @@
                         </action>
                         <action id="-10" name="Add to" sid="835432223989479" type="System">
                             <param id="0" name="Variable">XMLString</param>
-                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Damage&quot;,Item_Generic.Projectile_Damage) </param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Damage&quot;,Item_Generic.Impact_Damage) </param>
                         </action>
                         <action id="-10" name="Add to" sid="962614365437110" type="System">
                             <param id="0" name="Variable">XMLString</param>
-                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PushImpact&quot;,Item_Generic.Projectile_PushImpact) </param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PushImpact&quot;,Item_Generic.Impact_PushImpact) </param>
                         </action>
                         <action id="-10" name="Add to" sid="504792752373631" type="System">
                             <param id="0" name="Variable">XMLString</param>
-                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;RecoilTime&quot;,Item_Generic.Projectile_RecoilTime) </param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;RecoilTime&quot;,Item_Generic.Impact_RecoilTime) </param>
                         </action>
                         <action id="-10" name="Add to" sid="736433052579105" type="System">
                             <param id="0" name="Variable">XMLString</param>
