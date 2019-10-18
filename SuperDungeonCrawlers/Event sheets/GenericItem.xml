@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GenericItem</name>
+    <events>
+        <comment>Generic Item Function</comment>
+        <event-block sid="281874225374087">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="154244227211502" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="308415300298574" type="AJAX">
+                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                    <param id="1" name="URL">&quot;ItemList.xml&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="489594784231061">
+            <conditions>
+                <condition id="0" name="On completed" sid="651867837187817" type="AJAX">
+                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="109947603997817" type="XML_Inventory">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="963887715056388">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="199902969009798" type="System">
+                            <param id="0" name="Object">Item_Generic</param>
+                        </condition>
+                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="529607016013354" type="Item_Generic" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="936939675566097" type="Function">
+                            <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                            <param id="1" name="Parameter {n}">Item_Generic.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="181304458212781">
+            <conditions>
+                <condition id="0" name="On function" sid="583309979874478" type="Function">
+                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="848922237583679" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="499659262524153" type="Item_Generic">
+                    <param id="0" name="Animation">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Animation&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="392904586092934" type="Item_Generic">
+                    <param id="0" name="Instance variable">Function_Param</param>
+                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Function_Command&quot;)</param>
+                </action>
+                <action id="-10" name="Set value" sid="190417663724996" type="Item_Generic">
+                    <param id="0" name="Instance variable">Information</param>
+                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Information&quot;)</param>
+                </action>
+                <action id="-10" name="Set value" sid="148907748261323" type="Item_Generic">
+                    <param id="0" name="Instance variable">TypeObject</param>
+                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;TypeObject&quot;)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Has Projectile Node</comment>
+                <event-block sid="695157030686933">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="903372354005149" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNodeCount&quot;,Item_Generic.UID,&quot;Projectile&quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="196862330219853" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_Animation</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Animation&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="681546382959856" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_Damage</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Damage&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="557111428795863" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_PushImpact</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PushImpact&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="993683008530458" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_Duration</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Duration&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="592960681398189" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_Speed</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/Speed&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="655485634919147" type="Item_Generic">
+                            <param id="0" name="Instance variable">Projectile_RecoilTime</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/RecoilTime&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Has Ammo</comment>
+                        <event-block sid="305189775227311">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="217748515975359" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/HasAmmo&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="364369568381268" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="491340724970694" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSize&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="304177350125264" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_AmmoSpend</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSpend&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="233442207457372">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="696054504477510" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PierceCharacters&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="131601864969111" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="621990488122787">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="206502525482119" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/PierceWalls&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="382325770602026" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_PierceWalls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Has Melee Node</comment>
+                <event-block sid="668127177134986">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="953492730292968" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNodeCount&quot;,Item_Generic.UID,&quot;Melee&quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="988750913699237" type="Item_Generic">
+                            <param id="0" name="Instance variable">Impact_Damage</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/Damage&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="784236175564059" type="Item_Generic">
+                            <param id="0" name="Instance variable">Impact_PushImpact</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/PushImpact&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="305617863687746" type="Item_Generic">
+                            <param id="0" name="Instance variable">Impact_RecoilTime</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Melee/RecoilTime&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="478390482685235">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="119738771472221" type="Item_Generic">
+                            <param id="0" name="Instance variable">XMLContent</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetItemXMLData&quot;,Item_Generic.UID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="674144798497856">
+            <conditions>
+                <condition id="0" name="On function" sid="474106979220087" type="Function">
+                    <param id="0" name="Name">&quot;GetXMLInventoryNode&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="513316662068701" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="949445228497429" type="Function">
+                    <param id="0" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/&quot;&amp;Function.Param(1)&amp;&quot;/text()&quot;) </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528019139487211">
+            <conditions>
+                <condition id="0" name="On function" sid="595786718881620" type="Function">
+                    <param id="0" name="Name">&quot;GetXMLInventoryNodeCount&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="518846654870121" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="234030873545517" type="Function">
+                    <param id="0" name="Value">XML_Inventory.NodeCount(&quot;/ObjectList/object[@name=&apos;&quot; &amp; Item_Generic.XMLID &amp; &quot;&apos;]/&quot;&amp;Function.Param(1)) </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="772869844810031">
+            <conditions>
+                <condition id="0" name="On function" sid="721602511378332" type="Function">
+                    <param id="0" name="Name">&quot;GetItemXMLData&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="697818584057749" type="Item_Generic">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="XMLString" sid="248292398658366" static="0" type="text">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;</variable>
+                <event-block sid="313728859193610">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Add to" sid="475463048631527" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;ObjectList&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="889914462489797" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;object name=&apos;&quot;&amp;Item_Generic.XMLID&amp;&quot;&apos;&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="314194274028087" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Animation&quot;,Item_Generic.AnimationName) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="731375550925124" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Function_Command&quot;,Item_Generic.Function_Param) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="921488459871747" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;TypeObject&quot;,Item_Generic.TypeObject) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="169130084865590" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Information&quot;,Item_Generic.Information) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="258960649032922" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Projectile&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="344716228540167" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Animation&quot;,Item_Generic.Projectile_Animation) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="550248359055569" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Damage&quot;,Item_Generic.Projectile_Damage) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="561884920891406" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Duration&quot;,Item_Generic.Projectile_Duration) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="854261492790853" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PushImpact&quot;,Item_Generic.Projectile_PushImpact) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="746706506544733" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Speed&quot;,Item_Generic.Projectile_Speed) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="748236191264869" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;RecoilTime&quot;,Item_Generic.Projectile_RecoilTime) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="436547841659652" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;HasAmmo&quot;,Item_Generic.Projectile_HasAmmo) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="898515015693580" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoSize&quot;,Item_Generic.Projectile_AmmoSize) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="149652526528635" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoSpend&quot;,Item_Generic.Projectile_AmmoSpend) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="907436070998188" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PierceWalls&quot;,Item_Generic.Projectile_PierceWalls?&quot;1&quot;:&quot;0&quot;) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="195049846261559" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PierceCharacters&quot;,Item_Generic.Projectile_PierceCharacters?&quot;1&quot;:&quot;0&quot;) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="677203306285938" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;/Projectile&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="394459553524468" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Melee&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="835432223989479" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;Damage&quot;,Item_Generic.Impact_Damage) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="962614365437110" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;PushImpact&quot;,Item_Generic.Impact_PushImpact) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="504792752373631" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;RecoilTime&quot;,Item_Generic.Impact_RecoilTime) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="736433052579105" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;/Melee&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="333168137037529" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;/object&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="408907696684788" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;/ObjectList&gt;&quot;</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="908180551413804" type="Function">
+                            <param id="0" name="Value">XMLString</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="538086235035734">
+            <conditions>
+                <condition id="0" name="On function" sid="721323031732030" type="Function">
+                    <param id="0" name="Name">&quot;CreateXMLItemNode&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="276344841954075" type="Function">
+                    <param id="0" name="Value">&quot;&lt;&quot;&amp;Function.Param(0)&amp;&quot;&gt;&quot; &amp; Function.Param(1) &amp;&quot;&lt;/&quot;&amp;Function.Param(0)&amp;&quot;&gt;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

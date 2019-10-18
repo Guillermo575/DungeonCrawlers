@@ -392,10 +392,11 @@
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>
-                        <Impact_Duration>3</Impact_Duration>
+                        <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID>Wand</XMLID>
+                        <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FO_Pin2">
@@ -462,10 +463,11 @@
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>
-                        <Impact_Duration>3</Impact_Duration>
+                        <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
                         <XMLID>Sword</XMLID>
+                        <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FO_Pin2">
@@ -489,14 +491,48 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>355.484466553</x>
-                        <y>184.581039429</y>
+                        <x>447.15020752</x>
+                        <y>170.692382813</y>
                         <z>0</z>
                         <width>28</width>
                         <height>11</height>
                         <depth>0</depth>
                         <hotspotX>0.178571433</hotspotX>
                         <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DoorDungeon" uid="207">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Ocuppied>false</Ocuppied>
+                        <Message>Spacebar</Message>
+                        <NameIcon>Door</NameIcon>
+                        <IconId>0</IconId>
+                        <Locked>false</Locked>
+                        <KeyLock>0</KeyLock>
+                        <LayoutName>TrainingRoom4</LayoutName>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>405.484283447</x>
+                        <y>140.831375122</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.712499976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -98,6 +98,15 @@
             <object-type name="AJAX" sid="332020079325300">
                 <plugin id="AJAX" />
             </object-type>
+            <object-type name="Keyboard" sid="402094964988093">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="703930709321526">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Touch" sid="320383388716192">
+                <plugin id="Touch" />
+            </object-type>
         </object-folder>
         <object-folder name="Dungeon">
             <object-folder name="MiniMap">
@@ -417,6 +426,7 @@
                     <instance-variables>
                         <instance-variable comment="if this value is false, the door is open" name="Locked" sid="535211047362489" type="boolean" />
                         <instance-variable comment="Keys needed to open the door, if the value is 0 the door is opened" name="KeyLock" sid="727671895908526" type="number" />
+                        <instance-variable comment="Transport level name (optional)" name="LayoutName" sid="327606684810370" type="string" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin" sid="606186967609100">
@@ -2119,17 +2129,6 @@
                 <plugin id="XML" />
             </object-type>
         </object-folder>
-        <object-folder name="_Controls">
-            <object-type name="Mouse" sid="703930709321526">
-                <plugin id="Mouse" />
-            </object-type>
-            <object-type name="Touch" sid="320383388716192">
-                <plugin id="Touch" />
-            </object-type>
-            <object-type name="Keyboard" sid="402094964988093">
-                <plugin id="Keyboard" />
-            </object-type>
-        </object-folder>
         <object-folder name="GamePlay">
             <object-folder name="Items">
                 <object-type name="Item_Sword" sid="995720059400956">
@@ -2246,6 +2245,7 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable comment="Id used for the inventory.xml" name="XMLID" sid="168003086020901" type="string" />
+                        <instance-variable name="XMLContent" sid="313595648114904" type="string" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="915364440319450" speed="0">
@@ -3105,6 +3105,7 @@
                 <layout>TrainingRoom.xml</layout>
                 <layout>TrainingRoom2.xml</layout>
                 <layout>TrainingRoom3.xml</layout>
+                <layout>TrainingRoom4.xml</layout>
             </layout-folder>
             <layout-folder name="BoosRooms">
                 <layout>Boss_Wormula.xml</layout>
@@ -3131,6 +3132,7 @@
             <event-sheet>Battle.xml</event-sheet>
             <event-sheet>Spriter_Animation.xml</event-sheet>
             <event-sheet>DialogueEvents.xml</event-sheet>
+            <event-sheet>GenericItem.xml</event-sheet>
         </event-folder>
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>
