@@ -758,7 +758,12 @@
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="135255261519685" type="Family_Impact">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="326549092502508">
                             <conditions>

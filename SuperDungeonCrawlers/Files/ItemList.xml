@@ -49,4 +49,28 @@
 			<RecoilTime>0.5</RecoilTime>
 		</Melee>
 	</object>
+	<object name='Axe'>
+		<Animation>Object_Axe</Animation>
+		<Function_Command>HoldAxe</Function_Command>
+		<TypeObject>Melee</TypeObject>
+		<Information>Shot Object</Information>
+		<Projectile>
+			<Animation>Axe</Animation>
+			<Damage>3</Damage>
+			<PushImpact>30</PushImpact>
+			<Duration>1</Duration>
+			<Speed>200</Speed>
+			<RecoilTime>0.3</RecoilTime>
+			<HasAmmo>1</HasAmmo>
+			<AmmoSize>1</AmmoSize>
+			<AmmoSpend>0</AmmoSpend>
+			<PierceCharacters>0</PierceCharacters>
+			<PierceWalls>0</PierceWalls>
+		</Projectile>
+		<Melee>
+			<Damage>2</Damage>
+			<PushImpact>30</PushImpact>
+			<RecoilTime>0.5</RecoilTime>
+		</Melee>
+	</object>
 </ObjectList>
