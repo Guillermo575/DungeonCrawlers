@@ -385,7 +385,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set animation" sid="232197190534105" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Walk&quot;, Family_Character.LastDirection)</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -397,7 +397,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set animation" sid="577470495503115" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Idle&quot;, Family_Character.LastDirection)</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -416,7 +416,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set animation" sid="690678915598177" type="Scml_Player_Top">
-                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Jump&quot;</param>
+                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
                             <param id="1" name="Where to start playing this animation">1</param>
                             <param id="2" name="Blend Duration">0</param>
                         </action>
@@ -480,7 +480,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="885418304133436" type="Scml_Player_Bottom">
-                                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Walk&quot;</param>
+                                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Walk&quot;, Family_Character.LastDirection)</param>
                                             <param id="1" name="Where to start playing this animation">1</param>
                                             <param id="2" name="Blend Duration">0</param>
                                         </action>
@@ -492,7 +492,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="288605401390807" type="Scml_Player_Bottom">
-                                            <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Idle&quot;</param>
+                                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Idle&quot;, Family_Character.LastDirection)</param>
                                             <param id="1" name="Where to start playing this animation">1</param>
                                             <param id="2" name="Blend Duration">0</param>
                                         </action>
@@ -511,7 +511,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set animation" sid="181360011404707" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Jump&quot;</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -603,7 +603,7 @@
                                     <param id="0" name="Speed Ratio">2</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="286663558636099" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_SweepFull_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;SweepFull&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -662,33 +662,6 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="117049772352571">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="388752329468720" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="926719652988964" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="1" name="Set playback speed ratio" sid="129931975126772" type="Scml_Player_Top">
-                                    <param id="0" name="Speed Ratio">-2</param>
-                                </action>
-                                <action id="0" name="Set animation" sid="353589352333475" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
-                                    <param id="1" name="Where to start playing this animation">0</param>
-                                    <param id="2" name="Blend Duration">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="620515296742281" type="System">
-                                    <param id="0" name="Variable">ActionSelected</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="829719321013051">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="183367700993077" type="Family_Character">
@@ -706,7 +679,7 @@
                                     <param id="0" name="Speed Ratio">2</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="793160489591890" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Stab&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -782,7 +755,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="563537508564556" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_SweepFull_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Sweep&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -854,7 +827,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="147291123415554" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Hold_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Hold&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -931,7 +904,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="353069131664086" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Hold_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Hold&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -958,7 +931,7 @@
                                     <param id="0" name="Speed Ratio">2</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="418657257484666" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Sweep&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1079,7 +1052,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="873084729591036" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Hold_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Hold&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1106,7 +1079,7 @@
                                     <param id="0" name="Speed Ratio">2</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="495987499310836" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Sweep_&quot;&amp;(Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Sweep&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1161,12 +1134,12 @@
                             <param id="0" name="Speed Ratio">1</param>
                         </action>
                         <action id="0" name="Set animation" sid="738981908367218" type="Scml_Player_Top">
-                            <param id="0" name="Animation">Family_Character.LastDirection &amp; &quot;_Jump&quot;</param>
+                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                             <param id="2" name="Blend Duration">0</param>
                         </action>
                         <action id="0" name="Set animation" sid="236359980274577" type="Scml_Player_Bottom">
-                            <param id="0" name="Animation">Family_Character.LastDirection&amp;&quot;_Jump&quot;</param>
+                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
                             <param id="1" name="Where to start playing this animation">0</param>
                             <param id="2" name="Blend Duration">0</param>
                         </action>
@@ -1217,7 +1190,15 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="757221401409986" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Death&quot;)</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="396978470229106" type="Scml_Player_Bottom">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="453292905667202" type="Scml_Player_Bottom">
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Death&quot;)</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1262,6 +1243,18 @@
                 <action id="0" name="Call function" sid="278566648136664" type="Function">
                     <param id="0" name="Name">&quot;CallCommand&quot;</param>
                     <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="544530690282896">
+            <conditions>
+                <condition id="0" name="On function" sid="835804159439075" type="Function">
+                    <param id="0" name="Name">&quot;GetAnimationName&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="597159875557160" type="Function">
+                    <param id="0" name="Value">Function.Param(0) &amp; (Function.Param(2) = 0 ?  &quot;&quot;  : &quot;_&quot; &amp; Function.Param(2) ) &amp; (Function.Param(1) = 0 ?  &quot;&quot;  : &quot;_&quot; &amp; Function.Param(1))</param>
                 </action>
             </actions>
         </event-block>
