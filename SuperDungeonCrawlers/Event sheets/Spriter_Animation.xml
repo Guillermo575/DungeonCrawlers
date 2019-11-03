@@ -600,7 +600,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="1" name="Set playback speed ratio" sid="336652398217468" type="Scml_Player_Top">
-                                    <param id="0" name="Speed Ratio">2</param>
+                                    <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="286663558636099" type="Scml_Player_Top">
                                     <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;SweepFull&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
