@@ -199,10 +199,11 @@
                         <action id="-25" name="Move to bottom" sid="680674590642608" type="Family_Item" />
                     </actions>
                 </event-block>
-                <event-block any="1" sid="380075290441014">
+                <event-block sid="380075290441014">
                     <conditions>
-                        <condition behavior="FC_8Direction" id="0" name="Is moving" sid="465882433270135" type="Family_Character" />
-                        <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="228525071947355" type="Family_Character" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="511807898917717" type="Family_Character">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -634,6 +635,82 @@
                             </conditions>
                             <actions>
                                 <action id="-13" name="Set boolean" sid="226371750384448" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="297548269628606">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="663045362106833" type="Family_Character">
+                            <param id="0" name="Instance variable">ActionCommand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;SweepHammer&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="510144211010739" type="Family_Item">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="203926486480808" type="Family_Impact">
+                            <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="718303123684050" type="Family_Impact">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="670983371842529">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="303927118271624" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="458902862180683" type="Family_Character">
+                                    <param id="0" name="Instance variable">ActionStep</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set playback speed ratio" sid="213847861517911" type="Scml_Player_Top">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="410018492081518" type="Scml_Player_Top">
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Slam&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
+                                    <param id="1" name="Where to start playing this animation">0</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="735801668987846" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="541111448918827">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="727999382813031" type="System">
+                                    <param id="0" name="Variable">ActionSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="585376829638401" type="Family_Impact">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="840903344340449">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="514871423213107" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="322316939914694" type="Family_Impact">
                                     <param id="0" name="Instance variable">MakeDamage</param>
                                     <param id="1" name="Value">0</param>
                                 </action>

@@ -265,6 +265,39 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block any="1" sid="878801142796412">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="447431535685011" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="482066396515023" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="708944354267844" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="347086333728374" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="336073439110611" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="192531277948238">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="638428019793391" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="702578023598778" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="365559380967541">

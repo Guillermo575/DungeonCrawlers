@@ -287,6 +287,10 @@
                                     <param id="0" name="Instance variable">MakeDamage</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="329683668978238" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="601664947014207">
@@ -600,6 +604,10 @@
                             </conditions>
                             <actions>
                                 <action behavior="FC_Pathfinding" id="2" name="Stop" sid="371435971739204" type="EnemyCoreBox" />
+                                <action id="-13" name="Set boolean" sid="127466224071799" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="926880332525062">

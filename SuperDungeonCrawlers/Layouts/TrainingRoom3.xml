@@ -215,6 +215,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <IsMoving>false</IsMoving>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -571,7 +572,7 @@
                         <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
-                        <XMLID>Axe</XMLID>
+                        <XMLID>Hammer</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>

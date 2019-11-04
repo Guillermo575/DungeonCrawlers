@@ -956,8 +956,24 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="4" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="993860099626226" speed="0">
+                        <animation framecount="6" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="993860099626226" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\Head.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\HeadSide.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -973,7 +989,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\HeadSide.png">
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1210,11 +1226,13 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="3" loop="1" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="656269741043534" speed="0">
+                        <animation framecount="5" loop="1" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="656269741043534" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Torso\Torso.png">
                                 <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
                                 <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
                             </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Torso\TorsoSide.png" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Torso\TorsoBack.png">
                                 <collision-poly>
                                     <point x="0" y="0" />
@@ -1223,7 +1241,14 @@
                                     <point x="0" y="1" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Torso\TorsoSide.png" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.996711" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2315,7 +2340,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Object_Spear" pingpong="0" repeatcount="1" repeatto="0" sid="424707695975634" speed="5">
-                            <frame duration="1" hotspotX="0.25" hotspotY="0.454545" original-source="C:\Users\MasterRace\Desktop\Object_Spear.png">
+                            <frame duration="1" hotspotX="0.214286" hotspotY="0.454545" original-source="C:\Users\MasterRace\Desktop\Object_Spear.png">
                                 <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
                                 <collision-poly>
                                     <point x="0.5" y="0.454545" />
@@ -2339,6 +2364,20 @@
                                     <point x="0.481481" y="0.384615" />
                                     <point x="0.259259" y="0.461538" />
                                     <point x="0.740741" y="0.461538" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Hammer" pingpong="0" repeatcount="1" repeatto="0" sid="776224740474869" speed="5">
+                            <frame duration="1" hotspotX="0.214286" hotspotY="0.454545">
+                                <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
+                                <collision-poly>
+                                    <point x="0.5" y="0.454545" />
+                                    <point x="0.892857" y="0.272727" />
+                                    <point x="0.964286" y="0.454545" />
+                                    <point x="0.892857" y="0.727273" />
+                                    <point x="0.5" y="0.545455" />
+                                    <point x="0.178571" y="0.545455" />
+                                    <point x="0.0357143" y="0.454545" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -2902,6 +2941,7 @@
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
+                <instance-variable name="IsMoving" sid="821611097718825" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FC_8Direction" sid="182952999122772">

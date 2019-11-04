@@ -160,6 +160,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <IsMoving>false</IsMoving>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -642,6 +643,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>true</Unstopable>
+                        <IsMoving>false</IsMoving>
                         <Group>Enemy</Group>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
