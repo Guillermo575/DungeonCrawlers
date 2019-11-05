@@ -2928,20 +2928,22 @@
                 <instance-variable comment="Object that carry this arm" name="ArmLeft" sid="566961981906211" type="number" />
                 <instance-variable comment="Object that carry this arm" name="ArmRight" sid="846932810223513" type="number" />
                 <instance-variable comment="Bonus damage multiplied with the damage impact" name="BonusDamageMult" sid="153002197069817" type="number" />
+                <instance-variable name="CanNotCancel" sid="293099405422437" type="boolean" />
                 <instance-variable comment="Maximun Health Points Value" name="HPMax" sid="405391790612950" type="number" />
                 <instance-variable comment="Current Health Points" name="Hp" sid="148550066217839" type="number" />
                 <instance-variable comment="Amount of time of the invencible duration" name="InvencibleTime" sid="481554261575770" type="number" />
                 <instance-variable comment="If this value is true you cant receive damage" name="Invencible" sid="180353520902069" type="boolean" />
                 <instance-variable comment="Check if the character is alive, if the value is false, some functions are blocked" name="IsAlive" sid="610141807522636" type="boolean" />
+                <instance-variable name="IsMoving" sid="821611097718825" type="boolean" />
                 <instance-variable comment="Last Arm Used" name="LastArmUsed" sid="568820131423589" type="string" />
                 <instance-variable comment="character´s last direction" name="LastDirection" sid="241710995863577" type="string" />
+                <instance-variable name="LastDirectionAngle" sid="981661721070455" type="number" />
                 <instance-variable comment="Name of the character Model, this value is used for the family_head expression" name="Name" sid="157579360596339" type="string" />
                 <instance-variable comment="This character has unlimitied ammo" name="NoSpendMunition" sid="132432431954822" type="boolean" />
                 <instance-variable name="PressButton" sid="311042383733418" type="boolean" />
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
-                <instance-variable name="IsMoving" sid="821611097718825" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FC_8Direction" sid="182952999122772">

@@ -202,20 +202,22 @@
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
+                        <CanNotCancel>false</CanNotCancel>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
                         <InvencibleTime>1</InvencibleTime>
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
+                        <IsMoving>false</IsMoving>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
+                        <LastDirectionAngle>0</LastDirectionAngle>
                         <Name></Name>
                         <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <IsMoving>false</IsMoving>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -310,20 +312,22 @@
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
+                        <CanNotCancel>false</CanNotCancel>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
+                        <IsMoving>false</IsMoving>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
+                        <LastDirectionAngle>0</LastDirectionAngle>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <IsMoving>false</IsMoving>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -439,20 +443,22 @@
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
+                        <CanNotCancel>false</CanNotCancel>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
+                        <IsMoving>false</IsMoving>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
+                        <LastDirectionAngle>0</LastDirectionAngle>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <IsMoving>false</IsMoving>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -568,20 +574,22 @@
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
+                        <CanNotCancel>false</CanNotCancel>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
+                        <IsMoving>false</IsMoving>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
+                        <LastDirectionAngle>0</LastDirectionAngle>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <IsMoving>false</IsMoving>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>

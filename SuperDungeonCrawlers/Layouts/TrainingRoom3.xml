@@ -202,20 +202,22 @@
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
+                        <CanNotCancel>false</CanNotCancel>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
                         <InvencibleTime>1</InvencibleTime>
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
+                        <IsMoving>false</IsMoving>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
+                        <LastDirectionAngle>0</LastDirectionAngle>
                         <Name></Name>
                         <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <IsMoving>false</IsMoving>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -670,6 +672,77 @@
                     <world>
                         <x>477.511871338</x>
                         <y>194.997009277</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>11</height>
+                        <depth>0</depth>
+                        <hotspotX>0.178571433</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Item_Generic" uid="214">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Function_Press>Press_Object</Function_Press>
+                        <Function_UnPress>UnPress_Object</Function_UnPress>
+                        <Function_Param></Function_Param>
+                        <Information></Information>
+                        <Projectile_Animation></Projectile_Animation>
+                        <Projectile_Damage>0</Projectile_Damage>
+                        <Projectile_PushImpact>0</Projectile_PushImpact>
+                        <Projectile_Duration>0</Projectile_Duration>
+                        <Projectile_Speed>0</Projectile_Speed>
+                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_HasAmmo>false</Projectile_HasAmmo>
+                        <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
+                        <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
+                        <Ocuppied>false</Ocuppied>
+                        <Message>SpaceBar</Message>
+                        <Group></Group>
+                        <MakeDamage>false</MakeDamage>
+                        <TypeObject></TypeObject>
+                        <Impact_Damage>0</Impact_Damage>
+                        <Impact_PushImpact>0</Impact_PushImpact>
+                        <Impact_RecoilTime>0</Impact_RecoilTime>
+                        <Impact_Duration>0</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <XMLID>Axe</XMLID>
+                        <XMLContent></XMLContent>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="FO_Pin2">
+                            <properties>
+                                <destroy-when-if-unpined>No</destroy-when-if-unpined>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="FO_Timer" />
+                        <behavior-instance type="FI_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>348.060852051</x>
+                        <y>179.732879639</y>
                         <z>0</z>
                         <width>28</width>
                         <height>11</height>

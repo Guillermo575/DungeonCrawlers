@@ -527,7 +527,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-8" name="Set angle" sid="508227509305923" type="Impact_Generic">
-                    <param id="0" name="Angle">Family_Item.Angle</param>
+                    <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
                 </action>
                 <action id="-10" name="Set value" sid="807281521553950" type="Impact_Generic">
                     <param id="0" name="Instance variable">Group</param>
@@ -538,7 +538,7 @@
                     <param id="1" name="Value">&quot;Projectile&quot;</param>
                 </action>
                 <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="874337554331397" type="Impact_Generic">
-                    <param id="0" name="Angle">Family_Item.Angle</param>
+                    <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
                 </action>
                 <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
                     <param id="0" name="Speed">Family_Item.Projectile_Speed</param>
