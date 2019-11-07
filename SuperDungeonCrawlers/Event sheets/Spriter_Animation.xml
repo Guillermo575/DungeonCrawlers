@@ -207,23 +207,18 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="MoveAngle" sid="860392942880998" static="0" type="number">0</variable>
                         <event-block sid="321976385503320">
                             <conditions>
                                 <condition behavior="FC_8Direction" id="0" name="Is moving" sid="489141307237754" type="Family_Character" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="876196850987482" type="System">
-                                    <param id="0" name="Variable">MoveAngle</param>
-                                    <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="999802363617986" type="System">
-                                    <param id="0" name="Variable">MoveAngle</param>
-                                    <param id="1" name="Value">MoveAngle  &gt; 0 ? MoveAngle  : (MoveAngle + 180) + 180</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="132966039459799" type="Family_Character">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">MoveAngle</param>
+                                    <param id="1" name="Value">Family_Character.FC_8Direction.MovingAngle</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="486700907034400" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">Family_Character.LastDirectionAngle  &gt; 0 ? Family_Character.LastDirectionAngle  : (Family_Character.LastDirectionAngle + 180) + 180</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -232,17 +227,13 @@
                                 <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="718873918551605" type="Family_Character" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="548092674393566" type="System">
-                                    <param id="0" name="Variable">MoveAngle</param>
+                                <action id="-10" name="Set value" sid="991931425640416" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
                                     <param id="1" name="Value">Family_Character.FC_Pathfinding.MovingAngle</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="935200495858086" type="System">
-                                    <param id="0" name="Variable">MoveAngle</param>
-                                    <param id="1" name="Value">MoveAngle  &gt; 0 ? MoveAngle  : (MoveAngle + 180) + 180</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="958168927208609" type="Family_Character">
+                                <action id="-10" name="Set value" sid="478673009808550" type="Family_Character">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">MoveAngle</param>
+                                    <param id="1" name="Value">Family_Character.LastDirectionAngle  &gt; 0 ? Family_Character.LastDirectionAngle  : (Family_Character.LastDirectionAngle + 180) + 180</param>
                                 </action>
                             </actions>
                         </event-block>

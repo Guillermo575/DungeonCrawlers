@@ -166,12 +166,6 @@
                         <action behavior="FC_Bullet" id="0" name="Set speed" sid="756538370496436" type="Family_Character">
                             <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
                         </action>
-                        <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="602856106481795" type="Family_Character">
-                            <param id="0" name="Angle"> angle(Family_Impact.X,Family_Impact.Y,self.X,self.Y)</param>
-                        </action>
-                        <action behavior="FC_Bullet" disabled="1" id="3" name="Set angle of motion" sid="263385439983097" type="Family_Character">
-                            <param id="0" name="Angle">Family_Impact.Angle</param>
-                        </action>
                         <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="203832232549511" type="Family_Character">
                             <param id="0" name="Angle">Family_Impact.FI_Bullet.AngleOfMotion</param>
                         </action>
@@ -554,6 +548,10 @@
                 <action id="-10" name="Set value" sid="614635516253122" type="Impact_Generic">
                     <param id="0" name="Instance variable">Impact_Damage</param>
                     <param id="1" name="Value">int(Impact_Generic.Impact_Damage * Family_Character.BonusDamageMult)</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="973343419328489" type="Impact_Generic">
+                    <param id="0" name="Instance variable">MakeDamage</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action behavior="Timer" id="0" name="Start timer" sid="737434007205443" type="Impact_Generic">
                     <param id="0" name="Duration">Impact_Generic.Impact_Duration</param>
