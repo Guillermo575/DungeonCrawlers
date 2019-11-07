@@ -274,7 +274,16 @@
                             <param id="0" name="Instance variable">IsAlive</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="882340927518619" type="EnemyCoreBox">
+                            <param id="0" name="X">PlayerCoreBox.X</param>
+                            <param id="1" name="Y">PlayerCoreBox.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="884174994302667" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">EnemyCoreBox.Angle</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="966435749157095">
                             <conditions>

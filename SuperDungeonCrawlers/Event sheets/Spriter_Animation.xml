@@ -221,6 +221,10 @@
                                     <param id="0" name="Variable">MoveAngle</param>
                                     <param id="1" name="Value">MoveAngle  &gt; 0 ? MoveAngle  : (MoveAngle + 180) + 180</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="132966039459799" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">MoveAngle</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="621616222748487">
@@ -236,166 +240,170 @@
                                     <param id="0" name="Variable">MoveAngle</param>
                                     <param id="1" name="Value">MoveAngle  &gt; 0 ? MoveAngle  : (MoveAngle + 180) + 180</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="376054966486278">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="330482700383247" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">0</param>
-                                    <param id="2" name="Upper bound">25</param>
-                                </condition>
-                                <condition id="-21" name="Is between values" sid="887427824984240" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">341</param>
-                                    <param id="2" name="Upper bound">360</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="244343198965188" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;Right&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="686450816742258" type="Family_Character">
+                                <action id="-10" name="Set value" sid="958168927208609" type="Family_Character">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="755855548055536">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="620500015436524" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">26</param>
-                                    <param id="2" name="Upper bound">70</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="762336640699992" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;FrontRight&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="116782054619246" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">45</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="766634946751649">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="405568639197504" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">71</param>
-                                    <param id="2" name="Upper bound">115</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="406869333989988" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;Front&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="204802524847551" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">90</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="722601223102543">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="746810671418212" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">116</param>
-                                    <param id="2" name="Upper bound">160</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="715456139468883" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;FrontLeft&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="950626266972643" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">135</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="535876580041143">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="191010704047856" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">161</param>
-                                    <param id="2" name="Upper bound">215</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="335997197568297" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;Left&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="991322025556904" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">180</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="980483848533346">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="649349333487822" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">216</param>
-                                    <param id="2" name="Upper bound">260</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="349106428350584" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;BackLeft&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="746306672982893" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">225</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="480198110961141">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="359918163046009" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">261</param>
-                                    <param id="2" name="Upper bound">305</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="693659263361663" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;Back&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="108869111416453" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">270</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="903376418368102">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="186484948249907" type="System">
-                                    <param id="0" name="Value">MoveAngle</param>
-                                    <param id="1" name="Lower bound">306</param>
-                                    <param id="2" name="Upper bound">340</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="553561854533504" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirection</param>
-                                    <param id="1" name="Value">&quot;BackRight&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="844351441106353" type="Family_Character">
-                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
-                                    <param id="1" name="Value">315</param>
+                                    <param id="1" name="Value">MoveAngle</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block any="1" sid="188270829436480">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="974064721660226" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">0</param>
+                            <param id="2" name="Upper bound">25</param>
+                        </condition>
+                        <condition id="-21" name="Is between values" sid="819079706564141" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">341</param>
+                            <param id="2" name="Upper bound">360</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="957354232719369" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;Right&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="645590553895856" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="449434325768867">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="448635768310691" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">26</param>
+                            <param id="2" name="Upper bound">70</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="202060882193510" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;FrontRight&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="686548860851164" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="287028648083646">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="505908279586322" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">71</param>
+                            <param id="2" name="Upper bound">115</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="910475474494329" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;Front&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="639296001589660" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="821625076325499">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="128065055367805" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">116</param>
+                            <param id="2" name="Upper bound">160</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="520280878839650" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;FrontLeft&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="264173671047347" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">135</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="297601209994677">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="339032737218972" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">161</param>
+                            <param id="2" name="Upper bound">215</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="934385944770066" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;Left&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="890175357800128" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="138292135776739">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="578565160010715" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">216</param>
+                            <param id="2" name="Upper bound">260</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="842366564895515" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;BackLeft&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="533301591343473" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">225</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="207732032736338">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="854515023719923" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">261</param>
+                            <param id="2" name="Upper bound">305</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="987766580534397" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;Back&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="249338321685451" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="912562573339983">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="557949252298443" type="System">
+                            <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
+                            <param id="1" name="Lower bound">306</param>
+                            <param id="2" name="Upper bound">340</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="454197360155544" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirection</param>
+                            <param id="1" name="Value">&quot;BackRight&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="501734862863226" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngle</param>
+                            <param id="1" name="Value">315</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="482425733896470">
                     <conditions>
