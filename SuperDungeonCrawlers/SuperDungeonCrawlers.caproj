@@ -2929,6 +2929,7 @@
                 <instance-variable comment="Object that carry this arm" name="ArmRight" sid="846932810223513" type="number" />
                 <instance-variable comment="Bonus damage multiplied with the damage impact" name="BonusDamageMult" sid="153002197069817" type="number" />
                 <instance-variable name="CanNotCancel" sid="293099405422437" type="boolean" />
+                <instance-variable name="CanNotRotate" sid="365812599077455" type="boolean" />
                 <instance-variable comment="Maximun Health Points Value" name="HPMax" sid="405391790612950" type="number" />
                 <instance-variable comment="Current Health Points" name="Hp" sid="148550066217839" type="number" />
                 <instance-variable comment="Amount of time of the invencible duration" name="InvencibleTime" sid="481554261575770" type="number" />

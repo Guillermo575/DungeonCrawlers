@@ -249,6 +249,7 @@
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
+                        <CanNotRotate>false</CanNotRotate>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
                         <InvencibleTime>1</InvencibleTime>
@@ -461,17 +462,17 @@
                         <Function_UnPress>UnPress_Object</Function_UnPress>
                         <Function_Param>HoldWand</Function_Param>
                         <Information>Long</Information>
-                        <Projectile_Animation>Shoot_Fireball</Projectile_Animation>
-                        <Projectile_Damage>1</Projectile_Damage>
-                        <Projectile_PushImpact>0</Projectile_PushImpact>
-                        <Projectile_Duration>0</Projectile_Duration>
-                        <Projectile_Speed>0</Projectile_Speed>
-                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_Animation>Fireball</Projectile_Animation>
+                        <Projectile_Damage>2</Projectile_Damage>
+                        <Projectile_PushImpact>30</Projectile_PushImpact>
+                        <Projectile_Duration>3</Projectile_Duration>
+                        <Projectile_Speed>300</Projectile_Speed>
+                        <Projectile_RecoilTime>0.3</Projectile_RecoilTime>
                         <Projectile_HasAmmo>true</Projectile_HasAmmo>
                         <Projectile_AmmoSize>30</Projectile_AmmoSize>
-                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
+                        <Projectile_AmmoSpend>1</Projectile_AmmoSpend>
                         <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
-                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
+                        <Projectile_PierceWalls>true</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                     </instance-variables>
@@ -513,6 +514,7 @@
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
+                        <CanNotRotate>false</CanNotRotate>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
@@ -644,6 +646,7 @@
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
+                        <CanNotRotate>false</CanNotRotate>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
@@ -775,6 +778,7 @@
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
+                        <CanNotRotate>false</CanNotRotate>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
@@ -906,6 +910,7 @@
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
+                        <CanNotRotate>false</CanNotRotate>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
                         <InvencibleTime>0.5</InvencibleTime>
@@ -1050,9 +1055,9 @@
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
-                        <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>3</Impact_RecoilTime>
+                        <Impact_Damage>2</Impact_Damage>
+                        <Impact_PushImpact>30</Impact_PushImpact>
+                        <Impact_RecoilTime>0.5</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
@@ -1192,6 +1197,7 @@
                         <ArmRight>0</ArmRight>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
+                        <CanNotRotate>false</CanNotRotate>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
                         <InvencibleTime>1</InvencibleTime>

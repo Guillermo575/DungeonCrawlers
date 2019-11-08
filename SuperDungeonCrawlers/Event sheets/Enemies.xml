@@ -274,13 +274,21 @@
                             <param id="0" name="Instance variable">IsAlive</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="612827924474391" type="EnemyCoreBox">
-                            <param id="0" name="Instance variable">LastDirectionAngle</param>
-                            <param id="1" name="Value">angle(PlayerCoreBox.X, PlayerCoreBox.Y,EnemyCoreBox.X, EnemyCoreBox.Y) + 180</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="889979478184410">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699732002801182" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">CanNotRotate</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="612827924474391" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">angle(PlayerCoreBox.X, PlayerCoreBox.Y,EnemyCoreBox.X, EnemyCoreBox.Y) + 180</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="966435749157095">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="570402848374453" type="EnemyCoreBox">

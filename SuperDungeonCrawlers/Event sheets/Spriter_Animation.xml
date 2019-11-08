@@ -204,6 +204,9 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="511807898917717" type="Family_Character">
                             <param id="0" name="Instance variable">IsMoving</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="628728383588556" type="Family_Character">
+                            <param id="0" name="Instance variable">CanNotRotate</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1184,6 +1187,10 @@
                                     <param id="0" name="Variable">ActionSelected</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="776958476644819" type="Family_Character">
+                                    <param id="0" name="Instance variable">CanNotRotate</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="904204684787334">
@@ -1368,6 +1375,10 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="995934187972034" type="Family_Character">
                             <param id="0" name="Instance variable">CanNotCancel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="652531851646922" type="Family_Character">
+                            <param id="0" name="Instance variable">CanNotRotate</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>

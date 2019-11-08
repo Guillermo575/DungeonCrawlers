@@ -15,7 +15,7 @@
 			<HasAmmo>1</HasAmmo>
 			<AmmoSize>20</AmmoSize>
 			<AmmoSpend>1</AmmoSpend>
-			<PierceCharacters>1</PierceCharacters>
+			<PierceCharacters>0</PierceCharacters>
 			<PierceWalls>1</PierceWalls>
 		</Projectile>
 	</object>
@@ -34,8 +34,8 @@
 			<HasAmmo>1</HasAmmo>
 			<AmmoSize>10</AmmoSize>
 			<AmmoSpend>1</AmmoSpend>
-			<PierceCharacters>0</PierceCharacters>
-			<PierceWalls>1</PierceWalls>
+			<PierceCharacters>1</PierceCharacters>
+			<PierceWalls>0</PierceWalls>
 		</Projectile>
 	</object>
 	<object name='Sword'>
