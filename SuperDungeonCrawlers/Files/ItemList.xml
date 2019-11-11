@@ -49,6 +49,17 @@
 			<RecoilTime>0.5</RecoilTime>
 		</Melee>
 	</object>
+	<object name='Knife'>
+		<Animation>Object_Knife</Animation>
+		<Function_Command>HoldSpear</Function_Command>
+		<TypeObject>Melee</TypeObject>
+		<Information>Melee Object</Information>
+		<Melee>
+			<Damage>2</Damage>
+			<PushImpact>40</PushImpact>
+			<RecoilTime>0.7</RecoilTime>
+		</Melee>
+	</object>
 	<object name='Hammer'>
 		<Animation>Object_Hammer</Animation>
 		<Function_Command>SweepHammer</Function_Command>

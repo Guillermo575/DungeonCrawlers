@@ -1879,15 +1879,15 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Object_Spear" pingpong="0" repeatcount="1" repeatto="0" sid="149583216350482" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286">
+                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\SPEAR.png">
                                 <collision-poly>
-                                    <point x="0.2" y="0.2" />
-                                    <point x="0.485714" y="0.257143" />
-                                    <point x="0.914286" y="0.485714" />
-                                    <point x="0.685714" y="0.685714" />
-                                    <point x="0.485714" y="0.6" />
-                                    <point x="0.314286" y="0.685714" />
-                                    <point x="0.0857143" y="0.485714" />
+                                    <point x="0.405714" y="0.754286" />
+                                    <point x="0.423674" y="0.525715" />
+                                    <point x="0.49551" y="0.182857" />
+                                    <point x="0.558367" y="0.365714" />
+                                    <point x="0.531429" y="0.525715" />
+                                    <point x="0.558367" y="0.662857" />
+                                    <point x="0.49551" y="0.845714" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1901,6 +1901,32 @@
                                     <point x="0.485714" y="0.6" />
                                     <point x="0.314286" y="0.685714" />
                                     <point x="0.0857143" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Hammer" pingpong="0" repeatcount="1" repeatto="0" sid="936147810635976" speed="5">
+                            <frame duration="1" hotspotX="0.485714" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\HAMMER.png">
+                                <collision-poly>
+                                    <point x="0.2" y="0.457143" />
+                                    <point x="0.485714" y="0.457143" />
+                                    <point x="0.857143" y="0.371429" />
+                                    <point x="0.857143" y="0.628571" />
+                                    <point x="0.485714" y="0.542857" />
+                                    <point x="0.2" y="0.542857" />
+                                    <point x="0.114286" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Knife" pingpong="0" repeatcount="1" repeatto="0" sid="688843925361837" speed="5">
+                            <frame duration="1" hotspotX="0.485714" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\knife.png">
+                                <collision-poly>
+                                    <point x="0.479545" y="0.60098" />
+                                    <point x="0.479545" y="0.525411" />
+                                    <point x="0.478681" y="0.427172" />
+                                    <point x="0.481272" y="0.427172" />
+                                    <point x="0.480408" y="0.525411" />
+                                    <point x="0.480408" y="0.60098" />
+                                    <point x="0.479833" y="0.62365" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1976,7 +2002,7 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Object_Spear" pingpong="0" repeatcount="1" repeatto="0" sid="305363808869586" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286">
+                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\SPEAR.png">
                                 <collision-poly>
                                     <point x="0.2" y="0.2" />
                                     <point x="0.485714" y="0.257143" />
@@ -1998,6 +2024,34 @@
                                     <point x="0.485714" y="0.6" />
                                     <point x="0.314286" y="0.685714" />
                                     <point x="0.0857143" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Hammer" pingpong="0" repeatcount="1" repeatto="0" sid="954194347581457" speed="5">
+                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\HAMMER.png">
+                                <collision-poly>
+                                    <point x="0.457143" y="0.457143" />
+                                    <point x="0.485714" y="0.457143" />
+                                    <point x="0.657143" y="0.342857" />
+                                    <point x="0.857143" y="0.485714" />
+                                    <point x="0.657143" y="0.657143" />
+                                    <point x="0.485714" y="0.542857" />
+                                    <point x="0.457143" y="0.542857" />
+                                    <point x="0.114286" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Knife" pingpong="0" repeatcount="1" repeatto="0" sid="162473759531211" speed="5">
+                            <frame duration="1" hotspotX="0.485714" hotspotY="0.485714" original-source="C:\Users\MasterRace\Desktop\knife.png">
+                                <collision-poly>
+                                    <point x="0.463674" y="0.478297" />
+                                    <point x="0.478367" y="0.478297" />
+                                    <point x="0.566531" y="0.47158" />
+                                    <point x="0.669388" y="0.479977" />
+                                    <point x="0.566531" y="0.490052" />
+                                    <point x="0.478367" y="0.483335" />
+                                    <point x="0.463674" y="0.483335" />
+                                    <point x="0.287347" y="0.479977" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -2378,6 +2432,20 @@
                                     <point x="0.5" y="0.545455" />
                                     <point x="0.178571" y="0.545455" />
                                     <point x="0.0357143" y="0.454545" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Object_Knife" pingpong="0" repeatcount="1" repeatto="0" sid="284392637106356" speed="5">
+                            <frame duration="1" hotspotX="0.111111" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="1.44444" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.777778" y="0.333332" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.333332" />
+                                    <point x="1" y="0.833334" />
+                                    <point x="0.777778" y="0.500001" />
+                                    <point x="0.277777" y="0.500001" />
+                                    <point x="0.0555556" y="0.333332" />
                                 </collision-poly>
                             </frame>
                         </animation>
