@@ -85,12 +85,8 @@
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}440{###}10</param>
                 </action>
                 <action id="0" name="Call function" sid="728487248333353" type="Function">
-                    <param id="0" name="Name">&quot;CreateHUDObject_Right&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}390{###}10</param>
-                </action>
-                <action id="0" name="Call function" sid="414489669988518" type="Function">
-                    <param id="0" name="Name">&quot;CreateHUDObject_Left&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}340{###}10</param>
+                    <param id="0" name="Name">&quot;CreateHUDObject&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}390{###}10{###}340{###}10</param>
                 </action>
                 <action id="0" name="Call function" sid="355790055099494" type="Function">
                     <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>

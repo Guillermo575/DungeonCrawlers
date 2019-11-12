@@ -1809,8 +1809,11 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="HUD_Object_Left" sid="570596959482102">
+                <object-type name="HUD_Object" sid="570596959482102">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Arm Item Icon (Left or Right)" name="Arm" sid="155410460373737" type="string" />
+                    </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin2" sid="471004472610997">
                             <behavior id="Pin2" />
@@ -1927,131 +1930,6 @@
                                     <point x="0.480408" y="0.525411" />
                                     <point x="0.480408" y="0.60098" />
                                     <point x="0.479833" y="0.62365" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="HUD_Object_Right" sid="541825003791719">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin2" sid="543177347265836">
-                            <behavior id="Pin2" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="401964768638666" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="766789823541162" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Axe" pingpong="0" repeatcount="1" repeatto="0" sid="820226183264961" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Object\axe_Icon.png">
-                                <collision-poly>
-                                    <point x="0.314286" y="0.314286" />
-                                    <point x="0.485714" y="0.114286" />
-                                    <point x="0.771429" y="0.228571" />
-                                    <point x="0.685714" y="0.485714" />
-                                    <point x="0.6" y="0.6" />
-                                    <point x="0.485714" y="0.657143" />
-                                    <point x="0.657143" y="0.342857" />
-                                    <point x="0.6" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Bow" pingpong="0" repeatcount="1" repeatto="0" sid="251149182959039" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Object\bow_icon.png">
-                                <collision-poly>
-                                    <point x="0.4" y="0.4" />
-                                    <point x="0.485714" y="0.114286" />
-                                    <point x="0.8" y="0.2" />
-                                    <point x="0.971429" y="0.485714" />
-                                    <point x="0.8" y="0.8" />
-                                    <point x="0.485714" y="0.857143" />
-                                    <point x="0.257143" y="0.742857" />
-                                    <point x="0.0571429" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Sword" pingpong="0" repeatcount="1" repeatto="0" sid="472013782345826" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Object\sword_icon.png">
-                                <collision-poly>
-                                    <point x="0.485714" y="0.485714" />
-                                    <point x="0.914286" y="0.0857143" />
-                                    <point x="0.657143" y="0.485714" />
-                                    <point x="0.571429" y="0.571429" />
-                                    <point x="0.485714" y="0.685714" />
-                                    <point x="0.257143" y="0.742857" />
-                                    <point x="0.485714" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Wand" pingpong="0" repeatcount="1" repeatto="0" sid="667210571359300" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Object\wand_icon.png">
-                                <collision-poly>
-                                    <point x="0.428571" y="0.428571" />
-                                    <point x="0.485714" y="0.371429" />
-                                    <point x="0.857143" y="0.142857" />
-                                    <point x="0.514286" y="0.485714" />
-                                    <point x="0.514286" y="0.514286" />
-                                    <point x="0.485714" y="0.514286" />
-                                    <point x="0.0857143" y="0.914286" />
-                                    <point x="0.428571" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Spear" pingpong="0" repeatcount="1" repeatto="0" sid="305363808869586" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\SPEAR.png">
-                                <collision-poly>
-                                    <point x="0.2" y="0.2" />
-                                    <point x="0.485714" y="0.257143" />
-                                    <point x="0.914286" y="0.485714" />
-                                    <point x="0.685714" y="0.685714" />
-                                    <point x="0.485714" y="0.6" />
-                                    <point x="0.314286" y="0.685714" />
-                                    <point x="0.0857143" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Key" pingpong="0" repeatcount="1" repeatto="0" sid="209839086858947" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Object\key_Icon.png">
-                                <collision-poly>
-                                    <point x="0.2" y="0.2" />
-                                    <point x="0.485714" y="0.257143" />
-                                    <point x="0.914286" y="0.485714" />
-                                    <point x="0.685714" y="0.685714" />
-                                    <point x="0.485714" y="0.6" />
-                                    <point x="0.314286" y="0.685714" />
-                                    <point x="0.0857143" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Hammer" pingpong="0" repeatcount="1" repeatto="0" sid="954194347581457" speed="5">
-                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\MasterRace\Desktop\HAMMER.png">
-                                <collision-poly>
-                                    <point x="0.457143" y="0.457143" />
-                                    <point x="0.485714" y="0.457143" />
-                                    <point x="0.657143" y="0.342857" />
-                                    <point x="0.857143" y="0.485714" />
-                                    <point x="0.657143" y="0.657143" />
-                                    <point x="0.485714" y="0.542857" />
-                                    <point x="0.457143" y="0.542857" />
-                                    <point x="0.114286" y="0.485714" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Object_Knife" pingpong="0" repeatcount="1" repeatto="0" sid="162473759531211" speed="5">
-                            <frame duration="1" hotspotX="0.485714" hotspotY="0.485714" original-source="C:\Users\MasterRace\Desktop\knife.png">
-                                <collision-poly>
-                                    <point x="0.463674" y="0.478297" />
-                                    <point x="0.478367" y="0.478297" />
-                                    <point x="0.566531" y="0.47158" />
-                                    <point x="0.669388" y="0.479977" />
-                                    <point x="0.566531" y="0.490052" />
-                                    <point x="0.478367" y="0.483335" />
-                                    <point x="0.463674" y="0.483335" />
-                                    <point x="0.287347" y="0.479977" />
                                 </collision-poly>
                             </frame>
                         </animation>

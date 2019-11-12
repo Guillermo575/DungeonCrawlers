@@ -1760,13 +1760,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HUD_Object_Left" uid="108">
+                <instance type="HUD_Object" uid="108">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Arm></Arm>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin2">
                             <properties>
@@ -1779,35 +1782,6 @@
                     <world>
                         <x>338.93270874</x>
                         <y>18.69783783</y>
-                        <z>0</z>
-                        <width>35</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0.514285743</hotspotX>
-                        <hotspotY>0.514285743</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_Object_Right" uid="109">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin2">
-                            <properties>
-                                <destroy-when-if-unpined>No</destroy-when-if-unpined>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>393.21762085</x>
-                        <y>19.970054626</y>
                         <z>0</z>
                         <width>35</width>
                         <height>35</height>
