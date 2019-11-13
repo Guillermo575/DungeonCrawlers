@@ -3,17 +3,41 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GenericItem</name>
     <events>
+        <variable comment="Data loaded from ItemList.XML" constant="0" name="FileItemListData" sid="875607654327170" static="0" type="text"></variable>
         <comment>Generic Item Function</comment>
         <event-block sid="281874225374087">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="154244227211502" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Request URL" sid="308415300298574" type="AJAX">
-                    <param id="0" name="Tag">&quot;ItemList&quot;</param>
-                    <param id="1" name="URL">&quot;ItemList.xml&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="192912785105706">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="561640998529790" type="System">
+                            <param id="0" name="Variable">FileItemListData</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="308415300298574" type="AJAX">
+                            <param id="0" name="Tag">&quot;ItemList&quot;</param>
+                            <param id="1" name="URL">&quot;ItemList.xml&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="770180714122377">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="134660811221877" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="158332730797715" type="Function">
+                            <param id="0" name="Name">&quot;CreateXMLInventory&quot;</param>
+                            <param id="1" name="Parameter {n}">FileItemListData</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="489594784231061">
             <conditions>
@@ -22,8 +46,25 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="474814745679789" type="System">
+                    <param id="0" name="Variable">FileItemListData</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+                <action id="0" name="Call function" sid="925520383783693" type="Function">
+                    <param id="0" name="Name">&quot;CreateXMLInventory&quot;</param>
+                    <param id="1" name="Parameter {n}">FileItemListData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="336166186033074">
+            <conditions>
+                <condition id="0" name="On function" sid="809666078917973" type="Function">
+                    <param id="0" name="Name">&quot;CreateXMLInventory&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="0" name="Load" sid="109947603997817" type="XML_Inventory">
-                    <param id="0" name="XML">AJAX.LastData</param>
+                    <param id="0" name="XML">Function.Param(0)</param>
                 </action>
             </actions>
             <sub-events>
@@ -32,7 +73,12 @@
                         <condition id="-11" name="For Each" sid="199902969009798" type="System">
                             <param id="0" name="Object">Item_Generic</param>
                         </condition>
-                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="529607016013354" type="Item_Generic" />
+                        <condition behavior="FO_Pin2" disabled="1" id="0" inverted="1" name="Is pinned" sid="529607016013354" type="Item_Generic" />
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="871270719894123" type="Item_Generic">
+                            <param id="0" name="Instance variable">XMLID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="936939675566097" type="Function">
