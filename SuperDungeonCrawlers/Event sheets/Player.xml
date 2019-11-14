@@ -92,13 +92,33 @@
                     <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
                 </action>
-                <action id="-10" name="Set value" sid="135188709153905" type="Scml_Player_Bottom">
-                    <param id="0" name="Instance variable">CharacterSkin</param>
-                    <param id="1" name="Value">&quot;Player&quot;</param>
-                </action>
                 <action id="-10" name="Set value" sid="752893184249532" type="Scml_Player_Top">
                     <param id="0" name="Instance variable">CharacterSkin</param>
+                    <param id="1" name="Value">&quot;Player&quot;&amp;int(random(1,5))</param>
+                </action>
+                <action id="-10" name="Set value" sid="135188709153905" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">CharacterSkin</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="957747066395313" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Top</param>
                     <param id="1" name="Value">&quot;Player&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="553883202545624" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Head</param>
+                    <param id="1" name="Value">&quot;Player1&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="693221953859160" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Torso</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="737398028834749" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Arms</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="514068241133852" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">Part_Legs</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
                 </action>
             </actions>
         </event-block>

@@ -1994,6 +1994,10 @@
                     </properties>
                     <instance-variables>
                         <CharacterSkin></CharacterSkin>
+                        <Part_Top></Part_Top>
+                        <Part_Head></Part_Head>
+                        <Part_Torso></Part_Torso>
+                        <Part_Arms></Part_Arms>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin2">
@@ -2028,6 +2032,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterSkin></CharacterSkin>
+                        <Part_Legs></Part_Legs>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin2">

@@ -69,6 +69,26 @@
                     <param id="0" name="Instance variable">CharacterSkin</param>
                     <param id="1" name="Value">&quot;Skeleton&quot;</param>
                 </action>
+                <action id="-10" name="Set value" sid="547270337176379" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Top</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="192058338253846" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Head</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="382969886271519" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Torso</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="238395942557359" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Arms</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="241621826889598" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">Part_Legs</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>This adjust the enemy hp, damage in relation with the actual difficult</comment>

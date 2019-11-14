@@ -33,23 +33,23 @@
                     <param id="1" name="Animation">&quot;Front_Idle&quot;</param>
                 </action>
                 <action id="4" name="Set animation" sid="349995095754793" type="PlayerHead">
-                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Head</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="507100220526502" type="PlayerTorso">
-                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Torso</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="764941072725567" type="PlayerTop">
-                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Top</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="909579528355113" type="PlayerArmLeft">
-                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Arms</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="456995639261425" type="PlayerArmRight">
-                    <param id="0" name="Animation">Scml_Player_Top.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Arms</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -72,11 +72,11 @@
                     <param id="1" name="Animation">&quot;Front_Idle&quot;</param>
                 </action>
                 <action id="4" name="Set animation" sid="631456727782143" type="PlayerLeg1">
-                    <param id="0" name="Animation">Scml_Player_Bottom.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Bottom.Part_Legs</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="582922135811503" type="PlayerLeg2">
-                    <param id="0" name="Animation">Scml_Player_Bottom.CharacterSkin</param>
+                    <param id="0" name="Animation">Scml_Player_Bottom.Part_Legs</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>

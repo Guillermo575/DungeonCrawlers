@@ -721,6 +721,9 @@
                 <object-folder name="Spriter">
                     <object-type name="Scml_Player_Bottom" sid="891308871582437">
                         <plugin id="Spriter" />
+                        <instance-variables>
+                            <instance-variable comment="Legs Animations" name="Part_Legs" sid="428344801032586" type="string" />
+                        </instance-variables>
                         <container>
                             <type>Scml_Player_Bottom</type>
                             <type>PlayerLeg1</type>
@@ -737,6 +740,12 @@
                     </object-type>
                     <object-type name="Scml_Player_Top" sid="978587396895542">
                         <plugin id="Spriter" />
+                        <instance-variables>
+                            <instance-variable comment="Top Animation" name="Part_Top" sid="788054707146341" type="string" />
+                            <instance-variable comment="Head animation" name="Part_Head" sid="632970694032808" type="string" />
+                            <instance-variable comment="Torso animation" name="Part_Torso" sid="933772085781923" type="string" />
+                            <instance-variable comment="Arms animation" name="Part_Arms" sid="819570607647214" type="string" />
+                        </instance-variables>
                         <container>
                             <type>PlayerArmLeft</type>
                             <type>PlayerArmRight</type>
@@ -765,8 +774,41 @@
                         <type>Scml_Player_Top</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="742461647536900" speed="0">
+                        <animation framecount="1" loop="0" name="Player1" pingpong="0" repeatcount="1" repeatto="0" sid="742461647536900" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\Examples\OriginalZ\Arms\ArmL.png">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player2" pingpong="0" repeatcount="1" repeatto="0" sid="319214980645090" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="991870583087330" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player4" pingpong="0" repeatcount="1" repeatto="0" sid="459976461488287" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="Imagepoint 1" x="0.875" y="0.5" />
                                 <collision-poly>
                                     <point x="1" y="1" />
@@ -800,8 +842,41 @@
                         <type>Scml_Player_Top</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="984480393047395" speed="0">
+                        <animation framecount="1" loop="0" name="Player1" pingpong="0" repeatcount="1" repeatto="0" sid="984480393047395" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Arms\ArmR.png">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.0909091" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.833333" />
+                                    <point x="0.0909091" y="0.833333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player2" pingpong="0" repeatcount="1" repeatto="0" sid="740491387387405" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.0909091" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.833333" />
+                                    <point x="0.0909091" y="0.833333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="394337390412861" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.0909091" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.833333" />
+                                    <point x="0.0909091" y="0.833333" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player4" pingpong="0" repeatcount="1" repeatto="0" sid="292898201987581" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="Imagepoint 1" x="0.875" y="0.5" />
                                 <collision-poly>
                                     <point x="0.0909091" y="0" />
@@ -906,7 +981,7 @@
                         <type>Scml_Player_Top</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="6" loop="0" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="577844821343410" speed="0">
+                        <animation framecount="6" loop="0" name="Player1" pingpong="0" repeatcount="1" repeatto="0" sid="577844821343410" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\Head.png">
                                 <collision-poly>
                                     <point x="1" y="0" />
@@ -956,16 +1031,8 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="6" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="993860099626226" speed="0">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\Head.png">
-                                <collision-poly>
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\HeadSide.png">
+                        <animation framecount="6" loop="0" name="Player2" pingpong="0" repeatcount="1" repeatto="0" sid="211482574104852" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -981,7 +1048,23 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\HeadBack.png">
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -997,7 +1080,149 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Head\HeadZ.png">
+                        </animation>
+                        <animation framecount="6" loop="0" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="167143338412129" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="6" loop="0" name="Player4" pingpong="0" repeatcount="1" repeatto="0" sid="218495122174677" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="6" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="784442377079598" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1020,7 +1245,7 @@
                         <type>PlayerShadow</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="2" loop="1" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="616875916067825" speed="0">
+                        <animation framecount="2" loop="1" name="Player1" pingpong="0" repeatcount="1" repeatto="0" sid="616875916067825" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Legs\LegL.png">
                                 <collision-poly>
                                     <point x="0" y="1" />
@@ -1030,6 +1255,39 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Legs\LegR.png" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="Player2" pingpong="0" repeatcount="1" repeatto="0" sid="363930073661465" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="351687427940956" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="Player4" pingpong="0" repeatcount="1" repeatto="0" sid="853661487418346" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
                         </animation>
                         <animation framecount="2" loop="1" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="811512537130316" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\DungeonCrawlers\Spriters\SkeletonZ\Legs\LegL.png">
@@ -1056,7 +1314,7 @@
                         <type>PlayerShadow</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="2" loop="1" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="361636904053321" speed="0">
+                        <animation framecount="2" loop="1" name="Player1" pingpong="0" repeatcount="1" repeatto="0" sid="361636904053321" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\Examples\OriginalZ\Legs\LegR.png">
                                 <collision-poly>
                                     <point x="1" y="0" />
@@ -1066,6 +1324,60 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\Examples\OriginalZ\Legs\LegL.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Player2" pingpong="0" repeatcount="1" repeatto="0" sid="798013529201772" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="0.996528" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="855463764454098" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="0.996528" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Player4" pingpong="0" repeatcount="1" repeatto="0" sid="901459573286015" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="0.996528" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1162,7 +1474,7 @@
                         <type>Scml_Player_Top</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="5" loop="1" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="255964283031444" speed="0">
+                        <animation framecount="5" loop="1" name="Player1" pingpong="0" repeatcount="1" repeatto="0" sid="255964283031444" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Torso\Torso.png">
                                 <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
                                 <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
@@ -1212,6 +1524,198 @@
                                 </collision-poly>
                             </frame>
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Torso\TorsoBackDgn.png">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="5" loop="1" name="Player2" pingpong="0" repeatcount="1" repeatto="0" sid="723152258484960" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.882353" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.117647" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.996711" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="5" loop="1" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="458892188716390" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.882353" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.117647" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.996711" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="5" loop="1" name="Player4" pingpong="0" repeatcount="1" repeatto="0" sid="739997474845703" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.882353" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.117647" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.996711" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
+                                <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
+                                <collision-poly>
+                                    <point x="0.176471" y="0.157895" />
+                                    <point x="0.470588" y="0.0526316" />
+                                    <point x="0.823529" y="0.157895" />
+                                    <point x="0.941176" y="0.473684" />
+                                    <point x="0.823529" y="0.842105" />
+                                    <point x="0.470588" y="0.947368" />
+                                    <point x="0.176471" y="0.842105" />
+                                    <point x="0.0588235" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="Imagepoint 1" x="0.411765" y="0.263158" />
                                 <image-point name="Imagepoint 2" x="0.411765" y="0.736842" />
                                 <collision-poly>
