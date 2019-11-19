@@ -349,7 +349,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Item_Wand" uid="142">
+                <instance type="Item_Generic" uid="146">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -359,21 +359,32 @@
                     <instance-variables>
                         <Function_Press>Press_Object</Function_Press>
                         <Function_UnPress>UnPress_Object</Function_UnPress>
-                        <Function_Param>HoldWand</Function_Param>
-                        <Information>Long</Information>
-                        <Projectile_Animation>Fireball</Projectile_Animation>
-                        <Projectile_Damage>2</Projectile_Damage>
-                        <Projectile_PushImpact>30</Projectile_PushImpact>
-                        <Projectile_Duration>3</Projectile_Duration>
-                        <Projectile_Speed>300</Projectile_Speed>
-                        <Projectile_RecoilTime>0.3</Projectile_RecoilTime>
-                        <Projectile_HasAmmo>true</Projectile_HasAmmo>
-                        <Projectile_AmmoSize>30</Projectile_AmmoSize>
-                        <Projectile_AmmoSpend>1</Projectile_AmmoSpend>
+                        <Function_Param></Function_Param>
+                        <Information></Information>
+                        <Projectile_Animation></Projectile_Animation>
+                        <Projectile_Damage>0</Projectile_Damage>
+                        <Projectile_PushImpact>0</Projectile_PushImpact>
+                        <Projectile_Duration>0</Projectile_Duration>
+                        <Projectile_Speed>0</Projectile_Speed>
+                        <Projectile_RecoilTime>0</Projectile_RecoilTime>
+                        <Projectile_HasAmmo>false</Projectile_HasAmmo>
+                        <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
                         <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
-                        <Projectile_PierceWalls>true</Projectile_PierceWalls>
+                        <Projectile_PierceWalls>false</Projectile_PierceWalls>
                         <Ocuppied>false</Ocuppied>
-                        <Message>Spacebar</Message>
+                        <Message>SpaceBar</Message>
+                        <Group></Group>
+                        <MakeDamage>false</MakeDamage>
+                        <TypeObject></TypeObject>
+                        <Impact_Damage>0</Impact_Damage>
+                        <Impact_PushImpact>0</Impact_PushImpact>
+                        <Impact_RecoilTime>0</Impact_RecoilTime>
+                        <Impact_Duration>0</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <XMLID>Wand</XMLID>
+                        <XMLContent></XMLContent>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FO_Pin2">
@@ -382,18 +393,29 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FO_Timer" />
+                        <behavior-instance type="FI_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>368.638793945</x>
-                        <y>162.555587769</y>
+                        <x>302</x>
+                        <y>151</y>
                         <z>0</z>
-                        <width>27</width>
-                        <height>13</height>
+                        <width>28</width>
+                        <height>11</height>
                         <depth>0</depth>
-                        <hotspotX>0.518518507</hotspotX>
-                        <hotspotY>0.384615391</hotspotY>
+                        <hotspotX>0.178571433</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -249,6 +249,14 @@
                                                     <param id="0" name="Pin to">BlockDungeon</param>
                                                     <param id="1" name="Mode">0</param>
                                                 </action>
+                                                <action id="-13" name="Set boolean" sid="884018324819631" type="DoorDungeon">
+                                                    <param id="0" name="Instance variable">Locked</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="283917870009054" type="DoorDungeon">
+                                                    <param id="0" name="Instance variable">LayoutName</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="775059260523036">
@@ -274,13 +282,21 @@
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                                                 </action>
                                                 <action id="0" name="Spawn another object" sid="303926938998055" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">Item_Sword</param>
+                                                    <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="535254979707891" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">XMLID</param>
+                                                    <param id="1" name="Value">&quot;Sword&quot;</param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="186931529067979" type="Function">
                                                     <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Sword.UID</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="361135679274394" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -293,6 +309,11 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="0" name="Spawn another object" sid="433133594016783" type="BlockDungeon">
+                                                    <param id="0" name="Object">EnemyCoreBox</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
                                                 <action id="-10" name="Set value" sid="609714873865271" type="EnemyCoreBox">
                                                     <param id="0" name="Instance variable">EID</param>
                                                     <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
@@ -301,14 +322,22 @@
                                                     <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                                                 </action>
-                                                <action id="0" name="Spawn another object" sid="333481627216280" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">Item_Wand</param>
+                                                <action id="0" name="Spawn another object" sid="549461276992220" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
-                                                <action id="0" name="Call function" sid="718849276530959" type="Function">
+                                                <action id="-10" name="Set value" sid="841026450435799" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">XMLID</param>
+                                                    <param id="1" name="Value">&quot;Wand&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="344940380436972" type="Function">
                                                     <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Wand.UID</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="653032529798449" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -322,9 +351,17 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="820140890843020" type="BlockDungeon">
-                                                    <param id="0" name="Object">Item_Sword</param>
+                                                    <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="867097011168918" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">XMLID</param>
+                                                    <param id="1" name="Value">&quot;Sword&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="929003443849884" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -338,9 +375,17 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="374237846267102" type="BlockDungeon">
-                                                    <param id="0" name="Object">Item_Bow</param>
+                                                    <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="905437436269387" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">XMLID</param>
+                                                    <param id="1" name="Value">&quot;Bow&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="393618895267211" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -354,9 +399,17 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="240073430892172" type="BlockDungeon">
-                                                    <param id="0" name="Object">Item_Axe</param>
+                                                    <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="923528462621661" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">XMLID</param>
+                                                    <param id="1" name="Value">&quot;Axe&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="149100086476826" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -370,9 +423,17 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="301737901552647" type="BlockDungeon">
-                                                    <param id="0" name="Object">Item_Wand</param>
+                                                    <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="112530465948883" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">XMLID</param>
+                                                    <param id="1" name="Value">&quot;Wand&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="200671850265748" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -389,6 +450,10 @@
                                                     <param id="0" name="Object">Item_Key</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="508805581975926" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
