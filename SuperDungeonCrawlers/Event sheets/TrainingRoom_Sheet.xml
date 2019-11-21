@@ -40,15 +40,6 @@
                             <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
                             <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                         </action>
-                        <action disabled="1" id="0" name="Spawn another object" sid="134056023871543" type="EnemyCoreBox">
-                            <param id="0" name="Object">Item_Sword</param>
-                            <param id="1" name="Layer">&quot;Characters&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="364683973399537" type="Function">
-                            <param id="0" name="Name">&quot;PickObject&quot;</param>
-                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Sword.UID</param>
-                        </action>
                         <action disabled="1" id="-10" name="Set value" sid="709621503320603" type="EnemyCoreBox">
                             <param id="0" name="Instance variable">Hp</param>
                             <param id="1" name="Value">50</param>

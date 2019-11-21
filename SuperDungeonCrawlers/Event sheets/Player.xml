@@ -122,250 +122,42 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="Current player control" sid="655086329113245" title="Controls">
+        <event-block sid="526104130144782">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="686540296437078" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="841132481857244" type="System">
+                    <param id="0" name="First value">PlayerCoreBox.dt</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions />
             <sub-events>
-                <event-block sid="526104130144782">
+                <event-block sid="106997742346767">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="686540296437078" type="PlayerCoreBox">
-                            <param id="0" name="Instance variable">IsAlive</param>
+                        <condition id="0" name="On key pressed" sid="233028412356421" type="Keyboard">
+                            <param id="0" name="Key">32</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="841132481857244" type="System">
-                            <param id="0" name="First value">PlayerCoreBox.dt</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">0</param>
+                        <condition id="1" name="Is overlapping another object" sid="215268347040969" type="PlayerCoreBox">
+                            <param id="0" name="Object">Family_Item</param>
                         </condition>
+                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Family_Item" />
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="106997742346767">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="233028412356421" type="Keyboard">
-                                    <param id="0" name="Key">32</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="215268347040969" type="PlayerCoreBox">
-                                    <param id="0" name="Object">Family_Item</param>
-                                </condition>
-                                <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Family_Item" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="785205971480943" type="Function">
-                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Family_Item.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="489685537822983">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="617036482268110" type="Keyboard">
-                                    <param id="0" name="Key">67</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="751094972055915" type="System">
-                                    <param id="0" name="Object">Scml_Player_Top</param>
-                                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="876499820745566" type="PlayerCoreBox">
-                                    <param id="0" name="Instance variable">ActionCommand</param>
-                                    <param id="1" name="Value">&quot;Jump&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="813586522671232" type="PlayerCoreBox">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="858666362144200" type="Function">
-                                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
-                                    <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="720454736426176">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="145675513413617" type="Keyboard">
-                                    <param id="0" name="Key">90</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="128897976769239" type="System">
-                                    <param id="0" name="Object">Family_Item</param>
-                                    <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Item.UID</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="188447934024857" type="System">
-                                    <param id="0" name="Object">Scml_Player_Top</param>
-                                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="730196207191278" type="Function">
-                                    <param id="0" name="Name">Family_Item.Function_Press</param>
-                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="982545261859655">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="760811322427205" type="Keyboard">
-                                    <param id="0" name="Key">90</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="943988295773566" type="System">
-                                    <param id="0" name="Object">Family_Item</param>
-                                    <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Item.UID</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="949142986316467" type="System">
-                                    <param id="0" name="Object">Scml_Player_Top</param>
-                                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="136150753744646" type="Function">
-                                    <param id="0" name="Name">Family_Item.Function_UnPress</param>
-                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="370209375603467">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="653623544393306" type="Keyboard">
-                                    <param id="0" name="Key">88</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="778166072255552" type="System">
-                                    <param id="0" name="Object">Family_Item</param>
-                                    <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Item.UID</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="289020171486983" type="System">
-                                    <param id="0" name="Object">Scml_Player_Top</param>
-                                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="711055083936491" type="Function">
-                                    <param id="0" name="Name">Family_Item.Function_Press</param>
-                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="239762245158726">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="990112833411292" type="Keyboard">
-                                    <param id="0" name="Key">88</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="646224727903511" type="System">
-                                    <param id="0" name="Object">Family_Item</param>
-                                    <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Item.UID</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="642866240290904" type="System">
-                                    <param id="0" name="Object">Scml_Player_Top</param>
-                                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">PlayerCoreBox.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="139838787754247" type="Function">
-                                    <param id="0" name="Name">Family_Item.Function_UnPress</param>
-                                    <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block any="1" sid="878801142796412">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="447431535685011" type="Keyboard">
-                                    <param id="0" name="Key">40</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="482066396515023" type="Keyboard">
-                                    <param id="0" name="Key">37</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="708944354267844" type="Keyboard">
-                                    <param id="0" name="Key">39</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="347086333728374" type="Keyboard">
-                                    <param id="0" name="Key">38</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="336073439110611" type="Family_Character">
-                                    <param id="0" name="Instance variable">IsMoving</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="192531277948238">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="638428019793391" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="702578023598778" type="Family_Character">
-                                    <param id="0" name="Instance variable">IsMoving</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="785205971480943" type="Function">
+                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Family_Item.UID</param>
+                        </action>
+                    </actions>
                 </event-block>
-                <event-block sid="365559380967541">
+                <event-block sid="489685537822983">
                     <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="961737494908029" type="System">
-                            <param id="0" name="Object">Family_Character</param>
-                            <param id="1" name="Expression">Family_Character.UID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">PlayerCoreBox.UID</param>
+                        <condition id="0" name="On key pressed" sid="617036482268110" type="Keyboard">
+                            <param id="0" name="Key">67</param>
                         </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="423251148987937">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="975375593773043" type="Family_Character">
-                                    <param id="0" name="Instance variable">IsAlive</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="110903798087226" type="Family_Character">
-                                    <param id="0" name="Instance variable">PushRecoil</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="599213784617488" type="Family_Character">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="152475957593593">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="323415979276095" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="292087605356730" type="Family_Character">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>DEATH/GAME OVER FUNCTIONS</comment>
-                <event-block sid="403282518978764">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="822139732668612" type="PlayerCoreBox">
-                            <param id="0" name="Instance variable">Hp</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="993530938199622" type="PlayerCoreBox">
-                            <param id="0" name="Instance variable">IsAlive</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="844956840802614" type="System">
+                        <condition id="-33" name="Pick by comparison" sid="751094972055915" type="System">
                             <param id="0" name="Object">Scml_Player_Top</param>
                             <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
@@ -373,667 +165,843 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="925255831691789" type="PlayerCoreBox">
-                            <param id="0" name="Instance variable">IsAlive</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="732607133495602" type="PlayerCoreBox">
+                        <action id="-10" name="Set value" sid="876499820745566" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">ActionCommand</param>
-                            <param id="1" name="Value">&quot;Death&quot;</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="630822409116003" type="PlayerCoreBox">
+                        <action id="-10" name="Set value" sid="813586522671232" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">ActionStep</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="246053304333136" type="Function">
+                        <action id="0" name="Call function" sid="858666362144200" type="Function">
                             <param id="0" name="Name">&quot;CallCommand&quot;</param>
                             <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
                         </action>
-                        <action id="0" name="Call function" sid="714103470782627" type="Function">
-                            <param id="0" name="Name">&quot;MuteBackGroundAudio&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="836363397203138" type="Function">
-                            <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;PlayerDeath&quot;</param>
-                        </action>
-                        <action behavior="FC_Timer" id="0" name="Start timer" sid="859617312432957" type="PlayerCoreBox">
-                            <param id="0" name="Duration">3</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;ToGameOver&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="350267605004518">
+                <event-block sid="720454736426176">
                     <conditions>
-                        <condition behavior="FC_Timer" id="0" name="On timer" sid="747643688629982" type="PlayerCoreBox">
-                            <param id="0" name="Tag">&quot;ToGameOver&quot;</param>
+                        <condition id="2" name="Key is down" sid="145675513413617" type="Keyboard">
+                            <param id="0" name="Key">90</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="926364485280740" type="Function">
-                            <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="372079103884902" type="System">
-                            <param id="0" name="Layout">Menu_GameOver</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>DOOR/OBJECT INTERACTIONS</comment>
-                <event-block sid="893752914635563">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="635773818138201" type="PlayerCoreBox">
-                            <param id="0" name="Object">Family_Pressed</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="827398839400906" type="System">
-                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
-                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">PlayerCoreBox.UID</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="940652793686286" type="System">
-                            <param id="0" name="Object">Text_Button</param>
-                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="311080289959303" type="Text_Button">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="938259668849419" type="Map_Keyboard_Indicator">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="457387940743850" type="Text_Button">
-                            <param id="0" name="Text">&quot;Take&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="686354038349201">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="472940061286875" type="PlayerCoreBox">
+                        <condition id="-33" name="Pick by comparison" sid="128897976769239" type="System">
                             <param id="0" name="Object">Family_Item</param>
+                            <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Item.UID</param>
                         </condition>
-                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="422001211082966" type="Family_Item" />
-                        <condition id="-33" name="Pick by comparison" sid="510808992698627" type="System">
-                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
-                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                        <condition id="-33" name="Pick by comparison" sid="188447934024857" type="System">
+                            <param id="0" name="Object">Scml_Player_Top</param>
+                            <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">PlayerCoreBox.UID</param>
                         </condition>
-                        <condition id="-33" name="Pick by comparison" sid="359703554903932" type="System">
-                            <param id="0" name="Object">Text_Button</param>
-                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="614921279779864" type="Text_Button">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="586307636633957" type="Map_Keyboard_Indicator">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="0" name="Call function" sid="730196207191278" type="Function">
+                            <param id="0" name="Name">Family_Item.Function_Press</param>
+                            <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="704377156458423">
+                <event-block sid="982545261859655">
                     <conditions>
-                        <condition id="-22" name="Else" sid="683877401195788" type="System" />
-                        <condition id="-33" name="Pick by comparison" sid="100132928263526" type="System">
-                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
-                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                        <condition id="3" name="On key released" sid="760811322427205" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="943988295773566" type="System">
+                            <param id="0" name="Object">Family_Item</param>
+                            <param id="1" name="Expression">PlayerCoreBox.ArmLeft</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Item.UID</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="949142986316467" type="System">
+                            <param id="0" name="Object">Scml_Player_Top</param>
+                            <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">PlayerCoreBox.UID</param>
                         </condition>
-                        <condition id="-33" name="Pick by comparison" sid="122845015000080" type="System">
-                            <param id="0" name="Object">Text_Button</param>
-                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="442091666227479" type="Text_Button">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="346530514268653" type="Map_Keyboard_Indicator">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="0" name="Call function" sid="136150753744646" type="Function">
+                            <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                            <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="743946386634608">
+                <event-block sid="370209375603467">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="736675085917938" type="PlayerCoreBox">
-                            <param id="0" name="Object">DoorDungeon</param>
+                        <condition id="2" name="Key is down" sid="653623544393306" type="Keyboard">
+                            <param id="0" name="Key">88</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="767290009406808" type="DoorDungeon">
-                            <param id="0" name="Instance variable">Locked</param>
+                        <condition id="-33" name="Pick by comparison" sid="778166072255552" type="System">
+                            <param id="0" name="Object">Family_Item</param>
+                            <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Item.UID</param>
                         </condition>
-                        <condition id="-33" name="Pick by comparison" sid="984149226977393" type="System">
-                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
-                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                        <condition id="-33" name="Pick by comparison" sid="289020171486983" type="System">
+                            <param id="0" name="Object">Scml_Player_Top</param>
+                            <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">PlayerCoreBox.UID</param>
                         </condition>
-                        <condition id="-33" name="Pick by comparison" sid="579044564338539" type="System">
-                            <param id="0" name="Object">Text_Button</param>
-                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="218808029341999" type="Text_Button">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="173853268613950" type="Map_Keyboard_Indicator">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="534669932273198" type="Text_Button">
-                            <param id="0" name="Text">&quot;Open&quot;</param>
+                        <action id="0" name="Call function" sid="711055083936491" type="Function">
+                            <param id="0" name="Name">Family_Item.Function_Press</param>
+                            <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="667559924197464">
+                <event-block sid="239762245158726">
                     <conditions>
-                        <condition id="-34" name="Pick by evaluate" sid="199615690737046" type="System">
-                            <param id="0" name="Object">Family_NPC</param>
-                            <param id="1" name="Expression">distance(PlayerCoreBox.X,PlayerCoreBox.Y,Family_NPC.X, Family_NPC.Y) &lt;= 30</param>
+                        <condition id="3" name="On key released" sid="990112833411292" type="Keyboard">
+                            <param id="0" name="Key">88</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="721633920631373" type="Family_NPC">
-                            <param id="0" name="Instance variable">Dialog</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">&quot;&quot;</param>
+                        <condition id="-33" name="Pick by comparison" sid="646224727903511" type="System">
+                            <param id="0" name="Object">Family_Item</param>
+                            <param id="1" name="Expression">PlayerCoreBox.ArmRight</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Item.UID</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="534394913454821" type="Family_NPC">
-                            <param id="0" name="Instance variable">CanTalk</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Layer is visible" sid="382196236741955" type="System">
-                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="198419058319573" type="System">
-                            <param id="0" name="Object">Map_Keyboard_Indicator</param>
-                            <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                        <condition id="-33" name="Pick by comparison" sid="642866240290904" type="System">
+                            <param id="0" name="Object">Scml_Player_Top</param>
+                            <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">PlayerCoreBox.UID</param>
                         </condition>
-                        <condition id="-33" name="Pick by comparison" sid="440279949555789" type="System">
-                            <param id="0" name="Object">Text_Button</param>
-                            <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="743523365011850" type="Text_Button">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="800934439382532" type="Map_Keyboard_Indicator">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="723167416798335" type="Text_Button">
-                            <param id="0" name="Text">&quot;Talk&quot;</param>
+                        <action id="0" name="Call function" sid="139838787754247" type="Function">
+                            <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                            <param id="1" name="Parameter {n}">Family_Item.UID{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="857437328238559">
+                <event-block any="1" sid="878801142796412">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="580271703702190" type="Item_Key">
-                            <param id="0" name="Object">DoorDungeon</param>
+                        <condition id="2" name="Key is down" sid="447431535685011" type="Keyboard">
+                            <param id="0" name="Key">40</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="806384486648735" type="System">
-                            <param id="0" name="First value">Item_Key.FO_Pin2.PinnedUID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">PlayerCoreBox.UID</param>
+                        <condition id="2" name="Key is down" sid="482066396515023" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="708944354267844" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="347086333728374" type="Keyboard">
+                            <param id="0" name="Key">38</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="837725998899650" type="DoorDungeon">
-                            <param id="0" name="Instance variable">KeyLock</param>
+                        <action id="-13" name="Set boolean" sid="336073439110611" type="Family_Character">
+                            <param id="0" name="Instance variable">IsMoving</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="946504384204302">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="916518188690602" type="PlayerCoreBox">
-                                    <param id="0" name="Instance variable">ArmLeft</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Item_Key.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="418060881036140" type="PlayerCoreBox">
-                                    <param id="0" name="Instance variable">ArmLeft</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="395061263253564" type="Item_Key" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="964262380461742">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="574413282753187" type="PlayerCoreBox">
-                                    <param id="0" name="Instance variable">ArmRight</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Item_Key.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="256134507725008" type="PlayerCoreBox">
-                                    <param id="0" name="Instance variable">ArmRight</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="117027021364332" type="Item_Key" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-                <event-block any="1" sid="607615942090133">
+                <event-block sid="192531277948238">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="568365674804903" type="DoorDungeon">
-                            <param id="0" name="Instance variable">KeyLock</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="761798937040516" type="System">
-                            <param id="0" name="First value">Item_Key.Count</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="975232110718737" type="DoorDungeon">
-                            <param id="0" name="Instance variable">Locked</param>
-                        </condition>
+                        <condition id="-22" name="Else" sid="638428019793391" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="677289552195298" type="DoorDungeon">
-                            <param id="0" name="Instance variable">Locked</param>
+                        <action id="-13" name="Set boolean" sid="702578023598778" type="Family_Character">
+                            <param id="0" name="Instance variable">IsMoving</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="215706740235515" type="DoorDungeon">
-                            <param id="0" name="Animation">&quot;Open&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="568363357971878">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="650252661758241" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="1" name="Is overlapping another object" sid="772017224864547" type="PlayerCoreBox">
-                            <param id="0" name="Object">DoorDungeon</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="104902911305957" type="DoorDungeon">
-                            <param id="0" name="Instance variable">Locked</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="931795712553590">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="266262266719481" type="DoorDungeon">
-                                    <param id="0" name="Instance variable">LayoutName</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="952228399342096" type="Function">
-                                    <param id="0" name="Name">&quot;NextLevel&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="992734052603555">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="323708329165419" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="134032869741795" type="Function">
-                                    <param id="0" name="Name">&quot;TransportLayout&quot;</param>
-                                    <param id="1" name="Parameter {n}">DoorDungeon.LayoutName</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="517287654638723">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="798871945934859" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="-34" name="Pick by evaluate" sid="282523532197153" type="System">
-                            <param id="0" name="Object">Family_NPC</param>
-                            <param id="1" name="Expression">distance(PlayerCoreBox.X,PlayerCoreBox.Y,Family_NPC.X, Family_NPC.Y) &lt;= 30</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="402062059056923" type="Family_NPC">
-                            <param id="0" name="Instance variable">Dialog</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">&quot;&quot;</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="787054797892231" type="Family_NPC">
-                            <param id="0" name="Instance variable">CanTalk</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Layer is visible" sid="786020029491077" type="System">
-                            <param id="0" name="Layer">&quot;Dialog&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="726952971359344" type="Function">
-                            <param id="0" name="Name">&quot;dialogue&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_NPC.Dialog</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
-        <event-group description="Data prevailed between levels" sid="374782428638263" title="Log">
+        </event-block>
+        <event-block sid="365559380967541">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="961737494908029" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Expression">Family_Character.UID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+            </conditions>
+            <actions />
             <sub-events>
-                <event-block sid="230421512083061">
+                <event-block sid="423251148987937">
                     <conditions>
-                        <condition id="0" name="On function" sid="666407168773231" type="Function">
-                            <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="975375593773043" type="Family_Character">
+                            <param id="0" name="Instance variable">IsAlive</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="285560710200780" type="Family_Character">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="860174994555563" type="System">
-                            <param id="0" name="Object">Player_Log</param>
-                            <param id="1" name="Expression">Player_Log.Player_Index</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Function.Param(1)</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="110903798087226" type="Family_Character">
+                            <param id="0" name="Instance variable">PushRecoil</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="FC_8Direction" id="8" name="Set enabled" sid="599213784617488" type="Family_Character">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="152475957593593">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="323415979276095" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_8Direction" id="8" name="Set enabled" sid="292087605356730" type="Family_Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>DEATH/GAME OVER FUNCTIONS</comment>
+        <event-block sid="403282518978764">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="822139732668612" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="993530938199622" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="844956840802614" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="925255831691789" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">IsAlive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="732607133495602" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">ActionCommand</param>
+                    <param id="1" name="Value">&quot;Death&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="630822409116003" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">ActionStep</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="246053304333136" type="Function">
+                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
+                    <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
+                </action>
+                <action id="0" name="Call function" sid="714103470782627" type="Function">
+                    <param id="0" name="Name">&quot;MuteBackGroundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="836363397203138" type="Function">
+                    <param id="0" name="Name">&quot;PlayEffectSoundAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;PlayerDeath&quot;</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="859617312432957" type="PlayerCoreBox">
+                    <param id="0" name="Duration">3</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;ToGameOver&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="350267605004518">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="747643688629982" type="PlayerCoreBox">
+                    <param id="0" name="Tag">&quot;ToGameOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="926364485280740" type="Function">
+                    <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="372079103884902" type="System">
+                    <param id="0" name="Layout">Menu_GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>OBJECT INTERACTIONS</comment>
+        <event-block sid="893752914635563">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="635773818138201" type="PlayerCoreBox">
+                    <param id="0" name="Object">Family_Pressed</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="827398839400906" type="System">
+                    <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="940652793686286" type="System">
+                    <param id="0" name="Object">Text_Button</param>
+                    <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="311080289959303" type="Text_Button">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="938259668849419" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="457387940743850" type="Text_Button">
+                    <param id="0" name="Text">&quot;Take&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="686354038349201">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="472940061286875" type="PlayerCoreBox">
+                    <param id="0" name="Object">Family_Item</param>
+                </condition>
+                <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="422001211082966" type="Family_Item" />
+                <condition id="-33" name="Pick by comparison" sid="510808992698627" type="System">
+                    <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="359703554903932" type="System">
+                    <param id="0" name="Object">Text_Button</param>
+                    <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="614921279779864" type="Text_Button">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="586307636633957" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="704377156458423">
+            <conditions>
+                <condition id="-22" name="Else" sid="683877401195788" type="System" />
+                <condition id="-33" name="Pick by comparison" sid="100132928263526" type="System">
+                    <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="122845015000080" type="System">
+                    <param id="0" name="Object">Text_Button</param>
+                    <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="442091666227479" type="Text_Button">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="346530514268653" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Door/key interact</comment>
+        <event-block sid="743946386634608">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="736675085917938" type="PlayerCoreBox">
+                    <param id="0" name="Object">DoorDungeon</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="767290009406808" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="984149226977393" type="System">
+                    <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="579044564338539" type="System">
+                    <param id="0" name="Object">Text_Button</param>
+                    <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="218808029341999" type="Text_Button">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="173853268613950" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="534669932273198" type="Text_Button">
+                    <param id="0" name="Text">&quot;Open&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="857437328238559">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="580271703702190" type="Item_Key">
+                    <param id="0" name="Object">DoorDungeon</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="806384486648735" type="System">
+                    <param id="0" name="First value">Item_Key.FO_Pin2.PinnedUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">PlayerCoreBox.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="837725998899650" type="DoorDungeon">
+                    <param id="0" name="Instance variable">KeyLock</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="946504384204302">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="916518188690602" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">ArmLeft</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Item_Key.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="418060881036140" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">ArmLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="395061263253564" type="Item_Key" />
+                    </actions>
+                </event-block>
+                <event-block sid="964262380461742">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="574413282753187" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">ArmRight</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Item_Key.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="256134507725008" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">ArmRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="117027021364332" type="Item_Key" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="568363357971878">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="650252661758241" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="772017224864547" type="PlayerCoreBox">
+                    <param id="0" name="Object">DoorDungeon</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="104902911305957" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="931795712553590">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="266262266719481" type="DoorDungeon">
+                            <param id="0" name="Instance variable">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="952228399342096" type="Function">
+                            <param id="0" name="Name">&quot;NextLevel&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="992734052603555">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="323708329165419" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="134032869741795" type="Function">
+                            <param id="0" name="Name">&quot;TransportLayout&quot;</param>
+                            <param id="1" name="Parameter {n}">DoorDungeon.LayoutName</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>NPC interaction</comment>
+        <event-block sid="667559924197464">
+            <conditions>
+                <condition id="-34" name="Pick by evaluate" sid="199615690737046" type="System">
+                    <param id="0" name="Object">Family_NPC</param>
+                    <param id="1" name="Expression">distance(PlayerCoreBox.X,PlayerCoreBox.Y,Family_NPC.X, Family_NPC.Y) &lt;= 30</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="721633920631373" type="Family_NPC">
+                    <param id="0" name="Instance variable">Dialog</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="534394913454821" type="Family_NPC">
+                    <param id="0" name="Instance variable">CanTalk</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="382196236741955" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="198419058319573" type="System">
+                    <param id="0" name="Object">Map_Keyboard_Indicator</param>
+                    <param id="1" name="Expression">Map_Keyboard_Indicator.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="440279949555789" type="System">
+                    <param id="0" name="Object">Text_Button</param>
+                    <param id="1" name="Expression">Text_Button.Pin.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Map_Keyboard_Indicator.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="743523365011850" type="Text_Button">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="800934439382532" type="Map_Keyboard_Indicator">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="723167416798335" type="Text_Button">
+                    <param id="0" name="Text">&quot;Talk&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="517287654638723">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="798871945934859" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+                <condition id="-34" name="Pick by evaluate" sid="282523532197153" type="System">
+                    <param id="0" name="Object">Family_NPC</param>
+                    <param id="1" name="Expression">distance(PlayerCoreBox.X,PlayerCoreBox.Y,Family_NPC.X, Family_NPC.Y) &lt;= 30</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="402062059056923" type="Family_NPC">
+                    <param id="0" name="Instance variable">Dialog</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="787054797892231" type="Family_NPC">
+                    <param id="0" name="Instance variable">CanTalk</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="786020029491077" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="726952971359344" type="Function">
+                    <param id="0" name="Name">&quot;dialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_NPC.Dialog</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>LOG Functions</comment>
+        <event-block sid="230421512083061">
+            <conditions>
+                <condition id="0" name="On function" sid="666407168773231" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="285560710200780" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="860174994555563" type="System">
+                    <param id="0" name="Object">Player_Log</param>
+                    <param id="1" name="Expression">Player_Log.Player_Index</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Function.Param(1)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="527812399762365">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="714234075440865" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Easy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="375043696876542" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHP&quot;</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                        <action id="0" name="Add key" sid="669140419690895" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="267193031722965" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="149043184470535" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497291722817932">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="630176508266451" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Normal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="926710850330147" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHP&quot; </param>
+                            <param id="1" name="Value">16</param>
+                        </action>
+                        <action id="0" name="Add key" sid="163866185023942" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
+                            <param id="1" name="Value">16</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="429910467425510" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="659979801969572" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388349265566788">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="250446559739230" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Hard&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="737816520061179" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHP&quot; </param>
+                            <param id="1" name="Value">12</param>
+                        </action>
+                        <action id="0" name="Add key" sid="366594972983498" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
+                            <param id="1" name="Value">12</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="947897896412211" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="887344483852546" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="864030343014010">
+            <conditions>
+                <condition id="0" name="On function" sid="551939079271701" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="916566038433083" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="994482287370506" type="System">
+                    <param id="0" name="Object">Player_Log</param>
+                    <param id="1" name="Expression">Player_Log.Player_Index</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Function.Param(1)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="493651954756261" type="Player_Log">
+                    <param id="0" name="Key">&quot;PlayerHP&quot;</param>
+                    <param id="1" name="Value">Family_Character.Hp</param>
+                </action>
+                <action id="0" name="Add key" sid="610525208865064" type="Player_Log">
+                    <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
+                    <param id="1" name="Value">Family_Character.HPMax</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="467465804205034">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="958781608499963" type="System">
+                            <param id="0" name="Object">Family_Item</param>
+                            <param id="1" name="Expression">Family_Character.ArmLeft</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Item.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="150548018670714" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerObjectLeft&quot; </param>
+                            <param id="1" name="Value">Function.Call(&quot;GetItemXMLData&quot;,Family_Item.UID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="251449040499886">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="140503923693246" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Delete key" sid="331505236168180" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerObjectLeft&quot; </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="229660110865557">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="194161238521897" type="System">
+                            <param id="0" name="Object">Family_Item</param>
+                            <param id="1" name="Expression">Family_Character.ArmRight</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Family_Item.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="502461494563458" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerObjectRight&quot; </param>
+                            <param id="1" name="Value">Function.Call(&quot;GetItemXMLData&quot;,Family_Item.UID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="141921260023743">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="387380811790916" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Delete key" sid="729480378966885" type="Player_Log">
+                            <param id="0" name="Key">&quot;PlayerObjectRight&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="788167352377006">
+            <conditions>
+                <condition id="0" name="On function" sid="683560497507738" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="843788948244435" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="855398637205431" type="System">
+                    <param id="0" name="Object">Player_Log</param>
+                    <param id="1" name="Expression">Player_Log.Player_Index</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Function.Param(1)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="181044773661113">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is empty" sid="918969514259699" type="Player_Log" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="576685273073028" type="Family_Character">
+                            <param id="0" name="Instance variable">Hp</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="593150610456865" type="Family_Character">
+                            <param id="0" name="Instance variable">HPMax</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="593702289976016" type="Function">
+                            <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectLeft&quot;){###}&quot;Left&quot;{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="477078972040317" type="Function">
+                            <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectRight&quot;){###}&quot;Right&quot;{###}0</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="527812399762365">
+                        <event-block sid="671408592276712">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="714234075440865" type="System">
+                                <condition id="-14" name="Compare variable" sid="287283223953801" type="System">
                                     <param id="0" name="Variable">ConfigDifficult</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Easy&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="375043696876542" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerHP&quot;</param>
-                                    <param id="1" name="Value">20</param>
-                                </action>
-                                <action id="0" name="Add key" sid="669140419690895" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
-                                    <param id="1" name="Value">20</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="267193031722965" type="Family_Character">
+                                <action id="-10" name="Set value" sid="519557994524535" type="Family_Character">
                                     <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="149043184470535" type="Family_Character">
-                                    <param id="0" name="Instance variable">HPMax</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="497291722817932">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="630176508266451" type="System">
-                                    <param id="0" name="Variable">ConfigDifficult</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Normal&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="926710850330147" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerHP&quot; </param>
-                                    <param id="1" name="Value">16</param>
-                                </action>
-                                <action id="0" name="Add key" sid="163866185023942" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
-                                    <param id="1" name="Value">16</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="429910467425510" type="Family_Character">
-                                    <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="659979801969572" type="Family_Character">
-                                    <param id="0" name="Instance variable">HPMax</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="388349265566788">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="250446559739230" type="System">
-                                    <param id="0" name="Variable">ConfigDifficult</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Hard&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="737816520061179" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerHP&quot; </param>
-                                    <param id="1" name="Value">12</param>
-                                </action>
-                                <action id="0" name="Add key" sid="366594972983498" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
-                                    <param id="1" name="Value">12</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="947897896412211" type="Family_Character">
-                                    <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="887344483852546" type="Family_Character">
-                                    <param id="0" name="Instance variable">HPMax</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                                    <param id="1" name="Value">Family_Character.HPMax</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="864030343014010">
+                <event-block sid="730437614039909">
                     <conditions>
-                        <condition id="0" name="On function" sid="551939079271701" type="Function">
+                        <condition id="-22" name="Else" sid="852539077770043" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="845490456309864" type="Function">
                             <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="916566038433083" type="Family_Character">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="994482287370506" type="System">
-                            <param id="0" name="Object">Player_Log</param>
-                            <param id="1" name="Expression">Player_Log.Player_Index</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Function.Param(1)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="493651954756261" type="Player_Log">
-                            <param id="0" name="Key">&quot;PlayerHP&quot;</param>
-                            <param id="1" name="Value">Family_Character.Hp</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
                         </action>
-                        <action id="0" name="Add key" sid="610525208865064" type="Player_Log">
-                            <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
-                            <param id="1" name="Value">Family_Character.HPMax</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="467465804205034">
-                            <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="958781608499963" type="System">
-                                    <param id="0" name="Object">Family_Item</param>
-                                    <param id="1" name="Expression">Family_Character.ArmLeft</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Item.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="150548018670714" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerObjectLeft&quot; </param>
-                                    <param id="1" name="Value">Function.Call(&quot;GetItemXMLData&quot;,Family_Item.UID)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="251449040499886">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="140503923693246" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Delete key" sid="331505236168180" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerObjectLeft&quot; </param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="229660110865557">
-                            <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="194161238521897" type="System">
-                                    <param id="0" name="Object">Family_Item</param>
-                                    <param id="1" name="Expression">Family_Character.ArmRight</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Family_Item.UID</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="502461494563458" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerObjectRight&quot; </param>
-                                    <param id="1" name="Value">Function.Call(&quot;GetItemXMLData&quot;,Family_Item.UID)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="141921260023743">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="387380811790916" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Delete key" sid="729480378966885" type="Player_Log">
-                                    <param id="0" name="Key">&quot;PlayerObjectRight&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="788167352377006">
-                    <conditions>
-                        <condition id="0" name="On function" sid="683560497507738" type="Function">
-                            <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="843788948244435" type="Family_Character">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="855398637205431" type="System">
-                            <param id="0" name="Object">Player_Log</param>
-                            <param id="1" name="Expression">Player_Log.Player_Index</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Function.Param(1)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="181044773661113">
-                            <conditions>
-                                <condition id="4" inverted="1" name="Is empty" sid="918969514259699" type="Player_Log" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="576685273073028" type="Family_Character">
-                                    <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="593150610456865" type="Family_Character">
-                                    <param id="0" name="Instance variable">HPMax</param>
-                                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
-                                </action>
-                                <action id="0" name="Call function" sid="593702289976016" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectLeft&quot;){###}&quot;Left&quot;{###}0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="477078972040317" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectRight&quot;){###}&quot;Right&quot;{###}0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="671408592276712">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="287283223953801" type="System">
-                                            <param id="0" name="Variable">ConfigDifficult</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Easy&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="519557994524535" type="Family_Character">
-                                            <param id="0" name="Instance variable">Hp</param>
-                                            <param id="1" name="Value">Family_Character.HPMax</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="730437614039909">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="852539077770043" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="845490456309864" type="Function">
-                                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="879748435235538" type="Function">
-                                    <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
-                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="443063046221910">
-                    <conditions>
-                        <condition id="0" name="On function" sid="627629902800616" type="Function">
-                            <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="571011569214076" type="Family_Character">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="102258532955229" type="System">
-                            <param id="0" name="First value">Function.Param(1)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="755724264426767" type="System">
-                            <param id="0" name="Object">Player_Log</param>
-                            <param id="1" name="Expression">Player_Log.Player_Index</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">Function.Param(3)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="979982071970997" type="Family_Character">
-                            <param id="0" name="Object">Item_Generic</param>
-                            <param id="1" name="Layer">&quot;Characters&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="261594468143256" type="Function">
-                            <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Generic.UID</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="321503783330319" type="Item_Generic">
-                            <param id="0" name="Instance variable">XMLContent</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
-                        </action>
-                        <action id="0" name="Load" sid="569300238775822" type="XML_Inventory">
-                            <param id="0" name="XML">Item_Generic.XMLContent</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="723809355548845" type="Item_Generic">
-                            <param id="0" name="Instance variable">XMLID</param>
-                            <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[1]/@name&quot;)</param>
-                        </action>
-                        <action id="0" name="Call function" sid="981596912167858" type="Function">
-                            <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
-                            <param id="1" name="Parameter {n}">Item_Generic.UID</param>
+                        <action id="0" name="Call function" sid="879748435235538" type="Function">
+                            <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
+        <event-block sid="443063046221910">
+            <conditions>
+                <condition id="0" name="On function" sid="627629902800616" type="Function">
+                    <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="571011569214076" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="102258532955229" type="System">
+                    <param id="0" name="First value">Function.Param(1)</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="755724264426767" type="System">
+                    <param id="0" name="Object">Player_Log</param>
+                    <param id="1" name="Expression">Player_Log.Player_Index</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Function.Param(3)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="979982071970997" type="Family_Character">
+                    <param id="0" name="Object">Item_Generic</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Call function" sid="261594468143256" type="Function">
+                    <param id="0" name="Name">&quot;EquipObject&quot;&amp;Function.Param(2)</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Item_Generic.UID</param>
+                </action>
+                <action id="-10" name="Set value" sid="321503783330319" type="Item_Generic">
+                    <param id="0" name="Instance variable">XMLContent</param>
+                    <param id="1" name="Value">Function.Param(1)</param>
+                </action>
+                <action id="0" name="Load" sid="569300238775822" type="XML_Inventory">
+                    <param id="0" name="XML">Item_Generic.XMLContent</param>
+                </action>
+                <action id="-10" name="Set value" sid="723809355548845" type="Item_Generic">
+                    <param id="0" name="Instance variable">XMLID</param>
+                    <param id="1" name="Value">XML_Inventory.StringValue(&quot;/ObjectList/object[1]/@name&quot;)</param>
+                </action>
+                <action id="0" name="Call function" sid="981596912167858" type="Function">
+                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

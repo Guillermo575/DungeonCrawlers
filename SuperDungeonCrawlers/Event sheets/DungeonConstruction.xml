@@ -290,13 +290,13 @@
                                                     <param id="0" name="Instance variable">XMLID</param>
                                                     <param id="1" name="Value">&quot;Sword&quot;</param>
                                                 </action>
-                                                <action id="0" name="Call function" sid="186931529067979" type="Function">
-                                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
-                                                </action>
                                                 <action id="0" name="Call function" sid="361135679274394" type="Function">
                                                     <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
                                                     <param id="1" name="Parameter {n}">Item_Generic.UID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="186931529067979" type="Function">
+                                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -331,13 +331,13 @@
                                                     <param id="0" name="Instance variable">XMLID</param>
                                                     <param id="1" name="Value">&quot;Wand&quot;</param>
                                                 </action>
-                                                <action id="0" name="Call function" sid="344940380436972" type="Function">
-                                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
-                                                </action>
                                                 <action id="0" name="Call function" sid="653032529798449" type="Function">
                                                     <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
                                                     <param id="1" name="Parameter {n}">Item_Generic.UID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="344940380436972" type="Function">
+                                                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -450,10 +450,6 @@
                                                     <param id="0" name="Object">Item_Key</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="508805581975926" type="Function">
-                                                    <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Item_Generic.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>

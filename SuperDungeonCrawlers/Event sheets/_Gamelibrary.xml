@@ -424,5 +424,33 @@
                 <action id="6" name="Resume animation" sid="563643683984845" type="Family_Spriter" />
             </actions>
         </event-block>
+        <comment>Door opened</comment>
+        <event-block any="1" sid="426865335190726">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="602142996505416" type="DoorDungeon">
+                    <param id="0" name="Instance variable">KeyLock</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="124921619618357" type="System">
+                    <param id="0" name="First value">Item_Key.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="307220134552807" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="329787743358649" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="860063229095452" type="DoorDungeon">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
