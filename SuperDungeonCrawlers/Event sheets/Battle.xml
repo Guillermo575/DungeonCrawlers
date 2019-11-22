@@ -353,6 +353,18 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="524274688862740">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="574660617871417" type="Family_Character">
+                            <param id="0" name="Instance variable">HideItems</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="156567201215118" type="Family_Item">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="598583061870156">
@@ -369,6 +381,9 @@
             </conditions>
             <actions>
                 <action behavior="FO_Pin2" id="1" name="Unpin" sid="662163658113570" type="Family_Item" />
+                <action id="-15" name="Set visible" sid="347350958429701" type="Family_Item">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <comment>Equip that object on left right arm</comment>

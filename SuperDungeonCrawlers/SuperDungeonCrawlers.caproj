@@ -71,7 +71,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Firefox</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -3395,6 +3395,7 @@
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
+                <instance-variable comment="make items invisible if they are not in use" name="HideItems" sid="249099144844418" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FC_8Direction" sid="182952999122772">

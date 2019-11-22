@@ -619,6 +619,9 @@
                             <param id="0" name="Instance variable">Group</param>
                             <param id="1" name="Value">Family_Character.TypeRole</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="949348776555392" type="Family_Item">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="755133520381392">
@@ -698,6 +701,9 @@
                         <action id="-10" name="Set value" sid="718303123684050" type="Family_Impact">
                             <param id="0" name="Instance variable">Group</param>
                             <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="710215350702757" type="Family_Item">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -779,6 +785,9 @@
                             <param id="0" name="Instance variable">Group</param>
                             <param id="1" name="Value">Family_Character.TypeRole</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="546541683732115" type="Family_Item">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="829719321013051">
@@ -859,6 +868,9 @@
                             <param id="0" name="Instance variable">Group</param>
                             <param id="1" name="Value">Family_Character.TypeRole</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="933735977639947" type="Family_Item">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="326549092502508">
@@ -936,7 +948,11 @@
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="243461811444963" type="Family_Item">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="865430266534956">
                             <conditions>
@@ -1095,7 +1111,11 @@
                             <param id="0" name="Unique ID">Family_Character.ActionObjectUsed</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="800810108610284" type="Family_Item">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="672934233730348">
                             <conditions>
@@ -1382,6 +1402,38 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="588740705500815">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="230537485869783" type="Family_Character">
+                                    <param id="0" name="Instance variable">HideItems</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="156251274205407" type="Family_Item">
+                                    <param id="0" name="Unique ID">Family_Character.ArmLeft</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="138906632788233" type="Family_Item">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="637613133619828">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="614786195228575" type="Family_Character">
+                                    <param id="0" name="Instance variable">HideItems</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="768694177868347" type="Family_Item">
+                                    <param id="0" name="Unique ID">Family_Character.ArmRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="107504508216079" type="Family_Item">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
