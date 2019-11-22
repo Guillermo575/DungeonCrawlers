@@ -219,6 +219,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <HideItems>true</HideItems>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -287,8 +288,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>330</x>
-                        <y>179</y>
+                        <x>335.131774902</x>
+                        <y>180.39944458</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -463,8 +464,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>226.560241699</x>
-                        <y>148.331192017</y>
+                        <x>231.225265503</x>
+                        <y>146.931762695</y>
                         <z>0</z>
                         <width>28</width>
                         <height>11</height>

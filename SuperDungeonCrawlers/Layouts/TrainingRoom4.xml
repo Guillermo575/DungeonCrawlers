@@ -219,6 +219,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
+                        <HideItems>true</HideItems>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
