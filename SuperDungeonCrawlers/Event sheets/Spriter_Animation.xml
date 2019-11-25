@@ -500,13 +500,17 @@
                     <sub-events>
                         <event-block sid="309629198658538">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="452665539256818" type="Family_Character">
+                                <condition id="-7" name="Compare instance variable" sid="576284821929344" type="Family_Character">
                                     <param id="0" name="Instance variable">ActionCommand</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="1" name="Set playback speed ratio" sid="416180866770353" type="Scml_Player_Bottom">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block any="1" sid="167319199069521">
                                     <conditions>
