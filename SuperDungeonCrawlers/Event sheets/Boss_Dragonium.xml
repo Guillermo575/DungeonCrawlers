@@ -145,38 +145,73 @@
             </actions>
         </event-block>
         <comment>Fire attack, is the same fireball object</comment>
-        <event-block sid="439167853848197">
+        <event-block sid="406434115220732">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="387593444560429" type="System">
+                <condition id="-6" name="Every X seconds" sid="735266616072120" type="System">
                     <param id="0" name="Interval (seconds)">Boss_Dragon_Head.firerate</param>
                 </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="285233693847614" type="Boss_Dragon_Head">
+                <condition id="-8" name="Is boolean instance variable set" sid="618046631893282" type="Boss_Dragon_Head">
                     <param id="0" name="Instance variable">openmouth</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="629168883135453" type="body_dragon_mouth">
-                    <param id="0" name="Object">Impact_Fireball</param>
+                <action id="0" name="Spawn another object" sid="954618799252718" type="body_dragon_mouth">
+                    <param id="0" name="Object">Impact_Generic</param>
                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="748446508836965" type="Impact_Fireball">
+                <action id="4" name="Set animation" sid="819212231154950" type="Impact_Generic">
+                    <param id="0" name="Animation">&quot;Fireball&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="826268450479371" type="Impact_Generic">
+                    <param id="0" name="Angle">Boss_Dragon_Head.Angle</param>
+                </action>
+                <action id="-10" name="Set value" sid="209224518010208" type="Impact_Generic">
                     <param id="0" name="Instance variable">Group</param>
                     <param id="1" name="Value">&quot;Enemy&quot;</param>
                 </action>
-                <action id="-8" name="Set angle" sid="305869243394723" type="Impact_Fireball">
+                <action id="-10" name="Set value" sid="185531266758145" type="Impact_Generic">
+                    <param id="0" name="Instance variable">TypeObject</param>
+                    <param id="1" name="Value">&quot;Projectile&quot;</param>
+                </action>
+                <action id="-8" name="Set angle" sid="626061232500871" type="Impact_Generic">
                     <param id="0" name="Angle">Boss_Dragon_Head.Angle</param>
                 </action>
-                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="686597830481652" type="Impact_Fireball">
+                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="415049606540090" type="Impact_Generic">
                     <param id="0" name="Angle">Boss_Dragon_Head.Angle</param>
                 </action>
-                <action id="-10" name="Set value" sid="451753660963794" type="Impact_Fireball">
+                <action behavior="FI_Bullet" id="0" name="Set speed" sid="574388799400887" type="Impact_Generic">
+                    <param id="0" name="Speed">300</param>
+                </action>
+                <action id="-10" name="Set value" sid="390396003351883" type="Impact_Generic">
                     <param id="0" name="Instance variable">Impact_Damage</param>
-                    <param id="1" name="Value">int(Impact_Fireball.Impact_Damage * Boss_Dragon_Head.Impact_Damage)</param>
+                    <param id="1" name="Value">int(Impact_Generic.Impact_Damage * Boss_Dragon_Head.Impact_Damage)</param>
                 </action>
-                <action id="-7" name="Set size" sid="272461415043346" type="Impact_Fireball">
+                <action id="-7" name="Set size" sid="350831453614129" type="Impact_Generic">
                     <param id="0" name="Width">30</param>
                     <param id="1" name="Height">30</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="823346007462490" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="531169416101165" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Impact_PierceWalls</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="534145883588770" type="Impact_Generic">
+                    <param id="0" name="Duration">3</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="472057455434073" type="Impact_Generic">
+                    <param id="0" name="Instance variable">MakeDamage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="707414193955614" type="Impact_Generic">
+                    <param id="0" name="Instance variable">Impact_PushImpact</param>
+                    <param id="1" name="Value">100</param>
                 </action>
             </actions>
         </event-block>
