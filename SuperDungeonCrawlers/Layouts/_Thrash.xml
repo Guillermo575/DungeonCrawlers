@@ -1510,100 +1510,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Impact_Slash" uid="47">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Group></Group>
-                        <MakeDamage>true</MakeDamage>
-                        <TypeObject>Melee</TypeObject>
-                        <Impact_Damage>3</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
-                        <Impact_Duration>1</Impact_Duration>
-                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
-                        <Impact_PierceWalls>false</Impact_PierceWalls>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="FI_Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>202.234405518</x>
-                        <y>87.499053955</y>
-                        <z>0</z>
-                        <width>22</width>
-                        <height>29</height>
-                        <depth>0</depth>
-                        <hotspotX>0.545454562</hotspotX>
-                        <hotspotY>0.482758611</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Impact_Arrow" uid="48">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Group></Group>
-                        <MakeDamage>true</MakeDamage>
-                        <TypeObject>Projectile</TypeObject>
-                        <Impact_Damage>2</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.2</Impact_RecoilTime>
-                        <Impact_Duration>1</Impact_Duration>
-                        <Impact_PierceCharacters>true</Impact_PierceCharacters>
-                        <Impact_PierceWalls>false</Impact_PierceWalls>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="FI_Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>272.302947998</x>
-                        <y>102.798530579</y>
-                        <z>0</z>
-                        <width>13.859039307</width>
-                        <height>11.755020142</height>
-                        <depth>0</depth>
-                        <hotspotX>0.300000012</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Item_Wand" uid="60">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1649,53 +1555,6 @@
                         <depth>0</depth>
                         <hotspotX>0.518518507</hotspotX>
                         <hotspotY>0.384615391</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Impact_Fireball" uid="62">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Group></Group>
-                        <MakeDamage>true</MakeDamage>
-                        <TypeObject>Projectile</TypeObject>
-                        <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>110</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
-                        <Impact_Duration>0.7</Impact_Duration>
-                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
-                        <Impact_PierceWalls>true</Impact_PierceWalls>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="FI_Bullet">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>301.324981689</x>
-                        <y>130.407592773</y>
-                        <z>0</z>
-                        <width>14.2734375</width>
-                        <height>13.988601685</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1863,53 +1722,6 @@
                         <depth>0</depth>
                         <hotspotX>0.519999981</hotspotX>
                         <hotspotY>0.519999981</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Impact_Axe" uid="165">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Group></Group>
-                        <MakeDamage>true</MakeDamage>
-                        <TypeObject>Projectile</TypeObject>
-                        <Impact_Damage>3</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
-                        <Impact_Duration>0.6</Impact_Duration>
-                        <Impact_PierceCharacters>true</Impact_PierceCharacters>
-                        <Impact_PierceWalls>false</Impact_PierceWalls>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="FI_Bullet">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>467</x>
-                        <y>67</y>
-                        <z>0</z>
-                        <width>18</width>
-                        <height>15</height>
-                        <depth>0</depth>
-                        <hotspotX>0.555555582</hotspotX>
-                        <hotspotY>0.466666669</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
