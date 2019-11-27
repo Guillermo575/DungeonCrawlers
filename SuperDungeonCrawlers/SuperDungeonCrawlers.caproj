@@ -3128,9 +3128,15 @@
                 <instance-variable comment="Projectile Spawn: Recoil Time impact" name="Projectile_RecoilTime" sid="817463555779213" type="number" />
                 <instance-variable comment="This object has limit uses" name="Projectile_HasAmmo" sid="945768496343859" type="boolean" />
                 <instance-variable comment="Limit uses if applies" name="Projectile_AmmoSize" sid="826294847455027" type="number" />
+                <instance-variable comment="Ammo max cap" name="Projectile_AmmoSizeMax" sid="158852504050741" type="number" />
                 <instance-variable comment="Ammo Spend if applies" name="Projectile_AmmoSpend" sid="345873044961337" type="number" />
                 <instance-variable comment="Projectile Spawn: Can pierce Characters?" name="Projectile_PierceCharacters" sid="442353920737194" type="boolean" />
                 <instance-variable comment="Projectile Spawn: Can Pierce Walls?" name="Projectile_PierceWalls" sid="670354869887442" type="boolean" />
+                <instance-variable comment="Ammo shooted at time" name="Projectile_AmmoXShoot" sid="520621557341621" type="number" />
+                <instance-variable comment="Time you need to wait for recharge ammo" name="Projectile_WaitXCooldown" sid="201018642765892" type="number" />
+                <instance-variable comment="Time x ammo reload cooldown" name="Projectile_TimeXCooldown" sid="114936623457656" type="number" />
+                <instance-variable comment="Ammo recharged x cooldown" name="Projectile_AmmoXCooldown" sid="575197156750681" type="number" />
+                <instance-variable comment="Function triggered in impact" name="Projectile_FunctionImpact" sid="804352700546794" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FO_Pin2" sid="876962418157441">

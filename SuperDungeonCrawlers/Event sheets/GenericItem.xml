@@ -143,9 +143,33 @@
                                     <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                                     <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSize&quot;)</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="461123197957960" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_AmmoSizeMax</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSizeMax&quot;)</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="304177350125264" type="Item_Generic">
                                     <param id="0" name="Instance variable">Projectile_AmmoSpend</param>
                                     <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoSpend&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="195037614907520" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_AmmoXShoot</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoXShoot&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="756272022875217" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_WaitXCooldown</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/WaitXCooldown&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="687100156975716" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_TimeXCooldown</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/TimeXCooldown&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="699171926329927" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_AmmoXCooldown</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/AmmoXCooldown&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="913658033942575" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_FunctionImpact</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Projectile/FunctionImpact&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -321,9 +345,33 @@
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoSize&quot;,Item_Generic.Projectile_AmmoSize) </param>
                         </action>
+                        <action id="-10" name="Add to" sid="117693069048593" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoSizeMax&quot;,Item_Generic.Projectile_AmmoSizeMax) </param>
+                        </action>
                         <action id="-10" name="Add to" sid="149652526528635" type="System">
                             <param id="0" name="Variable">XMLString</param>
                             <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoSpend&quot;,Item_Generic.Projectile_AmmoSpend) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="511379257889184" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoXShoot&quot;,Item_Generic.Projectile_AmmoXShoot) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="464669168161978" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;WaitXCooldown&quot;,Item_Generic.Projectile_WaitXCooldown) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="567272499470397" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;TimeXCooldown&quot;,Item_Generic.Projectile_TimeXCooldown) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="696116444595419" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;AmmoXCooldown&quot;,Item_Generic.Projectile_AmmoXCooldown) </param>
+                        </action>
+                        <action id="-10" name="Add to" sid="684580930675572" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">Function.Call(&quot;CreateXMLItemNode&quot;,&quot;FunctionImpact&quot;,Item_Generic.Projectile_FunctionImpact) </param>
                         </action>
                         <action id="-10" name="Add to" sid="907436070998188" type="System">
                             <param id="0" name="Variable">XMLString</param>

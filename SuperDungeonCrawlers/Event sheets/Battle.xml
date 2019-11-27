@@ -626,5 +626,29 @@
                 <action id="-9" name="Destroy" sid="184362761187232" type="Item_Potion" />
             </actions>
         </event-block>
+        <comment>Ammo reload cooldown</comment>
+        <event-block sid="622360804128041">
+            <conditions>
+                <condition behavior="FO_Timer" id="0" name="On timer" sid="287527538003120" type="Family_Item">
+                    <param id="0" name="Tag">&quot;AmmoCooldown&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="146862694450150" type="Family_Item">
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">Family_Item.Projectile_AmmoSizeMax - Family_Item.Projectile_AmmoXCooldown</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="653304318394923" type="Family_Item">
+                    <param id="0" name="Instance variable">Projectile_AmmoSize</param>
+                    <param id="1" name="Value">Family_Item.Projectile_AmmoXCooldown</param>
+                </action>
+                <action behavior="FO_Timer" id="0" name="Start timer" sid="965426839517095" type="Family_Item">
+                    <param id="0" name="Duration">Family_Item.Projectile_TimeXCooldown</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;AmmoCooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -265,9 +265,15 @@
                         <Projectile_RecoilTime>0</Projectile_RecoilTime>
                         <Projectile_HasAmmo>false</Projectile_HasAmmo>
                         <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSizeMax>0</Projectile_AmmoSizeMax>
                         <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
                         <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
                         <Projectile_PierceWalls>false</Projectile_PierceWalls>
+                        <Projectile_AmmoXShoot>0</Projectile_AmmoXShoot>
+                        <Projectile_WaitXCooldown>0</Projectile_WaitXCooldown>
+                        <Projectile_TimeXCooldown>0</Projectile_TimeXCooldown>
+                        <Projectile_AmmoXCooldown>0</Projectile_AmmoXCooldown>
+                        <Projectile_FunctionImpact></Projectile_FunctionImpact>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
@@ -370,9 +376,15 @@
                         <Projectile_RecoilTime>0</Projectile_RecoilTime>
                         <Projectile_HasAmmo>false</Projectile_HasAmmo>
                         <Projectile_AmmoSize>0</Projectile_AmmoSize>
+                        <Projectile_AmmoSizeMax>0</Projectile_AmmoSizeMax>
                         <Projectile_AmmoSpend>0</Projectile_AmmoSpend>
                         <Projectile_PierceCharacters>false</Projectile_PierceCharacters>
                         <Projectile_PierceWalls>false</Projectile_PierceWalls>
+                        <Projectile_AmmoXShoot>0</Projectile_AmmoXShoot>
+                        <Projectile_WaitXCooldown>0</Projectile_WaitXCooldown>
+                        <Projectile_TimeXCooldown>0</Projectile_TimeXCooldown>
+                        <Projectile_AmmoXCooldown>0</Projectile_AmmoXCooldown>
+                        <Projectile_FunctionImpact></Projectile_FunctionImpact>
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>

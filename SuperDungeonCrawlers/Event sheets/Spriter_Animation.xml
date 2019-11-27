@@ -498,13 +498,32 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="309629198658538">
+                        <event-block sid="717777661603569">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="576284821929344" type="Family_Character">
+                                <condition id="-7" name="Compare instance variable" sid="275637618224114" type="Family_Character">
                                     <param id="0" name="Instance variable">ActionCommand</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
+                                    <param id="2" name="Value">&quot;Jump&quot;</param>
                                 </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set playback speed ratio" sid="283752885607408" type="Scml_Player_Bottom">
+                                    <param id="0" name="Speed Ratio">1</param>
+                                </action>
+                                <action id="0" name="Set animation" sid="181360011404707" type="Scml_Player_Bottom">
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
+                                    <param id="1" name="Where to start playing this animation">1</param>
+                                    <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="482029530778759" type="PlayerShadow">
+                                    <param id="0" name="Width"> PlayerShadow.Width*0.8</param>
+                                    <param id="1" name="Height"> PlayerShadow.Height*0.8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="309629198658538">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="841922141633359" type="System" />
                             </conditions>
                             <actions>
                                 <action id="1" name="Set playback speed ratio" sid="416180866770353" type="Scml_Player_Bottom">
@@ -538,27 +557,6 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="717777661603569">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="380130741564251" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="275637618224114" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionCommand</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Jump&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set animation" sid="181360011404707" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
-                                    <param id="1" name="Where to start playing this animation">1</param>
-                                    <param id="2" name="Blend Duration">0</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="482029530778759" type="PlayerShadow">
-                                    <param id="0" name="Width"> PlayerShadow.Width*0.8</param>
-                                    <param id="1" name="Height"> PlayerShadow.Height*0.8</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1434,6 +1432,27 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="107504508216079" type="Family_Item">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="448954365827910">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="235515696353319" type="Family_Item">
+                                    <param id="0" name="Instance variable">Projectile_WaitXCooldown</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="630798667451204" type="System">
+                                    <param id="0" name="First value">Family_Item.FO_Timer.CurrentTime(&quot;AmmoCooldown&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="804890372881686" type="Family_Item">
+                                    <param id="0" name="Duration">Family_Item.Projectile_WaitXCooldown</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;AmmoCooldown&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
