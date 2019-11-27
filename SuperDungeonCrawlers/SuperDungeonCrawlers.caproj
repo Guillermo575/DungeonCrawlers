@@ -2610,37 +2610,6 @@
         </object-folder>
         <object-folder name="GamePlay">
             <object-folder name="Items">
-                <object-type name="Item_Sword" sid="995720059400956">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Object_Sword" pingpong="0" repeatcount="1" repeatto="0" sid="480861227525951" speed="0">
-                            <frame duration="1" hotspotX="0.178571" hotspotY="0.545455">
-                                <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
-                                <collision-poly>
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Item_Wand" sid="570642942497581">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Object_Wand" pingpong="0" repeatcount="1" repeatto="0" sid="605359823466774" speed="0">
-                            <frame duration="1" hotspotX="0.518519" hotspotY="0.384615" original-source="C:\Users\MasterRace\Desktop\wand.png">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
                 <object-type name="Item_Potion" sid="774482982143141">
                     <plugin id="Sprite" />
                     <animation-folder>
@@ -2659,22 +2628,6 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Item_Spear" sid="510621187954028">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Object_Sword" pingpong="0" repeatcount="1" repeatto="0" sid="924115357646486" speed="0">
-                            <frame duration="1" hotspotX="0.178571" hotspotY="0.545455">
-                                <image-point name="Imagepoint 1" x="0.928571" y="0.545455" />
-                                <collision-poly>
-                                    <point x="0.642857" y="1" />
-                                    <point x="0.642857" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
                 <object-type name="Item_Key" sid="704374649094210">
                     <plugin id="Sprite" />
                     <animation-folder>
@@ -2685,36 +2638,6 @@
                                     <point x="0.104938" y="0" />
                                     <point x="0.895061" y="0" />
                                     <point x="0.895061" y="0.857142" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Item_Bow" sid="793965329642684">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Object_Bow" pingpong="0" repeatcount="1" repeatto="0" sid="290334102596260" speed="0">
-                            <frame duration="1" hotspotX="0.25" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Item_Axe" sid="120960824708860">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Object_Axe" pingpong="0" repeatcount="1" repeatto="0" sid="796454017087924" speed="0">
-                            <frame duration="1" hotspotX="0.444444" hotspotY="0.466667">
-                                <collision-poly>
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -3107,13 +3030,8 @@
         </family>
         <family name="Family_Item" plugin-id="Sprite" sid="388695614152843">
             <members>
-                <member>Item_Axe</member>
-                <member>Item_Bow</member>
                 <member>Item_Generic</member>
                 <member>Item_Key</member>
-                <member>Item_Spear</member>
-                <member>Item_Sword</member>
-                <member>Item_Wand</member>
             </members>
             <instance-variables>
                 <instance-variable name="Function_Press" sid="371367740854561" type="string" />
@@ -3150,13 +3068,8 @@
         <family name="Family_Pressed" plugin-id="Sprite" sid="233578296681315">
             <members>
                 <member>DoorDungeon</member>
-                <member>Item_Axe</member>
-                <member>Item_Bow</member>
                 <member>Item_Generic</member>
                 <member>Item_Key</member>
-                <member>Item_Spear</member>
-                <member>Item_Sword</member>
-                <member>Item_Wand</member>
             </members>
             <instance-variables>
                 <instance-variable comment="If the value is true, the message is displayed" name="Ocuppied" sid="563647826040951" type="boolean" />
@@ -3181,11 +3094,8 @@
                 <member>boss_worm_head</member>
                 <member>EnemyCoreBox</member>
                 <member>Impact_Generic</member>
-                <member>Item_Axe</member>
                 <member>Item_Generic</member>
                 <member>Item_Key</member>
-                <member>Item_Spear</member>
-                <member>Item_Sword</member>
             </members>
             <instance-variables>
                 <instance-variable comment="if the character type if different that this value, that receive damage" name="Group" sid="615762410693189" type="string" />
