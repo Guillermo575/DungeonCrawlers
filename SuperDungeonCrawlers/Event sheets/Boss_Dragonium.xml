@@ -29,9 +29,9 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="504835350608765">
+                <event-block sid="908972092203460">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="421667253116836" type="System">
+                        <condition id="-11" name="For Each" sid="472807336011908" type="System">
                             <param id="0" name="Object">EnemyCoreBox</param>
                         </condition>
                     </conditions>
@@ -40,14 +40,22 @@
                             <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
                             <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="813787629010249" type="EnemyCoreBox">
-                            <param id="0" name="Object">Item_Sword</param>
+                        <action id="0" name="Spawn another object" sid="666544083946767" type="EnemyCoreBox">
+                            <param id="0" name="Object">Item_Generic</param>
                             <param id="1" name="Layer">&quot;Characters&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="959534666560613" type="Function">
+                        <action id="-10" name="Set value" sid="127901415162773" type="Item_Generic">
+                            <param id="0" name="Instance variable">XMLID</param>
+                            <param id="1" name="Value">&quot;Sword&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="610308144411034" type="Function">
+                            <param id="0" name="Name">&quot;LoadXMLItemNode&quot;</param>
+                            <param id="1" name="Parameter {n}">Item_Generic.UID</param>
+                        </action>
+                        <action id="0" name="Call function" sid="670090513406037" type="Function">
                             <param id="0" name="Name">&quot;PickObject&quot;</param>
-                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Sword.UID</param>
+                            <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
                         </action>
                     </actions>
                 </event-block>

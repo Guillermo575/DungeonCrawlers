@@ -66,6 +66,11 @@
                 <condition id="-14" name="Pick by unique ID" sid="848922237583679" type="Item_Generic">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
                 </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="371038260387375" type="System">
+                    <param id="0" name="Variable">FileItemListData</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Load" sid="109947603997817" type="XML_Inventory">
