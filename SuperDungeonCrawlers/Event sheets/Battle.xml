@@ -526,84 +526,97 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="739135910237827" type="Family_Item">
-                    <param id="0" name="Object">Impact_Generic</param>
-                    <param id="1" name="Layer">&quot;Characters&quot;</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="930353163821459" type="Impact_Generic">
-                    <param id="0" name="Animation">Family_Item.Projectile_Animation</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-8" name="Set angle" sid="508227509305923" type="Impact_Generic">
-                    <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
-                </action>
-                <action id="-10" name="Set value" sid="807281521553950" type="Impact_Generic">
-                    <param id="0" name="Instance variable">Group</param>
-                    <param id="1" name="Value">Family_Character.TypeRole</param>
-                </action>
-                <action id="-10" name="Set value" sid="878942395763345" type="Impact_Generic">
-                    <param id="0" name="Instance variable">TypeObject</param>
-                    <param id="1" name="Value">&quot;Projectile&quot;</param>
-                </action>
-                <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="874337554331397" type="Impact_Generic">
-                    <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
-                </action>
-                <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
-                    <param id="0" name="Speed">Family_Item.Projectile_Speed</param>
-                </action>
-                <action id="-10" name="Set value" sid="141224123841149" type="Impact_Generic">
-                    <param id="0" name="Instance variable">Impact_PushImpact</param>
-                    <param id="1" name="Value">int(Family_Item.Projectile_PushImpact)</param>
-                </action>
-                <action id="-10" name="Set value" sid="316771976281180" type="Impact_Generic">
-                    <param id="0" name="Instance variable">Impact_Damage</param>
-                    <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
-                </action>
-                <action id="-10" name="Set value" sid="614635516253122" type="Impact_Generic">
-                    <param id="0" name="Instance variable">Impact_Damage</param>
-                    <param id="1" name="Value">int(Impact_Generic.Impact_Damage * Family_Character.BonusDamageMult)</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="973343419328489" type="Impact_Generic">
-                    <param id="0" name="Instance variable">MakeDamage</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="737434007205443" type="Impact_Generic">
-                    <param id="0" name="Duration">Impact_Generic.Impact_Duration</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
-                </action>
                 <action id="-12" name="Subtract from" sid="367531849749154" type="Family_Item">
                     <param id="0" name="Instance variable">Projectile_AmmoSize</param>
                     <param id="1" name="Value">Family_Character.NoSpendMunition? 0 : Family_Item.Projectile_AmmoSpend</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="525554166392414">
+                <event-block sid="628047493207284">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="436757329199127" type="Item_Generic">
-                            <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
+                        <condition id="-10" name="For" sid="948458388961645" type="System">
+                            <param id="0" name="Name">&quot;AmmoXShoot&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Family_Item.Projectile_AmmoXShoot - 1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="923034714575186" type="Impact_Generic">
-                            <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                        <action id="0" name="Spawn another object" sid="739135910237827" type="Family_Item">
+                            <param id="0" name="Object">Impact_Generic</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="930353163821459" type="Impact_Generic">
+                            <param id="0" name="Animation">Family_Item.Projectile_Animation</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="807281521553950" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Group</param>
+                            <param id="1" name="Value">Family_Character.TypeRole</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="878942395763345" type="Impact_Generic">
+                            <param id="0" name="Instance variable">TypeObject</param>
+                            <param id="1" name="Value">&quot;Projectile&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="508227509305923" type="Impact_Generic">
+                            <param id="0" name="Angle">Family_Character.LastDirectionAngle + ((15*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
+                        </action>
+                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="874337554331397" type="Impact_Generic">
+                            <param id="0" name="Angle">Family_Character.LastDirectionAngle + ((15*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
+                        </action>
+                        <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
+                            <param id="0" name="Speed">Family_Item.Projectile_Speed</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="141224123841149" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Impact_PushImpact</param>
+                            <param id="1" name="Value">int(Family_Item.Projectile_PushImpact)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="316771976281180" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Impact_Damage</param>
+                            <param id="1" name="Value">int(Family_Item.Projectile_Damage)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="614635516253122" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Impact_Damage</param>
+                            <param id="1" name="Value">int(Impact_Generic.Impact_Damage * Family_Character.BonusDamageMult)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="973343419328489" type="Impact_Generic">
+                            <param id="0" name="Instance variable">MakeDamage</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="668332949719876">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="138631018873601" type="Item_Generic">
-                            <param id="0" name="Instance variable">Projectile_PierceWalls</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="770349298382437" type="Impact_Generic">
-                            <param id="0" name="Instance variable">Impact_PierceWalls</param>
-                            <param id="1" name="Value">1</param>
+                        <action behavior="Timer" id="0" name="Start timer" sid="737434007205443" type="Impact_Generic">
+                            <param id="0" name="Duration">Impact_Generic.Impact_Duration</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Destroy&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="525554166392414">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="436757329199127" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="923034714575186" type="Impact_Generic">
+                                    <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="668332949719876">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="138631018873601" type="Item_Generic">
+                                    <param id="0" name="Instance variable">Projectile_PierceWalls</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="770349298382437" type="Impact_Generic">
+                                    <param id="0" name="Instance variable">Impact_PierceWalls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

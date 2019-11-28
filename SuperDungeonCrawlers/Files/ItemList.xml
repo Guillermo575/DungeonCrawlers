@@ -43,10 +43,10 @@
 			<AmmoSpend>1</AmmoSpend>
 			<PierceCharacters>1</PierceCharacters>
 			<PierceWalls>0</PierceWalls>
-			<Projectile_AmmoXShoot>1</Projectile_AmmoXShoot>
-			<Projectile_WaitXCooldown>3</Projectile_WaitXCooldown>
-			<Projectile_TimeXCooldown>2</Projectile_TimeXCooldown>
-			<Projectile_AmmoXCooldown>1</Projectile_AmmoXCooldown>
+			<AmmoXShoot>1</AmmoXShoot>
+			<WaitXCooldown>3</WaitXCooldown>
+			<TimeXCooldown>2</TimeXCooldown>
+			<AmmoXCooldown>1</AmmoXCooldown>
 		</Projectile>
 	</object>
 	<object name='Sword'>
@@ -110,6 +110,7 @@
 			<AmmoSpend>0</AmmoSpend>
 			<PierceCharacters>0</PierceCharacters>
 			<PierceWalls>0</PierceWalls>
+			<AmmoXShoot>1</AmmoXShoot>
 		</Projectile>
 		<Melee>
 			<Damage>2</Damage>
