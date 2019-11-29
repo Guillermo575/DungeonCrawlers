@@ -341,6 +341,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>

@@ -22,7 +22,7 @@
 			<WaitXCooldown>4</WaitXCooldown>
 			<TimeXCooldown>3</TimeXCooldown>
 			<AmmoXCooldown>2</AmmoXCooldown>
-			<FunctionImpact>ExploteFireBall()</FunctionImpact>
+			<FunctionImpact>SpawnImpact</FunctionImpact>
 		</Projectile>
 	</object>
 	<object name='Bow'>

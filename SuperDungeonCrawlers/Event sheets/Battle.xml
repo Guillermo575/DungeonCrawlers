@@ -579,6 +579,10 @@
                             <param id="0" name="Instance variable">Impact_Damage</param>
                             <param id="1" name="Value">int(Impact_Generic.Impact_Damage * Family_Character.BonusDamageMult)</param>
                         </action>
+                        <action id="-10" name="Set value" sid="819359479931259" type="Impact_Generic">
+                            <param id="0" name="Instance variable">Function_Impact</param>
+                            <param id="1" name="Value">Family_Item.Projectile_FunctionImpact</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="973343419328489" type="Impact_Generic">
                             <param id="0" name="Instance variable">MakeDamage</param>
                             <param id="1" name="Value">1</param>
@@ -592,7 +596,7 @@
                     <sub-events>
                         <event-block sid="525554166392414">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="436757329199127" type="Item_Generic">
+                                <condition id="-8" name="Is boolean instance variable set" sid="436757329199127" type="Family_Item">
                                     <param id="0" name="Instance variable">Projectile_PierceCharacters</param>
                                 </condition>
                             </conditions>
@@ -605,7 +609,7 @@
                         </event-block>
                         <event-block sid="668332949719876">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="138631018873601" type="Item_Generic">
+                                <condition id="-8" name="Is boolean instance variable set" sid="138631018873601" type="Family_Item">
                                     <param id="0" name="Instance variable">Projectile_PierceWalls</param>
                                 </condition>
                             </conditions>

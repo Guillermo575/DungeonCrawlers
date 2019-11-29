@@ -2903,7 +2903,7 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="4" loop="1" name="Spark" pingpong="0" repeatcount="1" repeatto="0" sid="223885075122322" speed="20">
+                        <animation framecount="4" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="223885075122322" speed="15">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -3107,6 +3107,7 @@
                 <instance-variable comment="Seconds for the Destroy Timer" name="Impact_Duration" sid="739248253419743" type="number" />
                 <instance-variable comment="Can not destroyed impacting with the characters" name="Impact_PierceCharacters" sid="287713655249526" type="boolean" />
                 <instance-variable comment="Can not be destroyed by impacting in walls" name="Impact_PierceWalls" sid="467621174291483" type="boolean" />
+                <instance-variable comment="Function triggered after collision" name="Function_Impact" sid="623863650946305" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FI_Bullet" sid="966471420225723">

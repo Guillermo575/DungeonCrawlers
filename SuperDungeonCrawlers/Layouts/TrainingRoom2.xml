@@ -341,6 +341,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <AIActive>false</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -474,6 +475,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <AIActive>false</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -607,6 +609,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <AIActive>false</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -805,6 +808,7 @@
                         <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <XMLID>Sword</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
@@ -882,6 +886,7 @@
                         <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <XMLID>Wand</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
@@ -959,6 +964,7 @@
                         <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <XMLID>Wand</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>

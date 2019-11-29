@@ -606,6 +606,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -1024,6 +1025,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <NameIcon>Key</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -2253,6 +2255,7 @@
                         <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                         <XMLID></XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
@@ -2307,6 +2310,7 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Function_Impact></Function_Impact>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FI_Bullet">
