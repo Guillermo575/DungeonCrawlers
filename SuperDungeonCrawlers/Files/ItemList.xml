@@ -17,12 +17,28 @@
 			<AmmoSizeMax>20</AmmoSizeMax>
 			<AmmoSpend>1</AmmoSpend>
 			<PierceCharacters>0</PierceCharacters>
-			<PierceWalls>1</PierceWalls>
+			<PierceWalls>0</PierceWalls>
 			<AmmoXShoot>3</AmmoXShoot>
 			<WaitXCooldown>4</WaitXCooldown>
 			<TimeXCooldown>3</TimeXCooldown>
 			<AmmoXCooldown>2</AmmoXCooldown>
-			<FunctionImpact>SpawnImpact</FunctionImpact>
+			<FunctionImpact>SpawnExplote</FunctionImpact>
+			<Bounce>1</Bounce>
+			<Explote>
+				<Animation>Explosion</Animation>
+				<Damage>1</Damage>
+				<PushImpact>10</PushImpact>
+				<Duration>0.5</Duration>
+				<Speed>0</Speed>
+				<RecoilTime>0.3</RecoilTime>
+				<PierceCharacters>1</PierceCharacters>
+				<PierceWalls>1</PierceWalls>
+				<AmmoXShoot>1</AmmoXShoot>
+				<TriggerOnWalls>1</TriggerOnWalls>
+				<TriggerOnCharacters>1</TriggerOnCharacters>
+				<TriggerOnExpire>1</TriggerOnExpire>
+				<Bounce>1</Bounce>
+			</Explote>
 		</Projectile>
 	</object>
 	<object name='Bow'>

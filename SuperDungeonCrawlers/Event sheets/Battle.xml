@@ -19,6 +19,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="306932521941604" type="Function">
+                    <param id="0" name="Name">Family_Impact.Function_Impact</param>
+                    <param id="1" name="Parameter {n}">Family_Impact.UID</param>
+                </action>
                 <action id="-9" name="Destroy" sid="341764997936552" type="Family_Impact" />
             </actions>
         </event-block>
@@ -33,6 +37,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="548027863579092" type="Function">
+                    <param id="0" name="Name">Family_Impact.Function_Impact</param>
+                    <param id="1" name="Parameter {n}">Family_Impact.UID</param>
+                </action>
                 <action id="-9" name="Destroy" sid="761197125525776" type="Family_Impact" />
             </actions>
         </event-block>
@@ -44,6 +52,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="294754441693094" type="Function">
+                    <param id="0" name="Name">Family_Impact.Function_Impact</param>
+                    <param id="1" name="Parameter {n}">Family_Impact.UID</param>
+                </action>
                 <action id="-9" name="Destroy" sid="566215229444380" type="Family_Impact" />
             </actions>
         </event-block>
@@ -75,6 +87,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="101316462785469" type="Function">
+                    <param id="0" name="Name">Family_Impact.Function_Impact</param>
+                    <param id="1" name="Parameter {n}">Family_Impact.UID</param>
+                </action>
                 <action id="0" name="Call function" sid="160314308258200" type="Function">
                     <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.Impact_RecoilTime</param>
@@ -623,6 +639,63 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="759679763608419">
+            <conditions>
+                <condition id="0" name="On function" sid="972145847598084" type="Function">
+                    <param id="0" name="Name">&quot;SpawnExplote&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="844138527169129" type="Family_Impact">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="425885989778280" type="Family_Impact">
+                    <param id="0" name="Object">Explote_Generic</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="761678011453115" type="Explote_Generic">
+                    <param id="0" name="Animation">&quot;Explosion&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="254455873164075" type="Explote_Generic">
+                    <param id="0" name="Instance variable">Group</param>
+                    <param id="1" name="Value">Family_Impact.Group</param>
+                </action>
+                <action id="-10" name="Set value" sid="411295864757888" type="Explote_Generic">
+                    <param id="0" name="Instance variable">TypeObject</param>
+                    <param id="1" name="Value">&quot;Projectile&quot;</param>
+                </action>
+                <action behavior="FI_Bullet" id="0" name="Set speed" sid="764646121775589" type="Explote_Generic">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="885613781589250" type="Explote_Generic">
+                    <param id="0" name="Instance variable">Impact_PushImpact</param>
+                    <param id="1" name="Value">int(Family_Impact.Impact_PushImpact)</param>
+                </action>
+                <action id="-10" name="Set value" sid="593120468172450" type="Explote_Generic">
+                    <param id="0" name="Instance variable">Impact_Damage</param>
+                    <param id="1" name="Value">int(Family_Impact.Impact_Damage)</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="382538664736523" type="Explote_Generic">
+                    <param id="0" name="Instance variable">MakeDamage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="280309211634004" type="Explote_Generic">
+                    <param id="0" name="Duration">0.5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Destroy&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="994877438557165" type="Explote_Generic">
+                    <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="217168452620453" type="Explote_Generic">
+                    <param id="0" name="Instance variable">Impact_PierceWalls</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
         </event-block>
         <comment>HEARTH</comment>
         <event-block sid="425304371161602">
