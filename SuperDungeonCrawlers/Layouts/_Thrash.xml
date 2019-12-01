@@ -606,7 +606,16 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
-                        <Function_Impact></Function_Impact>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -1013,7 +1022,16 @@
                         <Projectile_WaitXCooldown>0</Projectile_WaitXCooldown>
                         <Projectile_TimeXCooldown>0</Projectile_TimeXCooldown>
                         <Projectile_AmmoXCooldown>0</Projectile_AmmoXCooldown>
-                        <Projectile_FunctionImpact></Projectile_FunctionImpact>
+                        <Projectile_CollitionFunction></Projectile_CollitionFunction>
+                        <Explote_Animation></Explote_Animation>
+                        <Explote_Damage>0</Explote_Damage>
+                        <Explote_PushImpact>0</Explote_PushImpact>
+                        <Explote_Duration>0</Explote_Duration>
+                        <Explote_Speed>0</Explote_Speed>
+                        <Explote_RecoilTime>0</Explote_RecoilTime>
+                        <Explote_PierceCharacters>false</Explote_PierceCharacters>
+                        <Explote_PierceWalls>false</Explote_PierceWalls>
+                        <Explote_AmmoXShoot>0</Explote_AmmoXShoot>
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
@@ -1025,7 +1043,16 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
-                        <Function_Impact></Function_Impact>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
                         <NameIcon>Key</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -2243,7 +2270,16 @@
                         <Projectile_WaitXCooldown>0</Projectile_WaitXCooldown>
                         <Projectile_TimeXCooldown>0</Projectile_TimeXCooldown>
                         <Projectile_AmmoXCooldown>0</Projectile_AmmoXCooldown>
-                        <Projectile_FunctionImpact></Projectile_FunctionImpact>
+                        <Projectile_CollitionFunction></Projectile_CollitionFunction>
+                        <Explote_Animation></Explote_Animation>
+                        <Explote_Damage>0</Explote_Damage>
+                        <Explote_PushImpact>0</Explote_PushImpact>
+                        <Explote_Duration>0</Explote_Duration>
+                        <Explote_Speed>0</Explote_Speed>
+                        <Explote_RecoilTime>0</Explote_RecoilTime>
+                        <Explote_PierceCharacters>false</Explote_PierceCharacters>
+                        <Explote_PierceWalls>false</Explote_PierceWalls>
+                        <Explote_AmmoXShoot>0</Explote_AmmoXShoot>
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
@@ -2255,7 +2291,16 @@
                         <Impact_Duration>0</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
-                        <Function_Impact></Function_Impact>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
                         <XMLID></XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
@@ -2310,7 +2355,16 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
-                        <Function_Impact></Function_Impact>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FI_Bullet">
@@ -2358,7 +2412,16 @@
                         <Impact_Duration>1</Impact_Duration>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
-                        <Function_Impact></Function_Impact>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FI_Bullet">

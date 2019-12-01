@@ -3080,7 +3080,16 @@
                 <instance-variable comment="Time you need to wait for recharge ammo" name="Projectile_WaitXCooldown" sid="201018642765892" type="number" />
                 <instance-variable comment="Time x ammo reload cooldown" name="Projectile_TimeXCooldown" sid="114936623457656" type="number" />
                 <instance-variable comment="Ammo recharged x cooldown" name="Projectile_AmmoXCooldown" sid="575197156750681" type="number" />
-                <instance-variable comment="Function triggered in impact" name="Projectile_FunctionImpact" sid="804352700546794" type="string" />
+                <instance-variable comment="Function triggered in impact" name="Projectile_CollitionFunction" sid="804352700546794" type="string" />
+                <instance-variable comment="Explote_Generic: Animation" name="Explote_Animation" sid="884253800272464" type="string" />
+                <instance-variable name="Explote_Damage" sid="349721335500330" type="number" />
+                <instance-variable name="Explote_PushImpact" sid="666435071776789" type="number" />
+                <instance-variable name="Explote_Duration" sid="532796535939566" type="number" />
+                <instance-variable name="Explote_Speed" sid="394788835292271" type="number" />
+                <instance-variable name="Explote_RecoilTime" sid="782645076454271" type="number" />
+                <instance-variable name="Explote_PierceCharacters" sid="203328923493837" type="boolean" />
+                <instance-variable name="Explote_PierceWalls" sid="462157244118979" type="boolean" />
+                <instance-variable name="Explote_AmmoXShoot" sid="652095527768307" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FO_Pin2" sid="876962418157441">
@@ -3134,7 +3143,16 @@
                 <instance-variable comment="Seconds for the Destroy Timer" name="Impact_Duration" sid="739248253419743" type="number" />
                 <instance-variable comment="Can not destroyed impacting with the characters" name="Impact_PierceCharacters" sid="287713655249526" type="boolean" />
                 <instance-variable comment="Can not be destroyed by impacting in walls" name="Impact_PierceWalls" sid="467621174291483" type="boolean" />
-                <instance-variable comment="Function triggered after collision" name="Function_Impact" sid="623863650946305" type="string" />
+                <instance-variable comment="Function triggered after collision" name="Impact_CollitionFunction" sid="623863650946305" type="string" />
+                <instance-variable name="Blast_Animation" sid="662064385516886" type="string" />
+                <instance-variable name="Blast_Damage" sid="948911224364280" type="number" />
+                <instance-variable name="Blast_PushImpact" sid="467694994328970" type="number" />
+                <instance-variable name="Blast_Duration" sid="828112244136200" type="number" />
+                <instance-variable name="Blast_Speed" sid="268443259475410" type="number" />
+                <instance-variable name="Blast_RecoilTime" sid="406092236465863" type="number" />
+                <instance-variable name="Blast_AmmoXShoot" sid="270781491848936" type="number" />
+                <instance-variable name="Blast_PierceCharacters" sid="116262377028008" type="boolean" />
+                <instance-variable name="Blast_PierceWalls" sid="785106616029226" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FI_Bullet" sid="966471420225723">
