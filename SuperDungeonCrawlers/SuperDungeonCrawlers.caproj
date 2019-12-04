@@ -2935,6 +2935,33 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
+                        <animation framecount="4" loop="1" name="Fragment" pingpong="0" repeatcount="1" repeatto="0" sid="950002253508328" speed="10">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.466667">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.466667">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.533333">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>

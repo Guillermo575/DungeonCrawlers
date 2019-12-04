@@ -737,10 +737,10 @@
                             <param id="2" name="Tag">&quot;Destroy&quot;</param>
                         </action>
                         <action id="-8" name="Set angle" sid="784061273448823" type="Explote_Generic">
-                            <param id="0" name="Angle">Family_Impact.Angle + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
+                            <param id="0" name="Angle">180 + Family_Impact.Angle + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
                         </action>
                         <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="595922489250256" type="Explote_Generic">
-                            <param id="0" name="Angle">Family_Impact.Angle + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
+                            <param id="0" name="Angle">180 + Family_Impact.Angle + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
                         </action>
                         <action behavior="FI_Bullet" id="0" name="Set speed" sid="764646121775589" type="Explote_Generic">
                             <param id="0" name="Speed">Family_Impact.Blast_Speed</param>

@@ -122,7 +122,19 @@
 			<PierceCharacters>0</PierceCharacters>
 			<PierceWalls>0</PierceWalls>
 			<AmmoXShoot>1</AmmoXShoot>
+			<CollitionFunction>SpawnExplote</CollitionFunction>
 		</Projectile>
+		<Explote>
+			<Animation>Fragment</Animation>
+			<Damage>1</Damage>
+			<PushImpact>10</PushImpact>
+			<Duration>0.3</Duration>
+			<Speed>300</Speed>
+			<RecoilTime>0.3</RecoilTime>
+			<AmmoXShoot>3</AmmoXShoot>				
+			<PierceCharacters>1</PierceCharacters>
+			<PierceWalls>1</PierceWalls>
+		</Explote>
 		<Melee>
 			<Damage>2</Damage>
 			<PushImpact>30</PushImpact>
