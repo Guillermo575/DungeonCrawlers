@@ -411,6 +411,9 @@
                         <action id="1" name="Set playback speed ratio" sid="724782269413518" type="Scml_Player_Top">
                             <param id="0" name="Speed Ratio">1</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="493570927882194" type="Scml_Player_Top">
+                            <param id="0" name="Layer">&quot;Characters&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="990461948937743">
@@ -454,6 +457,9 @@
                             <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
                             <param id="1" name="Where to start playing this animation">1</param>
                             <param id="2" name="Blend Duration">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="993357488109787" type="Scml_Player_Top">
+                            <param id="0" name="Layer">&quot;OverLayer&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -961,7 +967,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="789128671449174" type="Family_Character">
                                     <param id="0" name="Instance variable">ActionStep</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="627143053503949" type="Family_Character">
                                     <param id="0" name="Instance variable">PressButton</param>
@@ -1005,33 +1011,6 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="233775312032920">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="164079848556590" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="769799683212789" type="Family_Character">
-                                    <param id="0" name="Instance variable">PressButton</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="816851978524619" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionStep</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action behavior="FO_Timer" id="0" name="Start timer" sid="807334904204291" type="Family_Item">
-                                    <param id="0" name="Duration">0.01</param>
-                                    <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="163343928067338" type="System">
-                                    <param id="0" name="Variable">ActionSelected</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="552327841383396">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="330708369041801" type="Family_Character">
@@ -1052,6 +1031,11 @@
                                     <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Hold&quot;,  Family_Character.LastDirection, (Family_Character.LastArmUsed = &quot;left&quot;?&quot;ArmL&quot;:&quot;ArmR&quot;))</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
+                                </action>
+                                <action behavior="FO_Timer" id="0" name="Start timer" sid="807334904204291" type="Family_Item">
+                                    <param id="0" name="Duration">0.03</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Shoot_Projectile&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="710511600917794" type="System">
                                     <param id="0" name="Variable">ActionSelected</param>

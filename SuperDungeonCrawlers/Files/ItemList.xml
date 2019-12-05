@@ -18,7 +18,7 @@
 			<AmmoSpend>1</AmmoSpend>
 			<PierceCharacters>0</PierceCharacters>
 			<PierceWalls>0</PierceWalls>
-			<AmmoXShoot>3</AmmoXShoot>
+			<AmmoXShoot>1</AmmoXShoot>
 			<WaitXCooldown>4</WaitXCooldown>
 			<TimeXCooldown>3</TimeXCooldown>
 			<AmmoXCooldown>2</AmmoXCooldown>		

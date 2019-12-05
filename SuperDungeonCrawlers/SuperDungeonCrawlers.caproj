@@ -1431,22 +1431,22 @@
                         <type>Scml_Player_Top</type>
                     </container>
                     <animation-folder>
+                        <animation framecount="1" loop="0" name="Helmet" pingpong="0" repeatcount="1" repeatto="0" sid="835344121375509" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Helmet.png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0" />
+                                    <point x="0.84375" y="0" />
+                                    <point x="0.84375" y="0.96875" />
+                                    <point x="0.15625" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                         <animation framecount="2" loop="0" name="hat" pingpong="0" repeatcount="1" repeatto="0" sid="568771415123002" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\Examples\OriginalZ\Top\Top.png" />
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\DOCUMENTOS DE SEBAS\Programacion\Spriter_Test\Examples\OriginalZ\Top\TopBack.png" />
                         </animation>
                         <animation framecount="1" loop="0" name="Skeleton" pingpong="0" repeatcount="1" repeatto="0" sid="789822289659576" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0" />
-                        </animation>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="835344121375509" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.588235" original-source="F:\Helmet.png">
-                                <collision-poly>
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="0.941176" />
-                                    <point x="0" y="0.941176" />
-                                </collision-poly>
-                            </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Enemy" pingpong="0" repeatcount="1" repeatto="0" sid="115885331708376" speed="0">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.583333" original-source="F:\Nueva carpeta (2)\chimppix - copia\000 (3).png">
@@ -1457,6 +1457,19 @@
                                     <point x="1" y="1" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Bubble" pingpong="0" repeatcount="1" repeatto="0" sid="892247478367760" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Sin título.png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0" />
+                                    <point x="0.84375" y="0" />
+                                    <point x="0.84375" y="0.96875" />
+                                    <point x="0.15625" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Player" pingpong="0" repeatcount="1" repeatto="0" sid="331393478457334" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2930,10 +2943,10 @@
                             </frame>
                         </animation>
                         <animation framecount="4" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="714192348163372" speed="15">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                            <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                            <frame duration="1" hotspotX="0.468085" hotspotY="0.510638" />
+                            <frame duration="1" hotspotX="0.492063" hotspotY="0.508197" />
                         </animation>
                         <animation framecount="4" loop="1" name="Fragment" pingpong="0" repeatcount="1" repeatto="0" sid="950002253508328" speed="10">
                             <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
