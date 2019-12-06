@@ -210,6 +210,7 @@
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
+                        <IsJumping>false</IsJumping>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -377,6 +378,7 @@
                         <Group></Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>
@@ -473,6 +475,7 @@
                         <Group></Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>
@@ -569,6 +572,7 @@
                         <Group></Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>

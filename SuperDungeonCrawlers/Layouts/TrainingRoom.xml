@@ -210,6 +210,7 @@
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
+                        <IsJumping>false</IsJumping>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -322,6 +323,7 @@
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
+                        <IsJumping>false</IsJumping>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -335,6 +337,7 @@
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>

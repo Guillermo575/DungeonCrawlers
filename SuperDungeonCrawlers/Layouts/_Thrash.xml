@@ -587,6 +587,7 @@
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
+                        <IsJumping>false</IsJumping>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -600,6 +601,7 @@
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -833,6 +835,7 @@
                         <Invencible>false</Invencible>
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
+                        <IsJumping>false</IsJumping>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -1037,6 +1040,7 @@
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -2227,6 +2231,41 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Group>Scene</Group>
+                        <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <PassivePush>true</PassivePush>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>30</Impact_PushImpact>
+                        <Impact_RecoilTime>0.2</Impact_RecoilTime>
+                        <Impact_Duration>0.1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="FI_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2285,6 +2324,7 @@
                         <Group></Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>
@@ -2349,6 +2389,7 @@
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>4</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -2406,6 +2447,7 @@
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
+                        <PassivePush>false</PassivePush>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>

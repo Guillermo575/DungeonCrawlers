@@ -467,9 +467,30 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="326298487806330" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.208333" y="0.333333" />
+                                    <point x="0.75" y="0.333333" />
+                                    <point x="0.75" y="0.814815" />
+                                    <point x="0.208333" y="0.814815" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.208333" y="0.333333" />
+                                    <point x="0.75" y="0.333333" />
+                                    <point x="0.75" y="0.814815" />
+                                    <point x="0.208333" y="0.814815" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.208333" y="0.333333" />
+                                    <point x="0.75" y="0.333333" />
+                                    <point x="0.75" y="0.814815" />
+                                    <point x="0.208333" y="0.814815" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -3059,6 +3080,7 @@
                 <instance-variable comment="If this value is true you cant receive damage" name="Invencible" sid="180353520902069" type="boolean" />
                 <instance-variable comment="Check if the character is alive, if the value is false, some functions are blocked" name="IsAlive" sid="610141807522636" type="boolean" />
                 <instance-variable name="IsMoving" sid="821611097718825" type="boolean" />
+                <instance-variable name="IsJumping" sid="172761479092090" type="boolean" />
                 <instance-variable comment="Last Arm Used" name="LastArmUsed" sid="568820131423589" type="string" />
                 <instance-variable comment="character´s last direction" name="LastDirection" sid="241710995863577" type="string" />
                 <instance-variable name="LastDirectionAngle" sid="981661721070455" type="number" />
@@ -3167,6 +3189,7 @@
                 <member>Boss_Dragon_Head</member>
                 <member>boss_worm_body</member>
                 <member>boss_worm_head</member>
+                <member>Dungeon_Torch</member>
                 <member>EnemyCoreBox</member>
                 <member>Explote_Generic</member>
                 <member>Impact_Generic</member>
@@ -3177,6 +3200,7 @@
                 <instance-variable comment="if the character type if different that this value, that receive damage" name="Group" sid="615762410693189" type="string" />
                 <instance-variable comment="Check if the object is making damage (like melee weapons)" name="MakeDamage" sid="769576092351906" type="boolean" />
                 <instance-variable comment="Melee, Projectile" name="TypeObject" sid="664473937435629" type="string" />
+                <instance-variable comment="Angle used for push is determined by character or impact angle" name="PassivePush" sid="695752906298032" type="boolean" />
                 <instance-variable comment="The amount that inflicts in the objective" name="Impact_Damage" sid="619337040495569" type="number" />
                 <instance-variable comment="Distance that the character is pushed" name="Impact_PushImpact" sid="849674525052418" type="number" />
                 <instance-variable comment="Time that the character is pushed" name="Impact_RecoilTime" sid="317749810560442" type="number" />
