@@ -3201,6 +3201,7 @@
                 <instance-variable comment="Check if the object is making damage (like melee weapons)" name="MakeDamage" sid="769576092351906" type="boolean" />
                 <instance-variable comment="Melee, Projectile" name="TypeObject" sid="664473937435629" type="string" />
                 <instance-variable comment="Angle used for push is determined by character or impact angle" name="PassivePush" sid="695752906298032" type="boolean" />
+                <instance-variable comment="The character can dodge the impact if jump" name="DodgeJump" sid="175523791071217" type="boolean" />
                 <instance-variable comment="The amount that inflicts in the objective" name="Impact_Damage" sid="619337040495569" type="number" />
                 <instance-variable comment="Distance that the character is pushed" name="Impact_PushImpact" sid="849674525052418" type="number" />
                 <instance-variable comment="Time that the character is pushed" name="Impact_RecoilTime" sid="317749810560442" type="number" />

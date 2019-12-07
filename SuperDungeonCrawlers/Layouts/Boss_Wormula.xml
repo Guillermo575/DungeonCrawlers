@@ -290,6 +290,7 @@
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -421,6 +422,7 @@
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>0</Impact_Damage>
                         <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_RecoilTime>0</Impact_RecoilTime>
@@ -506,6 +508,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -584,6 +587,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -662,6 +666,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -765,6 +770,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -895,6 +901,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -973,6 +980,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
@@ -1051,6 +1059,7 @@
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
+                        <DodgeJump>false</DodgeJump>
                         <Impact_Damage>1</Impact_Damage>
                         <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_RecoilTime>0.4</Impact_RecoilTime>
