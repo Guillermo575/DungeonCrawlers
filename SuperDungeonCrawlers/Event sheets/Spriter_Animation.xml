@@ -446,10 +446,8 @@
                 <event-block sid="205226831100650">
                     <conditions>
                         <condition id="-22" name="Else" sid="693530958163831" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="621699983549543" type="Family_Character">
-                            <param id="0" name="Instance variable">ActionCommand</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="912603077714574" type="Family_Character">
+                            <param id="0" name="Instance variable">IsJumping</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -506,10 +504,8 @@
                     <sub-events>
                         <event-block sid="717777661603569">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="275637618224114" type="Family_Character">
-                                    <param id="0" name="Instance variable">ActionCommand</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="275637618224114" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsJumping</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -522,8 +518,8 @@
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="482029530778759" type="PlayerShadow">
-                                    <param id="0" name="Width"> PlayerShadow.Width*0.8</param>
-                                    <param id="1" name="Height"> PlayerShadow.Height*0.8</param>
+                                    <param id="0" name="Width"> PlayerShadow.Width * 0.6</param>
+                                    <param id="1" name="Height"> PlayerShadow.Height * 0.8</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1293,6 +1289,10 @@
                                     <param id="0" name="Instance variable">CanNotCancel</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="638427546647255" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsJumping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1385,6 +1385,10 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="652531851646922" type="Family_Character">
                             <param id="0" name="Instance variable">CanNotRotate</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="137568277541300" type="Family_Character">
+                            <param id="0" name="Instance variable">IsJumping</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>

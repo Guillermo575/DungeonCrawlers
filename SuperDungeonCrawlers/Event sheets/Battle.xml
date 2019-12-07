@@ -60,61 +60,136 @@
             </actions>
         </event-block>
         <comment>Destroy impact if hit with a character hitbox</comment>
-        <event-block sid="539329519885917">
+        <event-block sid="206087095416882">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="981059666578261" type="Family_Impact">
+                <condition id="1" name="Is overlapping another object" sid="438280970888111" type="Family_Impact">
                     <param id="0" name="Object">Character_Hitbox</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="865304719168970" type="Family_Character">
+                <condition id="-14" name="Pick by unique ID" sid="503755670587022" type="Family_Character">
                     <param id="0" name="Unique ID">Character_Hitbox.Pin2.PinnedUID</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="551130764273399" type="Family_Impact">
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="961380092551298" type="Function">
+                    <param id="0" name="Name">&quot;CheckImpact&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="565032069764347">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="482065111708316" type="Family_Impact">
+                    <param id="0" name="Object">Character_Hitbox</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="297504373850169" type="Family_Character">
+                    <param id="0" name="Unique ID">Character_Hitbox.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="507704179521488" type="Function">
+                    <param id="0" name="Name">&quot;CheckImpact&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="834533015282463">
+            <conditions>
+                <condition id="0" name="On function" sid="721825278057042" type="Function">
+                    <param id="0" name="Name">&quot;CheckImpact&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="242208045971910" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="186641408418175" type="Family_Impact">
+                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="855568315442512" type="Family_Impact">
                     <param id="0" name="Instance variable">Group</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Value">Family_Character.TypeRole</param>
                 </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="112285348709190" type="Family_Character">
+                <condition id="-8" name="Is boolean instance variable set" sid="725541435817637" type="Family_Character">
                     <param id="0" name="Instance variable">IsAlive</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="717122573870541" type="Family_Character">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="785212794373141" type="Family_Character">
                     <param id="0" name="Instance variable">PushRecoil</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="375708219020547" type="Family_Character">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="963912765301348" type="Family_Character">
                     <param id="0" name="Instance variable">Invencible</param>
                 </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="450270912689326" type="Family_Impact">
+                <condition id="-8" name="Is boolean instance variable set" sid="463262242797593" type="Family_Impact">
                     <param id="0" name="Instance variable">MakeDamage</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="101316462785469" type="Function">
-                    <param id="0" name="Name">Family_Impact.Impact_CollitionFunction</param>
-                    <param id="1" name="Parameter {n}">Family_Impact.UID</param>
-                </action>
-                <action id="0" name="Call function" sid="160314308258200" type="Function">
-                    <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.Impact_RecoilTime</param>
-                </action>
-                <action id="0" name="Call function" sid="260998578876838" type="Function">
-                    <param id="0" name="Name">&quot;PushCharacter&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
-                <event-block sid="406441249316253">
+                <variable constant="0" name="MakeImpact" sid="198677178091717" static="0" type="number">0</variable>
+                <event-block sid="705982683669996">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="863591651411287" type="Family_Impact">
-                            <param id="0" name="Instance variable">TypeObject</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Projectile&quot;</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="536529583458341" type="Family_Impact">
-                            <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="491131618149917" type="Family_Impact">
+                            <param id="0" name="Instance variable">DodgeJump</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="454313015543624" type="Family_Impact" />
+                        <action id="-9" name="Set value" sid="519714945418064" type="System">
+                            <param id="0" name="Variable">MakeImpact</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block sid="986779696942509">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="733664472471307" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="956736486627854" type="Family_Character">
+                            <param id="0" name="Instance variable">IsJumping</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="761839977455770" type="System">
+                            <param id="0" name="Variable">MakeImpact</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="357644379537804">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="106631618329964" type="System">
+                            <param id="0" name="Variable">MakeImpact</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="814661169279345" type="Function">
+                            <param id="0" name="Name">Family_Impact.Impact_CollitionFunction</param>
+                            <param id="1" name="Parameter {n}">Family_Impact.UID</param>
+                        </action>
+                        <action id="0" name="Call function" sid="747718362839461" type="Function">
+                            <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.Impact_RecoilTime</param>
+                        </action>
+                        <action id="0" name="Call function" sid="967449726092693" type="Function">
+                            <param id="0" name="Name">&quot;PushCharacter&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="894662901775146">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="403929676660884" type="Family_Impact">
+                                    <param id="0" name="Instance variable">TypeObject</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="589340889930584" type="Family_Impact">
+                                    <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="586631943719204" type="Family_Impact" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -178,14 +253,37 @@
                             <param id="0" name="Instance variable">Unstopable</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="756538370496436" type="Family_Character">
-                            <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
-                        </action>
-                        <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="203832232549511" type="Family_Character">
-                            <param id="0" name="Angle">Family_Impact.FI_Bullet.AngleOfMotion</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="550905929753114">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="498259823081359" type="Family_Impact">
+                                    <param id="0" name="Instance variable">PassivePush</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Bullet" id="0" name="Set speed" sid="308503064255257" type="Family_Character">
+                                    <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
+                                </action>
+                                <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="523645896858496" type="Family_Character">
+                                    <param id="0" name="Angle">Family_Character.LastDirectionAngle + 180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="270252971588300">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="993818125090453" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Bullet" id="0" name="Set speed" sid="756538370496436" type="Family_Character">
+                                    <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
+                                </action>
+                                <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="203832232549511" type="Family_Character">
+                                    <param id="0" name="Angle">Family_Impact.FI_Bullet.AngleOfMotion</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
