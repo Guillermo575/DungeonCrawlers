@@ -414,6 +414,7 @@
                         <action id="-26" name="Move to layer" sid="493570927882194" type="Scml_Player_Top">
                             <param id="0" name="Layer">&quot;Characters&quot;</param>
                         </action>
+                        <action id="-25" name="Move to bottom" sid="741851160236131" type="Scml_Player_Top" />
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="990461948937743">
@@ -459,6 +460,7 @@
                         <action id="-26" name="Move to layer" sid="993357488109787" type="Scml_Player_Top">
                             <param id="0" name="Layer">&quot;OverLayer&quot;</param>
                         </action>
+                        <action id="-25" name="Move to bottom" sid="578623788874928" type="Scml_Player_Top" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -492,6 +494,9 @@
                             <param id="0" name="X">Scml_Player_Bottom.X</param>
                             <param id="1" name="Y">Scml_Player_Bottom.Y</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="866975888897248" type="PlayerShadow">
+                            <param id="0" name="Layer">&quot;Scene&quot;</param>
+                        </action>
                         <action id="-25" name="Move to bottom" sid="848372417640333" type="PlayerShadow" />
                         <action id="-7" name="Set size" sid="121286836626197" type="PlayerShadow">
                             <param id="0" name="Width">12 + PlayerShadow.FP_Sine.Value/80</param>
@@ -509,6 +514,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-26" name="Move to layer" sid="799279046782980" type="Scml_Player_Bottom">
+                                    <param id="0" name="Layer">&quot;Characters&quot;</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="649363974240268" type="Scml_Player_Bottom" />
                                 <action id="1" name="Set playback speed ratio" sid="283752885607408" type="Scml_Player_Bottom">
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
@@ -528,6 +537,10 @@
                                 <condition id="-22" name="Else" sid="841922141633359" type="System" />
                             </conditions>
                             <actions>
+                                <action id="-26" name="Move to layer" sid="138390037056605" type="Scml_Player_Bottom">
+                                    <param id="0" name="Layer">&quot;Scene&quot;</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="154250688069116" type="Scml_Player_Bottom" />
                                 <action id="1" name="Set playback speed ratio" sid="416180866770353" type="Scml_Player_Bottom">
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
