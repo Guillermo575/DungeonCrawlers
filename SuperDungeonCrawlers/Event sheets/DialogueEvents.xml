@@ -1695,19 +1695,18 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="528414840740221" type="System">
-                            <param id="0" name="Variable">dialogue_box_project_c</param>
-                            <param id="1" name="Value">left(ProjectVariables.Get(&quot;text&quot;),1)</param>
+                        <action id="0" name="Set text" sid="910363677865969" type="DialogueSpriteFont">
+                            <param id="0" name="Text">left(ProjectVariables.Get(&quot;text&quot;), len(DialogueSpriteFont.Text) + 2)</param>
                         </action>
-                        <action id="1" name="Set key" sid="858545464654907" type="ProjectVariables">
-                            <param id="0" name="Key">&quot;text&quot;</param>
-                            <param id="1" name="Value">right(ProjectVariables.Get(&quot;text&quot;),len(ProjectVariables.Get(&quot;text&quot;)) - 1)</param>
+                        <action id="1" name="Set key" sid="362328634141615" type="ProjectVariables">
+                            <param id="0" name="Key">&quot;written_letters&quot;</param>
+                            <param id="1" name="Value">ProjectVariables.Get(&quot;written_letters&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="170204492347113">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="657018287560009" type="System">
+                                <condition id="-14" name="Compare variable" sid="668634174980555" type="System">
                                     <param id="0" name="Variable">dialogue_box_project_c</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;+&quot;</param>
@@ -1733,7 +1732,7 @@
                                 <condition id="-22" name="Else" sid="379286051803397" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="109178041509996" type="DialogueSpriteFont">
+                                <action id="0" name="Set text" sid="793806625922124" type="DialogueSpriteFont">
                                     <param id="0" name="Text">DialogueSpriteFont.Text &amp; dialogue_box_project_c</param>
                                 </action>
                                 <action id="1" name="Set key" sid="831659792714702" type="ProjectVariables">
