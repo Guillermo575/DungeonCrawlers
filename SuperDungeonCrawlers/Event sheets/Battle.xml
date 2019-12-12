@@ -381,7 +381,7 @@
                 <condition id="0" name="On function" sid="516036946050898" type="Function">
                     <param id="0" name="Name">&quot;PickObject&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="672968642865808" type="Family_Item">
+                <condition id="-14" name="Pick by unique ID" sid="672968642865808" type="Item_Generic">
                     <param id="0" name="Unique ID">Function.Param(1)</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="308610650426564" type="Family_Character">
@@ -404,9 +404,9 @@
                     <actions>
                         <action id="-10" name="Set value" sid="736098454351695" type="Family_Character">
                             <param id="0" name="Instance variable">ArmLeft</param>
-                            <param id="1" name="Value">Family_Item.UID</param>
+                            <param id="1" name="Value">Item_Generic.UID</param>
                         </action>
-                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="762691346684513" type="Family_Item">
+                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="762691346684513" type="Item_Generic">
                             <param id="0" name="Pin to">Family_Character</param>
                             <param id="1" name="Mode">5</param>
                         </action>
@@ -424,9 +424,9 @@
                     <actions>
                         <action id="-10" name="Set value" sid="163872413758711" type="Family_Character">
                             <param id="0" name="Instance variable">ArmRight</param>
-                            <param id="1" name="Value">Family_Item.UID</param>
+                            <param id="1" name="Value">Item_Generic.UID</param>
                         </action>
-                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="108431474917453" type="Family_Item">
+                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="108431474917453" type="Item_Generic">
                             <param id="0" name="Pin to">Family_Character</param>
                             <param id="1" name="Mode">5</param>
                         </action>
@@ -447,7 +447,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="547104129321176" type="System">
                             <param id="0" name="Variable">NewObject</param>
-                            <param id="1" name="Value">Family_Item.UID</param>
+                            <param id="1" name="Value">Item_Generic.UID</param>
                         </action>
                         <action id="-10" name="Set value" sid="960801116531332" type="Family_Character">
                             <param id="0" name="Instance variable">ArmLeft</param>
@@ -457,7 +457,7 @@
                             <param id="0" name="Instance variable">ArmRight</param>
                             <param id="1" name="Value">LeftObject</param>
                         </action>
-                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="142982133222888" type="Family_Item">
+                        <action behavior="FO_Pin2" id="0" name="Pin to object" sid="142982133222888" type="Item_Generic">
                             <param id="0" name="Pin to">Family_Character</param>
                             <param id="1" name="Mode">5</param>
                         </action>
@@ -474,7 +474,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="156567201215118" type="Family_Item">
+                        <action id="-15" name="Set visible" sid="156567201215118" type="Item_Generic">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -487,15 +487,15 @@
                     <param id="0" name="Name">&quot;DropObject&quot;</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="904233992964027" type="System">
-                    <param id="0" name="Object">Family_Item</param>
-                    <param id="1" name="Expression">Family_Item.UID</param>
+                    <param id="0" name="Object">Item_Generic</param>
+                    <param id="1" name="Expression">Item_Generic.UID</param>
                     <param id="2" name="Comparison">0</param>
                     <param id="3" name="Value">Function.Param(0)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="FO_Pin2" id="1" name="Unpin" sid="662163658113570" type="Family_Item" />
-                <action id="-15" name="Set visible" sid="347350958429701" type="Family_Item">
+                <action behavior="FO_Pin2" id="1" name="Unpin" sid="662163658113570" type="Item_Generic" />
+                <action id="-15" name="Set visible" sid="347350958429701" type="Item_Generic">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -506,7 +506,7 @@
                 <condition id="0" name="On function" sid="447682629737049" type="Function">
                     <param id="0" name="Name">&quot;EquipObjectLeft&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="885258767391289" type="Family_Item">
+                <condition id="-14" name="Pick by unique ID" sid="885258767391289" type="Item_Generic">
                     <param id="0" name="Unique ID">Function.Param(1)</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="517933661309332" type="Family_Character">
@@ -516,9 +516,9 @@
             <actions>
                 <action id="-10" name="Set value" sid="453341362376900" type="Family_Character">
                     <param id="0" name="Instance variable">ArmLeft</param>
-                    <param id="1" name="Value">Family_Item.UID</param>
+                    <param id="1" name="Value">Item_Generic.UID</param>
                 </action>
-                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="171408781050661" type="Family_Item">
+                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="171408781050661" type="Item_Generic">
                     <param id="0" name="Pin to">Family_Character</param>
                     <param id="1" name="Mode">5</param>
                 </action>
@@ -529,7 +529,7 @@
                 <condition id="0" name="On function" sid="406788030179580" type="Function">
                     <param id="0" name="Name">&quot;EquipObjectRight&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="677225156063631" type="Family_Item">
+                <condition id="-14" name="Pick by unique ID" sid="677225156063631" type="Item_Generic">
                     <param id="0" name="Unique ID">Function.Param(1)</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="493454569251619" type="Family_Character">
@@ -539,9 +539,9 @@
             <actions>
                 <action id="-10" name="Set value" sid="317695943937591" type="Family_Character">
                     <param id="0" name="Instance variable">ArmRight</param>
-                    <param id="1" name="Value">Family_Item.UID</param>
+                    <param id="1" name="Value">Item_Generic.UID</param>
                 </action>
-                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="762994440086018" type="Family_Item">
+                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="762994440086018" type="Item_Generic">
                     <param id="0" name="Pin to">Family_Character</param>
                     <param id="1" name="Mode">5</param>
                 </action>

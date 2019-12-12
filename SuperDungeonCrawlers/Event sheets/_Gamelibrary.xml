@@ -424,21 +424,13 @@
                 <action id="6" name="Resume animation" sid="563643683984845" type="Family_Spriter" />
             </actions>
         </event-block>
-        <comment>Door opened</comment>
+        <comment>Door opened &amp; Pick Key</comment>
         <event-block any="1" sid="426865335190726">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="602142996505416" type="DoorDungeon">
-                    <param id="0" name="Instance variable">KeyLock</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
                 <condition id="-8" name="Compare two values" sid="124921619618357" type="System">
                     <param id="0" name="First value">Item_Key.Count</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="307220134552807" type="DoorDungeon">
-                    <param id="0" name="Instance variable">Locked</param>
                 </condition>
             </conditions>
             <actions>
@@ -449,6 +441,75 @@
                 <action id="4" name="Set animation" sid="860063229095452" type="DoorDungeon">
                     <param id="0" name="Animation">&quot;Open&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="108606357130226">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="530466834376677" type="DoorDungeon">
+                    <param id="0" name="Instance variable">KeyLock</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="953459538530836" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="828798719934864" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="846389700948197" type="DoorDungeon">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="333980999808000">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="190864341160787" type="PlayerCoreBox">
+                    <param id="0" name="Object">DoorDungeon</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="883465158461655" type="System">
+                    <param id="0" name="Object">Item_Key</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="531169422899990" type="System">
+                    <param id="0" name="First value">Item_Key.FO_Pin2.PinnedUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">PlayerCoreBox.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="385679304838776" type="Item_Key" />
+                <action id="-12" name="Subtract from" sid="166124661140012" type="DoorDungeon">
+                    <param id="0" name="Instance variable">KeyLock</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="909334112314358" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">KeyPick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="801789085647739">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="129066864593782" type="Family_Character">
+                    <param id="0" name="Object">Item_Key</param>
+                </condition>
+                <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="927289479803321" type="Item_Key" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="218974674288537" type="Family_Character">
+                    <param id="0" name="Instance variable">KeyPick</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="926597023156674" type="Item_Key">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">3</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="226655126735342" type="Family_Character">
+                    <param id="0" name="Instance variable">KeyPick</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

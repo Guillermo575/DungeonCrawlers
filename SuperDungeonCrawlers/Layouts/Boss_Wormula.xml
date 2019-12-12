@@ -149,6 +149,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <HideItems>true</HideItems>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
                         <InvencibleTime>1</InvencibleTime>
@@ -165,7 +166,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <HideItems>true</HideItems>
+                        <KeyPick>false</KeyPick>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -749,6 +750,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <HideItems>false</HideItems>
                         <HPMax>3</HPMax>
                         <Hp>3</Hp>
                         <InvencibleTime>1</InvencibleTime>
@@ -765,7 +767,7 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>true</Unstopable>
-                        <HideItems>false</HideItems>
+                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>

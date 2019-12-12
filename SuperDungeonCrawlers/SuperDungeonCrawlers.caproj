@@ -3074,6 +3074,7 @@
                 <instance-variable comment="Bonus damage multiplied with the damage impact" name="BonusDamageMult" sid="153002197069817" type="number" />
                 <instance-variable name="CanNotCancel" sid="293099405422437" type="boolean" />
                 <instance-variable name="CanNotRotate" sid="365812599077455" type="boolean" />
+                <instance-variable comment="make items invisible if they are not in use" name="HideItems" sid="249099144844418" type="boolean" />
                 <instance-variable comment="Maximun Health Points Value" name="HPMax" sid="405391790612950" type="number" />
                 <instance-variable comment="Current Health Points" name="Hp" sid="148550066217839" type="number" />
                 <instance-variable comment="Amount of time of the invencible duration" name="InvencibleTime" sid="481554261575770" type="number" />
@@ -3090,7 +3091,7 @@
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
-                <instance-variable comment="make items invisible if they are not in use" name="HideItems" sid="249099144844418" type="boolean" />
+                <instance-variable name="KeyPick" sid="556469306036925" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FC_8Direction" sid="182952999122772">
