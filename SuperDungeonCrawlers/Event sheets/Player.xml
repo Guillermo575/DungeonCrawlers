@@ -62,6 +62,14 @@
                 <action id="-15" name="Set visible" sid="797194159434487" type="Character_Hitbox">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="0" name="Call function" sid="834364955267388" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDHealth&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}440{###}10</param>
+                </action>
+                <action id="0" name="Call function" sid="728487248333353" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDObject&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}390{###}10{###}340{###}10</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="478755452647957" type="Family_Character">
                     <param id="0" name="Object">Scml_Player_Top</param>
                     <param id="1" name="Layer">&quot;Characters&quot;</param>
@@ -80,45 +88,12 @@
                     <param id="0" name="Pin to">Family_Character</param>
                     <param id="1" name="Mode">5</param>
                 </action>
-                <action id="0" name="Call function" sid="834364955267388" type="Function">
-                    <param id="0" name="Name">&quot;CreateHUDHealth&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}440{###}10</param>
-                </action>
-                <action id="0" name="Call function" sid="728487248333353" type="Function">
-                    <param id="0" name="Name">&quot;CreateHUDObject&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}390{###}10{###}340{###}10</param>
+                <action id="-16" name="Wait" sid="256389994517601" type="System">
+                    <param id="0" name="Seconds">0.01</param>
                 </action>
                 <action id="0" name="Call function" sid="355790055099494" type="Function">
                     <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
-                </action>
-                <action id="-10" name="Set value" sid="752893184249532" type="Scml_Player_Top">
-                    <param id="0" name="Instance variable">CharacterSkin</param>
-                    <param id="1" name="Value">&quot;Player&quot;&amp;int(random(1,5))</param>
-                </action>
-                <action id="-10" name="Set value" sid="135188709153905" type="Scml_Player_Bottom">
-                    <param id="0" name="Instance variable">CharacterSkin</param>
-                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
-                </action>
-                <action id="-10" name="Set value" sid="957747066395313" type="Scml_Player_Top">
-                    <param id="0" name="Instance variable">Part_Top</param>
-                    <param id="1" name="Value">&quot;Player&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="553883202545624" type="Scml_Player_Top">
-                    <param id="0" name="Instance variable">Part_Head</param>
-                    <param id="1" name="Value">&quot;Player1&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="693221953859160" type="Scml_Player_Top">
-                    <param id="0" name="Instance variable">Part_Torso</param>
-                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
-                </action>
-                <action id="-10" name="Set value" sid="737398028834749" type="Scml_Player_Top">
-                    <param id="0" name="Instance variable">Part_Arms</param>
-                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
-                </action>
-                <action id="-10" name="Set value" sid="514068241133852" type="Scml_Player_Bottom">
-                    <param id="0" name="Instance variable">Part_Legs</param>
-                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
                 </action>
             </actions>
         </event-block>
@@ -774,6 +749,10 @@
                     <param id="0" name="Key">&quot;PlayerHPMax&quot;</param>
                     <param id="1" name="Value">Family_Character.HPMax</param>
                 </action>
+                <action id="0" name="Add key" sid="316414049796855" type="Player_Log">
+                    <param id="0" name="Key">&quot;PlayerCloth&quot;</param>
+                    <param id="1" name="Value">Function.Call(&quot;GetSpriterParts&quot;,Family_Character.UID)</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="467465804205034">
@@ -844,6 +823,18 @@
                     <param id="2" name="Comparison">0</param>
                     <param id="3" name="Value">Function.Param(1)</param>
                 </condition>
+                <condition id="-33" name="Pick by comparison" sid="306087300922105" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="796374543118541" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -867,6 +858,10 @@
                         <action id="0" name="Call function" sid="477078972040317" type="Function">
                             <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
                             <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectRight&quot;){###}&quot;Right&quot;{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="421658789967189" type="Function">
+                            <param id="0" name="Name">&quot;LoadSpriterParts&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID{###}Player_Log.Get(&quot;PlayerCloth&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -899,6 +894,10 @@
                         <action id="0" name="Call function" sid="879748435235538" type="Function">
                             <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
                             <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="504007454076031" type="Function">
+                            <param id="0" name="Name">&quot;CreateSpriterParts&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID</param>
                         </action>
                     </actions>
                 </event-block>

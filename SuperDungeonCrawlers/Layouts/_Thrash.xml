@@ -2554,6 +2554,7 @@
             </properties>
         </instance>
         <instance type="XML_Inventory" uid="199" />
+        <instance type="XML" uid="110" />
     </nonworld-instances>
     <effects />
 </c2layout>

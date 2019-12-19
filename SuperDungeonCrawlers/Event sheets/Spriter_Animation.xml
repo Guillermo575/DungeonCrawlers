@@ -1488,5 +1488,223 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Spriter parts</comment>
+        <event-block sid="297879016440769">
+            <conditions>
+                <condition id="0" name="On function" sid="865536371637023" type="Function">
+                    <param id="0" name="Name">&quot;CreateSpriterParts&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="297894387762042" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="367444082132966" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="204038183646731" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="374822196703751" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">CharacterSkin</param>
+                    <param id="1" name="Value">&quot;Player&quot;&amp;int(random(1,5))</param>
+                </action>
+                <action id="-10" name="Set value" sid="576742901390646" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">CharacterSkin</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="491217762889499" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Top</param>
+                    <param id="1" name="Value">&quot;Helmet&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="782468640031603" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Head</param>
+                    <param id="1" name="Value">&quot;Player1&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="347661414019235" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Torso</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="679084213147242" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Arms</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="-10" name="Set value" sid="113764792170220" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">Part_Legs</param>
+                    <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
+                </action>
+                <action id="4" name="Set animation" sid="364651622223095" type="PlayerHead">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Head</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="478560855306080" type="PlayerTorso">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Torso</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="781037687181649" type="PlayerTop">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Top</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="813786560902557" type="PlayerArmLeft">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Arms</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="336684154278220" type="PlayerArmRight">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Arms</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="788338804603657" type="PlayerLeg1">
+                    <param id="0" name="Animation">Scml_Player_Bottom.Part_Legs</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="845114241990899" type="PlayerLeg2">
+                    <param id="0" name="Animation">Scml_Player_Bottom.Part_Legs</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="527282346691153">
+            <conditions>
+                <condition id="0" name="On function" sid="917831696961117" type="Function">
+                    <param id="0" name="Name">&quot;LoadSpriterParts&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="853698342709389" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="497333016658340" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="180537778421402" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="278024873040660" type="XML">
+                    <param id="0" name="XML">Function.Param(3)</param>
+                </action>
+                <action id="-10" name="Set value" sid="150928959326024" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Top</param>
+                    <param id="1" name="Value">XML.StringValue(&quot;/Cloth/Part_Top/text()&quot;) </param>
+                </action>
+                <action id="-10" name="Set value" sid="102670079595392" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Head</param>
+                    <param id="1" name="Value">XML.StringValue(&quot;/Cloth/Part_Head/text()&quot;) </param>
+                </action>
+                <action id="-10" name="Set value" sid="688902255178721" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Torso</param>
+                    <param id="1" name="Value">XML.StringValue(&quot;/Cloth/Part_Torso/text()&quot;) </param>
+                </action>
+                <action id="-10" name="Set value" sid="240029692749038" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">Part_Arms</param>
+                    <param id="1" name="Value">XML.StringValue(&quot;/Cloth/Part_Arms/text()&quot;) </param>
+                </action>
+                <action id="-10" name="Set value" sid="920625680853710" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">Part_Legs</param>
+                    <param id="1" name="Value">XML.StringValue(&quot;/Cloth/Part_Legs/text()&quot;) </param>
+                </action>
+                <action id="4" name="Set animation" sid="774400362627814" type="PlayerHead">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Head</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="538041315369622" type="PlayerTorso">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Torso</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="100191118849087" type="PlayerTop">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Top</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="974932905186955" type="PlayerArmLeft">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Arms</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="616258673879450" type="PlayerArmRight">
+                    <param id="0" name="Animation">Scml_Player_Top.Part_Arms</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="205165731804400" type="PlayerLeg1">
+                    <param id="0" name="Animation">Scml_Player_Bottom.Part_Legs</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="482440941611539" type="PlayerLeg2">
+                    <param id="0" name="Animation">Scml_Player_Bottom.Part_Legs</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="614281969185090">
+            <conditions>
+                <condition id="0" name="On function" sid="838752329273522" type="Function">
+                    <param id="0" name="Name">&quot;GetSpriterParts&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="361914102187481" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="966559718608466" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="565024256655118" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="XMLString" sid="749856767864141" static="0" type="text">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;</variable>
+                <event-block sid="671252863903473">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Add to" sid="708599867873211" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Cloth&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="145177836956079" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Part_Top&gt;&quot;&amp;Scml_Player_Top.Part_Top &amp;&quot;&lt;/Part_Top&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="955338728056952" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Part_Head&gt;&quot;&amp;Scml_Player_Top.Part_Head &amp;&quot;&lt;/Part_Head&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="622894339170382" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Part_Torso&gt;&quot;&amp;Scml_Player_Top.Part_Torso &amp;&quot;&lt;/Part_Torso&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="285548224708939" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Part_Arms&gt;&quot;&amp;Scml_Player_Top.Part_Arms &amp;&quot;&lt;/Part_Arms&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="936288410153419" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;Part_Legs&gt;&quot;&amp;Scml_Player_Bottom.Part_Legs &amp;&quot;&lt;/Part_Legs&gt;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="124568610505337" type="System">
+                            <param id="0" name="Variable">XMLString</param>
+                            <param id="1" name="Value">&quot;&lt;/Cloth&gt;&quot;</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="604152869289291" type="Function">
+                            <param id="0" name="Value">XMLString</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

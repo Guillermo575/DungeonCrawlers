@@ -107,6 +107,9 @@
             <object-type name="Touch" sid="320383388716192">
                 <plugin id="Touch" />
             </object-type>
+            <object-type global="1" name="XML" sid="876548892299924">
+                <plugin id="XML" />
+            </object-type>
         </object-folder>
         <object-folder name="Dungeon">
             <object-folder name="MiniMap">
@@ -1011,7 +1014,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\HeadSideDgn.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\HeadSideDgn.png">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1019,7 +1022,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\HeadSide.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\HeadSide.png">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1043,7 +1046,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\HeadZ.png">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Git\DungeonCrawlers\Resources\Spriter\Player\Head\HeadZ.png">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1061,7 +1064,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1069,7 +1072,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1093,7 +1096,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1111,7 +1114,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1119,7 +1122,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1161,7 +1164,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1169,7 +1172,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1193,7 +1196,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1211,7 +1214,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1219,7 +1222,7 @@
                                     <point x="0" y="0" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.52" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="1" y="1" />
@@ -1452,13 +1455,61 @@
                         <type>Scml_Player_Top</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Helmet" pingpong="0" repeatcount="1" repeatto="0" sid="835344121375509" speed="0">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\Helmet.png">
+                        <animation framecount="5" loop="0" name="Helmet" pingpong="0" repeatcount="1" repeatto="0" sid="835344121375509" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\backupTop\Top.png">
                                 <collision-poly>
                                     <point x="0.15625" y="0" />
                                     <point x="0.84375" y="0" />
                                     <point x="0.84375" y="0.96875" />
                                     <point x="0.15625" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\backupTop\TopSideDgn.png">
+                                <collision-poly>
+                                    <point x="0.34375" y="0.34375" />
+                                    <point x="0.5" y="0.03125" />
+                                    <point x="0.65625" y="0.34375" />
+                                    <point x="0.8125" y="0.5" />
+                                    <point x="0.8125" y="0.8125" />
+                                    <point x="0.5" y="0.65625" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0.1875" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\backupTop\TopSide.png">
+                                <collision-poly>
+                                    <point x="0.375" y="0.375" />
+                                    <point x="0.5" y="0.21875" />
+                                    <point x="0.6875" y="0.3125" />
+                                    <point x="0.84375" y="0.5" />
+                                    <point x="0.84375" y="0.84375" />
+                                    <point x="0.5" y="0.6875" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0.1875" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\backupTop\TopBack.png">
+                                <collision-poly>
+                                    <point x="0.34375" y="0.34375" />
+                                    <point x="0.5" y="0.03125" />
+                                    <point x="0.65625" y="0.34375" />
+                                    <point x="0.84375" y="0.5" />
+                                    <point x="0.84375" y="0.84375" />
+                                    <point x="0.5" y="0.9375" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0.1875" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\backupTop\TopBackDgn.png">
+                                <collision-poly>
+                                    <point x="0.34375" y="0.34375" />
+                                    <point x="0.5" y="0.03125" />
+                                    <point x="0.65625" y="0.34375" />
+                                    <point x="0.8125" y="0.5" />
+                                    <point x="0.8125" y="0.8125" />
+                                    <point x="0.5" y="0.9375" />
+                                    <point x="0.1875" y="0.8125" />
+                                    <point x="0.1875" y="0.5" />
                                 </collision-poly>
                             </frame>
                         </animation>
