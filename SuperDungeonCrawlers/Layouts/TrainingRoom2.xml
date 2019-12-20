@@ -534,6 +534,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>true</HideItems>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
@@ -542,6 +543,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -551,7 +553,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -648,6 +649,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -656,6 +658,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -665,7 +668,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -795,6 +797,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -803,6 +806,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -812,7 +816,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -942,6 +945,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -950,6 +954,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -959,7 +964,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -1657,6 +1661,56 @@
                         <depth>0</depth>
                         <hotspotX>0.178571433</hotspotX>
                         <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Item_Coin" uid="61">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CoinGain>1</CoinGain>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>449.582336426</x>
+                        <y>193.065917969</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Item_Coin" uid="62">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CoinGain>1</CoinGain>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>425.276672363</x>
+                        <y>119.455749512</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

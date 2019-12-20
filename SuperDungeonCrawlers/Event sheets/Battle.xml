@@ -906,6 +906,20 @@
                 <action id="-9" name="Destroy" sid="184362761187232" type="Item_Potion" />
             </actions>
         </event-block>
+        <event-block sid="213410378755283">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="588465207618440" type="PlayerCoreBox">
+                    <param id="0" name="Object">Item_Coin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="962983824456071" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Coins</param>
+                    <param id="1" name="Value">Item_Coin.CoinGain</param>
+                </action>
+                <action id="-9" name="Destroy" sid="425728899798213" type="Item_Coin" />
+            </actions>
+        </event-block>
         <comment>Ammo reload cooldown</comment>
         <event-block sid="622360804128041">
             <conditions>

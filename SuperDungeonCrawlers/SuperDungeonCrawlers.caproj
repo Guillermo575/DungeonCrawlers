@@ -3071,6 +3071,28 @@
                 <plugin id="XML" />
             </object-type>
         </object-folder>
+        <object-type name="Item_Coin" sid="541178528606508">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Coin value" name="CoinGain" sid="248960793933244" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713105440691450" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -3125,6 +3147,7 @@
                 <instance-variable comment="Bonus damage multiplied with the damage impact" name="BonusDamageMult" sid="153002197069817" type="number" />
                 <instance-variable name="CanNotCancel" sid="293099405422437" type="boolean" />
                 <instance-variable name="CanNotRotate" sid="365812599077455" type="boolean" />
+                <instance-variable comment="Character´s money" name="Coins" sid="212709410698902" type="number" />
                 <instance-variable comment="make items invisible if they are not in use" name="HideItems" sid="249099144844418" type="boolean" />
                 <instance-variable comment="Maximun Health Points Value" name="HPMax" sid="405391790612950" type="number" />
                 <instance-variable comment="Current Health Points" name="Hp" sid="148550066217839" type="number" />
@@ -3133,6 +3156,7 @@
                 <instance-variable comment="Check if the character is alive, if the value is false, some functions are blocked" name="IsAlive" sid="610141807522636" type="boolean" />
                 <instance-variable name="IsMoving" sid="821611097718825" type="boolean" />
                 <instance-variable name="IsJumping" sid="172761479092090" type="boolean" />
+                <instance-variable name="KeyPick" sid="556469306036925" type="boolean" />
                 <instance-variable comment="Last Arm Used" name="LastArmUsed" sid="568820131423589" type="string" />
                 <instance-variable comment="character´s last direction" name="LastDirection" sid="241710995863577" type="string" />
                 <instance-variable name="LastDirectionAngle" sid="981661721070455" type="number" />
@@ -3142,7 +3166,6 @@
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
-                <instance-variable name="KeyPick" sid="556469306036925" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FC_8Direction" sid="182952999122772">

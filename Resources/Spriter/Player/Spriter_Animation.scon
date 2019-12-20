@@ -614,6 +614,24 @@
 									},
 									{
 										"abs_a": 1,
+										"abs_angle": 255,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 0.5,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": -5,
+										"abs_y": -13,
+										"file": 0,
+										"folder": 3,
+										"id": 2,
+										"key": 0,
+										"name": "ArmRight",
+										"parent": 1,
+										"timeline": "10",
+										"z_index": "2"
+									},
+									{
+										"abs_a": 1,
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
@@ -623,12 +641,12 @@
 										"abs_y": -9.19184,
 										"file": 4,
 										"folder": 0,
-										"id": 2,
+										"id": 3,
 										"key": 0,
 										"name": "Torso",
 										"parent": 0,
 										"timeline": "7",
-										"z_index": "2"
+										"z_index": "3"
 									},
 									{
 										"abs_a": 1,
@@ -641,29 +659,11 @@
 										"abs_y": -13,
 										"file": 1,
 										"folder": 3,
-										"id": 3,
+										"id": 4,
 										"key": 0,
 										"name": "ArmLeft",
 										"parent": 3,
 										"timeline": "11",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 1,
-										"abs_angle": 255,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -5,
-										"abs_y": -13,
-										"file": 0,
-										"folder": 3,
-										"id": 4,
-										"key": 0,
-										"name": "ArmRight",
-										"parent": 1,
-										"timeline": "10",
 										"z_index": "4"
 									},
 									{
@@ -756,22 +756,22 @@
 									{
 										"id": 2,
 										"key": 0,
-										"parent": 0,
-										"timeline": "7",
+										"parent": 1,
+										"timeline": "10",
 										"z_index": "2"
 									},
 									{
 										"id": 3,
-										"key": 1,
-										"parent": 3,
-										"timeline": "11",
+										"key": 0,
+										"parent": 0,
+										"timeline": "7",
 										"z_index": "3"
 									},
 									{
 										"id": 4,
-										"key": 0,
-										"parent": 1,
-										"timeline": "10",
+										"key": 1,
+										"parent": 3,
+										"timeline": "11",
 										"z_index": "4"
 									},
 									{
@@ -821,16 +821,16 @@
 										"x": -5,
 										"y": 13
 									},
-									"id": 0
+									"id": 0,
+									"spin": -1
 								},
 								{
 									"bone": {
-										"angle": 265,
+										"angle": 240,
 										"x": -5,
 										"y": 13
 									},
 									"id": 1,
-									"spin": -1,
 									"time": 250
 								}
 							],
@@ -968,7 +968,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -984,7 +983,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -1000,7 +998,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -1147,24 +1144,6 @@
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 0,
-										"abs_pivot_x": 0.5,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 0.9999998168,
-										"abs_scale_y": 1,
-										"abs_x": 1.0000000000000002,
-										"abs_y": -9.19184,
-										"file": 4,
-										"folder": 0,
-										"id": 2,
-										"key": 0,
-										"name": "Torso",
-										"parent": 0,
-										"timeline": "7",
-										"z_index": "2"
-									},
-									{
-										"abs_a": 1,
 										"abs_angle": 300,
 										"abs_pivot_x": 0,
 										"abs_pivot_y": 0.5,
@@ -1174,16 +1153,34 @@
 										"abs_y": -13,
 										"file": 1,
 										"folder": 3,
-										"id": 3,
+										"id": 2,
 										"key": 0,
 										"name": "ArmLeft",
 										"parent": 3,
 										"timeline": "11",
+										"z_index": "2"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 0,
+										"abs_pivot_x": 0.5,
+										"abs_pivot_y": 0.5,
+										"abs_scale_x": 0.9999998168,
+										"abs_scale_y": 1,
+										"abs_x": 1.0000000000000002,
+										"abs_y": -9.19184,
+										"file": 4,
+										"folder": 0,
+										"id": 3,
+										"key": 0,
+										"name": "Torso",
+										"parent": 0,
+										"timeline": "7",
 										"z_index": "3"
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 255,
+										"abs_angle": 240,
 										"abs_pivot_x": 0,
 										"abs_pivot_y": 0.5,
 										"abs_scale_x": 1,
@@ -1288,16 +1285,16 @@
 									},
 									{
 										"id": 2,
-										"key": 0,
-										"parent": 0,
-										"timeline": "7",
+										"key": 1,
+										"parent": 3,
+										"timeline": "11",
 										"z_index": "2"
 									},
 									{
 										"id": 3,
-										"key": 1,
-										"parent": 3,
-										"timeline": "11",
+										"key": 0,
+										"parent": 0,
+										"timeline": "7",
 										"z_index": "3"
 									},
 									{
@@ -1350,7 +1347,7 @@
 							"key": [
 								{
 									"bone": {
-										"angle": 255,
+										"angle": 240,
 										"x": -4,
 										"y": 13
 									},
@@ -1358,7 +1355,7 @@
 								},
 								{
 									"bone": {
-										"angle": 265,
+										"angle": 245,
 										"x": -4,
 										"y": 13
 									},
@@ -3347,7 +3344,7 @@
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 255,
+										"abs_angle": 240,
 										"abs_pivot_x": 0,
 										"abs_pivot_y": 0.5,
 										"abs_scale_x": 1,
@@ -3365,24 +3362,6 @@
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 300,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": 5,
-										"abs_y": -13,
-										"file": 0,
-										"folder": 3,
-										"id": 3,
-										"key": 0,
-										"name": "ArmRight",
-										"parent": 1,
-										"timeline": "10",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 1,
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
@@ -3392,11 +3371,29 @@
 										"abs_y": -9.19184,
 										"file": 3,
 										"folder": 0,
-										"id": 4,
+										"id": 3,
 										"key": 0,
 										"name": "Torso",
 										"parent": 0,
 										"timeline": "7",
+										"z_index": "3"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 300,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 0.5,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": 5,
+										"abs_y": -13,
+										"file": 0,
+										"folder": 3,
+										"id": 4,
+										"key": 0,
+										"name": "ArmRight",
+										"parent": 1,
+										"timeline": "10",
 										"z_index": "4"
 									},
 									{
@@ -3488,16 +3485,16 @@
 									},
 									{
 										"id": 2,
-										"key": 0,
-										"parent": 0,
-										"timeline": "7",
+										"key": 1,
+										"parent": 3,
+										"timeline": "11",
 										"z_index": "2"
 									},
 									{
 										"id": 3,
-										"key": 1,
-										"parent": 3,
-										"timeline": "11",
+										"key": 0,
+										"parent": 0,
+										"timeline": "7",
 										"z_index": "3"
 									},
 									{
@@ -3603,7 +3600,7 @@
 							"key": [
 								{
 									"bone": {
-										"angle": 255,
+										"angle": 240,
 										"x": -5,
 										"y": 13
 									},
@@ -3611,7 +3608,7 @@
 								},
 								{
 									"bone": {
-										"angle": 265,
+										"angle": 255,
 										"x": -5,
 										"y": 13
 									},
@@ -3701,7 +3698,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -3717,7 +3713,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -3733,7 +3728,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -3898,24 +3892,6 @@
 									},
 									{
 										"abs_a": 1,
-										"abs_angle": 255,
-										"abs_pivot_x": 0,
-										"abs_pivot_y": 0.5,
-										"abs_scale_x": 1,
-										"abs_scale_y": 1,
-										"abs_x": -5,
-										"abs_y": -13,
-										"file": 1,
-										"folder": 3,
-										"id": 3,
-										"key": 0,
-										"name": "ArmLeft",
-										"parent": 3,
-										"timeline": "11",
-										"z_index": "3"
-									},
-									{
-										"abs_a": 1,
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
@@ -3925,11 +3901,29 @@
 										"abs_y": -9.19184,
 										"file": 3,
 										"folder": 0,
-										"id": 4,
+										"id": 3,
 										"key": 0,
 										"name": "Torso",
 										"parent": 0,
 										"timeline": "7",
+										"z_index": "3"
+									},
+									{
+										"abs_a": 1,
+										"abs_angle": 240,
+										"abs_pivot_x": 0,
+										"abs_pivot_y": 0.5,
+										"abs_scale_x": 1,
+										"abs_scale_y": 1,
+										"abs_x": -5,
+										"abs_y": -13,
+										"file": 1,
+										"folder": 3,
+										"id": 4,
+										"key": 0,
+										"name": "ArmLeft",
+										"parent": 3,
+										"timeline": "11",
 										"z_index": "4"
 									},
 									{
@@ -4022,15 +4016,15 @@
 									{
 										"id": 2,
 										"key": 0,
-										"parent": 0,
-										"timeline": "7",
+										"parent": 1,
+										"timeline": "10",
 										"z_index": "2"
 									},
 									{
 										"id": 3,
 										"key": 0,
-										"parent": 1,
-										"timeline": "10",
+										"parent": 0,
+										"timeline": "7",
 										"z_index": "3"
 									},
 									{
@@ -4087,16 +4081,16 @@
 										"x": 5,
 										"y": 13
 									},
-									"id": 0,
-									"spin": -1
+									"id": 0
 								},
 								{
 									"bone": {
-										"angle": 295,
+										"angle": 315,
 										"x": 5,
 										"y": 13
 									},
 									"id": 1,
+									"spin": -1,
 									"time": 250
 								}
 							],
@@ -4136,7 +4130,7 @@
 							"key": [
 								{
 									"bone": {
-										"angle": 255,
+										"angle": 240,
 										"x": -5,
 										"y": 13
 									},
@@ -4144,7 +4138,7 @@
 								},
 								{
 									"bone": {
-										"angle": 265,
+										"angle": 245,
 										"x": -5,
 										"y": 13
 									},
@@ -4234,7 +4228,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -4250,7 +4243,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -4266,7 +4258,6 @@
 								{
 									"id": 0,
 									"object": {
-										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -40931,9 +40922,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -40952,6 +40945,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -40964,9 +40958,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -40985,6 +40981,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -40997,9 +40994,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -41008,6 +41007,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -41020,9 +41020,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -41041,6 +41043,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -41685,9 +41688,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -41696,6 +41701,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -41708,9 +41714,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -41719,6 +41727,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -41731,9 +41740,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -41742,6 +41753,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -41754,9 +41766,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -41765,6 +41779,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -41970,7 +41985,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.7539269388762088e-15,
 										"abs_y": -29.991680000000002,
@@ -42410,9 +42425,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -42421,6 +42438,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -42433,9 +42451,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -42444,6 +42464,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -42456,9 +42477,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -42467,6 +42490,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -42479,9 +42503,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -42490,6 +42516,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -42505,7 +42532,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 11
 									},
 									"spin": 0
@@ -42516,7 +42543,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 11
 									},
 									"spin": 0,
@@ -43123,9 +43150,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -43134,6 +43163,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -43146,9 +43176,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -43157,6 +43189,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -43169,9 +43202,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -43180,6 +43215,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -43192,10 +43228,12 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3,
 										"x": -1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -43217,6 +43255,7 @@
 										"x": -1,
 										"y": 1
 									},
+									"spin": 0,
 									"time": 300
 								}
 							],
@@ -44001,9 +44040,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44012,6 +44053,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44024,9 +44066,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44035,6 +44079,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44047,9 +44092,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44058,6 +44105,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44070,9 +44118,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44081,6 +44131,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44274,7 +44325,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.7539269388762088e-15,
 										"abs_y": -29.991680000000002,
@@ -44855,9 +44906,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44866,6 +44919,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44878,9 +44932,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44889,6 +44945,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44901,9 +44958,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44912,6 +44971,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44924,9 +44984,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -44935,6 +44997,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -44950,7 +45013,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 11
 									},
 									"spin": 0
@@ -44961,7 +45024,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 11
 									},
 									"spin": 0,
@@ -45709,9 +45772,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -45720,6 +45785,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -45732,9 +45798,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -45743,6 +45811,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -45755,9 +45824,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -45766,6 +45837,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -45778,9 +45850,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -45789,6 +45863,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -45982,7 +46057,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.7539269388762088e-15,
 										"abs_y": -28.991680000000002,
@@ -46511,6 +46586,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -46526,6 +46602,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -46541,6 +46618,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -46556,6 +46634,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -46574,7 +46653,7 @@
 										"angle": 270,
 										"file": 2,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 11
 									},
 									"spin": 0
@@ -47279,6 +47358,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -47294,6 +47374,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -47309,6 +47390,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -47324,6 +47406,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -48085,9 +48168,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -48096,6 +48181,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -48108,9 +48194,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -48119,6 +48207,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -48131,9 +48220,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -48142,6 +48233,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -48154,9 +48246,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -48165,6 +48259,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -48370,7 +48465,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -48947,9 +49042,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -48958,6 +49055,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -48970,9 +49068,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -48981,6 +49081,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -48993,9 +49094,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -49004,6 +49107,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -49016,9 +49120,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -49027,6 +49133,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -49042,7 +49149,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -49053,7 +49160,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -49797,9 +49904,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -49808,6 +49917,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -49820,9 +49930,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -49831,6 +49943,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -49843,9 +49956,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -49854,6 +49969,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -49866,9 +49982,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -49877,6 +49995,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -50582,6 +50701,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -50597,6 +50717,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -50612,6 +50733,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -50627,6 +50749,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -50811,7 +50934,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -51392,9 +51515,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -51403,6 +51528,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -51415,9 +51541,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -51426,6 +51554,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -51438,9 +51567,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -51449,6 +51580,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -51461,9 +51593,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -51472,6 +51606,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -51487,7 +51622,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -51498,7 +51633,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -52246,9 +52381,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -52257,6 +52394,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 121
 								}
 							],
@@ -52269,9 +52407,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -52280,6 +52420,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 121
 								}
 							],
@@ -52292,9 +52433,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -52303,6 +52446,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 121
 								}
 							],
@@ -52315,9 +52459,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -52326,6 +52472,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 121
 								}
 							],
@@ -52519,7 +52666,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -27.628800000000002,
@@ -53058,6 +53205,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -53073,6 +53221,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -53088,6 +53237,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -53103,6 +53253,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -53121,7 +53272,7 @@
 										"angle": 270,
 										"file": 2,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -53825,6 +53976,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -53840,6 +53992,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -53855,6 +54008,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -53870,6 +54024,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -54632,9 +54787,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -54643,6 +54800,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -54655,9 +54813,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -54666,6 +54826,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -54678,9 +54839,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -54689,6 +54852,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -54701,9 +54865,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -54712,6 +54878,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -54929,7 +55096,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -55508,9 +55675,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -55519,6 +55688,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -55531,9 +55701,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -55542,6 +55714,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -55554,9 +55727,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -55565,6 +55740,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -55577,9 +55753,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -55588,6 +55766,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -55603,7 +55782,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -55614,7 +55793,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -55626,7 +55805,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -56372,9 +56551,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -56383,6 +56564,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -56395,9 +56577,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -56406,6 +56590,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -56418,9 +56603,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -56429,6 +56616,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -56441,9 +56629,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -56452,6 +56642,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 120
 								}
 							],
@@ -57104,9 +57295,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57115,6 +57308,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57127,9 +57321,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57138,6 +57334,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57150,9 +57347,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57161,6 +57360,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57173,9 +57373,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57184,6 +57386,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57377,7 +57580,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -57836,9 +58039,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57847,6 +58052,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57859,9 +58065,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57870,6 +58078,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57882,9 +58091,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57893,6 +58104,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57905,9 +58117,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -57916,6 +58130,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -57931,7 +58146,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -57942,7 +58157,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -58571,9 +58786,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -58582,6 +58799,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -58594,9 +58812,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -58605,6 +58825,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -58617,9 +58838,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -58628,6 +58851,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -58640,9 +58864,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -58651,6 +58877,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -58844,7 +59071,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -59326,9 +59553,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -59347,6 +59576,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -59359,9 +59589,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -59380,6 +59612,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -59392,9 +59625,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -59403,6 +59638,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -59415,9 +59651,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -59426,6 +59664,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -59441,7 +59680,7 @@
 										"angle": 270,
 										"file": 2,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -59452,7 +59691,7 @@
 										"angle": 270,
 										"file": 2,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -59464,7 +59703,7 @@
 										"angle": 270,
 										"file": 2,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -60183,9 +60422,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -60194,6 +60435,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -60206,9 +60448,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -60217,6 +60461,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -60229,9 +60474,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -60240,6 +60487,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -60252,9 +60500,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -60263,6 +60513,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -60981,6 +61232,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -60996,6 +61248,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -61011,6 +61264,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -61026,6 +61280,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -61210,7 +61465,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -61720,6 +61975,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -61735,6 +61991,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -61750,6 +62007,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -61765,6 +62023,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -61783,7 +62042,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -62461,6 +62720,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -62476,6 +62736,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -62491,6 +62752,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -62506,6 +62768,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -63151,9 +63414,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63162,6 +63427,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63174,9 +63440,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63185,6 +63453,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63197,9 +63466,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63208,6 +63479,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63220,9 +63492,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63231,6 +63505,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63424,7 +63699,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -63882,9 +64157,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63893,6 +64170,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63905,9 +64183,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63916,6 +64196,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63928,9 +64209,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63939,6 +64222,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63951,9 +64235,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -63962,6 +64248,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -63977,7 +64264,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -63988,7 +64275,7 @@
 										"angle": 270,
 										"file": 4,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0,
@@ -64617,9 +64904,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -64628,6 +64917,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -64640,9 +64930,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -64651,6 +64943,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -64663,9 +64956,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -64674,6 +64969,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -64686,9 +64982,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -64697,6 +64995,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -64890,7 +65189,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -65308,6 +65607,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -65323,6 +65623,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -65338,6 +65639,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -65353,6 +65655,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -65371,7 +65674,7 @@
 										"angle": 270,
 										"file": 2,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -66098,9 +66401,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -66109,6 +66414,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -66121,9 +66427,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -66132,6 +66440,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -66144,9 +66453,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -66155,6 +66466,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -66167,9 +66479,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -66178,6 +66492,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 200
 								}
 							],
@@ -66951,9 +67266,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -66962,6 +67279,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -66974,9 +67292,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -66985,6 +67305,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -66997,9 +67318,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -67008,6 +67331,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -67020,9 +67344,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -67031,6 +67357,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 350
 								}
 							],
@@ -67248,7 +67575,7 @@
 										"abs_angle": 0,
 										"abs_pivot_x": 0.5,
 										"abs_pivot_y": 0.5,
-										"abs_scale_x": -1,
+										"abs_scale_x": -0.9999995712,
 										"abs_scale_y": 1,
 										"abs_x": -2.5035699444329173e-15,
 										"abs_y": -28.628800000000002,
@@ -67758,6 +68085,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -67773,6 +68101,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -67788,6 +68117,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -67803,6 +68133,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -67821,7 +68152,7 @@
 										"angle": 270,
 										"file": 3,
 										"folder": 4,
-										"scale_x": -0.7337403146278468,
+										"scale_x": -0.73374,
 										"x": 10
 									},
 									"spin": 0
@@ -68490,6 +68821,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
 									},
@@ -68505,6 +68837,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
 									},
@@ -68520,6 +68853,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
 									},
@@ -68535,6 +68869,7 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
 									},
@@ -69193,9 +69528,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -69204,6 +69541,7 @@
 										"file": 0,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 299
 								}
 							],
@@ -69216,9 +69554,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 1
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -69227,6 +69567,7 @@
 										"file": 1,
 										"folder": 1
 									},
+									"spin": 0,
 									"time": 299
 								}
 							],
@@ -69239,9 +69580,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 0,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -69250,6 +69593,7 @@
 										"file": 0,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 299
 								}
 							],
@@ -69262,9 +69606,11 @@
 								{
 									"id": 0,
 									"object": {
+										"angle": 0,
 										"file": 1,
 										"folder": 3
-									}
+									},
+									"spin": 0
 								},
 								{
 									"id": 1,
@@ -69273,6 +69619,7 @@
 										"file": 1,
 										"folder": 3
 									},
+									"spin": 0,
 									"time": 299
 								}
 							],

@@ -250,6 +250,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>true</HideItems>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
@@ -258,6 +259,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -267,7 +269,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -496,6 +497,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
@@ -504,6 +506,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -513,7 +516,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -643,6 +645,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
@@ -651,6 +654,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -660,7 +664,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -790,6 +793,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
@@ -798,6 +802,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -807,7 +812,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -937,6 +941,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>5</HPMax>
                         <Hp>5</Hp>
@@ -945,6 +950,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -954,7 +960,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
@@ -1378,6 +1383,7 @@
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
+                        <Coins>0</Coins>
                         <HideItems>false</HideItems>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
@@ -1386,6 +1392,7 @@
                         <IsAlive>true</IsAlive>
                         <IsMoving>false</IsMoving>
                         <IsJumping>false</IsJumping>
+                        <KeyPick>false</KeyPick>
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
@@ -1395,7 +1402,6 @@
                         <PushRecoil>false</PushRecoil>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>true</Unstopable>
-                        <KeyPick>false</KeyPick>
                         <Group>Enemy</Group>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
