@@ -313,6 +313,10 @@
                             <param id="0" name="Instance variable">XMLContent</param>
                             <param id="1" name="Value">Function.Call(&quot;GetItemXMLData&quot;,Item_Generic.UID)</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="624945831783760" type="Item_Generic">
+                            <param id="0" name="Instance variable">Loaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

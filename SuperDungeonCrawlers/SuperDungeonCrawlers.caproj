@@ -3093,6 +3093,32 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Loading_Screen" sid="507650651655218">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="715652193064546" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Loading_Screen.png">
+                        <image-point name="LoadBar" x="0.337891" y="0.503333" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Load_Bar" sid="141172312551568">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367758505479826" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Load_Bar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Load_BarFrame" sid="144498512296087">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633653809769886" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Load_BarFrame.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -3396,6 +3422,14 @@
             <instance-variables>
                 <instance-variable name="Dialog" sid="571882647356965" type="string" />
                 <instance-variable name="CanTalk" sid="512996118828547" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="Family_Load" plugin-id="Sprite" sid="862988766462020">
+            <members>
+                <member>Item_Generic</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Loaded" sid="934023920668733" type="boolean" />
             </instance-variables>
         </family>
     </families>

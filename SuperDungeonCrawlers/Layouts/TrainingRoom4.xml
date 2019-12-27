@@ -398,6 +398,7 @@
                         <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Loaded>false</Loaded>
                         <XMLID>Sword</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
@@ -496,6 +497,7 @@
                         <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Loaded>false</Loaded>
                         <XMLID>Spear</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>
@@ -594,6 +596,7 @@
                         <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Loaded>false</Loaded>
                         <XMLID>Knife</XMLID>
                         <XMLContent></XMLContent>
                     </instance-variables>

@@ -88,9 +88,17 @@
                     <param id="0" name="Pin to">Family_Character</param>
                     <param id="1" name="Mode">5</param>
                 </action>
-                <action id="-16" name="Wait" sid="256389994517601" type="System">
-                    <param id="0" name="Seconds">0.01</param>
-                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723757874416197">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="714755375212797" type="System">
+                    <param id="0" name="Variable">CharacterLoaded</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="0" name="Call function" sid="355790055099494" type="Function">
                     <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
@@ -836,7 +844,12 @@
                     <param id="3" name="Value">Family_Character.UID</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Set value" sid="763526631991714" type="System">
+                    <param id="0" name="Variable">CharacterLoaded</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="181044773661113">
                     <conditions>

@@ -6,6 +6,9 @@
         <variable comment="Difficult configured in the game (Easy, Normal, Hard)" constant="0" name="ConfigDifficult" sid="376289247331375" static="0" type="text">Easy</variable>
         <variable comment="Last Level Loaded" constant="0" name="LastLevel" sid="401210357883922" static="0" type="text"></variable>
         <variable comment="Last level Info Data in a JSON" constant="0" name="LastLevelJSON" sid="622867184603336" static="0" type="text"></variable>
+        <variable constant="0" name="LoadComplete" sid="107025194594051" static="0" type="number">0</variable>
+        <variable constant="0" name="CharacterLoaded" sid="369156846207294" static="0" type="number">0</variable>
+        <variable constant="0" name="TileMapLoaded" sid="908590629378997" static="0" type="number">0</variable>
         <comment>This sheet works as a general library of all the sheets used for the gameplay</comment>
         <include>Menu_Pause</include>
         <include>Audio</include>
@@ -22,6 +25,18 @@
                 <condition id="-2" name="On start of layout" sid="742313244731414" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="557631137415762" type="System">
+                    <param id="0" name="Variable">LoadComplete</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="381354055890953" type="System">
+                    <param id="0" name="Variable">CharacterLoaded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="519022434234999" type="System">
+                    <param id="0" name="Variable">TileMapLoaded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-9" name="Set value" sid="512536200845487" type="System">
                     <param id="0" name="Variable">LastLevel</param>
                     <param id="1" name="Value">LayoutName</param>
@@ -38,6 +53,25 @@
                 <action disabled="1" id="0" name="Call function" sid="771115418693452" type="Function">
                     <param id="0" name="Name">&quot;LightOff&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="1" name="Set pause state" sid="822846596490126" type="Rex_Pause">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="218594336214445" type="System">
+                    <param id="0" name="Object to create">Loading_Screen</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="674588385311132" type="Loading_Screen">
+                    <param id="0" name="Object">Load_Bar</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;LoadBar&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="909835808714284" type="Loading_Screen">
+                    <param id="0" name="Object">Load_BarFrame</param>
+                    <param id="1" name="Layer">&quot;Pause&quot;</param>
+                    <param id="2" name="Image point">&quot;LoadBar&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -119,11 +153,22 @@
                 </action>
                 <action id="-10" name="Set value" sid="145071416748857" type="Family_Tilemaps">
                     <param id="0" name="Instance variable">TileMap</param>
-                    <param id="1" name="Value">Array_Levels.At(Array_Levels.Actual,2)</param>
+                    <param id="1" name="Value">Array_Levels.At(Array_Levels.Actual,2) = 0 ? Family_Tilemaps.TileMap : Array_Levels.At(Array_Levels.Actual,2)</param>
                 </action>
                 <action id="8" name="Load image from URL" sid="889047825896878" type="Family_Tilemaps">
                     <param id="0" name="URI">Family_Tilemaps.TileMap</param>
                     <param id="1" name="Cross-origin">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912559408503390">
+            <conditions>
+                <condition id="2" name="On image URL loaded" sid="801748802747821" type="Family_Tilemaps" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="479959713639724" type="System">
+                    <param id="0" name="Variable">TileMapLoaded</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -512,6 +557,79 @@
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="367935428190049">
+            <conditions>
+                <condition id="2" name="Is pause" sid="605819899627861" type="Rex_Pause" />
+                <condition id="-14" name="Compare variable" sid="245681207110773" type="System">
+                    <param id="0" name="Variable">LoadComplete</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="LoadCount" sid="690484895628352" static="0" type="number">0</variable>
+                <event-block sid="192875118121796">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="745210652377562" type="System">
+                            <param id="0" name="Object">Family_Load</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="340799512322316" type="Family_Load">
+                            <param id="0" name="Instance variable">Loaded</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="127568919090619" type="System">
+                            <param id="0" name="Variable">LoadCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913225227482967">
+                    <conditions />
+                    <actions>
+                        <action id="-5" name="Set width" sid="602733844366274" type="Load_Bar">
+                            <param id="0" name="Width">((LoadCount * 1)/Family_Load.Count) * Load_BarFrame.Width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="222812192831773">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="981998255932803" type="System">
+                            <param id="0" name="Variable">LoadCount</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Family_Load.Count</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="896274167248322" type="System">
+                            <param id="0" name="Variable">CharacterLoaded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="763470235706855" type="System">
+                            <param id="0" name="Variable">TileMapLoaded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="376248868944213" type="System">
+                            <param id="0" name="Variable">LoadComplete</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="893841080845384" type="Rex_Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="406871123338225" type="Function">
+                            <param id="0" name="Name">&quot;CreatePauseMenu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="682253767675903" type="Loading_Screen" />
+                        <action id="-9" name="Destroy" sid="521278680673554" type="Load_Bar" />
+                        <action id="-9" name="Destroy" sid="394474984514879" type="Load_BarFrame" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
