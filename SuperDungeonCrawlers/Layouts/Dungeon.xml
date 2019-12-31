@@ -64,6 +64,7 @@
                         <maxFrames>2</maxFrames>
                         <JSON></JSON>
                         <TileMap>Wood.png</TileMap>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -132,6 +133,7 @@
                         <maxFrames>2</maxFrames>
                         <JSON></JSON>
                         <TileMap>Wood.png</TileMap>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -223,6 +225,7 @@
                         <maxFrames>2</maxFrames>
                         <JSON></JSON>
                         <TileMap>Wood.png</TileMap>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

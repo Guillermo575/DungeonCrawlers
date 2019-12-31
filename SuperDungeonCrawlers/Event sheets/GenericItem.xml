@@ -307,7 +307,13 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="478390482685235">
-                    <conditions />
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="352494854571757" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;GetXMLInventoryNode&quot;,Item_Generic.UID,&quot;Animation&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="119738771472221" type="Item_Generic">
                             <param id="0" name="Instance variable">XMLContent</param>
@@ -316,6 +322,9 @@
                         <action id="-13" name="Set boolean" sid="624945831783760" type="Item_Generic">
                             <param id="0" name="Instance variable">Loaded</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="613928642790768" type="Item_Generic">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>

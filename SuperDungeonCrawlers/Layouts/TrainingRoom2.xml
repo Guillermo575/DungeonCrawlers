@@ -64,6 +64,7 @@
                         <maxFrames>2</maxFrames>
                         <JSON></JSON>
                         <TileMap>Wood.png</TileMap>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -132,6 +133,7 @@
                         <maxFrames>2</maxFrames>
                         <JSON></JSON>
                         <TileMap>Wood.png</TileMap>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -555,6 +557,7 @@
                         <Unstopable>false</Unstopable>
                         <NameIcon>Player</NameIcon>
                         <IconId>0</IconId>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FC_8Direction">
@@ -1079,7 +1082,7 @@
                 </instance>
                 <instance type="Item_Generic" uid="219">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1178,7 +1181,7 @@
                 </instance>
                 <instance type="Item_Generic" uid="187">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1277,7 +1280,7 @@
                 </instance>
                 <instance type="Item_Generic" uid="194">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1376,7 +1379,7 @@
                 </instance>
                 <instance type="Item_Generic" uid="25">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1475,7 +1478,7 @@
                 </instance>
                 <instance type="Item_Generic" uid="48">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1574,7 +1577,7 @@
                 </instance>
                 <instance type="Item_Generic" uid="57">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1757,6 +1760,7 @@
                         <maxFrames>2</maxFrames>
                         <JSON></JSON>
                         <TileMap>Wood.png</TileMap>
+                        <Loaded>false</Loaded>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

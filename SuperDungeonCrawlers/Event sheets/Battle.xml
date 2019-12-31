@@ -387,6 +387,9 @@
                 <condition id="-14" name="Pick by unique ID" sid="308610650426564" type="Family_Character">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="358910601872153" type="Item_Generic">
+                    <param id="0" name="Instance variable">Loaded</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

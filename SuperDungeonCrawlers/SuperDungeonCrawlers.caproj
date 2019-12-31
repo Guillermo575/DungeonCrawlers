@@ -3379,6 +3379,7 @@
                 <instance-variable name="maxFrames" sid="449057823288003" type="number" />
                 <instance-variable name="JSON" sid="214671789440697" type="string" />
                 <instance-variable name="TileMap" sid="406878458239769" type="string" />
+                <instance-variable name="Loaded" sid="923096682354819" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="762509480308671">
@@ -3427,6 +3428,7 @@
         <family name="Family_Load" plugin-id="Sprite" sid="862988766462020">
             <members>
                 <member>Item_Generic</member>
+                <member>PlayerCoreBox</member>
             </members>
             <instance-variables>
                 <instance-variable name="Loaded" sid="934023920668733" type="boolean" />

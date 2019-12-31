@@ -92,16 +92,14 @@
         </event-block>
         <event-block sid="723757874416197">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="714755375212797" type="System">
-                    <param id="0" name="Variable">CharacterLoaded</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="714755375212797" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Loaded</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="355790055099494" type="Function">
                     <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
                 </action>
             </actions>
         </event-block>
@@ -124,14 +122,14 @@
                             <param id="0" name="Key">32</param>
                         </condition>
                         <condition id="1" name="Is overlapping another object" sid="215268347040969" type="PlayerCoreBox">
-                            <param id="0" name="Object">Family_Item</param>
+                            <param id="0" name="Object">Item_Generic</param>
                         </condition>
-                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Family_Item" />
+                        <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="737504246951134" type="Item_Generic" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="785205971480943" type="Function">
                             <param id="0" name="Name">&quot;PickObject&quot;</param>
-                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Family_Item.UID</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Item_Generic.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -822,7 +820,7 @@
                 <condition id="0" name="On function" sid="683560497507738" type="Function">
                     <param id="0" name="Name">&quot;LogPlayerLoad&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="843788948244435" type="Family_Character">
+                <condition id="-14" name="Pick by unique ID" sid="843788948244435" type="PlayerCoreBox">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="855398637205431" type="System">
@@ -835,18 +833,18 @@
                     <param id="0" name="Object">Scml_Player_Top</param>
                     <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
                     <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">Family_Character.UID</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="796374543118541" type="System">
                     <param id="0" name="Object">Scml_Player_Bottom</param>
                     <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
                     <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">Family_Character.UID</param>
+                    <param id="3" name="Value">PlayerCoreBox.UID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="763526631991714" type="System">
-                    <param id="0" name="Variable">CharacterLoaded</param>
+                <action id="-13" name="Set boolean" sid="788010954881317" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Loaded</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -856,25 +854,25 @@
                         <condition id="4" inverted="1" name="Is empty" sid="918969514259699" type="Player_Log" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="576685273073028" type="Family_Character">
+                        <action id="-10" name="Set value" sid="576685273073028" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">Hp</param>
                             <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHP&quot;))</param>
                         </action>
-                        <action id="-10" name="Set value" sid="593150610456865" type="Family_Character">
+                        <action id="-10" name="Set value" sid="593150610456865" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">HPMax</param>
                             <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
                         </action>
                         <action id="0" name="Call function" sid="593702289976016" type="Function">
                             <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectLeft&quot;){###}&quot;Left&quot;{###}0</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Player_Log.Get(&quot;PlayerObjectLeft&quot;){###}&quot;Left&quot;{###}0</param>
                         </action>
                         <action id="0" name="Call function" sid="477078972040317" type="Function">
                             <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Player_Log.Get(&quot;PlayerObjectRight&quot;){###}&quot;Right&quot;{###}0</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Player_Log.Get(&quot;PlayerObjectRight&quot;){###}&quot;Right&quot;{###}0</param>
                         </action>
                         <action id="0" name="Call function" sid="421658789967189" type="Function">
                             <param id="0" name="Name">&quot;LoadSpriterParts&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID{###}Player_Log.Get(&quot;PlayerCloth&quot;)</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID{###}Player_Log.Get(&quot;PlayerCloth&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -887,9 +885,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="519557994524535" type="Family_Character">
+                                <action id="-10" name="Set value" sid="519557994524535" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">Hp</param>
-                                    <param id="1" name="Value">Family_Character.HPMax</param>
+                                    <param id="1" name="Value">PlayerCoreBox.HPMax</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -902,15 +900,15 @@
                     <actions>
                         <action id="0" name="Call function" sid="845490456309864" type="Function">
                             <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
                         </action>
                         <action id="0" name="Call function" sid="879748435235538" type="Function">
                             <param id="0" name="Name">&quot;LogPlayerConfigureDifficult&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
                         </action>
                         <action id="0" name="Call function" sid="504007454076031" type="Function">
                             <param id="0" name="Name">&quot;CreateSpriterParts&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID</param>
                         </action>
                     </actions>
                 </event-block>
