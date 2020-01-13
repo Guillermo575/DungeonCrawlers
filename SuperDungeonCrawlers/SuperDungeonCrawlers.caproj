@@ -2619,6 +2619,7 @@
                                 <image-point name="cursor1" x="0.2" y="0.46875" />
                                 <image-point name="cursor2" x="0.2" y="0.65625" />
                                 <image-point name="cursor3" x="0.2" y="0.84375" />
+                                <image-point name="DialogueChoiceBox" x="0.468571" y="0.26875" />
                                 <collision-poly>
                                     <point x="0" y="0" />
                                     <point x="0.5" y="0.25" />
@@ -2635,7 +2636,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246397164953981" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0">
                                 <collision-poly>
                                     <point x="0.16" y="0.06" />
                                     <point x="0.84" y="0.06" />
@@ -2643,9 +2644,9 @@
                                     <point x="0.16" y="0.94" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2683,6 +2684,26 @@
                                     <point x="1" y="1" />
                                     <point x="0" y="1" />
                                     <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DialogueChoiceBox" sid="907662502390674">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683582157539233" speed="5">
+                            <frame duration="1" hotspotX="0.00285714" hotspotY="1" original-source="C:\Users\MasterRace\Desktop\aa.png">
+                                <image-point name="cursor1" x="0.0885714" y="0.166667" />
+                                <image-point name="cursor2" x="0.0885714" y="0.5" />
+                                <image-point name="cursor3" x="0.0885714" y="0.833333" />
+                                <collision-poly>
+                                    <point x="0.002849" y="0.0225989" />
+                                    <point x="1" y="0.926554" />
+                                    <point x="1" y="0.926554" />
+                                    <point x="1" y="1" />
+                                    <point x="1" y="1" />
+                                    <point x="0.002849" y="1" />
                                 </collision-poly>
                             </frame>
                         </animation>

@@ -7,7 +7,7 @@
 	</Dialogue>
 	<Dialogue id='test_choice' key_next='32' key_faster='88' key_up='38' key_down='40' first_line_id='0' typing_sound ='typing'>
 		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'> Do you want a fight?! </TextLine>
-		<TextLine id='1' id_next='1' avatar_animation='' type='choice' choice_number='2'>
+		<TextLine id='1' id_next='1' avatar_animation='' type='choice' choice_number='2' avatar_name='skeleton'>
 			<Choice id_next='2'> Yes.</Choice>
 			<Choice id_next='3'> No.</Choice>
 		</TextLine>

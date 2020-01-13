@@ -41,6 +41,15 @@
                     <param id="0" name="Width">OriginalWindowWidth</param>
                     <param id="1" name="Height">OriginalWindowHeight/2</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="740527056421083" type="DialogueBox">
+                    <param id="0" name="Object">DialogueChoiceBox</param>
+                    <param id="1" name="Layer">DialogueBox.LayerName</param>
+                    <param id="2" name="Image point">&quot;DialogueChoiceBox&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="229499395131601" type="DialogueChoiceBox">
+                    <param id="0" name="Width">OriginalWindowWidth/2</param>
+                    <param id="1" name="Height">DialogueChoiceBox.Height</param>
+                </action>
                 <action id="-3" name="Create object" sid="515697930984778" type="System">
                     <param id="0" name="Object to create">DialogueAvatar</param>
                     <param id="1" name="Layer">DialogueBox.LayerName</param>
@@ -76,6 +85,9 @@
                 <action id="-4" name="Set layer visible" sid="771664496985139" type="System">
                     <param id="0" name="Layer">&quot;Dialog&quot;</param>
                     <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="635364689658384" type="DialogueChoiceBox">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -703,9 +715,6 @@
                         <action id="0" name="Set text" sid="848047936521023" type="DialogueSpriteFontAvatar">
                             <param id="0" name="Text">ProjectVariables.Get(&quot;avatar_name&quot;)</param>
                         </action>
-                        <action id="0" name="Set text" sid="917505455328425" type="DialogueSpriteFont">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
                         <action id="2" name="Set scale" sid="948254893178155" type="DialogueSpriteFont">
                             <param id="0" name="Scale">1</param>
                         </action>
@@ -719,6 +728,20 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="856164432546448">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare value" sid="798996574681263" type="ProjectVariables">
+                                    <param id="0" name="Key">&quot;line_type&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;choice&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="917505455328425" type="DialogueSpriteFont">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="242292082608599">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="757284053873480" type="System">
@@ -794,37 +817,34 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="423323938916702" type="DialogueChoiceBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="1" name="Set key" sid="478560098832505" type="ProjectVariables">
                             <param id="0" name="Key">&quot;cursor_position&quot;</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="803856337619576" type="System">
                             <param id="0" name="Variable">dialogue_box_project_choice_height</param>
-                            <param id="1" name="Value">DialogueSpriteFont.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                            <param id="1" name="Value">DialogueChoiceBox.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
                         </action>
                         <action id="1" name="Set key" sid="493604706069540" type="ProjectVariables">
                             <param id="0" name="Key">&quot;choice_height&quot;</param>
-                            <param id="1" name="Value">DialogueSpriteFont.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                            <param id="1" name="Value">DialogueChoiceBox.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="720931342313048" type="System">
+                            <param id="0" name="Object to create">Dialoguecursor</param>
+                            <param id="1" name="Layer">DialogueBox.LayerName</param>
+                            <param id="2" name="X">DialogueChoiceBox.ImagePointX(&quot;cursor1&quot;)</param>
+                            <param id="3" name="Y">DialogueChoiceBox.ImagePointY(&quot;cursor1&quot;)  + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                        </action>
+                        <action id="1" name="Set size" sid="261313880124720" type="Choice_next">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="204312381857543">
-                            <conditions>
-                                <condition disabled="1" id="0" name="Compare value" sid="107010620931323" type="ProjectVariables">
-                                    <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;1&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="720931342313048" type="System">
-                                    <param id="0" name="Object to create">Dialoguecursor</param>
-                                    <param id="1" name="Layer">DialogueBox.LayerName</param>
-                                    <param id="2" name="X">DialogueSpriteFont.X - 20</param>
-                                    <param id="3" name="Y">DialogueSpriteFont.Y + 10</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="713074346188359">
                             <conditions>
                                 <condition id="-10" name="For" sid="775750002001363" type="System">
@@ -845,8 +865,8 @@
                                 <action id="-3" name="Create object" sid="888104246546643" type="System">
                                     <param id="0" name="Object to create">DialogueSpriteFontChoice</param>
                                     <param id="1" name="Layer">DialogueBox.LayerName</param>
-                                    <param id="2" name="X">DialogueSpriteFont.X</param>
-                                    <param id="3" name="Y">DialogueSpriteFont.Y + (loopindex-1) * ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                    <param id="2" name="X">DialogueChoiceBox.ImagePointX(&quot;cursor1&quot;)</param>
+                                    <param id="3" name="Y">DialogueChoiceBox.ImagePointY(&quot;cursor1&quot;) + (loopindex-1) * ProjectVariables.Get(&quot;choice_height&quot;)</param>
                                 </action>
                                 <action id="-27" name="Set effect enabled" sid="477610809239382" type="DialogueSpriteFontChoice">
                                     <param id="0" name="Mode">0</param>
@@ -856,7 +876,7 @@
                                     <param id="0" name="Text">trim(Dialogues.StringValue( dialogue_box_project_prefix2 &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
                                 </action>
                                 <action id="-7" name="Set size" sid="109178402263938" type="DialogueSpriteFontChoice">
-                                    <param id="0" name="Width">DialogueSpriteFont.Width</param>
+                                    <param id="0" name="Width">DialogueChoiceBox.Width</param>
                                     <param id="1" name="Height">ProjectVariables.Get(&quot;choice_height&quot;)</param>
                                 </action>
                                 <action id="10" name="Insert" sid="454179290653670" type="Choice_next">
@@ -884,6 +904,23 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="776393770920778">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="545766111711272" type="System">
+                                            <param id="0" name="First value">loopindex</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="138780521339767" type="Dialoguecursor">
+                                            <param id="0" name="X">DialogueSpriteFontChoice.X - 10</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="628903417969407" type="Dialoguecursor">
+                                            <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="385903160542432">
@@ -906,6 +943,9 @@
                         <condition id="-22" name="Else" sid="890101954551819" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="664762966237312" type="DialogueChoiceBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="1" name="Set key" sid="587640264006274" type="ProjectVariables">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
                             <param id="1" name="Value"> Dialogues.StringValue( &quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/@id_next&quot;)</param>
@@ -1085,14 +1125,23 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;choice&quot;</param>
                                 </condition>
+                                <condition id="-33" name="Pick by comparison" sid="643803310192890" type="System">
+                                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                                    <param id="1" name="Expression">DialogueSpriteFontChoice.number</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">min(ProjectVariables.Get(&quot;choice_number&quot;),ProjectVariables.Get(&quot;cursor_position&quot;) + 1)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set key" sid="908972224593073" type="ProjectVariables">
                                     <param id="0" name="Key">&quot;cursor_position&quot;</param>
                                     <param id="1" name="Value">min(ProjectVariables.Get(&quot;choice_number&quot;),ProjectVariables.Get(&quot;cursor_position&quot;) + 1)</param>
                                 </action>
+                                <action id="-1" name="Set X" sid="376939509486992" type="Dialoguecursor">
+                                    <param id="0" name="X">DialogueSpriteFontChoice.X - 10</param>
+                                </action>
                                 <action id="-2" name="Set Y" sid="243616618139658" type="Dialoguecursor">
-                                    <param id="0" name="Y">DialogueSpriteFont.Y + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                                    <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
                                 </action>
                                 <action id="1" name="Set key" sid="898464314316902" type="ProjectVariables">
                                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
@@ -1146,14 +1195,23 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;choice&quot;</param>
                                 </condition>
+                                <condition id="-33" name="Pick by comparison" sid="101211737907418" type="System">
+                                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                                    <param id="1" name="Expression">DialogueSpriteFontChoice.number</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">max(1,ProjectVariables.Get(&quot;cursor_position&quot;) - 1)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set key" sid="932003860074792" type="ProjectVariables">
                                     <param id="0" name="Key">&quot;cursor_position&quot;</param>
                                     <param id="1" name="Value">max(1,ProjectVariables.Get(&quot;cursor_position&quot;) - 1)</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="510117737182093" type="Dialoguecursor">
-                                    <param id="0" name="Y">DialogueSpriteFont.Y + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                                <action id="-1" name="Set X" sid="767102148626912" type="Dialoguecursor">
+                                    <param id="0" name="X">DialogueSpriteFontChoice.X - 10</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="389154055181755" type="Dialoguecursor">
+                                    <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
                                 </action>
                                 <action id="1" name="Set key" sid="996817645349798" type="ProjectVariables">
                                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
@@ -1520,8 +1578,11 @@
                                             <param id="0" name="Key">&quot;cursor_position&quot;</param>
                                             <param id="1" name="Value">DialogueSpriteFontChoice.number</param>
                                         </action>
-                                        <action id="-2" name="Set Y" sid="225053314988091" type="Dialoguecursor">
-                                            <param id="0" name="Y">DialogueSpriteFont.Y + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                                        <action id="-2" name="Set Y" sid="144096712887680" type="Dialoguecursor">
+                                            <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="783067081608438" type="Dialoguecursor">
+                                            <param id="0" name="X">DialogueSpriteFontChoice.X</param>
                                         </action>
                                         <action id="1" name="Set key" sid="665375084314555" type="ProjectVariables">
                                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
