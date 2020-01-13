@@ -403,7 +403,7 @@
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">EnemyCoreBox.UID</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="646559082361187" type="Family_Item">
+                                        <condition id="-14" name="Pick by unique ID" sid="646559082361187" type="Item_Generic">
                                             <param id="0" name="Unique ID">EnemyCoreBox.ArmLeft</param>
                                         </condition>
                                     </conditions>
@@ -411,10 +411,8 @@
                                     <sub-events>
                                         <event-block sid="364105061938510">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="709682496755139" type="Family_Item">
-                                                    <param id="0" name="Instance variable">Information</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Short&quot;</param>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="709682496755139" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -432,7 +430,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="411643057174689" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_Press</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_Press</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -443,7 +441,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="788061062125671" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -452,10 +450,8 @@
                                         </event-block>
                                         <event-block sid="934229581416582">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="661347831603711" type="Family_Item">
-                                                    <param id="0" name="Instance variable">Information</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Long&quot;</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="733899770636400" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
                                                 </condition>
                                                 <condition id="-6" name="Every X seconds" sid="294743845217672" type="System">
                                                     <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackLong</param>
@@ -468,12 +464,12 @@
                                                         <condition id="-8" name="Compare two values" sid="902671142756117" type="System">
                                                             <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
                                                             <param id="1" name="Comparison">3</param>
-                                                            <param id="2" name="Second value">100</param>
+                                                            <param id="2" name="Second value">200</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="984274743599201" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_Press</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_Press</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -484,7 +480,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="423564843963692" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -501,7 +497,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="837749464825475" type="Function">
-                                                    <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                                    <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                                 </action>
                                             </actions>
@@ -524,7 +520,7 @@
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">EnemyCoreBox.UID</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="367937428310902" type="Family_Item">
+                                        <condition id="-14" name="Pick by unique ID" sid="367937428310902" type="Item_Generic">
                                             <param id="0" name="Unique ID">EnemyCoreBox.ArmRight</param>
                                         </condition>
                                     </conditions>
@@ -532,10 +528,8 @@
                                     <sub-events>
                                         <event-block sid="538607993987593">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="767692744351119" type="Family_Item">
-                                                    <param id="0" name="Instance variable">Information</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Short&quot;</param>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="641063414863019" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -553,7 +547,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="942436954906562" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_Press</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_Press</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -564,7 +558,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="958580319331232" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -573,10 +567,8 @@
                                         </event-block>
                                         <event-block sid="937789008463172">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="486843209917928" type="Family_Item">
-                                                    <param id="0" name="Instance variable">Information</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Long&quot;</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="685491199610467" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
                                                 </condition>
                                                 <condition id="-6" name="Every X seconds" sid="996258957307456" type="System">
                                                     <param id="0" name="Interval (seconds)">EnemyCoreBox.TimePerAttackLong</param>
@@ -589,12 +581,12 @@
                                                         <condition id="-8" name="Compare two values" sid="636402967872087" type="System">
                                                             <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
                                                             <param id="1" name="Comparison">3</param>
-                                                            <param id="2" name="Second value">100</param>
+                                                            <param id="2" name="Second value">200</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="303789768710428" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_Press</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_Press</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -605,7 +597,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="820737137636283" type="Function">
-                                                            <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                                            <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                             <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                                         </action>
                                                     </actions>
@@ -622,7 +614,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="290773673723682" type="Function">
-                                                    <param id="0" name="Name">Family_Item.Function_UnPress</param>
+                                                    <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>
                                                 </action>
                                             </actions>

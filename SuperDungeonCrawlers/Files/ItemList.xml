@@ -39,7 +39,7 @@
 	<object name='Bow'>
 		<Animation>Object_Bow</Animation>
 		<Function_Command>HoldBow</Function_Command>
-		<TypeObject>Melee</TypeObject>
+		<TypeObject>Shot</TypeObject>
 		<Information>Shot Object</Information>
 		<Projectile>
 			<Animation>Arrow</Animation>
