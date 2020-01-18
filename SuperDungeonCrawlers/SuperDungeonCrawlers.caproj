@@ -2556,6 +2556,20 @@
             <object-folder name="Dictionary">
                 <object-type global="1" name="ProjectVariables" sid="440413926196261">
                     <plugin id="Dictionary" />
+                    <instance-variables>
+                        <instance-variable name="dialogue_box_project_prefix" sid="285042337523715" type="string" />
+                        <instance-variable name="dialogue_box_project_last_space_index" sid="385233714689573" type="number" />
+                        <instance-variable name="dialogue_box_project_current_index" sid="416783322237849" type="number" />
+                        <instance-variable name="dialogue_box_project_text_width" sid="220862315864315" type="number" />
+                        <instance-variable name="dialogue_box_project_line_width" sid="648758816906784" type="number" />
+                        <instance-variable name="dialogue_box_project_l" sid="120997635461614" type="number" />
+                        <instance-variable name="dialogue_box_project_c" sid="161971593417426" type="string" />
+                        <instance-variable name="dialogue_box_project_text" sid="595657459157022" type="string" />
+                        <instance-variable name="dialogue_box_project_variable_name" sid="379601478446477" type="string" />
+                        <instance-variable name="dialogue_box_project_command_count" sid="713120784878758" type="number" />
+                        <instance-variable name="dialogue_box_project_command_name" sid="733301866938352" type="string" />
+                        <instance-variable name="dialogue_box_project_choice_height" sid="969002335536746" type="number" />
+                    </instance-variables>
                 </object-type>
                 <object-type global="1" name="YourVariables" sid="887477502728289">
                     <plugin id="Dictionary" />
@@ -3454,6 +3468,13 @@
             <instance-variables>
                 <instance-variable name="Loaded" sid="934023920668733" type="boolean" />
             </instance-variables>
+        </family>
+        <family name="Family_DialogueFont" plugin-id="Spritefont2" sid="303539853242344">
+            <members>
+                <member>DialogueSpriteFont</member>
+                <member>DialogueSpriteFontAvatar</member>
+                <member>DialogueSpriteFontChoice</member>
+            </members>
         </family>
     </families>
     <layout-folder>

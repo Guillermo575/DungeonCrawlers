@@ -1992,7 +1992,7 @@
                         <height>18</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2649,7 +2649,22 @@
                 <Player_Index>0</Player_Index>
             </instance-variables>
         </instance>
-        <instance type="ProjectVariables" uid="127" />
+        <instance type="ProjectVariables" uid="127">
+            <instance-variables>
+                <dialogue_box_project_prefix></dialogue_box_project_prefix>
+                <dialogue_box_project_last_space_index>0</dialogue_box_project_last_space_index>
+                <dialogue_box_project_current_index>0</dialogue_box_project_current_index>
+                <dialogue_box_project_text_width>0</dialogue_box_project_text_width>
+                <dialogue_box_project_line_width>0</dialogue_box_project_line_width>
+                <dialogue_box_project_l>0</dialogue_box_project_l>
+                <dialogue_box_project_c></dialogue_box_project_c>
+                <dialogue_box_project_text></dialogue_box_project_text>
+                <dialogue_box_project_variable_name></dialogue_box_project_variable_name>
+                <dialogue_box_project_command_count>0</dialogue_box_project_command_count>
+                <dialogue_box_project_command_name></dialogue_box_project_command_name>
+                <dialogue_box_project_choice_height>0</dialogue_box_project_choice_height>
+            </instance-variables>
+        </instance>
         <instance type="Dialogues" uid="128" />
         <instance type="YourVariables" uid="130" />
         <instance type="Choice_next" uid="155">
