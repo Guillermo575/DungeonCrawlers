@@ -648,5 +648,35 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="143907813422825">
+            <conditions>
+                <condition id="0" name="On function" sid="757985406358839" type="Function">
+                    <param id="0" name="Name">&quot;Activate_AI&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="868214737131851" type="Family_AI">
+                    <param id="0" name="Instance variable">AIActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="299899618419579" type="Family_NPC">
+                    <param id="0" name="Instance variable">CanTalk</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="812983716261524">
+            <conditions>
+                <condition id="0" name="On function" sid="632347531975179" type="Function">
+                    <param id="0" name="Name">&quot;Heal_Player&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="762197142456678" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Value">PlayerCoreBox.HPMax</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
