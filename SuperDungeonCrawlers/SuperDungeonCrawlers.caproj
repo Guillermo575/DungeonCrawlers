@@ -2543,18 +2543,18 @@
         </object-folder>
         <object-folder name="DialogueBox">
             <object-folder name="Arrays">
-                <object-type global="1" name="Choice_next" sid="986644072296470">
+                <object-type global="1" name="ArrayDialogueChoice" sid="986644072296470">
                     <plugin id="Arr" />
                 </object-type>
-                <object-type global="1" name="SpecialCommands" sid="884627065058665">
+                <object-type global="1" name="ArrayDialogueCommand" sid="884627065058665">
                     <plugin id="Arr" />
                 </object-type>
-                <object-type global="1" name="SpriteFontImporter" sid="769687031887712">
+                <object-type global="1" name="ArrayDialogueFontImporter" sid="769687031887712">
                     <plugin id="Arr" />
                 </object-type>
             </object-folder>
             <object-folder name="Dictionary">
-                <object-type global="1" name="ProjectVariables" sid="440413926196261">
+                <object-type global="1" name="DictionaryDialogue" sid="440413926196261">
                     <plugin id="Dictionary" />
                     <instance-variables>
                         <instance-variable name="dialogue_box_project_prefix" sid="285042337523715" type="string" />
@@ -2571,12 +2571,12 @@
                         <instance-variable name="dialogue_box_project_choice_height" sid="969002335536746" type="number" />
                     </instance-variables>
                 </object-type>
-                <object-type global="1" name="YourVariables" sid="887477502728289">
+                <object-type global="1" name="DictionaryDialogueSpecial" sid="887477502728289">
                     <plugin id="Dictionary" />
                 </object-type>
             </object-folder>
             <object-folder name="Fonts">
-                <object-type name="DialogueSpriteFont" sid="812402647707878">
+                <object-type name="SpriteFontDialogue" sid="812402647707878">
                     <plugin id="Spritefont2" />
                     <behaviors>
                         <behavior-type name="Timer" sid="251836347571207">
@@ -2585,7 +2585,7 @@
                     </behaviors>
                     <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
                 </object-type>
-                <object-type name="DialogueSpriteFontAvatar" sid="156323620807817">
+                <object-type name="SpriteFontDialogueAvatar" sid="156323620807817">
                     <plugin id="Spritefont2" />
                     <behaviors>
                         <behavior-type name="Timer" sid="839932838166839">
@@ -2594,7 +2594,7 @@
                     </behaviors>
                     <texture original-source="C:\Users\Grace\Desktop\Nueva carpeta\SpriteFont_Arial_Normal_(20)_[0,0,0,0]_21x23.png" />
                 </object-type>
-                <object-type name="DialogueSpriteFontChoice" sid="140583800650426">
+                <object-type name="SpriteFontDialogueChoice" sid="140583800650426">
                     <plugin id="Spritefont2" />
                     <instance-variables>
                         <instance-variable name="next_id" sid="460367419495462" type="string" />
@@ -2610,7 +2610,7 @@
                 </object-type>
             </object-folder>
             <object-folder name="Sprites">
-                <object-type name="DialogueAvatar" sid="372924118418178">
+                <object-type name="DialogueBoxAvatar" sid="372924118418178">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="452290645842267" speed="5">
@@ -2646,7 +2646,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Dialoguecursor" sid="945871818414324">
+                <object-type name="DialogueCursorChoice" sid="945871818414324">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246397164953981" speed="10">
@@ -2703,7 +2703,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="DialogueChoiceBox" sid="907662502390674">
+                <object-type name="DialogueBoxChoice" sid="907662502390674">
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683582157539233" speed="5">
@@ -2724,7 +2724,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-type global="1" name="Dialogues" sid="309332141315499">
+            <object-type global="1" name="XMLDialogue" sid="309332141315499">
                 <plugin id="XML" />
             </object-type>
         </object-folder>
@@ -3471,9 +3471,9 @@
         </family>
         <family name="Family_DialogueFont" plugin-id="Spritefont2" sid="303539853242344">
             <members>
-                <member>DialogueSpriteFont</member>
-                <member>DialogueSpriteFontAvatar</member>
-                <member>DialogueSpriteFontChoice</member>
+                <member>SpriteFontDialogue</member>
+                <member>SpriteFontDialogueAvatar</member>
+                <member>SpriteFontDialogueChoice</member>
             </members>
         </family>
     </families>

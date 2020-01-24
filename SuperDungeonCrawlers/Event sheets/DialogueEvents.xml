@@ -12,7 +12,7 @@
                     <param id="0" name="Tag">&quot;dialogues&quot;</param>
                     <param id="1" name="URL">&quot;dialogues.xml&quot;</param>
                 </action>
-                <action id="4" name="Load" sid="228082805333016" type="ProjectVariables">
+                <action id="4" name="Load" sid="228082805333016" type="DictionaryDialogue">
                     <param id="0" name="JSON">&quot;{&quot;&quot;c2dictionary&quot;&quot;:true,&quot;&quot;data&quot;&quot;:{&quot;&quot;line_count&quot;&quot;:0,&quot;&quot;word&quot;&quot;:&quot;&quot; &quot;&quot;,&quot;&quot;skip_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;end_dialogue_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_loaded&quot;&quot;:0,&quot;&quot;end_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;begin_function&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;dialogue_running&quot;&quot;:0,&quot;&quot;name&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_next&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_faster&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_up&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_down&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;key_skip&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;line_type&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;next_line_id&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;box_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;text&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;avatar_animation&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;avatar_name&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;letter_count&quot;&quot;:0,&quot;&quot;written_letters&quot;&quot;:0,&quot;&quot;displaying&quot;&quot;:0,&quot;&quot;choice_number&quot;&quot;:0,&quot;&quot;cursor_position&quot;&quot;:0,&quot;&quot;typing_sound&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;wait&quot;&quot;:0,&quot;&quot;text_displayed&quot;&quot;:0,&quot;&quot;auto&quot;&quot;:0,&quot;&quot;choice_height&quot;&quot;:0,&quot;&quot;mouse_enabled&quot;&quot;:&quot;&quot;0&quot;&quot;,&quot;&quot;line_paused&quot;&quot;:0,&quot;&quot;command_index&quot;&quot;:0}}&quot;</param>
                 </action>
                 <action id="-4" name="Set layer visible" sid="771664496985139" type="System">
@@ -30,37 +30,37 @@
                     <param id="1" name="Height">OriginalWindowHeight/2</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="740527056421083" type="DialogueBox">
-                    <param id="0" name="Object">DialogueChoiceBox</param>
+                    <param id="0" name="Object">DialogueBoxChoice</param>
                     <param id="1" name="Layer">DialogueBox.LayerName</param>
                     <param id="2" name="Image point">&quot;DialogueChoiceBox&quot;</param>
                 </action>
-                <action id="-7" name="Set size" sid="229499395131601" type="DialogueChoiceBox">
+                <action id="-7" name="Set size" sid="229499395131601" type="DialogueBoxChoice">
                     <param id="0" name="Width">OriginalWindowWidth/2</param>
-                    <param id="1" name="Height">DialogueChoiceBox.Height</param>
+                    <param id="1" name="Height">DialogueBoxChoice.Height</param>
                 </action>
                 <action id="-3" name="Create object" sid="515697930984778" type="System">
-                    <param id="0" name="Object to create">DialogueAvatar</param>
+                    <param id="0" name="Object to create">DialogueBoxAvatar</param>
                     <param id="1" name="Layer">DialogueBox.LayerName</param>
                     <param id="2" name="X">DialogueBox.ImagePointX(&quot;avatar&quot;)</param>
                     <param id="3" name="Y">DialogueBox.ImagePointY(&quot;avatar&quot;)</param>
                 </action>
-                <action id="-7" name="Set size" sid="534764560455610" type="DialogueAvatar">
+                <action id="-7" name="Set size" sid="534764560455610" type="DialogueBoxAvatar">
                     <param id="0" name="Width">OriginalWindowWidth/5</param>
                     <param id="1" name="Height">OriginalWindowHeight/3</param>
                 </action>
                 <action id="-3" name="Create object" sid="637805853152488" type="System">
-                    <param id="0" name="Object to create">DialogueSpriteFont</param>
+                    <param id="0" name="Object to create">SpriteFontDialogue</param>
                     <param id="1" name="Layer">DialogueBox.LayerName</param>
                     <param id="2" name="X">DialogueBox.ImagePointX(&quot;text&quot;)</param>
                     <param id="3" name="Y">DialogueBox.ImagePointY(&quot;text&quot;)</param>
                 </action>
                 <action id="-3" name="Create object" sid="696127458662075" type="System">
-                    <param id="0" name="Object to create">DialogueSpriteFontAvatar</param>
+                    <param id="0" name="Object to create">SpriteFontDialogueAvatar</param>
                     <param id="1" name="Layer">DialogueBox.LayerName</param>
                     <param id="2" name="X">DialogueBox.ImagePointX(&quot;name&quot;)</param>
                     <param id="3" name="Y">DialogueBox.ImagePointY(&quot;name&quot;)</param>
                 </action>
-                <action id="-7" name="Set size" sid="109271363730403" type="DialogueSpriteFont">
+                <action id="-7" name="Set size" sid="109271363730403" type="SpriteFontDialogue">
                     <param id="0" name="Width">(OriginalWindowWidth/5)*3.5</param>
                     <param id="1" name="Height">OriginalWindowHeight/3.5</param>
                 </action>
@@ -70,10 +70,10 @@
                     <param id="2" name="X">DialogueBox.ImagePointX(&quot;CursorMore&quot;)</param>
                     <param id="3" name="Y">DialogueBox.ImagePointY(&quot;CursorMore&quot;)</param>
                 </action>
-                <action id="-15" name="Set visible" sid="635364689658384" type="DialogueChoiceBox">
+                <action id="-15" name="Set visible" sid="635364689658384" type="DialogueBoxChoice">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action disabled="1" id="0" name="Add key" sid="750581157233840" type="YourVariables">
+                <action id="0" name="Add key" sid="750581157233840" type="DictionaryDialogueSpecial">
                     <param id="0" name="Key">&quot;Player&quot;</param>
                     <param id="1" name="Value">&quot;Sebas&quot;</param>
                 </action>
@@ -85,15 +85,15 @@
                     <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="903197292251073" type="System">
-                    <param id="0" name="First value">Dialogues.StringValue(Function.Param(0) &amp; Function.Param(1)&amp; Function.Param(2))</param>
+                    <param id="0" name="First value">XMLDialogue.StringValue(Function.Param(0) &amp; Function.Param(1)&amp; Function.Param(2))</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Second value">&quot;&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Set key" sid="176096169004430" type="ProjectVariables">
+                <action id="1" name="Set key" sid="176096169004430" type="DictionaryDialogue">
                     <param id="0" name="Key">Function.Param(1)</param>
-                    <param id="1" name="Value">Dialogues.StringValue(Function.Param(0) &amp; Function.Param(1)&amp; Function.Param(2))</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue(Function.Param(0) &amp; Function.Param(1)&amp; Function.Param(2))</param>
                 </action>
             </actions>
         </event-block>
@@ -104,10 +104,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Load" sid="958418055162344" type="Dialogues">
+                <action id="0" name="Load" sid="958418055162344" type="XMLDialogue">
                     <param id="0" name="XML">AJAX.LastData</param>
                 </action>
-                <action id="1" name="Set key" sid="193646640106537" type="ProjectVariables">
+                <action id="1" name="Set key" sid="193646640106537" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_loaded&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -164,13 +164,13 @@
                     <param id="0" name="Name">&quot;dialogue&quot;</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="377823503868021" type="System">
-                    <param id="0" name="First value">Dialogues.StringValue(&quot;/Dialogues/Dialogue[@id=&apos;&quot;&amp; Function.Param(0) &amp;&quot;&apos;]&quot;)</param>
+                    <param id="0" name="First value">XMLDialogue.StringValue(&quot;/Dialogues/Dialogue[@id=&apos;&quot;&amp; Function.Param(0) &amp;&quot;&apos;]&quot;)</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Second value">&quot;&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="199572209105885" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="199572209105885" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_prefix</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
@@ -181,29 +181,29 @@
                 <action id="-15" name="Set visible" sid="562258309429325" type="DialogueCursorMore">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="1" name="Set key" sid="802348398958855" type="ProjectVariables">
+                <action id="1" name="Set key" sid="802348398958855" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="1" name="Set key" sid="468009838889450" type="ProjectVariables">
+                <action id="1" name="Set key" sid="468009838889450" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;name&quot;</param>
                     <param id="1" name="Value">Function.Param(0)</param>
                 </action>
-                <action id="1" name="Set key" sid="505702091686239" type="ProjectVariables">
+                <action id="1" name="Set key" sid="505702091686239" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
                     <param id="1" name="Value">&quot;0&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="143452522273999" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="143452522273999" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_prefix</param>
-                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;name&quot;) &amp;&quot;&apos;]/@&quot;</param>
+                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot;&amp; DictionaryDialogue.Get(&quot;name&quot;) &amp;&quot;&apos;]/@&quot;</param>
                 </action>
-                <action id="1" name="Set key" sid="297623138330207" type="ProjectVariables">
+                <action id="1" name="Set key" sid="297623138330207" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;checking_function&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue( ProjectVariables.dialogue_box_project_prefix &amp;&quot;checking_function&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue( DictionaryDialogue.dialogue_box_project_prefix &amp;&quot;checking_function&quot;)</param>
                 </action>
-                <action id="1" name="Set key" sid="762000857260515" type="ProjectVariables">
+                <action id="1" name="Set key" sid="762000857260515" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;skip_function&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue( ProjectVariables.dialogue_box_project_prefix &amp;&quot;skip_function&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue( DictionaryDialogue.dialogue_box_project_prefix &amp;&quot;skip_function&quot;)</param>
                 </action>
                 <action id="-16" name="Wait" sid="308458619306331" type="System">
                     <param id="0" name="Seconds">0</param>
@@ -213,15 +213,15 @@
                 <event-block sid="746994798200607">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="271200740492227" type="System">
-                            <param id="0" name="First value">ProjectVariables.Get(&quot;checking_function&quot;)</param>
+                            <param id="0" name="First value">DictionaryDialogue.Get(&quot;checking_function&quot;)</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set key" sid="591687348669628" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="591687348669628" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                            <param id="1" name="Value">Function.Call(ProjectVariables.Get(&quot;checking_function&quot;))</param>
+                            <param id="1" name="Value">Function.Call(DictionaryDialogue.Get(&quot;checking_function&quot;))</param>
                         </action>
                         <action id="-16" name="Wait" sid="499420613576907" type="System">
                             <param id="0" name="Seconds">0</param>
@@ -253,12 +253,12 @@
             <sub-events>
                 <event-block any="1" sid="480179520801612">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="792058280220157" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="792058280220157" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;end&quot;</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="844878807859521" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="844878807859521" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;&quot;</param>
@@ -266,7 +266,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="140869593830781" type="Function">
-                            <param id="0" name="Name"> ProjectVariables.Get(&quot;end_dialogue_function&quot;)</param>
+                            <param id="0" name="Name"> DictionaryDialogue.Get(&quot;end_dialogue_function&quot;)</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="671030534344852" type="Function">
@@ -283,29 +283,29 @@
                     <sub-events>
                         <event-block sid="821279749904618">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="266213390919688" type="ProjectVariables">
+                                <condition id="0" name="Compare value" sid="266213390919688" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;line_type&quot;</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;choice&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="297266894688631" type="Dialoguecursor" />
-                                <action id="-9" name="Destroy" sid="624361865923320" type="DialogueSpriteFontChoice" />
+                                <action id="-9" name="Destroy" sid="297266894688631" type="DialogueCursorChoice" />
+                                <action id="-9" name="Destroy" sid="624361865923320" type="SpriteFontDialogueChoice" />
                             </actions>
                         </event-block>
                         <event-block sid="257521160686679">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="770444973071690" type="System">
-                                    <param id="0" name="First value">ProjectVariables.Get(&quot;checking_function&quot;)</param>
+                                    <param id="0" name="First value">DictionaryDialogue.Get(&quot;checking_function&quot;)</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="762061145062156" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="762061145062156" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                                    <param id="1" name="Value">Function.Call(ProjectVariables.Get(&quot;checking_function&quot;))</param>
+                                    <param id="1" name="Value">Function.Call(DictionaryDialogue.Get(&quot;checking_function&quot;))</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="858705461194536" type="System">
                                     <param id="0" name="Seconds">0</param>
@@ -336,19 +336,19 @@
                     <param id="0" name="Name">&quot;DialogInvisible&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="1" name="Set key" sid="933870840330791" type="ProjectVariables">
+                <action id="1" name="Set key" sid="933870840330791" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="1" name="Set key" sid="639472628062220" type="ProjectVariables">
+                <action id="1" name="Set key" sid="639472628062220" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;text_displayed&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="0" name="Set text" sid="275113979295241" type="DialogueSpriteFont">
+                <action id="0" name="Set text" sid="275113979295241" type="SpriteFontDialogue">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
-                <action id="-9" name="Destroy" sid="312250731716351" type="DialogueSpriteFontChoice" />
-                <action id="-9" name="Destroy" sid="478661987282996" type="Dialoguecursor" />
+                <action id="-9" name="Destroy" sid="312250731716351" type="SpriteFontDialogueChoice" />
+                <action id="-9" name="Destroy" sid="478661987282996" type="DialogueCursorChoice" />
             </actions>
         </event-block>
         <event-block sid="550567041687295">
@@ -358,102 +358,102 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="645448395759453" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="645448395759453" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_last_space_index</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="983032915036596" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="983032915036596" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="631900647086160" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="631900647086160" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_text_width</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="629668931297515" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="629668931297515" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="953626585990356" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="953626585990356" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_l</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="891080584426679" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="891080584426679" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_c</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="760337444548676" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="760337444548676" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_text_width</param>
-                    <param id="1" name="Value">DialogueSpriteFont.Width</param>
+                    <param id="1" name="Value">SpriteFontDialogue.Width</param>
                 </action>
-                <action id="-10" name="Set value" sid="526680552190094" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="526680552190094" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_l</param>
-                    <param id="1" name="Value">len(ProjectVariables.Get(&quot;text&quot;))</param>
+                    <param id="1" name="Value">len(DictionaryDialogue.Get(&quot;text&quot;))</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="403687444242492">
                     <conditions>
                         <condition id="-23" name="While" sid="238702874657481" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="592912215606187" type="ProjectVariables">
+                        <condition id="-7" name="Compare instance variable" sid="592912215606187" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">ProjectVariables.dialogue_box_project_l</param>
+                            <param id="2" name="Value">DictionaryDialogue.dialogue_box_project_l</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="821619824478489" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="821619824478489" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_c</param>
-                            <param id="1" name="Value">mid(ProjectVariables.Get(&quot;text&quot;), ProjectVariables.dialogue_box_project_current_index,1)</param>
+                            <param id="1" name="Value">mid(DictionaryDialogue.Get(&quot;text&quot;), DictionaryDialogue.dialogue_box_project_current_index,1)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="127813455406673" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="127813455406673" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
-                            <param id="1" name="Value">DialogueSpriteFont.CharacterWidth(ProjectVariables.dialogue_box_project_c) * DialogueSpriteFont.CharacterScale</param>
+                            <param id="1" name="Value">SpriteFontDialogue.CharacterWidth(DictionaryDialogue.dialogue_box_project_c) * SpriteFontDialogue.CharacterScale</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="117873370310737">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="675911205944467" type="ProjectVariables">
+                                <condition id="-7" name="Compare instance variable" sid="675911205944467" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_c</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot; &quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="929011905655122" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="929011905655122" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_last_space_index</param>
-                                    <param id="1" name="Value">ProjectVariables.dialogue_box_project_current_index</param>
+                                    <param id="1" name="Value">DictionaryDialogue.dialogue_box_project_current_index</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="341127768558179">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="536875929900949" type="ProjectVariables">
+                                <condition id="-7" name="Compare instance variable" sid="536875929900949" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">ProjectVariables.dialogue_box_project_text_width</param>
+                                    <param id="2" name="Value">DictionaryDialogue.dialogue_box_project_text_width</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="432762915335281" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="432762915335281" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="1" name="Set key" sid="432682106499374" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="432682106499374" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;text&quot;</param>
-                                    <param id="1" name="Value">left(ProjectVariables.Get(&quot;text&quot;), ProjectVariables.dialogue_box_project_last_space_index) &amp; newline &amp; right(ProjectVariables.Get(&quot;text&quot;),ProjectVariables.dialogue_box_project_l - ProjectVariables.dialogue_box_project_last_space_index - 1)</param>
+                                    <param id="1" name="Value">left(DictionaryDialogue.Get(&quot;text&quot;), DictionaryDialogue.dialogue_box_project_last_space_index) &amp; newline &amp; right(DictionaryDialogue.Get(&quot;text&quot;),DictionaryDialogue.dialogue_box_project_l - DictionaryDialogue.dialogue_box_project_last_space_index - 1)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="312124606480000" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="312124606480000" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
-                                    <param id="1" name="Value">ProjectVariables.dialogue_box_project_last_space_index</param>
+                                    <param id="1" name="Value">DictionaryDialogue.dialogue_box_project_last_space_index</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="132720820496856">
                             <conditions />
                             <actions>
-                                <action id="-11" name="Add to" sid="745674056925264" type="ProjectVariables">
+                                <action id="-11" name="Add to" sid="745674056925264" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -470,47 +470,47 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="191135975634447" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="191135975634447" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_last_space_index</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="862819122019483" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="862819122019483" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="992385549614617" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="992385549614617" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_text_width</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="804824941509172" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="804824941509172" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="474041302036219" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="474041302036219" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_l</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="959849077601755" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="959849077601755" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_c</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="966897517240688" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="966897517240688" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_text</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="155182770013163" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="155182770013163" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_text_width</param>
-                    <param id="1" name="Value">DialogueSpriteFont.Width</param>
+                    <param id="1" name="Value">SpriteFontDialogue.Width</param>
                 </action>
-                <action id="-10" name="Set value" sid="114916119382000" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="114916119382000" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_text</param>
                     <param id="1" name="Value">Function.Param(0)</param>
                 </action>
-                <action id="-10" name="Set value" sid="912727674088807" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="912727674088807" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_l</param>
-                    <param id="1" name="Value">len(ProjectVariables.dialogue_box_project_text)</param>
+                    <param id="1" name="Value">len(DictionaryDialogue.dialogue_box_project_text)</param>
                 </action>
-                <action id="1" name="Set key" sid="891791884288839" type="ProjectVariables">
+                <action id="1" name="Set key" sid="891791884288839" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_count&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -519,84 +519,84 @@
                 <event-block sid="511227405007060">
                     <conditions>
                         <condition id="-23" name="While" sid="528769971806758" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="632481510431547" type="ProjectVariables">
+                        <condition id="-7" name="Compare instance variable" sid="632481510431547" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">ProjectVariables.dialogue_box_project_l</param>
+                            <param id="2" name="Value">DictionaryDialogue.dialogue_box_project_l</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="989392966002960" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="989392966002960" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_c</param>
-                            <param id="1" name="Value">mid(ProjectVariables.dialogue_box_project_text, ProjectVariables.dialogue_box_project_current_index,1)</param>
+                            <param id="1" name="Value">mid(DictionaryDialogue.dialogue_box_project_text, DictionaryDialogue.dialogue_box_project_current_index,1)</param>
                         </action>
-                        <action id="-11" name="Add to" sid="791589340358645" type="ProjectVariables">
+                        <action id="-11" name="Add to" sid="791589340358645" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
-                            <param id="1" name="Value">DialogueSpriteFont.CharacterWidth(ProjectVariables.dialogue_box_project_c) * DialogueSpriteFont.CharacterScale</param>
+                            <param id="1" name="Value">SpriteFontDialogue.CharacterWidth(DictionaryDialogue.dialogue_box_project_c) * SpriteFontDialogue.CharacterScale</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="828299365370676">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="121904722049017" type="ProjectVariables">
+                                <condition id="-7" name="Compare instance variable" sid="121904722049017" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_c</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot; &quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="140244579835159" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="140244579835159" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_last_space_index</param>
-                                    <param id="1" name="Value">ProjectVariables.dialogue_box_project_current_index</param>
+                                    <param id="1" name="Value">DictionaryDialogue.dialogue_box_project_current_index</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="703902968412077">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="267688939629309" type="ProjectVariables">
+                                <condition id="-7" name="Compare instance variable" sid="267688939629309" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_c</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">newline</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="337180334022317" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="337180334022317" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="1" name="Set key" sid="718480123419696" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="718480123419696" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;line_count&quot;</param>
-                                    <param id="1" name="Value">ProjectVariables.Get(&quot;line_count&quot;) + 1</param>
+                                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;line_count&quot;) + 1</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="406890201222134">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="397476471930470" type="ProjectVariables">
+                                <condition id="-7" name="Compare instance variable" sid="397476471930470" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">ProjectVariables.dialogue_box_project_text_width</param>
+                                    <param id="2" name="Value">DictionaryDialogue.dialogue_box_project_text_width</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="253415666669287" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="253415666669287" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_line_width</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="1" name="Set key" sid="455910147124918" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="455910147124918" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;line_count&quot;</param>
-                                    <param id="1" name="Value">ProjectVariables.Get(&quot;line_count&quot;) + 1</param>
+                                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;line_count&quot;) + 1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="964269505229429" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="964269505229429" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
-                                    <param id="1" name="Value">ProjectVariables.dialogue_box_project_last_space_index</param>
+                                    <param id="1" name="Value">DictionaryDialogue.dialogue_box_project_last_space_index</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="335398280117575">
                             <conditions />
                             <actions>
-                                <action id="-11" name="Add to" sid="920541469385281" type="ProjectVariables">
+                                <action id="-11" name="Add to" sid="920541469385281" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_current_index</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -613,19 +613,19 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="350278249182674" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="350278249182674" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_variable_name</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="649511185625461" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="649511185625461" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_command_count</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="709035858171384" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="709035858171384" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_command_name</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="1" name="Set size" sid="894457398118933" type="SpecialCommands">
+                <action id="1" name="Set size" sid="894457398118933" type="ArrayDialogueCommand">
                     <param id="0" name="Width">0</param>
                     <param id="1" name="Height">1</param>
                     <param id="2" name="Depth">1</param>
@@ -637,23 +637,23 @@
                     <conditions>
                         <condition id="-23" name="While" sid="333771725336236" type="System" />
                         <condition id="-8" name="Compare two values" sid="978200497923075" type="System">
-                            <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\{\D\w*\}&quot;,&quot;&quot;)</param>
+                            <param id="0" name="First value">RegexMatchCount(DictionaryDialogue.Get(&quot;text&quot;),&quot;\{\D\w*\}&quot;,&quot;&quot;)</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="911620727946053" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="911620727946053" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_variable_name</param>
-                            <param id="1" name="Value">RegexMatchAt(ProjectVariables.Get(&quot;text&quot;),&quot;\{\D\w*\}&quot;,&quot;&quot;,0)</param>
+                            <param id="1" name="Value">RegexMatchAt(DictionaryDialogue.Get(&quot;text&quot;),&quot;\{\D\w*\}&quot;,&quot;&quot;,0)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="630887837058458" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="630887837058458" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_variable_name</param>
-                            <param id="1" name="Value">mid(ProjectVariables.dialogue_box_project_variable_name,1,len(ProjectVariables.dialogue_box_project_variable_name)-2)</param>
+                            <param id="1" name="Value">mid(DictionaryDialogue.dialogue_box_project_variable_name,1,len(DictionaryDialogue.dialogue_box_project_variable_name)-2)</param>
                         </action>
-                        <action id="1" name="Set key" sid="211608607265613" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="211608607265613" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;text&quot;</param>
-                            <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\{&quot; &amp; ProjectVariables.dialogue_box_project_variable_name &amp; &quot;\}&quot;,&quot;&quot;,YourVariables.Get(ProjectVariables.dialogue_box_project_variable_name))</param>
+                            <param id="1" name="Value">RegexReplace(DictionaryDialogue.Get(&quot;text&quot;),&quot;\{&quot; &amp; DictionaryDialogue.dialogue_box_project_variable_name &amp; &quot;\}&quot;,&quot;&quot;,DictionaryDialogueSpecial.Get(DictionaryDialogue.dialogue_box_project_variable_name))</param>
                         </action>
                         <action id="-16" name="Wait" sid="712457439418376" type="System">
                             <param id="0" name="Seconds">0</param>
@@ -664,30 +664,30 @@
                     <conditions>
                         <condition id="-23" name="While" sid="390802334253982" type="System" />
                         <condition id="-8" name="Compare two values" sid="478016418535844" type="System">
-                            <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;)</param>
+                            <param id="0" name="First value">RegexMatchCount(DictionaryDialogue.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;)</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="493688245653038" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="493688245653038" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_command_name</param>
-                            <param id="1" name="Value">RegexMatchAt(ProjectVariables.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;,0)</param>
+                            <param id="1" name="Value">RegexMatchAt(DictionaryDialogue.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;,0)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="438544074036077" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="438544074036077" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_command_name</param>
-                            <param id="1" name="Value">mid(ProjectVariables.dialogue_box_project_command_name,1,len(ProjectVariables.dialogue_box_project_command_name)-2)</param>
+                            <param id="1" name="Value">mid(DictionaryDialogue.dialogue_box_project_command_name,1,len(DictionaryDialogue.dialogue_box_project_command_name)-2)</param>
                         </action>
-                        <action id="5" name="Push" sid="747836653434949" type="SpecialCommands">
+                        <action id="5" name="Push" sid="747836653434949" type="ArrayDialogueCommand">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">ProjectVariables.dialogue_box_project_command_name</param>
+                            <param id="1" name="Value">DictionaryDialogue.dialogue_box_project_command_name</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action id="1" name="Set key" sid="934551387693701" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="934551387693701" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;text&quot;</param>
-                            <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;,&quot;+&quot;)</param>
+                            <param id="1" name="Value">RegexReplace(DictionaryDialogue.Get(&quot;text&quot;),&quot;\[\D\w*\]&quot;,&quot;&quot;,&quot;+&quot;)</param>
                         </action>
-                        <action id="-11" name="Add to" sid="335978969784380" type="ProjectVariables">
+                        <action id="-11" name="Add to" sid="335978969784380" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_command_count</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -705,100 +705,100 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Set scale" sid="948254893178155" type="DialogueSpriteFont">
+                <action id="2" name="Set scale" sid="948254893178155" type="SpriteFontDialogue">
                     <param id="0" name="Scale">1</param>
                 </action>
-                <action id="1" name="Set key" sid="880272780232232" type="ProjectVariables">
+                <action id="1" name="Set key" sid="880272780232232" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;command_index&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="1" name="Set key" sid="499982258394729" type="ProjectVariables">
+                <action id="1" name="Set key" sid="499982258394729" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_paused&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="135659415422724" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="135659415422724" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_prefix</param>
-                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/&quot;</param>
+                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; DictionaryDialogue.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; DictionaryDialogue.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/&quot;</param>
                 </action>
-                <action id="1" name="Set key" sid="431665510994359" type="ProjectVariables">
+                <action id="1" name="Set key" sid="431665510994359" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_type&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;@type&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@type&quot;)</param>
                 </action>
-                <action id="1" name="Set key" sid="249033556326738" type="ProjectVariables">
+                <action id="1" name="Set key" sid="249033556326738" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;begin_function&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;@begin_function&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@begin_function&quot;)</param>
                 </action>
-                <action id="1" name="Set key" sid="213104678219023" type="ProjectVariables">
+                <action id="1" name="Set key" sid="213104678219023" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;end_function&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;@end_function&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@end_function&quot;)</param>
                 </action>
-                <action id="1" name="Set key" sid="676258634783522" type="ProjectVariables">
+                <action id="1" name="Set key" sid="676258634783522" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;end_dialogue_function&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;@end_dialogue_function&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@end_dialogue_function&quot;)</param>
                 </action>
-                <action id="1" name="Set key" sid="526587942532760" type="ProjectVariables">
+                <action id="1" name="Set key" sid="526587942532760" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;checking_function&quot;</param>
-                    <param id="1" name="Value">Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;@checking_function&quot;)</param>
+                    <param id="1" name="Value">XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@checking_function&quot;)</param>
                 </action>
-                <action id="1" name="Set key" sid="530182280616097" type="ProjectVariables">
+                <action id="1" name="Set key" sid="530182280616097" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;text&quot;</param>
-                    <param id="1" name="Value">trim(Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;text()&quot;))</param>
+                    <param id="1" name="Value">trim(XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;text()&quot;))</param>
                 </action>
-                <action id="1" name="Set key" sid="729976662809378" type="ProjectVariables">
+                <action id="1" name="Set key" sid="729976662809378" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;choice_number&quot;</param>
-                    <param id="1" name="Value">int(Dialogues.StringValue(ProjectVariables.dialogue_box_project_prefix &amp; &quot;@choice_number&quot;))</param>
+                    <param id="1" name="Value">int(XMLDialogue.StringValue(DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@choice_number&quot;))</param>
                 </action>
                 <action id="0" name="Call function" sid="782267287225150" type="Function">
                     <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
-                    <param id="1" name="Parameter {n}">ProjectVariables.dialogue_box_project_prefix &amp; &quot;@&quot;{###}&quot;box_animation&quot;{###}&quot;&quot;</param>
+                    <param id="1" name="Parameter {n}">DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@&quot;{###}&quot;box_animation&quot;{###}&quot;&quot;</param>
                 </action>
                 <action id="4" name="Set animation" sid="486622542604957" type="DialogueBox">
-                    <param id="0" name="Animation">ProjectVariables.Get(&quot;box_animation&quot;)</param>
+                    <param id="0" name="Animation">DictionaryDialogue.Get(&quot;box_animation&quot;)</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="0" name="Call function" sid="265728044975584" type="Function">
                     <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
-                    <param id="1" name="Parameter {n}">ProjectVariables.dialogue_box_project_prefix &amp; &quot;@&quot;{###}&quot;avatar_animation&quot;{###}&quot;&quot;</param>
+                    <param id="1" name="Parameter {n}">DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@&quot;{###}&quot;avatar_animation&quot;{###}&quot;&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="420004827115583" type="DialogueAvatar">
-                    <param id="0" name="Animation">ProjectVariables.Get(&quot;avatar_animation&quot;)</param>
+                <action id="4" name="Set animation" sid="420004827115583" type="DialogueBoxAvatar">
+                    <param id="0" name="Animation">DictionaryDialogue.Get(&quot;avatar_animation&quot;)</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="0" name="Call function" sid="261866190714156" type="Function">
                     <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
-                    <param id="1" name="Parameter {n}">ProjectVariables.dialogue_box_project_prefix &amp; &quot;@&quot;{###}&quot;avatar_name&quot;{###}&quot;&quot;</param>
+                    <param id="1" name="Parameter {n}">DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;@&quot;{###}&quot;avatar_name&quot;{###}&quot;&quot;</param>
                 </action>
-                <action id="0" name="Set text" sid="848047936521023" type="DialogueSpriteFontAvatar">
-                    <param id="0" name="Text">ProjectVariables.Get(&quot;avatar_name&quot;)</param>
+                <action id="0" name="Set text" sid="848047936521023" type="SpriteFontDialogueAvatar">
+                    <param id="0" name="Text">DictionaryDialogue.Get(&quot;avatar_name&quot;)</param>
                 </action>
                 <action id="0" name="Call function" sid="398626443999612" type="Function">
                     <param id="0" name="Name">&quot;process_special_commands&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Call function" sid="439081093764103" type="Function">
-                    <param id="0" name="Name">ProjectVariables.Get(&quot;begin_function&quot;)</param>
+                    <param id="0" name="Name">DictionaryDialogue.Get(&quot;begin_function&quot;)</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Call function" sid="471465218221460" type="Function">
                     <param id="0" name="Name">&quot;Count_lines&quot;</param>
-                    <param id="1" name="Parameter {n}">ProjectVariables.Get(&quot;text&quot;)</param>
+                    <param id="1" name="Parameter {n}">DictionaryDialogue.Get(&quot;text&quot;)</param>
                 </action>
                 <action id="0" name="Call function" sid="409652396498883" type="Function">
                     <param id="0" name="Name">&quot;LoadConfiguration&quot;</param>
-                    <param id="1" name="Parameter {n}">ProjectVariables.dialogue_box_project_prefix &amp;&quot;/@&quot;{###}&quot;&quot;</param>
+                    <param id="1" name="Parameter {n}">DictionaryDialogue.dialogue_box_project_prefix &amp;&quot;/@&quot;{###}&quot;&quot;</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="856164432546448">
                     <conditions>
-                        <condition id="0" inverted="1" name="Compare value" sid="798996574681263" type="ProjectVariables">
+                        <condition id="0" inverted="1" name="Compare value" sid="798996574681263" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_type&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;choice&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="917505455328425" type="DialogueSpriteFont">
+                        <action id="0" name="Set text" sid="917505455328425" type="SpriteFontDialogue">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                     </actions>
@@ -807,17 +807,17 @@
                 <event-block sid="242292082608599">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="757284053873480" type="System">
-                            <param id="0" name="First value">(DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                            <param id="0" name="First value">(SpriteFontDialogue.CharacterHeight * DictionaryDialogue.Get(&quot;line_count&quot;))</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">DialogueSpriteFont.Height</param>
+                            <param id="2" name="Second value">SpriteFontDialogue.Height</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="625328636850851" type="System">
                             <param id="0" name="Seconds">0</param>
                         </action>
-                        <action id="2" name="Set scale" sid="952292949868222" type="DialogueSpriteFont">
-                            <param id="0" name="Scale">DialogueSpriteFont.Height / (DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                        <action id="2" name="Set scale" sid="952292949868222" type="SpriteFontDialogue">
+                            <param id="0" name="Scale">SpriteFontDialogue.Height / (SpriteFontDialogue.CharacterHeight * DictionaryDialogue.Get(&quot;line_count&quot;))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -835,14 +835,14 @@
                 </event-block>
                 <event-block sid="309975086098497">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="944929035511802" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="944929035511802" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_type&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;wait&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set key" sid="617042736666588" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="617042736666588" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;wait&quot;</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -851,53 +851,53 @@
                 <event-block sid="489604315846809">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="729632733650953" type="System">
-                            <param id="0" name="First value">(DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                            <param id="0" name="First value">(SpriteFontDialogue.CharacterHeight * DictionaryDialogue.Get(&quot;line_count&quot;))</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">DialogueSpriteFont.Height</param>
+                            <param id="2" name="Second value">SpriteFontDialogue.Height</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="857075021265650" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="857075021265650" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_type&quot;</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">&quot;choice&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Set scale" sid="595784950481229" type="DialogueSpriteFont">
-                            <param id="0" name="Scale">DialogueSpriteFont.Height / (DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                        <action id="2" name="Set scale" sid="595784950481229" type="SpriteFontDialogue">
+                            <param id="0" name="Scale">SpriteFontDialogue.Height / (SpriteFontDialogue.CharacterHeight * DictionaryDialogue.Get(&quot;line_count&quot;))</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="116350817749139">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="594453449431230" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="594453449431230" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_type&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;choice&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="423323938916702" type="DialogueChoiceBox">
+                        <action id="-15" name="Set visible" sid="423323938916702" type="DialogueBoxChoice">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="1" name="Set key" sid="478560098832505" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="478560098832505" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;cursor_position&quot;</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="803856337619576" type="ProjectVariables">
+                        <action id="-10" name="Set value" sid="803856337619576" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_choice_height</param>
-                            <param id="1" name="Value">DialogueChoiceBox.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                            <param id="1" name="Value">DialogueBoxChoice.Height/DictionaryDialogue.Get(&quot;choice_number&quot;)</param>
                         </action>
-                        <action id="1" name="Set key" sid="493604706069540" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="493604706069540" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;choice_height&quot;</param>
-                            <param id="1" name="Value">DialogueChoiceBox.Height/ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                            <param id="1" name="Value">DialogueBoxChoice.Height/DictionaryDialogue.Get(&quot;choice_number&quot;)</param>
                         </action>
                         <action id="-3" name="Create object" sid="720931342313048" type="System">
-                            <param id="0" name="Object to create">Dialoguecursor</param>
+                            <param id="0" name="Object to create">DialogueCursorChoice</param>
                             <param id="1" name="Layer">DialogueBox.LayerName</param>
-                            <param id="2" name="X">DialogueChoiceBox.ImagePointX(&quot;cursor1&quot;)</param>
-                            <param id="3" name="Y">DialogueChoiceBox.ImagePointY(&quot;cursor1&quot;)  + 10 + ProjectVariables.Get(&quot;choice_height&quot;) * (ProjectVariables.Get(&quot;cursor_position&quot;) -1)</param>
+                            <param id="2" name="X">DialogueBoxChoice.ImagePointX(&quot;cursor1&quot;)</param>
+                            <param id="3" name="Y">DialogueBoxChoice.ImagePointY(&quot;cursor1&quot;)  + 10 + DictionaryDialogue.Get(&quot;choice_height&quot;) * (DictionaryDialogue.Get(&quot;cursor_position&quot;) -1)</param>
                         </action>
-                        <action id="1" name="Set size" sid="261313880124720" type="Choice_next">
+                        <action id="1" name="Set size" sid="261313880124720" type="ArrayDialogueChoice">
                             <param id="0" name="Width">0</param>
                             <param id="1" name="Height">1</param>
                             <param id="2" name="Depth">1</param>
@@ -909,41 +909,41 @@
                                 <condition id="-10" name="For" sid="775750002001363" type="System">
                                     <param id="0" name="Name">&quot;&quot;</param>
                                     <param id="1" name="Start index">1</param>
-                                    <param id="2" name="End index">ProjectVariables.Get(&quot;choice_number&quot;)</param>
+                                    <param id="2" name="End index">DictionaryDialogue.Get(&quot;choice_number&quot;)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="341441742032562" type="ProjectVariables">
+                                <action id="-10" name="Set value" sid="341441742032562" type="DictionaryDialogue">
                                     <param id="0" name="Instance variable">dialogue_box_project_prefix</param>
-                                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/&quot;</param>
+                                    <param id="1" name="Value">&quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; DictionaryDialogue.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; DictionaryDialogue.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="256110322036147" type="Function">
                                     <param id="0" name="Name">&quot;Count_lines&quot;</param>
-                                    <param id="1" name="Parameter {n}">trim(Dialogues.StringValue( ProjectVariables.dialogue_box_project_prefix &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
+                                    <param id="1" name="Parameter {n}">trim(XMLDialogue.StringValue( DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="888104246546643" type="System">
-                                    <param id="0" name="Object to create">DialogueSpriteFontChoice</param>
+                                    <param id="0" name="Object to create">SpriteFontDialogueChoice</param>
                                     <param id="1" name="Layer">DialogueBox.LayerName</param>
-                                    <param id="2" name="X">DialogueChoiceBox.ImagePointX(&quot;cursor1&quot;)</param>
-                                    <param id="3" name="Y">DialogueChoiceBox.ImagePointY(&quot;cursor1&quot;) + (loopindex-1) * ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                    <param id="2" name="X">DialogueBoxChoice.ImagePointX(&quot;cursor1&quot;)</param>
+                                    <param id="3" name="Y">DialogueBoxChoice.ImagePointY(&quot;cursor1&quot;) + (loopindex-1) * DictionaryDialogue.Get(&quot;choice_height&quot;)</param>
                                 </action>
-                                <action id="-27" name="Set effect enabled" sid="477610809239382" type="DialogueSpriteFontChoice">
+                                <action id="-27" name="Set effect enabled" sid="477610809239382" type="SpriteFontDialogueChoice">
                                     <param id="0" name="Mode">0</param>
                                     <param id="1" name="Effect">&quot;SetColor&quot;</param>
                                 </action>
-                                <action id="0" name="Set text" sid="739944106195169" type="DialogueSpriteFontChoice">
-                                    <param id="0" name="Text">trim(Dialogues.StringValue( ProjectVariables.dialogue_box_project_prefix &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
+                                <action id="0" name="Set text" sid="739944106195169" type="SpriteFontDialogueChoice">
+                                    <param id="0" name="Text">trim(XMLDialogue.StringValue( DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/text()&quot;))</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="109178402263938" type="DialogueSpriteFontChoice">
-                                    <param id="0" name="Width">DialogueChoiceBox.Width</param>
-                                    <param id="1" name="Height">ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                <action id="-7" name="Set size" sid="109178402263938" type="SpriteFontDialogueChoice">
+                                    <param id="0" name="Width">DialogueBoxChoice.Width</param>
+                                    <param id="1" name="Height">DictionaryDialogue.Get(&quot;choice_height&quot;)</param>
                                 </action>
-                                <action id="10" name="Insert" sid="454179290653670" type="Choice_next">
-                                    <param id="0" name="Value"> Dialogues.StringValue( ProjectVariables.dialogue_box_project_prefix &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/@id_next&quot;) </param>
+                                <action id="10" name="Insert" sid="454179290653670" type="ArrayDialogueChoice">
+                                    <param id="0" name="Value"> XMLDialogue.StringValue( DictionaryDialogue.dialogue_box_project_prefix &amp; &quot;Choice[&quot; &amp; loopindex &amp; &quot;]/@id_next&quot;) </param>
                                     <param id="1" name="Index">loopindex - 1</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="492471036248497" type="DialogueSpriteFontChoice">
+                                <action id="-10" name="Set value" sid="492471036248497" type="SpriteFontDialogueChoice">
                                     <param id="0" name="Instance variable">number</param>
                                     <param id="1" name="Value">loopindex</param>
                                 </action>
@@ -952,14 +952,14 @@
                                 <event-block sid="256966289044283">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="825600030833809" type="System">
-                                            <param id="0" name="First value">(DialogueSpriteFont.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                            <param id="0" name="First value">(SpriteFontDialogue.CharacterHeight * DictionaryDialogue.Get(&quot;line_count&quot;))</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">ProjectVariables.Get(&quot;choice_height&quot;)</param>
+                                            <param id="2" name="Second value">DictionaryDialogue.Get(&quot;choice_height&quot;)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="2" name="Set scale" sid="938774832418838" type="DialogueSpriteFontChoice">
-                                            <param id="0" name="Scale">DialogueSpriteFontChoice.Height / (DialogueSpriteFontChoice.CharacterHeight * ProjectVariables.Get(&quot;line_count&quot;))</param>
+                                        <action id="2" name="Set scale" sid="938774832418838" type="SpriteFontDialogueChoice">
+                                            <param id="0" name="Scale">SpriteFontDialogueChoice.Height / (SpriteFontDialogueChoice.CharacterHeight * DictionaryDialogue.Get(&quot;line_count&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -972,11 +972,11 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-1" name="Set X" sid="138780521339767" type="Dialoguecursor">
-                                            <param id="0" name="X">DialogueSpriteFontChoice.X - 10</param>
+                                        <action id="-1" name="Set X" sid="138780521339767" type="DialogueCursorChoice">
+                                            <param id="0" name="X">SpriteFontDialogueChoice.X - 10</param>
                                         </action>
-                                        <action id="-2" name="Set Y" sid="628903417969407" type="Dialoguecursor">
-                                            <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
+                                        <action id="-2" name="Set Y" sid="628903417969407" type="DialogueCursorChoice">
+                                            <param id="0" name="Y">SpriteFontDialogueChoice.Y</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -985,11 +985,11 @@
                         <event-block sid="385903160542432">
                             <conditions />
                             <actions>
-                                <action id="1" name="Set key" sid="663661832942179" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="663661832942179" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                                    <param id="1" name="Value">Choice_next.At(0)</param>
+                                    <param id="1" name="Value">ArrayDialogueChoice.At(0)</param>
                                 </action>
-                                <action id="1" name="Set key" sid="417643933133442" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="417643933133442" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;text_displayed&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1002,32 +1002,32 @@
                         <condition id="-22" name="Else" sid="890101954551819" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="664762966237312" type="DialogueChoiceBox">
+                        <action id="-15" name="Set visible" sid="664762966237312" type="DialogueBoxChoice">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="1" name="Set key" sid="587640264006274" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="587640264006274" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                            <param id="1" name="Value"> Dialogues.StringValue( &quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; ProjectVariables.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; ProjectVariables.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/@id_next&quot;)</param>
+                            <param id="1" name="Value"> XMLDialogue.StringValue( &quot;/Dialogues/Dialogue[@id=&apos;&quot; &amp; DictionaryDialogue.Get(&quot;name&quot;) &amp; &quot;&apos;]/TextLine[@id=&apos;&quot;&amp; DictionaryDialogue.Get(&quot;next_line_id&quot;) &amp;&quot;&apos;]/@id_next&quot;)</param>
                         </action>
-                        <action id="1" name="Set key" sid="970859404248666" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="970859404248666" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;text_displayed&quot;</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="1" name="Set key" sid="132658736446600" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="132658736446600" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;displaying&quot;</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="1" name="Set key" sid="608285955110712" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="608285955110712" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;letter_count&quot;</param>
-                            <param id="1" name="Value">len(ProjectVariables.Get(&quot;text&quot;))</param>
+                            <param id="1" name="Value">len(DictionaryDialogue.Get(&quot;text&quot;))</param>
                         </action>
-                        <action id="1" name="Set key" sid="866135305522596" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="866135305522596" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;written_letters&quot;</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action disabled="1" id="7" name="Play (by name)" sid="957895539535413" type="Audio">
                             <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">ProjectVariables.Get(&quot;typing_sound&quot;)</param>
+                            <param id="1" name="Audio file name">DictionaryDialogue.Get(&quot;typing_sound&quot;)</param>
                             <param id="3" name="Loop">1</param>
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;typing&quot;</param>
@@ -1038,7 +1038,7 @@
         </event-block>
         <event-block sid="719605292403872">
             <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="689981968811883" type="DialogueSpriteFont">
+                <condition behavior="Timer" id="0" name="On timer" sid="689981968811883" type="SpriteFontDialogue">
                     <param id="0" name="Tag">&quot;command_wait&quot;</param>
                 </condition>
             </conditions>
@@ -1063,11 +1063,11 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;typing&quot;</param>
                 </action>
-                <action id="1" name="Set key" sid="178551677830260" type="ProjectVariables">
+                <action id="1" name="Set key" sid="178551677830260" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="1" name="Set key" sid="143264284185129" type="ProjectVariables">
+                <action id="1" name="Set key" sid="143264284185129" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_paused&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1084,11 +1084,11 @@
                     <param id="0" name="Tag">&quot;typing&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="1" name="Set key" sid="742489842884240" type="ProjectVariables">
+                <action id="1" name="Set key" sid="742489842884240" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="351376883705639" type="DialogueSpriteFont">
+                <action behavior="Timer" id="0" name="Start timer" sid="351376883705639" type="SpriteFontDialogue">
                     <param id="0" name="Duration">0.3</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;command_wait&quot;</param>
@@ -1106,11 +1106,11 @@
                     <param id="0" name="Tag">&quot;typing&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="1" name="Set key" sid="189330837538215" type="ProjectVariables">
+                <action id="1" name="Set key" sid="189330837538215" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_paused&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="1" name="Set key" sid="427239258483195" type="ProjectVariables">
+                <action id="1" name="Set key" sid="427239258483195" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1122,7 +1122,7 @@
                 <condition id="-18" name="On created" sid="857579789253213" type="Family_DialogueFont" />
             </conditions>
             <actions>
-                <action id="11" name="Load" sid="448027149661620" type="SpriteFontImporter">
+                <action id="11" name="Load" sid="448027149661620" type="ArrayDialogueFontImporter">
                     <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,15,1],&quot;&quot;data&quot;&quot;:[[[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16],[19]],[[&quot;&quot;Iil.,;:!&apos;|&quot;&quot;],[&quot;&quot;`&quot;&quot;],[&quot;&quot;j()[]&quot;&quot;],[&quot;&quot;rt1\&quot;&quot;\\/°&quot;&quot;],[&quot;&quot;f-&quot;&quot;],[&quot;&quot;*&quot;&quot;],[&quot;&quot;Jhknu&quot;&quot;],[&quot;&quot;Lbcdgpqsvxyz7+=&lt;&gt;&quot;&quot;],[&quot;&quot;Faeo02345689?~#$£&quot;&quot;],[&quot;&quot;BEHNPSTUZ€&quot;&quot;],[&quot;&quot;CDK_&amp;&quot;&quot;],[&quot;&quot;AGORVXY&quot;&quot;],[&quot;&quot;MQmw&quot;&quot;],[&quot;&quot;%&quot;&quot;],[&quot;&quot;W@&quot;&quot;]]]}&quot;</param>
                 </action>
                 <action id="5" name="Set character width" sid="132508038182970" type="Family_DialogueFont">
@@ -1137,13 +1137,13 @@
                         <condition id="-10" name="For" sid="219507074137429" type="System">
                             <param id="0" name="Name">&quot;y&quot;</param>
                             <param id="1" name="Start index">0</param>
-                            <param id="2" name="End index">SpriteFontImporter.Height-1</param>
+                            <param id="2" name="End index">ArrayDialogueFontImporter.Height-1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set character width" sid="523587159073296" type="Family_DialogueFont">
-                            <param id="0" name="Character">SpriteFontImporter.At(1, loopindex(&quot;y&quot;))</param>
-                            <param id="1" name="Width">SpriteFontImporter.At(0, loopindex(&quot;y&quot;))</param>
+                            <param id="0" name="Character">ArrayDialogueFontImporter.At(1, loopindex(&quot;y&quot;))</param>
+                            <param id="1" name="Width">ArrayDialogueFontImporter.At(0, loopindex(&quot;y&quot;))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1152,11 +1152,11 @@
         <event-block sid="301860580783211">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="243567953279959" type="System">
-                    <param id="0" name="First value">ProjectVariables.Get(&quot;written_letters&quot;)</param>
+                    <param id="0" name="First value">DictionaryDialogue.Get(&quot;written_letters&quot;)</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">ProjectVariables.Get(&quot;letter_count&quot;)</param>
+                    <param id="2" name="Second value">DictionaryDialogue.Get(&quot;letter_count&quot;)</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="678597523071358" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="678597523071358" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
@@ -1164,23 +1164,23 @@
                 <condition id="-4" name="Trigger once while true" sid="253247120133577" type="System" />
             </conditions>
             <actions>
-                <action id="1" name="Set key" sid="317275694297212" type="ProjectVariables">
+                <action id="1" name="Set key" sid="317275694297212" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="0" name="Call function" sid="776873607706777" type="Function">
-                    <param id="0" name="Name">ProjectVariables.Get(&quot;end_function&quot;)</param>
+                    <param id="0" name="Name">DictionaryDialogue.Get(&quot;end_function&quot;)</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action disabled="1" id="1" name="Set looping" sid="767638072131630" type="Audio">
                     <param id="0" name="Tag">&quot;typing&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
-                <action id="1" name="Set key" sid="401036629404383" type="ProjectVariables">
+                <action id="1" name="Set key" sid="401036629404383" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;text_displayed&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="1" name="Set size" sid="385778387444981" type="SpecialCommands">
+                <action id="1" name="Set size" sid="385778387444981" type="ArrayDialogueCommand">
                     <param id="0" name="Width">0</param>
                     <param id="1" name="Height">1</param>
                     <param id="2" name="Depth">1</param>
@@ -1189,7 +1189,7 @@
             <sub-events>
                 <event-block sid="207189171125006">
                     <conditions>
-                        <condition id="0" inverted="1" name="Compare value" sid="954127592110809" type="ProjectVariables">
+                        <condition id="0" inverted="1" name="Compare value" sid="954127592110809" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;end&quot;</param>
@@ -1208,43 +1208,43 @@
                 <condition id="-6" name="Every X seconds" sid="788217926312949" type="System">
                     <param id="0" name="Interval (seconds)">0.03</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="690631279711750" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="690631279711750" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="148756497939877" type="ProjectVariables">
+                <action id="-10" name="Set value" sid="148756497939877" type="DictionaryDialogue">
                     <param id="0" name="Instance variable">dialogue_box_project_c</param>
-                    <param id="1" name="Value">left(ProjectVariables.Get(&quot;text&quot;),1)</param>
+                    <param id="1" name="Value">left(DictionaryDialogue.Get(&quot;text&quot;),1)</param>
                 </action>
-                <action id="1" name="Set key" sid="621991642594975" type="ProjectVariables">
+                <action id="1" name="Set key" sid="621991642594975" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;text&quot;</param>
-                    <param id="1" name="Value">right(ProjectVariables.Get(&quot;text&quot;),len(ProjectVariables.Get(&quot;text&quot;)) - 1)</param>
+                    <param id="1" name="Value">right(DictionaryDialogue.Get(&quot;text&quot;),len(DictionaryDialogue.Get(&quot;text&quot;)) - 1)</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="170204492347113">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="668634174980555" type="ProjectVariables">
+                        <condition id="-7" name="Compare instance variable" sid="668634174980555" type="DictionaryDialogue">
                             <param id="0" name="Instance variable">dialogue_box_project_c</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;+&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set key" sid="589130086226230" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="589130086226230" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;written_letters&quot;</param>
-                            <param id="1" name="Value">ProjectVariables.Get(&quot;written_letters&quot;) + 1</param>
+                            <param id="1" name="Value">DictionaryDialogue.Get(&quot;written_letters&quot;) + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="134491107055857" type="Function">
-                            <param id="0" name="Name">&quot;command_&quot; &amp; SpecialCommands.At(ProjectVariables.Get(&quot;command_index&quot;))</param>
+                            <param id="0" name="Name">&quot;command_&quot; &amp; ArrayDialogueCommand.At(DictionaryDialogue.Get(&quot;command_index&quot;))</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="1" name="Set key" sid="696048793864398" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="696048793864398" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;command_index&quot;</param>
-                            <param id="1" name="Value">ProjectVariables.Get(&quot;command_index&quot;) + 1</param>
+                            <param id="1" name="Value">DictionaryDialogue.Get(&quot;command_index&quot;) + 1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1253,12 +1253,12 @@
                         <condition id="-22" name="Else" sid="379286051803397" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="793806625922124" type="DialogueSpriteFont">
-                            <param id="0" name="Text">DialogueSpriteFont.Text &amp; ProjectVariables.dialogue_box_project_c</param>
+                        <action id="0" name="Set text" sid="793806625922124" type="SpriteFontDialogue">
+                            <param id="0" name="Text">SpriteFontDialogue.Text &amp; DictionaryDialogue.dialogue_box_project_c</param>
                         </action>
-                        <action id="1" name="Set key" sid="831659792714702" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="831659792714702" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;written_letters&quot;</param>
-                            <param id="1" name="Value">ProjectVariables.Get(&quot;written_letters&quot;) + 1</param>
+                            <param id="1" name="Value">DictionaryDialogue.Get(&quot;written_letters&quot;) + 1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1269,26 +1269,26 @@
         <event-block sid="975833178127867">
             <conditions>
                 <condition id="4" name="On key code pressed" sid="891663947905524" type="Keyboard">
-                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_faster&quot;))</param>
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_faster&quot;))</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="432996078584839" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="432996078584839" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="400228186223739" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="400228186223739" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Set key" sid="626008899169531" type="ProjectVariables">
+                <action id="1" name="Set key" sid="626008899169531" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;written_letters&quot;</param>
-                    <param id="1" name="Value">ProjectVariables.Get(&quot;letter_count&quot;)</param>
+                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;letter_count&quot;)</param>
                 </action>
-                <action id="0" name="Set text" sid="561233360733947" type="DialogueSpriteFont">
-                    <param id="0" name="Text">ProjectVariables.Get(&quot;text&quot;)</param>
+                <action id="0" name="Set text" sid="561233360733947" type="SpriteFontDialogue">
+                    <param id="0" name="Text">DictionaryDialogue.Get(&quot;text&quot;)</param>
                 </action>
             </actions>
         </event-block>
@@ -1296,39 +1296,39 @@
         <event-block sid="614461149902037">
             <conditions>
                 <condition id="4" name="On key code pressed" sid="598917005688166" type="Keyboard">
-                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_down&quot;))</param>
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_down&quot;))</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="128063624156871" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="128063624156871" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="737303208569372" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="737303208569372" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_type&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;choice&quot;</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="643803310192890" type="System">
-                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
-                    <param id="1" name="Expression">DialogueSpriteFontChoice.number</param>
+                    <param id="0" name="Object">SpriteFontDialogueChoice</param>
+                    <param id="1" name="Expression">SpriteFontDialogueChoice.number</param>
                     <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">min(ProjectVariables.Get(&quot;choice_number&quot;),ProjectVariables.Get(&quot;cursor_position&quot;) + 1)</param>
+                    <param id="3" name="Value">min(DictionaryDialogue.Get(&quot;choice_number&quot;),DictionaryDialogue.Get(&quot;cursor_position&quot;) + 1)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Set key" sid="908972224593073" type="ProjectVariables">
+                <action id="1" name="Set key" sid="908972224593073" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;cursor_position&quot;</param>
-                    <param id="1" name="Value">min(ProjectVariables.Get(&quot;choice_number&quot;),ProjectVariables.Get(&quot;cursor_position&quot;) + 1)</param>
+                    <param id="1" name="Value">min(DictionaryDialogue.Get(&quot;choice_number&quot;),DictionaryDialogue.Get(&quot;cursor_position&quot;) + 1)</param>
                 </action>
-                <action id="-1" name="Set X" sid="376939509486992" type="Dialoguecursor">
-                    <param id="0" name="X">DialogueSpriteFontChoice.X - 10</param>
+                <action id="-1" name="Set X" sid="376939509486992" type="DialogueCursorChoice">
+                    <param id="0" name="X">SpriteFontDialogueChoice.X - 10</param>
                 </action>
-                <action id="-2" name="Set Y" sid="243616618139658" type="Dialoguecursor">
-                    <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
+                <action id="-2" name="Set Y" sid="243616618139658" type="DialogueCursorChoice">
+                    <param id="0" name="Y">SpriteFontDialogueChoice.Y</param>
                 </action>
-                <action id="1" name="Set key" sid="898464314316902" type="ProjectVariables">
+                <action id="1" name="Set key" sid="898464314316902" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                    <param id="1" name="Value">Choice_next.At(ProjectVariables.Get(&quot;cursor_position&quot; )-1)</param>
+                    <param id="1" name="Value">ArrayDialogueChoice.At(DictionaryDialogue.Get(&quot;cursor_position&quot; )-1)</param>
                 </action>
             </actions>
         </event-block>
@@ -1336,9 +1336,9 @@
         <event-block sid="155816758529461">
             <conditions>
                 <condition id="4" name="On key code pressed" sid="654655249240989" type="Keyboard">
-                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_skip&quot;))</param>
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_skip&quot;))</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="606554938754811" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="606554938754811" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
@@ -1349,7 +1349,7 @@
                     <param id="0" name="Name">&quot;end_dialogue&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="1" name="Set key" sid="294444762127237" type="ProjectVariables">
+                <action id="1" name="Set key" sid="294444762127237" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1357,7 +1357,7 @@
                     <param id="0" name="Tag">&quot;typing&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="333963980837296" type="Function">
-                    <param id="0" name="Name">ProjectVariables.Get(&quot;skip_function&quot;)</param>
+                    <param id="0" name="Name">DictionaryDialogue.Get(&quot;skip_function&quot;)</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
@@ -1366,39 +1366,39 @@
         <event-block sid="508161532681749">
             <conditions>
                 <condition id="4" name="On key code pressed" sid="452834105812516" type="Keyboard">
-                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_up&quot;))</param>
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_up&quot;))</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="484353150284514" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="484353150284514" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="990611247207106" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="990611247207106" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_type&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;choice&quot;</param>
                 </condition>
                 <condition id="-33" name="Pick by comparison" sid="101211737907418" type="System">
-                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
-                    <param id="1" name="Expression">DialogueSpriteFontChoice.number</param>
+                    <param id="0" name="Object">SpriteFontDialogueChoice</param>
+                    <param id="1" name="Expression">SpriteFontDialogueChoice.number</param>
                     <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">max(1,ProjectVariables.Get(&quot;cursor_position&quot;) - 1)</param>
+                    <param id="3" name="Value">max(1,DictionaryDialogue.Get(&quot;cursor_position&quot;) - 1)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Set key" sid="932003860074792" type="ProjectVariables">
+                <action id="1" name="Set key" sid="932003860074792" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;cursor_position&quot;</param>
-                    <param id="1" name="Value">max(1,ProjectVariables.Get(&quot;cursor_position&quot;) - 1)</param>
+                    <param id="1" name="Value">max(1,DictionaryDialogue.Get(&quot;cursor_position&quot;) - 1)</param>
                 </action>
-                <action id="-1" name="Set X" sid="767102148626912" type="Dialoguecursor">
-                    <param id="0" name="X">DialogueSpriteFontChoice.X - 10</param>
+                <action id="-1" name="Set X" sid="767102148626912" type="DialogueCursorChoice">
+                    <param id="0" name="X">SpriteFontDialogueChoice.X - 10</param>
                 </action>
-                <action id="-2" name="Set Y" sid="389154055181755" type="Dialoguecursor">
-                    <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
+                <action id="-2" name="Set Y" sid="389154055181755" type="DialogueCursorChoice">
+                    <param id="0" name="Y">SpriteFontDialogueChoice.Y</param>
                 </action>
-                <action id="1" name="Set key" sid="996817645349798" type="ProjectVariables">
+                <action id="1" name="Set key" sid="996817645349798" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                    <param id="1" name="Value">Choice_next.At(ProjectVariables.Get(&quot;cursor_position&quot;)-1)</param>
+                    <param id="1" name="Value">ArrayDialogueChoice.At(DictionaryDialogue.Get(&quot;cursor_position&quot;)-1)</param>
                 </action>
             </actions>
         </event-block>
@@ -1406,14 +1406,14 @@
         <event-block sid="576834073361673">
             <conditions>
                 <condition id="4" name="On key code pressed" sid="185416447291591" type="Keyboard">
-                    <param id="0" name="Keycode">int(ProjectVariables.Get(&quot;key_next&quot;))</param>
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_next&quot;))</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="664587550359496">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="811814412816459" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="811814412816459" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_paused&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1428,17 +1428,17 @@
                 </event-block>
                 <event-block sid="889571492994867">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="216212362320467" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="216212362320467" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="897181098511880" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="897181098511880" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;wait&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="445235731019551" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="445235731019551" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;text_displayed&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1455,22 +1455,22 @@
         </event-block>
         <event-block sid="209490988206957">
             <conditions>
-                <condition id="0" name="Compare value" sid="686707114678940" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="686707114678940" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="874232056860550" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="874232056860550" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;text_displayed&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="459246045175803" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="459246045175803" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;wait&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="710613796278320" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="710613796278320" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;auto&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
@@ -1491,12 +1491,12 @@
                     <param id="0" name="Mouse button">0</param>
                 </condition>
                 <condition id="-20" inverted="1" name="Is on mobile device" sid="204857120797232" type="System" />
-                <condition id="0" name="Compare value" sid="657985725742554" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="657985725742554" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_type&quot;</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Value">&quot;choice&quot;</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="931834924501073" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="931834924501073" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;1&quot;</param>
@@ -1506,7 +1506,7 @@
             <sub-events>
                 <event-block sid="564641380587524">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="323523701609559" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="323523701609559" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_paused&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1522,17 +1522,17 @@
                 <event-block sid="250407058192203">
                     <conditions>
                         <condition id="-22" name="Else" sid="829782142618853" type="System" />
-                        <condition id="0" name="Compare value" sid="323524661808608" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="323524661808608" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="380706937027906" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="380706937027906" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;wait&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="350621935209350" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="350621935209350" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;text_displayed&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1552,18 +1552,18 @@
                 <condition id="6" name="On object clicked" sid="577716255284374" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">DialogueSpriteFontChoice</param>
+                    <param id="2" name="Object clicked">SpriteFontDialogueChoice</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="620124624894026" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="620124624894026" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;1&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Set key" sid="902128232858858" type="ProjectVariables">
+                <action id="1" name="Set key" sid="902128232858858" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                    <param id="1" name="Value">Choice_next.At(DialogueSpriteFontChoice.number-1)</param>
+                    <param id="1" name="Value">ArrayDialogueChoice.At(SpriteFontDialogueChoice.number-1)</param>
                 </action>
                 <action id="-16" name="Wait" sid="458760806187654" type="System">
                     <param id="0" name="Seconds">0</param>
@@ -1576,17 +1576,17 @@
         </event-block>
         <event-block sid="974258632212165">
             <conditions>
-                <condition id="0" name="Compare value" sid="427223969336398" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="427223969336398" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;mouse_enabled&quot;</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;1&quot;</param>
                 </condition>
                 <condition id="-11" name="For Each" sid="433266609355339" type="System">
-                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                    <param id="0" name="Object">SpriteFontDialogueChoice</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-27" name="Set effect enabled" sid="653933043287370" type="DialogueSpriteFontChoice">
+                <action id="-27" name="Set effect enabled" sid="653933043287370" type="SpriteFontDialogueChoice">
                     <param id="0" name="Mode">0</param>
                     <param id="1" name="Effect">&quot;SetColor&quot;</param>
                 </action>
@@ -1595,11 +1595,11 @@
                 <event-block sid="912145984710246">
                     <conditions>
                         <condition id="7" name="Cursor is over object" sid="773697923360038" type="Mouse">
-                            <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                            <param id="0" name="Object">SpriteFontDialogueChoice</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-27" name="Set effect enabled" sid="146528926727070" type="DialogueSpriteFontChoice">
+                        <action id="-27" name="Set effect enabled" sid="146528926727070" type="SpriteFontDialogueChoice">
                             <param id="0" name="Mode">1</param>
                             <param id="1" name="Effect">&quot;SetColor&quot;</param>
                         </action>
@@ -1612,7 +1612,7 @@
             <conditions>
                 <condition id="14" name="On tap" sid="404283587666118" type="Touch" />
                 <condition id="-20" name="Is on mobile device" sid="592346554370566" type="System" />
-                <condition id="0" name="Compare value" sid="184887839935982" type="ProjectVariables">
+                <condition id="0" name="Compare value" sid="184887839935982" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;line_type&quot;</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Value">&quot;choice&quot;</param>
@@ -1622,7 +1622,7 @@
             <sub-events>
                 <event-block sid="406444455225782">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="448878750291568" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="448878750291568" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;line_paused&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1638,17 +1638,17 @@
                 <event-block sid="447255964955944">
                     <conditions>
                         <condition id="-22" name="Else" sid="352393862633429" type="System" />
-                        <condition id="0" name="Compare value" sid="230350786151809" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="230350786151809" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="439210072819355" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="439210072819355" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;wait&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="775395234766784" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="775395234766784" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;text_displayed&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1664,12 +1664,12 @@
                 <event-block sid="454039866046704">
                     <conditions>
                         <condition id="-22" name="Else" sid="642841080537043" type="System" />
-                        <condition id="0" name="Compare value" sid="238362036291281" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="238362036291281" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;displaying&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="0" name="Compare value" sid="399788524932339" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="399788524932339" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;dialogue_running&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1681,27 +1681,27 @@
                             <conditions>
                                 <condition id="-23" name="While" sid="145382348053645" type="System" />
                                 <condition id="-8" name="Compare two values" sid="404780815733365" type="System">
-                                    <param id="0" name="First value">RegexMatchCount(ProjectVariables.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;)</param>
+                                    <param id="0" name="First value">RegexMatchCount(DictionaryDialogue.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;)</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="170125096406954" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="170125096406954" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;text&quot;</param>
-                                    <param id="1" name="Value">RegexReplace(ProjectVariables.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Value">RegexReplace(DictionaryDialogue.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;,&quot;&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="803508983784097">
                             <conditions />
                             <actions>
-                                <action id="1" name="Set key" sid="900776839945937" type="ProjectVariables">
+                                <action id="1" name="Set key" sid="900776839945937" type="DictionaryDialogue">
                                     <param id="0" name="Key">&quot;written_letters&quot;</param>
-                                    <param id="1" name="Value">ProjectVariables.Get(&quot;letter_count&quot;)</param>
+                                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;letter_count&quot;)</param>
                                 </action>
-                                <action id="0" name="Set text" sid="768294917612830" type="DialogueSpriteFont">
-                                    <param id="0" name="Text">DialogueSpriteFont.Text &amp; ProjectVariables.Get(&quot;text&quot;)</param>
+                                <action id="0" name="Set text" sid="768294917612830" type="SpriteFontDialogue">
+                                    <param id="0" name="Text">SpriteFontDialogue.Text &amp; DictionaryDialogue.Get(&quot;text&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1712,7 +1712,7 @@
         <event-block sid="402860890651123">
             <conditions>
                 <condition id="17" name="On tap object" sid="667182067720417" type="Touch">
-                    <param id="0" name="Object">DialogueSpriteFontChoice</param>
+                    <param id="0" name="Object">SpriteFontDialogueChoice</param>
                 </condition>
                 <condition id="-20" name="Is on mobile device" sid="688021900850668" type="System" />
             </conditions>
@@ -1720,10 +1720,10 @@
             <sub-events>
                 <event-block sid="118186819605069">
                     <conditions>
-                        <condition id="0" name="Compare value" sid="542615117039829" type="ProjectVariables">
+                        <condition id="0" name="Compare value" sid="542615117039829" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;cursor_position&quot;</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">DialogueSpriteFontChoice.number</param>
+                            <param id="2" name="Value">SpriteFontDialogueChoice.number</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1738,19 +1738,19 @@
                         <condition id="-22" name="Else" sid="925775184878013" type="System" />
                     </conditions>
                     <actions>
-                        <action id="1" name="Set key" sid="538433974518219" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="538433974518219" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;cursor_position&quot;</param>
-                            <param id="1" name="Value">DialogueSpriteFontChoice.number</param>
+                            <param id="1" name="Value">SpriteFontDialogueChoice.number</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="144096712887680" type="Dialoguecursor">
-                            <param id="0" name="Y">DialogueSpriteFontChoice.Y</param>
+                        <action id="-2" name="Set Y" sid="144096712887680" type="DialogueCursorChoice">
+                            <param id="0" name="Y">SpriteFontDialogueChoice.Y</param>
                         </action>
-                        <action id="-1" name="Set X" sid="783067081608438" type="Dialoguecursor">
-                            <param id="0" name="X">DialogueSpriteFontChoice.X</param>
+                        <action id="-1" name="Set X" sid="783067081608438" type="DialogueCursorChoice">
+                            <param id="0" name="X">SpriteFontDialogueChoice.X</param>
                         </action>
-                        <action id="1" name="Set key" sid="665375084314555" type="ProjectVariables">
+                        <action id="1" name="Set key" sid="665375084314555" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                            <param id="1" name="Value">Choice_next.At(ProjectVariables.Get(&quot;cursor_position&quot; )-1)</param>
+                            <param id="1" name="Value">ArrayDialogueChoice.At(DictionaryDialogue.Get(&quot;cursor_position&quot; )-1)</param>
                         </action>
                     </actions>
                 </event-block>
