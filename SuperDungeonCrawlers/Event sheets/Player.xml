@@ -625,7 +625,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="726952971359344" type="Function">
-                    <param id="0" name="Name">&quot;dialogue&quot;</param>
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
                     <param id="1" name="Parameter {n}">Family_NPC.Dialog</param>
                 </action>
             </actions>
