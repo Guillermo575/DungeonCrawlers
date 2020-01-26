@@ -1194,23 +1194,10 @@
                     <param id="1" name="Height">1</param>
                     <param id="2" name="Depth">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="480920131412160" type="DialogueCursorMore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="207189171125006">
-                    <conditions>
-                        <condition id="0" inverted="1" name="Compare value" sid="954127592110809" type="DictionaryDialogue">
-                            <param id="0" name="Key">&quot;next_line_id&quot;</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;end&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="480920131412160" type="DialogueCursorMore">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="260411933722287">
             <conditions>
