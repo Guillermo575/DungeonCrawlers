@@ -21,12 +21,12 @@
 		<TextLine id='2'> Bye! </TextLine>
 	</Dialogue>	
 	<Dialogue id='test_choice'>
-		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'>{Player}, Do you [wait] want [pause]  a fight [pause] ?! </TextLine>
+		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'>{Player}, Do you [wait]want [pause]a fight [pause]?! </TextLine>
 		<TextLine id='1' avatar_animation='' avatar_name='' line_type='choice' choice_number='2'>
 			<Choice id_next='2'> Yes.</Choice>
 			<Choice id_next='3'> No.</Choice>
 		</TextLine>
 		<TextLine id='2' avatar_animation='Unknown' avatar_name='skeleton' begin_function='Activate_AI'> Prepare to DIE!!! </TextLine>
-		<TextLine id='3' avatar_animation='Unknown' avatar_name='skeleton'> Get [pause] Lost.[wait].[wait]. </TextLine>
+		<TextLine id='3' avatar_animation='Unknown' avatar_name='skeleton'> Get [pause]lost.[wait].[wait]. </TextLine>
 	</Dialogue>	
 </Dialogues>

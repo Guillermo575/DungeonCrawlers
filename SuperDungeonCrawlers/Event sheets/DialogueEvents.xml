@@ -1400,8 +1400,8 @@
                         <condition id="-22" name="Else" sid="379286051803397" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="793806625922124" type="SpriteFontDialogue">
-                            <param id="0" name="Text">SpriteFontDialogue.Text &amp; DictionaryDialogue.dialogue_box_project_c</param>
+                        <action id="1" name="Append text" sid="793806625922124" type="SpriteFontDialogue">
+                            <param id="0" name="Text">DictionaryDialogue.dialogue_box_project_c</param>
                         </action>
                         <action id="1" name="Set key" sid="831659792714702" type="DictionaryDialogue">
                             <param id="0" name="Key">&quot;written_letters&quot;</param>
@@ -1429,19 +1429,41 @@
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set key" sid="626008899169531" type="DictionaryDialogue">
-                    <param id="0" name="Key">&quot;written_letters&quot;</param>
-                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;letter_count&quot;)</param>
-                </action>
-                <action id="1" name="Append text" sid="561233360733947" type="SpriteFontDialogue">
-                    <param id="0" name="Text">DictionaryDialogue.Get(&quot;text&quot;)</param>
-                </action>
-                <action id="1" name="Set key" sid="437694122744653" type="DictionaryDialogue">
-                    <param id="0" name="Key">&quot;text&quot;</param>
-                    <param id="1" name="Value">&quot;&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="448588927640253">
+                    <conditions>
+                        <condition id="-23" name="While" sid="745727499333666" type="System" />
+                        <condition id="-8" name="Compare two values" sid="175798887899531" type="System">
+                            <param id="0" name="First value">RegexMatchCount(DictionaryDialogue.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="997697923862687" type="DictionaryDialogue">
+                            <param id="0" name="Key">&quot;text&quot;</param>
+                            <param id="1" name="Value">RegexReplace(DictionaryDialogue.Get(&quot;text&quot;),&quot;\+&quot;,&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="534571961674184">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set key" sid="626008899169531" type="DictionaryDialogue">
+                            <param id="0" name="Key">&quot;written_letters&quot;</param>
+                            <param id="1" name="Value">DictionaryDialogue.Get(&quot;letter_count&quot;)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="561233360733947" type="SpriteFontDialogue">
+                            <param id="0" name="Text">DictionaryDialogue.Get(&quot;text&quot;)</param>
+                        </action>
+                        <action id="1" name="Set key" sid="437694122744653" type="DictionaryDialogue">
+                            <param id="0" name="Key">&quot;text&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>On a choice line, move the cursor down</comment>
         <event-block sid="614461149902037">
