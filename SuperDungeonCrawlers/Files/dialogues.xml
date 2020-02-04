@@ -17,12 +17,12 @@
 	</Dialogue>
 	<Dialogue id='test_intro2'>
 		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'> Hi! </TextLine>
-		<TextLine id='1' id_next='2' begin_function='Heal_Player'> Im Gonna heal you </TextLine>
+		<TextLine id='1' id_next='2' end_function='Heal_Player'> Im Gonna heal you </TextLine>
 		<TextLine id='2'> Bye! </TextLine>
 	</Dialogue>	
 	<Dialogue id='test_choice'>
 		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'>{Player}, Do you [wait] want [pause]  a fight [pause] ?! </TextLine>
-		<TextLine id='1' avatar_animation='' avatar_name='' type='choice' choice_number='2'>
+		<TextLine id='1' avatar_animation='' avatar_name='' line_type='choice' choice_number='2'>
 			<Choice id_next='2'> Yes.</Choice>
 			<Choice id_next='3'> No.</Choice>
 		</TextLine>
