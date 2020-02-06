@@ -228,6 +228,18 @@
                     <param id="0" name="Key">&quot;command_index&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Add key" sid="578359934382571" type="DictionaryDialogue">
+                    <param id="0" name="Key">&quot;type_speed&quot;</param>
+                    <param id="1" name="Value">0.03</param>
+                </action>
+                <action id="0" name="Add key" sid="107299281141410" type="DictionaryDialogue">
+                    <param id="0" name="Key">&quot;type_speed_normal&quot;</param>
+                    <param id="1" name="Value">0.03</param>
+                </action>
+                <action id="0" name="Add key" sid="506417893571492" type="DictionaryDialogue">
+                    <param id="0" name="Key">&quot;type_speed_fast&quot;</param>
+                    <param id="1" name="Value">0.007</param>
+                </action>
             </actions>
         </event-block>
         <comment>Load file and configuration function</comment>
@@ -301,6 +313,18 @@
                 <action id="0" name="Call function" sid="308022791703912" type="Function">
                     <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
                     <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;avatar_name&quot;{###}Function.Param(1)</param>
+                </action>
+                <action id="0" name="Call function" sid="285995498815847" type="Function">
+                    <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;type_speed&quot;{###}Function.Param(1)</param>
+                </action>
+                <action id="0" name="Call function" sid="178271279987752" type="Function">
+                    <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;type_speed_normal&quot;{###}Function.Param(1)</param>
+                </action>
+                <action id="0" name="Call function" sid="161446891612518" type="Function">
+                    <param id="0" name="Name">&quot;ReplaceOrStill&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;type_speed_fast&quot;{###}Function.Param(1)</param>
                 </action>
                 <action id="1" name="Set key" sid="226985455913735" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;checking_function&quot;</param>
@@ -1353,7 +1377,7 @@
         <event-block sid="260411933722287">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="788217926312949" type="System">
-                    <param id="0" name="Interval (seconds)">0.03</param>
+                    <param id="0" name="Interval (seconds)">DictionaryDialogue.Get(&quot;type_speed&quot;)</param>
                 </condition>
                 <condition id="0" name="Compare value" sid="690631279711750" type="DictionaryDialogue">
                     <param id="0" name="Key">&quot;displaying&quot;</param>
@@ -1625,6 +1649,32 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="117800910454289">
+            <conditions>
+                <condition id="6" name="On key code released" sid="169787843471319" type="Keyboard">
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_next&quot;))</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="295304547172010" type="DictionaryDialogue">
+                    <param id="0" name="Key">&quot;type_speed&quot;</param>
+                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;type_speed_normal&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="101117439611565">
+            <conditions>
+                <condition id="5" name="Key code is down" sid="133213430696061" type="Keyboard">
+                    <param id="0" name="Keycode">int(DictionaryDialogue.Get(&quot;key_next&quot;))</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="102905477192769" type="DictionaryDialogue">
+                    <param id="0" name="Key">&quot;type_speed&quot;</param>
+                    <param id="1" name="Value">DictionaryDialogue.Get(&quot;type_speed_fast&quot;)</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="209490988206957">
             <conditions>
