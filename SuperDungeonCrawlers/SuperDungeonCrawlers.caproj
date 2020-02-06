@@ -2557,18 +2557,18 @@
                 <object-type global="1" name="DictionaryDialogue" sid="440413926196261">
                     <plugin id="Dictionary" />
                     <instance-variables>
-                        <instance-variable name="dialogue_box_project_prefix" sid="285042337523715" type="string" />
-                        <instance-variable name="dialogue_box_project_last_space_index" sid="385233714689573" type="number" />
-                        <instance-variable name="dialogue_box_project_current_index" sid="416783322237849" type="number" />
-                        <instance-variable name="dialogue_box_project_text_width" sid="220862315864315" type="number" />
-                        <instance-variable name="dialogue_box_project_line_width" sid="648758816906784" type="number" />
-                        <instance-variable name="dialogue_box_project_l" sid="120997635461614" type="number" />
-                        <instance-variable name="dialogue_box_project_c" sid="161971593417426" type="string" />
-                        <instance-variable name="dialogue_box_project_text" sid="595657459157022" type="string" />
-                        <instance-variable name="dialogue_box_project_variable_name" sid="379601478446477" type="string" />
-                        <instance-variable name="dialogue_box_project_command_count" sid="713120784878758" type="number" />
-                        <instance-variable name="dialogue_box_project_command_name" sid="733301866938352" type="string" />
-                        <instance-variable name="dialogue_box_project_choice_height" sid="969002335536746" type="number" />
+                        <instance-variable name="dialogue_prefix" sid="285042337523715" type="string" />
+                        <instance-variable name="dialogue_index" sid="385233714689573" type="number" />
+                        <instance-variable name="dialogue_current_index" sid="416783322237849" type="number" />
+                        <instance-variable name="dialogue_text_width" sid="220862315864315" type="number" />
+                        <instance-variable name="dialogue_line_width" sid="648758816906784" type="number" />
+                        <instance-variable name="dialogue_loop" sid="120997635461614" type="number" />
+                        <instance-variable name="dialogue_count" sid="161971593417426" type="string" />
+                        <instance-variable name="dialogue_text" sid="595657459157022" type="string" />
+                        <instance-variable name="dialogue_variable_name" sid="379601478446477" type="string" />
+                        <instance-variable name="dialogue_command_count" sid="713120784878758" type="number" />
+                        <instance-variable name="dialogue_command_name" sid="733301866938352" type="string" />
+                        <instance-variable name="dialogue_choice_height" sid="969002335536746" type="number" />
                     </instance-variables>
                 </object-type>
                 <object-type global="1" name="DictionaryDialogueSpecial" sid="887477502728289">
@@ -2628,7 +2628,7 @@
                             <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\aa.png">
                                 <image-point name="name" x="0.0171429" y="0.06875" />
                                 <image-point name="avatar" x="0.0914286" y="0.625" />
-                                <image-point name="text" x="0.202857" y="0.40625" />
+                                <image-point name="text" x="0.214286" y="0.28125" />
                                 <image-point name="CursorMore" x="0.938571" y="0.8125" />
                                 <image-point name="cursor1" x="0.2" y="0.46875" />
                                 <image-point name="cursor2" x="0.2" y="0.65625" />
