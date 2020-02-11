@@ -276,18 +276,72 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="336073439110611" type="Family_Character">
+                        <action id="-13" name="Set boolean" sid="336073439110611" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">IsMoving</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="985213097006196">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="224617381248243" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="258044554025958" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="866647576640625">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="855617626757229" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="429594518107936" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="730677498029592">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="372408201070567" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="383721975176827" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="904111940105768">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="988745186935276" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="998663014924668" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">270</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="192531277948238">
                     <conditions>
                         <condition id="-22" name="Else" sid="638428019793391" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="702578023598778" type="Family_Character">
+                        <action id="-13" name="Set boolean" sid="702578023598778" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">IsMoving</param>
                             <param id="1" name="Value">0</param>
                         </action>
