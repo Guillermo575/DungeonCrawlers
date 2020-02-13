@@ -424,7 +424,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set animation" sid="232197190534105" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Walk&quot;, Family_Character.LastDirection)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Walk&quot;, Family_Character.LastDirection, 0)</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -436,7 +436,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set animation" sid="577470495503115" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Idle&quot;, Family_Character.LastDirection)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Idle&quot;, Family_Character.LastDirection, 0)</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -453,7 +453,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set animation" sid="690678915598177" type="Scml_Player_Top">
-                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
+                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection, 0)</param>
                             <param id="1" name="Where to start playing this animation">1</param>
                             <param id="2" name="Blend Duration">0</param>
                         </action>
@@ -522,7 +522,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="181360011404707" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection, 0)</param>
                                     <param id="1" name="Where to start playing this animation">1</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -553,7 +553,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="885418304133436" type="Scml_Player_Bottom">
-                                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Walk&quot;, Family_Character.LastDirection)</param>
+                                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Walk&quot;, Family_Character.LastDirection, 0)</param>
                                             <param id="1" name="Where to start playing this animation">1</param>
                                             <param id="2" name="Blend Duration">0</param>
                                         </action>
@@ -565,7 +565,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="288605401390807" type="Scml_Player_Bottom">
-                                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Idle&quot;, Family_Character.LastDirection)</param>
+                                            <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Idle&quot;, Family_Character.LastDirection, 0)</param>
                                             <param id="1" name="Where to start playing this animation">1</param>
                                             <param id="2" name="Blend Duration">0</param>
                                         </action>
@@ -1077,6 +1077,10 @@
                                     <param id="0" name="Variable">ActionSelected</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="607629102130512" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsJumping</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="894833038617281">
@@ -1233,6 +1237,10 @@
                                     <param id="0" name="Variable">ActionSelected</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="857126942976114" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsJumping</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="755477240831565">
@@ -1289,12 +1297,12 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="738981908367218" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection, 0)</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="236359980274577" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;, &quot;Jump&quot;, Family_Character.LastDirection, 0)</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1305,6 +1313,11 @@
                                 <action id="-13" name="Set boolean" sid="638427546647255" type="Family_Character">
                                     <param id="0" name="Instance variable">IsJumping</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="FC_Timer" id="0" name="Start timer" sid="117725779074903" type="Family_Character">
+                                    <param id="0" name="Duration">Scml_Player_Top.animationLength/1000</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Jump&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1355,7 +1368,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="757221401409986" type="Scml_Player_Top">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Death&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Death&quot;, 0)</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1363,7 +1376,7 @@
                                     <param id="0" name="Speed Ratio">1</param>
                                 </action>
                                 <action id="0" name="Set animation" sid="453292905667202" type="Scml_Player_Bottom">
-                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Death&quot;)</param>
+                                    <param id="0" name="Animation">Function.Call(&quot;GetAnimationName&quot;,&quot;Death&quot;, 0)</param>
                                     <param id="1" name="Where to start playing this animation">0</param>
                                     <param id="2" name="Blend Duration">0</param>
                                 </action>
@@ -1461,6 +1474,18 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="544530690282896">
+            <conditions>
+                <condition id="0" name="On function" sid="835804159439075" type="Function">
+                    <param id="0" name="Name">&quot;GetAnimationName&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="597159875557160" type="Function">
+                    <param id="0" name="Value">Function.Param(0) &amp; (Function.Param(2) = 0 ?  &quot;&quot;  : &quot;_&quot; &amp; Function.Param(2) ) &amp; (Function.Param(1) = 0 ?  &quot;&quot;  : &quot;_&quot; &amp; Function.Param(1))</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>RECALL COMMAND AFTER ANIMATION END</comment>
         <event-block sid="562658712333457">
             <conditions>
@@ -1476,19 +1501,24 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="544530690282896">
+        <event-block sid="727775579289642">
             <conditions>
-                <condition id="0" name="On function" sid="835804159439075" type="Function">
-                    <param id="0" name="Name">&quot;GetAnimationName&quot;</param>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="963574387781151" type="Family_Character">
+                    <param id="0" name="Tag">&quot;Jump&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Set return value" sid="597159875557160" type="Function">
-                    <param id="0" name="Value">Function.Param(0) &amp; (Function.Param(2) = 0 ?  &quot;&quot;  : &quot;_&quot; &amp; Function.Param(2) ) &amp; (Function.Param(1) = 0 ?  &quot;&quot;  : &quot;_&quot; &amp; Function.Param(1))</param>
+                <action id="-13" name="Set boolean" sid="737273012225132" type="Family_Character">
+                    <param id="0" name="Instance variable">IsJumping</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="909505028844344" type="Function">
+                    <param id="0" name="Name">&quot;CallCommand&quot;</param>
+                    <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
                 </action>
             </actions>
         </event-block>
-        <comment>Spriter parts</comment>
+        <comment>Create Spriter parts</comment>
         <event-block sid="297879016440769">
             <conditions>
                 <condition id="0" name="On function" sid="865536371637023" type="Function">
@@ -1569,6 +1599,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Load / Save Spriter parts</comment>
         <event-block sid="527282346691153">
             <conditions>
                 <condition id="0" name="On function" sid="917831696961117" type="Function">
