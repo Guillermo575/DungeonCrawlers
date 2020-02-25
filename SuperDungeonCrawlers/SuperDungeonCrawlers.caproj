@@ -497,6 +497,28 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="Item_Coin" sid="541178528606508">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Coin value" name="CoinGain" sid="248960793933244" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713105440691450" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.1875" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.8125" y="0.1875" />
+                                    <point x="0.875" y="0.5" />
+                                    <point x="0.8125" y="0.8125" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0.0625" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Text">
                 <object-type name="Map_Keyboard_Indicator" sid="357767401096718">
@@ -890,7 +912,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="Player3" pingpong="0" repeatcount="1" repeatto="0" sid="394337390412861" speed="0">
                             <frame duration="1" hotspotX="0" hotspotY="0">
-                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
+                                <image-point name="Imagepoint 1" x="0.875" y="0.375" />
                                 <collision-poly>
                                     <point x="0.0909091" y="0" />
                                     <point x="1" y="0" />
@@ -1902,250 +1924,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
-        </object-folder>
-        <object-folder name="Menu">
-            <object-folder name="Pause">
-                <object-type name="BGMIcon" sid="325411715206251">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Enabled" pingpong="0" repeatcount="1" repeatto="0" sid="127694174437255" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\BGMIcon.png">
-                                <collision-poly>
-                                    <point x="0.14" y="0.14" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.86" y="0.14" />
-                                    <point x="1" y="0.5" />
-                                    <point x="0.86" y="0.86" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.14" y="0.86" />
-                                    <point x="0" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="237972739772457" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.14" y="0.14" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.86" y="0.14" />
-                                    <point x="1" y="0.5" />
-                                    <point x="0.86" y="0.86" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.14" y="0.86" />
-                                    <point x="0" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="VEIcon" sid="686587703319509">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Enabled" pingpong="0" repeatcount="1" repeatto="0" sid="250027834187065" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\VEIcon.png">
-                                <collision-poly>
-                                    <point x="0.14" y="0.14" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.86" y="0.14" />
-                                    <point x="1" y="0.5" />
-                                    <point x="0.86" y="0.86" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.14" y="0.86" />
-                                    <point x="0" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="393637892498832" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0.14" y="0.14" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.86" y="0.14" />
-                                    <point x="1" y="0.5" />
-                                    <point x="0.86" y="0.86" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.14" y="0.86" />
-                                    <point x="0" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Pause" sid="662775668859523">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="149494374626111" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Words\Pause.png">
-                                <collision-poly>
-                                    <point x="0.0558511" y="0.2" />
-                                    <point x="0.5" y="0.714286" />
-                                    <point x="0.944149" y="0.2" />
-                                    <point x="0.960106" y="0.495238" />
-                                    <point x="0.960106" y="0.857143" />
-                                    <point x="0.0398936" y="0.857143" />
-                                    <point x="0.037234" y="0.495238" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="PauseContainer" sid="862197930417180">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836449021339362" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\AAAAA.png">
-                                <image-point name="Pause" x="0.493671" y="0.102326" />
-                                <image-point name="Resume" x="0.21519" y="0.293023" />
-                                <image-point name="BGMIcon" x="0.316456" y="0.604651" />
-                                <image-point name="VEIcon" x="0.696203" y="0.604651" />
-                                <image-point name="Exit" x="0.21519" y="0.837209" />
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Start">
-                <object-type name="Cover_Wall" sid="765994125423262">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480405351897274" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Cover_Wall.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="DungeonCrawlers_Logo" sid="530565719742658">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Start" pingpong="0" repeatcount="1" repeatto="0" sid="924362034969817" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\menu_start.png">
-                                <collision-poly>
-                                    <point x="0.222" y="0.555" />
-                                    <point x="0.5" y="0.165" />
-                                    <point x="0.772" y="0.57" />
-                                    <point x="0.896" y="0.5" />
-                                    <point x="0.844" y="0.61" />
-                                    <point x="0.5" y="0.84" />
-                                    <point x="0.21" y="0.475" />
-                                    <point x="0.11" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="GameOver" pingpong="0" repeatcount="1" repeatto="0" sid="931271154774673" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\GameOver.png">
-                                <collision-poly>
-                                    <point x="0.076" y="0.158333" />
-                                    <point x="0.5" y="0.0666667" />
-                                    <point x="0.88" y="0.25" />
-                                    <point x="0.88" y="0.75" />
-                                    <point x="0.5" y="0.575" />
-                                    <point x="0.096" y="0.8" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Congratulations" pingpong="0" repeatcount="1" repeatto="0" sid="858738614166907" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Congratulations.png">
-                                <collision-poly>
-                                    <point x="0.076" y="0.158333" />
-                                    <point x="0.5" y="0.0666667" />
-                                    <point x="0.88" y="0.25" />
-                                    <point x="0.88" y="0.75" />
-                                    <point x="0.5" y="0.575" />
-                                    <point x="0.096" y="0.8" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Menu_Start" sid="669493396438733">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Sine" sid="595474164541812">
-                            <behavior id="Sin" />
-                        </behavior-type>
-                        <behavior-type name="Flash" sid="870510643501381">
-                            <behavior id="Flash" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826365054548427" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="1.66667" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Start.png">
-                                <collision-poly>
-                                    <point x="0.00930233" y="0.0666667" />
-                                    <point x="0.5" y="0.05" />
-                                    <point x="0.916279" y="0.6" />
-                                    <point x="0.630233" y="1" />
-                                    <point x="0.630233" y="0.683333" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.360465" y="0.75" />
-                                    <point x="0.309302" y="1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Menu_Torch" sid="465717354132305">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="938567306618693" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="General">
-                <object-type name="Menu_Cursor" sid="731114563147166">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="Active" sid="922001148800836" type="boolean" />
-                    </instance-variables>
-                    <behaviors>
-                        <behavior-type name="Pin" sid="175290569833767">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                        <behavior-type name="Flash" sid="106412357240518">
-                            <behavior id="Flash" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Arrow" pingpong="0" repeatcount="1" repeatto="0" sid="545123819677607" speed="5">
-                            <frame duration="1" hotspotX="1" hotspotY="0.566667" original-source="C:\Users\MasterRace\Desktop\Cursor.png">
-                                <collision-poly>
-                                    <point x="0" y="0" />
-                                    <point x="0.5" y="0.233333" />
-                                    <point x="0.666667" y="0.333333" />
-                                    <point x="1" y="0.5" />
-                                    <point x="0.7" y="0.7" />
-                                    <point x="0.5" y="0.766667" />
-                                    <point x="0" y="1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Square" pingpong="0" repeatcount="1" repeatto="0" sid="816892399366762" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Menu_Text" sid="549112728510005">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable comment="Text_Menu font spawn" name="Font" sid="548031210075310" type="string" />
-                        <instance-variable comment="RGB font spawn" name="Color" sid="481799102758694" type="string" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974534321490054" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Text_Menu" sid="247779875634659">
-                    <plugin id="Text" />
-                </object-type>
-                <object-type name="Text_Menu_Shadow" sid="303993984337598">
-                    <plugin id="Text" />
-                </object-type>
-            </object-folder>
+            <object-type name="Path_Node" sid="851242635716415">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857678047554116" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="HUDPlayer">
             <object-folder name="Text">
@@ -2783,6 +2577,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="Object_Axe" pingpong="0" repeatcount="1" repeatto="0" sid="765353060614193" speed="5">
                             <frame duration="1" hotspotX="0.388889" hotspotY="0.466667" original-source="C:\Users\MasterRace\Desktop\zz.png">
+                                <image-point name="Imagepoint 1" x="0.888889" y="0.466667" />
                                 <collision-poly>
                                     <point x="0.333333" y="0.4" />
                                     <point x="0.5" y="0.0666667" />
@@ -2806,6 +2601,7 @@
                         </animation>
                         <animation framecount="1" loop="0" name="Object_Bow" pingpong="0" repeatcount="1" repeatto="0" sid="592196287931002" speed="5">
                             <frame duration="1" hotspotX="0.1875" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Object_Bow.png">
+                                <image-point name="Imagepoint 1" x="0.875" y="0.5" />
                                 <collision-poly>
                                     <point x="0.25" y="0.222222" />
                                     <point x="0.5" y="0.111111" />
@@ -2833,7 +2629,8 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Object_Wand" pingpong="0" repeatcount="1" repeatto="0" sid="571877873533666" speed="5">
-                            <frame duration="1" hotspotX="0.333333" hotspotY="0.384615" original-source="C:\Users\MasterRace\Desktop\Object_Wand.png">
+                            <frame duration="1" hotspotX="0.259259" hotspotY="0.384615" original-source="C:\Users\MasterRace\Desktop\Object_Wand.png">
+                                <image-point name="Imagepoint 1" x="0.925926" y="0.384615" />
                                 <collision-poly>
                                     <point x="0.185185" y="0.384615" />
                                     <point x="0.481481" y="0.230769" />
@@ -3106,54 +2903,278 @@
                 <plugin id="XML" />
             </object-type>
         </object-folder>
-        <object-type name="Item_Coin" sid="541178528606508">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="Coin value" name="CoinGain" sid="248960793933244" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713105440691450" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin.png">
-                        <collision-poly>
-                            <point x="0.1875" y="0.1875" />
-                            <point x="0.5" y="0" />
-                            <point x="0.8125" y="0.1875" />
-                            <point x="0.875" y="0.5" />
-                            <point x="0.8125" y="0.8125" />
-                            <point x="0.5" y="1" />
-                            <point x="0.125" y="0.875" />
-                            <point x="0.0625" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Loading_Screen" sid="507650651655218">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="715652193064546" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Loading_Screen.png">
-                        <image-point name="LoadBar" x="0.337891" y="0.503333" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Load_Bar" sid="141172312551568">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367758505479826" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Load_Bar.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Load_BarFrame" sid="144498512296087">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633653809769886" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Load_BarFrame.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="Menu">
+            <object-folder name="Pause">
+                <object-type name="BGMIcon" sid="325411715206251">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Enabled" pingpong="0" repeatcount="1" repeatto="0" sid="127694174437255" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\BGMIcon.png">
+                                <collision-poly>
+                                    <point x="0.14" y="0.14" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.86" y="0.14" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.86" y="0.86" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.14" y="0.86" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="237972739772457" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.14" y="0.14" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.86" y="0.14" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.86" y="0.86" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.14" y="0.86" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="VEIcon" sid="686587703319509">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Enabled" pingpong="0" repeatcount="1" repeatto="0" sid="250027834187065" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\VEIcon.png">
+                                <collision-poly>
+                                    <point x="0.14" y="0.14" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.86" y="0.14" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.86" y="0.86" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.14" y="0.86" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="393637892498832" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.14" y="0.14" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.86" y="0.14" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.86" y="0.86" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.14" y="0.86" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Pause" sid="662775668859523">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="149494374626111" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Words\Pause.png">
+                                <collision-poly>
+                                    <point x="0.0558511" y="0.2" />
+                                    <point x="0.5" y="0.714286" />
+                                    <point x="0.944149" y="0.2" />
+                                    <point x="0.960106" y="0.495238" />
+                                    <point x="0.960106" y="0.857143" />
+                                    <point x="0.0398936" y="0.857143" />
+                                    <point x="0.037234" y="0.495238" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PauseContainer" sid="862197930417180">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836449021339362" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\AAAAA.png">
+                                <image-point name="Pause" x="0.493671" y="0.102326" />
+                                <image-point name="Resume" x="0.21519" y="0.293023" />
+                                <image-point name="BGMIcon" x="0.316456" y="0.604651" />
+                                <image-point name="VEIcon" x="0.696203" y="0.604651" />
+                                <image-point name="Exit" x="0.21519" y="0.837209" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Start">
+                <object-type name="Cover_Wall" sid="765994125423262">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480405351897274" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Cover_Wall.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DungeonCrawlers_Logo" sid="530565719742658">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Start" pingpong="0" repeatcount="1" repeatto="0" sid="924362034969817" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\menu_start.png">
+                                <collision-poly>
+                                    <point x="0.222" y="0.555" />
+                                    <point x="0.5" y="0.165" />
+                                    <point x="0.772" y="0.57" />
+                                    <point x="0.896" y="0.5" />
+                                    <point x="0.844" y="0.61" />
+                                    <point x="0.5" y="0.84" />
+                                    <point x="0.21" y="0.475" />
+                                    <point x="0.11" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="GameOver" pingpong="0" repeatcount="1" repeatto="0" sid="931271154774673" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\GameOver.png">
+                                <collision-poly>
+                                    <point x="0.076" y="0.158333" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.88" y="0.25" />
+                                    <point x="0.88" y="0.75" />
+                                    <point x="0.5" y="0.575" />
+                                    <point x="0.096" y="0.8" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Congratulations" pingpong="0" repeatcount="1" repeatto="0" sid="858738614166907" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Congratulations.png">
+                                <collision-poly>
+                                    <point x="0.076" y="0.158333" />
+                                    <point x="0.5" y="0.0666667" />
+                                    <point x="0.88" y="0.25" />
+                                    <point x="0.88" y="0.75" />
+                                    <point x="0.5" y="0.575" />
+                                    <point x="0.096" y="0.8" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Menu_Start" sid="669493396438733">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="595474164541812">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                        <behavior-type name="Flash" sid="870510643501381">
+                            <behavior id="Flash" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826365054548427" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1.66667" original-source="D:\Dropbox\Medina_Team\DungeonCrawlers\Start.png">
+                                <collision-poly>
+                                    <point x="0.00930233" y="0.0666667" />
+                                    <point x="0.5" y="0.05" />
+                                    <point x="0.916279" y="0.6" />
+                                    <point x="0.630233" y="1" />
+                                    <point x="0.630233" y="0.683333" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.360465" y="0.75" />
+                                    <point x="0.309302" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Menu_Torch" sid="465717354132305">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="938567306618693" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.592593" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="General">
+                <object-type name="Menu_Cursor" sid="731114563147166">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Active" sid="922001148800836" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="175290569833767">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                        <behavior-type name="Flash" sid="106412357240518">
+                            <behavior id="Flash" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Arrow" pingpong="0" repeatcount="1" repeatto="0" sid="545123819677607" speed="5">
+                            <frame duration="1" hotspotX="1" hotspotY="0.566667" original-source="C:\Users\MasterRace\Desktop\Cursor.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.5" y="0.233333" />
+                                    <point x="0.666667" y="0.333333" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.7" y="0.7" />
+                                    <point x="0.5" y="0.766667" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Square" pingpong="0" repeatcount="1" repeatto="0" sid="816892399366762" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Menu_Text" sid="549112728510005">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Text_Menu font spawn" name="Font" sid="548031210075310" type="string" />
+                        <instance-variable comment="RGB font spawn" name="Color" sid="481799102758694" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974534321490054" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Text_Menu" sid="247779875634659">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Text_Menu_Shadow" sid="303993984337598">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Loading">
+                <object-type name="Load_Bar" sid="141172312551568">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367758505479826" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Load_Bar.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Load_BarFrame" sid="144498512296087">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633653809769886" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Load_BarFrame.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Loading_Screen" sid="507650651655218">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="715652193064546" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Loading_Screen.png">
+                                <image-point name="LoadBar" x="0.337891" y="0.503333" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -3474,6 +3495,11 @@
                 <member>SpriteFontDialogue</member>
                 <member>SpriteFontDialogueAvatar</member>
                 <member>SpriteFontDialogueChoice</member>
+            </members>
+        </family>
+        <family name="Family_Hazard" plugin-id="Sprite" sid="808489401840140">
+            <members>
+                <member>Dungeon_Torch</member>
             </members>
         </family>
     </families>

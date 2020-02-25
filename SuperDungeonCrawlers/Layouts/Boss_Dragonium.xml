@@ -565,7 +565,7 @@
                             <properties>
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>
@@ -713,7 +713,7 @@
                             <properties>
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>
@@ -861,7 +861,7 @@
                             <properties>
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>
@@ -1009,7 +1009,7 @@
                             <properties>
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>

@@ -20,6 +20,15 @@
                 <action behavior="FC_LineOfSight" id="2" name="Add obstacle" sid="317710803949705" type="Family_Character">
                     <param id="0" name="Obstacle">Tilemap_Solid2</param>
                 </action>
+                <action behavior="FC_Pathfinding" id="5" name="Add obstacle" sid="965612245099829" type="Family_Character">
+                    <param id="0" name="Obstacle">Tilemap_Solid</param>
+                </action>
+                <action behavior="FC_Pathfinding" id="5" name="Add obstacle" sid="692084326651697" type="Family_Character">
+                    <param id="0" name="Obstacle">Tilemap_Solid2</param>
+                </action>
+                <action behavior="FC_Pathfinding" id="5" name="Add obstacle" sid="798561436889747" type="Family_Character">
+                    <param id="0" name="Obstacle">Family_Hazard</param>
+                </action>
                 <action id="-10" name="Set value" sid="993636154268692" type="Family_Character">
                     <param id="0" name="Instance variable">Name</param>
                     <param id="1" name="Value">&quot;Enemy&quot;</param>
@@ -228,12 +237,64 @@
             </sub-events>
         </event-block>
         <comment>STALK AI, Searching player</comment>
+        <event-block sid="692240727986088">
+            <conditions>
+                <condition behavior="FC_Pathfinding" id="5" name="On arrived" sid="411904703623446" type="EnemyCoreBox" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="321531973993072" type="Path_Node" />
+            </actions>
+        </event-block>
         <event-block sid="175049841397888">
             <conditions>
                 <condition behavior="FC_Pathfinding" id="0" name="On path found" sid="389092603127922" type="EnemyCoreBox" />
             </conditions>
             <actions />
             <sub-events>
+                <event-block sid="711289055910460">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="657445559915903" type="System">
+                            <param id="0" name="Count">EnemyCoreBox.FC_Pathfinding.NodeCount</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="227312843668429" type="System">
+                            <param id="0" name="Object to create">Path_Node</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="X">EnemyCoreBox.FC_Pathfinding.NodeXAt(loopindex)</param>
+                            <param id="3" name="Y">EnemyCoreBox.FC_Pathfinding.NodeYAt(loopindex)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>If it&apos;s the last node, change the animation frame to show it&apos;s the end.</comment>
+                        <event-block sid="494595669496847">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="712969886707569" type="System">
+                                    <param id="0" name="First value">LoopIndex</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">EnemyCoreBox.FC_Pathfinding.NodeCount - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="705640616591982" type="Path_Node">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Otherwise point it to the next node.</comment>
+                        <event-block sid="621777919094573">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="495435679757293" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="260831939194100" type="Path_Node">
+                                    <param id="0" name="X">EnemyCoreBox.FC_Pathfinding.NodeXAt(loopindex + 1)</param>
+                                    <param id="1" name="Y">EnemyCoreBox.FC_Pathfinding.NodeYAt(loopindex + 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="853756069772227">
                     <conditions>
                         <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="210574407265612" type="EnemyCoreBox">
@@ -301,6 +362,9 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699732002801182" type="EnemyCoreBox">
                                     <param id="0" name="Instance variable">CanNotRotate</param>
                                 </condition>
+                                <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="159173721355467" type="EnemyCoreBox">
+                                    <param id="0" name="Object">PlayerCoreBox</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="612827924474391" type="EnemyCoreBox">
@@ -339,6 +403,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-9" name="Destroy" sid="471575476880806" type="Path_Node" />
                                         <action behavior="FC_Pathfinding" id="0" name="Find path" sid="250457615787366" type="EnemyCoreBox">
                                             <param id="0" name="X">PlayerCoreBox.X</param>
                                             <param id="1" name="Y">PlayerCoreBox.Y</param>
@@ -389,9 +454,6 @@
                                 <comment>Using Left or Right object</comment>
                                 <event-block sid="251299544898020">
                                     <conditions>
-                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="185929505357032" type="EnemyCoreBox">
-                                            <param id="0" name="Object">PlayerCoreBox</param>
-                                        </condition>
                                         <condition id="-7" name="Compare instance variable" sid="121311308265990" type="EnemyCoreBox">
                                             <param id="0" name="Instance variable">ArmLeft</param>
                                             <param id="1" name="Comparison">1</param>
@@ -464,7 +526,10 @@
                                                         <condition id="-8" name="Compare two values" sid="902671142756117" type="System">
                                                             <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
                                                             <param id="1" name="Comparison">3</param>
-                                                            <param id="2" name="Second value">200</param>
+                                                            <param id="2" name="Second value">Item_Generic.Projectile_Duration * Item_Generic.Projectile_Speed</param>
+                                                        </condition>
+                                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="285347254403314" type="EnemyCoreBox">
+                                                            <param id="0" name="Object">PlayerCoreBox</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -487,6 +552,19 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
+                                        <event-block sid="854137916327541">
+                                            <conditions>
+                                                <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="444167268131379" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">PlayerCoreBox</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="824050258661299" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="791198539608359">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="289848406691618" type="EnemyCoreBox">
@@ -496,7 +574,11 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="837749464825475" type="Function">
+                                                <action id="-10" name="Set value" sid="599315763350804" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">ActionStep</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="851696215888403" type="Function">
                                                     <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.ArmLeft{###}PlayerArmLeft.UID{###}Scml_Player_Top.UID</param>
                                                 </action>
@@ -504,11 +586,8 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="339926033318609">
+                                <event-block disabled="1" sid="339926033318609">
                                     <conditions>
-                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="530790644549914" type="EnemyCoreBox">
-                                            <param id="0" name="Object">PlayerCoreBox</param>
-                                        </condition>
                                         <condition id="-7" name="Compare instance variable" sid="671392629067011" type="EnemyCoreBox">
                                             <param id="0" name="Instance variable">ArmRight</param>
                                             <param id="1" name="Comparison">1</param>
@@ -526,7 +605,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="538607993987593">
+                                        <event-block disabled="1" sid="538607993987593">
                                             <conditions>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="641063414863019" type="Item_Generic">
                                                     <param id="0" name="Instance variable">Projectile_HasAmmo</param>
@@ -534,7 +613,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="297118263238504">
+                                                <event-block disabled="1" sid="297118263238504">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="952944092612461" type="System">
                                                             <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
@@ -552,7 +631,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="106418426836261">
+                                                <event-block disabled="1" sid="106418426836261">
                                                     <conditions>
                                                         <condition id="-22" name="Else" sid="685660461432668" type="System" />
                                                     </conditions>
@@ -565,7 +644,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="937789008463172">
+                                        <event-block disabled="1" sid="937789008463172">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="685491199610467" type="Item_Generic">
                                                     <param id="0" name="Instance variable">Projectile_HasAmmo</param>
@@ -576,12 +655,15 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="191156148828491">
+                                                <event-block disabled="1" sid="191156148828491">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="636402967872087" type="System">
                                                             <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
                                                             <param id="1" name="Comparison">3</param>
-                                                            <param id="2" name="Second value">200</param>
+                                                            <param id="2" name="Second value">Item_Generic.Projectile_Duration * Item_Generic.Projectile_Speed</param>
+                                                        </condition>
+                                                        <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="474450745546386" type="EnemyCoreBox">
+                                                            <param id="0" name="Object">PlayerCoreBox</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -591,7 +673,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="754803172755096">
+                                                <event-block disabled="1" sid="754803172755096">
                                                     <conditions>
                                                         <condition id="-22" name="Else" sid="546310453111035" type="System" />
                                                     </conditions>
@@ -604,7 +686,20 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="624962324761837">
+                                        <event-block disabled="1" sid="340681731151692">
+                                            <conditions>
+                                                <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="309596780048443" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">PlayerCoreBox</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="401606659191302" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">ActionCommand</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="624962324761837">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="259042755318772" type="EnemyCoreBox">
                                                     <param id="0" name="Instance variable">ActionCommand</param>
@@ -613,6 +708,10 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="-10" name="Set value" sid="648897806385667" type="EnemyCoreBox">
+                                                    <param id="0" name="Instance variable">ActionStep</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="290773673723682" type="Function">
                                                     <param id="0" name="Name">Item_Generic.Function_UnPress</param>
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.ArmRight{###}PlayerArmRight.UID{###}Scml_Player_Top.UID</param>

@@ -501,6 +501,64 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Dungeon_Torch" uid="141">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Group>Scene</Group>
+                        <MakeDamage>true</MakeDamage>
+                        <TypeObject>Melee</TypeObject>
+                        <PassivePush>true</PassivePush>
+                        <DodgeJump>true</DodgeJump>
+                        <Impact_Damage>1</Impact_Damage>
+                        <Impact_PushImpact>30</Impact_PushImpact>
+                        <Impact_RecoilTime>0.2</Impact_RecoilTime>
+                        <Impact_Duration>0.1</Impact_Duration>
+                        <Impact_PierceCharacters>false</Impact_PierceCharacters>
+                        <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_Animation></Blast_Animation>
+                        <Blast_Damage>0</Blast_Damage>
+                        <Blast_PushImpact>0</Blast_PushImpact>
+                        <Blast_Duration>0</Blast_Duration>
+                        <Blast_Speed>0</Blast_Speed>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PierceCharacters>false</Blast_PierceCharacters>
+                        <Blast_PierceWalls>false</Blast_PierceWalls>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="FI_Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>229.503860474</x>
+                        <y>332.128814697</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.592592597</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -624,8 +682,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>392.99987793</x>
-                        <y>147.111129761</y>
+                        <x>354.226837158</x>
+                        <y>288.312988281</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -717,7 +775,7 @@
                             <properties>
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>
@@ -845,8 +903,8 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
-                        <Dialog></Dialog>
-                        <CanTalk>false</CanTalk>
+                        <Dialog>test_intro2</Dialog>
+                        <CanTalk>true</CanTalk>
                         <EID>0</EID>
                     </instance-variables>
                     <behavior-instances>
@@ -865,7 +923,7 @@
                             <properties>
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>
@@ -988,7 +1046,7 @@
                         <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
-                        <AIActive>false</AIActive>
+                        <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
@@ -1011,9 +1069,9 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
+                                <cell-size>15</cell-size>
                                 <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>2000</deceleration>
@@ -1068,8 +1126,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>155.833221436</x>
-                        <y>314.731079102</y>
+                        <x>220.068481445</x>
+                        <y>280.587982178</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>
@@ -1365,8 +1423,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>456.177764893</x>
-                        <y>319.45425415</y>
+                        <x>222.383590698</x>
+                        <y>280.681671143</y>
                         <z>0</z>
                         <width>28</width>
                         <height>11</height>
@@ -1563,8 +1621,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>410.345397949</x>
-                        <y>157.649765015</y>
+                        <x>467.636260986</x>
+                        <y>298.852478027</y>
                         <z>0</z>
                         <width>28</width>
                         <height>11</height>
