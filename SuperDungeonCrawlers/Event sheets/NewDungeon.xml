@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NewDungeon</name>
+    <events>
+        <event-block sid="707240752715373">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="239999376255737" type="System" />
+            </conditions>
+            <actions>
+                <action id="11" name="Clear Dungeon" sid="491885230702935" type="RandomDungeonMaker" />
+                <action id="-25" name="Go to layout (by name)" sid="243524025132985" type="System">
+                    <param id="0" name="Layout">&quot;Dungeon&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

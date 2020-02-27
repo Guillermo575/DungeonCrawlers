@@ -243,7 +243,25 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="321531973993072" type="Path_Node" />
+                <action id="-9" name="Destroy" sid="232946641978406" type="Path_Text" />
             </actions>
+            <sub-events>
+                <event-block sid="836093437760304">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="433575088863372" type="System">
+                            <param id="0" name="First value">distance(EnemyCoreBox.X,EnemyCoreBox.Y,PlayerCoreBox.X,PlayerCoreBox.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">EnemyCoreBox.StalkDistance</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Pathfinding" id="0" name="Find path" sid="335140191801990" type="EnemyCoreBox">
+                            <param id="0" name="X">PlayerCoreBox.X</param>
+                            <param id="1" name="Y">PlayerCoreBox.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="175049841397888">
             <conditions>
@@ -263,6 +281,15 @@
                             <param id="1" name="Layer">&quot;Characters&quot;</param>
                             <param id="2" name="X">EnemyCoreBox.FC_Pathfinding.NodeXAt(loopindex)</param>
                             <param id="3" name="Y">EnemyCoreBox.FC_Pathfinding.NodeYAt(loopindex)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="849250810246600" type="System">
+                            <param id="0" name="Object to create">Path_Text</param>
+                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                            <param id="2" name="X">Path_Node.X + 6</param>
+                            <param id="3" name="Y">Path_Node.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="329721095840447" type="Path_Text">
+                            <param id="0" name="Text">loopindex</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -404,6 +431,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="471575476880806" type="Path_Node" />
+                                        <action id="-9" name="Destroy" sid="450862434982111" type="Path_Text" />
                                         <action behavior="FC_Pathfinding" id="0" name="Find path" sid="250457615787366" type="EnemyCoreBox">
                                             <param id="0" name="X">PlayerCoreBox.X</param>
                                             <param id="1" name="Y">PlayerCoreBox.Y</param>

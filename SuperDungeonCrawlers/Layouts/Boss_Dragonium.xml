@@ -545,6 +545,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <StalkDistance>300</StalkDistance>
                         <Dialog>intro</Dialog>
                         <CanTalk>false</CanTalk>
                         <EID>0</EID>
@@ -563,8 +564,8 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>15</cell-size>
+                                <cell-border>15</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
@@ -693,6 +694,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <StalkDistance>300</StalkDistance>
                         <Dialog>intro</Dialog>
                         <CanTalk>false</CanTalk>
                         <EID>0</EID>
@@ -711,8 +713,8 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>15</cell-size>
+                                <cell-border>15</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
@@ -841,6 +843,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <StalkDistance>300</StalkDistance>
                         <Dialog>intro</Dialog>
                         <CanTalk>false</CanTalk>
                         <EID>0</EID>
@@ -859,8 +862,8 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>15</cell-size>
+                                <cell-border>15</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
@@ -989,6 +992,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <StalkDistance>300</StalkDistance>
                         <Dialog>intro</Dialog>
                         <CanTalk>false</CanTalk>
                         <EID>0</EID>
@@ -1007,8 +1011,8 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>15</cell-size>
+                                <cell-border>15</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>

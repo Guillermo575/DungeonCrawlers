@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.Simple</app-id>
     <unique-id>1nkqko0mwmx1r</unique-id>
-    <saved-with-version>27500</saved-with-version>
+    <saved-with-version>27700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -1940,6 +1940,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Path_Text" sid="207733276697056">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="HUDPlayer">
             <object-folder name="Text">
@@ -3470,6 +3473,7 @@
                 <instance-variable name="TimePerChase" sid="320643246369124" type="number" />
                 <instance-variable name="TimePerAttackShort" sid="781443408142738" type="number" />
                 <instance-variable name="TimePerAttackLong" sid="873234226162515" type="number" />
+                <instance-variable name="StalkDistance" sid="502748842310073" type="number" />
             </instance-variables>
         </family>
         <family name="Family_NPC" plugin-id="Sprite" sid="756758774751275">
@@ -3516,6 +3520,7 @@
                 <layout>Boss_Dragonium.xml</layout>
             </layout-folder>
             <layout>Dungeon.xml</layout>
+            <layout>NewDungeon.xml</layout>
             <layout>Start.xml</layout>
         </layout-folder>
         <layout-folder name="Menu">
@@ -3541,6 +3546,7 @@
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>
             <event-sheet>MiniMap.xml</event-sheet>
+            <event-sheet>NewDungeon.xml</event-sheet>
         </event-folder>
         <event-folder name="Levels">
             <event-folder name="Bosses">

@@ -626,6 +626,7 @@
                         <TimePerChase>0.25</TimePerChase>
                         <TimePerAttackShort>2</TimePerAttackShort>
                         <TimePerAttackLong>1</TimePerAttackLong>
+                        <StalkDistance>300</StalkDistance>
                         <Dialog>intro</Dialog>
                         <CanTalk>false</CanTalk>
                         <EID>0</EID>
@@ -644,8 +645,8 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>15</cell-size>
+                                <cell-border>15</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
@@ -2624,7 +2625,7 @@
                 </instance>
                 <instance type="Path_Node" uid="163">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -2640,6 +2641,33 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Path_Text" uid="165">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-8,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1788</x>
+                        <y>84</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>15</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
