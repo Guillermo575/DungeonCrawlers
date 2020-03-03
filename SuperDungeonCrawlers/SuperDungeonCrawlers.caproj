@@ -26,7 +26,7 @@
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
-        <plugin author="Medina_Team" id="random_dungeon_maker" version="1.200000048">Random Dungeon Maker</plugin>
+        <plugin author="Medina_Team" id="random_dungeon_maker" version="1">Random Dungeon Maker</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>

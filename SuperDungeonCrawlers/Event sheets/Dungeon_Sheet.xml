@@ -156,13 +156,17 @@
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
                 </action>
-                <action id="1" name="Create Dungeon (Extra)" sid="958635477578448" type="RandomDungeonMaker">
-                    <param id="0" name="Width">6</param>
-                    <param id="1" name="Height">6</param>
-                    <param id="2" name="Blocks">30</param>
-                    <param id="3" name="MinRoom">2</param>
-                    <param id="4" name="MaxRoom">3</param>
-                    <param id="5" name="LabyrinthInn">0</param>
+                <action id="10" name="Create Dungeon (Advanced)" sid="958635477578448" type="RandomDungeonMaker">
+                    <param id="0" name="Width">6 + int(random(0,4))</param>
+                    <param id="1" name="Height">6 + int(random(0,4))</param>
+                    <param id="2" name="Blocks">30 + int(random(10,20))</param>
+                    <param id="3" name="MinRoom">2 + int(random(0,2))</param>
+                    <param id="4" name="MaxRoom">3 + int(random(0,2))</param>
+                    <param id="5" name="Mode">3</param>
+                    <param id="6" name="StartX">3</param>
+                    <param id="7" name="StartY">3</param>
+                    <param id="8" name="LabyrinthInn">2</param>
+                    <param id="9" name="OpenWorld">0</param>
                 </action>
             </actions>
         </event-block>
