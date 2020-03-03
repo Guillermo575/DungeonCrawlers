@@ -11,7 +11,9 @@
 		<auto>0</auto>
 	</configuration>
 	<Dialogue id='test_intro'>
-		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'> Hello Everyone! Hello Everyone! Hello Everyone!</TextLine>
+		<TextLine id='0' id_next='1' box_animation='Default' avatar_animation='Unknown' avatar_name='skeleton'> 
+		Hello Everyone! Hello Everyone! Hello Everyone! How are you? How are you? How are you? Hello Everyone! Hello Everyone! Hello Everyone! Hello Everyone! Hello Everyone! Hello Everyone! How are you? How are you? How are you? Hello Everyone! Hello Everyone! Hello Everyone!
+		</TextLine>
 		<TextLine id='1' id_next='2'> How are you? </TextLine>
 		<TextLine id='2'> Good Bye! </TextLine>
 	</Dialogue>
