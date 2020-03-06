@@ -241,6 +241,20 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="FC_Platform">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>800</acceleration>
+                                <deceleration>1000</deceleration>
+                                <jump-strength>600</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>800</max-fall-speed>
+                                <double-jump>Enabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
                                 <cell-size>30</cell-size>
@@ -294,8 +308,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>468</x>
-                        <y>111</y>
+                        <x>277.029785156</x>
+                        <y>95.721893311</y>
                         <z>0</z>
                         <width>15</width>
                         <height>20</height>

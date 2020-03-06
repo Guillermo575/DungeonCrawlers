@@ -349,6 +349,99 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="652227078602829">
+            <conditions>
+                <condition id="0" name="On function" sid="633042774066483" type="Function">
+                    <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="142808054348241" type="Family_Character">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="649939373033458">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="767988433498096" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_Platform" id="11" name="Set enabled" sid="719289917837651" type="Family_Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="720776628449229">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="557222607297695" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="599213784617488" type="Family_Character">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="175304178494446">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="469152892975106" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="292087605356730" type="Family_Character">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="771394397346958">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="651511902789807" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;2D&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="FC_8Direction" id="8" name="Set enabled" sid="628507624086410" type="Family_Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="430242082637101">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="390790018446422" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Platform" id="11" name="Set enabled" sid="952622414400162" type="Family_Character">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="972299617772254">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="501943781600164" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Platform" id="11" name="Set enabled" sid="452098275191716" type="Family_Character">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="365559380967541">
             <conditions>
                 <condition id="-33" name="Pick by comparison" sid="961737494908029" type="System">
@@ -370,8 +463,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="FC_8Direction" id="8" name="Set enabled" sid="599213784617488" type="Family_Character">
-                            <param id="0" name="State">1</param>
+                        <action id="0" name="Call function" sid="846558822668651" type="Function">
+                            <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -380,8 +474,9 @@
                         <condition id="-22" name="Else" sid="323415979276095" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="FC_8Direction" id="8" name="Set enabled" sid="292087605356730" type="Family_Character">
-                            <param id="0" name="State">0</param>
+                        <action id="0" name="Call function" sid="450355665353671" type="Function">
+                            <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
+                            <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
                         </action>
                     </actions>
                 </event-block>

@@ -225,6 +225,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="733649569128197">
+                            <conditions>
+                                <condition behavior="FC_Platform" id="0" name="Is moving" sid="427469646191863" type="Family_Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="120260134135683" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">Family_Character.FC_Platform.MovingAngle</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="908288548636758" type="Family_Character">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">Family_Character.LastDirectionAngle  &gt; 0 ? Family_Character.LastDirectionAngle  : (Family_Character.LastDirectionAngle + 180) + 180</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="621616222748487">
                             <conditions>
                                 <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="718873918551605" type="Family_Character" />
@@ -266,12 +281,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="449434325768867">
+                <event-block sid="449434325768867">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="448635768310691" type="System">
                             <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
                             <param id="1" name="Lower bound">26</param>
                             <param id="2" name="Upper bound">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="110369360193267" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -285,12 +305,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="287028648083646">
+                <event-block sid="287028648083646">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="505908279586322" type="System">
                             <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
                             <param id="1" name="Lower bound">71</param>
                             <param id="2" name="Upper bound">115</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="787346906150947" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -304,12 +329,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="821625076325499">
+                <event-block sid="821625076325499">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="128065055367805" type="System">
                             <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
                             <param id="1" name="Lower bound">116</param>
                             <param id="2" name="Upper bound">160</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="307332735415717" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -342,12 +372,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="138292135776739">
+                <event-block sid="138292135776739">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="578565160010715" type="System">
                             <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
                             <param id="1" name="Lower bound">216</param>
                             <param id="2" name="Upper bound">260</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="685324984717902" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -361,12 +396,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="207732032736338">
+                <event-block sid="207732032736338">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="854515023719923" type="System">
                             <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
                             <param id="1" name="Lower bound">261</param>
                             <param id="2" name="Upper bound">305</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="823516323531014" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -380,12 +420,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="912562573339983">
+                <event-block sid="912562573339983">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="557949252298443" type="System">
                             <param id="0" name="Value">Family_Character.LastDirectionAngle</param>
                             <param id="1" name="Lower bound">306</param>
                             <param id="2" name="Upper bound">340</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="797370050480175" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -550,6 +595,7 @@
                                     <conditions>
                                         <condition behavior="FC_8Direction" id="0" name="Is moving" sid="224929122482954" type="Family_Character" />
                                         <condition behavior="FC_Pathfinding" id="4" name="Is moving along path" sid="410656108849748" type="Family_Character" />
+                                        <condition behavior="FC_Platform" id="0" name="Is moving" sid="484747180723431" type="Family_Character" />
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set animation" sid="885418304133436" type="Scml_Player_Bottom">

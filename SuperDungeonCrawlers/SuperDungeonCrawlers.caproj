@@ -38,6 +38,7 @@
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Pin2" version="1">Pin2</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -3256,6 +3257,9 @@
                 <behavior-type name="FC_8Direction" sid="182952999122772">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="FC_Platform" sid="989634407997285">
+                    <behavior id="Platform" />
+                </behavior-type>
                 <behavior-type name="FC_Pathfinding" sid="153530421356593">
                     <behavior id="Pathfinding" />
                 </behavior-type>
@@ -3514,6 +3518,7 @@
                 <layout>TrainingRoom2.xml</layout>
                 <layout>TrainingRoom3.xml</layout>
                 <layout>TrainingRoom4.xml</layout>
+                <layout>TrainingRoom5.xml</layout>
             </layout-folder>
             <layout-folder name="BoosRooms">
                 <layout>Boss_Wormula.xml</layout>
@@ -3542,6 +3547,8 @@
             <event-sheet>Spriter_Animation.xml</event-sheet>
             <event-sheet>DialogueEvents.xml</event-sheet>
             <event-sheet>GenericItem.xml</event-sheet>
+            <event-sheet>LightIlumination.xml</event-sheet>
+            <event-sheet>TileAnimation.xml</event-sheet>
         </event-folder>
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>
@@ -3555,6 +3562,7 @@
             </event-folder>
             <event-sheet>Dungeon_Sheet.xml</event-sheet>
             <event-sheet>TrainingRoom_Sheet.xml</event-sheet>
+            <event-sheet>TrainingRoom2D_Sheet.xml</event-sheet>
         </event-folder>
         <event-folder name="Menu_Tools">
             <event-sheet>Menu_Start_Sheet.xml</event-sheet>

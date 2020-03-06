@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LightIlumination</name>
+    <events>
+        <comment>Shadow caster mechanic</comment>
+        <event-block sid="608259017659502">
+            <conditions>
+                <condition id="0" name="On function" sid="477214656177544" type="Function">
+                    <param id="0" name="Name">&quot;LightOff&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ShadowCaster" disabled="1" id="0" name="Set enabled" sid="362184723437390" type="TileMapOver">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="840045858506428" type="System">
+                    <param id="0" name="Layer">&quot;Filter&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="339129645290699" type="System">
+                    <param id="0" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="683138609947302">
+            <conditions>
+                <condition id="0" name="On function" sid="368075709742765" type="Function">
+                    <param id="0" name="Name">&quot;LightOn&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ShadowCaster" disabled="1" id="0" name="Set enabled" sid="178190877451287" type="TileMapOver">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="296724527340250" type="System">
+                    <param id="0" name="Layer">&quot;Filter&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="883171522529844" type="System">
+                    <param id="0" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Light Mechanic</comment>
+        <event-block sid="838028977694734">
+            <conditions>
+                <condition id="-18" name="On created" sid="363501591933954" type="PlayerCoreBox" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="151911422894136" type="PlayerCoreBox">
+                    <param id="0" name="Object">DungeonLight</param>
+                    <param id="1" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="432280387712732" type="DungeonLight">
+                    <param id="0" name="Opacity">10</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="966360085946268" type="DungeonLight">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="179352378503048" type="DungeonLight">
+                    <param id="0" name="Pin to">PlayerCoreBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="257258307431241" type="PlayerCoreBox">
+                    <param id="0" name="Object">DungeonLight</param>
+                    <param id="1" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="203381727141597" type="DungeonLight">
+                    <param id="0" name="Width">200</param>
+                    <param id="1" name="Height">200</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="672251696975635" type="DungeonLight">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="495403394667194" type="DungeonLight">
+                    <param id="0" name="Pin to">PlayerCoreBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="401168012284136" type="PlayerCoreBox">
+                    <param id="0" name="Object">ShadowLight</param>
+                    <param id="1" name="Layer">&quot;OverLayer&quot;</param>
+                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="200065921289161" type="ShadowLight">
+                    <param id="0" name="Pin to">PlayerCoreBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-24" name="Move to top" sid="144398167830581" type="ShadowLight" />
+                <action id="-16" name="Set opacity" sid="225980768434964" type="ShadowLight">
+                    <param id="0" name="Opacity">80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="642344730704377">
+            <conditions>
+                <condition id="-18" name="On created" sid="584177669986679" type="Dungeon_Torch" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="369541035633713" type="Dungeon_Torch">
+                    <param id="0" name="Object">DungeonLight</param>
+                    <param id="1" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="795493959810436" type="DungeonLight">
+                    <param id="0" name="Animation">&quot;Torch&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="369533631423497" type="DungeonLight">
+                    <param id="0" name="Width">150</param>
+                    <param id="1" name="Height">150</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="260123762333953" type="DungeonLight">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="973047510944316" type="DungeonLight">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="762266727131658" type="DungeonLight">
+                    <param id="0" name="Magnitude">15</param>
+                </action>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="178221752187473" type="DungeonLight">
+                    <param id="0" name="Magnitude">6</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="375057648452409" type="DungeonLight">
+                    <param id="0" name="Pin to">Dungeon_Torch</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

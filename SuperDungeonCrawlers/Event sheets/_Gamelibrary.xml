@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>_Gamelibrary</name>
     <events>
+        <variable constant="0" name="GameMode" sid="200313099251393" static="0" type="text">UP</variable>
         <variable comment="Difficult configured in the game (Easy, Normal, Hard)" constant="0" name="ConfigDifficult" sid="376289247331375" static="0" type="text">Easy</variable>
         <variable comment="Last Level Loaded" constant="0" name="LastLevel" sid="401210357883922" static="0" type="text"></variable>
         <variable comment="Last level Info Data in a JSON" constant="0" name="LastLevelJSON" sid="622867184603336" static="0" type="text"></variable>
@@ -18,6 +19,8 @@
         <include>GenericItem</include>
         <include>HUD</include>
         <include>DialogueEvents</include>
+        <include>LightIlumination</include>
+        <include>TileAnimation</include>
         <comment>This function loads the last level in this variable, useful for &quot;try again?&quot; Option</comment>
         <event-block sid="997569491700789">
             <conditions>
@@ -67,6 +70,28 @@
                     <param id="0" name="Object">Load_BarFrame</param>
                     <param id="1" name="Layer">&quot;Pause&quot;</param>
                     <param id="2" name="Image point">&quot;LoadBar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="137777959629129">
+            <conditions>
+                <condition id="-18" name="On created" sid="393055990070145" type="PlayerCoreBox" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="293025316931806" type="Function">
+                    <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="979470083766102">
+            <conditions>
+                <condition id="-18" name="On created" sid="302959798680125" type="EnemyCoreBox" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="137594306737961" type="Function">
+                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
+                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                 </action>
             </actions>
         </event-block>
@@ -133,335 +158,6 @@
                 <action id="-25" name="Go to layout (by name)" sid="518976169679518" type="System">
                     <param id="0" name="Layout">Function.Param(0)</param>
                 </action>
-            </actions>
-        </event-block>
-        <comment>TileMap Animation</comment>
-        <event-block sid="973461755472514">
-            <conditions>
-                <condition id="-18" name="On created" sid="559552098864808" type="Family_Tilemaps" />
-            </conditions>
-            <actions>
-                <action behavior="Timer" id="0" name="Start timer" sid="644938195185495" type="Family_Tilemaps">
-                    <param id="0" name="Duration">0.3</param>
-                    <param id="1" name="Type">1</param>
-                    <param id="2" name="Tag">&quot;tileanim&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="145071416748857" type="Family_Tilemaps">
-                    <param id="0" name="Instance variable">TileMap</param>
-                    <param id="1" name="Value">Array_Levels.At(Array_Levels.Actual,2) = 0 ? Family_Tilemaps.TileMap : Array_Levels.At(Array_Levels.Actual,2)</param>
-                </action>
-                <action id="8" name="Load image from URL" sid="889047825896878" type="Family_Tilemaps">
-                    <param id="0" name="URI">Family_Tilemaps.TileMap</param>
-                    <param id="1" name="Cross-origin">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="912559408503390">
-            <conditions>
-                <condition id="2" name="On image URL loaded" sid="801748802747821" type="Family_Tilemaps" />
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="479959713639724" type="Family_Tilemaps">
-                    <param id="0" name="Instance variable">Loaded</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>TileMap Animation, Timer</comment>
-        <event-block sid="549102660113997">
-            <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="887960775189228" type="Family_Tilemaps">
-                    <param id="0" name="Tag">&quot;tileanim&quot;</param>
-                </condition>
-                <condition id="-3" name="Is on-screen" sid="354110248891038" type="Family_Tilemaps" />
-                <condition id="-11" name="For Each" sid="731212484414218" type="System">
-                    <param id="0" name="Object">Family_Tilemaps</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="119772833557435">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="505030494371467" type="Family_Tilemaps">
-                            <param id="0" name="Instance variable">PingPong</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Call function" sid="104249557588667" type="Function">
-                            <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Tilemaps.UID{###}9 + Family_Tilemaps.frame{###}10 + Family_Tilemaps.frame</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="518285906253045" type="Function">
-                            <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Tilemaps.UID{###}12 + Family_Tilemaps.frame{###}13 + Family_Tilemaps.frame</param>
-                        </action>
-                        <action id="0" name="Call function" sid="752994489488652" type="Function">
-                            <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Tilemaps.UID{###}18 + Family_Tilemaps.frame{###}19 + Family_Tilemaps.frame</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="698379470989853" type="Family_Tilemaps">
-                            <param id="0" name="Instance variable">frame</param>
-                            <param id="1" name="Value">(Self.frame + 1) % Self.maxFrames</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="733373329611555">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="943679649315247" type="Family_Tilemaps">
-                            <param id="0" name="Instance variable">PingPong</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Call function" sid="810979671442519" type="Function">
-                            <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Tilemaps.UID{###}11 - Family_Tilemaps.frame{###}10 - Family_Tilemaps.frame</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="485004131112336" type="Function">
-                            <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Tilemaps.UID{###}14 - Family_Tilemaps.frame{###}13 - Family_Tilemaps.frame</param>
-                        </action>
-                        <action id="0" name="Call function" sid="401591448884409" type="Function">
-                            <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Tilemaps.UID{###}20 - Family_Tilemaps.frame{###}19 - Family_Tilemaps.frame</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="127852483898938" type="Family_Tilemaps">
-                            <param id="0" name="Instance variable">frame</param>
-                            <param id="1" name="Value">(Self.frame + 1) % Self.maxFrames</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="650227389686879">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="449382046843520" type="Family_Tilemaps">
-                            <param id="0" name="Instance variable">frame</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="412403751506069" type="Family_Tilemaps">
-                            <param id="0" name="Instance variable">PingPong</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>TileMap Animation, Function</comment>
-        <event-block sid="879754862380343">
-            <conditions>
-                <condition id="0" name="On function" sid="484168555750382" type="Function">
-                    <param id="0" name="Name">&quot;TileAnimate&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="339704954398717" type="Family_Tilemaps">
-                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                </condition>
-                <condition id="-10" name="For" sid="810767675972644" type="System">
-                    <param id="0" name="Name">&quot;LoopAnimation&quot;</param>
-                    <param id="1" name="Start index">1</param>
-                    <param id="2" name="End index">Family_Tilemaps.frame</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="705316216906896" type="Family_Tilemaps">
-                    <param id="0" name="Instance variable">JSON</param>
-                    <param id="1" name="Value">loopindex = 1 ? Family_Tilemaps.TilesJSON : Family_Tilemaps.JSON</param>
-                </action>
-                <action id="-10" name="Set value" sid="285473437418903" type="Family_Tilemaps">
-                    <param id="0" name="Instance variable">JSON</param>
-                    <param id="1" name="Value">replace(Family_Tilemaps.JSON, &quot;,&quot; &amp; Function.Param(1) &amp; &quot;,&quot;, &quot;,&quot; &amp; Function.Param(2) &amp; &quot;,&quot;)</param>
-                </action>
-                <action id="-10" name="Set value" sid="750121001662152" type="Family_Tilemaps">
-                    <param id="0" name="Instance variable">JSON</param>
-                    <param id="1" name="Value">replace(Family_Tilemaps.JSON, &quot;x&quot; &amp; Function.Param(1) &amp; &quot;,&quot;, &quot;x&quot; &amp; Function.Param(2) &amp; &quot;,&quot;)</param>
-                </action>
-                <action id="-10" name="Set value" sid="303850300427574" type="Family_Tilemaps">
-                    <param id="0" name="Instance variable">JSON</param>
-                    <param id="1" name="Value">replace(Family_Tilemaps.JSON, &quot;x&quot; &amp; Function.Param(1), &quot;x&quot; &amp; Function.Param(2))</param>
-                </action>
-                <action id="4" name="Load" sid="935550880862702" type="Family_Tilemaps">
-                    <param id="0" name="JSON">Family_Tilemaps.JSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Light Mechanic</comment>
-        <event-block sid="122670617306807">
-            <conditions>
-                <condition id="-18" name="On created" sid="427792661224314" type="PlayerCoreBox" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="995388077612180" type="PlayerCoreBox">
-                    <param id="0" name="Object">DungeonLight</param>
-                    <param id="1" name="Layer">&quot;Darkness&quot;</param>
-                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="135393059213140" type="DungeonLight">
-                    <param id="0" name="Opacity">10</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="997777437471912" type="DungeonLight">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Pin2" id="0" name="Pin to object" sid="335054145930747" type="DungeonLight">
-                    <param id="0" name="Pin to">PlayerCoreBox</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="184808169882778" type="PlayerCoreBox">
-                    <param id="0" name="Object">DungeonLight</param>
-                    <param id="1" name="Layer">&quot;Darkness&quot;</param>
-                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
-                </action>
-                <action id="-7" name="Set size" sid="576277598855641" type="DungeonLight">
-                    <param id="0" name="Width">200</param>
-                    <param id="1" name="Height">200</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="836298701248066" type="DungeonLight">
-                    <param id="0" name="Opacity">60</param>
-                </action>
-                <action behavior="Pin2" id="0" name="Pin to object" sid="991435327639244" type="DungeonLight">
-                    <param id="0" name="Pin to">PlayerCoreBox</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="163508297408908" type="PlayerCoreBox">
-                    <param id="0" name="Object">ShadowLight</param>
-                    <param id="1" name="Layer">&quot;OverLayer&quot;</param>
-                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
-                </action>
-                <action behavior="Pin2" id="0" name="Pin to object" sid="837682511727323" type="ShadowLight">
-                    <param id="0" name="Pin to">PlayerCoreBox</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action id="-24" name="Move to top" sid="404045548625237" type="ShadowLight" />
-                <action id="-16" name="Set opacity" sid="939665369762681" type="ShadowLight">
-                    <param id="0" name="Opacity">80</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="981417417306422">
-            <conditions>
-                <condition id="-18" name="On created" sid="742127876692282" type="Dungeon_Torch" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="915264067869156" type="Dungeon_Torch">
-                    <param id="0" name="Object">DungeonLight</param>
-                    <param id="1" name="Layer">&quot;Darkness&quot;</param>
-                    <param id="2" name="Image point">&quot;LightPoint&quot;</param>
-                </action>
-                <action id="4" name="Set animation" sid="989857026394895" type="DungeonLight">
-                    <param id="0" name="Animation">&quot;Torch&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-7" name="Set size" sid="771310005270973" type="DungeonLight">
-                    <param id="0" name="Width">150</param>
-                    <param id="1" name="Height">150</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="595027011156591" type="DungeonLight">
-                    <param id="0" name="Opacity">50</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="287399607294120" type="DungeonLight">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Sine" id="2" name="Set magnitude" sid="504464976097209" type="DungeonLight">
-                    <param id="0" name="Magnitude">15</param>
-                </action>
-                <action behavior="Sine" id="2" name="Set magnitude" sid="753010530862283" type="DungeonLight">
-                    <param id="0" name="Magnitude">6</param>
-                </action>
-                <action behavior="Pin2" id="0" name="Pin to object" sid="631482092274210" type="DungeonLight">
-                    <param id="0" name="Pin to">Dungeon_Torch</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="650970192970024">
-            <conditions>
-                <condition id="0" name="On function" sid="489229374736274" type="Function">
-                    <param id="0" name="Name">&quot;LightOff&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="575913496288375" type="TileMapOver">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-4" name="Set layer visible" sid="473451769071358" type="System">
-                    <param id="0" name="Layer">&quot;Filter&quot;</param>
-                    <param id="1" name="Visibility">0</param>
-                </action>
-                <action id="-4" name="Set layer visible" sid="100633789964870" type="System">
-                    <param id="0" name="Layer">&quot;Darkness&quot;</param>
-                    <param id="1" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="674038195591303">
-            <conditions>
-                <condition id="0" name="On function" sid="104492142011414" type="Function">
-                    <param id="0" name="Name">&quot;LightOn&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="388999909435867" type="TileMapOver">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="-4" name="Set layer visible" sid="403184796415000" type="System">
-                    <param id="0" name="Layer">&quot;Filter&quot;</param>
-                    <param id="1" name="Visibility">1</param>
-                </action>
-                <action id="-4" name="Set layer visible" sid="625553550704792" type="System">
-                    <param id="0" name="Layer">&quot;Darkness&quot;</param>
-                    <param id="1" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>SubPause (dialogs is active)</comment>
-        <event-block sid="618847552591417">
-            <conditions>
-                <condition id="0" name="On function" sid="110115241936584" type="Function">
-                    <param id="0" name="Name">&quot;DialogVisible&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set layer visible" sid="611958768343966" type="System">
-                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
-                    <param id="1" name="Visibility">1</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="822901032790716" type="System">
-                    <param id="0" name="Object">Family_Impact</param>
-                    <param id="1" name="Time scale">0</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="492773736117313" type="System">
-                    <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Time scale">0</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="183530124018458" type="System">
-                    <param id="0" name="Object">Family_Item</param>
-                    <param id="1" name="Time scale">0</param>
-                </action>
-                <action id="5" name="Pause animation" sid="818063470796713" type="Family_Spriter" />
-            </actions>
-        </event-block>
-        <event-block sid="700542397580809">
-            <conditions>
-                <condition id="0" name="On function" sid="520866317498234" type="Function">
-                    <param id="0" name="Name">&quot;DialogInvisible&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set layer visible" sid="464645392569343" type="System">
-                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
-                    <param id="1" name="Visibility">0</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="594976327243067" type="System">
-                    <param id="0" name="Object">Family_Impact</param>
-                    <param id="1" name="Time scale">1</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="766695534140969" type="System">
-                    <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Time scale">1</param>
-                </action>
-                <action id="-14" name="Set object time scale" sid="386075963492982" type="System">
-                    <param id="0" name="Object">Family_Item</param>
-                    <param id="1" name="Time scale">1</param>
-                </action>
-                <action id="6" name="Resume animation" sid="563643683984845" type="Family_Spriter" />
             </actions>
         </event-block>
         <comment>Door opened &amp; Pick Key</comment>
@@ -553,6 +249,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Load Bar Function</comment>
         <event-block sid="367935428190049">
             <conditions>
                 <condition id="2" name="Is pause" sid="605819899627861" type="Rex_Pause" />
@@ -648,6 +345,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Special Functions</comment>
         <event-block sid="143907813422825">
             <conditions>
                 <condition id="0" name="On function" sid="757985406358839" type="Function">

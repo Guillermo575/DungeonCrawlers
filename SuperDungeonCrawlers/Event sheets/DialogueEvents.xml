@@ -242,6 +242,59 @@
                 </action>
             </actions>
         </event-block>
+        <comment>SubPause (dialogs is active)</comment>
+        <event-block sid="780062976384935">
+            <conditions>
+                <condition id="0" name="On function" sid="525910890719638" type="Function">
+                    <param id="0" name="Name">&quot;DialogVisible&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="423111214604203" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="901676861528310" type="System">
+                    <param id="0" name="Object">Family_Impact</param>
+                    <param id="1" name="Time scale">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="292028781261840" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Time scale">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="910246955043263" type="System">
+                    <param id="0" name="Object">Family_Item</param>
+                    <param id="1" name="Time scale">0</param>
+                </action>
+                <action id="5" name="Pause animation" sid="674526801232910" type="Family_Spriter" />
+            </actions>
+        </event-block>
+        <event-block sid="955657750323498">
+            <conditions>
+                <condition id="0" name="On function" sid="788312175444905" type="Function">
+                    <param id="0" name="Name">&quot;DialogInvisible&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="780412126097669" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="587131939250949" type="System">
+                    <param id="0" name="Object">Family_Impact</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="855941590974257" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="561304337087403" type="System">
+                    <param id="0" name="Object">Family_Item</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="6" name="Resume animation" sid="280963153294726" type="Family_Spriter" />
+            </actions>
+        </event-block>
         <comment>Load file and configuration function</comment>
         <event-block sid="271189346466695">
             <conditions>

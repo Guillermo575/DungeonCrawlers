@@ -15,21 +15,6 @@
                     <param id="1" name="Parameter {n}">&quot;Wormula&quot;</param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block sid="244156878427950">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="316738705903896" type="System">
-                            <param id="0" name="Object">PlayerCoreBox</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="819262630461841" type="Function">
-                            <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
-                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="490225577483555">
             <conditions>

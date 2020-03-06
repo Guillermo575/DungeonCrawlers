@@ -213,10 +213,6 @@
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
-                                                <action id="0" name="Call function" sid="852594131358382" type="Function">
-                                                    <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
-                                                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
-                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="375410149525325">
@@ -317,10 +313,6 @@
                                                     <param id="0" name="Instance variable">EID</param>
                                                     <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
                                                 </action>
-                                                <action id="0" name="Call function" sid="681718657158248" type="Function">
-                                                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
-                                                </action>
                                                 <action id="0" name="Spawn another object" sid="303926938998055" type="EnemyCoreBox">
                                                     <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
@@ -357,10 +349,6 @@
                                                 <action id="-10" name="Set value" sid="609714873865271" type="EnemyCoreBox">
                                                     <param id="0" name="Instance variable">EID</param>
                                                     <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="103698039978106" type="Function">
-                                                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
-                                                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
                                                 </action>
                                                 <action id="0" name="Spawn another object" sid="549461276992220" type="EnemyCoreBox">
                                                     <param id="0" name="Object">Item_Generic</param>
