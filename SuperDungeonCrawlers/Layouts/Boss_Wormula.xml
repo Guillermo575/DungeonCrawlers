@@ -193,7 +193,7 @@
                                 <jump-strength>600</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>800</max-fall-speed>
-                                <double-jump>Enabled</double-jump>
+                                <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>

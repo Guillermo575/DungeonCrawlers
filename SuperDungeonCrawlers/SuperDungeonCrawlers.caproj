@@ -355,75 +355,6 @@
                     </behaviors>
                 </object-type>
             </object-folder>
-            <object-folder name="_Basics">
-                <object-type name="BlockDungeon" sid="879704784841997">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable comment="Block Id" name="Id" sid="319576613721629" type="number" />
-                    </instance-variables>
-                    <behaviors>
-                        <behavior-type name="Pin" sid="418429561716850">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747727076343041" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0">
-                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
-                                <collision-poly>
-                                    <point x="1" y="0" />
-                                    <point x="0" y="0" />
-                                    <point x="0" y="1" />
-                                    <point x="1" y="1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Picked" pingpong="0" repeatcount="1" repeatto="0" sid="479889793226715" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0">
-                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="BlockStart" sid="820541516162721">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="548330548971927">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122420528114605" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0">
-                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="BlockWall" sid="195154604045645">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="754551334590769">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                        <behavior-type name="Solid" sid="758946971076289">
-                            <behavior id="solid" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894693790594913" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <collision-poly>
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="0.1" />
-                                    <point x="0" y="0.1" />
-                                </collision-poly>
-                            </frame>
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
             <object-folder name="Elements">
                 <object-type name="DoorDungeon" sid="813731939461028">
                     <plugin id="Sprite" />
@@ -520,8 +451,35 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-            </object-folder>
-            <object-folder name="Text">
+                <object-type name="BlockDungeon" sid="879704784841997">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Block Id" name="Id" sid="319576613721629" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="418429561716850">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747727076343041" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="0" y="0" />
+                                    <point x="0" y="1" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Picked" pingpong="0" repeatcount="1" repeatto="0" sid="479889793226715" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
                 <object-type name="Map_Keyboard_Indicator" sid="357767401096718">
                     <plugin id="Sprite" />
                     <behaviors>
@@ -1917,8 +1875,8 @@
                             <image-point name="LightPoint" x="0.533333" y="0" />
                             <collision-poly>
                                 <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
+                                <point x="1" y="0.75" />
+                                <point x="0" y="0.75" />
                                 <point x="0" y="0" />
                             </collision-poly>
                         </frame>
