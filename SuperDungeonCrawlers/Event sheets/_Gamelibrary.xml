@@ -4,6 +4,7 @@
     <name>_Gamelibrary</name>
     <events>
         <variable constant="0" name="GameMode" sid="200313099251393" static="0" type="text">UP</variable>
+        <variable constant="0" name="DarkMode" sid="200321850843799" static="0" type="number">0</variable>
         <variable comment="Difficult configured in the game (Easy, Normal, Hard)" constant="0" name="ConfigDifficult" sid="376289247331375" static="0" type="text">Easy</variable>
         <variable comment="Last Level Loaded" constant="0" name="LastLevel" sid="401210357883922" static="0" type="text"></variable>
         <variable comment="Last level Info Data in a JSON" constant="0" name="LastLevelJSON" sid="622867184603336" static="0" type="text"></variable>
@@ -46,10 +47,6 @@
                 </action>
                 <action id="0" name="Call function" sid="495353101910765" type="Function">
                     <param id="0" name="Name">&quot;LightOn&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="771115418693452" type="Function">
-                    <param id="0" name="Name">&quot;LightOff&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="1" name="Set pause state" sid="822846596490126" type="Rex_Pause">
@@ -344,6 +341,27 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="153516245185986">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="686301311149477" type="System">
+                    <param id="0" name="Variable">LoadComplete</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="638119407933264" type="System">
+                    <param id="0" name="Variable">DarkMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="545628463011720" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="363534805637035" type="Function">
+                    <param id="0" name="Name">&quot;LightOff&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
         <comment>Special Functions</comment>
         <event-block sid="143907813422825">
