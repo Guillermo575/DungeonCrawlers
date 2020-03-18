@@ -41,6 +41,10 @@
                     <param id="1" name="Value">LayoutName</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="584398248476612" type="DoorDungeon" />
+                <action id="0" name="Call function" sid="837031768861734" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDKey&quot;</param>
+                    <param id="1" name="Parameter {n}">0{###}330{###}20</param>
+                </action>
                 <action id="0" name="Call function" sid="449783667401302" type="Function">
                     <param id="0" name="Name">&quot;CreateHUDFloorName&quot;</param>
                     <param id="1" name="Parameter {n}">330{###}30{###}&quot;Floor &quot;&amp; Array_Levels.Actual</param>
@@ -223,6 +227,9 @@
                     <param id="0" name="Instance variable">KeyPick</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="236991041856666" type="HUD_Key_Container">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="801789085647739">
@@ -243,6 +250,9 @@
                 <action id="-13" name="Set boolean" sid="226655126735342" type="Family_Character">
                     <param id="0" name="Instance variable">KeyPick</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="366548055620627" type="HUD_Key_Container">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>

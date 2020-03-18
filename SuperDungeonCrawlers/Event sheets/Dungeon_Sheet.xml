@@ -22,10 +22,6 @@
                     <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Dungeon&quot;</param>
                 </action>
-                <action id="0" name="Call function" sid="244047507033312" type="Function">
-                    <param id="0" name="Name">&quot;CreateHUDKey&quot;</param>
-                    <param id="1" name="Parameter {n}">0{###}300{###}30</param>
-                </action>
                 <action id="-35" name="Set layer transparent" sid="736619890383913" type="System">
                     <param id="0" name="Layer">&quot;OverLayer&quot;</param>
                     <param id="1" name="Mode">1</param>

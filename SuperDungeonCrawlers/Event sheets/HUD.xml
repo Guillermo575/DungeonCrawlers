@@ -428,8 +428,32 @@
                     <param id="2" name="X">int(Function.Param(1))</param>
                     <param id="3" name="Y">int(Function.Param(2))</param>
                 </action>
-                <action id="-3" name="Create object" sid="801061858420406" type="System">
+                <action disabled="1" id="-3" name="Create object" sid="801061858420406" type="System">
                     <param id="0" name="Object to create">HUD_Key_Text</param>
+                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                    <param id="2" name="X">int(Function.Param(1))</param>
+                    <param id="3" name="Y">int(Function.Param(2))</param>
+                </action>
+                <action id="-15" name="Set visible" sid="741030069433325" type="HUD_Key_Container">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="978400114889483">
+            <conditions>
+                <condition id="0" name="On function" sid="111687744232353" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDCoin&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="260314195873402" type="System">
+                    <param id="0" name="Object to create">HUD_Coin_Container</param>
+                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                    <param id="2" name="X">int(Function.Param(1))</param>
+                    <param id="3" name="Y">int(Function.Param(2))</param>
+                </action>
+                <action id="-3" name="Create object" sid="797269759374337" type="System">
+                    <param id="0" name="Object to create">HUD_Coin_Text</param>
                     <param id="1" name="Layer">&quot;HUD&quot;</param>
                     <param id="2" name="X">int(Function.Param(1))</param>
                     <param id="3" name="Y">int(Function.Param(2))</param>
@@ -445,6 +469,18 @@
             <actions>
                 <action id="0" name="Set text" sid="480607800479919" type="HUD_Key_Text">
                     <param id="0" name="Text">Item_Key.Count</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="563597871112418">
+            <conditions>
+                <condition id="-11" name="For Each" sid="479568664994286" type="System">
+                    <param id="0" name="Object">HUD_Coin_Text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="528323283261349" type="HUD_Coin_Text">
+                    <param id="0" name="Text">PlayerCoreBox.Coins</param>
                 </action>
             </actions>
         </event-block>

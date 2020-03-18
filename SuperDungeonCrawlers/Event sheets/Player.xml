@@ -70,6 +70,10 @@
                     <param id="0" name="Name">&quot;CreateHUDObject&quot;</param>
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}390{###}10{###}340{###}10</param>
                 </action>
+                <action id="0" name="Call function" sid="674697582302470" type="Function">
+                    <param id="0" name="Name">&quot;CreateHUDCoin&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}450{###}40</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="478755452647957" type="Family_Character">
                     <param id="0" name="Object">Scml_Player_Top</param>
                     <param id="1" name="Layer">&quot;Characters&quot;</param>
@@ -133,7 +137,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="489685537822983">
+                <event-block disabled="1" sid="489685537822983">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="617036482268110" type="Keyboard">
                             <param id="0" name="Key">67</param>

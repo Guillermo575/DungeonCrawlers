@@ -435,17 +435,51 @@
                         <instance-variable comment="Coin value" name="CoinGain" sid="248960793933244" type="number" />
                     </instance-variables>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713105440691450" speed="5">
+                        <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="713105440691450" speed="10">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin.png">
                                 <collision-poly>
-                                    <point x="0.1875" y="0.1875" />
-                                    <point x="0.5" y="0" />
-                                    <point x="0.8125" y="0.1875" />
-                                    <point x="0.875" y="0.5" />
-                                    <point x="0.8125" y="0.8125" />
-                                    <point x="0.5" y="1" />
-                                    <point x="0.125" y="0.875" />
-                                    <point x="0.0625" y="0.5" />
+                                    <point x="0.16" y="0.16" />
+                                    <point x="0.48" y="0" />
+                                    <point x="0.84" y="0.16" />
+                                    <point x="0.96" y="0.48" />
+                                    <point x="0.84" y="0.84" />
+                                    <point x="0.48" y="1" />
+                                    <point x="0.16" y="0.84" />
+                                    <point x="0.04" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin - copia.png">
+                                <collision-poly>
+                                    <point x="0.2" y="0.2" />
+                                    <point x="0.48" y="0" />
+                                    <point x="0.8" y="0.2" />
+                                    <point x="0.88" y="0.48" />
+                                    <point x="0.8" y="0.8" />
+                                    <point x="0.48" y="1" />
+                                    <point x="0.2" y="0.8" />
+                                    <point x="0.12" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin - copia - copia.png">
+                                <collision-poly>
+                                    <point x="0.24" y="0.24" />
+                                    <point x="0.48" y="0" />
+                                    <point x="0.72" y="0.28" />
+                                    <point x="0.76" y="0.48" />
+                                    <point x="0.72" y="0.72" />
+                                    <point x="0.48" y="1" />
+                                    <point x="0.24" y="0.76" />
+                                    <point x="0.2" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Coin - copia - copia - copia.png">
+                                <collision-poly>
+                                    <point x="0.32" y="0.32" />
+                                    <point x="0.48" y="0" />
+                                    <point x="0.68" y="0.32" />
+                                    <point x="0.68" y="0.68" />
+                                    <point x="0.48" y="1" />
+                                    <point x="0.32" y="0.68" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1917,6 +1951,9 @@
                 <object-type name="HUD_Object_Right_Text" sid="890378669195193">
                     <plugin id="Text" />
                 </object-type>
+                <object-type name="HUD_Coin_Text" sid="213606386192684">
+                    <plugin id="Text" />
+                </object-type>
             </object-folder>
             <object-folder name="Hearth">
                 <object-type name="HUD_Heart" sid="528331231217329">
@@ -2291,6 +2328,59 @@
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
                                 <point x="0.0525253" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HUD_Coin_Container" sid="327260313484307">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="688672612168271" speed="8">
+                        <frame duration="1" hotspotX="1" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Coin.png">
+                            <collision-poly>
+                                <point x="0.16" y="0.16" />
+                                <point x="0.48" y="0" />
+                                <point x="0.84" y="0.16" />
+                                <point x="0.96" y="0.48" />
+                                <point x="0.84" y="0.84" />
+                                <point x="0.48" y="1" />
+                                <point x="0.16" y="0.84" />
+                                <point x="0.04" y="0.48" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Coin - copia.png">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.916667" y="0.5" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.166667" y="0.833333" />
+                                <point x="0.0833333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Coin - copia - copia.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.5" y="0" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.833333" y="0.5" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="1" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.166667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0" original-source="C:\Users\MasterRace\Desktop\Coin - copia - copia - copia.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.5" y="0" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="1" />
+                                <point x="0.25" y="0.75" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -3480,6 +3570,19 @@
         <family name="Family_Hazard" plugin-id="Sprite" sid="808489401840140">
             <members>
                 <member>Dungeon_Torch</member>
+            </members>
+        </family>
+        <family name="Family_Text" plugin-id="Text" sid="158114831449369">
+            <members>
+                <member>HUD_Coin_Text</member>
+                <member>HUD_Floor_Name</member>
+                <member>HUD_Key_Text</member>
+                <member>HUD_Object_Left_Text</member>
+                <member>HUD_Object_Right_Text</member>
+                <member>Path_Text</member>
+                <member>Text_Button</member>
+                <member>Text_Menu</member>
+                <member>Text_Menu_Shadow</member>
             </members>
         </family>
     </families>
