@@ -81,6 +81,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="174994291067399" type="System">
+                    <param id="0" name="Variable">VisibleMiniMapMode</param>
+                    <param id="1" name="Value">choose(0, 1)</param>
+                </action>
+                <action id="-9" name="Set value" sid="646461685008305" type="System">
+                    <param id="0" name="Variable">DarkMode</param>
+                    <param id="1" name="Value">choose(0, 1)</param>
+                </action>
                 <action id="8" name="Reset dungeon elements" sid="821609357044801" type="RandomDungeonMaker" />
                 <action id="7" name="New dungeon element" sid="542241142087855" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Player&quot;</param>
@@ -184,10 +192,6 @@
                     <param id="8" name="LabyrinthInn">2</param>
                     <param id="9" name="OpenWorld">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="646461685008305" type="System">
-                    <param id="0" name="Variable">DarkMode</param>
-                    <param id="1" name="Value">choose(0, 1)</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="674857603687942">
@@ -202,6 +206,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="562597908468586" type="System">
+                    <param id="0" name="Variable">DarkMode</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="159478546744826" type="System">
+                    <param id="0" name="Variable">VisibleMiniMapMode</param>
+                    <param id="1" name="Value">choose(0, 1)</param>
+                </action>
                 <action id="8" name="Reset dungeon elements" sid="332533938241303" type="RandomDungeonMaker" />
                 <action id="7" name="New dungeon element" sid="990840779856830" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Player&quot;</param>
@@ -271,10 +283,6 @@
                     <param id="4" name="MaxRoom">3 + int(random(0,1))</param>
                     <param id="5" name="LabyrinthInn">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="562597908468586" type="System">
-                    <param id="0" name="Variable">DarkMode</param>
-                    <param id="1" name="Value">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="594122056616191">
@@ -289,6 +297,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="752709075255616" type="System">
+                    <param id="0" name="Variable">DarkMode</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="737005727418511" type="System">
+                    <param id="0" name="Variable">VisibleMiniMapMode</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="8" name="Reset dungeon elements" sid="224093589956876" type="RandomDungeonMaker" />
                 <action id="7" name="New dungeon element" sid="753918790707619" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Player&quot;</param>
@@ -348,10 +364,6 @@
                     <param id="4" name="MaxRoom">3 + int(random(0,1))</param>
                     <param id="5" name="LabyrinthInn">2</param>
                 </action>
-                <action id="-9" name="Set value" sid="752709075255616" type="System">
-                    <param id="0" name="Variable">DarkMode</param>
-                    <param id="1" name="Value">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="320514239725855">
@@ -366,6 +378,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="323576792296408" type="System">
+                    <param id="0" name="Variable">DarkMode</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="811310557701800" type="System">
+                    <param id="0" name="Variable">VisibleMiniMapMode</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="8" name="Reset dungeon elements" sid="427048465956423" type="RandomDungeonMaker" />
                 <action id="7" name="New dungeon element" sid="284357602760984" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Player&quot;</param>
@@ -424,10 +444,6 @@
                     <param id="3" name="MinRoom">2 + int(random(0,2))</param>
                     <param id="4" name="MaxRoom">3 + int(random(0,2))</param>
                     <param id="5" name="LabyrinthInn">2</param>
-                </action>
-                <action id="-9" name="Set value" sid="323576792296408" type="System">
-                    <param id="0" name="Variable">DarkMode</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
