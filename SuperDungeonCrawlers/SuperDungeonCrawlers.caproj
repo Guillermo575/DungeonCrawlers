@@ -3584,6 +3584,11 @@
                 <member>Text_Menu</member>
                 <member>Text_Menu_Shadow</member>
             </members>
+            <behaviors>
+                <behavior-type name="Pin2" sid="244058726112429">
+                    <behavior id="Pin2" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

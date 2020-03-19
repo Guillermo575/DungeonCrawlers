@@ -50,39 +50,43 @@
                 <condition id="0" name="On function" sid="721818035256894" type="Function">
                     <param id="0" name="Name">&quot;MakeTextShadow&quot;</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="950206408893378" type="Text_Menu">
+                <condition id="-14" name="Pick by unique ID" sid="950206408893378" type="Family_Text">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="281689574697419" type="System">
                     <param id="0" name="Object to create">Text_Menu_Shadow</param>
-                    <param id="1" name="Layer">Text_Menu.LayerName</param>
-                    <param id="2" name="X">Text_Menu.X + 2</param>
-                    <param id="3" name="Y">Text_Menu.Y - 2</param>
+                    <param id="1" name="Layer">Family_Text.LayerName</param>
+                    <param id="2" name="X">Family_Text.X + 2</param>
+                    <param id="3" name="Y">Family_Text.Y - 2</param>
                 </action>
                 <action id="-29" name="Move to object" sid="517083292365135" type="Text_Menu_Shadow">
                     <param id="0" name="Where">1</param>
-                    <param id="1" name="Object">Text_Menu</param>
+                    <param id="1" name="Object">Family_Text</param>
                 </action>
                 <action id="0" name="Set text" sid="224674889578094" type="Text_Menu_Shadow">
-                    <param id="0" name="Text">Text_Menu.Text</param>
+                    <param id="0" name="Text">Family_Text.Text</param>
                 </action>
                 <action id="3" name="Set font size" sid="766262736855602" type="Text_Menu_Shadow">
-                    <param id="0" name="Size (pt)">Text_Menu.FaceSize</param>
+                    <param id="0" name="Size (pt)">Family_Text.FaceSize</param>
                 </action>
                 <action id="4" name="Set font color" sid="456103736375579" type="Text_Menu_Shadow">
                     <param id="0" name="Color">rgb(0,0,0)</param>
                 </action>
                 <action id="-5" name="Set width" sid="862619014114961" type="Text_Menu_Shadow">
-                    <param id="0" name="Width">Text_Menu.Width</param>
+                    <param id="0" name="Width">Family_Text.Width</param>
                 </action>
                 <action id="-6" name="Set height" sid="440025805889161" type="Text_Menu_Shadow">
-                    <param id="0" name="Height">Text_Menu.Height</param>
+                    <param id="0" name="Height">Family_Text.Height</param>
                 </action>
                 <action id="2" name="Set font face" sid="974543873806712" type="Text_Menu_Shadow">
-                    <param id="0" name="Font face">Text_Menu.FaceName</param>
+                    <param id="0" name="Font face">Family_Text.FaceName</param>
                     <param id="1" name="Style">1</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="791138223639335" type="Text_Menu_Shadow">
+                    <param id="0" name="Pin to">Family_Text</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>
@@ -91,6 +95,9 @@
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="129961749172454" type="Mouse">
                     <param id="0" name="Object">Family_Menus</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="643394313419326" type="System">
+                    <param id="0" name="Layer">Family_Menus.LayerName</param>
                 </condition>
             </conditions>
             <actions>
@@ -111,6 +118,9 @@
             <conditions>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="180102180133788" type="Mouse">
                     <param id="0" name="Object">Family_Menus</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="530810932590221" type="System">
+                    <param id="0" name="Layer">Family_Menus.LayerName</param>
                 </condition>
             </conditions>
             <actions>
@@ -339,6 +349,21 @@
                 <action id="4" name="Set animation" sid="593544129550299" type="Menu_Cursor">
                     <param id="0" name="Animation">Family_Menus.Cursor</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="366118888261449">
+            <conditions>
+                <condition id="-11" name="For Each" sid="787462284083030" type="System">
+                    <param id="0" name="Object">Text_Menu_Shadow</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="805662444335267" type="Family_Text">
+                    <param id="0" name="Unique ID">Text_Menu_Shadow.Pin2.PinnedUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="176401576440515" type="Text_Menu_Shadow">
+                    <param id="0" name="Text">Family_Text.Text</param>
                 </action>
             </actions>
         </event-block>

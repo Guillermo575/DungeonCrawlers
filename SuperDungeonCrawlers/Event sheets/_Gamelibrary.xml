@@ -12,6 +12,7 @@
         <variable comment="Alternate Event if dont load because an error" constant="0" name="LoadWait" sid="569168715090754" static="0" type="number">0</variable>
         <comment>This sheet works as a general library of all the sheets used for the gameplay</comment>
         <include>Menu_Pause</include>
+        <include>_Menu_General</include>
         <include>Audio</include>
         <include>Enemies</include>
         <include>Player</include>
@@ -71,6 +72,14 @@
                     <param id="0" name="Object">Load_BarFrame</param>
                     <param id="1" name="Layer">&quot;Pause&quot;</param>
                     <param id="2" name="Image point">&quot;LoadBar&quot;</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="485287321070669" type="System">
+                    <param id="0" name="Layer">&quot;HUD&quot;</param>
+                    <param id="1" name="Opacity">75</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="299062592742025" type="System">
+                    <param id="0" name="Layer">&quot;Dialog&quot;</param>
+                    <param id="1" name="Opacity">100</param>
                 </action>
             </actions>
         </event-block>

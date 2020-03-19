@@ -4,7 +4,6 @@
     <name>Menu_Pause</name>
     <events>
         <comment>Sheet of the pause menu</comment>
-        <include>_Menu_General</include>
         <event-block sid="943737828577510">
             <conditions>
                 <condition id="0" name="On function" sid="324720936355965" type="Function">
