@@ -247,6 +247,26 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="535959521423365">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="365180514549574" type="System">
+                                                    <param id="0" name="First value">tokenat(tokenat(TotalNameTag,loopindex,&quot;,&quot;),0,&quot;_&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Coin&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="612811794904703" type="BlockDungeon">
+                                                    <param id="0" name="Object">Item_Coin</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="932690595867719" type="Item_Coin">
+                                                    <param id="0" name="Instance variable">CoinGain</param>
+                                                    <param id="1" name="Value">int(tokenat(tokenat(TotalNameTag,loopindex,&quot;,&quot;),1,&quot;_&quot;))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="375410149525325">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="413604206711343" type="System">

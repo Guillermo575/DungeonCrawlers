@@ -737,6 +737,10 @@
                             <param id="0" name="Instance variable">Blast_AmmoXShoot</param>
                             <param id="1" name="Value">Family_Item.Explote_AmmoXShoot</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="644995630328611" type="Impact_Generic">
+                            <param id="0" name="Instance variable">DodgeJump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="525554166392414">
@@ -857,6 +861,10 @@
                         <action id="-10" name="Set value" sid="593120468172450" type="Explote_Generic">
                             <param id="0" name="Instance variable">Impact_Damage</param>
                             <param id="1" name="Value">int(Family_Impact.Blast_Damage)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="391281822645187" type="Explote_Generic">
+                            <param id="0" name="Instance variable">DodgeJump</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>

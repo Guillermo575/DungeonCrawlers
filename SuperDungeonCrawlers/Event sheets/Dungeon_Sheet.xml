@@ -180,6 +180,16 @@
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
                 </action>
+                <action id="7" name="New dungeon element" sid="738785095024408" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Coin_1&quot;</param>
+                    <param id="1" name="Total">int(random(5,15))</param>
+                    <param id="2" name="OcuppedTolerance">2</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
                 <action id="10" name="Create Dungeon (Advanced)" sid="958635477578448" type="RandomDungeonMaker">
                     <param id="0" name="Width">6 + int(random(0,4))</param>
                     <param id="1" name="Height">6 + int(random(0,4))</param>
