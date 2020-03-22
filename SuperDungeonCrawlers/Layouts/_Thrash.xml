@@ -574,7 +574,7 @@
                         <StalkDistance>300</StalkDistance>
                         <Dialog>intro</Dialog>
                         <CanTalk>false</CanTalk>
-                        <EID>0</EID>
+                        <Element_ID>0</Element_ID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="FC_8Direction">
@@ -604,8 +604,8 @@
                         </behavior-instance>
                         <behavior-instance type="FC_Pathfinding">
                             <properties>
-                                <cell-size>15</cell-size>
-                                <cell-border>15</cell-border>
+                                <cell-size>16</cell-size>
+                                <cell-border>2</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>80</max-speed>
                                 <acceleration>800</acceleration>
@@ -2538,6 +2538,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Element_ID>0</Element_ID>
                         <CoinGain>1</CoinGain>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

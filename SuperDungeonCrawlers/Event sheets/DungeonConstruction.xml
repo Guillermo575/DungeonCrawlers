@@ -247,6 +247,22 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="214285117067240">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="237956756660104" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Torch&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="901936482945370" type="BlockDungeon">
+                                                    <param id="0" name="Object">Dungeon_Torch</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="535959521423365">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="365180514549574" type="System">
@@ -264,6 +280,10 @@
                                                 <action id="-10" name="Set value" sid="932690595867719" type="Item_Coin">
                                                     <param id="0" name="Instance variable">CoinGain</param>
                                                     <param id="1" name="Value">int(tokenat(tokenat(TotalNameTag,loopindex,&quot;,&quot;),1,&quot;_&quot;))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="177004679472614" type="Item_Coin">
+                                                    <param id="0" name="Instance variable">Element_ID</param>
+                                                    <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -346,7 +366,7 @@
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="986079097835855" type="EnemyCoreBox">
-                                                    <param id="0" name="Instance variable">EID</param>
+                                                    <param id="0" name="Instance variable">Element_ID</param>
                                                     <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
                                                 </action>
                                                 <action id="0" name="Spawn another object" sid="269541387100415" type="EnemyCoreBox">

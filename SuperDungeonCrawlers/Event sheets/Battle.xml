@@ -928,6 +928,9 @@
                     <param id="0" name="Instance variable">Coins</param>
                     <param id="1" name="Value">Item_Coin.CoinGain</param>
                 </action>
+                <action id="9" name="Remove dungeon element" sid="686586536435730" type="RandomDungeonMaker">
+                    <param id="0" name="ElementId">Item_Coin.Element_ID</param>
+                </action>
                 <action id="-9" name="Destroy" sid="425728899798213" type="Item_Coin" />
             </actions>
         </event-block>

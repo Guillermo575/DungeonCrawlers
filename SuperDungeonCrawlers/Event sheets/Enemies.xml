@@ -794,7 +794,7 @@
                                     <param id="1" name="Parameter {n}">Scml_Player_Top.UID</param>
                                 </action>
                                 <action id="9" name="Remove dungeon element" sid="111230306201985" type="RandomDungeonMaker">
-                                    <param id="0" name="ElementId">EnemyCoreBox.EID</param>
+                                    <param id="0" name="ElementId">EnemyCoreBox.Element_ID</param>
                                 </action>
                                 <action behavior="FC_Timer" id="0" name="Start timer" sid="684452258811829" type="EnemyCoreBox">
                                     <param id="0" name="Duration">1.5</param>

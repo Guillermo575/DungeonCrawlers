@@ -1872,9 +1872,6 @@
             </object-type>
             <object-type name="EnemyCoreBox" sid="685184138898359">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="Value used for Enemy Stalk AI" name="EID" sid="667389107383202" type="number" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="247128027638202">
                         <behavior id="bound" />
@@ -3589,6 +3586,15 @@
                     <behavior id="Pin2" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="Family_DungeonElements" plugin-id="Sprite" sid="254198457729532">
+            <members>
+                <member>EnemyCoreBox</member>
+                <member>Item_Coin</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Element_ID" sid="699314432238005" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
