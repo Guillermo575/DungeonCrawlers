@@ -52,6 +52,18 @@
                 <action id="-15" name="Set visible" sid="623382103612689" type="Character_Hitbox">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="908874427814611" type="Family_Character">
+                    <param id="0" name="Object">Character_FeetBox</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="915385445988927" type="Character_FeetBox">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="187491278248701" type="Character_FeetBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="893665095404074" type="Family_Character">
                     <param id="0" name="Object">Scml_Player_Top</param>
                     <param id="1" name="Layer">&quot;Characters&quot;</param>

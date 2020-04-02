@@ -62,6 +62,18 @@
                 <action id="-15" name="Set visible" sid="797194159434487" type="Character_Hitbox">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="336917616208910" type="Family_Character">
+                    <param id="0" name="Object">Character_FeetBox</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="313748179914836" type="Character_FeetBox">
+                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="170949821189100" type="Character_FeetBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
                 <action id="0" name="Call function" sid="834364955267388" type="Function">
                     <param id="0" name="Name">&quot;CreateHUDHealth&quot;</param>
                     <param id="1" name="Parameter {n}">Family_Character.UID{###}440{###}10</param>

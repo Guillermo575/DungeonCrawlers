@@ -527,6 +527,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="187637065109948" type="Family_Character">
                             <param id="0" name="Instance variable">IsAlive</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="558825110647445" type="Scml_Player_Bottom" />
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="671260324196011" type="PlayerShadow">

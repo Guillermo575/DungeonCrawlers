@@ -1880,11 +1880,12 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231445682783223" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\aaaaaaa.png">
+                            <image-point name="LightPoint" x="0.533333" y="0" />
                             <collision-poly>
-                                <point x="1" y="0.45" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0.45" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.75" />
+                                <point x="0" y="0.75" />
+                                <point x="0" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1932,6 +1933,19 @@
             </object-type>
             <object-type name="Path_Text" sid="207733276697056">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="Character_FeetBox" sid="677946508706615">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin2" sid="667656302185755">
+                        <behavior id="Pin2" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="835565961969611" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="HUDPlayer">
@@ -3238,6 +3252,61 @@
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-type name="Panel_Relocate" sid="267874215148920">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783211419667235" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Panel_Pit" sid="621262188812962">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="425245063225362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FallSprite" sid="535496851236989">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="524228464762432">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613115852604942" speed="24">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.166667" y="0.166667" />
+                            <point x="0.833333" y="0.166667" />
+                            <point x="0.833333" y="0.833333" />
+                            <point x="0.166667" y="0.833333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.166667" y="0.166667" />
+                            <point x="0.833333" y="0.166667" />
+                            <point x="0.833333" y="0.833333" />
+                            <point x="0.166667" y="0.833333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -3567,6 +3636,7 @@
         <family name="Family_Hazard" plugin-id="Sprite" sid="808489401840140">
             <members>
                 <member>Dungeon_Torch</member>
+                <member>Panel_Pit</member>
             </members>
         </family>
         <family name="Family_Text" plugin-id="Text" sid="158114831449369">
