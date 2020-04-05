@@ -540,6 +540,29 @@
                         </behavior-type>
                     </behaviors>
                 </object-type>
+                <object-type name="Panel_Pit" sid="621262188812962">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="425245063225362" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.0625" y="0.0625" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.9375" y="0.9375" />
+                                    <point x="0.0625" y="0.9375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Panel_Relocate" sid="267874215148920">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783211419667235" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="RandomDungeonMaker" sid="657276153499905">
                 <plugin id="random_dungeon_maker" />
@@ -1947,6 +1970,38 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="FallSprite" sid="535496851236989">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="524228464762432">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613115852604942" speed="24">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="HUDPlayer">
             <object-folder name="Text">
@@ -3252,61 +3307,6 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-type name="Panel_Relocate" sid="267874215148920">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783211419667235" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Panel_Pit" sid="621262188812962">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="425245063225362" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="FallSprite" sid="535496851236989">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Fade" sid="524228464762432">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613115852604942" speed="24">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.166667" y="0.166667" />
-                            <point x="0.833333" y="0.166667" />
-                            <point x="0.833333" y="0.833333" />
-                            <point x="0.166667" y="0.833333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.166667" y="0.166667" />
-                            <point x="0.833333" y="0.166667" />
-                            <point x="0.833333" y="0.833333" />
-                            <point x="0.166667" y="0.833333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -3362,6 +3362,7 @@
                 <instance-variable name="CanNotCancel" sid="293099405422437" type="boolean" />
                 <instance-variable name="CanNotRotate" sid="365812599077455" type="boolean" />
                 <instance-variable comment="Character´s money" name="Coins" sid="212709410698902" type="number" />
+                <instance-variable comment="On created function" name="Function_Init" sid="571229447628971" type="string" />
                 <instance-variable comment="make items invisible if they are not in use" name="HideItems" sid="249099144844418" type="boolean" />
                 <instance-variable comment="Maximun Health Points Value" name="HPMax" sid="405391790612950" type="number" />
                 <instance-variable comment="Current Health Points" name="Hp" sid="148550066217839" type="number" />
@@ -3378,6 +3379,7 @@
                 <instance-variable comment="This character has unlimitied ammo" name="NoSpendMunition" sid="132432431954822" type="boolean" />
                 <instance-variable name="PressButton" sid="311042383733418" type="boolean" />
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
+                <instance-variable comment="Panel_Relocate" name="RespawnPanel" sid="247447848176414" type="number" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
             </instance-variables>

@@ -18,7 +18,12 @@
         </event-block>
         <event-block sid="490225577483555">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="781866045070911" type="System" />
+                <condition id="0" name="On function" sid="387099038553166" type="Function">
+                    <param id="0" name="Name">&quot;CreateBossWorm&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="914729171067179" type="boss_worm_head">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

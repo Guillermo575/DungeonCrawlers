@@ -84,25 +84,14 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="137777959629129">
+        <event-block sid="633016654567007">
             <conditions>
-                <condition id="-18" name="On created" sid="393055990070145" type="PlayerCoreBox" />
+                <condition id="-18" name="On created" sid="445900506788916" type="Family_Character" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="293025316931806" type="Function">
-                    <param id="0" name="Name">&quot;CreateCharacter&quot;</param>
-                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="979470083766102">
-            <conditions>
-                <condition id="-18" name="On created" sid="302959798680125" type="EnemyCoreBox" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="137594306737961" type="Function">
-                    <param id="0" name="Name">&quot;CreateEnemy&quot;</param>
-                    <param id="1" name="Parameter {n}">EnemyCoreBox.UID</param>
+                <action id="0" name="Call function" sid="644933430117025" type="Function">
+                    <param id="0" name="Name">Family_Character.Function_Init</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID</param>
                 </action>
             </actions>
         </event-block>
@@ -244,20 +233,20 @@
         </event-block>
         <event-block sid="801789085647739">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="129066864593782" type="Family_Character">
+                <condition id="1" name="Is overlapping another object" sid="129066864593782" type="PlayerCoreBox">
                     <param id="0" name="Object">Item_Key</param>
                 </condition>
                 <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="927289479803321" type="Item_Key" />
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="218974674288537" type="Family_Character">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="218974674288537" type="PlayerCoreBox">
                     <param id="0" name="Instance variable">KeyPick</param>
                 </condition>
             </conditions>
             <actions>
                 <action behavior="FO_Pin2" id="0" name="Pin to object" sid="926597023156674" type="Item_Key">
-                    <param id="0" name="Pin to">Family_Character</param>
+                    <param id="0" name="Pin to">PlayerCoreBox</param>
                     <param id="1" name="Mode">3</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="226655126735342" type="Family_Character">
+                <action id="-13" name="Set boolean" sid="226655126735342" type="PlayerCoreBox">
                     <param id="0" name="Instance variable">KeyPick</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -290,6 +279,11 @@
                     <param id="3" name="Value">Family_Character.UID</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="228580487736815" type="System" />
+                <condition id="-15" name="Pick nearest/furthest" sid="261959744219430" type="Panel_Relocate">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Panel_Pit.X</param>
+                    <param id="2" name="Y">Panel_Pit.Y</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="FC_8Direction" id="8" name="Set enabled" sid="804062274165779" type="Family_Character">
@@ -300,6 +294,10 @@
                 </action>
                 <action behavior="FC_8Direction" id="10" name="Set vector Y" sid="465237834707262" type="Family_Character">
                     <param id="0" name="Vector Y">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="902541550673846" type="Family_Character">
+                    <param id="0" name="Instance variable">RespawnPanel</param>
+                    <param id="1" name="Value">Panel_Relocate.UID</param>
                 </action>
                 <action id="16" name="Set Visible" sid="588432569765493" type="Scml_Player_Bottom">
                     <param id="0" name="Visibility">0</param>
@@ -315,7 +313,7 @@
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Relocate&quot;</param>
                 </action>
-                <action disabled="1" id="-13" name="Set boolean" sid="364912282236974" type="Family_Character">
+                <action id="-13" name="Set boolean" sid="364912282236974" type="Family_Character">
                     <param id="0" name="Instance variable">PushRecoil</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -347,12 +345,15 @@
                     <param id="2" name="Comparison">0</param>
                     <param id="3" name="Value">Family_Character.UID</param>
                 </condition>
+                <condition id="-14" name="Pick by unique ID" sid="169962396893983" type="Panel_Relocate">
+                    <param id="0" name="Unique ID">Family_Character.RespawnPanel</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="FC_8Direction" id="8" name="Set enabled" sid="168918375756820" type="Family_Character">
                     <param id="0" name="State">1</param>
                 </action>
-                <action disabled="1" id="-13" name="Set boolean" sid="778301400195794" type="Family_Character">
+                <action id="-13" name="Set boolean" sid="778301400195794" type="Family_Character">
                     <param id="0" name="Instance variable">PushRecoil</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -364,6 +365,9 @@
                     <param id="0" name="Duration">0.01</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;Recoil&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="316207491926670" type="System">
+                    <param id="0" name="Seconds">0.01</param>
                 </action>
                 <action id="-12" name="Subtract from" sid="902684114006202" type="Family_Character">
                     <param id="0" name="Instance variable">Hp</param>

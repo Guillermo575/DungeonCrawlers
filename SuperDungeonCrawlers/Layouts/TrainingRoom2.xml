@@ -595,6 +595,7 @@
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
                         <Coins>0</Coins>
+                        <Function_Init>CreateCharacter</Function_Init>
                         <HideItems>true</HideItems>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
@@ -611,6 +612,7 @@
                         <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
+                        <RespawnPanel>0</RespawnPanel>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
                         <NameIcon>Player</NameIcon>
@@ -725,6 +727,7 @@
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
                         <Coins>0</Coins>
+                        <Function_Init>CreateEnemy</Function_Init>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -741,6 +744,7 @@
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
+                        <RespawnPanel>0</RespawnPanel>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
@@ -888,6 +892,7 @@
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
                         <Coins>0</Coins>
+                        <Function_Init>CreateEnemy</Function_Init>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -904,6 +909,7 @@
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
+                        <RespawnPanel>0</RespawnPanel>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
@@ -1051,6 +1057,7 @@
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
                         <Coins>0</Coins>
+                        <Function_Init>CreateEnemy</Function_Init>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -1067,6 +1074,7 @@
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
+                        <RespawnPanel>0</RespawnPanel>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>

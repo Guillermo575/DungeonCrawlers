@@ -527,6 +527,7 @@
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
                         <Coins>0</Coins>
+                        <Function_Init>CreateEnemy</Function_Init>
                         <HideItems>false</HideItems>
                         <HPMax>2</HPMax>
                         <Hp>2</Hp>
@@ -543,6 +544,7 @@
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
+                        <RespawnPanel>0</RespawnPanel>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
@@ -795,6 +797,7 @@
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
                         <Coins>0</Coins>
+                        <Function_Init>CreateCharacter</Function_Init>
                         <HideItems>true</HideItems>
                         <HPMax>6</HPMax>
                         <Hp>6</Hp>
@@ -811,6 +814,7 @@
                         <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
+                        <RespawnPanel>0</RespawnPanel>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
                         <NameIcon>Player</NameIcon>
@@ -1488,10 +1492,10 @@
                         <y>232.840560913</y>
                         <z>0</z>
                         <width>15</width>
-                        <height>20</height>
+                        <height>25</height>
                         <depth>0</depth>
                         <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.519999981</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

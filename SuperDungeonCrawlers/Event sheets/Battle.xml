@@ -503,7 +503,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Equip that object on left right arm</comment>
+        <comment>Equip that object on left or right arm</comment>
         <event-block sid="400238477806966">
             <conditions>
                 <condition id="0" name="On function" sid="447682629737049" type="Function">

@@ -31,7 +31,12 @@
         <comment>This is the dragon load actions, i divided the start layout in 2 parts if you want to use the dragon in other levels</comment>
         <event-block sid="565192606670087">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="624905806496582" type="System" />
+                <condition id="0" name="On function" sid="780174635213622" type="Function">
+                    <param id="0" name="Name">&quot;CreateBossDragon&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="851357604240116" type="Boss_Dragon_Head">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-4" name="Set position to another object" sid="530915052576321" type="body_dragon_mouth">
