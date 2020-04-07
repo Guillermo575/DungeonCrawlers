@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Interactibles</name>
+    <events>
+        <comment>This function check the next array position that correspond each level, if you complete all the positions you complete the game!</comment>
+        <event-block sid="964572162862651">
+            <conditions>
+                <condition id="0" name="On function" sid="910302828112884" type="Function">
+                    <param id="0" name="Name">&quot;NextLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="401424504387139" type="Function">
+                    <param id="0" name="Name">&quot;Destroy_MiniMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="11" name="Clear Dungeon" sid="505388439491257" type="RandomDungeonMaker" />
+                <action id="-11" name="Add to" sid="269303122291564" type="Array_Levels">
+                    <param id="0" name="Instance variable">Actual</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="549425483421260" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="896109879748052">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="684702056266290" type="Array_Levels">
+                            <param id="0" name="Instance variable">Actual</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Array_Levels.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="652329268457859" type="System">
+                            <param id="0" name="Layout">Array_Levels.At(Array_Levels.Actual)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="222879131557910">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="686431000065079" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="876835450083634" type="System">
+                            <param id="0" name="Layout">Menu_Congratulations</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="356626072475879">
+            <conditions>
+                <condition id="0" name="On function" sid="595440280172745" type="Function">
+                    <param id="0" name="Name">&quot;TransportLayout&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="850184580416466" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="406279072259101" type="System">
+                    <param id="0" name="Layout">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Door opened &amp; Pick Key</comment>
+        <event-block any="1" sid="546968162439337">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="395495440566359" type="System">
+                    <param id="0" name="First value">Item_Key.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="455374953018567" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="155195339173030" type="DoorDungeon">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="640950685596931">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="492725820709397" type="DoorDungeon">
+                    <param id="0" name="Instance variable">KeyLock</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="560963819359559" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="778882679735117" type="DoorDungeon">
+                    <param id="0" name="Instance variable">Locked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="751182252543336" type="DoorDungeon">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="757908405062738">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="505223567307323" type="PlayerCoreBox">
+                    <param id="0" name="Object">DoorDungeon</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="857862553739056" type="System">
+                    <param id="0" name="Object">Item_Key</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="722703719761938" type="System">
+                    <param id="0" name="First value">Item_Key.FO_Pin2.PinnedUID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">PlayerCoreBox.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="995916298205395" type="Item_Key" />
+                <action id="-12" name="Subtract from" sid="346448796285672" type="DoorDungeon">
+                    <param id="0" name="Instance variable">KeyLock</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="473217041781703" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">KeyPick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="982440208570941" type="HUD_Key_Container">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="720499614930630">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="664531451413041" type="PlayerCoreBox">
+                    <param id="0" name="Object">Item_Key</param>
+                </condition>
+                <condition behavior="FO_Pin2" id="0" inverted="1" name="Is pinned" sid="715362185512605" type="Item_Key" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="509019185166002" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">KeyPick</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FO_Pin2" id="0" name="Pin to object" sid="744852968398231" type="Item_Key">
+                    <param id="0" name="Pin to">PlayerCoreBox</param>
+                    <param id="1" name="Mode">3</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="931480625760703" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">KeyPick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="504470546795577" type="HUD_Key_Container">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Pitfall</comment>
+        <event-block sid="398980706325124">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="812870372515455" type="Character_FeetBox">
+                    <param id="0" name="Object">Panel_Pit</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="652226372183080" type="Family_Character">
+                    <param id="0" name="Unique ID">Character_FeetBox.Pin2.PinnedUID</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="447235763640984" type="Family_Character">
+                    <param id="0" name="Instance variable">IsJumping</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="989487835476922" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="687201271237075" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="400332575758435" type="System" />
+                <condition id="-15" name="Pick nearest/furthest" sid="557783272096663" type="Panel_Relocate">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Panel_Pit.X</param>
+                    <param id="2" name="Y">Panel_Pit.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="512995817322335" type="Family_Character">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="FC_8Direction" id="9" name="Set vector X" sid="284585406887204" type="Family_Character">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+                <action behavior="FC_8Direction" id="10" name="Set vector Y" sid="350778600561239" type="Family_Character">
+                    <param id="0" name="Vector Y">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="681437906601848" type="Family_Character">
+                    <param id="0" name="Instance variable">RespawnPanel</param>
+                    <param id="1" name="Value">Panel_Relocate.UID</param>
+                </action>
+                <action id="16" name="Set Visible" sid="650941523125627" type="Scml_Player_Bottom">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="16" name="Set Visible" sid="639379117427601" type="Scml_Player_Top">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="834213680833403" type="PlayerShadow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="486274504618313" type="Family_Character">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Relocate&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="980410300014783" type="Family_Character">
+                    <param id="0" name="Instance variable">PushRecoil</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="846605817121673" type="Family_Character">
+                    <param id="0" name="Object">FallSprite</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="219004063600114" type="FallSprite">
+                    <param id="0" name="Width">20</param>
+                    <param id="1" name="Height">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="476327190436348">
+            <conditions>
+                <condition behavior="FC_Timer" id="0" name="On timer" sid="162381019857766" type="Family_Character">
+                    <param id="0" name="Tag">&quot;Relocate&quot;</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="428820441617368" type="System">
+                    <param id="0" name="Object">Scml_Player_Top</param>
+                    <param id="1" name="Expression">Scml_Player_Top.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="661352315811969" type="System">
+                    <param id="0" name="Object">Scml_Player_Bottom</param>
+                    <param id="1" name="Expression">Scml_Player_Bottom.Pin2.PinnedUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Family_Character.UID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="258791121025676" type="Panel_Relocate">
+                    <param id="0" name="Unique ID">Family_Character.RespawnPanel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="732747170060383" type="Family_Character">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="178794283297788" type="Family_Character">
+                    <param id="0" name="Instance variable">PushRecoil</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="621567848587272" type="Family_Character">
+                    <param id="0" name="Object">Panel_Relocate</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="FC_Timer" id="0" name="Start timer" sid="348063140620576" type="Family_Character">
+                    <param id="0" name="Duration">0.01</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Recoil&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="846784912756898" type="System">
+                    <param id="0" name="Seconds">0.01</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="107200034223884" type="Family_Character">
+                    <param id="0" name="Instance variable">Hp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="16" name="Set Visible" sid="980738229185704" type="Scml_Player_Bottom">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="16" name="Set Visible" sid="238947739460691" type="Scml_Player_Top">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="379038778020880" type="PlayerShadow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

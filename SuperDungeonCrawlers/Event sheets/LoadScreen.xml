@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LoadScreen</name>
+    <events>
+        <comment>Load Bar Function</comment>
+        <event-block sid="961292593493120">
+            <conditions>
+                <condition id="2" name="Is pause" sid="201844285162717" type="Rex_Pause" />
+                <condition id="-14" name="Compare variable" sid="681618711505426" type="System">
+                    <param id="0" name="Variable">LoadComplete</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="LoadCount" sid="149402689151010" static="0" type="number">0</variable>
+                <event-block sid="747313882845517">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="819706034504012" type="System">
+                            <param id="0" name="Object">Family_Load</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="491615886663516" type="Family_Load">
+                            <param id="0" name="Instance variable">Loaded</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="576966476538963" type="System">
+                            <param id="0" name="Variable">LoadCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377837744047376">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="909210096209138" type="System">
+                            <param id="0" name="Object">Family_Tilemaps</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="216296410670311" type="Family_Tilemaps">
+                            <param id="0" name="Instance variable">Loaded</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="470553187026165" type="System">
+                            <param id="0" name="Variable">LoadCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="966859383149126">
+                    <conditions />
+                    <actions>
+                        <action id="-5" name="Set width" sid="667692216872781" type="Load_Bar">
+                            <param id="0" name="Width">((LoadCount * 1)/(Family_Load.Count + Family_Tilemaps.Count)) * Load_BarFrame.Width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="585306747237660">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="310724970505130" type="System">
+                            <param id="0" name="Variable">LoadCount</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Family_Load.Count + Family_Tilemaps.Count</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="997236712592348" type="System">
+                            <param id="0" name="Variable">LoadWait</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">(Family_Load.Count + Family_Tilemaps.Count)*10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="288222878304812" type="System">
+                            <param id="0" name="Variable">LoadComplete</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="285737317234820" type="Rex_Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="759483004098805" type="Function">
+                            <param id="0" name="Name">&quot;CreatePauseMenu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="952418487279125" type="Loading_Screen" />
+                        <action id="-9" name="Destroy" sid="359555659574600" type="Load_Bar" />
+                        <action id="-9" name="Destroy" sid="914369283918705" type="Load_BarFrame" />
+                    </actions>
+                </event-block>
+                <event-block sid="129269949594705">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="340264425657535" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="219408653992093" type="System">
+                            <param id="0" name="Variable">LoadWait</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="874570247828708">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="120672361553990" type="System">
+                    <param id="0" name="Variable">LoadComplete</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="927540349414863" type="System">
+                    <param id="0" name="Variable">DarkMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="271852296610909" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="687424074915243" type="Function">
+                    <param id="0" name="Name">&quot;LightOff&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

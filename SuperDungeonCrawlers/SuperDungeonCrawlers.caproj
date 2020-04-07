@@ -3696,17 +3696,27 @@
     </layout-folder>
     <event-folder>
         <event-folder name="_GameLibrary">
+            <event-folder name="Characters">
+                <event-sheet>Player.xml</event-sheet>
+                <event-sheet>Enemies.xml</event-sheet>
+                <event-sheet>Spriter_Animation.xml</event-sheet>
+            </event-folder>
+            <event-folder name="Gameplay">
+                <event-sheet>Battle.xml</event-sheet>
+                <event-sheet>GenericItem.xml</event-sheet>
+                <event-sheet>DialogueEvents.xml</event-sheet>
+                <event-sheet>HUD.xml</event-sheet>
+            </event-folder>
+            <event-folder name="Scene">
+                <event-sheet>LightIlumination.xml</event-sheet>
+                <event-sheet>TileAnimation.xml</event-sheet>
+                <event-sheet>Interactibles.xml</event-sheet>
+            </event-folder>
+            <event-folder name="Misc">
+                <event-sheet>Audio.xml</event-sheet>
+                <event-sheet>LoadScreen.xml</event-sheet>
+            </event-folder>
             <event-sheet>_Gamelibrary.xml</event-sheet>
-            <event-sheet>Enemies.xml</event-sheet>
-            <event-sheet>Player.xml</event-sheet>
-            <event-sheet>HUD.xml</event-sheet>
-            <event-sheet>Audio.xml</event-sheet>
-            <event-sheet>Battle.xml</event-sheet>
-            <event-sheet>Spriter_Animation.xml</event-sheet>
-            <event-sheet>DialogueEvents.xml</event-sheet>
-            <event-sheet>GenericItem.xml</event-sheet>
-            <event-sheet>LightIlumination.xml</event-sheet>
-            <event-sheet>TileAnimation.xml</event-sheet>
         </event-folder>
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>
