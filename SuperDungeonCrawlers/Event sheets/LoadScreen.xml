@@ -48,14 +48,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="966859383149126">
-                    <conditions />
-                    <actions>
-                        <action id="-5" name="Set width" sid="667692216872781" type="Load_Bar">
-                            <param id="0" name="Width">((LoadCount * 1)/(Family_Load.Count + Family_Tilemaps.Count)) * Load_BarFrame.Width</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block any="1" sid="585306747237660">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="310724970505130" type="System">
@@ -70,6 +62,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-5" name="Set width" sid="806491316777239" type="Load_Bar">
+                            <param id="0" name="Width">((LoadCount * 1)/(Family_Load.Count + Family_Tilemaps.Count)) * Load_BarFrame.Width</param>
+                        </action>
                         <action id="-9" name="Set value" sid="288222878304812" type="System">
                             <param id="0" name="Variable">LoadComplete</param>
                             <param id="1" name="Value">1</param>
@@ -94,6 +89,9 @@
                         <action id="-10" name="Add to" sid="219408653992093" type="System">
                             <param id="0" name="Variable">LoadWait</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="667692216872781" type="Load_Bar">
+                            <param id="0" name="Width">((LoadCount * 1)/(Family_Load.Count + Family_Tilemaps.Count)) * Load_BarFrame.Width</param>
                         </action>
                     </actions>
                 </event-block>

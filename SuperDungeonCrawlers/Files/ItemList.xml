@@ -128,8 +128,8 @@
 			<Animation>Fragment</Animation>
 			<Damage>1</Damage>
 			<PushImpact>10</PushImpact>
-			<Duration>0.3</Duration>
-			<Speed>300</Speed>
+			<Duration>0.2</Duration>
+			<Speed>200</Speed>
 			<RecoilTime>0.3</RecoilTime>
 			<AmmoXShoot>3</AmmoXShoot>				
 			<PierceCharacters>1</PierceCharacters>

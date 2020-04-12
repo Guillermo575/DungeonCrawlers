@@ -117,95 +117,40 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="908300030737162">
+                <event-block sid="198653178944604">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="911177931029482" type="HUD_Heart">
-                            <param id="0" name="Instance variable">MinValue</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">Family_Character.HPMax</param>
+                        <condition id="-7" name="Compare instance variable" sid="654459174529823" type="HUD_Heart">
+                            <param id="0" name="Instance variable">MaxValue</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">Family_Character.HP</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="198653178944604">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="654459174529823" type="HUD_Heart">
-                                    <param id="0" name="Instance variable">MaxValue</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">Family_Character.HP</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="644572955685045" type="HUD_Heart">
-                                    <param id="0" name="Animation">&quot;Heart_0&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="583704689849238">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="613182991637781" type="HUD_Heart">
-                                    <param id="0" name="Instance variable">MaxValue</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">Family_Character.HP</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="249147957238625" type="HUD_Heart">
-                                    <param id="0" name="Instance variable">MinValue</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">Family_Character.HP</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="972168265426414" type="HUD_Heart">
-                                    <param id="0" name="Animation">&quot;Heart_&quot;&amp;((HUD_Heart.MaxValue-Family_Character.HP)%4)</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="4" name="Set animation" sid="644572955685045" type="HUD_Heart">
+                            <param id="0" name="Animation">(HUD_Heart.MinValue &lt; Family_Character.HPMax ? &quot;Heart&quot; : &quot;Extra&quot;) &amp; &quot;_0&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
-                <event-block sid="488876214615596">
+                <event-block sid="583704689849238">
                     <conditions>
-                        <condition id="-22" name="Else" sid="678866675291138" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="613182991637781" type="HUD_Heart">
+                            <param id="0" name="Instance variable">MaxValue</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Family_Character.HP</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="249147957238625" type="HUD_Heart">
+                            <param id="0" name="Instance variable">MinValue</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">Family_Character.HP</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="168480499444516">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="665212755712944" type="HUD_Heart">
-                                    <param id="0" name="Instance variable">MaxValue</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">Family_Character.HP</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="333559137896589" type="HUD_Heart">
-                                    <param id="0" name="Animation">&quot;Extra_0&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="500509861347495">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="680496518443052" type="HUD_Heart">
-                                    <param id="0" name="Instance variable">MaxValue</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">Family_Character.HP</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="553287989869850" type="HUD_Heart">
-                                    <param id="0" name="Instance variable">MinValue</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">Family_Character.HP</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="828516337968420" type="HUD_Heart">
-                                    <param id="0" name="Animation">&quot;Extra_&quot;&amp;((HUD_Heart.MaxValue-Family_Character.HP)%4)</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="4" name="Set animation" sid="972168265426414" type="HUD_Heart">
+                            <param id="0" name="Animation">(HUD_Heart.MinValue &lt; Family_Character.HPMax ? &quot;Heart&quot; : &quot;Extra&quot;) &amp; &quot;_&quot;&amp;((HUD_Heart.MaxValue-Family_Character.HP) % 4)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="650718974684228">
                     <conditions>
@@ -312,31 +257,10 @@
                             <param id="0" name="Animation">Family_Item.AnimationName</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Set text" sid="686934956903321" type="HUD_Object_Left_Text">
+                            <param id="0" name="Text">Family_Item.Projectile_HasAmmo ? Family_Item.Projectile_AmmoSize : &quot;&quot;</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="747229275301870">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="485925201807792" type="Family_Item">
-                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="686934956903321" type="HUD_Object_Left_Text">
-                                    <param id="0" name="Text">Family_Item.Projectile_AmmoSize</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="955479791778319">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="584770393011131" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="674237487491929" type="HUD_Object_Left_Text">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="412699370071167">
                     <conditions>
@@ -370,31 +294,10 @@
                             <param id="0" name="Animation">Family_Item.AnimationName</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Set text" sid="337308170725196" type="HUD_Object_Right_Text">
+                            <param id="0" name="Text">Family_Item.Projectile_HasAmmo ? Family_Item.Projectile_AmmoSize : &quot;&quot;</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="890567466618363">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="898828892007982" type="Family_Item">
-                                    <param id="0" name="Instance variable">Projectile_HasAmmo</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="223573230447423" type="HUD_Object_Right_Text">
-                                    <param id="0" name="Text">Family_Item.Projectile_AmmoSize</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="896140367659016">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="563507594465665" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="934002920434134" type="HUD_Object_Right_Text">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="445439218517939">
                     <conditions>
