@@ -258,22 +258,18 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="889136519296919">
+                <event-block any="1" sid="107297391632421">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="615161062963646" type="System">
                             <param id="0" name="Variable">ConfigDifficult</param>
                             <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="718549349331964" type="System">
+                            <param id="0" name="Variable">ConfigDifficult</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Easy&quot;</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="899408715740489" type="System">
-                            <param id="0" name="Layout">LastLevel</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="635924188364330">
-                    <conditions>
                         <condition id="-14" name="Compare variable" sid="120948880653952" type="System">
                             <param id="0" name="Variable">ConfigDifficult</param>
                             <param id="1" name="Comparison">0</param>
@@ -281,7 +277,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="756882750933745" type="System">
+                        <action id="-25" name="Go to layout (by name)" sid="420240124777593" type="System">
                             <param id="0" name="Layout">LastLevel</param>
                         </action>
                     </actions>

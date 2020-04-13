@@ -11,7 +11,7 @@
 			<PushImpact>30</PushImpact>
 			<Duration>3</Duration>
 			<Speed>300</Speed>
-			<RecoilTime>0.3</RecoilTime>
+			<RecoilTime>0.5</RecoilTime>
 			<HasAmmo>1</HasAmmo>
 			<AmmoSize>20</AmmoSize>
 			<AmmoSizeMax>20</AmmoSizeMax>
@@ -30,7 +30,7 @@
 			<PushImpact>10</PushImpact>
 			<Duration>0.5</Duration>
 			<Speed>0</Speed>
-			<RecoilTime>0.3</RecoilTime>
+			<RecoilTime>0.4</RecoilTime>
 			<AmmoXShoot>1</AmmoXShoot>				
 			<PierceCharacters>1</PierceCharacters>
 			<PierceWalls>1</PierceWalls>

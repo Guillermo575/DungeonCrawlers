@@ -6,7 +6,7 @@
         <variable constant="0" name="GameMode" sid="200313099251393" static="0" type="text">UP</variable>
         <variable comment="Dark filter where 0 = NO, 1 = YES" constant="0" name="DarkMode" sid="200321850843799" static="0" type="number">0</variable>
         <variable comment="Visible Mini map where 0 = NO, 1 = YES" constant="0" name="VisibleMiniMapMode" sid="434682069077821" static="0" type="number">0</variable>
-        <variable comment="Difficult configured in the game (Easy, Normal, Hard)" constant="0" name="ConfigDifficult" sid="376289247331375" static="0" type="text">Easy</variable>
+        <variable comment="Difficult configured in the game (Easy, Normal, Hard)" constant="0" name="ConfigDifficult" sid="376289247331375" static="0" type="text"></variable>
         <variable comment="Last Level Loaded" constant="0" name="LastLevel" sid="401210357883922" static="0" type="text"></variable>
         <variable comment="Last level Info Data in a JSON" constant="0" name="LastLevelJSON" sid="622867184603336" static="0" type="text"></variable>
         <variable comment="Value that indicates if all components are loaded" constant="0" name="LoadComplete" sid="107025194594051" static="0" type="number">0</variable>
