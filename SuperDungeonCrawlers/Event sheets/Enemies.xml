@@ -178,7 +178,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="566542237173771" type="Family_Character">
                             <param id="0" name="Instance variable">BonusDamageMult</param>
-                            <param id="1" name="Value">0.75</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -281,6 +281,8 @@
             </conditions>
             <actions />
             <sub-events>
+                <comment>If it&apos;s the last node, change the animation frame to show it&apos;s the end.</comment>
+                <comment>Otherwise point it to the next node.</comment>
                 <event-block sid="711289055910460">
                     <conditions>
                         <condition id="-12" name="Repeat" sid="657445559915903" type="System">
@@ -303,41 +305,22 @@
                         <action id="0" name="Set text" sid="329721095840447" type="Path_Text">
                             <param id="0" name="Text">loopindex</param>
                         </action>
+                        <action id="5" name="Set frame" sid="705640616591982" type="Path_Node">
+                            <param id="0" name="Frame number">LoopIndex = EnemyCoreBox.FC_Pathfinding.NodeCount - 1 ? 1 : 0</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="260831939194100" type="Path_Node">
+                            <param id="0" name="X">EnemyCoreBox.FC_Pathfinding.NodeXAt(loopindex + 1)</param>
+                            <param id="1" name="Y">EnemyCoreBox.FC_Pathfinding.NodeYAt(loopindex + 1)</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <comment>If it&apos;s the last node, change the animation frame to show it&apos;s the end.</comment>
-                        <event-block sid="494595669496847">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="712969886707569" type="System">
-                                    <param id="0" name="First value">LoopIndex</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">EnemyCoreBox.FC_Pathfinding.NodeCount - 1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="705640616591982" type="Path_Node">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Otherwise point it to the next node.</comment>
-                        <event-block sid="621777919094573">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="495435679757293" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-22" name="Set angle toward position" sid="260831939194100" type="Path_Node">
-                                    <param id="0" name="X">EnemyCoreBox.FC_Pathfinding.NodeXAt(loopindex + 1)</param>
-                                    <param id="1" name="Y">EnemyCoreBox.FC_Pathfinding.NodeYAt(loopindex + 1)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-                <event-block sid="853756069772227">
+                <event-block any="1" sid="853756069772227">
                     <conditions>
                         <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="210574407265612" type="EnemyCoreBox">
                             <param id="0" name="Object">PlayerCoreBox</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="951472968314359" type="EnemyCoreBox">
+                            <param id="0" name="Instance variable">PushRecoil</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -352,30 +335,6 @@
                     </conditions>
                     <actions>
                         <action behavior="FC_Pathfinding" id="1" name="Move along path" sid="453802341464515" type="EnemyCoreBox" />
-                    </actions>
-                    <sub-events>
-                        <event-block sid="971897554638099">
-                            <conditions>
-                                <condition behavior="FC_Bullet" id="0" name="Compare speed" sid="675410488970574" type="EnemyCoreBox">
-                                    <param id="0" name="Comparison">1</param>
-                                    <param id="1" name="Speed">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-22" name="Set angle toward position" sid="600399333869396" type="EnemyCoreBox">
-                                    <param id="0" name="X">PlayerCoreBox.X</param>
-                                    <param id="1" name="Y">PlayerCoreBox.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="285588852781628">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="110863842912959" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="FC_Pathfinding" id="2" name="Stop" sid="179837540227212" type="EnemyCoreBox" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -416,6 +375,9 @@
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="570402848374453" type="EnemyCoreBox">
                                     <param id="0" name="Instance variable">AIActive</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="415373032001609" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">PushRecoil</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -820,6 +782,7 @@
                                     <param id="0" name="Instance variable">AIActive</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action behavior="FC_Pathfinding" id="2" name="Stop" sid="311415918457957" type="EnemyCoreBox" />
                             </actions>
                             <sub-events>
                                 <event-block sid="105623488342411">
@@ -841,21 +804,6 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="167148184631106">
-                                            <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="748876971835141" type="Family_Impact">
-                                                    <param id="0" name="Unique ID">Family_Item.UID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="896100605862045" type="Family_Impact">
-                                                    <param id="0" name="Instance variable">MakeDamage</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                                 <event-block sid="969302076836094">
                                     <conditions>
@@ -876,33 +824,10 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="462576717213465">
-                                            <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="820501278573786" type="Family_Impact">
-                                                    <param id="0" name="Unique ID">Family_Item.UID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="739530258149340" type="Family_Impact">
-                                                    <param id="0" name="Instance variable">MakeDamage</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="359380184950983">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="307635789003365" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="FC_Pathfinding" id="2" name="Stop" sid="311415918457957" type="EnemyCoreBox" />
-                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

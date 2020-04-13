@@ -721,6 +721,12 @@
                                             <param id="0" name="Instance variable">CanNotCancel</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action behavior="FI_Bullet" id="0" name="Set speed" sid="705817811580210" type="Family_Impact">
+                                            <param id="0" name="Speed">1</param>
+                                        </action>
+                                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="507560930112090" type="Family_Impact">
+                                            <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -733,6 +739,9 @@
                                 <action id="-13" name="Set boolean" sid="226371750384448" type="Family_Impact">
                                     <param id="0" name="Instance variable">MakeDamage</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="FI_Bullet" id="0" name="Set speed" sid="907069001179211" type="Family_Impact">
+                                    <param id="0" name="Speed">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -804,6 +813,12 @@
                                             <param id="0" name="Instance variable">CanNotCancel</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action behavior="FI_Bullet" id="0" name="Set speed" sid="355074784622863" type="Family_Impact">
+                                            <param id="0" name="Speed">1</param>
+                                        </action>
+                                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="985676186661113" type="Family_Impact">
+                                            <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -816,6 +831,9 @@
                                 <action id="-13" name="Set boolean" sid="322316939914694" type="Family_Impact">
                                     <param id="0" name="Instance variable">MakeDamage</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="FI_Bullet" id="0" name="Set speed" sid="231891000791410" type="Family_Impact">
+                                    <param id="0" name="Speed">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -887,6 +905,12 @@
                                             <param id="0" name="Instance variable">CanNotCancel</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action behavior="FI_Bullet" id="0" name="Set speed" sid="464638636209994" type="Family_Impact">
+                                            <param id="0" name="Speed">1</param>
+                                        </action>
+                                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="759514794140337" type="Family_Impact">
+                                            <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -899,6 +923,9 @@
                                 <action id="-13" name="Set boolean" sid="118427407881050" type="Family_Impact">
                                     <param id="0" name="Instance variable">MakeDamage</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="FI_Bullet" id="0" name="Set speed" sid="674570932934245" type="Family_Impact">
+                                    <param id="0" name="Speed">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -975,6 +1002,12 @@
                                             <param id="0" name="Instance variable">CanNotCancel</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action behavior="FI_Bullet" id="0" name="Set speed" sid="258364727136133" type="Family_Impact">
+                                            <param id="0" name="Speed">1</param>
+                                        </action>
+                                        <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="162864693056547" type="Family_Impact">
+                                            <param id="0" name="Angle">Family_Character.LastDirectionAngle</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -987,6 +1020,9 @@
                                 <action id="-13" name="Set boolean" sid="745422187154343" type="Family_Impact">
                                     <param id="0" name="Instance variable">MakeDamage</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="FI_Bullet" id="0" name="Set speed" sid="264263409542949" type="Family_Impact">
+                                    <param id="0" name="Speed">0</param>
                                 </action>
                             </actions>
                         </event-block>

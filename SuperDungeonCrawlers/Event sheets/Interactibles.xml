@@ -24,33 +24,10 @@
                     <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
                     <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
                 </action>
+                <action id="-25" name="Go to layout (by name)" sid="652329268457859" type="System">
+                    <param id="0" name="Layout">Array_Levels.Actual &lt; Array_Levels.Width ? Array_Levels.At(Array_Levels.Actual) : &quot;Menu_Congratulations&quot;</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="896109879748052">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="684702056266290" type="Array_Levels">
-                            <param id="0" name="Instance variable">Actual</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">Array_Levels.Width</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="652329268457859" type="System">
-                            <param id="0" name="Layout">Array_Levels.At(Array_Levels.Actual)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="222879131557910">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="686431000065079" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="876835450083634" type="System">
-                            <param id="0" name="Layout">Menu_Congratulations</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="356626072475879">
             <conditions>
@@ -236,6 +213,18 @@
                     <param id="1" name="Height">20</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="188106687273685">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="797711319134349" type="EnemyCoreBox">
+                            <param id="0" name="Unique ID">Family_Character.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="818445169238500" type="EnemyCoreBox" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="476327190436348">
             <conditions>

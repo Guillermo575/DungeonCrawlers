@@ -694,35 +694,12 @@
                     <param id="0" name="Instance variable">Locked</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="931795712553590">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="266262266719481" type="DoorDungeon">
-                            <param id="0" name="Instance variable">LayoutName</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="952228399342096" type="Function">
-                            <param id="0" name="Name">&quot;NextLevel&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="992734052603555">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="323708329165419" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="134032869741795" type="Function">
-                            <param id="0" name="Name">&quot;TransportLayout&quot;</param>
-                            <param id="1" name="Parameter {n}">DoorDungeon.LayoutName</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="0" name="Call function" sid="952228399342096" type="Function">
+                    <param id="0" name="Name">DoorDungeon.LayoutName = &quot;&quot; ? &quot;NextLevel&quot; : &quot;TransportLayout&quot;</param>
+                    <param id="1" name="Parameter {n}">DoorDungeon.LayoutName</param>
+                </action>
+            </actions>
         </event-block>
         <comment>NPC interaction</comment>
         <event-block sid="667559924197464">
