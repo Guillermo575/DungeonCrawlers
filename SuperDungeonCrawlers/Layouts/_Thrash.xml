@@ -48,8 +48,8 @@
                         <x>416</x>
                         <y>241</y>
                         <z>0</z>
-                        <width>10</width>
-                        <height>10</height>
+                        <width>8</width>
+                        <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -640,7 +640,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FI_Bullet">
@@ -883,7 +883,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="ScrollTo">

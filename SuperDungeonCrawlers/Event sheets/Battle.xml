@@ -226,37 +226,14 @@
                             <param id="0" name="Instance variable">Unstopable</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="550905929753114">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="498259823081359" type="Family_Impact">
-                                    <param id="0" name="Instance variable">PassivePush</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="FC_Bullet" id="0" name="Set speed" sid="308503064255257" type="Family_Character">
-                                    <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
-                                </action>
-                                <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="523645896858496" type="Family_Character">
-                                    <param id="0" name="Angle">Family_Character.LastDirectionAngle + 180</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="270252971588300">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="993818125090453" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="FC_Bullet" id="0" name="Set speed" sid="756538370496436" type="Family_Character">
-                                    <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
-                                </action>
-                                <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="203832232549511" type="Family_Character">
-                                    <param id="0" name="Angle">Family_Impact.FI_Bullet.AngleOfMotion</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="308503064255257" type="Family_Character">
+                            <param id="0" name="Speed">Family_Impact.Impact_PushImpact</param>
+                        </action>
+                        <action behavior="FC_Bullet" id="3" name="Set angle of motion" sid="523645896858496" type="Family_Character">
+                            <param id="0" name="Angle">Family_Impact.PassivePush ? Family_Character.LastDirectionAngle + 180 : Family_Impact.FI_Bullet.AngleOfMotion</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
@@ -318,21 +295,10 @@
                     <param id="0" name="Instance variable">PushRecoil</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action behavior="FC_Bullet" id="0" name="Set speed" sid="762315525853955" type="Family_Character">
+                    <param id="0" name="Speed">0</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="942969982130454">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="660868688547138" type="Family_Character">
-                            <param id="0" name="Instance variable">Unstopable</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="FC_Bullet" id="0" name="Set speed" sid="503352783793493" type="Family_Character">
-                            <param id="0" name="Speed">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <comment>This cancel the invincibility</comment>
         <event-block sid="999799898026819">

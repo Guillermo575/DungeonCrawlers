@@ -213,6 +213,11 @@
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
+                                                <action id="0" name="Spawn another object" sid="237737204072907" type="BlockDungeon">
+                                                    <param id="0" name="Object">Panel_Relocate</param>
+                                                    <param id="1" name="Layer">&quot;Scene&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="319069069979954">
@@ -284,6 +289,22 @@
                                                 <action id="-10" name="Set value" sid="177004679472614" type="Item_Coin">
                                                     <param id="0" name="Instance variable">Element_ID</param>
                                                     <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="925004075187601">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="878542376740267" type="System">
+                                                    <param id="0" name="First value">tokenat(tokenat(TotalNameTag,loopindex,&quot;,&quot;),0,&quot;_&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Pit&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="675806693277467" type="BlockDungeon">
+                                                    <param id="0" name="Object">Panel_Pit</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>

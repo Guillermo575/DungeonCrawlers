@@ -499,17 +499,28 @@
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747727076343041" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                                <image-point name="Point_0" x="0.125" y="0.125" />
+                                <image-point name="Point_1" x="0.375" y="0.125" />
+                                <image-point name="Point_2" x="0.625" y="0.125" />
+                                <image-point name="Point_3" x="0.875" y="0.125" />
+                                <image-point name="Point_4" x="0.125" y="0.375" />
+                                <image-point name="Point_5" x="0.375" y="0.375" />
+                                <image-point name="Point_6" x="0.625" y="0.375" />
+                                <image-point name="Point_7" x="0.875" y="0.375" />
+                                <image-point name="Point_8" x="0.125" y="0.625" />
+                                <image-point name="Point_9" x="0.375" y="0.625" />
+                                <image-point name="Point_10" x="0.625" y="0.625" />
+                                <image-point name="Point_11" x="0.875" y="0.625" />
+                                <image-point name="Point_12" x="0.125" y="0.875" />
+                                <image-point name="Point_13" x="0.375" y="0.875" />
+                                <image-point name="Point_14" x="0.625" y="0.875" />
+                                <image-point name="Point_15" x="0.875" y="0.875" />
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="0" y="0" />
                                     <point x="0" y="1" />
                                     <point x="1" y="1" />
                                 </collision-poly>
-                            </frame>
-                        </animation>
-                        <animation framecount="1" loop="0" name="Picked" pingpong="0" repeatcount="1" repeatto="0" sid="479889793226715" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0">
-                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                             </frame>
                         </animation>
                     </animation-folder>

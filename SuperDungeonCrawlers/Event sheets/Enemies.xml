@@ -554,25 +554,15 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="854137916327541">
-                                            <conditions>
-                                                <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="444167268131379" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">PlayerCoreBox</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="824050258661299" type="EnemyCoreBox">
-                                                    <param id="0" name="Instance variable">ActionCommand</param>
-                                                    <param id="1" name="Value">&quot;&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="791198539608359">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="289848406691618" type="EnemyCoreBox">
                                                     <param id="0" name="Instance variable">ActionCommand</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                                <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="444167268131379" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">PlayerCoreBox</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -688,25 +678,15 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block disabled="1" sid="340681731151692">
-                                            <conditions>
-                                                <condition behavior="FC_LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="309596780048443" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">PlayerCoreBox</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="401606659191302" type="EnemyCoreBox">
-                                                    <param id="0" name="Instance variable">ActionCommand</param>
-                                                    <param id="1" name="Value">&quot;&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block disabled="1" sid="624962324761837">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="259042755318772" type="EnemyCoreBox">
                                                     <param id="0" name="Instance variable">ActionCommand</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                                <condition behavior="FC_LineOfSight" id="0" name="Has LOS to object" sid="309596780048443" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">PlayerCoreBox</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -727,6 +707,9 @@
                         <event-block sid="784747959434190">
                             <conditions>
                                 <condition id="-22" name="Else" sid="422790026001403" type="System" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="499775327720791" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">Unstopable</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="FC_Pathfinding" id="2" name="Stop" sid="371435971739204" type="EnemyCoreBox" />
