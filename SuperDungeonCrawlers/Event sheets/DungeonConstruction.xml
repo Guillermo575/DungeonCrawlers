@@ -187,6 +187,16 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">&quot;NONE&quot;</param>
                                                 </condition>
+                                                <condition id="-8" name="Compare two values" sid="125338830247920" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallLeft(RandomDungeonMaker.AdjacentBlockTop(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="996750073536529" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallTop(RandomDungeonMaker.AdjacentBlockLeft(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="5" name="Push" sid="928368265514019" type="Array_BlockPositions">
@@ -200,6 +210,16 @@
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="717858650424417" type="System">
                                                     <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.BlockCurrentID)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="616834891098489" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.AdjacentBlockTop(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="275361198731198" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallTop(RandomDungeonMaker.AdjacentBlockRight(RandomDungeonMaker.BlockCurrentID))</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">&quot;NONE&quot;</param>
                                                 </condition>
@@ -263,6 +283,16 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">&quot;NONE&quot;</param>
                                                 </condition>
+                                                <condition id="-8" name="Compare two values" sid="616821186662050" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallLeft(RandomDungeonMaker.AdjacentBlockBottom(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="437818129770251" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallBottom(RandomDungeonMaker.AdjacentBlockLeft(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="5" name="Push" sid="305356584708051" type="Array_BlockPositions">
@@ -277,6 +307,16 @@
                                                 <condition id="-8" name="Compare two values" sid="219598292468701" type="System">
                                                     <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.BlockCurrentID)</param>
                                                     <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="212245785687109" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallRight(RandomDungeonMaker.AdjacentBlockBottom(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;NONE&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="398652285272104" type="System">
+                                                    <param id="0" name="First value">RandomDungeonMaker.WallBottom(RandomDungeonMaker.AdjacentBlockRight(RandomDungeonMaker.BlockCurrentID))</param>
+                                                    <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">&quot;NONE&quot;</param>
                                                 </condition>
                                             </conditions>
