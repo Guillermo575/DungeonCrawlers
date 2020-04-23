@@ -256,7 +256,12 @@
                     <param id="0" name="Name">&quot;Go_TryAgain&quot;</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Add key" sid="818641299873310" type="Player_Log">
+                    <param id="0" name="Key">&quot;PlayerHP&quot;</param>
+                    <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block any="1" sid="107297391632421">
                     <conditions>

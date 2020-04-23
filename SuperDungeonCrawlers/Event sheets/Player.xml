@@ -521,13 +521,17 @@
                     <param id="0" name="Instance variable">IsAlive</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="732607133495602" type="PlayerCoreBox">
-                    <param id="0" name="Instance variable">ActionCommand</param>
-                    <param id="1" name="Value">&quot;Death&quot;</param>
+                <action id="-13" name="Set boolean" sid="417096001931907" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">IsJumping</param>
+                    <param id="1" name="Value">0</param>
                 </action>
                 <action id="-10" name="Set value" sid="630822409116003" type="PlayerCoreBox">
                     <param id="0" name="Instance variable">ActionStep</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="732607133495602" type="PlayerCoreBox">
+                    <param id="0" name="Instance variable">ActionCommand</param>
+                    <param id="1" name="Value">&quot;Death&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="246053304333136" type="Function">
                     <param id="0" name="Name">&quot;CallCommand&quot;</param>
@@ -545,6 +549,10 @@
                     <param id="0" name="Duration">3</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;ToGameOver&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="550706654545520" type="Function">
+                    <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
                 </action>
             </actions>
         </event-block>
@@ -1016,6 +1024,10 @@
                             <param id="0" name="Name">&quot;LoadSpriterParts&quot;</param>
                             <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID{###}Player_Log.Get(&quot;PlayerCloth&quot;)</param>
                         </action>
+                        <action id="0" name="Call function" sid="930608851960202" type="Function">
+                            <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="671408592276712">
@@ -1051,6 +1063,10 @@
                         <action id="0" name="Call function" sid="504007454076031" type="Function">
                             <param id="0" name="Name">&quot;CreateSpriterParts&quot;</param>
                             <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Scml_Player_Top.UID{###}Scml_Player_Bottom.UID</param>
+                        </action>
+                        <action id="0" name="Call function" sid="333373325182662" type="Function">
+                            <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
                         </action>
                     </actions>
                 </event-block>
