@@ -738,6 +738,10 @@
                                     <param id="0" name="Instance variable">IsAlive</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="265105717658603" type="EnemyCoreBox">
+                                    <param id="0" name="Instance variable">MakeDamage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="683126080113730" type="EnemyCoreBox">
                                     <param id="0" name="Instance variable">ActionCommand</param>
                                     <param id="1" name="Value">&quot;Death&quot;</param>

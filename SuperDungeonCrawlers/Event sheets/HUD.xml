@@ -410,7 +410,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="235717322792891" type="HUD_FPS">
-                    <param id="0" name="Text">fps</param>
+                    <param id="0" name="Text">&quot;FPS: &quot; &amp; fps &amp; &quot;, CPU: &quot; &amp; int(cpuutilisation*100)  &amp; &quot;%, Memory: &quot; &amp; ImageMemoryUsage &amp; &quot; mb&quot;</param>
                 </action>
             </actions>
         </event-block>
