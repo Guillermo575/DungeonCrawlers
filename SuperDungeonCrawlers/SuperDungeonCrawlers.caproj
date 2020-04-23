@@ -288,6 +288,13 @@
                 <object-type global="1" name="Array_MiniMap" sid="936689921244259">
                     <plugin id="Arr" />
                 </object-type>
+                <object-type global="1" name="Array_BlockPositions" sid="551778473795893">
+                    <plugin id="Arr" />
+                    <instance-variables>
+                        <instance-variable name="Index" sid="878231865362766" type="number" />
+                        <instance-variable name="RetNum" sid="329933072776461" type="number" />
+                    </instance-variables>
+                </object-type>
             </object-folder>
             <object-folder name="Effects">
                 <object-type name="DungeonLight" sid="184015334732872">
@@ -498,23 +505,23 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747727076343041" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0">
-                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
-                                <image-point name="Point_0" x="0.125" y="0.125" />
-                                <image-point name="Point_1" x="0.375" y="0.125" />
-                                <image-point name="Point_2" x="0.625" y="0.125" />
-                                <image-point name="Point_3" x="0.875" y="0.125" />
-                                <image-point name="Point_4" x="0.125" y="0.375" />
-                                <image-point name="Point_5" x="0.375" y="0.375" />
-                                <image-point name="Point_6" x="0.625" y="0.375" />
-                                <image-point name="Point_7" x="0.875" y="0.375" />
-                                <image-point name="Point_8" x="0.125" y="0.625" />
-                                <image-point name="Point_9" x="0.375" y="0.625" />
-                                <image-point name="Point_10" x="0.625" y="0.625" />
-                                <image-point name="Point_11" x="0.875" y="0.625" />
-                                <image-point name="Point_12" x="0.125" y="0.875" />
-                                <image-point name="Point_13" x="0.375" y="0.875" />
-                                <image-point name="Point_14" x="0.625" y="0.875" />
-                                <image-point name="Point_15" x="0.875" y="0.875" />
+                                <image-point name="Point_0" x="0.5" y="0.5" />
+                                <image-point name="Point_1" x="0.125" y="0.125" />
+                                <image-point name="Point_2" x="0.375" y="0.125" />
+                                <image-point name="Point_3" x="0.625" y="0.125" />
+                                <image-point name="Point_4" x="0.875" y="0.125" />
+                                <image-point name="Point_5" x="0.125" y="0.375" />
+                                <image-point name="Point_6" x="0.375" y="0.375" />
+                                <image-point name="Point_7" x="0.625" y="0.375" />
+                                <image-point name="Point_8" x="0.875" y="0.375" />
+                                <image-point name="Point_9" x="0.125" y="0.625" />
+                                <image-point name="Point_10" x="0.375" y="0.625" />
+                                <image-point name="Point_11" x="0.625" y="0.625" />
+                                <image-point name="Point_12" x="0.875" y="0.625" />
+                                <image-point name="Point_13" x="0.125" y="0.875" />
+                                <image-point name="Point_14" x="0.375" y="0.875" />
+                                <image-point name="Point_15" x="0.625" y="0.875" />
+                                <image-point name="Point_16" x="0.875" y="0.875" />
                                 <collision-poly>
                                     <point x="1" y="0" />
                                     <point x="0" y="0" />
@@ -3318,6 +3325,9 @@
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-type name="HUD_FPS" sid="190927519960755">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
