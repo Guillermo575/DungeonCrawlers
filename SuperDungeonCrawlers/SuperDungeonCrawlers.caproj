@@ -3396,6 +3396,7 @@
                 <instance-variable comment="Last Arm Used" name="LastArmUsed" sid="568820131423589" type="string" />
                 <instance-variable comment="character´s last direction" name="LastDirection" sid="241710995863577" type="string" />
                 <instance-variable name="LastDirectionAngle" sid="981661721070455" type="number" />
+                <instance-variable comment="last direction is facing" name="LastDirectionAngleFace" sid="601159076167074" type="number" />
                 <instance-variable comment="Name of the character Model, this value is used for the family_head expression" name="Name" sid="157579360596339" type="string" />
                 <instance-variable comment="This character has unlimitied ammo" name="NoSpendMunition" sid="132432431954822" type="boolean" />
                 <instance-variable name="PressButton" sid="311042383733418" type="boolean" />

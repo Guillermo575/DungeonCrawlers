@@ -635,10 +635,10 @@
                             <param id="2" name="Tag">&quot;Destroy&quot;</param>
                         </action>
                         <action id="-8" name="Set angle" sid="508227509305923" type="Impact_Generic">
-                            <param id="0" name="Angle">Family_Character.LastDirectionAngle + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
+                            <param id="0" name="Angle">Family_Character.LastDirectionAngleFace + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
                         </action>
                         <action behavior="FI_Bullet" id="3" name="Set angle of motion" sid="874337554331397" type="Impact_Generic">
-                            <param id="0" name="Angle">Family_Character.LastDirectionAngle + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
+                            <param id="0" name="Angle">Family_Character.LastDirectionAngleFace + ((30*int((loopindex+1)/2)) * (loopindex % 2 = 0 ? -1 : 1))</param>
                         </action>
                         <action behavior="FI_Bullet" id="0" name="Set speed" sid="927876819092699" type="Impact_Generic">
                             <param id="0" name="Speed">Family_Item.Projectile_Speed</param>

@@ -421,6 +421,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="832047531687466">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="493167381690518" type="Family_Character">
+                            <param id="0" name="Instance variable">CanNotRotate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="612812966157624" type="Family_Character">
+                            <param id="0" name="Instance variable">LastDirectionAngleFace</param>
+                            <param id="1" name="Value">Family_Character.LastDirectionAngle</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="482425733896470">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="531376242935249" type="Family_Character">
