@@ -593,6 +593,30 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="212007919421467">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="878121865400802" type="System">
+                                                    <param id="0" name="First value">tokenat(TotalNameTag,loopindex,&quot;,&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Bat&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="178125874333968" type="BlockDungeon">
+                                                    <param id="0" name="Object">EnemyCoreBoxBat</param>
+                                                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="750938042726512" type="EnemyCoreBoxBat">
+                                                    <param id="0" name="Instance variable">Element_ID</param>
+                                                    <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
+                                                </action>
+                                                <action id="-4" name="Set position to another object" sid="882620616709063" type="EnemyCoreBoxBat">
+                                                    <param id="0" name="Object">BlockDungeon</param>
+                                                    <param id="1" name="Image point (optional)">&quot;Point_&quot;&amp;Function.Call(&quot;GetArrayPosition&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>

@@ -2020,6 +2020,50 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="EnemyCoreBoxBat" sid="833884155933467">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="441260071925928">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Bat" pingpong="1" repeatcount="1" repeatto="0" sid="909884118441347" speed="10">
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat.png">
+                            <collision-poly>
+                                <point x="0.422222" y="0.261719" />
+                                <point x="0.597223" y="0.265625" />
+                                <point x="0.608334" y="0.8125" />
+                                <point x="0.419444" y="0.8125" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat2.png">
+                            <collision-poly>
+                                <point x="0.597222" y="0.269531" />
+                                <point x="0.58889" y="0.8125" />
+                                <point x="0.419445" y="0.8125" />
+                                <point x="0.405556" y="0.273438" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat3.png">
+                            <collision-poly>
+                                <point x="0.422222" y="0.253906" />
+                                <point x="0.602778" y="0.253906" />
+                                <point x="0.636111" y="0.820313" />
+                                <point x="0.427778" y="0.820313" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat4.png">
+                            <collision-poly>
+                                <point x="0.413889" y="0.269531" />
+                                <point x="0.616667" y="0.253906" />
+                                <point x="0.591666" y="0.804688" />
+                                <point x="0.422222" y="0.808594" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="HUDPlayer">
             <object-folder name="Text">
@@ -3371,6 +3415,7 @@
                 <member>Boss_Dragon_Head</member>
                 <member>boss_worm_head</member>
                 <member>EnemyCoreBox</member>
+                <member>EnemyCoreBoxBat</member>
                 <member>PlayerCoreBox</member>
             </members>
             <instance-variables>
@@ -3507,6 +3552,7 @@
                 <member>boss_worm_head</member>
                 <member>Dungeon_Torch</member>
                 <member>EnemyCoreBox</member>
+                <member>EnemyCoreBoxBat</member>
                 <member>Explote_Generic</member>
                 <member>Impact_Generic</member>
                 <member>Item_Generic</member>
@@ -3518,22 +3564,25 @@
                 <instance-variable comment="Melee, Projectile" name="TypeObject" sid="664473937435629" type="string" />
                 <instance-variable comment="Angle used for push is determined by character or impact angle" name="PassivePush" sid="695752906298032" type="boolean" />
                 <instance-variable comment="The character can dodge the impact if jump" name="DodgeJump" sid="175523791071217" type="boolean" />
+                <instance-variable comment="Projectile shooted if an NPC shoot projectiles" name="Impact_AmmoXShoot" sid="626326181951923" type="number" />
+                <instance-variable comment="Projectile animation if NPC shoot" name="Impact_Animation" sid="147745880593787" type="string" />
                 <instance-variable comment="The amount that inflicts in the objective" name="Impact_Damage" sid="619337040495569" type="number" />
-                <instance-variable comment="Distance that the character is pushed" name="Impact_PushImpact" sid="849674525052418" type="number" />
-                <instance-variable comment="Time that the character is pushed" name="Impact_RecoilTime" sid="317749810560442" type="number" />
                 <instance-variable comment="Seconds for the Destroy Timer" name="Impact_Duration" sid="739248253419743" type="number" />
+                <instance-variable comment="Distance that the character is pushed" name="Impact_PushImpact" sid="849674525052418" type="number" />
                 <instance-variable comment="Can not destroyed impacting with the characters" name="Impact_PierceCharacters" sid="287713655249526" type="boolean" />
                 <instance-variable comment="Can not be destroyed by impacting in walls" name="Impact_PierceWalls" sid="467621174291483" type="boolean" />
+                <instance-variable comment="Time that the character is pushed" name="Impact_RecoilTime" sid="317749810560442" type="number" />
+                <instance-variable comment="Projectile speed" name="Impact_Speed" sid="324264167204089" type="number" />
                 <instance-variable comment="Function triggered after collision" name="Impact_CollitionFunction" sid="623863650946305" type="string" />
+                <instance-variable name="Blast_AmmoXShoot" sid="270781491848936" type="number" />
                 <instance-variable name="Blast_Animation" sid="662064385516886" type="string" />
                 <instance-variable name="Blast_Damage" sid="948911224364280" type="number" />
-                <instance-variable name="Blast_PushImpact" sid="467694994328970" type="number" />
                 <instance-variable name="Blast_Duration" sid="828112244136200" type="number" />
-                <instance-variable name="Blast_Speed" sid="268443259475410" type="number" />
-                <instance-variable name="Blast_RecoilTime" sid="406092236465863" type="number" />
-                <instance-variable name="Blast_AmmoXShoot" sid="270781491848936" type="number" />
+                <instance-variable name="Blast_PushImpact" sid="467694994328970" type="number" />
                 <instance-variable name="Blast_PierceCharacters" sid="116262377028008" type="boolean" />
                 <instance-variable name="Blast_PierceWalls" sid="785106616029226" type="boolean" />
+                <instance-variable name="Blast_RecoilTime" sid="406092236465863" type="number" />
+                <instance-variable name="Blast_Speed" sid="268443259475410" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="FI_Bullet" sid="966471420225723">
@@ -3622,6 +3671,7 @@
         <family name="Family_AI" plugin-id="Sprite" sid="202132550057431">
             <members>
                 <member>EnemyCoreBox</member>
+                <member>EnemyCoreBoxBat</member>
             </members>
             <instance-variables>
                 <instance-variable name="AIActive" sid="433196789200885" type="boolean" />
@@ -3635,6 +3685,7 @@
         <family name="Family_NPC" plugin-id="Sprite" sid="756758774751275">
             <members>
                 <member>EnemyCoreBox</member>
+                <member>EnemyCoreBoxBat</member>
             </members>
             <instance-variables>
                 <instance-variable name="Dialog" sid="571882647356965" type="string" />
@@ -3684,6 +3735,7 @@
         <family name="Family_DungeonElements" plugin-id="Sprite" sid="254198457729532">
             <members>
                 <member>EnemyCoreBox</member>
+                <member>EnemyCoreBoxBat</member>
                 <member>Item_Coin</member>
             </members>
             <instance-variables>

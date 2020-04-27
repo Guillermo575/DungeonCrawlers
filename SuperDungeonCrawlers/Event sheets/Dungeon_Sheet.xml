@@ -150,7 +150,7 @@
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
                 </action>
-                <action id="7" name="New dungeon element" sid="982196367387961" type="RandomDungeonMaker">
+                <action disabled="1" id="7" name="New dungeon element" sid="982196367387961" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_&quot;&amp;choose(&quot;Sword&quot;,&quot;Axe&quot;)</param>
                     <param id="1" name="Total">4</param>
                     <param id="2" name="OcuppedTolerance">0</param>
@@ -160,9 +160,19 @@
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
                 </action>
-                <action id="7" name="New dungeon element" sid="373613854117622" type="RandomDungeonMaker">
+                <action disabled="1" id="7" name="New dungeon element" sid="373613854117622" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_&quot;&amp;choose(&quot;Wand&quot;,&quot;Hammer&quot;)</param>
                     <param id="1" name="Total">2</param>
+                    <param id="2" name="OcuppedTolerance">0</param>
+                    <param id="3" name="NotIndoor">0</param>
+                    <param id="4" name="ObligatoryBottomWall">0</param>
+                    <param id="5" name="ObligatoryTopWall">0</param>
+                    <param id="6" name="ObligatoryLeftWall">0</param>
+                    <param id="7" name="ObligatoryRightWall">0</param>
+                </action>
+                <action id="7" name="New dungeon element" sid="299721259974884" type="RandomDungeonMaker">
+                    <param id="0" name="Name">&quot;Bat&quot;</param>
+                    <param id="1" name="Total">10</param>
                     <param id="2" name="OcuppedTolerance">0</param>
                     <param id="3" name="NotIndoor">0</param>
                     <param id="4" name="ObligatoryBottomWall">0</param>
