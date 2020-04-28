@@ -2031,34 +2031,42 @@
                     <animation framecount="4" loop="1" name="Bat" pingpong="1" repeatcount="1" repeatto="0" sid="909884118441347" speed="10">
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat.png">
                             <collision-poly>
-                                <point x="0.422222" y="0.261719" />
-                                <point x="0.597223" y="0.265625" />
+                                <point x="0" y="0.0917971" />
+                                <point x="1" y="0.09375" />
+                                <point x="0.855556" y="0.544922" />
                                 <point x="0.608334" y="0.8125" />
                                 <point x="0.419444" y="0.8125" />
+                                <point x="0.0944442" y="0.485352" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat2.png">
                             <collision-poly>
-                                <point x="0.597222" y="0.269531" />
-                                <point x="0.58889" y="0.8125" />
-                                <point x="0.419445" y="0.8125" />
-                                <point x="0.405556" y="0.273438" />
+                                <point x="0" y="0.191406" />
+                                <point x="0.997222" y="0.201172" />
+                                <point x="0.866667" y="0.662109" />
+                                <point x="0.608334" y="0.8125" />
+                                <point x="0.419444" y="0.8125" />
+                                <point x="0.15" y="0.657227" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat3.png">
                             <collision-poly>
-                                <point x="0.422222" y="0.253906" />
-                                <point x="0.602778" y="0.253906" />
-                                <point x="0.636111" y="0.820313" />
-                                <point x="0.427778" y="0.820313" />
+                                <point x="0" y="0.292969" />
+                                <point x="1" y="0.273438" />
+                                <point x="0.909723" y="0.699219" />
+                                <point x="0.608334" y="0.8125" />
+                                <point x="0.419444" y="0.8125" />
+                                <point x="0.113889" y="0.71582" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Nueva carpeta\bat4.png">
                             <collision-poly>
-                                <point x="0.413889" y="0.269531" />
-                                <point x="0.616667" y="0.253906" />
-                                <point x="0.591666" y="0.804688" />
-                                <point x="0.422222" y="0.808594" />
+                                <point x="0.413889" y="0.267578" />
+                                <point x="0.611111" y="0.269531" />
+                                <point x="1" y="1" />
+                                <point x="0.608334" y="0.8125" />
+                                <point x="0.419444" y="0.8125" />
+                                <point x="0.0194442" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2874,29 +2882,36 @@
                             </frame>
                         </animation>
                         <animation framecount="4" loop="1" name="Fireball" pingpong="0" repeatcount="1" repeatto="0" sid="386559649079370" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.458333" hotspotY="0.444444" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Fire\Explosion.png">
                                 <collision-poly>
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
+                                    <point x="0.859375" y="0.476852" />
+                                    <point x="0.53125" y="0.847222" />
+                                    <point x="0.0989583" y="0.476852" />
+                                    <point x="0.494792" y="0.134259" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.444444" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Fire\Explosion2.png">
                                 <collision-poly>
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
+                                    <point x="0.859375" y="0.476852" />
+                                    <point x="0.502083" y="0.851852" />
+                                    <point x="0.223958" y="0.486111" />
+                                    <point x="0.494792" y="0.134259" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.481481" hotspotY="0.444444" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Fire\Explosion3.png">
                                 <collision-poly>
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
+                                    <point x="0.808449" y="0.486111" />
+                                    <point x="0.480324" y="0.847222" />
+                                    <point x="0.0989583" y="0.476852" />
+                                    <point x="0.494792" y="0.134259" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.444444" hotspotY="0.518519" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Fire\Explosion4.png">
+                                <collision-poly>
+                                    <point x="0.836227" y="0.50463" />
+                                    <point x="0.517361" y="0.87037" />
+                                    <point x="0.154514" y="0.523148" />
+                                    <point x="0.490162" y="0.199074" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -3000,11 +3015,53 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="4" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="223885075122322" speed="15">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="5" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="223885075122322" speed="15">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Explosion\Ex1.png">
+                                <collision-poly>
+                                    <point x="0.40625" y="0.40625" />
+                                    <point x="0.490234" y="0.353516" />
+                                    <point x="0.625" y="0.5" />
+                                    <point x="0.482422" y="0.652344" />
+                                    <point x="0.40625" y="0.59375" />
+                                    <point x="0.34375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Explosion\Ex2.png">
+                                <collision-poly>
+                                    <point x="0.494141" y="0.248047" />
+                                    <point x="0.625" y="0.375" />
+                                    <point x="0.75" y="0.5" />
+                                    <point x="0.486328" y="0.779297" />
+                                    <point x="0.34375" y="0.65625" />
+                                    <point x="0.21875" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.46875" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Explosion\Ex3.png">
+                                <collision-poly>
+                                    <point x="0.3125" y="0.3125" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.71875" y="0.28125" />
+                                    <point x="0.90625" y="0.5" />
+                                    <point x="0.5" y="0.96875" />
+                                    <point x="0.09375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Explosion\Ex4.png">
+                                <collision-poly>
+                                    <point x="0.132813" y="0.0859375" />
+                                    <point x="0.929688" y="0.0859375" />
+                                    <point x="0.947266" y="0.90625" />
+                                    <point x="0.128906" y="0.916016" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\Explosion\Ex5.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.03125" />
+                                    <point x="0.953125" y="0.03125" />
+                                    <point x="0.96875" y="0.976563" />
+                                    <point x="0.03125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -3026,23 +3083,49 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="4" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="714192348163372" speed="15">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
-                            <frame duration="1" hotspotX="0.6" hotspotY="0.5">
+                        <animation framecount="5" loop="0" name="Explosion" pingpong="0" repeatcount="1" repeatto="0" sid="714192348163372" speed="15">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375" original-source="C:\Users\MasterRace\Desktop\Ex1.png">
                                 <collision-poly>
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
+                                    <point x="0.40625" y="0.40625" />
+                                    <point x="0.5" y="0.375" />
+                                    <point x="0.625" y="0.5" />
+                                    <point x="0.5" y="0.625" />
+                                    <point x="0.40625" y="0.59375" />
+                                    <point x="0.34375" y="0.5" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
-                            <frame duration="1" hotspotX="0.6" hotspotY="0.5">
+                            <frame duration="1" hotspotX="0.59375" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Ex2.png">
                                 <collision-poly>
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
+                                    <point x="0.484375" y="0.777344" />
+                                    <point x="0.214844" y="0.519531" />
+                                    <point x="0.496094" y="0.234375" />
+                                    <point x="0.753906" y="0.527344" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.59375" original-source="C:\Users\MasterRace\Desktop\Ex3.png">
+                                <collision-poly>
+                                    <point x="0.3125" y="0.3125" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.71875" y="0.28125" />
+                                    <point x="0.90625" y="0.5" />
+                                    <point x="0.5" y="0.96875" />
+                                    <point x="0.09375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.59375" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Ex4.png">
+                                <collision-poly>
+                                    <point x="0.132813" y="0.886719" />
+                                    <point x="0.117188" y="0.0820313" />
+                                    <point x="0.949219" y="0.09375" />
+                                    <point x="0.9375" y="0.898438" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MasterRace\Desktop\Ex5.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.03125" />
+                                    <point x="0.980469" y="0.03125" />
+                                    <point x="0.988281" y="0.96875" />
+                                    <point x="0.03125" y="0.96875" />
                                 </collision-poly>
                             </frame>
                         </animation>
