@@ -399,8 +399,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="599213784617488" type="Family_Character">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="FC_8Direction" id="2" name="Set ignoring input" sid="599213784617488" type="Family_Character">
+                                    <param id="0" name="Input">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -409,8 +409,8 @@
                                 <condition id="-22" name="Else" sid="469152892975106" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="FC_8Direction" id="8" name="Set enabled" sid="292087605356730" type="Family_Character">
-                                    <param id="0" name="State">0</param>
+                                <action behavior="FC_8Direction" id="2" name="Set ignoring input" sid="837023943474702" type="Family_Character">
+                                    <param id="0" name="Input">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -439,8 +439,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="FC_Platform" id="11" name="Set enabled" sid="952622414400162" type="Family_Character">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="FC_Platform" id="0" name="Set ignoring input" sid="452098275191716" type="Family_Character">
+                                    <param id="0" name="Input">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -449,8 +449,8 @@
                                 <condition id="-22" name="Else" sid="501943781600164" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="FC_Platform" id="11" name="Set enabled" sid="452098275191716" type="Family_Character">
-                                    <param id="0" name="State">0</param>
+                                <action behavior="FC_Platform" id="0" name="Set ignoring input" sid="716121210155054" type="Family_Character">
+                                    <param id="0" name="Input">1</param>
                                 </action>
                             </actions>
                         </event-block>

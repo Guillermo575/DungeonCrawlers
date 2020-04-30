@@ -132,5 +132,13 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="334443477339164">
+            <conditions>
+                <condition id="5" name="On any finished" sid="287170210840573" type="Family_Effects" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="453654503265759" type="Family_Effects" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

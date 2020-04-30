@@ -202,10 +202,6 @@
                     <param id="0" name="Instance variable">TypeRole</param>
                     <param id="1" name="Value">&quot;Enemy&quot;</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="378014749536004" type="Family_Character">
-                    <param id="0" name="Instance variable">IsJumping</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="0" name="Spawn another object" sid="918245415303532" type="Family_Character">
                     <param id="0" name="Object">Character_Hitbox</param>
                     <param id="1" name="Layer">&quot;Characters&quot;</param>
@@ -857,10 +853,11 @@
                                         <condition id="-22" name="Else" sid="202769739949829" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="FC_Timer" id="0" name="Start timer" sid="377560892718240" type="Family_Character">
-                                            <param id="0" name="Duration">0.1</param>
-                                            <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;DeadDestroy2&quot;</param>
+                                        <action id="-9" name="Destroy" sid="796160885754314" type="Family_Character" />
+                                        <action id="0" name="Spawn another object" sid="630206138559790" type="Family_Character">
+                                            <param id="0" name="Object">EffectExplosion</param>
+                                            <param id="1" name="Layer">Family_Character.LayerName</param>
+                                            <param id="2" name="Image point">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -893,16 +890,6 @@
                 <action id="-9" name="Destroy" sid="417614087997266" type="Family_Character" />
                 <action id="-9" name="Destroy" sid="467938959465516" type="Scml_Player_Top" />
                 <action id="-9" name="Destroy" sid="872349393414717" type="Scml_Player_Bottom" />
-            </actions>
-        </event-block>
-        <event-block sid="129645115799913">
-            <conditions>
-                <condition behavior="FC_Timer" id="0" name="On timer" sid="734785198875388" type="Family_Character">
-                    <param id="0" name="Tag">&quot;DeadDestroy2&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="796160885754314" type="Family_Character" />
             </actions>
         </event-block>
     </events>

@@ -244,7 +244,7 @@
             <object-folder name="TileMaps">
                 <object-type name="Tilemap" sid="739888437788877">
                     <plugin id="Tilemap" />
-                    <texture original-source="C:\Users\MasterRace\Desktop\TileMap - copia - copia.png" />
+                    <texture original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Files\Wood.png" />
                     <tiles />
                 </object-type>
                 <object-type name="Tilemap_Solid" sid="553231467165355">
@@ -254,12 +254,12 @@
                             <behavior id="solid" />
                         </behavior-type>
                     </behaviors>
-                    <texture original-source="C:\Users\MasterRace\Desktop\TileMap - copia - copia.png" />
+                    <texture original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Files\Wood.png" />
                     <tiles />
                 </object-type>
                 <object-type name="TileMapOver" sid="907791675659697">
                     <plugin id="Tilemap" />
-                    <texture original-source="C:\Users\MasterRace\Desktop\TileMap - copia - copia.png" />
+                    <texture original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Files\Wood.png" />
                     <tiles />
                 </object-type>
                 <object-type name="Tilemap_Solid2" sid="129018562830253">
@@ -269,12 +269,12 @@
                             <behavior id="solid" />
                         </behavior-type>
                     </behaviors>
-                    <texture original-source="C:\Users\MasterRace\Desktop\TileMap - copia - copia.png" />
+                    <texture original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Files\Wood.png" />
                     <tiles />
                 </object-type>
                 <object-type name="Tilemap_Background" sid="864608959908035">
                     <plugin id="Tilemap" />
-                    <texture original-source="C:\Users\MasterRace\Desktop\TileMap - copia - copia.png" />
+                    <texture original-source="E:\Git\DungeonCrawlers\SuperDungeonCrawlers\Files\Wood.png" />
                     <tiles />
                 </object-type>
             </object-folder>
@@ -2522,6 +2522,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="HUD_FPS" sid="190927519960755">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="DialogueBox">
             <object-folder name="Arrays">
@@ -3452,9 +3455,54 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-type name="HUD_FPS" sid="190927519960755">
-            <plugin id="Text" />
-        </object-type>
+        <object-folder name="Effects">
+            <object-type name="EffectExplosion" sid="704620116000393">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905674174934174" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\ExplosionGray.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.9" y="0.1" />
+                                <point x="0.1" y="0.5" />
+                                <point x="0.85" y="0.85" />
+                                <point x="0.05" y="0.95" />
+                                <point x="0.05" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\ExplosionGray2.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.85" y="0.15" />
+                                <point x="0.95" y="0.95" />
+                                <point x="0.2" y="0.8" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\ExplosionGray3 - copia.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.9" y="0.1" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.85" y="0.85" />
+                                <point x="0.1" y="0.9" />
+                                <point x="0.15" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Git\DungeonCrawlers\Resources\Pixel\Effects\ExplosionGray4.png">
+                            <collision-poly>
+                                <point x="0.1" y="0.1" />
+                                <point x="0.5" y="0.1" />
+                                <point x="0.7" y="0.3" />
+                                <point x="1" y="0.5" />
+                                <point x="0.8" y="0.8" />
+                                <point x="0.5" y="1" />
+                                <point x="0.1" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families>
         <family name="Family_Parts" plugin-id="Sprite" sid="198633251308010">
@@ -3824,6 +3872,11 @@
             <instance-variables>
                 <instance-variable name="Element_ID" sid="699314432238005" type="number" />
             </instance-variables>
+        </family>
+        <family name="Family_Effects" plugin-id="Sprite" sid="866116048799778">
+            <members>
+                <member>EffectExplosion</member>
+            </members>
         </family>
     </families>
     <layout-folder>
