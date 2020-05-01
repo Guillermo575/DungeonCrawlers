@@ -73,6 +73,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="535326003462042" type="Item_Generic">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="753449705098806" type="Item_Generic">
+                    <param id="0" name="Input">1</param>
+                </action>
                 <action id="0" name="Load" sid="109947603997817" type="XML_Inventory">
                     <param id="0" name="XML">FileItemListData</param>
                 </action>
@@ -325,6 +331,20 @@
                         </action>
                         <action id="-15" name="Set visible" sid="613928642790768" type="Item_Generic">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="780904527591568">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="444103790606316" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;2D&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="655519885817759" type="Item_Generic">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>

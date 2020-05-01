@@ -123,49 +123,61 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block any="1" sid="357644379537804">
+                <event-block sid="545212471382976">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="902376392287431" type="Family_Impact">
-                            <param id="0" name="Instance variable">DodgeJump</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="784629410092347" type="Family_Character">
-                            <param id="0" name="Instance variable">IsJumping</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="255553733701360" type="System">
-                            <param id="0" name="Variable">GameMode</param>
+                        <condition id="-8" name="Compare two values" sid="195357454899644" type="System">
+                            <param id="0" name="First value">Family_Impact.IsHazard &amp; Family_Character.AvoidHazard</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;2D&quot;</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="814661169279345" type="Function">
-                            <param id="0" name="Name">Family_Impact.Impact_CollitionFunction</param>
-                            <param id="1" name="Parameter {n}">Family_Impact.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="747718362839461" type="Function">
-                            <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.Impact_RecoilTime</param>
-                        </action>
-                        <action id="0" name="Call function" sid="967449726092693" type="Function">
-                            <param id="0" name="Name">&quot;PushCharacter&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="894662901775146">
+                        <event-block any="1" sid="357644379537804">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="403929676660884" type="Family_Impact">
-                                    <param id="0" name="Instance variable">TypeObject</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="902376392287431" type="Family_Impact">
+                                    <param id="0" name="Instance variable">DodgeJump</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="589340889930584" type="Family_Impact">
-                                    <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="784629410092347" type="Family_Character">
+                                    <param id="0" name="Instance variable">IsJumping</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="255553733701360" type="System">
+                                    <param id="0" name="Variable">GameMode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;2D&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="586631943719204" type="Family_Impact" />
+                                <action id="0" name="Call function" sid="814661169279345" type="Function">
+                                    <param id="0" name="Name">Family_Impact.Impact_CollitionFunction</param>
+                                    <param id="1" name="Parameter {n}">Family_Impact.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="747718362839461" type="Function">
+                                    <param id="0" name="Name">&quot;FlashCharacter&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.Impact_RecoilTime</param>
+                                </action>
+                                <action id="0" name="Call function" sid="967449726092693" type="Function">
+                                    <param id="0" name="Name">&quot;PushCharacter&quot;</param>
+                                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Impact.UID</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="894662901775146">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="403929676660884" type="Family_Impact">
+                                            <param id="0" name="Instance variable">TypeObject</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="589340889930584" type="Family_Impact">
+                                            <param id="0" name="Instance variable">Impact_PierceCharacters</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="586631943719204" type="Family_Impact" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

@@ -202,7 +202,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="733649569128197">
+                        <event-block disabled="1" sid="733649569128197">
                             <conditions>
                                 <condition behavior="FC_Platform" id="0" name="Is moving" sid="427469646191863" type="Family_Character" />
                             </conditions>

@@ -130,7 +130,12 @@
                     <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="846558822668651" type="Function">
+                    <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
+                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Character.IsAlive &amp; Family_Character.PushRecoil = 0</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="106997742346767">
                     <conditions>
@@ -276,25 +281,18 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="878801142796412">
+                <event-block sid="649656948656668">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="447431535685011" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="482066396515023" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="708944354267844" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="347086333728374" type="Keyboard">
-                            <param id="0" name="Key">38</param>
+                        <condition id="-14" name="Compare variable" sid="748593492323123" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UP&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="336073439110611" type="PlayerCoreBox">
+                        <action id="-13" name="Set boolean" sid="702578023598778" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">IsMoving</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -305,6 +303,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="336073439110611" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="258044554025958" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
                                     <param id="1" name="Value">90</param>
@@ -318,6 +320,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="726545274285778" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="429594518107936" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
                                     <param id="1" name="Value">180</param>
@@ -331,6 +337,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="595407048366156" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="383721975176827" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
                                     <param id="1" name="Value">0</param>
@@ -344,6 +354,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="246285577422133" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="998663014924668" type="PlayerCoreBox">
                                     <param id="0" name="Instance variable">LastDirectionAngle</param>
                                     <param id="1" name="Value">270</param>
@@ -352,16 +366,74 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="192531277948238">
+                <event-block sid="277565565840924">
                     <conditions>
-                        <condition id="-22" name="Else" sid="638428019793391" type="System" />
+                        <condition id="-14" name="Compare variable" sid="428974530428969" type="System">
+                            <param id="0" name="Variable">GameMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;2D&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="702578023598778" type="PlayerCoreBox">
+                        <action id="-13" name="Set boolean" sid="171821924730739" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">IsMoving</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="214876178168549">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="630914365203340" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="126560696383537" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">180</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="283505967944906" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="FC_Platform" id="7" name="Simulate control" sid="600263922679412" type="PlayerCoreBox">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="420150892526500">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="500958330356312" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="758204281401853" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">LastDirectionAngle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="259842284253295" type="PlayerCoreBox">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="FC_Platform" id="7" name="Simulate control" sid="135078970395394" type="PlayerCoreBox">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="286798941764325">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="967727946109031" type="Keyboard">
+                                    <param id="0" name="Key">67</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FC_Platform" id="7" name="Simulate control" sid="943858693419892" type="PlayerCoreBox">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -455,46 +527,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="365559380967541">
-            <conditions>
-                <condition id="-33" name="Pick by comparison" sid="961737494908029" type="System">
-                    <param id="0" name="Object">Family_Character</param>
-                    <param id="1" name="Expression">Family_Character.UID</param>
-                    <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">PlayerCoreBox.UID</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="423251148987937">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="975375593773043" type="Family_Character">
-                            <param id="0" name="Instance variable">IsAlive</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="110903798087226" type="Family_Character">
-                            <param id="0" name="Instance variable">PushRecoil</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="846558822668651" type="Function">
-                            <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="152475957593593">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="323415979276095" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="450355665353671" type="Function">
-                            <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
-                            <param id="1" name="Parameter {n}">Family_Character.UID{###}0</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

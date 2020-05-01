@@ -90,8 +90,8 @@
                         <opacity>1</opacity>
                     </world>
                     <tilemap-data>
-                        <width>19</width>
-                        <height>18</height>
+                        <width>54</width>
+                        <height>49</height>
                         <max-width>54</max-width>
                         <max-height>49</max-height>
                         <data>3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
@@ -210,8 +210,8 @@
                         <opacity>1</opacity>
                     </world>
                     <tilemap-data>
-                        <width>19</width>
-                        <height>18</height>
+                        <width>20</width>
+                        <height>21</height>
                         <max-width>20</max-width>
                         <max-height>21</max-height>
                         <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
@@ -249,6 +249,7 @@
                         <ActionStep>0</ActionStep>
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
+                        <AvoidHazard>false</AvoidHazard>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
@@ -266,6 +267,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
+                        <LastDirectionAngleFace>0</LastDirectionAngleFace>
                         <Name></Name>
                         <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
@@ -339,7 +341,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="ScrollTo">
@@ -409,26 +411,30 @@
                         <Ocuppied>false</Ocuppied>
                         <Message>Spacebar</Message>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <NameIcon>Key</NameIcon>
                         <IconId>0</IconId>
                     </instance-variables>
@@ -513,6 +519,7 @@
                         <ActionStep>0</ActionStep>
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
+                        <AvoidHazard>false</AvoidHazard>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
@@ -530,6 +537,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
+                        <LastDirectionAngleFace>0</LastDirectionAngleFace>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
@@ -538,26 +546,30 @@
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
-                        <PassivePush>false</PassivePush>
+                        <PassivePush>true</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -630,7 +642,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FI_Bullet">
@@ -678,6 +690,7 @@
                         <ActionStep>0</ActionStep>
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
+                        <AvoidHazard>false</AvoidHazard>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
@@ -695,6 +708,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
+                        <LastDirectionAngleFace>0</LastDirectionAngleFace>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
@@ -703,26 +717,30 @@
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
-                        <PassivePush>false</PassivePush>
+                        <PassivePush>true</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -795,7 +813,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FI_Bullet">
@@ -843,6 +861,7 @@
                         <ActionStep>0</ActionStep>
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
+                        <AvoidHazard>false</AvoidHazard>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
@@ -860,6 +879,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
+                        <LastDirectionAngleFace>0</LastDirectionAngleFace>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
@@ -868,26 +888,30 @@
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
-                        <PassivePush>false</PassivePush>
+                        <PassivePush>true</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -960,7 +984,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FI_Bullet">
@@ -1008,6 +1032,7 @@
                         <ActionStep>0</ActionStep>
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
+                        <AvoidHazard>false</AvoidHazard>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
@@ -1025,6 +1050,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
+                        <LastDirectionAngleFace>0</LastDirectionAngleFace>
                         <Name></Name>
                         <NoSpendMunition>true</NoSpendMunition>
                         <PressButton>false</PressButton>
@@ -1033,26 +1059,30 @@
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject>Melee</TypeObject>
-                        <PassivePush>false</PassivePush>
+                        <PassivePush>true</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
@@ -1125,7 +1155,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FI_Bullet">
@@ -1201,26 +1231,30 @@
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>0</Impact_Damage>
-                        <Impact_PushImpact>0</Impact_PushImpact>
-                        <Impact_RecoilTime>0</Impact_RecoilTime>
                         <Impact_Duration>0</Impact_Duration>
+                        <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <Loaded>false</Loaded>
                         <XMLID>Wand</XMLID>
                         <XMLContent></XMLContent>
@@ -1243,6 +1277,20 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1300,26 +1348,30 @@
                         <Ocuppied>false</Ocuppied>
                         <Message>SpaceBar</Message>
                         <Group></Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>false</MakeDamage>
                         <TypeObject></TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>0</Impact_Damage>
-                        <Impact_PushImpact>0</Impact_PushImpact>
-                        <Impact_RecoilTime>0</Impact_RecoilTime>
                         <Impact_Duration>0</Impact_Duration>
+                        <Impact_PushImpact>0</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <Loaded>false</Loaded>
                         <XMLID>Sword</XMLID>
                         <XMLContent></XMLContent>
@@ -1342,6 +1394,20 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1387,26 +1453,30 @@
                     <instance-variables>
                         <CallFlash>true</CallFlash>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin2">
@@ -1469,6 +1539,7 @@
                         <ActionStep>0</ActionStep>
                         <ArmLeft>0</ArmLeft>
                         <ArmRight>0</ArmRight>
+                        <AvoidHazard>false</AvoidHazard>
                         <BonusDamageMult>1</BonusDamageMult>
                         <CanNotCancel>false</CanNotCancel>
                         <CanNotRotate>false</CanNotRotate>
@@ -1486,6 +1557,7 @@
                         <LastArmUsed></LastArmUsed>
                         <LastDirection>Front</LastDirection>
                         <LastDirectionAngle>0</LastDirectionAngle>
+                        <LastDirectionAngleFace>0</LastDirectionAngleFace>
                         <Name>Dragonium</Name>
                         <NoSpendMunition>false</NoSpendMunition>
                         <PressButton>false</PressButton>
@@ -1494,26 +1566,30 @@
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>true</Unstopable>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <openmouth>false</openmouth>
                         <firerate>0.5</firerate>
                         <timemin>5</timemin>
@@ -1601,7 +1677,7 @@
                         <behavior-instance type="FC_Flash" />
                         <behavior-instance type="FC_Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FI_Bullet">
@@ -1641,26 +1717,30 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <lock>true</lock>
                         <atack>false</atack>
                         <atackdistance>400</atackdistance>
@@ -1725,26 +1805,30 @@
                     <instance-variables>
                         <CallFlash>false</CallFlash>
                         <Group>Enemy</Group>
+                        <IsHazard>false</IsHazard>
                         <MakeDamage>true</MakeDamage>
                         <TypeObject>Melee</TypeObject>
                         <PassivePush>false</PassivePush>
                         <DodgeJump>false</DodgeJump>
+                        <Impact_AmmoXShoot>0</Impact_AmmoXShoot>
+                        <Impact_Animation></Impact_Animation>
                         <Impact_Damage>1</Impact_Damage>
-                        <Impact_PushImpact>100</Impact_PushImpact>
-                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
                         <Impact_Duration>1</Impact_Duration>
+                        <Impact_PushImpact>100</Impact_PushImpact>
                         <Impact_PierceCharacters>false</Impact_PierceCharacters>
                         <Impact_PierceWalls>false</Impact_PierceWalls>
+                        <Impact_RecoilTime>0.4</Impact_RecoilTime>
+                        <Impact_Speed>0</Impact_Speed>
                         <Impact_CollitionFunction></Impact_CollitionFunction>
+                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
                         <Blast_Animation></Blast_Animation>
                         <Blast_Damage>0</Blast_Damage>
-                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_Duration>0</Blast_Duration>
-                        <Blast_Speed>0</Blast_Speed>
-                        <Blast_RecoilTime>0</Blast_RecoilTime>
-                        <Blast_AmmoXShoot>0</Blast_AmmoXShoot>
+                        <Blast_PushImpact>0</Blast_PushImpact>
                         <Blast_PierceCharacters>false</Blast_PierceCharacters>
                         <Blast_PierceWalls>false</Blast_PierceWalls>
+                        <Blast_RecoilTime>0</Blast_RecoilTime>
+                        <Blast_Speed>0</Blast_Speed>
                         <lock>true</lock>
                         <atack>false</atack>
                         <atackdistance>400</atackdistance>

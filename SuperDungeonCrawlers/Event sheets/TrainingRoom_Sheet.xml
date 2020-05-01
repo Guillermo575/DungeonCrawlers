@@ -14,6 +14,10 @@
                     <param id="0" name="Name">&quot;PlayBackGroundAudio&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Dungeon&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="517149227908150" type="System">
+                    <param id="0" name="Variable">GameMode</param>
+                    <param id="1" name="Value">&quot;UP&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

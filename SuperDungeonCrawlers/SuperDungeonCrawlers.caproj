@@ -2754,6 +2754,11 @@
                         <instance-variable comment="Id used for the inventory.xml" name="XMLID" sid="168003086020901" type="string" />
                         <instance-variable name="XMLContent" sid="313595648114904" type="string" />
                     </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Platform" sid="860681529797647">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915364440319450" speed="0">
                             <frame duration="1" hotspotX="0.178571" hotspotY="0.545455">
@@ -3555,6 +3560,7 @@
                 <instance-variable comment='Used in&quot;CallCommand&quot; function' name="ActionStep" sid="683194864151684" type="number" />
                 <instance-variable comment="Object that carry this arm" name="ArmLeft" sid="566961981906211" type="number" />
                 <instance-variable comment="Object that carry this arm" name="ArmRight" sid="846932810223513" type="number" />
+                <instance-variable name="AvoidHazard" sid="578296762294105" type="boolean" />
                 <instance-variable comment="Bonus damage multiplied with the damage impact" name="BonusDamageMult" sid="153002197069817" type="number" />
                 <instance-variable name="CanNotCancel" sid="293099405422437" type="boolean" />
                 <instance-variable name="CanNotRotate" sid="365812599077455" type="boolean" />
@@ -3691,6 +3697,7 @@
             </members>
             <instance-variables>
                 <instance-variable comment="if the character type if different that this value, that receive damage" name="Group" sid="615762410693189" type="string" />
+                <instance-variable comment="If true can avoided with avoid hazard value" name="IsHazard" sid="832516420518044" type="boolean" />
                 <instance-variable comment="Check if the object is making damage (like melee weapons)" name="MakeDamage" sid="769576092351906" type="boolean" />
                 <instance-variable comment="Melee, Projectile" name="TypeObject" sid="664473937435629" type="string" />
                 <instance-variable comment="Angle used for push is determined by character or impact angle" name="PassivePush" sid="695752906298032" type="boolean" />
