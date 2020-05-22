@@ -460,6 +460,12 @@
                         <action behavior="FC_Platform" id="11" name="Set enabled" sid="719289917837651" type="Family_Character">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action behavior="FC_Platform" id="8" name="Set vector X" sid="915613360396994" type="Family_Character">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action behavior="FC_Platform" id="9" name="Set vector Y" sid="396895550360580" type="Family_Character">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="720776628449229">
@@ -499,6 +505,12 @@
                     <actions>
                         <action behavior="FC_8Direction" id="8" name="Set enabled" sid="628507624086410" type="Family_Character">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="FC_8Direction" id="9" name="Set vector X" sid="175906537628940" type="Family_Character">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action behavior="FC_8Direction" id="10" name="Set vector Y" sid="884709495057367" type="Family_Character">
+                            <param id="0" name="Vector Y">0</param>
                         </action>
                     </actions>
                     <sub-events>

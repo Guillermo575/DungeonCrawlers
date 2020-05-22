@@ -565,6 +565,11 @@
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
+                                        <condition id="-8" name="Compare two values" sid="778064481120751" type="System">
+                                            <param id="0" name="First value">Family_Character.FC_Timer.CurrentTime(&quot;Shoot_Projectile_Enemy&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="FC_Timer" id="0" name="Start timer" sid="459572337446915" type="Family_Character">

@@ -553,8 +553,8 @@
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
-                        <TimePerAttackShort>0.2</TimePerAttackShort>
-                        <TimePerAttackLong>0.2</TimePerAttackLong>
+                        <TimePerAttackShort>1</TimePerAttackShort>
+                        <TimePerAttackLong>1</TimePerAttackLong>
                         <StalkDistance>300</StalkDistance>
                         <Dialog></Dialog>
                         <CanTalk>false</CanTalk>
@@ -724,8 +724,8 @@
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
-                        <TimePerAttackShort>0.2</TimePerAttackShort>
-                        <TimePerAttackLong>0.2</TimePerAttackLong>
+                        <TimePerAttackShort>1</TimePerAttackShort>
+                        <TimePerAttackLong>1</TimePerAttackLong>
                         <StalkDistance>300</StalkDistance>
                         <Dialog></Dialog>
                         <CanTalk>false</CanTalk>
@@ -1081,8 +1081,8 @@
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
-                        <TimePerAttackShort>0.2</TimePerAttackShort>
-                        <TimePerAttackLong>0.2</TimePerAttackLong>
+                        <TimePerAttackShort>1</TimePerAttackShort>
+                        <TimePerAttackLong>1</TimePerAttackLong>
                         <StalkDistance>300</StalkDistance>
                         <Dialog></Dialog>
                         <CanTalk>false</CanTalk>
@@ -1252,8 +1252,8 @@
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
-                        <TimePerAttackShort>0.2</TimePerAttackShort>
-                        <TimePerAttackLong>0.2</TimePerAttackLong>
+                        <TimePerAttackShort>1</TimePerAttackShort>
+                        <TimePerAttackLong>1</TimePerAttackLong>
                         <StalkDistance>300</StalkDistance>
                         <Dialog></Dialog>
                         <CanTalk>false</CanTalk>
@@ -1423,8 +1423,8 @@
                         <AIActive>true</AIActive>
                         <Disperse>false</Disperse>
                         <TimePerChase>0.25</TimePerChase>
-                        <TimePerAttackShort>0.2</TimePerAttackShort>
-                        <TimePerAttackLong>0.2</TimePerAttackLong>
+                        <TimePerAttackShort>1</TimePerAttackShort>
+                        <TimePerAttackLong>1</TimePerAttackLong>
                         <StalkDistance>300</StalkDistance>
                         <Dialog></Dialog>
                         <CanTalk>false</CanTalk>
