@@ -133,7 +133,7 @@
             <actions>
                 <action id="0" name="Call function" sid="846558822668651" type="Function">
                     <param id="0" name="Name">&quot;DisableEnableControls&quot;</param>
-                    <param id="1" name="Parameter {n}">Family_Character.UID{###}Family_Character.IsAlive &amp; Family_Character.PushRecoil = 0</param>
+                    <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}PlayerCoreBox.IsAlive &amp; PlayerCoreBox.PushRecoil = 0</param>
                 </action>
             </actions>
             <sub-events>
@@ -597,6 +597,12 @@
                 <action id="0" name="Call function" sid="550706654545520" type="Function">
                     <param id="0" name="Name">&quot;LogPlayerSave&quot;</param>
                     <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}0</param>
+                </action>
+                <action behavior="FC_8Direction" id="2" name="Set ignoring input" sid="217347695136766" type="PlayerCoreBox">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="FC_Platform" id="0" name="Set ignoring input" sid="502261039439916" type="PlayerCoreBox">
+                    <param id="0" name="Input">1</param>
                 </action>
             </actions>
         </event-block>
