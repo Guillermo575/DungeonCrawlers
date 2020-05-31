@@ -1829,5 +1829,79 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="709222727014395">
+            <conditions>
+                <condition id="-11" name="For Each" sid="427941465468335" type="System">
+                    <param id="0" name="Object">Family_Spriter</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="201244239763979" type="Family_Spriter">
+                    <param id="0" name="Instance variable">ForceInvisibility</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="195189581196882">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="545010352680610" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;InScroll&quot;, Family_Spriter.X, Family_Spriter.Y)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="16" name="Set Visible" sid="943913712739861" type="Family_Spriter">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="278719029477083">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="809629130884972" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="16" name="Set Visible" sid="323802211412457" type="Family_Spriter">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="608311825182698">
+            <conditions>
+                <condition id="-11" name="For Each" sid="128864671249031" type="System">
+                    <param id="0" name="Object">Family_Character</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="141876062493979" type="Family_Character">
+                    <param id="0" name="Instance variable">SpriterAtached</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="269065873607082">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="533906666601573" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;InScroll&quot;, Family_Character.X, Family_Character.Y)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="908149839075519" type="Family_Character">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989631956400737">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="933437142150291" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="239143380536295" type="Family_Character">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

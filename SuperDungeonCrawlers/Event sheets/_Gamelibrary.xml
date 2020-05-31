@@ -26,6 +26,7 @@
         <include>LightIlumination</include>
         <include>TileAnimation</include>
         <include>Interactibles</include>
+        <include>_SpecialFunctions</include>
         <comment>This function loads the last level in this variable, useful for &quot;try again?&quot; Option</comment>
         <event-block sid="997569491700789">
             <conditions>
@@ -101,141 +102,15 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Special Functions</comment>
-        <event-block sid="143907813422825">
+        <event-block sid="945738670843610">
             <conditions>
-                <condition id="0" name="On function" sid="757985406358839" type="Function">
-                    <param id="0" name="Name">&quot;Activate_AI&quot;</param>
+                <condition id="0" name="On function" sid="850188804310718" type="Function">
+                    <param id="0" name="Name">&quot;InScroll&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="868214737131851" type="Family_AI">
-                    <param id="0" name="Instance variable">AIActive</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="299899618419579" type="Family_NPC">
-                    <param id="0" name="Instance variable">CanTalk</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="812983716261524">
-            <conditions>
-                <condition id="0" name="On function" sid="632347531975179" type="Function">
-                    <param id="0" name="Name">&quot;Heal_Player&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="762197142456678" type="PlayerCoreBox">
-                    <param id="0" name="Instance variable">Hp</param>
-                    <param id="1" name="Value">PlayerCoreBox.HPMax</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="334443477339164">
-            <conditions>
-                <condition id="5" name="On any finished" sid="287170210840573" type="Family_Effects" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="453654503265759" type="Family_Effects" />
-            </actions>
-        </event-block>
-        <event-block sid="597360355062750">
-            <conditions>
-                <condition id="-11" name="For Each" sid="866620817563289" type="System">
-                    <param id="0" name="Object">Family_Spriter</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="557662431764928" type="Family_Spriter">
-                    <param id="0" name="Instance variable">ForceInvisibility</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="225679248312820">
-                    <conditions>
-                        <condition id="-21" name="Is between values" sid="781118624065596" type="System">
-                            <param id="0" name="Value">Family_Spriter.X</param>
-                            <param id="1" name="Lower bound">scrollx  - OriginalWindowWidth/2</param>
-                            <param id="2" name="Upper bound">scrollX + OriginalWindowWidth/2</param>
-                        </condition>
-                        <condition id="-21" name="Is between values" sid="272005764636360" type="System">
-                            <param id="0" name="Value">Family_Spriter.Y</param>
-                            <param id="1" name="Lower bound">scrolly - OriginalWindowHeight/2</param>
-                            <param id="2" name="Upper bound">scrolly + OriginalWindowHeight/2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="16" name="Set Visible" sid="790728746110246" type="Family_Spriter">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="184130850083365">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="731041931171954" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="16" name="Set Visible" sid="165153981949353" type="Family_Spriter">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="210915084208392">
-            <conditions>
-                <condition id="-11" name="For Each" sid="917552072924710" type="System">
-                    <param id="0" name="Object">Family_Character</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="229043012915016" type="Family_Character">
-                    <param id="0" name="Instance variable">SpriterAtached</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="482825567071572">
-                    <conditions>
-                        <condition id="-21" name="Is between values" sid="440720406721579" type="System">
-                            <param id="0" name="Value">Family_Character.X</param>
-                            <param id="1" name="Lower bound">scrollx  - OriginalWindowWidth/2</param>
-                            <param id="2" name="Upper bound">scrollX + OriginalWindowWidth/2</param>
-                        </condition>
-                        <condition id="-21" name="Is between values" sid="869087670784711" type="System">
-                            <param id="0" name="Value">Family_Character.Y</param>
-                            <param id="1" name="Lower bound">scrolly - OriginalWindowHeight/2</param>
-                            <param id="2" name="Upper bound">scrolly + OriginalWindowHeight/2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="463606709004030" type="Family_Character">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="704220016533993">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="640535752709561" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="953147767680595" type="Family_Character">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="477755222147502">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="978739088863528" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="695645948176640" type="PlayerCoreBox">
-                    <param id="0" name="Instance variable">Hp</param>
-                    <param id="1" name="Value">99</param>
-                </action>
-                <action id="-10" name="Set value" sid="430027355328966" type="PlayerCoreBox">
-                    <param id="0" name="Instance variable">HPMax</param>
-                    <param id="1" name="Value">99</param>
+                <action id="1" name="Set return value" sid="448500769699812" type="Function">
+                    <param id="0" name="Value">int(Function.Param(0)) &gt; (scrollX  - (OriginalWindowWidth/2) ) &amp; int(Function.Param(0)) &lt; (scrollX  + (OriginalWindowWidth/2) ) &amp; int(Function.Param(1)) &gt; (scrollY  - (OriginalWindowHeight/2) ) &amp; int(Function.Param(1)) &lt; (scrollY  + (OriginalWindowHeight/2) )</param>
                 </action>
             </actions>
         </event-block>

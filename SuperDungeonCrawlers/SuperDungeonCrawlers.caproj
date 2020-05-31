@@ -3936,6 +3936,7 @@
                 <event-sheet>LoadScreen.xml</event-sheet>
             </event-folder>
             <event-sheet>_Gamelibrary.xml</event-sheet>
+            <event-sheet>_SpecialFunctions.xml</event-sheet>
         </event-folder>
         <event-folder name="Dungeon">
             <event-sheet>DungeonConstruction.xml</event-sheet>

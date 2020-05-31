@@ -52,7 +52,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="294754441693094" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="294754441693094" type="Function">
                     <param id="0" name="Name">Family_Impact.Impact_CollitionFunction</param>
                     <param id="1" name="Parameter {n}">Family_Impact.UID</param>
                 </action>
@@ -1106,6 +1106,15 @@
                     <param id="1" name="&apos;Off&apos; time">0.05</param>
                     <param id="2" name="Duration">Function.Param(1)</param>
                 </action>
+            </actions>
+        </event-block>
+        <comment>Destroy family effects</comment>
+        <event-block sid="466476842247395">
+            <conditions>
+                <condition id="5" name="On any finished" sid="486321867329121" type="Family_Effects" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="532395019305765" type="Family_Effects" />
             </actions>
         </event-block>
     </events>

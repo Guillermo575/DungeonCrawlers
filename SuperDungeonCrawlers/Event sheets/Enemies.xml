@@ -359,6 +359,11 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">Family_AI.StalkDistance</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="596292912430877" type="System">
+                            <param id="0" name="First value">Function.Call(&quot;InScroll&quot;, Family_Character.X, Family_Character.Y)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="FC_Pathfinding" id="0" name="Find path" sid="335140191801990" type="Family_Character">
