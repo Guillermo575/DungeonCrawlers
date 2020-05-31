@@ -331,12 +331,6 @@
                     <param id="2" name="X">int(Function.Param(1))</param>
                     <param id="3" name="Y">int(Function.Param(2))</param>
                 </action>
-                <action disabled="1" id="-3" name="Create object" sid="801061858420406" type="System">
-                    <param id="0" name="Object to create">HUD_Key_Text</param>
-                    <param id="1" name="Layer">&quot;HUD&quot;</param>
-                    <param id="2" name="X">int(Function.Param(1))</param>
-                    <param id="3" name="Y">int(Function.Param(2))</param>
-                </action>
                 <action id="-15" name="Set visible" sid="741030069433325" type="HUD_Key_Container">
                     <param id="0" name="Visibility">0</param>
                 </action>
@@ -411,6 +405,9 @@
             <actions>
                 <action id="0" name="Set text" sid="235717322792891" type="HUD_FPS">
                     <param id="0" name="Text">&quot;FPS: &quot; &amp; fps &amp; &quot;, CPU: &quot; &amp; int(cpuutilisation*100)  &amp; &quot;%, Memory: &quot; &amp; ImageMemoryUsage &amp; &quot; mb&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="485262481474990" type="HUD_FPS">
+                    <param id="0" name="Text">(scrollx - (OriginalWindowWidth/2)) &amp; &quot;, &quot; &amp;(scrolly-(OriginalWindowHeight/2)) &amp; (scrollx + (OriginalWindowWidth/2)) &amp; &quot;, &quot; &amp;(scrolly+(OriginalWindowHeight/2))</param>
                 </action>
             </actions>
         </event-block>
