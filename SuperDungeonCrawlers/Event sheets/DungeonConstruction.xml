@@ -570,6 +570,10 @@
                                                     <param id="0" name="Instance variable">Element_ID</param>
                                                     <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
                                                 </action>
+                                                <action id="-4" name="Set position to another object" sid="542661036316386" type="EnemyCoreBox">
+                                                    <param id="0" name="Object">BlockDungeon</param>
+                                                    <param id="1" name="Image point (optional)">&quot;Point_&quot;&amp;Function.Call(&quot;GetArrayPosition&quot;)</param>
+                                                </action>
                                                 <action id="0" name="Spawn another object" sid="269541387100415" type="EnemyCoreBox">
                                                     <param id="0" name="Object">Item_Generic</param>
                                                     <param id="1" name="Layer">&quot;Characters&quot;</param>
@@ -586,10 +590,6 @@
                                                 <action id="0" name="Call function" sid="131083078115254" type="Function">
                                                     <param id="0" name="Name">&quot;PickObject&quot;</param>
                                                     <param id="1" name="Parameter {n}">EnemyCoreBox.UID{###}Item_Generic.UID</param>
-                                                </action>
-                                                <action id="-4" name="Set position to another object" sid="542661036316386" type="EnemyCoreBox">
-                                                    <param id="0" name="Object">BlockDungeon</param>
-                                                    <param id="1" name="Image point (optional)">&quot;Point_&quot;&amp;Function.Call(&quot;GetArrayPosition&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
