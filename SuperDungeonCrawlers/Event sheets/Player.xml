@@ -104,6 +104,10 @@
                     <param id="0" name="Pin to">Family_Character</param>
                     <param id="1" name="Mode">5</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="936961174753467" type="Family_Character">
+                    <param id="0" name="Instance variable">SpriterAtached</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="723757874416197">
@@ -165,6 +169,7 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">PlayerCoreBox.UID</param>
                         </condition>
+                        <condition behavior="FC_Platform" id="4" inverted="1" name="Is falling" sid="642491325013211" type="Family_Character" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="876499820745566" type="PlayerCoreBox">

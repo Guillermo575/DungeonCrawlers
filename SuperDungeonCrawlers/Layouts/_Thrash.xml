@@ -547,6 +547,7 @@
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <RespawnPanel>0</RespawnPanel>
+                        <SpriterAtached>false</SpriterAtached>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
@@ -823,6 +824,7 @@
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <RespawnPanel>0</RespawnPanel>
+                        <SpriterAtached>false</SpriterAtached>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
                         <NameIcon>Player</NameIcon>
@@ -1623,6 +1625,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterSkin></CharacterSkin>
+                        <ForceInvisibility>false</ForceInvisibility>
                         <Part_Top></Part_Top>
                         <Part_Head></Part_Head>
                         <Part_Torso></Part_Torso>
@@ -1661,6 +1664,7 @@
                     </properties>
                     <instance-variables>
                         <CharacterSkin></CharacterSkin>
+                        <ForceInvisibility>false</ForceInvisibility>
                         <Part_Legs></Part_Legs>
                     </instance-variables>
                     <behavior-instances>
@@ -3022,6 +3026,7 @@
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <RespawnPanel>0</RespawnPanel>
+                        <SpriterAtached>false</SpriterAtached>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>

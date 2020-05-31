@@ -110,6 +110,10 @@
                     <param id="0" name="Instance variable">Part_Legs</param>
                     <param id="1" name="Value">Scml_Player_Top.CharacterSkin</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="458455304353295" type="Family_Character">
+                    <param id="0" name="Instance variable">SpriterAtached</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>This adjust the enemy hp, damage in relation with the actual difficult</comment>

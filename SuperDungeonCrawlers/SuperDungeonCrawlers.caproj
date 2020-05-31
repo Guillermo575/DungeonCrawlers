@@ -3584,6 +3584,7 @@
                 <instance-variable name="PressButton" sid="311042383733418" type="boolean" />
                 <instance-variable comment="When value is true, the character is pushed" name="PushRecoil" sid="123979812512462" type="boolean" />
                 <instance-variable comment="Panel_Relocate" name="RespawnPanel" sid="247447848176414" type="number" />
+                <instance-variable comment="Check if the character use a spriter object" name="SpriterAtached" sid="379699953622935" type="boolean" />
                 <instance-variable comment="Player, Enemy" name="TypeRole" sid="879226400068675" type="string" />
                 <instance-variable comment="If the value is true you can´t recoil when you take damage" name="Unstopable" sid="167056584729168" type="boolean" />
             </instance-variables>
@@ -3799,6 +3800,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="CharacterSkin" sid="626399405447762" type="string" />
+                <instance-variable name="ForceInvisibility" sid="867284876251811" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin2" sid="530372147828652">

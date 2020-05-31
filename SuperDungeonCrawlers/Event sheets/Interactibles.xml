@@ -172,6 +172,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="589421698423271" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">ForceInvisibility</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="219465798139457" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">ForceInvisibility</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action behavior="FC_8Direction" id="8" name="Set enabled" sid="512995817322335" type="Family_Character">
                     <param id="0" name="State">0</param>
                 </action>
@@ -222,6 +230,8 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="818445169238500" type="EnemyCoreBox" />
+                        <action id="-9" name="Destroy" sid="218955675837341" type="Scml_Player_Top" />
+                        <action id="-9" name="Destroy" sid="577306117598753" type="Scml_Player_Bottom" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -248,6 +258,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="714041988410718" type="Scml_Player_Top">
+                    <param id="0" name="Instance variable">ForceInvisibility</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="944921572838906" type="Scml_Player_Bottom">
+                    <param id="0" name="Instance variable">ForceInvisibility</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action behavior="FC_8Direction" id="8" name="Set enabled" sid="732747170060383" type="Family_Character">
                     <param id="0" name="State">1</param>
                 </action>

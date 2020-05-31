@@ -118,6 +118,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="380923200950744" type="Family_Spriter" />
                     </conditions>
                     <actions>
                         <action id="0" name="Set animation" sid="322851613232925" type="Family_Spriter">
@@ -441,6 +442,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="955572682118507" type="Scml_Player_Top" />
                     </conditions>
                     <actions>
                         <action id="1" name="Set playback speed ratio" sid="724782269413518" type="Scml_Player_Top">
@@ -485,6 +487,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="912603077714574" type="Family_Character">
                             <param id="0" name="Instance variable">IsJumping</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="316816795957610" type="Scml_Player_Top" />
                     </conditions>
                     <actions>
                         <action id="0" name="Set animation" sid="690678915598177" type="Scml_Player_Top">
@@ -562,6 +565,7 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="275637618224114" type="Family_Character">
                                     <param id="0" name="Instance variable">IsJumping</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="163909314520280" type="Scml_Player_Bottom" />
                             </conditions>
                             <actions>
                                 <action id="-26" name="Move to layer" sid="799279046782980" type="Scml_Player_Bottom">
@@ -585,6 +589,7 @@
                         <event-block sid="309629198658538">
                             <conditions>
                                 <condition id="-22" name="Else" sid="841922141633359" type="System" />
+                                <condition id="-9" name="Is visible" sid="735991749094571" type="Scml_Player_Bottom" />
                             </conditions>
                             <actions>
                                 <action id="-26" name="Move to layer" sid="138390037056605" type="Scml_Player_Bottom">

@@ -227,6 +227,7 @@
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <RespawnPanel>0</RespawnPanel>
+                        <SpriterAtached>false</SpriterAtached>
                         <TypeRole>Player</TypeRole>
                         <Unstopable>false</Unstopable>
                         <NameIcon>Player</NameIcon>
@@ -361,6 +362,7 @@
                         <PressButton>false</PressButton>
                         <PushRecoil>false</PushRecoil>
                         <RespawnPanel>0</RespawnPanel>
+                        <SpriterAtached>false</SpriterAtached>
                         <TypeRole>Enemy</TypeRole>
                         <Unstopable>false</Unstopable>
                         <Group>Enemy</Group>
