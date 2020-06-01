@@ -33,7 +33,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="700317434375510">
+        <event-block disabled="1" sid="700317434375510">
             <conditions>
                 <condition id="-1" name="Every tick" sid="574937648054831" type="System" />
             </conditions>

@@ -964,6 +964,10 @@
                     <param id="0" name="Key">&quot;PlayerCloth&quot;</param>
                     <param id="1" name="Value">Function.Call(&quot;GetSpriterParts&quot;,Family_Character.UID)</param>
                 </action>
+                <action id="0" name="Add key" sid="406544027919567" type="Player_Log">
+                    <param id="0" name="Key">&quot;Player_Coins&quot;</param>
+                    <param id="1" name="Value">Family_Character.Coins</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="467465804205034">
@@ -1066,6 +1070,10 @@
                         <action id="-10" name="Set value" sid="593150610456865" type="PlayerCoreBox">
                             <param id="0" name="Instance variable">HPMax</param>
                             <param id="1" name="Value">int(Player_Log.Get(&quot;PlayerHPMax&quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="720779396835131" type="PlayerCoreBox">
+                            <param id="0" name="Instance variable">Coins</param>
+                            <param id="1" name="Value">int(Player_Log.Get(&quot;Player_Coins&quot;))</param>
                         </action>
                         <action id="0" name="Call function" sid="593702289976016" type="Function">
                             <param id="0" name="Name">&quot;PlayerLogEquipObject&quot;</param>

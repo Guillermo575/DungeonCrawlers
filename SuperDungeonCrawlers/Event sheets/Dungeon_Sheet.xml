@@ -48,7 +48,9 @@
                         <condition id="-22" name="Else" sid="707731508583581" type="System" />
                     </conditions>
                     <actions>
-                        <action id="12" name="Revive all dungeon elements" sid="244827654672990" type="RandomDungeonMaker" />
+                        <action id="13" name="Revive dungeon elements by priority" sid="244827654672990" type="RandomDungeonMaker">
+                            <param id="0" name="Priority">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="684912497334686" type="Function">
                             <param id="0" name="Name">&quot;ConstructDungeon&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -85,7 +87,7 @@
                     <param id="0" name="Variable">VisibleMiniMapMode</param>
                     <param id="1" name="Value">choose(0, 1)</param>
                 </action>
-                <action id="-9" name="Set value" sid="646461685008305" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="646461685008305" type="System">
                     <param id="0" name="Variable">DarkMode</param>
                     <param id="1" name="Value">choose(0, 1)</param>
                 </action>
@@ -99,6 +101,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="217586292171713" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Key&quot;</param>
@@ -109,6 +112,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="649946782972909" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Item_&quot;&amp;choose(&quot;Sword&quot;,&quot;Axe&quot;)</param>
@@ -119,6 +123,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="484735464887871" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Item_&quot;&amp;choose(&quot;Spear&quot;,&quot;Hammer&quot;)</param>
@@ -129,6 +134,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="103575860070988" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Item_&quot;&amp;choose(&quot;Bow&quot;,&quot;Wand&quot;)</param>
@@ -139,6 +145,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="321209438974379" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Exit_NewDungeon&quot;</param>
@@ -149,6 +156,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action disabled="1" id="7" name="New dungeon element" sid="982196367387961" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_&quot;&amp;choose(&quot;Sword&quot;,&quot;Axe&quot;)</param>
@@ -159,6 +167,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action disabled="1" id="7" name="New dungeon element" sid="373613854117622" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_&quot;&amp;choose(&quot;Wand&quot;,&quot;Hammer&quot;)</param>
@@ -169,6 +178,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="299721259974884" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Bat&quot;</param>
@@ -179,6 +189,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="791041479412621" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Hearth&quot;</param>
@@ -189,6 +200,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="738785095024408" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Coin_1&quot;</param>
@@ -199,6 +211,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">2</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="980317446171791" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Torch&quot;</param>
@@ -209,6 +222,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="115439598628595" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Pit&quot;</param>
@@ -219,6 +233,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="10" name="Create Dungeon (Advanced)" sid="958635477578448" type="RandomDungeonMaker">
                     <param id="0" name="Width">6 + int(random(0,4))</param>
@@ -264,6 +279,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="741362443446647" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Key&quot;</param>
@@ -274,6 +290,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="461198847846518" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Exit&quot;</param>
@@ -284,6 +301,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="263688462852675" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
@@ -294,6 +312,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="464863963126925" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
@@ -304,6 +323,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="106781296670619" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Hearth&quot;</param>
@@ -314,6 +334,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="1" name="Create Dungeon (Extra)" sid="667075135254038" type="RandomDungeonMaker">
                     <param id="0" name="Width">8 + int(random(0,2))</param>
@@ -355,6 +376,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="919505819638565" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Key&quot;</param>
@@ -365,6 +387,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="538110679435029" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Exit&quot;</param>
@@ -375,6 +398,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="850527195513095" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
@@ -385,6 +409,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="330872763790844" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
@@ -395,6 +420,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="1" name="Create Dungeon (Extra)" sid="305157291214802" type="RandomDungeonMaker">
                     <param id="0" name="Width">10 + int(random(0,2))</param>
@@ -436,6 +462,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="984051964014975" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Key&quot;</param>
@@ -446,6 +473,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="928872217310778" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Exit&quot;</param>
@@ -456,6 +484,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="499577982806818" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_Sword&quot;</param>
@@ -466,6 +495,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="7" name="New dungeon element" sid="718017215316782" type="RandomDungeonMaker">
                     <param id="0" name="Name">&quot;Enemy_Wand&quot;</param>
@@ -476,6 +506,7 @@
                     <param id="5" name="ObligatoryTopWall">0</param>
                     <param id="6" name="ObligatoryLeftWall">0</param>
                     <param id="7" name="ObligatoryRightWall">0</param>
+                    <param id="8" name="Priority">1</param>
                 </action>
                 <action id="1" name="Create Dungeon (Extra)" sid="147869518828930" type="RandomDungeonMaker">
                     <param id="0" name="Width">12 + int(random(0,2))</param>
