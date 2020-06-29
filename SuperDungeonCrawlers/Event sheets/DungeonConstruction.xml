@@ -550,6 +550,10 @@
                                                     <param id="0" name="Object">BlockDungeon</param>
                                                     <param id="1" name="Image point (optional)">&quot;Point_&quot;&amp;Function.Call(&quot;GetArrayPosition&quot;)</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="972140716710780" type="Item_Generic">
+                                                    <param id="0" name="Instance variable">Element_ID</param>
+                                                    <param id="1" name="Value">int(tokenat(TotalEID,loopindex,&quot;,&quot;))</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="591995988391067">

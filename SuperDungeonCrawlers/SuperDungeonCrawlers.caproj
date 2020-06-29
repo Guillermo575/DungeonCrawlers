@@ -3877,6 +3877,7 @@
                 <member>EnemyCoreBox</member>
                 <member>EnemyCoreBoxBat</member>
                 <member>Item_Coin</member>
+                <member>Item_Generic</member>
             </members>
             <instance-variables>
                 <instance-variable name="Element_ID" sid="699314432238005" type="number" />

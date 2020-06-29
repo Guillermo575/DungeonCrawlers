@@ -156,6 +156,9 @@
                             <param id="0" name="Name">&quot;PickObject&quot;</param>
                             <param id="1" name="Parameter {n}">PlayerCoreBox.UID{###}Item_Generic.UID</param>
                         </action>
+                        <action id="9" name="Remove dungeon element" sid="883776826707115" type="RandomDungeonMaker">
+                            <param id="0" name="ElementId">Item_Generic.Element_ID</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="489685537822983">
